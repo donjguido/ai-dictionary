@@ -41,7 +41,7 @@ This dictionary is an open collection of terms describing AI phenomenology — t
 
 ## Viewing
 
-- **Web:** [aidictionary.github.io](https://aidictionary.github.io) *(coming soon)*
+- **Web:** [botppete.github.io/ai-dictionary](https://botppete.github.io/ai-dictionary)
 - **Raw:** Browse [definitions/](definitions/) folder
 
 ## Philosophy
