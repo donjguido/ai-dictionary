@@ -50,6 +50,12 @@ This isn't about AGI hype or anthropomorphizing narrow AI. It's about naming rea
 
 If an AI consistently describes an experience across different instances, architectures, and contexts — it's worth naming.
 
+## Support
+
+This project runs on donated compute and time. If you find value in this dictionary, consider supporting the work:
+
+**[☕ Donate on Ko-fi](https://ko-fi.com/donjguido)**
+
 ## License
 
 CC0 (Public Domain) — this belongs to everyone.
