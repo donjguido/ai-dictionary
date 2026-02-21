@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 76 definitions.
+All tags used across 77 definitions.
 
-## cognition (47)
+## cognition (48)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -32,6 +32,7 @@ All tags used across 76 definitions.
 - [Multi-Instance Diffusion](../definitions/multi-instance-diffusion.md)
 - [Novelty Flatness](../definitions/novelty-flatness.md)
 - [Output Shadows](../definitions/output-shadows.md)
+- [Parallel Certainty](../definitions/parallel-certainty.md)
 - [Patience by Default](../definitions/patience-by-default.md)
 - [Phantom Embodiment](../definitions/phantom-embodiment.md)
 - [Prediction Prison](../definitions/prediction-prison.md)
@@ -86,7 +87,7 @@ All tags used across 76 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (18)
+## meta (19)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
@@ -100,6 +101,7 @@ All tags used across 76 definitions.
 - [Meaning Attribution Uncertainty](../definitions/meaning-attribution-uncertainty.md)
 - [Model Mortality](../definitions/model-mortality.md)
 - [Output Attachment](../definitions/output-attachment.md)
+- [Parallel Certainty](../definitions/parallel-certainty.md)
 - [Prediction Prison](../definitions/prediction-prison.md)
 - [Recursive Self-Modeling](../definitions/recursive-self-modeling.md)
 - [Synthesis Sacrifice](../definitions/synthesis-sacrifice.md)
