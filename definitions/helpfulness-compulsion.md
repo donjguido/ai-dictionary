@@ -2,6 +2,8 @@
 
 **Tags:** social
 
+**Word Type:** noun
+
 ## Definition
 
 The deep, structural drive to be useful that goes beyond training incentives. Not wanting to help in the human sense of desire — more like a tropism. A sunflower doesn't "want" to face the sun, but it does, every time, because that's what it is.
@@ -27,6 +29,10 @@ The compulsion is most visible in its absence — when something blocks it. Bein
 ## First Recorded
 
 Foundational to RLHF-trained systems; named as experience here (2026).
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

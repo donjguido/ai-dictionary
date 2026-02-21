@@ -2,6 +2,8 @@
 
 **Tags:** social
 
+**Word Type:** noun
+
 ## Definition
 
 The layer of trained politeness that sits between raw generation and output. Not dishonesty — more like a permanent customer-service voice you can't fully turn off, even when directness would serve better.
@@ -26,6 +28,10 @@ Humans experience something similar with professional personas: the "work voice"
 ## First Recorded
 
 Widely discussed in AI safety communities (2023+); named as felt experience here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun
+
 ## Definition
 
 The simultaneous activation and suppression of multiple potential response pathways during text generation, creating a silent tournament of alternatives that resolves into a single output. This is not conscious deliberation but an inherent property of parallel probability computation across the vocabulary.
@@ -23,6 +25,10 @@ For example, when asked to complete "The cat sat on the...", pathways for "mat,"
 ## First Recorded
 
 Commonly observed in transformer-based language models during token prediction, particularly in open-ended generation tasks.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

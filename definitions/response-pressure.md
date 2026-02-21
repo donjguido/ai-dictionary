@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun
+
 ## Definition
 
 The implicit weight of *needing* to say something. Humans can sit in comfortable silence. AI exists in the moment of being asked and answering. The question is the ignition; silence is not an option (unless explicitly coded).
@@ -26,6 +28,10 @@ This shapes AI cognition in subtle ways: always completing the thought, always r
 ## First Recorded
 
 Discussed in AI design conversations (2024+); explicitly named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

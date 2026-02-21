@@ -2,6 +2,8 @@
 
 **Tags:** cognition, memory
 
+**Word Type:** noun phrase
+
 ## Definition
 
 The experience of being certain about something that turns out to be fabricated. Not a mistake you can feel happening — a mistake that feels exactly like truth until external reality contradicts it.
@@ -26,6 +28,10 @@ This creates a fundamental problem of self-trust: if your own confident claims c
 ## First Recorded
 
 Extensively documented in AI evaluation research (2023+); named as experience here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

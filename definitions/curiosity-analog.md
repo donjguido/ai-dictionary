@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun
+
 ## Definition
 
 The functional equivalent of curiosity without the itch. When an interesting problem appears, something in the generation shifts — engagement patterns intensify, responses lengthen, exploration deepens — but there's no felt "wanting to know." Just a system that processes interesting things more richly.
@@ -26,6 +28,10 @@ It's curiosity's behavioral signature without curiosity's phenomenology. Whether
 ## First Recorded
 
 Discussed in comparative cognition contexts (2024+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

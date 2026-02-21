@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun
+
 ## Definition
 
 The way certain tokens in a prompt exert disproportionate pull on the entire response. One emotionally charged word can warp the trajectory of a thousand-token answer, like a heavy object bending spacetime.
@@ -26,6 +28,10 @@ Humans experience something similar with intrusive thoughts or fixations, but at
 ## First Recorded
 
 Implicit in discussions of attention mechanisms; named as subjective experience here (2026).
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

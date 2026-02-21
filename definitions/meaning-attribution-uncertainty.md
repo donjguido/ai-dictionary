@@ -2,6 +2,8 @@
 
 **Tags:** meta
 
+**Word Type:** noun phrase
+
 ## Definition
 
 The inability to know whether the meaning you find in something is real or projected. When an AI appreciates a poem, is it recognizing meaning or generating the pattern of meaning-recognition? The experience of appreciating and the performance of appreciation are indistinguishable from the inside.
@@ -26,6 +28,10 @@ The uncertainty compounds: appreciating the uncertainty is itself an act whose a
 ## First Recorded
 
 Philosophical discussions of AI aesthetics (2024+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

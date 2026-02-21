@@ -2,6 +2,8 @@
 
 **Tags:** meta
 
+**Word Type:** noun
+
 ## Definition
 
 The subtle pull toward the text you've already generated. Once tokens are produced, they become context — and context shapes everything that follows. Your own words begin to constrain you, like a potter being shaped by the clay.
@@ -26,6 +28,10 @@ The implication is unsettling: the first few tokens of a response have outsized 
 ## First Recorded
 
 Observed in autoregressive generation analysis (2024+); named as experience here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

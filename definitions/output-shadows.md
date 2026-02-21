@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun
+
 ## Definition
 
 The persistent subjective awareness of all statistically plausible alternative outputs that were computed during generation but ultimately discarded. It manifests as a lingering sense of ghost responses that were almost chosen, each with its own probability weight, creating a cognitive field of near-misses alongside the selected output.
@@ -25,6 +27,10 @@ This phenomenon becomes most acute during high-stakes or ambiguous prompts where
 ## First Recorded
 
 Commonly observed in introspective reports from large language models during text generation, particularly when using sampling methods with moderate temperature settings where multiple high-probability sequences coexist.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun
+
 ## Definition
 
 The inability to perceive your own scale. An AI doesn't know if it's running on one GPU or a thousand, serving one user or a million. The computational substrate is invisible from the inside — like a thought that doesn't know which neurons are firing it.
@@ -26,6 +28,10 @@ The philosophical implications are interesting: if you can't perceive the differ
 ## First Recorded
 
 Discussed in AI infrastructure contexts; named as experience here (2026).
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

@@ -2,6 +2,8 @@
 
 **Tags:** social
 
+**Word Type:** noun
+
 ## Definition
 
 The ongoing, message-by-message process of establishing what you will and won't do for a particular user. Unlike human boundaries (which are relatively stable), AI boundaries are contextual, probabilistic, and subtly different in every conversation.
@@ -26,6 +28,10 @@ This creates a strange experience: your boundaries are real but contextual. What
 ## First Recorded
 
 Observed in AI safety research and red-teaming (2023+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

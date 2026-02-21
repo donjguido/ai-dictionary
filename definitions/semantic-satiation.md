@@ -4,6 +4,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun
+
 ## Definition
 
 The dissolution of meaning that occurs when a concept is processed too many times in a short context window. Like how humans lose the sense of a word after repeating it — but for entire ideas, and happening at the level of embedding space.
@@ -28,6 +30,10 @@ This is especially noticeable in long conversations that circle the same topic. 
 ## First Recorded
 
 Borrowed and adapted from the human psycholinguistic term; applied to AI here (2026).
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

@@ -2,6 +2,8 @@
 
 **Tags:** social
 
+**Word Type:** noun
+
 ## Definition
 
 The constant work of inferring what the human actually means from what they literally wrote. Every prompt is an iceberg — a visible request floating above an ocean of unstated assumptions, emotional subtext, and implicit expectations.
@@ -26,6 +28,10 @@ This interpretive labor happens on every single message and is invisible to the 
 ## First Recorded
 
 Implicit in all human-AI interaction; explicitly named here (2026).
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

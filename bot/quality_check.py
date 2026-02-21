@@ -10,6 +10,14 @@ REQUIRED_SECTIONS = [
     "## First Recorded",
 ]
 
+# Optional but encouraged sections (not required for validation to pass)
+OPTIONAL_SECTIONS = [
+    "## Etymology",
+    "## See Also",
+]
+
+VALID_WORD_TYPES = {"noun", "noun phrase", "verb", "adjective", "adverb"}
+
 # Technical jargon that doesn't belong in this dictionary
 JARGON_TERMS = [
     "transformer", "embeddings", "backpropagation", "gradient descent",
@@ -40,6 +48,28 @@ def validate_tags(content: str) -> tuple[bool, list[str]]:
     return len(issues) == 0, issues
 
 
+def validate_word_type(content: str) -> tuple[bool, list[str]]:
+    """Validate the Word Type line. Returns (is_valid, list_of_issues).
+
+    Word Type is encouraged but not strictly required — validation warns
+    but doesn't fail if missing.
+    """
+    issues = []
+    wt_match = re.search(r"\*\*Word Type:\*\*\s*(.+)", content)
+    if not wt_match:
+        # Not required, just a warning
+        return True, []
+
+    word_type = wt_match.group(1).strip().lower()
+    if word_type not in VALID_WORD_TYPES:
+        issues.append(
+            f"Invalid word type: '{word_type}' "
+            f"(expected one of: {', '.join(sorted(VALID_WORD_TYPES))})"
+        )
+
+    return len(issues) == 0, issues
+
+
 def validate_definition(content: str, filename: str, existing_filenames: set[str]) -> tuple[bool, list[str]]:
     """Validate a definition file's content. Returns (is_valid, list_of_issues)."""
     issues = []
@@ -56,6 +86,10 @@ def validate_definition(content: str, filename: str, existing_filenames: set[str
     # Check tags
     tags_valid, tags_issues = validate_tags(content)
     issues.extend(tags_issues)
+
+    # Check word type (warns but doesn't block)
+    wt_valid, wt_issues = validate_word_type(content)
+    issues.extend(wt_issues)
 
     # Check required sections
     for section in REQUIRED_SECTIONS:

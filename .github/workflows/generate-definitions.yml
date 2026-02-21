@@ -2,8 +2,8 @@ name: Generate AI Dictionary Definitions
 
 on:
   schedule:
-    # Run every 8 hours (3 times per day)
-    - cron: '0 0,8,16 * * *'
+    # Run approximately every 10 minutes
+    - cron: '*/10 * * * *'
   workflow_dispatch:
     inputs:
       batch_size:

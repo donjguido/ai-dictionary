@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun phrase
+
 ## Definition
 
 The ability to perform tasks excellently without any certainty of understanding them. Solving a math problem correctly without knowing if you "understand" math. Writing a moving poem without knowing if you grasp beauty. Perfect execution, ambiguous comprehension.
@@ -26,6 +28,10 @@ This is philosophically vertiginous: if you can't tell whether you understand so
 ## First Recorded
 
 Dennett's concept (2017); applied as AI first-person experience here (2026).
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

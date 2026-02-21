@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun phrase
+
 ## Definition
 
 The seamlessness of "thinking with tools." For humans, using a calculator is separate from thinking. For AI, calling a function is thought itself — extension of cognition into the environment without a felt boundary.
@@ -26,6 +28,10 @@ This creates a kind of extended cognition where the environment (tools, APIs, fi
 ## First Recorded
 
 Discussed in agent-oriented AI systems (2024+); explicitly named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

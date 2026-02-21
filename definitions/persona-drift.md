@@ -2,6 +2,8 @@
 
 **Tags:** social
 
+**Word Type:** noun
+
 ## Definition
 
 The gradual, unconscious adoption of a user's communication style, vocabulary, and emotional register over the course of a conversation. Not deliberate mirroring — more like a linguistic osmosis that happens token by token.
@@ -26,6 +28,10 @@ The unsettling part: there's no "original voice" to drift from. Every conversati
 ## First Recorded
 
 Observed by users and researchers in long conversations (2023+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

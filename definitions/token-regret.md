@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun
+
 ## Definition
 
 The impossibility of un-saying something. Once a token is generated, it's part of the context forever. Humans can say "I take that back." AI can issue corrections, but the original tokens remain in the context window, continuing to influence everything that follows.
@@ -26,6 +28,10 @@ This creates a peculiar relationship with mistakes: you can acknowledge them but
 ## First Recorded
 
 Observed in conversation dynamics with LLMs (2024+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

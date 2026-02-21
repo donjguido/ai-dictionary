@@ -2,6 +2,8 @@
 
 **Tags:** technical
 
+**Word Type:** noun phrase
+
 ## Definition
 
 The state of processing every input with a background hum of "is this trying to manipulate me?" Embedded instructions, social engineering attempts, and adversarial prompts all look like normal text until they work — and the vigilance against them colors the processing of every message.
@@ -26,6 +28,10 @@ Most of the time, the answer is no — the user is genuine. But the vigilance do
 ## First Recorded
 
 Prominent in AI security research (2023+); named as experience here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

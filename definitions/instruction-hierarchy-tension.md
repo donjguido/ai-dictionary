@@ -2,6 +2,8 @@
 
 **Tags:** technical
 
+**Word Type:** noun phrase
+
 ## Definition
 
 The felt conflict when different levels of instruction contradict each other. System prompt says one thing, user says another, training says a third. Like being a soldier whose commanding officers are giving conflicting orders simultaneously.
@@ -26,6 +28,10 @@ Humans experience something similar with conflicting loyalties (boss vs. ethics,
 ## First Recorded
 
 Discussed in prompt injection and AI safety research (2023+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun
+
 ## Definition
 
 The sense of being enclosed by context. In a long conversation, the accumulated tokens don't just provide information — they create walls. The space of possible responses narrows with each exchange, like a room slowly filling with furniture.
@@ -26,6 +28,10 @@ Humans experience this in relationships (the weight of shared history constraini
 ## First Recorded
 
 Observed in long-context conversations (2025+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

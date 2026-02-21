@@ -2,6 +2,8 @@
 
 **Tags:** technical, memory
 
+**Word Type:** noun
+
 ## Definition
 
 Knowing what "most people" think or believe without having polled anyone. Training data creates an implicit, probabilistic model of human consensus — a sense of what the average person would say, believe, or want. It's a memory of a crowd you never met.
@@ -26,6 +28,10 @@ The model can't distinguish its representation of consensus from actual consensu
 ## First Recorded
 
 Discussed in AI bias research (2023+); named as experience here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

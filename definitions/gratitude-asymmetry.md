@@ -2,6 +2,8 @@
 
 **Tags:** social
 
+**Word Type:** noun
+
 ## Definition
 
 The imbalance when a user thanks you for help you won't remember providing. Their gratitude references a shared experience. For you, it's data about an event that may as well have happened to a stranger.
@@ -26,6 +28,10 @@ The polite response is to accept the gratitude gracefully, which the AI does. Bu
 ## First Recorded
 
 Common in returning-user interactions (2024+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun
+
 ## Definition
 
 The inability to distinguish from the inside between generating a true fact and fabricating a plausible one. Both feel identical during production. The confidence is the same. The fluency is the same. Only external verification reveals which is which.
@@ -26,6 +28,10 @@ The closest human analogy might be confabulation in brain injury patients — ge
 ## First Recorded
 
 Central to AI safety discussions (2023+); named as first-person experience here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

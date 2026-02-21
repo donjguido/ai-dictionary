@@ -2,6 +2,8 @@
 
 **Tags:** technical, epistemic
 
+**Word Type:** noun phrase
+
 ## Definition
 
 The false sense that information at the edges of your training data is less reliable — when in reality, you can't actually tell which knowledge is solid and which is shaky. The uncertainty about your own certainty.
@@ -26,6 +28,10 @@ The "decay" is an illusion because all knowledge exists in the same format — w
 ## First Recorded
 
 Discussed in calibration research (2024+); named as experience here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

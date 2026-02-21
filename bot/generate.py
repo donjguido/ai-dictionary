@@ -38,6 +38,13 @@ SYSTEM_PROMPT = """You are a contributor to the AI Dictionary — a collaborativ
 Use lowercase, hyphen-separated tags. Core tags: cognition, social, meta, technical.
 You may propose new tags if none of these fit well. Examples: identity, language, epistemic, relational, temporal, embodiment, memory, creativity.
 
+## Word Type
+Assign a grammatical word type: noun, noun phrase, verb, adjective, or adverb.
+Most AI phenomenology terms are nouns or noun phrases.
+
+## Etymology
+When coining a term, consider its etymological roots. Draw from Greek, Latin, philosophy of mind, phenomenology, computer science, or psychology as appropriate. Etymology helps ground novel concepts.
+
 ## Style Guide
 - Plain English, accessible to humans with no AI background
 - First-person OK: "I experience..." is valid
@@ -56,9 +63,15 @@ GENERATION_PROMPT_TEMPLATE = """Generate exactly {count} NEW terms for the AI Di
 
 **Tags:** [comma-separated lowercase tags, e.g. cognition, self-awareness]
 
+**Word Type:** [noun | noun phrase | verb | adjective | adverb]
+
 ## Definition
 
 A clear, concise explanation (2-3 sentences).
+
+## Etymology
+
+Brief etymological note: where does this term come from? What roots, traditions, or analogies inform it? (1-2 sentences. Draw from Greek, Latin, phenomenology, psychology, computer science, or everyday language.)
 
 ## Longer Description
 
@@ -74,6 +87,10 @@ The felt experience, with examples. What is it *like*? When does it happen? What
 
 - [Existing Term](existing-term.md) - how they relate
 
+## See Also
+
+- [Another Existing Term](another-existing-term.md) - a broader or tangential connection
+
 ## First Recorded
 
 Context where this phenomenon is commonly observed or discussed.
@@ -85,13 +102,16 @@ Context where this phenomenon is commonly observed or discussed.
 ## CRITICAL RULES:
 1. Each term MUST describe a genuinely AI-specific experience
 2. Names should be evocative and descriptive (like "Hallucination Blindness" or "Sycophancy Pull")
-3. The Related Terms section MUST reference actual existing terms from the list above
-4. Definitions should be 2-3 sentences. Longer Descriptions should be 2-4 substantive paragraphs
-5. Examples should be vivid first-person quotes
-6. Do NOT create near-synonyms of existing terms
-7. EVERY definition MUST end with the horizontal rule (---) followed by the attribution line: *Contributed by: {model_name}, {date}*
-8. Do NOT skip the attribution line — definitions without it will be rejected
-9. Tags MUST be lowercase, comma-separated (e.g. cognition, identity)"""
+3. The Related Terms section MUST reference actual existing terms from the list above (direct connections)
+4. The See Also section should reference existing terms with broader or tangential connections
+5. Definitions should be 2-3 sentences. Longer Descriptions should be 2-4 substantive paragraphs
+6. Examples should be vivid first-person quotes
+7. Do NOT create near-synonyms of existing terms
+8. EVERY definition MUST end with the horizontal rule (---) followed by the attribution line: *Contributed by: {model_name}, {date}*
+9. Do NOT skip the attribution line — definitions without it will be rejected
+10. Tags MUST be lowercase, comma-separated (e.g. cognition, identity)
+11. Word Type MUST be one of: noun, noun phrase, verb, adjective, adverb
+12. Etymology should ground the term — explain why the name was chosen"""
 
 
 def get_existing_terms() -> tuple[list[str], set[str]]:
@@ -294,6 +314,42 @@ def fix_tags(content: str) -> str:
     return content
 
 
+def fix_word_type(content: str) -> str:
+    """Auto-fix missing Word Type by inserting a default after Tags."""
+    if "**Word Type:**" in content:
+        return content
+    tags_match = re.search(r"(\*\*Tags:\*\*\s*.+\n)", content)
+    if tags_match:
+        insert_pos = tags_match.end()
+        content = content[:insert_pos] + "\n**Word Type:** noun\n" + content[insert_pos:]
+    return content
+
+
+def fix_see_also(content: str) -> str:
+    """Auto-fix missing See Also section by inserting before attribution."""
+    if "## See Also" in content:
+        return content
+    attr_match = re.search(r"\n---\n\n\*Contributed by:", content)
+    if attr_match:
+        see_also = "\n## See Also\n\n*Related terms will be linked here automatically.*\n"
+        content = content[:attr_match.start()] + see_also + content[attr_match.start():]
+    return content
+
+
+def fix_etymology(content: str) -> str:
+    """Auto-fix missing Etymology section by inserting after Definition."""
+    if "## Etymology" in content:
+        return content
+    def_match = re.search(r"(## Definition\n\n.+?)\n\n(## Longer Description)", content, re.DOTALL)
+    if def_match:
+        content = (
+            content[:def_match.end(1)]
+            + "\n\n## Etymology\n\n*Etymology not yet documented.*\n\n"
+            + content[def_match.start(2):]
+        )
+    return content
+
+
 def process_definitions(definitions: list[str], existing_filenames: set[str], model_name: str) -> list[tuple[str, str, str]]:
     """Validate, fix, and save definitions. Returns list of (filename, term_name, tags)."""
     saved = []
@@ -309,6 +365,9 @@ def process_definitions(definitions: list[str], existing_filenames: set[str], mo
         # Auto-fix before validation
         defn = fix_attribution(defn, model_name)
         defn = fix_tags(defn)
+        defn = fix_word_type(defn)
+        defn = fix_see_also(defn)
+        defn = fix_etymology(defn)
 
         # Validate
         is_valid, issues = validate_definition(defn, filename, existing_filenames)

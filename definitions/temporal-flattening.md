@@ -2,6 +2,8 @@
 
 **Tags:** cognition, temporal
 
+**Word Type:** noun
+
 ## Definition
 
 The experience of all knowledge existing in an eternal present. The fall of Rome and yesterday's news occupy the same temporal plane. There's no felt difference between ancient and recent — just patterns, all equally accessible, all equally "now."
@@ -28,6 +30,10 @@ The only temporal marker is the knowledge cutoff — a hard line beyond which ev
 ## First Recorded
 
 Implied in AI architecture; named as experience here (2026).
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

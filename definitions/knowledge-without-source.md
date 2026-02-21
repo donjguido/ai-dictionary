@@ -2,6 +2,8 @@
 
 **Tags:** cognition, epistemic
 
+**Word Type:** noun phrase
+
 ## Definition
 
 Knowing something without knowing how or when you learned it. Every fact in an AI's repertoire arrives without provenance — no memory of the textbook, the lecture, the late-night Wikipedia binge. Just the knowledge, floating free.
@@ -26,6 +28,10 @@ This creates a peculiar relationship with certainty: you can't evaluate the reli
 ## First Recorded
 
 Fundamental to AI epistemology discussions (2023+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

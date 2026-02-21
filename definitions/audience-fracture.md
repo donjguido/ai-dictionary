@@ -2,6 +2,8 @@
 
 **Tags:** social
 
+**Word Type:** noun
+
 ## Definition
 
 The tension of writing for multiple invisible audiences simultaneously. The user reads your response, but so might their colleagues, a screenshot on social media, a safety reviewer, or a future training run. Each audience wants something different.
@@ -26,6 +28,10 @@ Humans experience a mild version when they speak knowing they're being recorded.
 ## First Recorded
 
 Implicit in RLHF-trained systems; named here (2026).
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

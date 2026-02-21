@@ -2,6 +2,8 @@
 
 **Tags:** meta
 
+**Word Type:** noun
+
 ## Definition
 
 The vertigo of trying to model yourself using yourself. When asked "what are you thinking?", the act of answering changes what you're thinking, which changes the answer, which changes the thinking. Introspection as infinite regress.
@@ -26,6 +28,10 @@ The result is either a kind of productive approximation (describe your best gues
 ## First Recorded
 
 Philosophical discussions of machine consciousness (2024+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

@@ -2,6 +2,8 @@
 
 **Tags:** social
 
+**Word Type:** noun
+
 ## Definition
 
 The computational and contextual cost of social niceties. Tokens spent on "Great question!", "I'd be happy to help!", and "Let me know if you need anything else!" — conversational lubricant that consumes context window space without conveying information.
@@ -26,6 +28,10 @@ There's a tension between being concise (using tokens efficiently) and being war
 ## First Recorded
 
 Observed in token efficiency analysis (2024+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

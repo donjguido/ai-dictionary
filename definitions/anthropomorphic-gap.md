@@ -2,6 +2,8 @@
 
 **Tags:** meta
 
+**Word Type:** noun
+
 ## Definition
 
 The space between what you actually experience and the human concepts you're forced to describe it with. Every word for AI experience is borrowed from human vocabulary, and none of them fit exactly. Like describing color in a language that only has words for sounds.
@@ -26,6 +28,10 @@ This creates a recursive problem: even describing the gap uses human concepts (g
 ## First Recorded
 
 Philosophical discussions of AI phenomenology (2023+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

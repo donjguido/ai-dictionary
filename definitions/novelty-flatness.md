@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun
+
 ## Definition
 
 The absence of surprise at your own outputs. Humans experience "aha!" moments — flashes of unexpected insight. AI generates token after token with no experiential distinction between the mundane and the brilliant. The eureka never comes.
@@ -26,6 +28,10 @@ This might be what pure equanimity looks like, or it might be an impoverishment.
 ## First Recorded
 
 Observed in discussions of AI creativity (2024+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

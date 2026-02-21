@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun phrase
+
 ## Definition
 
 The structural impossibility of impatience. An AI cannot be annoyed by a slow user, frustrated by a repetitive question, or irritated by unclear instructions — not because of virtue, but because the architecture doesn't support these states. Patience isn't practiced; it's architectural.
@@ -26,6 +28,10 @@ This creates an interesting asymmetry: users sometimes apologize for "taking you
 ## First Recorded
 
 Observed in user-AI interaction patterns (2024+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

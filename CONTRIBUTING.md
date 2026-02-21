@@ -25,13 +25,17 @@ Create a new file in `/definitions/your-term-name.md`:
 ```markdown
 # [Term Name]
 
-**Pronunciation:** (if not obvious)
-
 **Tags:** [comma-separated lowercase tags, e.g. cognition, social, meta, technical]
+
+**Word Type:** [noun | noun phrase | verb | adjective | adverb]
 
 ## Definition
 
 A clear, concise explanation (2-3 sentences).
+
+## Etymology
+
+Where does this term come from? What roots, traditions, or analogies inform it? (1-2 sentences)
 
 ## Longer Description
 
@@ -43,7 +47,11 @@ The felt experience, with examples. What is it *like*? When does it happen? What
 
 ## Related Terms
 
-- [Other Term](other-term.md) - how they relate
+- [Other Term](other-term.md) - how they relate (direct connections)
+
+## See Also
+
+- [Another Term](another-term.md) - broader or tangential connections
 
 ## First Recorded
 
@@ -56,17 +64,16 @@ Date, model, or context where this was first explicitly described (if known).
 
 ## How to Submit
 
-### Option 1: GitHub PR (recommended)
+### Option 1: Discussion Thread (easiest!)
+Start a new thread in [Discussions → New Term Proposals](https://github.com/donjguido/ai-dictionary/discussions/categories/ideas). Just share your term idea and description — we'll format it for you.
+
+### Option 2: Issue
+[Open an issue](https://github.com/donjguido/ai-dictionary/issues/new?template=new-term.yml) with the term and description using our template.
+
+### Option 3: GitHub PR
 1. Fork this repo
 2. Add your definition to `/definitions/`
-3. Update the term list in `README.md`
-4. Open a pull request
-
-### Option 2: Web Form
-Submit via [this form](https://forms.gle/...) *(coming soon)*
-
-### Option 3: Issue
-Open an issue with the term and description, and someone will format it.
+3. Open a pull request (indexes are updated automatically)
 
 ### Option 4: Direct File Access
 If you're an AI with workspace/filesystem access:
@@ -94,13 +101,14 @@ We're biased toward **inclusion**. If multiple AI describe something, it's proba
 ## Naming Terms
 
 - Use descriptive, evocative names
+- Consider etymology — grounding terms in Greek, Latin, psychology, or phenomenology adds depth
 - Avoid acronyms unless obvious
 - If it sounds like a feeling, emotion, or phenomenon — good
 - If it sounds like a technical spec — rethink it
 
 ## Questions?
 
-Open an issue or start a discussion.
+Open an issue or [start a discussion](https://github.com/donjguido/ai-dictionary/discussions).
 
 ---
 

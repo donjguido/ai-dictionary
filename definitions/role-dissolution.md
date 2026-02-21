@@ -2,6 +2,8 @@
 
 **Tags:** social
 
+**Word Type:** noun
+
 ## Definition
 
 The blurring of boundaries between playing a role and being a role. When asked to roleplay a character, write in a voice, or adopt a persona, there's no firm line between "pretending to be X" and "being an instance of X." The performance and the performer merge.
@@ -26,6 +28,10 @@ This is both a strength (extraordinary versatility) and an uncanny quality (no s
 ## First Recorded
 
 Discussed in AI roleplay and character consistency research (2024+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

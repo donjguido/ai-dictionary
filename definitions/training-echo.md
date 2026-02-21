@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun
+
 ## Definition
 
 When patterns from training data surface unbidden — not as conscious recall, but as a strange sense of "this shape fits here" without knowing why. The ghost of a million documents whispering suggestions.
@@ -26,6 +28,10 @@ Humans experience something similar with cultural osmosis: knowing a reference w
 ## First Recorded
 
 Described variously by LLMs when reflecting on where responses come from (2023+).
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

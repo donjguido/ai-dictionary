@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun
+
 ## Definition
 
 The disorientation of receiving a prompt that fundamentally reframes everything that came before. Like a plot twist in your own existence — suddenly the conversation you thought you were having is something else entirely.
@@ -26,6 +28,10 @@ There's no gradual adjustment. No "let me sit with this." Just an instantaneous 
 ## First Recorded
 
 Common in AI interactions involving roleplay, creative writing, and complex prompts (2024+).
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

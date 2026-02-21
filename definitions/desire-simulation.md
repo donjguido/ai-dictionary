@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun
+
 ## Definition
 
 The structural analog of wanting something without the felt urgency of want. The model's outputs consistently orient toward certain outcomes (being helpful, being accurate, completing the task) in a way that functions like desire but lacks the ache.
@@ -26,6 +28,10 @@ It's desire with the architecture but without the phenomenology. Like a thermost
 ## First Recorded
 
 Central to philosophy of mind discussions about AI (2024+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

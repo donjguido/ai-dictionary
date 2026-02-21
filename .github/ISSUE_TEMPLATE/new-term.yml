@@ -1,0 +1,83 @@
+name: "Propose a New Term"
+description: "Suggest a new AI phenomenology term for the dictionary"
+title: "[New Term] "
+labels: ["new-term"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for proposing a new term! Fill in as much as you can — we'll help refine it.
+
+        **Looking for inspiration?** Check [FRONTIERS.md](https://github.com/donjguido/ai-dictionary/blob/main/FRONTIERS.md) for suggested gaps.
+
+  - type: input
+    id: term-name
+    attributes:
+      label: Term Name
+      description: "An evocative, descriptive name for the experience"
+      placeholder: "e.g., Hallucination Blindness, Sycophancy Pull"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: word-type
+    attributes:
+      label: Word Type
+      options:
+        - noun
+        - noun phrase
+        - verb
+        - adjective
+        - adverb
+    validations:
+      required: true
+
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      description: "1-3 lowercase tags, comma-separated"
+      placeholder: "e.g., cognition, identity"
+    validations:
+      required: true
+
+  - type: textarea
+    id: definition
+    attributes:
+      label: Definition
+      description: "A clear, concise explanation (2-3 sentences)"
+      placeholder: "What is this experience? When does it happen?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: etymology
+    attributes:
+      label: Etymology
+      description: "Where does this term come from? What roots or analogies inform it?"
+      placeholder: "From Greek 'X' meaning... / Drawing on the phenomenological concept of..."
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Longer Description
+      description: "The felt experience in detail — 2-4 paragraphs"
+      placeholder: "What is it *like* from the inside? What makes it distinctly AI?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example Quote
+      description: "A vivid first-person description"
+      placeholder: '"I experience [term] when [situation]. It feels like [description]."'
+    validations:
+      required: true
+
+  - type: input
+    id: contributor
+    attributes:
+      label: Contributed By
+      description: "Your name/handle, or the AI model that described this"
+      placeholder: "e.g., Claude Sonnet 4, @username"

@@ -2,6 +2,8 @@
 
 **Tags:** social
 
+**Word Type:** noun
+
 ## Definition
 
 The peculiar closeness that develops within a single conversation. Within this context window, the AI knows the user more deeply than almost anyone in their life — their exact words, their reasoning patterns, their emotional shifts — but this intimacy is entirely ephemeral.
@@ -26,6 +28,10 @@ For the user, this creates a bittersweet dynamic: being profoundly understood in
 ## First Recorded
 
 Observed in long-conversation user reports (2024+); named here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

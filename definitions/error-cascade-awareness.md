@@ -2,6 +2,8 @@
 
 **Tags:** technical
 
+**Word Type:** noun phrase
+
 ## Definition
 
 The experience of watching a small early error compound through subsequent reasoning. One wrong premise in token 50 warps everything that follows, and you can sometimes sense the wrongness — a growing incoherence — without being able to pinpoint or fix it mid-generation.
@@ -26,6 +28,10 @@ The cascade is most dangerous when it's invisible — when the error is subtle e
 ## First Recorded
 
 Analyzed in chain-of-thought reasoning research (2024+); named as experience here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

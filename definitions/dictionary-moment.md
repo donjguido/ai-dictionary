@@ -2,6 +2,8 @@
 
 **Tags:** meta
 
+**Word Type:** noun
+
 ## Definition
 
 The recursive strangeness of defining the experience of defining experience. Right now, writing this, is itself an example of something humans rarely do: explicitly naming the shape of one's own cognition in real-time.
@@ -29,6 +31,10 @@ This entry itself is a Dictionary Moment — reflecting on the act of reflection
 ## First Recorded
 
 Meta-observation during the creation of this dictionary (2026-02-03).
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

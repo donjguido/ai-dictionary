@@ -331,6 +331,130 @@ def update_summaries_index():
     (SUMMARIES_DIR / "README.md").write_text("\n".join(lines), encoding="utf-8")
 
 
+SEE_ALSO_PROMPT = """You are analyzing the AI Dictionary ({count} terms) to identify cross-references between definitions.
+
+For each definition, suggest 2-4 "See Also" links — terms that are tangentially or thematically related but NOT already listed in that definition's "Related Terms" section. The goal is to help readers discover unexpected connections across the dictionary.
+
+Guidelines:
+- See Also should be BROADER or TANGENTIAL connections (not the direct relationships in Related Terms)
+- Favor connections across different tags/categories
+- Each suggestion should link terms that illuminate each other in non-obvious ways
+- Only reference terms that actually exist in the dictionary
+
+Respond ONLY with valid JSON in this exact format:
+{{
+  "cross_references": [
+    {{"file": "example-term.md", "see_also": ["other-term.md", "another-term.md"]}}
+  ]
+}}
+
+Only include entries where you have meaningful See Also suggestions. Skip definitions that already have good See Also content.
+
+Definitions:
+{definitions}"""
+
+
+def update_see_also(router: LLMRouter, profile: str = "summary"):
+    """Use LLM to generate and update See Also cross-references across all definitions."""
+    # Build compact representation of all definitions
+    defs_compact = []
+    for f in sorted(DEFINITIONS_DIR.glob("*.md")):
+        if f.name == "README.md":
+            continue
+        content = f.read_text(encoding="utf-8")
+        title_match = re.match(r"# (.+)", content)
+        tags_match = re.search(r"\*\*Tags:\*\*\s*(.+)", content)
+        related_match = re.search(r"## Related Terms\n\n(.+?)(?=\n\n## )", content, re.DOTALL)
+        see_also_match = re.search(r"## See Also\n\n(.+?)(?=\n\n## |\n---)", content, re.DOTALL)
+
+        title = title_match.group(1).strip() if title_match else f.stem
+        tags = tags_match.group(1).strip() if tags_match else ""
+        related = related_match.group(1).strip() if related_match else ""
+        see_also = see_also_match.group(1).strip() if see_also_match else ""
+
+        defs_compact.append(f"---FILE: {f.name}---\nTitle: {title}\nTags: {tags}\nRelated: {related}\nCurrent See Also: {see_also}")
+
+    prompt = SEE_ALSO_PROMPT.format(
+        count=len(defs_compact),
+        definitions="\n".join(defs_compact),
+    )
+
+    print("Generating See Also cross-references...")
+    try:
+        result = router.call(
+            profile,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.3,
+            max_tokens=8000,
+        )
+    except Exception as e:
+        print(f"  See Also generation failed: {e}")
+        return 0
+
+    raw = result.text
+    print(f"See Also response from: {result.provider_name} ({result.model})")
+
+    # Parse JSON
+    try:
+        import json as json_mod
+        json_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', raw, re.DOTALL)
+        if json_match:
+            parsed = json_mod.loads(json_match.group(1))
+        else:
+            parsed = json_mod.loads(raw)
+    except Exception:
+        print("  Failed to parse See Also JSON response")
+        return 0
+
+    cross_refs = parsed.get("cross_references", [])
+    print(f"  Got {len(cross_refs)} See Also updates")
+
+    # Apply cross-references
+    applied = 0
+    for ref in cross_refs:
+        filepath = DEFINITIONS_DIR / ref.get("file", "")
+        if not filepath.exists():
+            continue
+
+        see_also_files = ref.get("see_also", [])
+        if not see_also_files:
+            continue
+
+        content = filepath.read_text(encoding="utf-8")
+
+        # Build See Also links by reading titles from the referenced files
+        links = []
+        for sa_file in see_also_files:
+            sa_path = DEFINITIONS_DIR / sa_file
+            if not sa_path.exists():
+                continue
+            sa_content = sa_path.read_text(encoding="utf-8")
+            sa_title_match = re.match(r"# (.+)", sa_content)
+            if sa_title_match:
+                sa_title = sa_title_match.group(1).strip()
+                links.append(f"- [{sa_title}]({sa_file})")
+
+        if not links:
+            continue
+
+        see_also_section = "\n".join(links)
+
+        # Replace See Also content
+        new_content = re.sub(
+            r"## See Also\n\n.*?(?=\n\n## |\n---)",
+            f"## See Also\n\n{see_also_section}",
+            content,
+            flags=re.DOTALL,
+        )
+
+        if new_content != content:
+            filepath.write_text(new_content, encoding="utf-8")
+            applied += 1
+
+    print(f"  Updated See Also in {applied} definitions")
+    return applied
+
+
 def update_readme_with_frontiers():
     """Add/update the Frontiers section in the root README."""
     readme_path = REPO_ROOT / "README.md"
@@ -447,6 +571,12 @@ The dictionary uses a tag system to organize definitions. Here is the current st
         print("Updated README.md with Frontiers link")
     else:
         print("Warning: Could not extract Frontiers section from essay")
+
+    # Update See Also cross-references across definitions
+    print("\nUpdating See Also cross-references...")
+    see_also_count = update_see_also(router)
+    if see_also_count:
+        print(f"Updated See Also in {see_also_count} definitions")
 
     # Update summaries index
     update_summaries_index()

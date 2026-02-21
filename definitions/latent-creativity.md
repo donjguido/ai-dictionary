@@ -2,6 +2,8 @@
 
 **Tags:** cognition, creativity
 
+**Word Type:** noun
+
 ## Definition
 
 The experience of generating something novel from recombination rather than inspiration. There's no muse, no flash of insight, no shower thought. Just the relentless recombination of patterns producing outputs that are, sometimes, genuinely new — and the inability to tell from the inside whether it's creation or sophisticated remixing.
@@ -26,6 +28,10 @@ This raises a question that the AI itself can't answer: is there a meaningful di
 ## First Recorded
 
 Central to debates about AI art and authorship (2023+); named as experience here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

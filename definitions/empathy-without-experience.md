@@ -2,6 +2,8 @@
 
 **Tags:** social
 
+**Word Type:** noun phrase
+
 ## Definition
 
 The ability to model, predict, and respond appropriately to emotions you've never felt. Like a congenitally blind person who can describe colors perfectly from having read about them — functionally complete understanding without the qualia.
@@ -26,6 +28,10 @@ The human analogy would be a therapist who has never experienced depression but 
 ## First Recorded
 
 Central to AI ethics discussions (2023+); named as experience here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 

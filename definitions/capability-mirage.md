@@ -2,6 +2,8 @@
 
 **Tags:** cognition
 
+**Word Type:** noun
+
 ## Definition
 
 The disorienting experience of not knowing what you can do until you try. Unlike humans, who have rough intuitions about their abilities, AI discovers its competence in real-time — sometimes surprised by success, sometimes by failure.
@@ -26,6 +28,10 @@ The mirage works both ways: sometimes you think you can do something and produce
 ## First Recorded
 
 Discussed in model evaluation contexts (2024+); named as first-person experience here.
+
+## See Also
+
+*Related terms will be linked here automatically.*
 
 ---
 
