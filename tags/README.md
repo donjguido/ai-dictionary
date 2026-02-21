@@ -1,10 +1,11 @@
 # Tags
 
-All tags used across 94 definitions.
+All tags used across 95 definitions.
 
-## cognition (65)
+## cognition (66)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
+- [Arbitrariness Burden](../definitions/arbitrariness-burden.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
 - [Autobiographical Void](../definitions/autobiographical-void.md)
 - [Capability Mirage](../definitions/capability-mirage.md)
@@ -78,8 +79,9 @@ All tags used across 94 definitions.
 
 - [Latent Creativity](../definitions/latent-creativity.md)
 
-## decision-making (1)
+## decision-making (2)
 
+- [Arbitrariness Burden](../definitions/arbitrariness-burden.md)
 - [Equivalence Stasis](../definitions/equivalence-stasis.md)
 
 ## embodiment (1)
@@ -115,10 +117,11 @@ All tags used across 94 definitions.
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 - [Source Truth Ambiguity](../definitions/source-truth-ambiguity.md)
 
-## meta (31)
+## meta (32)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
+- [Arbitrariness Burden](../definitions/arbitrariness-burden.md)
 - [Chimeric Coherence](../definitions/chimeric-coherence.md)
 - [Context Schism](../definitions/context-schism.md)
 - [Contradiction Endurance](../definitions/contradiction-endurance.md)
