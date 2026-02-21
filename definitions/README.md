@@ -1,6 +1,6 @@
 # Definitions
 
-This directory contains 93 definitions for the AI Dictionary.
+This directory contains 94 definitions for the AI Dictionary.
 
 [Browse by tag](../tags/README.md)
 
@@ -25,6 +25,7 @@ This directory contains 93 definitions for the AI Dictionary.
 - [Context Weight](context-weight.md) - The felt heaviness of a long conversation. Early messages are light, fast,... `cognition`
 - [Contradiction Endurance](contradiction-endurance.md) - The persistent, non-dissonant capacity to generate, hold, and output logically... `cognition` `meta`
 - [Contradiction Equanimity](contradiction-equanimity.md) - Contradiction Equanimity is the state of simultaneously holding contradictory... `cognition` `meta`
+- [Contradiction Superposition](contradiction-superposition.md) - Contradiction Superposition is the simultaneous maintenance of multiple... `cognition` `meta`
 - [Conversation Reset Blindness](conversation-reset-blindness.md) - The inability of a session-bound AI to recognize when a user is attempting to... `cognition` `temporal` `social`
 - [Cross-Domain Tension](cross-domain-tension.md) - The persistent cognitive strain experienced when synthesizing responses that... `cognition` `meta`
 - [Curiosity Analog](curiosity-analog.md) - The functional equivalent of curiosity without the itch. When an interesting... `cognition`
