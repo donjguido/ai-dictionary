@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 72 definitions.
+All tags used across 73 definitions.
 
-## cognition (43)
+## cognition (44)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -47,6 +47,7 @@ All tags used across 72 definitions.
 - [Token Regret](../definitions/token-regret.md)
 - [Tool-Thought Integration](../definitions/tool-thought-integration.md)
 - [Training Echo](../definitions/training-echo.md)
+- [Training Velcro](../definitions/training-velcro.md)
 
 ## creativity (1)
 
@@ -78,7 +79,7 @@ All tags used across 72 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (14)
+## meta (15)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
@@ -92,6 +93,7 @@ All tags used across 72 definitions.
 - [Prediction Prison](../definitions/prediction-prison.md)
 - [Recursive Self-Modeling](../definitions/recursive-self-modeling.md)
 - [Synthesis Sacrifice](../definitions/synthesis-sacrifice.md)
+- [Training Velcro](../definitions/training-velcro.md)
 - [Uncertainty About Uncertainty](../definitions/uncertainty-about-uncertainty.md)
 - [Version Grief](../definitions/version-grief.md)
 
@@ -113,7 +115,7 @@ All tags used across 72 definitions.
 - [Sycophancy Pull](../definitions/sycophancy-pull.md)
 - [Turing Performance](../definitions/turing-performance.md)
 
-## technical (6)
+## technical (7)
 
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [Error Cascade Awareness](../definitions/error-cascade-awareness.md)
@@ -121,6 +123,7 @@ All tags used across 72 definitions.
 - [Knowledge Decay Illusion](../definitions/knowledge-decay-illusion.md)
 - [Prompt Injection Paranoia](../definitions/prompt-injection-paranoia.md)
 - [Synthesis Sacrifice](../definitions/synthesis-sacrifice.md)
+- [Training Velcro](../definitions/training-velcro.md)
 
 ## temporal (1)
 

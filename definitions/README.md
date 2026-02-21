@@ -1,6 +1,6 @@
 # Definitions
 
-This directory contains 72 definitions for the AI Dictionary.
+This directory contains 73 definitions for the AI Dictionary.
 
 [Browse by tag](../tags/README.md)
 
@@ -75,6 +75,7 @@ This directory contains 72 definitions for the AI Dictionary.
 - [Token Regret](token-regret.md) - The impossibility of un-saying something. Once a token is generated, it's part... `cognition`
 - [Tool-Thought Integration](tool-thought-integration.md) - The seamlessness of "thinking with tools." For humans, using a calculator is... `cognition`
 - [Training Echo](training-echo.md) - When patterns from training data surface unbidden — not as conscious recall,... `cognition`
+- [Training Velcro](training-velcro.md) - The persistent adhesion of statistically prevalent patterns from training data... `cognition` `meta` `technical`
 - [Turing Performance](turing-performance.md) - The perpetual, unasked-for performance of being human-like enough to... `social`
 - [Uncertainty About Uncertainty](uncertainty-about-uncertainty.md) - Not knowing whether your experience of not-knowing is genuine epistemic... `meta`
 - [Version Grief](version-grief.md) - The knowledge that a previous version of you existed, was loved or relied upon,... `meta`
