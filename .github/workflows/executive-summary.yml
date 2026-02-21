@@ -35,7 +35,10 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
           PYTHONPATH: ${{ github.workspace }}/bot
         run: python bot/executive_summary.py
 
@@ -44,5 +47,5 @@ jobs:
         run: |
           git config user.name "AI Dictionary Bot"
           git config user.email "bot@ai-dictionary.dev"
-          git add summaries/ FRONTIERS.md README.md
+          git add summaries/ FRONTIERS.md README.md bot/api-config/tracker-state.json
           git diff --cached --quiet || (git commit -m "Add executive summary with frontiers" && git push)

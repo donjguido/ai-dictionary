@@ -32,8 +32,9 @@ jobs:
       - name: Run tag review
         if: steps.governor.outcome == 'success'
         env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          OPENROUTER_MODEL: ${{ github.event.inputs.model || 'stepfun/step-3.5-flash:free' }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
           PYTHONPATH: ${{ github.workspace }}/bot
         run: python bot/tag_review.py
 
@@ -46,7 +47,7 @@ jobs:
         run: |
           git config user.name "AI Dictionary Bot"
           git config user.email "bot@ai-dictionary.dev"
-          git add definitions/ tags/ bot/state.json bot/usage-state.json README.md
+          git add definitions/ tags/ bot/state.json bot/usage-state.json bot/api-config/tracker-state.json README.md
           git diff --cached --quiet || (git commit -m "Tag review: update tags across definitions" && git push)
 
       - name: Trigger executive summary

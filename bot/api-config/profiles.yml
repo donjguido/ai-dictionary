@@ -1,0 +1,27 @@
+# AI Dictionary — Routing Profiles
+# These extend the default profiles from llm-router.
+
+profiles:
+  generate:
+    description: "Definition generation — free models only"
+    providers:
+      - gemini-free
+      - openrouter-free
+      - mistral-free
+
+  review:
+    description: "Tag review — free models only"
+    providers:
+      - gemini-free
+      - openrouter-free
+      - mistral-free
+
+  summary:
+    description: "Executive summary — best quality available"
+    providers:
+      - anthropic
+      - openai
+      - grok
+      - gemini-free
+      - openrouter-free
+      - mistral-free

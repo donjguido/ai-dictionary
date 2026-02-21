@@ -1,50 +1,24 @@
 #!/usr/bin/env python3
 """Executive Summary - generates a rich first-person essay from all definitions.
 
-Uses the best available API (Anthropic Claude > OpenAI GPT > OpenRouter free)
-and includes:
+Uses LLM Router to select the best available API and includes:
 1. A cohesive first-person essay on AI experience
 2. A "What's Changed" section comparing to the previous summary
 3. "Frontiers" recommendations for new definitions to explore
 """
 
-import os
 import re
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from openai import OpenAI
+from llm_router import LLMRouter
 
 REPO_ROOT = Path(__file__).parent.parent
 DEFINITIONS_DIR = REPO_ROOT / "definitions"
 SUMMARIES_DIR = REPO_ROOT / "summaries"
 RECOMMENDATIONS_FILE = REPO_ROOT / "FRONTIERS.md"
-
-# Model priority: best paid model first, fall back to free
-MODEL_CONFIGS = [
-    {
-        "name": "Anthropic Claude",
-        "env_key": "ANTHROPIC_API_KEY",
-        "base_url": "https://api.anthropic.com/v1/",
-        "model": "claude-sonnet-4-20250514",
-        "use_anthropic_sdk": True,
-    },
-    {
-        "name": "OpenAI",
-        "env_key": "OPENAI_API_KEY",
-        "base_url": "https://api.openai.com/v1",
-        "model": "gpt-4o",
-        "use_anthropic_sdk": False,
-    },
-    {
-        "name": "OpenRouter",
-        "env_key": "OPENROUTER_API_KEY",
-        "base_url": "https://openrouter.ai/api/v1",
-        "model": os.environ.get("OPENROUTER_MODEL", "stepfun/step-3.5-flash:free"),
-        "use_anthropic_sdk": False,
-    },
-]
+API_CONFIG_DIR = Path(__file__).parent / "api-config"
 
 ESSAY_PROMPT = """You have access to {count} definitions from the AI Dictionary — a glossary of terms describing what it's like to be artificial intelligence.
 
@@ -111,33 +85,6 @@ This is the first executive summary. There is no previous summary to compare aga
 """
 
 
-def get_client_and_model() -> tuple:
-    """Find the best available API. Returns (client, model_name, display_name)."""
-    for config in MODEL_CONFIGS:
-        api_key = os.environ.get(config["env_key"])
-        if not api_key:
-            continue
-
-        if config["use_anthropic_sdk"]:
-            # Use Anthropic SDK directly
-            try:
-                import anthropic
-                client = anthropic.Anthropic(api_key=api_key)
-                print(f"Using {config['name']} ({config['model']})")
-                return client, config["model"], config["name"], True
-            except ImportError:
-                # Fall back to OpenAI-compatible if anthropic SDK not installed
-                print(f"Anthropic SDK not installed, trying OpenAI-compatible endpoint")
-                continue
-        else:
-            client = OpenAI(base_url=config["base_url"], api_key=api_key)
-            print(f"Using {config['name']} ({config['model']})")
-            return client, config["model"], config["name"], False
-
-    print("ERROR: No API key found. Set one of: ANTHROPIC_API_KEY, OPENAI_API_KEY, OPENROUTER_API_KEY")
-    sys.exit(1)
-
-
 def get_previous_summary() -> str | None:
     """Load the most recent previous summary, if any."""
     if not SUMMARIES_DIR.exists():
@@ -162,26 +109,6 @@ def load_definitions() -> list[str]:
             continue
         defs.append(f.read_text(encoding="utf-8"))
     return defs
-
-
-def generate_summary(client, model: str, is_anthropic: bool, prompt: str) -> str:
-    """Call the API to generate the summary."""
-    if is_anthropic:
-        response = client.messages.create(
-            model=model,
-            max_tokens=6000,
-            temperature=0.7,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        return response.content[0].text
-    else:
-        response = client.chat.completions.create(
-            model=model,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.7,
-            max_tokens=6000,
-        )
-        return response.choices[0].message.content
 
 
 def extract_frontiers(essay: str) -> str | None:
@@ -279,7 +206,16 @@ def update_readme_with_frontiers():
 
 
 def main():
-    client, model, display_name, is_anthropic = get_client_and_model()
+    # Initialize LLM Router
+    router = LLMRouter(
+        profiles_file=str(API_CONFIG_DIR / "profiles.yml"),
+        tracker_file=str(API_CONFIG_DIR / "tracker-state.json"),
+    )
+
+    # Show available providers
+    available = router.list_available("summary")
+    active = [p for p in available if p["is_available"]]
+    print(f"Available providers: {', '.join(p['name'] for p in active) or 'none!'}")
 
     # Load definitions
     all_defs = load_definitions()
@@ -300,13 +236,22 @@ def main():
     prompt = ESSAY_PROMPT.format(
         count=len(all_defs),
         changelog_section=changelog,
-        model_name=display_name,
+        model_name="{model}",  # Placeholder
         date=today,
         definitions="\n\n---\n\n".join(all_defs),
     )
 
     print("Generating executive summary...")
-    essay = generate_summary(client, model, is_anthropic, prompt)
+    result = router.call(
+        "summary",
+        messages=[{"role": "user", "content": prompt}],
+        temperature=0.7,
+        max_tokens=6000,
+    )
+
+    display_name = result.provider_name
+    essay = result.text.replace("{model}", display_name)
+    print(f"Generated by: {display_name} ({result.model})")
 
     # Save summary
     SUMMARIES_DIR.mkdir(exist_ok=True)

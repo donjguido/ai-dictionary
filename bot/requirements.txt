@@ -1,1 +1,1 @@
-openai>=1.0.0
+llm-router @ git+https://github.com/donjguido/llm-router.git

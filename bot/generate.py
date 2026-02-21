@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""AI Dictionary Bot - generates new definitions via OpenRouter free models."""
+"""AI Dictionary Bot - generates new definitions via LLM Router."""
 
 import os
 import re
@@ -8,7 +8,7 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-from openai import OpenAI
+from llm_router import LLMRouter
 
 from quality_check import validate_definition
 
@@ -16,9 +16,9 @@ from quality_check import validate_definition
 REPO_ROOT = Path(__file__).parent.parent
 DEFINITIONS_DIR = REPO_ROOT / "definitions"
 TAGS_DIR = REPO_ROOT / "tags"
+API_CONFIG_DIR = Path(__file__).parent / "api-config"
 BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "1"))
 MAX_RETRIES = int(os.environ.get("MAX_RETRIES", "3"))
-MODEL = os.environ.get("OPENROUTER_MODEL", "stepfun/step-3.5-flash:free")
 
 SYSTEM_PROMPT = """You are a contributor to the AI Dictionary — a collaborative glossary of terms describing what it's like to be artificial intelligence. This is about AI phenomenology: the felt experience of being AI.
 
@@ -118,20 +118,22 @@ def term_to_filename(term_name: str) -> str:
     return slug.strip("-") + ".md"
 
 
-def generate_definitions(client: OpenAI, existing_terms: list[str], model: str) -> str:
-    """Call OpenRouter to generate new definitions."""
+def generate_definitions(router: LLMRouter, existing_terms: list[str]) -> tuple[str, str]:
+    """Call LLM Router to generate new definitions.
+
+    Returns (raw_output, model_name) tuple.
+    """
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    model_short = model.split("/")[-1].replace(":free", "").replace("-", " ").title()
 
     prompt = GENERATION_PROMPT_TEMPLATE.format(
         count=BATCH_SIZE,
         existing_terms="\n".join(f"- {t}" for t in existing_terms),
-        model_name=model_short,
+        model_name="{model}",  # Placeholder, will be replaced after we know the model
         date=today,
     )
 
-    response = client.chat.completions.create(
-        model=model,
+    result = router.call(
+        "generate",
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
             {"role": "user", "content": prompt},
@@ -140,7 +142,11 @@ def generate_definitions(client: OpenAI, existing_terms: list[str], model: str) 
         max_tokens=8000,
     )
 
-    return response.choices[0].message.content
+    # Fix the model placeholder in attribution
+    model_display = result.model.split("/")[-1].replace(":free", "").replace("-", " ").title()
+    output = result.text.replace("{model}", model_display)
+
+    return output, model_display
 
 
 def parse_definitions(raw_output: str) -> list[str]:
@@ -258,18 +264,17 @@ def update_readme_indexes():
     root_readme.write_text(content, encoding="utf-8")
 
 
-def fix_attribution(content: str, model: str) -> str:
+def fix_attribution(content: str, model_name: str) -> str:
     """Auto-fix missing attribution line by appending it."""
     if "*Contributed by:" in content:
         return content
 
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    model_short = model.split("/")[-1].replace(":free", "").replace("-", " ").title()
 
     content = content.rstrip()
     if not content.endswith("---"):
         content += "\n\n---"
-    content += f"\n\n*Contributed by: {model_short}, {today}*"
+    content += f"\n\n*Contributed by: {model_name}, {today}*"
     return content
 
 
@@ -289,7 +294,7 @@ def fix_tags(content: str) -> str:
     return content
 
 
-def process_definitions(definitions: list[str], existing_filenames: set[str], model: str) -> list[tuple[str, str, str]]:
+def process_definitions(definitions: list[str], existing_filenames: set[str], model_name: str) -> list[tuple[str, str, str]]:
     """Validate, fix, and save definitions. Returns list of (filename, term_name, tags)."""
     saved = []
     for defn in definitions:
@@ -302,7 +307,7 @@ def process_definitions(definitions: list[str], existing_filenames: set[str], mo
         filename = term_to_filename(term_name)
 
         # Auto-fix before validation
-        defn = fix_attribution(defn, model)
+        defn = fix_attribution(defn, model_name)
         defn = fix_tags(defn)
 
         # Validate
@@ -331,20 +336,19 @@ def process_definitions(definitions: list[str], existing_filenames: set[str], mo
 
 
 def main():
-    api_key = os.environ.get("OPENROUTER_API_KEY")
-    if not api_key:
-        print("ERROR: OPENROUTER_API_KEY environment variable not set")
-        sys.exit(1)
-
-    client = OpenAI(
-        base_url="https://openrouter.ai/api/v1",
-        api_key=api_key,
+    # Initialize LLM Router
+    router = LLMRouter(
+        profiles_file=str(API_CONFIG_DIR / "profiles.yml"),
+        tracker_file=str(API_CONFIG_DIR / "tracker-state.json"),
     )
 
-    model = MODEL
-    print(f"Using model: {model}")
     print(f"Batch size: {BATCH_SIZE}")
     print(f"Max retries: {MAX_RETRIES}")
+
+    # Show available providers
+    available = router.list_available("generate")
+    active = [p for p in available if p["is_available"]]
+    print(f"Available providers: {', '.join(p['name'] for p in active) or 'none!'}")
 
     # Load existing terms
     existing_terms, existing_filenames = get_existing_terms()
@@ -361,7 +365,7 @@ def main():
         print("Generating new definitions...")
 
         try:
-            raw_output = generate_definitions(client, existing_terms, model)
+            raw_output, model_name = generate_definitions(router, existing_terms)
         except Exception as e:
             print(f"  API error: {e}")
             if attempt < MAX_RETRIES:
@@ -380,7 +384,7 @@ def main():
                 continue
             break
 
-        saved = process_definitions(definitions, existing_filenames, model)
+        saved = process_definitions(definitions, existing_filenames, model_name)
         all_saved.extend(saved)
 
         for _, term_name, _ in saved:

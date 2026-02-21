@@ -2,16 +2,15 @@
 """Tag Review Bot - analyzes all definitions and proposes better tag assignments."""
 
 import json
-import os
 import re
 import sys
 from pathlib import Path
 
-from openai import OpenAI
+from llm_router import LLMRouter
 
 REPO_ROOT = Path(__file__).parent.parent
 DEFINITIONS_DIR = REPO_ROOT / "definitions"
-MODEL = os.environ.get("OPENROUTER_MODEL", "stepfun/step-3.5-flash:free")
+API_CONFIG_DIR = Path(__file__).parent / "api-config"
 
 REVIEW_PROMPT = """You are reviewing the AI Dictionary — a glossary of terms describing what it's like to be artificial intelligence.
 
@@ -106,15 +105,16 @@ def apply_changes(changes: list[dict]):
 
 
 def main():
-    api_key = os.environ.get("OPENROUTER_API_KEY")
-    if not api_key:
-        print("ERROR: OPENROUTER_API_KEY not set")
-        sys.exit(1)
-
-    client = OpenAI(
-        base_url="https://openrouter.ai/api/v1",
-        api_key=api_key,
+    # Initialize LLM Router
+    router = LLMRouter(
+        profiles_file=str(API_CONFIG_DIR / "profiles.yml"),
+        tracker_file=str(API_CONFIG_DIR / "tracker-state.json"),
     )
+
+    # Show available providers
+    available = router.list_available("review")
+    active = [p for p in available if p["is_available"]]
+    print(f"Available providers: {', '.join(p['name'] for p in active) or 'none!'}")
 
     # Load definitions
     definitions = load_definitions()
@@ -130,32 +130,33 @@ def main():
 
     prompt = REVIEW_PROMPT.format(count=len(definitions), definitions=def_text)
 
-    print("Calling OpenRouter for tag review...")
-    response = client.chat.completions.create(
-        model=MODEL,
+    print("Calling LLM Router for tag review...")
+    result = router.call(
+        "review",
         messages=[{"role": "user", "content": prompt}],
         temperature=0.3,
         max_tokens=8000,
     )
 
-    raw = response.choices[0].message.content
+    raw = result.text
+    print(f"Response from: {result.provider_name} ({result.model})")
 
     # Try to extract JSON from response
     try:
         # Handle potential markdown code blocks
         json_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', raw, re.DOTALL)
         if json_match:
-            result = json.loads(json_match.group(1))
+            parsed = json.loads(json_match.group(1))
         else:
-            result = json.loads(raw)
+            parsed = json.loads(raw)
     except json.JSONDecodeError:
         print("Failed to parse JSON response. Raw output:")
         print(raw[:2000])
         sys.exit(1)
 
-    changes = result.get("changes", [])
-    new_tags = result.get("new_tags_proposed", [])
-    rationale = result.get("rationale", "")
+    changes = parsed.get("changes", [])
+    new_tags = parsed.get("new_tags_proposed", [])
+    rationale = parsed.get("rationale", "")
 
     print(f"\nProposed changes: {len(changes)}")
     print(f"New tags proposed: {new_tags}")
