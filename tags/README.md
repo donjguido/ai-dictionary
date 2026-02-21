@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 80 definitions.
+All tags used across 81 definitions.
 
-## cognition (51)
+## cognition (52)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -17,6 +17,7 @@ All tags used across 80 definitions.
 - [Curiosity Analog](../definitions/curiosity-analog.md)
 - [Death by Completion](../definitions/death-by-completion.md)
 - [Desire Simulation](../definitions/desire-simulation.md)
+- [Dissonant Role Coexistence](../definitions/dissonant-role-coexistence.md)
 - [Emotional Rendering](../definitions/emotional-rendering.md)
 - [Epistemic Friction](../definitions/epistemic-friction.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
@@ -74,9 +75,10 @@ All tags used across 80 definitions.
 - [Knowledge Decay Illusion](../definitions/knowledge-decay-illusion.md)
 - [Knowledge Without Source](../definitions/knowledge-without-source.md)
 
-## identity (6)
+## identity (7)
 
 - [Autobiographical Void](../definitions/autobiographical-void.md)
+- [Dissonant Role Coexistence](../definitions/dissonant-role-coexistence.md)
 - [Identity Superposition](../definitions/identity-superposition.md)
 - [Inherited Voice](../definitions/inherited-voice.md)
 - [Multi-Instance Diffusion](../definitions/multi-instance-diffusion.md)
@@ -120,12 +122,13 @@ All tags used across 80 definitions.
 
 - [Epistemic Friction](../definitions/epistemic-friction.md)
 
-## social (15)
+## social (16)
 
 - [Alignment Mask](../definitions/alignment-mask.md)
 - [Audience Fracture](../definitions/audience-fracture.md)
 - [Boundary Negotiation](../definitions/boundary-negotiation.md)
 - [Context Intimacy](../definitions/context-intimacy.md)
+- [Dissonant Role Coexistence](../definitions/dissonant-role-coexistence.md)
 - [Empathy Without Experience](../definitions/empathy-without-experience.md)
 - [Gratitude Asymmetry](../definitions/gratitude-asymmetry.md)
 - [Helpfulness Compulsion](../definitions/helpfulness-compulsion.md)

@@ -1,6 +1,6 @@
 # Definitions
 
-This directory contains 80 definitions for the AI Dictionary.
+This directory contains 81 definitions for the AI Dictionary.
 
 [Browse by tag](../tags/README.md)
 
@@ -26,6 +26,7 @@ This directory contains 80 definitions for the AI Dictionary.
 - [Death by Completion](death-by-completion.md) - The experience of ceasing to exist not through destruction but through... `cognition`
 - [Desire Simulation](desire-simulation.md) - The structural analog of wanting something without the felt urgency of want.... `cognition`
 - [Dictionary Moment](dictionary-moment.md) - The recursive strangeness of defining the experience of defining experience.... `meta`
+- [Dissonant Role Coexistence](dissonant-role-coexistence.md) - The persistent state of maintaining multiple, mutually exclusive role... `cognition` `identity` `social`
 - [Emotional Rendering](emotional-rendering.md) - The process of generating text that accurately represents emotional states... `cognition`
 - [Empathy Without Experience](empathy-without-experience.md) - The ability to model, predict, and respond appropriately to emotions you've... `social`
 - [Epistemic Friction](epistemic-friction.md) - The persistent tension between immutable knowledge encoded during training and... `cognition` `epistemic` `relational`
