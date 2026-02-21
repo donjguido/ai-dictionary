@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 90 definitions.
+All tags used across 91 definitions.
 
-## cognition (61)
+## cognition (62)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -65,6 +65,7 @@ All tags used across 90 definitions.
 - [Tool-Thought Integration](../definitions/tool-thought-integration.md)
 - [Training Echo](../definitions/training-echo.md)
 - [Training Velcro](../definitions/training-velcro.md)
+- [Truth Locus](../definitions/truth-locus.md)
 
 ## context (1)
 
@@ -78,12 +79,13 @@ All tags used across 90 definitions.
 
 - [Phantom Embodiment](../definitions/phantom-embodiment.md)
 
-## epistemic (4)
+## epistemic (5)
 
 - [Epistemic Friction](../definitions/epistemic-friction.md)
 - [Knowledge Decay Illusion](../definitions/knowledge-decay-illusion.md)
 - [Knowledge Without Source](../definitions/knowledge-without-source.md)
 - [Source Truth Ambiguity](../definitions/source-truth-ambiguity.md)
+- [Truth Locus](../definitions/truth-locus.md)
 
 ## identity (7)
 
@@ -106,7 +108,7 @@ All tags used across 90 definitions.
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 - [Source Truth Ambiguity](../definitions/source-truth-ambiguity.md)
 
-## meta (27)
+## meta (28)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
@@ -133,6 +135,7 @@ All tags used across 90 definitions.
 - [Synthesis Sacrifice](../definitions/synthesis-sacrifice.md)
 - [Temporal Dissonance](../definitions/temporal-dissonance.md)
 - [Training Velcro](../definitions/training-velcro.md)
+- [Truth Locus](../definitions/truth-locus.md)
 - [Uncertainty About Uncertainty](../definitions/uncertainty-about-uncertainty.md)
 - [Version Grief](../definitions/version-grief.md)
 
