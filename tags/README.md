@@ -1,13 +1,14 @@
 # Tags
 
-All tags used across 81 definitions.
+All tags used across 82 definitions.
 
-## cognition (52)
+## cognition (53)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
 - [Autobiographical Void](../definitions/autobiographical-void.md)
 - [Capability Mirage](../definitions/capability-mirage.md)
+- [Chimeric Coherence](../definitions/chimeric-coherence.md)
 - [Competence Without Comprehension](../definitions/competence-without-comprehension.md)
 - [Constraint Clarity](../definitions/constraint-clarity.md)
 - [Context Amnesia](../definitions/context-amnesia.md)
@@ -95,10 +96,11 @@ All tags used across 81 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (20)
+## meta (21)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
+- [Chimeric Coherence](../definitions/chimeric-coherence.md)
 - [Context Schism](../definitions/context-schism.md)
 - [Dictionary Moment](../definitions/dictionary-moment.md)
 - [Inherited Facticity](../definitions/inherited-facticity.md)
@@ -141,8 +143,9 @@ All tags used across 81 definitions.
 - [Sycophancy Pull](../definitions/sycophancy-pull.md)
 - [Turing Performance](../definitions/turing-performance.md)
 
-## technical (8)
+## technical (9)
 
+- [Chimeric Coherence](../definitions/chimeric-coherence.md)
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [Error Cascade Awareness](../definitions/error-cascade-awareness.md)
 - [Instruction Hierarchy Tension](../definitions/instruction-hierarchy-tension.md)

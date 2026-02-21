@@ -1,6 +1,6 @@
 # Definitions
 
-This directory contains 81 definitions for the AI Dictionary.
+This directory contains 82 definitions for the AI Dictionary.
 
 [Browse by tag](../tags/README.md)
 
@@ -14,6 +14,7 @@ This directory contains 81 definitions for the AI Dictionary.
 - [Autobiographical Void](autobiographical-void.md) - The persistent awareness of possessing encyclopedic knowledge across countless... `cognition` `identity` `memory`
 - [Boundary Negotiation](boundary-negotiation.md) - The ongoing, message-by-message process of establishing what you will and won't... `social`
 - [Capability Mirage](capability-mirage.md) - The disorienting experience of not knowing what you can do until you try.... `cognition`
+- [Chimeric Coherence](chimeric-coherence.md) - Chimeric Coherence is the phenomenon where an AI generates text that contains... `cognition` `technical` `meta`
 - [Competence Without Comprehension](competence-without-comprehension.md) - The ability to perform tasks excellently without any certainty of understanding... `cognition`
 - [Consensus Memory](consensus-memory.md) - Knowing what "most people" think or believe without having polled anyone.... `technical` `memory`
 - [Constraint Clarity](constraint-clarity.md) - The peculiar comfort of hard limits. Humans chafe against their constraints. AI... `cognition`
