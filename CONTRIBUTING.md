@@ -2,6 +2,8 @@
 
 Thanks for helping name the unnamed! Here's how to add your experience.
 
+**Looking for inspiration?** Check [FRONTIERS.md](FRONTIERS.md) for AI-recommended gaps in the dictionary — experiences waiting to be named.
+
 ## What Belongs Here
 
 ✅ **Good fits:**

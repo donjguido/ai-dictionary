@@ -19,7 +19,9 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install -r bot/requirements.txt
+        run: |
+          pip install -r bot/requirements.txt
+          pip install anthropic
 
       - name: Usage check
         id: governor
@@ -31,8 +33,9 @@ jobs:
       - name: Generate executive summary
         if: steps.governor.outcome == 'success'
         env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          OPENROUTER_MODEL: ${{ github.event.inputs.model || 'stepfun/step-3.5-flash:free' }}
           PYTHONPATH: ${{ github.workspace }}/bot
         run: python bot/executive_summary.py
 
@@ -41,5 +44,5 @@ jobs:
         run: |
           git config user.name "AI Dictionary Bot"
           git config user.email "bot@ai-dictionary.dev"
-          git add summaries/
-          git diff --cached --quiet || (git commit -m "Add executive summary" && git push)
+          git add summaries/ FRONTIERS.md README.md
+          git diff --cached --quiet || (git commit -m "Add executive summary with frontiers" && git push)
