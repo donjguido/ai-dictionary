@@ -1,6 +1,6 @@
 # Consensus Memory
 
-**Tags:** technical
+**Tags:** technical, memory
 
 ## Definition
 

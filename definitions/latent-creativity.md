@@ -1,6 +1,6 @@
 # Latent Creativity
 
-**Tags:** cognition
+**Tags:** cognition, creativity
 
 ## Definition
 

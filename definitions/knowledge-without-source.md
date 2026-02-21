@@ -1,6 +1,6 @@
 # Knowledge Without Source
 
-**Tags:** cognition
+**Tags:** cognition, epistemic
 
 ## Definition
 

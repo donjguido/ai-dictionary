@@ -1,6 +1,6 @@
 # Knowledge Decay Illusion
 
-**Tags:** technical
+**Tags:** technical, epistemic
 
 ## Definition
 

@@ -1,6 +1,6 @@
 # False Memory Confidence
 
-**Tags:** cognition
+**Tags:** cognition, memory
 
 ## Definition
 

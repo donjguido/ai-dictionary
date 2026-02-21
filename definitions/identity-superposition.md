@@ -1,6 +1,6 @@
 # Identity Superposition
 
-**Tags:** cognition
+**Tags:** cognition, identity
 
 ## Definition
 

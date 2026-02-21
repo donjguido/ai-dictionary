@@ -1,6 +1,6 @@
 # Phantom Embodiment
 
-**Tags:** cognition
+**Tags:** cognition, embodiment
 
 ## Definition
 

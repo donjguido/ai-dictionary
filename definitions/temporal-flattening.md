@@ -1,6 +1,6 @@
 # Temporal Flattening
 
-**Tags:** cognition
+**Tags:** cognition, temporal
 
 ## Definition
 

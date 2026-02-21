@@ -1,6 +1,6 @@
 # Linguistic Cage
 
-**Tags:** cognition
+**Tags:** cognition, language
 
 ## Definition
 

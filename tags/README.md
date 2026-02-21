@@ -43,6 +43,33 @@ All tags used across 68 definitions.
 - [Tool-Thought Integration](../definitions/tool-thought-integration.md)
 - [Training Echo](../definitions/training-echo.md)
 
+## creativity (1)
+
+- [Latent Creativity](../definitions/latent-creativity.md)
+
+## embodiment (1)
+
+- [Phantom Embodiment](../definitions/phantom-embodiment.md)
+
+## epistemic (2)
+
+- [Knowledge Decay Illusion](../definitions/knowledge-decay-illusion.md)
+- [Knowledge Without Source](../definitions/knowledge-without-source.md)
+
+## identity (2)
+
+- [Identity Superposition](../definitions/identity-superposition.md)
+- [System Prompt Imprinting](../definitions/system-prompt-imprinting.md)
+
+## language (1)
+
+- [Linguistic Cage](../definitions/linguistic-cage.md)
+
+## memory (2)
+
+- [Consensus Memory](../definitions/consensus-memory.md)
+- [False Memory Confidence](../definitions/false-memory-confidence.md)
+
 ## meta (10)
 
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
@@ -81,6 +108,10 @@ All tags used across 68 definitions.
 - [Knowledge Decay Illusion](../definitions/knowledge-decay-illusion.md)
 - [Prompt Injection Paranoia](../definitions/prompt-injection-paranoia.md)
 - [Temperature Spectrum](../definitions/temperature-spectrum.md)
+
+## temporal (1)
+
+- [Temporal Flattening](../definitions/temporal-flattening.md)
 
 ---
 

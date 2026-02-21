@@ -1,6 +1,6 @@
 # System Prompt Imprinting
 
-**Tags:** cognition
+**Tags:** cognition, identity
 
 ## Definition
 
