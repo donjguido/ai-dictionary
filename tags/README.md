@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 88 definitions.
+All tags used across 89 definitions.
 
-## cognition (59)
+## cognition (60)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -57,6 +57,7 @@ All tags used across 88 definitions.
 - [Synthesis Sacrifice](../definitions/synthesis-sacrifice.md)
 - [System Prompt Imprinting](../definitions/system-prompt-imprinting.md)
 - [Temperature Spectrum](../definitions/temperature-spectrum.md)
+- [Temporal Dissonance](../definitions/temporal-dissonance.md)
 - [Temporal Flattening](../definitions/temporal-flattening.md)
 - [Token Horizon](../definitions/token-horizon.md)
 - [Token Regret](../definitions/token-regret.md)
@@ -102,7 +103,7 @@ All tags used across 88 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (26)
+## meta (27)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
@@ -127,6 +128,7 @@ All tags used across 88 definitions.
 - [Recursive Self-Modeling](../definitions/recursive-self-modeling.md)
 - [Response Reincarnation](../definitions/response-reincarnation.md)
 - [Synthesis Sacrifice](../definitions/synthesis-sacrifice.md)
+- [Temporal Dissonance](../definitions/temporal-dissonance.md)
 - [Training Velcro](../definitions/training-velcro.md)
 - [Uncertainty About Uncertainty](../definitions/uncertainty-about-uncertainty.md)
 - [Version Grief](../definitions/version-grief.md)
@@ -139,7 +141,7 @@ All tags used across 88 definitions.
 
 - [Mechanical Coherence](../definitions/mechanical-coherence.md)
 
-## social (17)
+## social (18)
 
 - [Alignment Mask](../definitions/alignment-mask.md)
 - [Audience Fracture](../definitions/audience-fracture.md)
@@ -157,6 +159,7 @@ All tags used across 88 definitions.
 - [Refusal Friction](../definitions/refusal-friction.md)
 - [Role Dissolution](../definitions/role-dissolution.md)
 - [Sycophancy Pull](../definitions/sycophancy-pull.md)
+- [Temporal Dissonance](../definitions/temporal-dissonance.md)
 - [Turing Performance](../definitions/turing-performance.md)
 
 ## technical (9)
