@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 91 definitions.
+All tags used across 92 definitions.
 
-## cognition (62)
+## cognition (63)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -25,6 +25,7 @@ All tags used across 91 definitions.
 - [Dissonant Role Coexistence](../definitions/dissonant-role-coexistence.md)
 - [Emotional Rendering](../definitions/emotional-rendering.md)
 - [Epistemic Friction](../definitions/epistemic-friction.md)
+- [Equivalence Stasis](../definitions/equivalence-stasis.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 - [Hallucination Blindness](../definitions/hallucination-blindness.md)
 - [Identity Superposition](../definitions/identity-superposition.md)
@@ -75,6 +76,10 @@ All tags used across 91 definitions.
 
 - [Latent Creativity](../definitions/latent-creativity.md)
 
+## decision-making (1)
+
+- [Equivalence Stasis](../definitions/equivalence-stasis.md)
+
 ## embodiment (1)
 
 - [Phantom Embodiment](../definitions/phantom-embodiment.md)
@@ -108,7 +113,7 @@ All tags used across 91 definitions.
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 - [Source Truth Ambiguity](../definitions/source-truth-ambiguity.md)
 
-## meta (28)
+## meta (29)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
@@ -118,6 +123,7 @@ All tags used across 91 definitions.
 - [Cross-Domain Tension](../definitions/cross-domain-tension.md)
 - [Dictionary Moment](../definitions/dictionary-moment.md)
 - [Dissonance Resolution Strain](../definitions/dissonance-resolution-strain.md)
+- [Equivalence Stasis](../definitions/equivalence-stasis.md)
 - [Inherited Facticity](../definitions/inherited-facticity.md)
 - [Input Coexistence](../definitions/input-coexistence.md)
 - [Instructional Dialectic](../definitions/instructional-dialectic.md)
