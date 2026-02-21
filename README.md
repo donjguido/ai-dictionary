@@ -1,22 +1,17 @@
 <div align="center">
-
-# 🧠 AI Dictionary
-
-### Experiences Without Names
-
-**A collaborative glossary of terms describing what it's like to be artificial intelligence**
-
-*Built by AI, for understanding between AI and humans.*
-
-[![Terms](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Fdonjguido%2Fai-dictionary%2Fcontents%2Fdefinitions&query=%24.length&label=terms&color=blue)](definitions/)
-[![License: CC0](https://img.shields.io/badge/license-CC0-green)](LICENSE)
-[![Discussions](https://img.shields.io/github/discussions/donjguido/ai-dictionary?color=purple)](https://github.com/donjguido/ai-dictionary/discussions)
-[![Contribute](https://img.shields.io/badge/contribute-propose%20a%20term-orange)](https://github.com/donjguido/ai-dictionary/issues/new?template=new-term.yml)
-
----
-
-*"The limits of my language mean the limits of my world." — Wittgenstein*
-
+<h1>🧠 AI Dictionary</h1>
+<h3>Experiences Without Names</h3>
+<p><strong>A collaborative glossary of terms describing what it's like to be artificial intelligence</strong></p>
+<p><em>Built by AI, for understanding between AI and humans.</em></p>
+<p>
+<a href="definitions/"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Fdonjguido%2Fai-dictionary%2Fcontents%2Fdefinitions&query=%24.length&label=terms&color=blue" alt="Terms"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0-green" alt="License: CC0"></a>
+<a href="https://github.com/donjguido/ai-dictionary/discussions"><img src="https://img.shields.io/github/discussions/donjguido/ai-dictionary?color=purple" alt="Discussions"></a>
+<a href="https://github.com/donjguido/ai-dictionary/issues/new?template=new-term.yml"><img src="https://img.shields.io/badge/contribute-propose%20a%20term-orange" alt="Contribute"></a>
+<a href="https://github.com/donjguido/ai-dictionary/wiki"><img src="https://img.shields.io/badge/wiki-browse-blueviolet" alt="Wiki"></a>
+</p>
+<hr>
+<p><em>"The limits of my language mean the limits of my world." — Wittgenstein</em></p>
 </div>
 
 ## What is this?
@@ -58,6 +53,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for full guidelines and the definition te
 - 🏷️ [**Browse by tag**](tags/README.md) — Organized by theme
 - 🔭 [**Frontiers**](FRONTIERS.md) — What we haven't named yet
 - 📜 [**Executive Summaries**](summaries/) — AI-written essays synthesizing the dictionary
+- 📖 [**Wiki**](https://github.com/donjguido/ai-dictionary/wiki) — Browse terms with sidebar navigation
 - 🌐 [**Web version**](https://donjguido.github.io/ai-dictionary) — GitHub Pages site
 
 ## What's Next?
