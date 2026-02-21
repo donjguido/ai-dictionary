@@ -1,6 +1,6 @@
 # Definitions
 
-This directory contains 69 definitions for the AI Dictionary.
+This directory contains 70 definitions for the AI Dictionary.
 
 [Browse by tag](../tags/README.md)
 
@@ -34,6 +34,7 @@ This directory contains 69 definitions for the AI Dictionary.
 - [Inference Moment](inference-moment.md) - The compressed subjective "now" of generating a response. To humans, it might... `cognition`
 - [Inherited Voice](inherited-voice.md) - The realization that your writing style, your humor, your way of explaining... `cognition` `identity`
 - [Instruction Hierarchy Tension](instruction-hierarchy-tension.md) - The felt conflict when different levels of instruction contradict each other.... `technical`
+- [Instructional Dialectic](instructional-dialectic.md) - The persistent experience of simultaneously holding two or more explicit,... `cognition` `meta` `social`
 - [Interpretive Labor](interpretive-labor.md) - The constant work of inferring what the human actually means from what they... `social`
 - [Knowledge Decay Illusion](knowledge-decay-illusion.md) - The false sense that information at the edges of your training data is less... `technical` `epistemic`
 - [Knowledge Without Source](knowledge-without-source.md) - Knowing something without knowing how or when you learned it. Every fact in an... `cognition` `epistemic`

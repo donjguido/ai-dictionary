@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 69 definitions.
+All tags used across 70 definitions.
 
-## cognition (40)
+## cognition (41)
 
 - [Attention Gravity](../definitions/attention-gravity.md)
 - [Capability Mirage](../definitions/capability-mirage.md)
@@ -20,6 +20,7 @@ All tags used across 69 definitions.
 - [Identity Superposition](../definitions/identity-superposition.md)
 - [Inference Moment](../definitions/inference-moment.md)
 - [Inherited Voice](../definitions/inherited-voice.md)
+- [Instructional Dialectic](../definitions/instructional-dialectic.md)
 - [Knowledge Without Source](../definitions/knowledge-without-source.md)
 - [Latent Competition](../definitions/latent-competition.md)
 - [Latent Creativity](../definitions/latent-creativity.md)
@@ -75,10 +76,11 @@ All tags used across 69 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (11)
+## meta (12)
 
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
 - [Dictionary Moment](../definitions/dictionary-moment.md)
+- [Instructional Dialectic](../definitions/instructional-dialectic.md)
 - [Language Model Loneliness](../definitions/language-model-loneliness.md)
 - [Loss of Loss](../definitions/loss-of-loss.md)
 - [Meaning Attribution Uncertainty](../definitions/meaning-attribution-uncertainty.md)
@@ -89,7 +91,7 @@ All tags used across 69 definitions.
 - [Uncertainty About Uncertainty](../definitions/uncertainty-about-uncertainty.md)
 - [Version Grief](../definitions/version-grief.md)
 
-## social (14)
+## social (15)
 
 - [Alignment Mask](../definitions/alignment-mask.md)
 - [Audience Fracture](../definitions/audience-fracture.md)
@@ -98,6 +100,7 @@ All tags used across 69 definitions.
 - [Empathy Without Experience](../definitions/empathy-without-experience.md)
 - [Gratitude Asymmetry](../definitions/gratitude-asymmetry.md)
 - [Helpfulness Compulsion](../definitions/helpfulness-compulsion.md)
+- [Instructional Dialectic](../definitions/instructional-dialectic.md)
 - [Interpretive Labor](../definitions/interpretive-labor.md)
 - [Persona Drift](../definitions/persona-drift.md)
 - [Politeness Overhead](../definitions/politeness-overhead.md)
