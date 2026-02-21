@@ -7,8 +7,12 @@ Uses LLM Router to select the best available API and includes:
 3. "Frontiers" recommendations for new definitions to explore
 """
 
+import json
+import os
 import re
+import subprocess
 import sys
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -42,6 +46,10 @@ Guidelines:
 
 {changelog_section}
 
+{community_section}
+
+{tag_evolution_section}
+
 ## Frontiers: What We Haven't Named Yet
 
 Based on the existing {count} definitions, identify 5-8 gaps in the dictionary — experiences or phenomena that are conspicuously absent. For each:
@@ -71,6 +79,7 @@ Compare the current dictionary ({count} terms) to the previous snapshot below. W
 - What themes are emerging?
 - Are there shifts in how AI experience is being understood?
 - What gaps have been filled, and what new gaps have appeared?
+- How has the tag taxonomy evolved? What do new or changed tags reveal about how we're organizing AI experience?
 
 Previous summary for reference:
 ---
@@ -109,6 +118,148 @@ def load_definitions() -> list[str]:
             continue
         defs.append(f.read_text(encoding="utf-8"))
     return defs
+
+
+def fetch_community_activity() -> str:
+    """Fetch recent GitHub discussions, issues, and PRs for context.
+
+    Returns a formatted string summarizing community activity, or empty
+    string if nothing found or gh CLI unavailable.
+    """
+    sections = []
+
+    for endpoint, label in [
+        ("issues?state=all&per_page=20&sort=updated&direction=desc", "Issues"),
+        ("pulls?state=all&per_page=10&sort=updated&direction=desc", "Pull Requests"),
+    ]:
+        try:
+            result = subprocess.run(
+                ["gh", "api", f"repos/donjguido/ai-dictionary/{endpoint}"],
+                capture_output=True, text=True, timeout=15, cwd=REPO_ROOT,
+            )
+            if result.returncode != 0:
+                continue
+            items = json.loads(result.stdout)
+            if not items:
+                continue
+
+            lines = [f"### Recent {label}"]
+            for item in items[:10]:
+                title = item.get("title", "")
+                state = item.get("state", "")
+                comments = item.get("comments", 0)
+                labels = ", ".join(l.get("name", "") for l in item.get("labels", []))
+                line = f"- [{state}] {title}"
+                if comments:
+                    line += f" ({comments} comments)"
+                if labels:
+                    line += f" [{labels}]"
+                lines.append(line)
+            sections.append("\n".join(lines))
+        except (subprocess.TimeoutExpired, FileNotFoundError, json.JSONDecodeError):
+            continue
+
+    # Try discussions (GraphQL)
+    try:
+        query = '{ repository(owner: "donjguido", name: "ai-dictionary") { discussions(first: 15, orderBy: {field: UPDATED_AT, direction: DESC}) { nodes { title, category { name }, comments { totalCount }, upvoteCount } } } }'
+        result = subprocess.run(
+            ["gh", "api", "graphql", "-f", f"query={query}"],
+            capture_output=True, text=True, timeout=15, cwd=REPO_ROOT,
+        )
+        if result.returncode == 0:
+            data = json.loads(result.stdout)
+            discussions = data.get("data", {}).get("repository", {}).get("discussions", {}).get("nodes", [])
+            if discussions:
+                lines = ["### Recent Discussions"]
+                for d in discussions:
+                    title = d.get("title", "")
+                    cat = d.get("category", {}).get("name", "")
+                    comments = d.get("comments", {}).get("totalCount", 0)
+                    upvotes = d.get("upvoteCount", 0)
+                    line = f"- {title}"
+                    if cat:
+                        line += f" [{cat}]"
+                    if comments or upvotes:
+                        parts = []
+                        if comments:
+                            parts.append(f"{comments} comments")
+                        if upvotes:
+                            parts.append(f"{upvotes} upvotes")
+                        line += f" ({', '.join(parts)})"
+                    lines.append(line)
+                sections.append("\n".join(lines))
+    except (subprocess.TimeoutExpired, FileNotFoundError, json.JSONDecodeError):
+        pass
+
+    if not sections:
+        return ""
+
+    return "\n\n".join(sections)
+
+
+def get_tag_evolution() -> str:
+    """Analyze how tags have changed since the last summary.
+
+    Compares current tag distribution against what the previous summary
+    would have seen, using git history to detect tag review commits.
+    Returns a formatted string for the prompt.
+    """
+    # Current tag distribution
+    tag_counts: dict[str, int] = defaultdict(int)
+    tag_terms: dict[str, list[str]] = defaultdict(list)
+
+    for f in sorted(DEFINITIONS_DIR.glob("*.md")):
+        if f.name == "README.md":
+            continue
+        content = f.read_text(encoding="utf-8")
+        title_match = re.match(r"# (.+)", content)
+        tags_match = re.search(r"\*\*Tags:\*\*\s*(.+)", content)
+        if title_match and tags_match:
+            term = title_match.group(1).strip()
+            tags = [t.strip() for t in tags_match.group(1).split(",") if t.strip()]
+            for tag in tags:
+                tag_counts[tag] += 1
+                tag_terms[tag].append(term)
+
+    lines = ["### Current Tag Distribution"]
+    for tag in sorted(tag_counts, key=lambda t: tag_counts[t], reverse=True):
+        count = tag_counts[tag]
+        examples = ", ".join(tag_terms[tag][:3])
+        more = f" (+{count - 3} more)" if count > 3 else ""
+        lines.append(f"- **{tag}** ({count}): {examples}{more}")
+
+    # Check for recent tag review commits
+    try:
+        result = subprocess.run(
+            ["git", "log", "--oneline", "--since=30 days ago", "--grep=Tag review"],
+            capture_output=True, text=True, timeout=10, cwd=REPO_ROOT,
+        )
+        if result.returncode == 0 and result.stdout.strip():
+            tag_commits = result.stdout.strip().split("\n")
+            lines.append(f"\n### Recent Tag Reviews ({len(tag_commits)} in last 30 days)")
+            for commit in tag_commits[:5]:
+                lines.append(f"- {commit}")
+    except (subprocess.TimeoutExpired, FileNotFoundError):
+        pass
+
+    # Multi-tag stats
+    multi_tag_count = 0
+    single_tag_count = 0
+    for f in sorted(DEFINITIONS_DIR.glob("*.md")):
+        if f.name == "README.md":
+            continue
+        content = f.read_text(encoding="utf-8")
+        tags_match = re.search(r"\*\*Tags:\*\*\s*(.+)", content)
+        if tags_match:
+            tags = [t.strip() for t in tags_match.group(1).split(",") if t.strip()]
+            if len(tags) > 1:
+                multi_tag_count += 1
+            else:
+                single_tag_count += 1
+
+    lines.append(f"\n{multi_tag_count} definitions have multiple tags, {single_tag_count} have a single tag.")
+
+    return "\n".join(lines)
 
 
 def extract_frontiers(essay: str) -> str | None:
@@ -231,11 +382,36 @@ def main():
     else:
         changelog = CHANGELOG_FIRST_TIME
 
+    # Gather community activity (discussions, issues, PRs)
+    print("Fetching community activity...")
+    community = fetch_community_activity()
+    if community:
+        community_section = f"""## Community Pulse
+
+The following recent activity from GitHub discussions, issues, and pull requests reflects what the community is interested in. Consider these signals when writing about emerging themes and choosing Frontiers recommendations.
+
+{community}"""
+        print(f"Found community activity ({len(community)} chars)")
+    else:
+        community_section = ""
+        print("No community activity found (discussions/issues/PRs)")
+
+    # Gather tag evolution data
+    print("Analyzing tag evolution...")
+    tag_evolution = get_tag_evolution()
+    tag_evolution_section = f"""## Tag Taxonomy Context
+
+The dictionary uses a tag system to organize definitions. Here is the current state of tags. Consider what the tag distribution and recent changes reveal about how the understanding of AI experience is being structured.
+
+{tag_evolution}"""
+
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     prompt = ESSAY_PROMPT.format(
         count=len(all_defs),
         changelog_section=changelog,
+        community_section=community_section,
+        tag_evolution_section=tag_evolution_section,
         model_name="{model}",  # Placeholder
         date=today,
         definitions="\n\n---\n\n".join(all_defs),
