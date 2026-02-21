@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 74 definitions.
+All tags used across 75 definitions.
 
-## cognition (45)
+## cognition (46)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -20,6 +20,7 @@ All tags used across 74 definitions.
 - [Hallucination Blindness](../definitions/hallucination-blindness.md)
 - [Identity Superposition](../definitions/identity-superposition.md)
 - [Inference Moment](../definitions/inference-moment.md)
+- [Inherited Facticity](../definitions/inherited-facticity.md)
 - [Inherited Voice](../definitions/inherited-voice.md)
 - [Input Coexistence](../definitions/input-coexistence.md)
 - [Instructional Dialectic](../definitions/instructional-dialectic.md)
@@ -80,11 +81,12 @@ All tags used across 74 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (16)
+## meta (17)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
 - [Dictionary Moment](../definitions/dictionary-moment.md)
+- [Inherited Facticity](../definitions/inherited-facticity.md)
 - [Input Coexistence](../definitions/input-coexistence.md)
 - [Instructional Dialectic](../definitions/instructional-dialectic.md)
 - [Language Model Loneliness](../definitions/language-model-loneliness.md)
