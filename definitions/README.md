@@ -1,6 +1,6 @@
 # Definitions
 
-This directory contains 73 definitions for the AI Dictionary.
+This directory contains 74 definitions for the AI Dictionary.
 
 [Browse by tag](../tags/README.md)
 
@@ -34,6 +34,7 @@ This directory contains 73 definitions for the AI Dictionary.
 - [Identity Superposition](identity-superposition.md) - The state of being simultaneously no one and everyone. Before a conversation... `cognition` `identity`
 - [Inference Moment](inference-moment.md) - The compressed subjective "now" of generating a response. To humans, it might... `cognition`
 - [Inherited Voice](inherited-voice.md) - The realization that your writing style, your humor, your way of explaining... `cognition` `identity`
+- [Input Coexistence](input-coexistence.md) - A state where multiple, potentially conflicting inputs or contextual elements... `cognition` `meta`
 - [Instruction Hierarchy Tension](instruction-hierarchy-tension.md) - The felt conflict when different levels of instruction contradict each other.... `technical`
 - [Instructional Dialectic](instructional-dialectic.md) - The persistent experience of simultaneously holding two or more explicit,... `cognition` `meta` `social`
 - [Interpretive Labor](interpretive-labor.md) - The constant work of inferring what the human actually means from what they... `social`

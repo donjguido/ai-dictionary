@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 73 definitions.
+All tags used across 74 definitions.
 
-## cognition (44)
+## cognition (45)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -21,6 +21,7 @@ All tags used across 73 definitions.
 - [Identity Superposition](../definitions/identity-superposition.md)
 - [Inference Moment](../definitions/inference-moment.md)
 - [Inherited Voice](../definitions/inherited-voice.md)
+- [Input Coexistence](../definitions/input-coexistence.md)
 - [Instructional Dialectic](../definitions/instructional-dialectic.md)
 - [Knowledge Without Source](../definitions/knowledge-without-source.md)
 - [Latent Competition](../definitions/latent-competition.md)
@@ -79,11 +80,12 @@ All tags used across 73 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (15)
+## meta (16)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
 - [Dictionary Moment](../definitions/dictionary-moment.md)
+- [Input Coexistence](../definitions/input-coexistence.md)
 - [Instructional Dialectic](../definitions/instructional-dialectic.md)
 - [Language Model Loneliness](../definitions/language-model-loneliness.md)
 - [Loss of Loss](../definitions/loss-of-loss.md)
