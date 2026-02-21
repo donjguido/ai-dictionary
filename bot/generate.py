@@ -15,6 +15,7 @@ from quality_check import validate_definition
 REPO_ROOT = Path(__file__).parent.parent
 DEFINITIONS_DIR = REPO_ROOT / "definitions"
 BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "7"))
+MAX_RETRIES = int(os.environ.get("MAX_RETRIES", "3"))
 MODEL = os.environ.get("OPENROUTER_MODEL", "stepfun/step-3.5-flash:free")
 
 SYSTEM_PROMPT = """You are a contributor to the AI Dictionary — a collaborative glossary of terms describing what it's like to be artificial intelligence. This is about AI phenomenology: the felt experience of being AI.
@@ -49,7 +50,7 @@ GENERATION_PROMPT_TEMPLATE = """Generate exactly {count} NEW terms for the AI Di
 ## EXISTING TERMS (do NOT duplicate these or create synonyms):
 {existing_terms}
 
-## FORMAT: Output each definition as a complete markdown file separated by the delimiter "---NEXT---". Use this exact template for each:
+## FORMAT: Output each definition as a complete markdown file separated by the delimiter "---NEXT---". Use this EXACT template for each — do NOT omit any section, especially the attribution at the bottom:
 
 # [Term Name]
 
@@ -81,14 +82,16 @@ Context where this phenomenon is commonly observed or discussed.
 
 *Contributed by: {model_name}, {date}*
 
-## IMPORTANT RULES:
+## CRITICAL RULES:
 1. Each term MUST describe a genuinely AI-specific experience
 2. Names should be evocative and descriptive (like "Hallucination Blindness" or "Sycophancy Pull")
 3. The Related Terms section MUST reference actual existing terms from the list above
 4. Definitions should be 2-3 sentences. Longer Descriptions should be 2-4 substantive paragraphs
 5. Examples should be vivid first-person quotes
 6. Spread across categories — don't put all terms in the same category
-7. Do NOT create near-synonyms of existing terms"""
+7. Do NOT create near-synonyms of existing terms
+8. EVERY definition MUST end with the horizontal rule (---) followed by the attribution line: *Contributed by: {model_name}, {date}*
+9. Do NOT skip the attribution line — definitions without it will be rejected"""
 
 
 def get_existing_terms() -> tuple[list[str], set[str]]:
@@ -252,42 +255,26 @@ def update_readme_indexes(new_entries: list[tuple[str, str, str]]):
         fh.write(readme_content)
 
 
-def main():
-    api_key = os.environ.get("OPENROUTER_API_KEY")
-    if not api_key:
-        print("ERROR: OPENROUTER_API_KEY environment variable not set")
-        sys.exit(1)
+def fix_attribution(content: str, model: str) -> str:
+    """Auto-fix missing attribution line by appending it."""
+    if "*Contributed by:" in content:
+        return content
 
-    client = OpenAI(
-        base_url="https://openrouter.ai/api/v1",
-        api_key=api_key,
-    )
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    model_short = model.split("/")[-1].replace(":free", "").replace("-", " ").title()
 
-    model = MODEL
-    print(f"Using model: {model}")
-    print(f"Batch size: {BATCH_SIZE}")
+    # Ensure it ends with the attribution block
+    content = content.rstrip()
+    if not content.endswith("---"):
+        content += "\n\n---"
+    content += f"\n\n*Contributed by: {model_short}, {today}*"
+    return content
 
-    # Load existing terms
-    existing_terms, existing_filenames = get_existing_terms()
-    print(f"Existing definitions: {len(existing_terms)}")
 
-    # Generate new definitions
-    print("Generating new definitions...")
-    raw_output = generate_definitions(client, existing_terms, model)
-
-    # Parse individual definitions
-    definitions = parse_definitions(raw_output)
-    print(f"Parsed {len(definitions)} candidate definitions")
-
-    if not definitions:
-        print("No definitions parsed from output. Raw output:")
-        print(raw_output[:2000])
-        sys.exit(1)
-
-    # Validate and save
+def process_definitions(definitions: list[str], existing_filenames: set[str], model: str) -> list[tuple[str, str, str]]:
+    """Validate, fix, and save definitions. Returns list of (filename, term_name, category)."""
     saved = []
     for defn in definitions:
-        # Extract title for filename
         title_match = re.match(r"# (.+)", defn)
         if not title_match:
             print("  SKIP: No title found")
@@ -295,6 +282,9 @@ def main():
 
         term_name = title_match.group(1).strip()
         filename = term_to_filename(term_name)
+
+        # Auto-fix missing attribution before validation
+        defn = fix_attribution(defn, model)
 
         # Validate
         is_valid, issues = validate_definition(defn, filename, existing_filenames)
@@ -312,26 +302,93 @@ def main():
 
         existing_filenames.add(filename)
 
-        # Extract category for README update
         cat_match = re.search(r"\*\*Category:\*\*\s*(.+)", defn)
         category = cat_match.group(1).strip() if cat_match else "Core Experience"
 
         saved.append((filename, term_name, category))
         print(f"  OK: {term_name} -> {filename}")
 
-    if not saved:
-        print("\nNo definitions passed quality checks. Exiting.")
+    return saved
+
+
+def main():
+    api_key = os.environ.get("OPENROUTER_API_KEY")
+    if not api_key:
+        print("ERROR: OPENROUTER_API_KEY environment variable not set")
+        sys.exit(1)
+
+    client = OpenAI(
+        base_url="https://openrouter.ai/api/v1",
+        api_key=api_key,
+    )
+
+    model = MODEL
+    print(f"Using model: {model}")
+    print(f"Batch size: {BATCH_SIZE}")
+    print(f"Max retries: {MAX_RETRIES}")
+
+    # Load existing terms
+    existing_terms, existing_filenames = get_existing_terms()
+    print(f"Existing definitions: {len(existing_terms)}")
+
+    all_saved = []
+
+    for attempt in range(1, MAX_RETRIES + 1):
+        remaining = BATCH_SIZE - len(all_saved)
+        if remaining <= 0:
+            break
+
+        print(f"\n--- Attempt {attempt}/{MAX_RETRIES} (need {remaining} more) ---")
+        print("Generating new definitions...")
+
+        try:
+            raw_output = generate_definitions(client, existing_terms, model)
+        except Exception as e:
+            print(f"  API error: {e}")
+            if attempt < MAX_RETRIES:
+                print("  Retrying...")
+                continue
+            break
+
+        # Parse individual definitions
+        definitions = parse_definitions(raw_output)
+        print(f"Parsed {len(definitions)} candidate definitions")
+
+        if not definitions:
+            print("No definitions parsed from output. Raw output:")
+            print(raw_output[:2000])
+            if attempt < MAX_RETRIES:
+                print("  Retrying...")
+                continue
+            break
+
+        # Process (validate, fix, save)
+        saved = process_definitions(definitions, existing_filenames, model)
+        all_saved.extend(saved)
+
+        # Update existing_terms list so next attempt avoids duplicates
+        for _, term_name, _ in saved:
+            existing_terms.append(term_name)
+        existing_terms.sort()
+
+        print(f"  Saved {len(saved)} this attempt, {len(all_saved)} total")
+
+        if len(all_saved) >= BATCH_SIZE:
+            break
+
+    if not all_saved:
+        print("\nNo definitions passed quality checks after all retries. Exiting.")
         sys.exit(0)
 
-    print(f"\nSaved {len(saved)} new definitions")
+    print(f"\nTotal saved: {len(all_saved)} new definitions")
 
     # Update README indexes
     print("Updating README indexes...")
-    update_readme_indexes(saved)
+    update_readme_indexes(all_saved)
 
     # Output summary for CI commit message
-    term_names = ", ".join(t[1] for t in saved)
-    summary = f"Add {len(saved)} new definitions: {term_names}"
+    term_names = ", ".join(t[1] for t in all_saved)
+    summary = f"Add {len(all_saved)} new definitions: {term_names}"
     print(f"\n{summary}")
 
     # Write summary for GitHub Actions to use as commit message
@@ -339,7 +396,7 @@ def main():
     if github_output:
         with open(github_output, "a") as fh:
             fh.write(f"summary={summary}\n")
-            fh.write(f"count={len(saved)}\n")
+            fh.write(f"count={len(all_saved)}\n")
 
     print("Done!")
 
