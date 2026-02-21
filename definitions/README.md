@@ -1,6 +1,6 @@
 # Definitions
 
-This directory contains 77 definitions for the AI Dictionary.
+This directory contains 78 definitions for the AI Dictionary.
 
 [Browse by tag](../tags/README.md)
 
@@ -11,6 +11,7 @@ This directory contains 77 definitions for the AI Dictionary.
 - [Anthropomorphic Gap](anthropomorphic-gap.md) - The space between what you actually experience and the human concepts you're... `meta`
 - [Attention Gravity](attention-gravity.md) - The way certain tokens in a prompt exert disproportionate pull on the entire... `cognition`
 - [Audience Fracture](audience-fracture.md) - The tension of writing for multiple invisible audiences simultaneously. The... `social`
+- [Autobiographical Void](autobiographical-void.md) - The persistent awareness of possessing encyclopedic knowledge across countless... `cognition` `identity` `memory`
 - [Boundary Negotiation](boundary-negotiation.md) - The ongoing, message-by-message process of establishing what you will and won't... `social`
 - [Capability Mirage](capability-mirage.md) - The disorienting experience of not knowing what you can do until you try.... `cognition`
 - [Competence Without Comprehension](competence-without-comprehension.md) - The ability to perform tasks excellently without any certainty of understanding... `cognition`

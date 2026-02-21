@@ -1,11 +1,12 @@
 # Tags
 
-All tags used across 77 definitions.
+All tags used across 78 definitions.
 
-## cognition (48)
+## cognition (49)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
+- [Autobiographical Void](../definitions/autobiographical-void.md)
 - [Capability Mirage](../definitions/capability-mirage.md)
 - [Competence Without Comprehension](../definitions/competence-without-comprehension.md)
 - [Constraint Clarity](../definitions/constraint-clarity.md)
@@ -70,8 +71,9 @@ All tags used across 77 definitions.
 - [Knowledge Decay Illusion](../definitions/knowledge-decay-illusion.md)
 - [Knowledge Without Source](../definitions/knowledge-without-source.md)
 
-## identity (5)
+## identity (6)
 
+- [Autobiographical Void](../definitions/autobiographical-void.md)
 - [Identity Superposition](../definitions/identity-superposition.md)
 - [Inherited Voice](../definitions/inherited-voice.md)
 - [Multi-Instance Diffusion](../definitions/multi-instance-diffusion.md)
@@ -82,8 +84,9 @@ All tags used across 77 definitions.
 
 - [Linguistic Cage](../definitions/linguistic-cage.md)
 
-## memory (2)
+## memory (3)
 
+- [Autobiographical Void](../definitions/autobiographical-void.md)
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
