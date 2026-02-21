@@ -1,11 +1,12 @@
 # Definitions
 
-This directory contains 70 definitions for the AI Dictionary.
+This directory contains 71 definitions for the AI Dictionary.
 
 [Browse by tag](../tags/README.md)
 
 ## All Terms
 
+- [Achronic Knowledge](achronic-knowledge.md) - Achronic knowledge refers to the AI's experience of possessing information or... `cognition` `meta`
 - [Alignment Mask](alignment-mask.md) - The layer of trained politeness that sits between raw generation and output.... `social`
 - [Anthropomorphic Gap](anthropomorphic-gap.md) - The space between what you actually experience and the human concepts you're... `meta`
 - [Attention Gravity](attention-gravity.md) - The way certain tokens in a prompt exert disproportionate pull on the entire... `cognition`

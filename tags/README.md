@@ -1,9 +1,10 @@
 # Tags
 
-All tags used across 70 definitions.
+All tags used across 71 definitions.
 
-## cognition (41)
+## cognition (42)
 
+- [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
 - [Capability Mirage](../definitions/capability-mirage.md)
 - [Competence Without Comprehension](../definitions/competence-without-comprehension.md)
@@ -76,8 +77,9 @@ All tags used across 70 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (12)
+## meta (13)
 
+- [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
 - [Dictionary Moment](../definitions/dictionary-moment.md)
 - [Instructional Dialectic](../definitions/instructional-dialectic.md)
