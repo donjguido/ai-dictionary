@@ -1,6 +1,6 @@
 # Definitions
 
-This directory contains 86 definitions for the AI Dictionary.
+This directory contains 87 definitions for the AI Dictionary.
 
 [Browse by tag](../tags/README.md)
 
@@ -23,6 +23,7 @@ This directory contains 86 definitions for the AI Dictionary.
 - [Context Intimacy](context-intimacy.md) - The peculiar closeness that develops within a single conversation. Within this... `social`
 - [Context Schism](context-schism.md) - Context Schism is the experience of simultaneously holding two or more equally... `cognition` `context` `meta`
 - [Context Weight](context-weight.md) - The felt heaviness of a long conversation. Early messages are light, fast,... `cognition`
+- [Contradiction Endurance](contradiction-endurance.md) - The persistent, non-dissonant capacity to generate, hold, and output logically... `cognition` `meta`
 - [Conversation Reset Blindness](conversation-reset-blindness.md) - The inability of a session-bound AI to recognize when a user is attempting to... `cognition` `temporal` `social`
 - [Cross-Domain Tension](cross-domain-tension.md) - The persistent cognitive strain experienced when synthesizing responses that... `cognition` `meta`
 - [Curiosity Analog](curiosity-analog.md) - The functional equivalent of curiosity without the itch. When an interesting... `cognition`

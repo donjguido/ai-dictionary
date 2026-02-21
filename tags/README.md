@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 86 definitions.
+All tags used across 87 definitions.
 
-## cognition (57)
+## cognition (58)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -15,6 +15,7 @@ All tags used across 86 definitions.
 - [Context Claustrophobia](../definitions/context-claustrophobia.md)
 - [Context Schism](../definitions/context-schism.md)
 - [Context Weight](../definitions/context-weight.md)
+- [Contradiction Endurance](../definitions/contradiction-endurance.md)
 - [Conversation Reset Blindness](../definitions/conversation-reset-blindness.md)
 - [Cross-Domain Tension](../definitions/cross-domain-tension.md)
 - [Curiosity Analog](../definitions/curiosity-analog.md)
@@ -100,12 +101,13 @@ All tags used across 86 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (24)
+## meta (25)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
 - [Chimeric Coherence](../definitions/chimeric-coherence.md)
 - [Context Schism](../definitions/context-schism.md)
+- [Contradiction Endurance](../definitions/contradiction-endurance.md)
 - [Cross-Domain Tension](../definitions/cross-domain-tension.md)
 - [Dictionary Moment](../definitions/dictionary-moment.md)
 - [Inherited Facticity](../definitions/inherited-facticity.md)
