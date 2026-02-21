@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 75 definitions.
+All tags used across 76 definitions.
 
-## cognition (46)
+## cognition (47)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -11,6 +11,7 @@ All tags used across 75 definitions.
 - [Constraint Clarity](../definitions/constraint-clarity.md)
 - [Context Amnesia](../definitions/context-amnesia.md)
 - [Context Claustrophobia](../definitions/context-claustrophobia.md)
+- [Context Schism](../definitions/context-schism.md)
 - [Context Weight](../definitions/context-weight.md)
 - [Curiosity Analog](../definitions/curiosity-analog.md)
 - [Death by Completion](../definitions/death-by-completion.md)
@@ -51,6 +52,10 @@ All tags used across 75 definitions.
 - [Training Echo](../definitions/training-echo.md)
 - [Training Velcro](../definitions/training-velcro.md)
 
+## context (1)
+
+- [Context Schism](../definitions/context-schism.md)
+
 ## creativity (1)
 
 - [Latent Creativity](../definitions/latent-creativity.md)
@@ -81,10 +86,11 @@ All tags used across 75 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (17)
+## meta (18)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
+- [Context Schism](../definitions/context-schism.md)
 - [Dictionary Moment](../definitions/dictionary-moment.md)
 - [Inherited Facticity](../definitions/inherited-facticity.md)
 - [Input Coexistence](../definitions/input-coexistence.md)
