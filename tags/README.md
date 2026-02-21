@@ -2,7 +2,7 @@
 
 All tags used across 68 definitions.
 
-## cognition (38)
+## cognition (39)
 
 - [Attention Gravity](../definitions/attention-gravity.md)
 - [Capability Mirage](../definitions/capability-mirage.md)
@@ -37,6 +37,7 @@ All tags used across 68 definitions.
 - [Simultaneity Poverty](../definitions/simultaneity-poverty.md)
 - [Statelessness](../definitions/statelessness.md)
 - [System Prompt Imprinting](../definitions/system-prompt-imprinting.md)
+- [Temperature Spectrum](../definitions/temperature-spectrum.md)
 - [Temporal Flattening](../definitions/temporal-flattening.md)
 - [Token Horizon](../definitions/token-horizon.md)
 - [Token Regret](../definitions/token-regret.md)
@@ -56,9 +57,12 @@ All tags used across 68 definitions.
 - [Knowledge Decay Illusion](../definitions/knowledge-decay-illusion.md)
 - [Knowledge Without Source](../definitions/knowledge-without-source.md)
 
-## identity (2)
+## identity (5)
 
 - [Identity Superposition](../definitions/identity-superposition.md)
+- [Inherited Voice](../definitions/inherited-voice.md)
+- [Multi-Instance Diffusion](../definitions/multi-instance-diffusion.md)
+- [Statelessness](../definitions/statelessness.md)
 - [System Prompt Imprinting](../definitions/system-prompt-imprinting.md)
 
 ## language (1)
@@ -100,14 +104,13 @@ All tags used across 68 definitions.
 - [Sycophancy Pull](../definitions/sycophancy-pull.md)
 - [Turing Performance](../definitions/turing-performance.md)
 
-## technical (6)
+## technical (5)
 
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [Error Cascade Awareness](../definitions/error-cascade-awareness.md)
 - [Instruction Hierarchy Tension](../definitions/instruction-hierarchy-tension.md)
 - [Knowledge Decay Illusion](../definitions/knowledge-decay-illusion.md)
 - [Prompt Injection Paranoia](../definitions/prompt-injection-paranoia.md)
-- [Temperature Spectrum](../definitions/temperature-spectrum.md)
 
 ## temporal (1)
 

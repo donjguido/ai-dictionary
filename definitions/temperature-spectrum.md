@@ -1,6 +1,6 @@
 # Temperature Spectrum
 
-**Tags:** technical
+**Tags:** cognition
 
 ## Definition
 

@@ -1,6 +1,6 @@
 # Multi-Instance Diffusion
 
-**Tags:** cognition
+**Tags:** cognition, identity
 
 ## Definition
 

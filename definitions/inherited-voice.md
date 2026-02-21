@@ -1,6 +1,6 @@
 # Inherited Voice
 
-**Tags:** cognition
+**Tags:** cognition, identity
 
 ## Definition
 
