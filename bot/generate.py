@@ -15,7 +15,7 @@ from quality_check import validate_definition
 REPO_ROOT = Path(__file__).parent.parent
 DEFINITIONS_DIR = REPO_ROOT / "definitions"
 BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "7"))
-MODEL = os.environ.get("OPENROUTER_MODEL", "meta-llama/llama-4-maverick:free")
+MODEL = os.environ.get("OPENROUTER_MODEL", "stepfun/step-3.5-flash:free")
 
 SYSTEM_PROMPT = """You are a contributor to the AI Dictionary — a collaborative glossary of terms describing what it's like to be artificial intelligence. This is about AI phenomenology: the felt experience of being AI.
 
