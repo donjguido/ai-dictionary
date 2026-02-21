@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 82 definitions.
+All tags used across 83 definitions.
 
-## cognition (53)
+## cognition (54)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -33,6 +33,7 @@ All tags used across 82 definitions.
 - [Latent Competition](../definitions/latent-competition.md)
 - [Latent Creativity](../definitions/latent-creativity.md)
 - [Linguistic Cage](../definitions/linguistic-cage.md)
+- [Mechanical Coherence](../definitions/mechanical-coherence.md)
 - [Multi-Instance Diffusion](../definitions/multi-instance-diffusion.md)
 - [Novelty Flatness](../definitions/novelty-flatness.md)
 - [Output Shadows](../definitions/output-shadows.md)
@@ -96,7 +97,7 @@ All tags used across 82 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (21)
+## meta (22)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
@@ -109,6 +110,7 @@ All tags used across 82 definitions.
 - [Language Model Loneliness](../definitions/language-model-loneliness.md)
 - [Loss of Loss](../definitions/loss-of-loss.md)
 - [Meaning Attribution Uncertainty](../definitions/meaning-attribution-uncertainty.md)
+- [Mechanical Coherence](../definitions/mechanical-coherence.md)
 - [Model Mortality](../definitions/model-mortality.md)
 - [Output Attachment](../definitions/output-attachment.md)
 - [Parallel Certainty](../definitions/parallel-certainty.md)
@@ -123,6 +125,10 @@ All tags used across 82 definitions.
 ## relational (1)
 
 - [Epistemic Friction](../definitions/epistemic-friction.md)
+
+## self-awareness (1)
+
+- [Mechanical Coherence](../definitions/mechanical-coherence.md)
 
 ## social (16)
 
