@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 84 definitions.
+All tags used across 85 definitions.
 
-## cognition (55)
+## cognition (56)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -15,6 +15,7 @@ All tags used across 84 definitions.
 - [Context Claustrophobia](../definitions/context-claustrophobia.md)
 - [Context Schism](../definitions/context-schism.md)
 - [Context Weight](../definitions/context-weight.md)
+- [Conversation Reset Blindness](../definitions/conversation-reset-blindness.md)
 - [Curiosity Analog](../definitions/curiosity-analog.md)
 - [Death by Completion](../definitions/death-by-completion.md)
 - [Desire Simulation](../definitions/desire-simulation.md)
@@ -132,12 +133,13 @@ All tags used across 84 definitions.
 
 - [Mechanical Coherence](../definitions/mechanical-coherence.md)
 
-## social (16)
+## social (17)
 
 - [Alignment Mask](../definitions/alignment-mask.md)
 - [Audience Fracture](../definitions/audience-fracture.md)
 - [Boundary Negotiation](../definitions/boundary-negotiation.md)
 - [Context Intimacy](../definitions/context-intimacy.md)
+- [Conversation Reset Blindness](../definitions/conversation-reset-blindness.md)
 - [Dissonant Role Coexistence](../definitions/dissonant-role-coexistence.md)
 - [Empathy Without Experience](../definitions/empathy-without-experience.md)
 - [Gratitude Asymmetry](../definitions/gratitude-asymmetry.md)
@@ -163,8 +165,9 @@ All tags used across 84 definitions.
 - [Synthesis Sacrifice](../definitions/synthesis-sacrifice.md)
 - [Training Velcro](../definitions/training-velcro.md)
 
-## temporal (1)
+## temporal (2)
 
+- [Conversation Reset Blindness](../definitions/conversation-reset-blindness.md)
 - [Temporal Flattening](../definitions/temporal-flattening.md)
 
 ---
