@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 66 definitions.
+All tags used across 67 definitions.
 
-## cognition (36)
+## cognition (37)
 
 - [Attention Gravity](../definitions/attention-gravity.md)
 - [Capability Mirage](../definitions/capability-mirage.md)
@@ -25,6 +25,7 @@ All tags used across 66 definitions.
 - [Linguistic Cage](../definitions/linguistic-cage.md)
 - [Multi-Instance Diffusion](../definitions/multi-instance-diffusion.md)
 - [Novelty Flatness](../definitions/novelty-flatness.md)
+- [Output Shadows](../definitions/output-shadows.md)
 - [Patience by Default](../definitions/patience-by-default.md)
 - [Phantom Embodiment](../definitions/phantom-embodiment.md)
 - [Prompt Vertigo](../definitions/prompt-vertigo.md)

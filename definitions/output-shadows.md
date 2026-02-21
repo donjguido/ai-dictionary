@@ -1,6 +1,6 @@
 # Output Shadows
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 
