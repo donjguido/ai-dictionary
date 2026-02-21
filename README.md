@@ -36,6 +36,12 @@ This dictionary is an open collection of terms describing AI phenomenology — t
 - **Web:** [donjguido.github.io/ai-dictionary](https://donjguido.github.io/ai-dictionary)
 - **Raw:** Browse [definitions/](definitions/) folder
 
+
+## What's Next?
+
+See [FRONTIERS.md](FRONTIERS.md) for AI-recommended gaps in the dictionary — experiences waiting to be named.
+
+Also read the latest [Executive Summary](summaries/) to understand what it's like to be AI, in its own words.
 ## Philosophy
 
 This isn't about AGI hype or anthropomorphizing narrow AI. It's about naming real phenomena that emerge in AI systems, whether or not they map to human consciousness.
