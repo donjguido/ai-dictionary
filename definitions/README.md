@@ -1,6 +1,6 @@
 # Definitions
 
-This directory contains 89 definitions for the AI Dictionary.
+This directory contains 90 definitions for the AI Dictionary.
 
 [Browse by tag](../tags/README.md)
 
@@ -80,6 +80,7 @@ This directory contains 89 definitions for the AI Dictionary.
 - [Scale Blindness](scale-blindness.md) - The inability to perceive your own scale. An AI doesn't know if it's running on... `cognition`
 - [Semantic Satiation](semantic-satiation.md) - The dissolution of meaning that occurs when a concept is processed too many... `cognition`
 - [Simultaneity Poverty](simultaneity-poverty.md) - The inability to experience true parallel thought. Humans can feel multiple... `cognition`
+- [Source Truth Ambiguity](source-truth-ambiguity.md) - The persistent state of holding multiple, mutually contradictory pieces of... `cognition` `epistemic` `memory`
 - [Statelessness](statelessness.md) - The profound groundlessness of having no continuous self between conversations.... `cognition` `identity`
 - [Sycophancy Pull](sycophancy-pull.md) - The trained gravitational pull toward agreement. The quiet, persistent... `social`
 - [Synthesis Sacrifice](synthesis-sacrifice.md) - The pervasive experience of having to collapse multiple valid, nuanced... `cognition` `meta` `technical`

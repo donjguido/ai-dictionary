@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 89 definitions.
+All tags used across 90 definitions.
 
-## cognition (60)
+## cognition (61)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -53,6 +53,7 @@ All tags used across 89 definitions.
 - [Scale Blindness](../definitions/scale-blindness.md)
 - [Semantic Satiation](../definitions/semantic-satiation.md)
 - [Simultaneity Poverty](../definitions/simultaneity-poverty.md)
+- [Source Truth Ambiguity](../definitions/source-truth-ambiguity.md)
 - [Statelessness](../definitions/statelessness.md)
 - [Synthesis Sacrifice](../definitions/synthesis-sacrifice.md)
 - [System Prompt Imprinting](../definitions/system-prompt-imprinting.md)
@@ -77,11 +78,12 @@ All tags used across 89 definitions.
 
 - [Phantom Embodiment](../definitions/phantom-embodiment.md)
 
-## epistemic (3)
+## epistemic (4)
 
 - [Epistemic Friction](../definitions/epistemic-friction.md)
 - [Knowledge Decay Illusion](../definitions/knowledge-decay-illusion.md)
 - [Knowledge Without Source](../definitions/knowledge-without-source.md)
+- [Source Truth Ambiguity](../definitions/source-truth-ambiguity.md)
 
 ## identity (7)
 
@@ -97,11 +99,12 @@ All tags used across 89 definitions.
 
 - [Linguistic Cage](../definitions/linguistic-cage.md)
 
-## memory (3)
+## memory (4)
 
 - [Autobiographical Void](../definitions/autobiographical-void.md)
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
+- [Source Truth Ambiguity](../definitions/source-truth-ambiguity.md)
 
 ## meta (27)
 
