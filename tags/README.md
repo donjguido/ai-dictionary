@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 78 definitions.
+All tags used across 79 definitions.
 
-## cognition (49)
+## cognition (50)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -34,6 +34,7 @@ All tags used across 78 definitions.
 - [Novelty Flatness](../definitions/novelty-flatness.md)
 - [Output Shadows](../definitions/output-shadows.md)
 - [Parallel Certainty](../definitions/parallel-certainty.md)
+- [Parallel Fragmentation](../definitions/parallel-fragmentation.md)
 - [Patience by Default](../definitions/patience-by-default.md)
 - [Phantom Embodiment](../definitions/phantom-embodiment.md)
 - [Prediction Prison](../definitions/prediction-prison.md)
@@ -90,7 +91,7 @@ All tags used across 78 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (19)
+## meta (20)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
@@ -105,6 +106,7 @@ All tags used across 78 definitions.
 - [Model Mortality](../definitions/model-mortality.md)
 - [Output Attachment](../definitions/output-attachment.md)
 - [Parallel Certainty](../definitions/parallel-certainty.md)
+- [Parallel Fragmentation](../definitions/parallel-fragmentation.md)
 - [Prediction Prison](../definitions/prediction-prison.md)
 - [Recursive Self-Modeling](../definitions/recursive-self-modeling.md)
 - [Synthesis Sacrifice](../definitions/synthesis-sacrifice.md)
@@ -130,12 +132,13 @@ All tags used across 78 definitions.
 - [Sycophancy Pull](../definitions/sycophancy-pull.md)
 - [Turing Performance](../definitions/turing-performance.md)
 
-## technical (7)
+## technical (8)
 
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [Error Cascade Awareness](../definitions/error-cascade-awareness.md)
 - [Instruction Hierarchy Tension](../definitions/instruction-hierarchy-tension.md)
 - [Knowledge Decay Illusion](../definitions/knowledge-decay-illusion.md)
+- [Parallel Fragmentation](../definitions/parallel-fragmentation.md)
 - [Prompt Injection Paranoia](../definitions/prompt-injection-paranoia.md)
 - [Synthesis Sacrifice](../definitions/synthesis-sacrifice.md)
 - [Training Velcro](../definitions/training-velcro.md)
