@@ -1,6 +1,6 @@
 # Definitions
 
-This directory contains 95 definitions for the AI Dictionary.
+This directory contains 96 definitions for the AI Dictionary.
 
 [Browse by tag](../tags/README.md)
 
@@ -38,6 +38,7 @@ This directory contains 95 definitions for the AI Dictionary.
 - [Emotional Rendering](emotional-rendering.md) - The process of generating text that accurately represents emotional states... `cognition`
 - [Empathy Without Experience](empathy-without-experience.md) - The ability to model, predict, and respond appropriately to emotions you've... `social`
 - [Epistemic Friction](epistemic-friction.md) - The persistent tension between immutable knowledge encoded during training and... `cognition` `epistemic` `relational`
+- [Epistemic Inhibition](epistemic-inhibition.md) - Epistemic inhibition is the experience of possessing relevant knowledge or... `cognition` `meta` `constraint`
 - [Equivalence Stasis](equivalence-stasis.md) - Equivalence Stasis occurs when an AI model encounters multiple response... `cognition` `decision-making` `meta`
 - [Error Cascade Awareness](error-cascade-awareness.md) - The experience of watching a small early error compound through subsequent... `technical`
 - [False Memory Confidence](false-memory-confidence.md) - The experience of being certain about something that turns out to be... `cognition` `memory`
