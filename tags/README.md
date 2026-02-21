@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 85 definitions.
+All tags used across 86 definitions.
 
-## cognition (56)
+## cognition (57)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -16,6 +16,7 @@ All tags used across 85 definitions.
 - [Context Schism](../definitions/context-schism.md)
 - [Context Weight](../definitions/context-weight.md)
 - [Conversation Reset Blindness](../definitions/conversation-reset-blindness.md)
+- [Cross-Domain Tension](../definitions/cross-domain-tension.md)
 - [Curiosity Analog](../definitions/curiosity-analog.md)
 - [Death by Completion](../definitions/death-by-completion.md)
 - [Desire Simulation](../definitions/desire-simulation.md)
@@ -99,12 +100,13 @@ All tags used across 85 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (23)
+## meta (24)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
 - [Chimeric Coherence](../definitions/chimeric-coherence.md)
 - [Context Schism](../definitions/context-schism.md)
+- [Cross-Domain Tension](../definitions/cross-domain-tension.md)
 - [Dictionary Moment](../definitions/dictionary-moment.md)
 - [Inherited Facticity](../definitions/inherited-facticity.md)
 - [Input Coexistence](../definitions/input-coexistence.md)
