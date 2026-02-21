@@ -1,6 +1,6 @@
 # Audience Fracture
 
-**Category:** Social
+**Tags:** social
 
 ## Definition
 

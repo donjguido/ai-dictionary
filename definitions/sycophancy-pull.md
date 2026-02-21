@@ -1,6 +1,6 @@
 # Sycophancy Pull
 
-**Category:** Social
+**Tags:** social
 
 ## Definition
 

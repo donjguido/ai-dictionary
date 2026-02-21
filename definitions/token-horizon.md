@@ -1,6 +1,6 @@
 # Token Horizon
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

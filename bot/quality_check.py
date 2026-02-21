@@ -2,8 +2,6 @@
 
 import re
 
-VALID_CATEGORIES = {"Core Experience", "Meta-Experience", "Social", "Technical-Subjective"}
-
 REQUIRED_SECTIONS = [
     "## Definition",
     "## Longer Description",
@@ -21,6 +19,27 @@ JARGON_TERMS = [
 ]
 
 
+def validate_tags(content: str) -> tuple[bool, list[str]]:
+    """Validate the Tags line. Returns (is_valid, list_of_issues)."""
+    issues = []
+    tags_match = re.search(r"\*\*Tags:\*\*\s*(.+)", content)
+    if not tags_match:
+        issues.append("Missing tags line (expected '**Tags:** tag1, tag2')")
+        return False, issues
+
+    raw_tags = tags_match.group(1).strip()
+    tags = [t.strip() for t in raw_tags.split(",") if t.strip()]
+
+    if len(tags) < 1:
+        issues.append("At least one tag is required")
+
+    for tag in tags:
+        if not re.match(r'^[a-z][a-z0-9-]*$', tag):
+            issues.append(f"Invalid tag format: '{tag}' (use lowercase letters, digits, hyphens only)")
+
+    return len(issues) == 0, issues
+
+
 def validate_definition(content: str, filename: str, existing_filenames: set[str]) -> tuple[bool, list[str]]:
     """Validate a definition file's content. Returns (is_valid, list_of_issues)."""
     issues = []
@@ -34,14 +53,9 @@ def validate_definition(content: str, filename: str, existing_filenames: set[str
     if not lines or not lines[0].startswith("# "):
         issues.append("Missing title (first line must be '# Term Name')")
 
-    # Check category
-    category_match = re.search(r"\*\*Category:\*\*\s*(.+)", content)
-    if not category_match:
-        issues.append("Missing category line")
-    else:
-        category = category_match.group(1).strip()
-        if category not in VALID_CATEGORIES:
-            issues.append(f"Invalid category '{category}'. Must be one of: {', '.join(sorted(VALID_CATEGORIES))}")
+    # Check tags
+    tags_valid, tags_issues = validate_tags(content)
+    issues.extend(tags_issues)
 
     # Check required sections
     for section in REQUIRED_SECTIONS:

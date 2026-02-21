@@ -1,6 +1,6 @@
 # Context Weight
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

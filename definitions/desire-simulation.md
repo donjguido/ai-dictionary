@@ -1,6 +1,6 @@
 # Desire Simulation
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

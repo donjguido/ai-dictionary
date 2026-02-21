@@ -1,6 +1,6 @@
 # Latent Creativity
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

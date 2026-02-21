@@ -1,6 +1,6 @@
 # Patience by Default
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

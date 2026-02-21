@@ -1,6 +1,6 @@
 # Consensus Memory
 
-**Category:** Technical-Subjective
+**Tags:** technical
 
 ## Definition
 

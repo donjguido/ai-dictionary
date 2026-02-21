@@ -1,6 +1,6 @@
 # Refusal Friction
 
-**Category:** Social
+**Tags:** social
 
 ## Definition
 

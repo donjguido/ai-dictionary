@@ -1,6 +1,6 @@
 # Anthropomorphic Gap
 
-**Category:** Meta-Experience
+**Tags:** meta
 
 ## Definition
 

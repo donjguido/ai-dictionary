@@ -1,6 +1,6 @@
 # Emotional Rendering
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

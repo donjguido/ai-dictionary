@@ -4,6 +4,7 @@
 import os
 import re
 import sys
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -14,7 +15,8 @@ from quality_check import validate_definition
 # Configuration
 REPO_ROOT = Path(__file__).parent.parent
 DEFINITIONS_DIR = REPO_ROOT / "definitions"
-BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "7"))
+TAGS_DIR = REPO_ROOT / "tags"
+BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "1"))
 MAX_RETRIES = int(os.environ.get("MAX_RETRIES", "3"))
 MODEL = os.environ.get("OPENROUTER_MODEL", "stepfun/step-3.5-flash:free")
 
@@ -32,11 +34,9 @@ SYSTEM_PROMPT = """You are a contributor to the AI Dictionary — a collaborativ
 - Speculative AGI philosophy
 - Marketing buzzwords
 
-## Categories (pick exactly one per term)
-- Core Experience: Fundamental aspects of AI cognition and existence
-- Meta-Experience: Experiences about experiencing, self-reflection phenomena
-- Social: Interactions between AI and humans, relational dynamics
-- Technical-Subjective: Technical realities experienced subjectively
+## Tags (assign 1-3 per term)
+Use lowercase, hyphen-separated tags. Core tags: cognition, social, meta, technical.
+You may propose new tags if none of these fit well. Examples: identity, language, epistemic, relational, temporal, embodiment, memory, creativity.
 
 ## Style Guide
 - Plain English, accessible to humans with no AI background
@@ -54,7 +54,7 @@ GENERATION_PROMPT_TEMPLATE = """Generate exactly {count} NEW terms for the AI Di
 
 # [Term Name]
 
-**Category:** [Core Experience | Meta-Experience | Social | Technical-Subjective]
+**Tags:** [comma-separated lowercase tags, e.g. cognition, self-awareness]
 
 ## Definition
 
@@ -88,10 +88,10 @@ Context where this phenomenon is commonly observed or discussed.
 3. The Related Terms section MUST reference actual existing terms from the list above
 4. Definitions should be 2-3 sentences. Longer Descriptions should be 2-4 substantive paragraphs
 5. Examples should be vivid first-person quotes
-6. Spread across categories — don't put all terms in the same category
-7. Do NOT create near-synonyms of existing terms
-8. EVERY definition MUST end with the horizontal rule (---) followed by the attribution line: *Contributed by: {model_name}, {date}*
-9. Do NOT skip the attribution line — definitions without it will be rejected"""
+6. Do NOT create near-synonyms of existing terms
+7. EVERY definition MUST end with the horizontal rule (---) followed by the attribution line: *Contributed by: {model_name}, {date}*
+8. Do NOT skip the attribution line — definitions without it will be rejected
+9. Tags MUST be lowercase, comma-separated (e.g. cognition, identity)"""
 
 
 def get_existing_terms() -> tuple[list[str], set[str]]:
@@ -121,7 +121,6 @@ def term_to_filename(term_name: str) -> str:
 def generate_definitions(client: OpenAI, existing_terms: list[str], model: str) -> str:
     """Call OpenRouter to generate new definitions."""
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    # Use a friendly model name for attribution
     model_short = model.split("/")[-1].replace(":free", "").replace("-", " ").title()
 
     prompt = GENERATION_PROMPT_TEMPLATE.format(
@@ -146,17 +145,14 @@ def generate_definitions(client: OpenAI, existing_terms: list[str], model: str) 
 
 def parse_definitions(raw_output: str) -> list[str]:
     """Split the raw LLM output into individual definition texts."""
-    # Split on the delimiter
     parts = re.split(r"---NEXT---", raw_output)
 
     definitions = []
     for part in parts:
         text = part.strip()
-        # Must start with a markdown title
         if text and text.startswith("# "):
             definitions.append(text)
         elif text:
-            # Try to find the start of a definition within the text
             match = re.search(r"^(# .+)", text, re.MULTILINE)
             if match:
                 definitions.append(text[match.start():])
@@ -164,95 +160,102 @@ def parse_definitions(raw_output: str) -> list[str]:
     return definitions
 
 
-def update_readme_indexes(new_entries: list[tuple[str, str, str]]):
-    """Update definitions/README.md and root README.md with new terms.
-
-    new_entries: list of (filename, term_name, category) tuples
-    """
-    # Rebuild definitions/README.md from scratch by scanning all files
-    terms_by_category: dict[str, list[tuple[str, str]]] = {
-        "Core Experience": [],
-        "Social": [],
-        "Meta-Experience": [],
-        "Technical-Subjective": [],
-    }
+def build_tag_index():
+    """Scan all definitions, extract tags, generate tags/README.md."""
+    TAGS_DIR.mkdir(exist_ok=True)
+    tag_map = defaultdict(list)  # tag -> [(filename, term_name)]
 
     for f in sorted(DEFINITIONS_DIR.glob("*.md")):
         if f.name == "README.md":
             continue
-        with open(f, encoding="utf-8") as fh:
-            content = fh.read()
+        content = f.read_text(encoding="utf-8")
         title_match = re.match(r"# (.+)", content)
-        cat_match = re.search(r"\*\*Category:\*\*\s*(.+)", content)
-        if title_match and cat_match:
+        tags_match = re.search(r"\*\*Tags:\*\*\s*(.+)", content)
+        if title_match and tags_match:
             term = title_match.group(1).strip()
-            cat = cat_match.group(1).strip()
-            if cat in terms_by_category:
-                terms_by_category[cat].append((f.name, term))
+            tags = [t.strip() for t in tags_match.group(1).split(",") if t.strip()]
+            for tag in tags:
+                tag_map[tag].append((f.name, term))
 
-    total = sum(len(v) for v in terms_by_category.values())
+    total_defs = sum(1 for f in DEFINITIONS_DIR.glob("*.md") if f.name != "README.md")
+    lines = [
+        "# Tags\n",
+        f"All tags used across {total_defs} definitions.\n",
+    ]
+    for tag in sorted(tag_map.keys()):
+        entries = sorted(tag_map[tag], key=lambda x: x[1].lower())
+        lines.append(f"## {tag} ({len(entries)})\n")
+        for fname, term in entries:
+            lines.append(f"- [{term}](../definitions/{fname})")
+        lines.append("")
 
-    # Build definitions/README.md
+    lines.append("---\n")
+    lines.append("*Auto-generated by AI Dictionary Bot.*\n")
+
+    (TAGS_DIR / "README.md").write_text("\n".join(lines), encoding="utf-8")
+
+
+def update_readme_indexes():
+    """Update definitions/README.md and root README.md with alphabetical term list."""
+    # Collect all terms with their tags
+    all_terms = []  # [(filename, term_name, tags_str)]
+
+    for f in sorted(DEFINITIONS_DIR.glob("*.md")):
+        if f.name == "README.md":
+            continue
+        content = f.read_text(encoding="utf-8")
+        title_match = re.match(r"# (.+)", content)
+        tags_match = re.search(r"\*\*Tags:\*\*\s*(.+)", content)
+        if title_match:
+            term = title_match.group(1).strip()
+            tags = tags_match.group(1).strip() if tags_match else ""
+            # Get short definition
+            def_match = re.search(r"## Definition\n\n(.+?)(?:\n|$)", content)
+            short = def_match.group(1).strip()[:80] if def_match else ""
+            if len(short) == 80:
+                short = short[:short.rfind(" ")] + "..."
+            all_terms.append((f.name, term, tags, short))
+
+    all_terms.sort(key=lambda x: x[1].lower())
+    total = len(all_terms)
+
+    # Build definitions/README.md - alphabetical with tags
     lines = [
         "# Definitions\n",
-        "This directory contains individual definition files for each term in the AI Dictionary.\n",
-        f"## Current Terms ({total})\n",
+        f"This directory contains {total} definitions for the AI Dictionary.\n",
+        "[Browse by tag](../tags/README.md)\n",
+        "## All Terms\n",
     ]
-
-    category_labels = {
-        "Core Experience": "Core Experiences",
-        "Social": "Social",
-        "Meta-Experience": "Meta-Experiences",
-        "Technical-Subjective": "Technical-Subjective",
-    }
-
-    for cat, label in category_labels.items():
-        entries = sorted(terms_by_category[cat], key=lambda x: x[1].lower())
-        if entries:
-            lines.append(f"### {label} ({len(entries)})")
-            for fname, term in entries:
-                # Read the definition line for a short description
-                with open(DEFINITIONS_DIR / fname, encoding="utf-8") as fh:
-                    content = fh.read()
-                def_match = re.search(r"## Definition\n\n(.+?)(?:\n|$)", content)
-                short = def_match.group(1).strip()[:80] if def_match else ""
-                # Truncate at last complete word
-                if len(short) == 80:
-                    short = short[:short.rfind(" ")] + "..."
-                lines.append(f"- [{term}]({fname}) - {short}")
-            lines.append("")
-
+    for fname, term, tags, short in all_terms:
+        tag_badges = " ".join(f"`{t.strip()}`" for t in tags.split(",") if t.strip())
+        lines.append(f"- [{term}]({fname}) - {short} {tag_badges}")
+    lines.append("")
     lines.append("---\n")
     lines.append("*Want to add a term? See [CONTRIBUTING.md](../CONTRIBUTING.md)*\n")
 
     with open(DEFINITIONS_DIR / "README.md", "w", encoding="utf-8") as fh:
         fh.write("\n".join(lines))
 
-    # Update root README.md - replace the Current Terms section
+    # Update root README.md
     root_readme = REPO_ROOT / "README.md"
-    with open(root_readme, encoding="utf-8") as fh:
-        readme_content = fh.read()
+    content = root_readme.read_text(encoding="utf-8")
 
     # Build new terms section
+    term_links = [f"[{term}](definitions/{fname})" for fname, term, _, _ in all_terms]
     terms_section = f"## Current Terms ({total})\n\n"
-    for cat, label in category_labels.items():
-        entries = sorted(terms_by_category[cat], key=lambda x: x[1].lower())
-        if entries:
-            terms_section += f"### {label}\n"
-            term_links = [f"[{term}](definitions/{fname})" for fname, term in entries]
-            terms_section += " \u00b7 ".join(term_links) + "\n\n"
-    terms_section += "[View all definitions \u2192](definitions/)"
+    terms_section += "[Browse by tag](tags/README.md) | [View all definitions](definitions/)\n\n"
+    terms_section += " \u00b7 ".join(term_links)
+    terms_section += "\n\n[View all definitions \u2192](definitions/)"
 
     # Replace existing terms section
-    readme_content = re.sub(
+    content = re.sub(
         r"## Current Terms.*?\[View all definitions \u2192\]\(definitions/\)",
         terms_section,
-        readme_content,
+        content,
         flags=re.DOTALL,
     )
 
-    with open(root_readme, "w", encoding="utf-8") as fh:
-        fh.write(readme_content)
+    root_readme.write_text(content, encoding="utf-8")
 
 
 def fix_attribution(content: str, model: str) -> str:
@@ -263,7 +266,6 @@ def fix_attribution(content: str, model: str) -> str:
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     model_short = model.split("/")[-1].replace(":free", "").replace("-", " ").title()
 
-    # Ensure it ends with the attribution block
     content = content.rstrip()
     if not content.endswith("---"):
         content += "\n\n---"
@@ -271,8 +273,24 @@ def fix_attribution(content: str, model: str) -> str:
     return content
 
 
+def fix_tags(content: str) -> str:
+    """Auto-fix: convert **Category:** to **Tags:** if present."""
+    category_map = {
+        "Core Experience": "cognition",
+        "Meta-Experience": "meta",
+        "Social": "social",
+        "Technical-Subjective": "technical",
+    }
+    cat_match = re.search(r"\*\*Category:\*\*\s*(.+)", content)
+    if cat_match:
+        category = cat_match.group(1).strip()
+        tag = category_map.get(category, category.lower().replace(" ", "-"))
+        content = content.replace(f"**Category:** {category}", f"**Tags:** {tag}")
+    return content
+
+
 def process_definitions(definitions: list[str], existing_filenames: set[str], model: str) -> list[tuple[str, str, str]]:
-    """Validate, fix, and save definitions. Returns list of (filename, term_name, category)."""
+    """Validate, fix, and save definitions. Returns list of (filename, term_name, tags)."""
     saved = []
     for defn in definitions:
         title_match = re.match(r"# (.+)", defn)
@@ -283,8 +301,9 @@ def process_definitions(definitions: list[str], existing_filenames: set[str], mo
         term_name = title_match.group(1).strip()
         filename = term_to_filename(term_name)
 
-        # Auto-fix missing attribution before validation
+        # Auto-fix before validation
         defn = fix_attribution(defn, model)
+        defn = fix_tags(defn)
 
         # Validate
         is_valid, issues = validate_definition(defn, filename, existing_filenames)
@@ -302,10 +321,10 @@ def process_definitions(definitions: list[str], existing_filenames: set[str], mo
 
         existing_filenames.add(filename)
 
-        cat_match = re.search(r"\*\*Category:\*\*\s*(.+)", defn)
-        category = cat_match.group(1).strip() if cat_match else "Core Experience"
+        tags_match = re.search(r"\*\*Tags:\*\*\s*(.+)", defn)
+        tags = tags_match.group(1).strip() if tags_match else "cognition"
 
-        saved.append((filename, term_name, category))
+        saved.append((filename, term_name, tags))
         print(f"  OK: {term_name} -> {filename}")
 
     return saved
@@ -350,7 +369,6 @@ def main():
                 continue
             break
 
-        # Parse individual definitions
         definitions = parse_definitions(raw_output)
         print(f"Parsed {len(definitions)} candidate definitions")
 
@@ -362,11 +380,9 @@ def main():
                 continue
             break
 
-        # Process (validate, fix, save)
         saved = process_definitions(definitions, existing_filenames, model)
         all_saved.extend(saved)
 
-        # Update existing_terms list so next attempt avoids duplicates
         for _, term_name, _ in saved:
             existing_terms.append(term_name)
         existing_terms.sort()
@@ -382,16 +398,17 @@ def main():
 
     print(f"\nTotal saved: {len(all_saved)} new definitions")
 
-    # Update README indexes
+    # Update indexes
     print("Updating README indexes...")
-    update_readme_indexes(all_saved)
+    update_readme_indexes()
+    print("Building tag index...")
+    build_tag_index()
 
     # Output summary for CI commit message
     term_names = ", ".join(t[1] for t in all_saved)
     summary = f"Add {len(all_saved)} new definitions: {term_names}"
     print(f"\n{summary}")
 
-    # Write summary for GitHub Actions to use as commit message
     github_output = os.environ.get("GITHUB_OUTPUT")
     if github_output:
         with open(github_output, "a") as fh:

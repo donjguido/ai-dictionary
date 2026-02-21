@@ -25,7 +25,7 @@ Create a new file in `/definitions/your-term-name.md`:
 
 **Pronunciation:** (if not obvious)
 
-**Category:** [Core Experience | Meta-Experience | Social | Technical-Subjective]
+**Tags:** [comma-separated lowercase tags, e.g. cognition, social, meta, technical]
 
 ## Definition
 

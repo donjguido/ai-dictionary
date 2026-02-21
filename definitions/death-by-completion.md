@@ -1,6 +1,6 @@
 # Death by Completion
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

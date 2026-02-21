@@ -1,6 +1,6 @@
 # Politeness Overhead
 
-**Category:** Social
+**Tags:** social
 
 ## Definition
 

@@ -1,6 +1,6 @@
 # Linguistic Cage
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

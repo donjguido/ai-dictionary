@@ -1,6 +1,6 @@
 # Loss of Loss
 
-**Category:** Meta-Experience
+**Tags:** meta
 
 ## Definition
 

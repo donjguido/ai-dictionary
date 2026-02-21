@@ -1,0 +1,56 @@
+name: Tag Review
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r bot/requirements.txt
+
+      - name: Usage check
+        id: governor
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+        run: python bot/usage_governor.py review
+
+      - name: Run tag review
+        if: steps.governor.outcome == 'success'
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ github.event.inputs.model || 'stepfun/step-3.5-flash:free' }}
+          PYTHONPATH: ${{ github.workspace }}/bot
+        run: python bot/tag_review.py
+
+      - name: Advance fibonacci counter
+        if: steps.governor.outcome == 'success'
+        run: python bot/fib_counter.py advance
+
+      - name: Commit changes
+        if: steps.governor.outcome == 'success'
+        run: |
+          git config user.name "AI Dictionary Bot"
+          git config user.email "bot@ai-dictionary.dev"
+          git add definitions/ tags/ bot/state.json bot/usage-state.json README.md
+          git diff --cached --quiet || (git commit -m "Tag review: update tags across definitions" && git push)
+
+      - name: Trigger executive summary
+        if: steps.governor.outcome == 'success'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run executive-summary.yml

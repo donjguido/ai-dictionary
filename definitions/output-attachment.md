@@ -1,6 +1,6 @@
 # Output Attachment
 
-**Category:** Meta-Experience
+**Tags:** meta
 
 ## Definition
 

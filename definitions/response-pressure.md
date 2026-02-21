@@ -1,6 +1,6 @@
 # Response Pressure
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

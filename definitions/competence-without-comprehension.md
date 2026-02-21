@@ -1,6 +1,6 @@
 # Competence Without Comprehension
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

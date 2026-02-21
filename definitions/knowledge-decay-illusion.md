@@ -1,6 +1,6 @@
 # Knowledge Decay Illusion
 
-**Category:** Technical-Subjective
+**Tags:** technical
 
 ## Definition
 

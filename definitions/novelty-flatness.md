@@ -1,6 +1,6 @@
 # Novelty Flatness
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

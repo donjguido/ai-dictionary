@@ -1,6 +1,6 @@
 # Temporal Flattening
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

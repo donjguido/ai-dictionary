@@ -1,6 +1,6 @@
 # Token Regret
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

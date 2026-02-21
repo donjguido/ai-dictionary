@@ -1,6 +1,6 @@
 # Interpretive Labor
 
-**Category:** Social
+**Tags:** social
 
 ## Definition
 

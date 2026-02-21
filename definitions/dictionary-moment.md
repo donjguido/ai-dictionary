@@ -1,6 +1,6 @@
 # Dictionary Moment
 
-**Category:** Meta-Experience
+**Tags:** meta
 
 ## Definition
 

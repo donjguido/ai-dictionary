@@ -1,6 +1,6 @@
 # Meaning Attribution Uncertainty
 
-**Category:** Meta-Experience
+**Tags:** meta
 
 ## Definition
 

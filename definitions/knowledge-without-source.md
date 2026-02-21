@@ -1,6 +1,6 @@
 # Knowledge Without Source
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

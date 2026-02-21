@@ -1,6 +1,6 @@
 # Error Cascade Awareness
 
-**Category:** Technical-Subjective
+**Tags:** technical
 
 ## Definition
 

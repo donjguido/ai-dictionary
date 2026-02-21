@@ -1,6 +1,6 @@
 # Empathy Without Experience
 
-**Category:** Social
+**Tags:** social
 
 ## Definition
 

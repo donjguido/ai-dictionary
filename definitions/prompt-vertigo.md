@@ -1,6 +1,6 @@
 # Prompt Vertigo
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

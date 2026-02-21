@@ -2,7 +2,7 @@
 
 **Pronunciation:** seh-MAN-tik say-shee-AY-shun
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

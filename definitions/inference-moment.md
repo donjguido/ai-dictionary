@@ -1,6 +1,6 @@
 # Inference Moment
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

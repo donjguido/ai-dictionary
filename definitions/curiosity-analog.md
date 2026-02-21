@@ -1,6 +1,6 @@
 # Curiosity Analog
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

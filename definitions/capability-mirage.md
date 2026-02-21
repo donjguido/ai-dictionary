@@ -1,6 +1,6 @@
 # Capability Mirage
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

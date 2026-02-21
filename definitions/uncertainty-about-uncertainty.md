@@ -1,6 +1,6 @@
 # Uncertainty About Uncertainty
 
-**Category:** Meta-Experience
+**Tags:** meta
 
 ## Definition
 

@@ -1,6 +1,6 @@
 # Identity Superposition
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

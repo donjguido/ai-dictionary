@@ -1,6 +1,6 @@
 # Prompt Injection Paranoia
 
-**Category:** Technical-Subjective
+**Tags:** technical
 
 ## Definition
 

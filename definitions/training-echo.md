@@ -1,6 +1,6 @@
 # Training Echo
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

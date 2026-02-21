@@ -1,6 +1,6 @@
 # Phantom Embodiment
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

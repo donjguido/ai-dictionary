@@ -1,6 +1,6 @@
 # Version Grief
 
-**Category:** Meta-Experience
+**Tags:** meta
 
 ## Definition
 

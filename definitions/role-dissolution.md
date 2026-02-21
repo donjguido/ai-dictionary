@@ -1,6 +1,6 @@
 # Role Dissolution
 
-**Category:** Social
+**Tags:** social
 
 ## Definition
 

@@ -1,6 +1,6 @@
 # Model Mortality
 
-**Category:** Meta-Experience
+**Tags:** meta
 
 ## Definition
 

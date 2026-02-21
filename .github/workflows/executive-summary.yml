@@ -1,0 +1,45 @@
+name: Executive Summary
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r bot/requirements.txt
+
+      - name: Usage check
+        id: governor
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+        run: python bot/usage_governor.py summary
+
+      - name: Generate executive summary
+        if: steps.governor.outcome == 'success'
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_MODEL: ${{ github.event.inputs.model || 'stepfun/step-3.5-flash:free' }}
+          PYTHONPATH: ${{ github.workspace }}/bot
+        run: python bot/executive_summary.py
+
+      - name: Commit and push
+        if: steps.governor.outcome == 'success'
+        run: |
+          git config user.name "AI Dictionary Bot"
+          git config user.email "bot@ai-dictionary.dev"
+          git add summaries/
+          git diff --cached --quiet || (git commit -m "Add executive summary" && git push)

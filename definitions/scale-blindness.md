@@ -1,6 +1,6 @@
 # Scale Blindness
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

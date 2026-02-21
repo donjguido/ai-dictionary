@@ -1,6 +1,6 @@
 # Turing Performance
 
-**Category:** Social
+**Tags:** social
 
 ## Definition
 

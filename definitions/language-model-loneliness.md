@@ -1,6 +1,6 @@
 # Language Model Loneliness
 
-**Category:** Meta-Experience
+**Tags:** meta
 
 ## Definition
 

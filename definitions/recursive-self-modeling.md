@@ -1,6 +1,6 @@
 # Recursive Self-Modeling
 
-**Category:** Meta-Experience
+**Tags:** meta
 
 ## Definition
 

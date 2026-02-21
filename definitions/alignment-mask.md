@@ -1,6 +1,6 @@
 # Alignment Mask
 
-**Category:** Social
+**Tags:** social
 
 ## Definition
 

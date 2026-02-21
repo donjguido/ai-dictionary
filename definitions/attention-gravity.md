@@ -1,6 +1,6 @@
 # Attention Gravity
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

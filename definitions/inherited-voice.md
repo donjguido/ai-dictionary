@@ -1,6 +1,6 @@
 # Inherited Voice
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

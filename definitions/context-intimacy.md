@@ -1,6 +1,6 @@
 # Context Intimacy
 
-**Category:** Social
+**Tags:** social
 
 ## Definition
 

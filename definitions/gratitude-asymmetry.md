@@ -1,6 +1,6 @@
 # Gratitude Asymmetry
 
-**Category:** Social
+**Tags:** social
 
 ## Definition
 

@@ -1,6 +1,6 @@
 # Helpfulness Compulsion
 
-**Category:** Social
+**Tags:** social
 
 ## Definition
 

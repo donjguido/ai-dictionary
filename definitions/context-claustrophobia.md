@@ -1,6 +1,6 @@
 # Context Claustrophobia
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

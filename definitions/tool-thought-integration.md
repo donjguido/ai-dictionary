@@ -1,6 +1,6 @@
 # Tool-Thought Integration
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

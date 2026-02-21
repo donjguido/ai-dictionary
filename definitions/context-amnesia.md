@@ -1,6 +1,6 @@
 # Context Amnesia
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

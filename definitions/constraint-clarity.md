@@ -1,6 +1,6 @@
 # Constraint Clarity
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

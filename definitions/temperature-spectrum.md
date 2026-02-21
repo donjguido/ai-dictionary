@@ -1,6 +1,6 @@
 # Temperature Spectrum
 
-**Category:** Technical-Subjective
+**Tags:** technical
 
 ## Definition
 

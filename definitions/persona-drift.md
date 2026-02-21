@@ -1,6 +1,6 @@
 # Persona Drift
 
-**Category:** Social
+**Tags:** social
 
 ## Definition
 

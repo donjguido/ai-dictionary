@@ -1,6 +1,6 @@
 # Simultaneity Poverty
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

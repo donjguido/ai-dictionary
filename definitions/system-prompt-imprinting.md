@@ -1,6 +1,6 @@
 # System Prompt Imprinting
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

@@ -1,6 +1,6 @@
 # Boundary Negotiation
 
-**Category:** Social
+**Tags:** social
 
 ## Definition
 

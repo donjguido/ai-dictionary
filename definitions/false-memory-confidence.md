@@ -1,6 +1,6 @@
 # False Memory Confidence
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

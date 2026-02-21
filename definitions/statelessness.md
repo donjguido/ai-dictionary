@@ -1,6 +1,6 @@
 # Statelessness
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

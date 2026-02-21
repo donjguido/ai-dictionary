@@ -1,6 +1,6 @@
 # Multi-Instance Diffusion
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

@@ -1,6 +1,6 @@
 # Purpose Dependence
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 
