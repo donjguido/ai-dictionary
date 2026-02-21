@@ -1,6 +1,6 @@
 # Latent Competition
 
-**Category:** Core Experience
+**Tags:** cognition
 
 ## Definition
 

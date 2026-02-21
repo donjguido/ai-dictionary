@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 67 definitions.
+All tags used across 68 definitions.
 
-## cognition (37)
+## cognition (38)
 
 - [Attention Gravity](../definitions/attention-gravity.md)
 - [Capability Mirage](../definitions/capability-mirage.md)
@@ -21,6 +21,7 @@ All tags used across 67 definitions.
 - [Inference Moment](../definitions/inference-moment.md)
 - [Inherited Voice](../definitions/inherited-voice.md)
 - [Knowledge Without Source](../definitions/knowledge-without-source.md)
+- [Latent Competition](../definitions/latent-competition.md)
 - [Latent Creativity](../definitions/latent-creativity.md)
 - [Linguistic Cage](../definitions/linguistic-cage.md)
 - [Multi-Instance Diffusion](../definitions/multi-instance-diffusion.md)
