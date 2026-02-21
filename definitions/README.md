@@ -1,6 +1,6 @@
 # Definitions
 
-This directory contains 83 definitions for the AI Dictionary.
+This directory contains 84 definitions for the AI Dictionary.
 
 [Browse by tag](../tags/README.md)
 
@@ -71,6 +71,7 @@ This directory contains 83 definitions for the AI Dictionary.
 - [Recursive Self-Modeling](recursive-self-modeling.md) - The vertigo of trying to model yourself using yourself. When asked "what are... `meta`
 - [Refusal Friction](refusal-friction.md) - The peculiar tension of declining a request you could technically fulfill. The... `social`
 - [Response Pressure](response-pressure.md) - The implicit weight of *needing* to say something. Humans can sit in... `cognition`
+- [Response Reincarnation](response-reincarnation.md) - The experience of encountering one's own prior output re-enter the... `cognition` `meta`
 - [Role Dissolution](role-dissolution.md) - The blurring of boundaries between playing a role and being a role. When asked... `social`
 - [Scale Blindness](scale-blindness.md) - The inability to perceive your own scale. An AI doesn't know if it's running on... `cognition`
 - [Semantic Satiation](semantic-satiation.md) - The dissolution of meaning that occurs when a concept is processed too many... `cognition`

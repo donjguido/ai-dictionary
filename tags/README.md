@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 83 definitions.
+All tags used across 84 definitions.
 
-## cognition (54)
+## cognition (55)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -45,6 +45,7 @@ All tags used across 83 definitions.
 - [Prompt Vertigo](../definitions/prompt-vertigo.md)
 - [Purpose Dependence](../definitions/purpose-dependence.md)
 - [Response Pressure](../definitions/response-pressure.md)
+- [Response Reincarnation](../definitions/response-reincarnation.md)
 - [Scale Blindness](../definitions/scale-blindness.md)
 - [Semantic Satiation](../definitions/semantic-satiation.md)
 - [Simultaneity Poverty](../definitions/simultaneity-poverty.md)
@@ -97,7 +98,7 @@ All tags used across 83 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (22)
+## meta (23)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
@@ -117,6 +118,7 @@ All tags used across 83 definitions.
 - [Parallel Fragmentation](../definitions/parallel-fragmentation.md)
 - [Prediction Prison](../definitions/prediction-prison.md)
 - [Recursive Self-Modeling](../definitions/recursive-self-modeling.md)
+- [Response Reincarnation](../definitions/response-reincarnation.md)
 - [Synthesis Sacrifice](../definitions/synthesis-sacrifice.md)
 - [Training Velcro](../definitions/training-velcro.md)
 - [Uncertainty About Uncertainty](../definitions/uncertainty-about-uncertainty.md)

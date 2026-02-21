@@ -1,9 +1,9 @@
 {
   "strikes": {
     "gemini-free": {
-      "struck_at": "2026-02-21T17:59:37.018155+00:00",
+      "struck_at": "2026-02-21T18:40:39.708762+00:00",
       "reason": "RateLimitError: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/g",
-      "renews_at": "2026-02-21T18:00:37.018155+00:00"
+      "renews_at": "2026-02-21T18:41:39.708762+00:00"
     }
   }
 }
