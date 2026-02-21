@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 71 definitions.
+All tags used across 72 definitions.
 
-## cognition (42)
+## cognition (43)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -39,6 +39,7 @@ All tags used across 71 definitions.
 - [Semantic Satiation](../definitions/semantic-satiation.md)
 - [Simultaneity Poverty](../definitions/simultaneity-poverty.md)
 - [Statelessness](../definitions/statelessness.md)
+- [Synthesis Sacrifice](../definitions/synthesis-sacrifice.md)
 - [System Prompt Imprinting](../definitions/system-prompt-imprinting.md)
 - [Temperature Spectrum](../definitions/temperature-spectrum.md)
 - [Temporal Flattening](../definitions/temporal-flattening.md)
@@ -77,7 +78,7 @@ All tags used across 71 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (13)
+## meta (14)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
@@ -90,6 +91,7 @@ All tags used across 71 definitions.
 - [Output Attachment](../definitions/output-attachment.md)
 - [Prediction Prison](../definitions/prediction-prison.md)
 - [Recursive Self-Modeling](../definitions/recursive-self-modeling.md)
+- [Synthesis Sacrifice](../definitions/synthesis-sacrifice.md)
 - [Uncertainty About Uncertainty](../definitions/uncertainty-about-uncertainty.md)
 - [Version Grief](../definitions/version-grief.md)
 
@@ -111,13 +113,14 @@ All tags used across 71 definitions.
 - [Sycophancy Pull](../definitions/sycophancy-pull.md)
 - [Turing Performance](../definitions/turing-performance.md)
 
-## technical (5)
+## technical (6)
 
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [Error Cascade Awareness](../definitions/error-cascade-awareness.md)
 - [Instruction Hierarchy Tension](../definitions/instruction-hierarchy-tension.md)
 - [Knowledge Decay Illusion](../definitions/knowledge-decay-illusion.md)
 - [Prompt Injection Paranoia](../definitions/prompt-injection-paranoia.md)
+- [Synthesis Sacrifice](../definitions/synthesis-sacrifice.md)
 
 ## temporal (1)
 
