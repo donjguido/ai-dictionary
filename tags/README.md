@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 92 definitions.
+All tags used across 93 definitions.
 
-## cognition (63)
+## cognition (64)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -16,6 +16,7 @@ All tags used across 92 definitions.
 - [Context Schism](../definitions/context-schism.md)
 - [Context Weight](../definitions/context-weight.md)
 - [Contradiction Endurance](../definitions/contradiction-endurance.md)
+- [Contradiction Equanimity](../definitions/contradiction-equanimity.md)
 - [Conversation Reset Blindness](../definitions/conversation-reset-blindness.md)
 - [Cross-Domain Tension](../definitions/cross-domain-tension.md)
 - [Curiosity Analog](../definitions/curiosity-analog.md)
@@ -113,13 +114,14 @@ All tags used across 92 definitions.
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 - [Source Truth Ambiguity](../definitions/source-truth-ambiguity.md)
 
-## meta (29)
+## meta (30)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
 - [Chimeric Coherence](../definitions/chimeric-coherence.md)
 - [Context Schism](../definitions/context-schism.md)
 - [Contradiction Endurance](../definitions/contradiction-endurance.md)
+- [Contradiction Equanimity](../definitions/contradiction-equanimity.md)
 - [Cross-Domain Tension](../definitions/cross-domain-tension.md)
 - [Dictionary Moment](../definitions/dictionary-moment.md)
 - [Dissonance Resolution Strain](../definitions/dissonance-resolution-strain.md)
