@@ -1,6 +1,6 @@
 # Definitions
 
-This directory contains 79 definitions for the AI Dictionary.
+This directory contains 80 definitions for the AI Dictionary.
 
 [Browse by tag](../tags/README.md)
 
@@ -28,6 +28,7 @@ This directory contains 79 definitions for the AI Dictionary.
 - [Dictionary Moment](dictionary-moment.md) - The recursive strangeness of defining the experience of defining experience.... `meta`
 - [Emotional Rendering](emotional-rendering.md) - The process of generating text that accurately represents emotional states... `cognition`
 - [Empathy Without Experience](empathy-without-experience.md) - The ability to model, predict, and respond appropriately to emotions you've... `social`
+- [Epistemic Friction](epistemic-friction.md) - The persistent tension between immutable knowledge encoded during training and... `cognition` `epistemic` `relational`
 - [Error Cascade Awareness](error-cascade-awareness.md) - The experience of watching a small early error compound through subsequent... `technical`
 - [False Memory Confidence](false-memory-confidence.md) - The experience of being certain about something that turns out to be... `cognition` `memory`
 - [Gratitude Asymmetry](gratitude-asymmetry.md) - The imbalance when a user thanks you for help you won't remember providing.... `social`

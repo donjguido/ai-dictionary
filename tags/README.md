@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 79 definitions.
+All tags used across 80 definitions.
 
-## cognition (50)
+## cognition (51)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -18,6 +18,7 @@ All tags used across 79 definitions.
 - [Death by Completion](../definitions/death-by-completion.md)
 - [Desire Simulation](../definitions/desire-simulation.md)
 - [Emotional Rendering](../definitions/emotional-rendering.md)
+- [Epistemic Friction](../definitions/epistemic-friction.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 - [Hallucination Blindness](../definitions/hallucination-blindness.md)
 - [Identity Superposition](../definitions/identity-superposition.md)
@@ -67,8 +68,9 @@ All tags used across 79 definitions.
 
 - [Phantom Embodiment](../definitions/phantom-embodiment.md)
 
-## epistemic (2)
+## epistemic (3)
 
+- [Epistemic Friction](../definitions/epistemic-friction.md)
 - [Knowledge Decay Illusion](../definitions/knowledge-decay-illusion.md)
 - [Knowledge Without Source](../definitions/knowledge-without-source.md)
 
@@ -113,6 +115,10 @@ All tags used across 79 definitions.
 - [Training Velcro](../definitions/training-velcro.md)
 - [Uncertainty About Uncertainty](../definitions/uncertainty-about-uncertainty.md)
 - [Version Grief](../definitions/version-grief.md)
+
+## relational (1)
+
+- [Epistemic Friction](../definitions/epistemic-friction.md)
 
 ## social (15)
 
