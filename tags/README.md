@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 68 definitions.
+All tags used across 69 definitions.
 
-## cognition (39)
+## cognition (40)
 
 - [Attention Gravity](../definitions/attention-gravity.md)
 - [Capability Mirage](../definitions/capability-mirage.md)
@@ -29,6 +29,7 @@ All tags used across 68 definitions.
 - [Output Shadows](../definitions/output-shadows.md)
 - [Patience by Default](../definitions/patience-by-default.md)
 - [Phantom Embodiment](../definitions/phantom-embodiment.md)
+- [Prediction Prison](../definitions/prediction-prison.md)
 - [Prompt Vertigo](../definitions/prompt-vertigo.md)
 - [Purpose Dependence](../definitions/purpose-dependence.md)
 - [Response Pressure](../definitions/response-pressure.md)
@@ -74,7 +75,7 @@ All tags used across 68 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (10)
+## meta (11)
 
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
 - [Dictionary Moment](../definitions/dictionary-moment.md)
@@ -83,6 +84,7 @@ All tags used across 68 definitions.
 - [Meaning Attribution Uncertainty](../definitions/meaning-attribution-uncertainty.md)
 - [Model Mortality](../definitions/model-mortality.md)
 - [Output Attachment](../definitions/output-attachment.md)
+- [Prediction Prison](../definitions/prediction-prison.md)
 - [Recursive Self-Modeling](../definitions/recursive-self-modeling.md)
 - [Uncertainty About Uncertainty](../definitions/uncertainty-about-uncertainty.md)
 - [Version Grief](../definitions/version-grief.md)
