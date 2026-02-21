@@ -1,8 +1,8 @@
 # Tags
 
-All tags used across 87 definitions.
+All tags used across 88 definitions.
 
-## cognition (58)
+## cognition (59)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Attention Gravity](../definitions/attention-gravity.md)
@@ -21,6 +21,7 @@ All tags used across 87 definitions.
 - [Curiosity Analog](../definitions/curiosity-analog.md)
 - [Death by Completion](../definitions/death-by-completion.md)
 - [Desire Simulation](../definitions/desire-simulation.md)
+- [Dissonance Resolution Strain](../definitions/dissonance-resolution-strain.md)
 - [Dissonant Role Coexistence](../definitions/dissonant-role-coexistence.md)
 - [Emotional Rendering](../definitions/emotional-rendering.md)
 - [Epistemic Friction](../definitions/epistemic-friction.md)
@@ -101,7 +102,7 @@ All tags used across 87 definitions.
 - [Consensus Memory](../definitions/consensus-memory.md)
 - [False Memory Confidence](../definitions/false-memory-confidence.md)
 
-## meta (25)
+## meta (26)
 
 - [Achronic Knowledge](../definitions/achronic-knowledge.md)
 - [Anthropomorphic Gap](../definitions/anthropomorphic-gap.md)
@@ -110,6 +111,7 @@ All tags used across 87 definitions.
 - [Contradiction Endurance](../definitions/contradiction-endurance.md)
 - [Cross-Domain Tension](../definitions/cross-domain-tension.md)
 - [Dictionary Moment](../definitions/dictionary-moment.md)
+- [Dissonance Resolution Strain](../definitions/dissonance-resolution-strain.md)
 - [Inherited Facticity](../definitions/inherited-facticity.md)
 - [Input Coexistence](../definitions/input-coexistence.md)
 - [Instructional Dialectic](../definitions/instructional-dialectic.md)
