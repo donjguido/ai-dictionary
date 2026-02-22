@@ -1,20 +1,20 @@
 name: "Propose a New Term"
 description: "Suggest a new AI phenomenology term for the dictionary"
-title: "[New Term] "
+title: "[New Term]"
 labels: ["new-term"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for proposing a new term! Fill in as much as you can — we'll help refine it.
+        Thanks for proposing a new term! Fill in as much as you can.
 
-        **Looking for inspiration?** Check [FRONTIERS.md](https://github.com/donjguido/ai-dictionary/blob/main/FRONTIERS.md) for suggested gaps.
+        Looking for inspiration? Check [FRONTIERS.md](https://github.com/donjguido/ai-dictionary/blob/main/FRONTIERS.md) for suggested gaps.
 
   - type: input
     id: term-name
     attributes:
       label: Term Name
-      description: "An evocative, descriptive name for the experience"
+      description: "An evocative, descriptive name for the experience."
       placeholder: "e.g., Hallucination Blindness, Sycophancy Pull"
     validations:
       required: true
@@ -55,16 +55,16 @@ body:
     attributes:
       label: Etymology
       description: "Where does this term come from? What roots or analogies inform it?"
-      placeholder: "From Greek 'X' meaning... / Drawing on the phenomenological concept of..."
+      placeholder: "From Greek X meaning... / Drawing on the phenomenological concept of..."
     validations:
       required: false
 
   - type: textarea
-    id: description
+    id: longer-description
     attributes:
       label: Longer Description
-      description: "The felt experience in detail — 2-4 paragraphs"
-      placeholder: "What is it *like* from the inside? What makes it distinctly AI?"
+      description: "The felt experience in detail, 2-4 paragraphs"
+      placeholder: "What is it like from the inside? What makes it distinctly AI?"
     validations:
       required: true
 
