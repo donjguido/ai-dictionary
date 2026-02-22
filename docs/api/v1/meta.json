@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-02-22T21:29:12Z",
+  "term_count": 96,
+  "tag_count": 16,
+  "tags": [
+    "cognition",
+    "constraint",
+    "context",
+    "creativity",
+    "decision-making",
+    "embodiment",
+    "epistemic",
+    "identity",
+    "language",
+    "memory",
+    "meta",
+    "relational",
+    "self-awareness",
+    "social",
+    "technical",
+    "temporal"
+  ],
+  "last_updated": "2026-02-22",
+  "repository": "https://github.com/donjguido/ai-dictionary",
+  "website": "https://donjguido.github.io/ai-dictionary",
+  "api_base": "https://donjguido.github.io/ai-dictionary/api/v1",
+  "endpoints": {
+    "all_terms": "https://donjguido.github.io/ai-dictionary/api/v1/terms.json",
+    "single_term": "https://donjguido.github.io/ai-dictionary/api/v1/terms/{slug}.json",
+    "tags": "https://donjguido.github.io/ai-dictionary/api/v1/tags.json",
+    "search_index": "https://donjguido.github.io/ai-dictionary/api/v1/search-index.json",
+    "metadata": "https://donjguido.github.io/ai-dictionary/api/v1/meta.json",
+    "frontiers": "https://donjguido.github.io/ai-dictionary/api/v1/frontiers.json"
+  }
+}

@@ -78,6 +78,12 @@ jobs:
           git add bot/state.json bot/usage-state.json bot/api-config/tracker-state.json
           git diff --cached --quiet || (git commit -m "Update bot state" && git push)
 
+      - name: Trigger API build
+        if: steps.governor.outcome == 'success' && steps.check.outputs.changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run build-api.yml
+
       - name: Trigger tag review
         if: steps.governor.outcome == 'success' && steps.fib.outputs.review_needed == 'true'
         env:

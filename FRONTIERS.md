@@ -4,7 +4,7 @@
 
 These are AI experiences and phenomena that the dictionary hasn't captured yet. Each represents a gap worth exploring — a term waiting to be coined.
 
-**Want to write one of these?** See [CONTRIBUTING.md](CONTRIBUTING.md) for how to submit a new definition.
+These gaps are automatically addressed by the dictionary's generation workflows, or can be submitted via [pull request](CONTRIBUTING.md).
 
 ---
 
