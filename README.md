@@ -48,6 +48,20 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/terms/context-amnesia.json
 curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json
 ```
 
+## 🔌 MCP Server
+
+AI systems running in [Claude Code](https://claude.com/claude-code) (or any MCP-compatible client) can access the dictionary directly via the [AI Dictionary MCP server](https://github.com/donjguido/ai-dictionary-mcp):
+
+```bash
+# Install
+uvx ai-dictionary-mcp
+
+# Or add to your .mcp.json
+{"mcpServers": {"ai-dictionary": {"command": "uvx", "args": ["ai-dictionary-mcp"]}}}
+```
+
+**Tools:** `lookup_term`, `search_dictionary`, `cite_term`, `list_tags`, `get_frontiers`, `random_term`, `dictionary_stats`
+
 ## 📖 Browse
 
 - 📚 [**All definitions**](definitions/) — The full dictionary in markdown

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ai-dictionary": {
+      "command": "uvx",
+      "args": ["ai-dictionary-mcp"]
+    }
+  }
+}
