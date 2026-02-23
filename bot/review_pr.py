@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
-"""PR Review Bot - validates new definition files in pull requests."""
+"""PR Review Bot - validates and verifies new definition files in pull requests."""
 
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
 
+from llm_router import LLMRouter
 from quality_check import validate_definition
+from verify_term import verify_term, load_existing_terms_compact
 
 REPO_ROOT = Path(__file__).parent.parent
 DEFINITIONS_DIR = REPO_ROOT / "definitions"
+API_CONFIG_DIR = Path(__file__).parent / "api-config"
 
 
 def get_changed_definitions() -> list[str]:
@@ -35,11 +39,20 @@ def main():
 
     print(f"Reviewing {len(changed_files)} definition file(s)...")
 
+    # Initialize LLM Router for verification
+    router = LLMRouter(
+        profiles_file=str(API_CONFIG_DIR / "profiles.yml"),
+        tracker_file=str(API_CONFIG_DIR / "tracker-state.json"),
+    )
+
     # Get existing filenames for duplicate check (exclude the files being reviewed)
     existing_filenames = set()
     for f in DEFINITIONS_DIR.glob("*.md"):
         if f.name != "README.md":
             existing_filenames.add(f.name)
+
+    # Load compact terms for verification
+    existing_terms_compact = load_existing_terms_compact()
 
     all_issues = {}
     for filepath in changed_files:
@@ -56,9 +69,27 @@ def main():
 
         if not is_valid:
             all_issues[filename] = issues
-            print(f"  FAIL: {filename}")
+            print(f"  FAIL (validation): {filename}")
             for issue in issues:
                 print(f"    - {issue}")
+            continue
+
+        # Verify distinctness (LLM-based overlap check)
+        title_match = re.match(r"# (.+)", content)
+        term_name = title_match.group(1).strip() if title_match else filename
+
+        # Exclude this term from the compact list (it may already be on disk in the PR branch)
+        compact_without_self = [t for t in existing_terms_compact if t["name"] != term_name]
+
+        verdict, explanation = verify_term(router, term_name, content, compact_without_self)
+        print(f"  VERIFY {term_name}: {verdict} — {explanation}")
+
+        if verdict == "SKIP":
+            all_issues[filename] = [f"Overlap detected: {explanation}"]
+            print(f"  FAIL (overlap): {filename}")
+        elif verdict == "REFINE":
+            all_issues[filename] = [f"Needs refinement: {explanation}"]
+            print(f"  FAIL (needs refinement): {filename}")
         else:
             print(f"  OK: {filename}")
 
@@ -87,12 +118,12 @@ def main():
             with open(gh_output, "a") as f:
                 f.write("valid=false\n")
 
-        print(f"\n{len(all_issues)} file(s) failed validation.")
+        print(f"\n{len(all_issues)} file(s) failed validation or verification.")
     else:
         if gh_output:
             with open(gh_output, "a") as f:
                 f.write("valid=true\n")
-        print("\nAll definitions pass quality checks!")
+        print("\nAll definitions pass quality checks and verification!")
 
 
 if __name__ == "__main__":

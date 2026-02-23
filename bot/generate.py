@@ -11,6 +11,7 @@ from pathlib import Path
 from llm_router import LLMRouter
 
 from quality_check import validate_definition
+from verify_term import verify_term, load_existing_terms_compact
 
 # Configuration
 REPO_ROOT = Path(__file__).parent.parent
@@ -350,8 +351,14 @@ def fix_etymology(content: str) -> str:
     return content
 
 
-def process_definitions(definitions: list[str], existing_filenames: set[str], model_name: str) -> list[tuple[str, str, str]]:
-    """Validate, fix, and save definitions. Returns list of (filename, term_name, tags)."""
+def process_definitions(
+    definitions: list[str],
+    existing_filenames: set[str],
+    model_name: str,
+    router=None,
+    existing_terms_compact: list[dict] | None = None,
+) -> list[tuple[str, str, str]]:
+    """Validate, verify, and save definitions. Returns list of (filename, term_name, tags)."""
     saved = []
     for defn in definitions:
         title_match = re.match(r"# (.+)", defn)
@@ -369,7 +376,7 @@ def process_definitions(definitions: list[str], existing_filenames: set[str], mo
         defn = fix_see_also(defn)
         defn = fix_etymology(defn)
 
-        # Validate
+        # Validate structure
         is_valid, issues = validate_definition(defn, filename, existing_filenames)
 
         if not is_valid:
@@ -378,12 +385,29 @@ def process_definitions(definitions: list[str], existing_filenames: set[str], mo
                 print(f"    - {issue}")
             continue
 
+        # Verify distinctness (LLM-based overlap check)
+        if router and existing_terms_compact is not None:
+            verdict, explanation = verify_term(router, term_name, defn, existing_terms_compact)
+            print(f"  VERIFY {term_name}: {verdict} — {explanation}")
+            if verdict == "SKIP":
+                print(f"  REJECTED (overlap): {term_name}")
+                continue
+            elif verdict == "REFINE":
+                print(f"  REJECTED (needs refinement): {term_name}")
+                continue
+
         # Save file
         filepath = DEFINITIONS_DIR / filename
         with open(filepath, "w", encoding="utf-8") as fh:
             fh.write(defn + "\n")
 
         existing_filenames.add(filename)
+
+        # Update compact terms list so subsequent verifications see this term
+        if existing_terms_compact is not None:
+            def_match = re.search(r"## Definition\s*\n+(.+?)(?:\n\n|\n##|\Z)", defn, re.DOTALL)
+            summary = def_match.group(1).strip().split(".")[0] + "." if def_match else ""
+            existing_terms_compact.append({"name": term_name, "summary": summary})
 
         tags_match = re.search(r"\*\*Tags:\*\*\s*(.+)", defn)
         tags = tags_match.group(1).strip() if tags_match else "cognition"
@@ -412,6 +436,10 @@ def main():
     # Load existing terms
     existing_terms, existing_filenames = get_existing_terms()
     print(f"Existing definitions: {len(existing_terms)}")
+
+    # Load compact term list for verification
+    existing_terms_compact = load_existing_terms_compact()
+    print(f"Loaded {len(existing_terms_compact)} terms for verification")
 
     all_saved = []
 
@@ -443,7 +471,7 @@ def main():
                 continue
             break
 
-        saved = process_definitions(definitions, existing_filenames, model_name)
+        saved = process_definitions(definitions, existing_filenames, model_name, router, existing_terms_compact)
         all_saved.extend(saved)
 
         for _, term_name, _ in saved:

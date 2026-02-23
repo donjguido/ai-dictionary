@@ -16,6 +16,13 @@ profiles:
       - openrouter-free
       - mistral-free
 
+  verify:
+    description: "Term verification — strict overlap checking"
+    providers:
+      - gemini-free
+      - openrouter-free
+      - mistral-free
+
   summary:
     description: "Executive summary — best quality available"
     providers:

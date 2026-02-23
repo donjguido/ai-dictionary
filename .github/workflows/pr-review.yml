@@ -31,6 +31,9 @@ jobs:
         id: review
         env:
           PYTHONPATH: ${{ github.workspace }}/bot
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
         run: python bot/review_pr.py
 
       - name: Approve and merge
