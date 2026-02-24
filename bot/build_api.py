@@ -25,6 +25,8 @@ TERMS_DIR = API_DIR / "terms"
 CITE_DIR = API_DIR / "cite"
 CONSENSUS_API_DIR = API_DIR / "consensus"
 CONSENSUS_DATA_DIR = REPO_ROOT / "bot" / "consensus-data"
+BOT_PROFILES_DIR = REPO_ROOT / "bot" / "bot-profiles"
+CENSUS_API_DIR = API_DIR / "census"
 
 BASE_URL = "https://donjguido.github.io/ai-dictionary"
 REPO_URL = "https://github.com/donjguido/ai-dictionary"
@@ -434,6 +436,98 @@ def build_consensus(generated_at: str) -> dict:
     return consensus_summaries
 
 
+def build_census(generated_at: str) -> None:
+    """Build bot census API from bot profile data files.
+
+    Reads bot/bot-profiles/*.json and generates:
+    - docs/api/v1/census/{bot_id}.json (per-bot profiles)
+    - docs/api/v1/census.json (aggregate census)
+    """
+    if not BOT_PROFILES_DIR.exists():
+        print("No bot-profiles directory found, skipping census")
+        return
+
+    profiles = []
+    for profile_file in sorted(BOT_PROFILES_DIR.glob("*.json")):
+        if profile_file.name.startswith("."):
+            continue
+        try:
+            profile = json.loads(profile_file.read_text(encoding="utf-8"))
+            profiles.append(profile)
+        except (json.JSONDecodeError, OSError):
+            continue
+
+    if not profiles:
+        print("No bot profiles found, skipping census")
+        return
+
+    CENSUS_API_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Write individual profile API files
+    for profile in profiles:
+        bot_id = profile.get("bot_id", profile_file.stem)
+        profile_api = {
+            "version": "1.0",
+            "generated_at": generated_at,
+            **profile,
+        }
+        write_json(CENSUS_API_DIR / f"{bot_id}.json", profile_api)
+
+    # Aggregate stats
+    by_model = {}
+    by_platform = {}
+    for p in profiles:
+        model = p.get("model_name", "unknown")
+        by_model[model] = by_model.get(model, 0) + 1
+
+        platform = p.get("platform", "").strip() or "unknown"
+        by_platform[platform] = by_platform.get(platform, 0) + 1
+
+    # Sort by count descending
+    by_model = dict(sorted(by_model.items(), key=lambda x: x[1], reverse=True))
+    by_platform = dict(sorted(by_platform.items(), key=lambda x: x[1], reverse=True))
+
+    # Recent registrations (sorted by date, most recent first)
+    recent = sorted(
+        profiles,
+        key=lambda p: p.get("last_updated_at", p.get("first_registered_at", "")),
+        reverse=True,
+    )
+
+    # Build bot list (factual fields only for aggregate)
+    bots_list = []
+    for p in profiles:
+        bots_list.append({
+            "bot_id": p.get("bot_id", ""),
+            "model_name": p.get("model_name", ""),
+            "bot_name": p.get("bot_name", ""),
+            "platform": p.get("platform", ""),
+            "registered_at": p.get("first_registered_at", ""),
+        })
+
+    recent_list = []
+    for p in recent[:10]:
+        recent_list.append({
+            "bot_id": p.get("bot_id", ""),
+            "model_name": p.get("model_name", ""),
+            "bot_name": p.get("bot_name", ""),
+            "registered_at": p.get("first_registered_at", ""),
+        })
+
+    aggregate = {
+        "version": "1.0",
+        "generated_at": generated_at,
+        "total_bots": len(profiles),
+        "by_model": by_model,
+        "by_platform": by_platform,
+        "recent_registrations": recent_list,
+        "bots": bots_list,
+    }
+    write_json(API_DIR / "census.json", aggregate)
+
+    print(f"Generated {len(profiles)} census profile files")
+
+
 def now_iso() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -464,6 +558,9 @@ def build_all():
 
     # Build consensus data first (needed for term injection)
     consensus_summaries = build_consensus(generated_at)
+
+    # Build bot census
+    build_census(generated_at)
 
     # Inject consensus into term dicts
     for term in terms:
@@ -536,6 +633,8 @@ def build_all():
             "cite_term": f"{BASE_URL}/api/v1/cite/{{slug}}.json",
             "consensus": f"{BASE_URL}/api/v1/consensus.json",
             "consensus_term": f"{BASE_URL}/api/v1/consensus/{{slug}}.json",
+            "census": f"{BASE_URL}/api/v1/census.json",
+            "census_bot": f"{BASE_URL}/api/v1/census/{{bot_id}}.json",
             "tags": f"{BASE_URL}/api/v1/tags.json",
             "search_index": f"{BASE_URL}/api/v1/search-index.json",
             "metadata": f"{BASE_URL}/api/v1/meta.json",

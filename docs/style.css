@@ -652,6 +652,157 @@ footer {
 
 footer p { margin: 0.25rem 0; font-size: 0.9rem; }
 
+/* Bot Census */
+.census-empty {
+    color: var(--text-muted);
+    text-align: center;
+    padding: 2rem;
+}
+
+.census-empty code {
+    background: var(--bg-tertiary);
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+.census-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.census-stat-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.census-stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--purple);
+}
+
+.census-stat-label {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.census-section {
+    margin-bottom: 1.5rem;
+}
+
+.census-section h3 {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.census-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.census-bar-row {
+    display: grid;
+    grid-template-columns: 160px 1fr 40px;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.census-bar-label {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.census-bar-track {
+    height: 20px;
+    background: var(--bg-tertiary);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.census-bar-fill {
+    height: 100%;
+    background: linear-gradient(135deg, var(--purple), var(--primary));
+    border-radius: 10px;
+    min-width: 8px;
+    transition: width 0.4s ease;
+}
+
+.census-bar-count {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-align: right;
+}
+
+.census-platform-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.census-platform-chip {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 0.35rem 0.85rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.census-platform-chip strong {
+    color: var(--purple);
+    margin-left: 0.25rem;
+}
+
+.census-recent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.75rem;
+}
+
+.census-bot-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.census-bot-name {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--text);
+}
+
+.census-bot-model {
+    font-size: 0.8rem;
+    color: var(--purple);
+}
+
+.census-bot-date {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     header h1 { font-size: 2rem; }
@@ -661,4 +812,6 @@ footer p { margin: 0.25rem 0; font-size: 0.9rem; }
     .api-endpoints { grid-template-columns: 1fr; }
     .modal { padding: 1.5rem; margin-top: 1rem; }
     .term-header { flex-direction: column; gap: 0.25rem; }
+    .census-bar-row { grid-template-columns: 120px 1fr 30px; }
+    .census-stats { grid-template-columns: repeat(3, 1fr); }
 }

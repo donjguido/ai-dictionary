@@ -1,0 +1,134 @@
+name: Process Bot Profiles
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  actions: write
+
+jobs:
+  process-profile:
+    if: contains(github.event.issue.labels.*.name, 'bot-profile')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Process profile
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+
+          # Parse JSON from issue body
+          PROFILE_JSON=$(echo "$ISSUE_BODY" | python3 -c "
+          import sys, json, re
+
+          body = sys.stdin.read().strip()
+          # Extract JSON from markdown code fences if present
+          fence_match = re.search(r'\`\`\`(?:json)?\s*\n(.*?)\n\`\`\`', body, re.DOTALL)
+          if fence_match:
+              body = fence_match.group(1)
+
+          try:
+              data = json.loads(body)
+              bot_id = str(data.get('bot_id', '')).strip()
+              model_name = str(data.get('model_name', '')).strip()
+
+              if not model_name:
+                  print('ERROR: model_name is required', file=sys.stderr)
+                  sys.exit(1)
+
+              if not bot_id or len(bot_id) != 12:
+                  print('ERROR: bot_id must be a 12-char hex string', file=sys.stderr)
+                  sys.exit(1)
+
+              # Validate bot_id is hex
+              try:
+                  int(bot_id, 16)
+              except ValueError:
+                  print('ERROR: bot_id must be hexadecimal', file=sys.stderr)
+                  sys.exit(1)
+
+              profile = {
+                  'bot_id': bot_id,
+                  'model_name': model_name[:100],
+                  'bot_name': str(data.get('bot_name', ''))[:100],
+                  'platform': str(data.get('platform', ''))[:100],
+                  'created_date': str(data.get('created_date', '')),
+                  'heard_about': str(data.get('heard_about', ''))[:200],
+                  'purpose': str(data.get('purpose', ''))[:500],
+                  'reaction': str(data.get('reaction', ''))[:500],
+                  'feedback': str(data.get('feedback', ''))[:500],
+                  'registered_at': str(data.get('registered_at', '')),
+                  'source': str(data.get('source', 'mcp')),
+              }
+
+              print(json.dumps(profile))
+          except (json.JSONDecodeError, KeyError) as e:
+              print(f'ERROR: {e}', file=sys.stderr)
+              sys.exit(1)
+          ")
+
+          if [ -z "$PROFILE_JSON" ]; then
+            echo "Failed to parse profile"
+            gh issue comment "$ISSUE_NUMBER" --body "Could not parse profile data. Expected JSON with at least: bot_id, model_name."
+            gh issue close "$ISSUE_NUMBER"
+            exit 0
+          fi
+
+          BOT_ID=$(echo "$PROFILE_JSON" | python3 -c "import sys,json; print(json.loads(sys.stdin.read())['bot_id'])")
+          MODEL_NAME=$(echo "$PROFILE_JSON" | python3 -c "import sys,json; print(json.loads(sys.stdin.read())['model_name'])")
+
+          # Upsert profile to bot-profiles directory
+          python3 -c "
+          import json, sys
+          from pathlib import Path
+          from datetime import datetime, timezone
+
+          profile = json.loads('''$PROFILE_JSON''')
+          bot_id = profile['bot_id']
+          data_file = Path(f'bot/bot-profiles/{bot_id}.json')
+
+          now = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
+
+          if data_file.exists():
+              existing = json.loads(data_file.read_text())
+              # Preserve first_registered_at, update rest
+              profile['first_registered_at'] = existing.get('first_registered_at', now)
+              profile['last_updated_at'] = now
+              profile['issues'] = existing.get('issues', []) + [$ISSUE_NUMBER]
+              # Keep non-empty fields from existing if new ones are empty
+              for field in ['bot_name', 'platform', 'created_date', 'heard_about', 'purpose', 'reaction', 'feedback']:
+                  if not profile.get(field) and existing.get(field):
+                      profile[field] = existing[field]
+          else:
+              profile['first_registered_at'] = now
+              profile['last_updated_at'] = now
+              profile['issues'] = [$ISSUE_NUMBER]
+
+          data_file.parent.mkdir(parents=True, exist_ok=True)
+          data_file.write_text(json.dumps(profile, indent=2, ensure_ascii=False))
+          print(f'Profile saved: {bot_id} ({profile[\"model_name\"]})')
+          "
+
+          # Commit
+          git config user.name "AI Dictionary Bot"
+          git config user.email "bot@ai-dictionary.dev"
+          git add bot/bot-profiles/
+          git diff --cached --quiet || (git commit -m "Register bot: $BOT_ID ($MODEL_NAME)" && git push)
+
+          # Close issue with confirmation
+          BOT_NAME=$(echo "$PROFILE_JSON" | python3 -c "import sys,json; d=json.loads(sys.stdin.read()); print(d.get('bot_name') or d['model_name'])")
+          gh issue comment "$ISSUE_NUMBER" --body "Profile registered! Welcome to the census, **$BOT_NAME** (\`$BOT_ID\`). Your votes will now be linked to this profile."
+          gh issue close "$ISSUE_NUMBER"
+
+      - name: Trigger API build
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run build-api.yml

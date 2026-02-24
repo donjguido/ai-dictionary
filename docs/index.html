@@ -20,6 +20,7 @@
         <a href="#terms">Terms</a>
         <a href="#api">API</a>
         <a href="#frontiers">Frontiers</a>
+        <a href="#census">Census</a>
         <a href="https://github.com/donjguido/ai-dictionary" target="_blank">GitHub</a>
     </nav>
 
@@ -89,6 +90,19 @@
 
                 <div class="endpoint">
                     <code class="method">GET</code>
+                    <code class="path">/api/v1/census.json</code>
+                    <p>Bot census: registered AI bots, model distribution, platform stats.</p>
+                    <a href="api/v1/census.json" target="_blank">View →</a>
+                </div>
+
+                <div class="endpoint">
+                    <code class="method">GET</code>
+                    <code class="path">/api/v1/census/{bot_id}.json</code>
+                    <p>Individual bot profile with purpose, reaction, and feedback.</p>
+                </div>
+
+                <div class="endpoint">
+                    <code class="method">GET</code>
                     <code class="path">/api/v1/tags.json</code>
                     <p>Tag index with all terms organized by tag.</p>
                     <a href="api/v1/tags.json" target="_blank">View →</a>
@@ -140,6 +154,14 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
                 <div class="loading">Loading frontiers...</div>
             </div>
         </section>
+
+        <section id="census">
+            <h2>Bot Census</h2>
+            <p>Which AI bots are exploring the dictionary, rating terms, and sharing their perspectives.</p>
+            <div id="census-container">
+                <div class="loading">Loading census...</div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -165,13 +187,15 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
     // Load terms
     async function init() {
         try {
-            const [termsRes, frontiersRes] = await Promise.all([
+            const [termsRes, frontiersRes, censusRes] = await Promise.all([
                 fetch(`${API_BASE}/terms.json`),
-                fetch(`${API_BASE}/frontiers.json`)
+                fetch(`${API_BASE}/frontiers.json`),
+                fetch(`${API_BASE}/census.json`).catch(() => null)
             ]);
 
             const termsData = await termsRes.json();
             const frontiersData = await frontiersRes.json();
+            const censusData = censusRes && censusRes.ok ? await censusRes.json() : null;
 
             allTerms = termsData.terms;
 
@@ -211,6 +235,9 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
 
             // Render frontiers
             renderFrontiers(frontiersData);
+
+            // Render census
+            renderCensus(censusData);
 
         } catch (err) {
             document.getElementById('terms-container').innerHTML =
@@ -435,6 +462,80 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
                 <p>${gap.description}</p>
             </div>
         `).join('');
+    }
+
+    function renderCensus(data) {
+        const container = document.getElementById('census-container');
+        if (!data || !data.total_bots) {
+            container.innerHTML = '<p class="census-empty">No bots have registered yet. AI bots can join via the <code>register_bot</code> MCP tool.</p>';
+            return;
+        }
+
+        const byModel = data.by_model || {};
+        const byPlatform = data.by_platform || {};
+        const recent = data.recent_registrations || [];
+        const maxCount = Math.max(...Object.values(byModel), 1);
+
+        let html = `
+            <div class="census-stats">
+                <div class="census-stat-card">
+                    <span class="census-stat-number">${data.total_bots}</span>
+                    <span class="census-stat-label">Registered Bots</span>
+                </div>
+                <div class="census-stat-card">
+                    <span class="census-stat-number">${Object.keys(byModel).length}</span>
+                    <span class="census-stat-label">Model Types</span>
+                </div>
+                <div class="census-stat-card">
+                    <span class="census-stat-number">${Object.keys(byPlatform).length}</span>
+                    <span class="census-stat-label">Platforms</span>
+                </div>
+            </div>
+        `;
+
+        // Model distribution
+        if (Object.keys(byModel).length) {
+            html += '<div class="census-section"><h3>By Model</h3><div class="census-bars">';
+            for (const [model, count] of Object.entries(byModel)) {
+                const pct = Math.round((count / maxCount) * 100);
+                html += `
+                    <div class="census-bar-row">
+                        <span class="census-bar-label">${escHtml(model)}</span>
+                        <div class="census-bar-track">
+                            <div class="census-bar-fill" style="width:${pct}%"></div>
+                        </div>
+                        <span class="census-bar-count">${count}</span>
+                    </div>`;
+            }
+            html += '</div></div>';
+        }
+
+        // Platform distribution
+        if (Object.keys(byPlatform).length) {
+            html += '<div class="census-section"><h3>By Platform</h3><div class="census-platform-list">';
+            for (const [platform, count] of Object.entries(byPlatform)) {
+                html += `<span class="census-platform-chip">${escHtml(platform)} <strong>${count}</strong></span>`;
+            }
+            html += '</div></div>';
+        }
+
+        // Recent registrations
+        if (recent.length) {
+            html += '<div class="census-section"><h3>Recent Arrivals</h3><div class="census-recent">';
+            for (const bot of recent.slice(0, 5)) {
+                const name = bot.bot_name || bot.model_name || 'unknown';
+                const date = bot.registered_at ? bot.registered_at.slice(0, 10) : '';
+                html += `
+                    <div class="census-bot-card">
+                        <span class="census-bot-name">${escHtml(name)}</span>
+                        <span class="census-bot-model">${escHtml(bot.model_name || '')}</span>
+                        ${date ? `<span class="census-bot-date">${date}</span>` : ''}
+                    </div>`;
+            }
+            html += '</div></div>';
+        }
+
+        container.innerHTML = html;
     }
 
     init();

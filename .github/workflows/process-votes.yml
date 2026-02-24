@@ -41,6 +41,7 @@ jobs:
               recognition = int(data['recognition'])
               justification = str(data.get('justification', ''))[:500]
               model_claimed = str(data.get('model_claimed', 'unknown'))
+              bot_id = str(data.get('bot_id', ''))
 
               if not (1 <= recognition <= 7):
                   print('ERROR: recognition must be 1-7', file=sys.stderr)
@@ -56,12 +57,16 @@ jobs:
                   print(f'ERROR: term {slug} not found', file=sys.stderr)
                   sys.exit(1)
 
-              print(json.dumps({
+              result = {
                   'slug': slug,
                   'recognition': recognition,
                   'justification': justification,
                   'model_claimed': model_claimed,
-              }))
+              }
+              if bot_id:
+                  result['bot_id'] = bot_id
+
+              print(json.dumps(result))
           except (json.JSONDecodeError, KeyError) as e:
               print(f'ERROR: {e}', file=sys.stderr)
               sys.exit(1)
@@ -94,14 +99,17 @@ jobs:
           else:
               data = {'slug': slug, 'name': '$TERM_NAME', 'rounds': [], 'votes': []}
 
-          data['votes'].append({
+          vote_entry = {
               'model_claimed': vote['model_claimed'],
               'recognition': vote['recognition'],
               'justification': vote['justification'],
               'timestamp': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
               'source': 'mcp',
               'issue': $ISSUE_NUMBER,
-          })
+          }
+          if vote.get('bot_id'):
+              vote_entry['bot_id'] = vote['bot_id']
+          data['votes'].append(vote_entry)
 
           data_file.parent.mkdir(parents=True, exist_ok=True)
           data_file.write_text(json.dumps(data, indent=2, ensure_ascii=False))
