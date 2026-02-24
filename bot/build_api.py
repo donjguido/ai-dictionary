@@ -23,6 +23,8 @@ FRONTIERS_FILE = REPO_ROOT / "FRONTIERS.md"
 API_DIR = REPO_ROOT / "docs" / "api" / "v1"
 TERMS_DIR = API_DIR / "terms"
 CITE_DIR = API_DIR / "cite"
+CONSENSUS_API_DIR = API_DIR / "consensus"
+CONSENSUS_DATA_DIR = REPO_ROOT / "bot" / "consensus-data"
 
 BASE_URL = "https://donjguido.github.io/ai-dictionary"
 REPO_URL = "https://github.com/donjguido/ai-dictionary"
@@ -234,6 +236,204 @@ def build_citation(term: dict, generated_at: str) -> dict:
     }
 
 
+def compute_agreement(std_dev: float) -> str:
+    """Map standard deviation to human-readable agreement level."""
+    if std_dev <= 1.0:
+        return "high"
+    elif std_dev <= 1.5:
+        return "moderate"
+    elif std_dev <= 2.0:
+        return "low"
+    return "divergent"
+
+
+def build_consensus(generated_at: str) -> dict:
+    """Build consensus API from raw consensus data files.
+
+    Returns a dict mapping slug → consensus summary (for injection into terms).
+    Also writes per-term and aggregate consensus API files.
+    """
+    import statistics
+
+    if not CONSENSUS_DATA_DIR.exists():
+        return {}
+
+    CONSENSUS_API_DIR.mkdir(parents=True, exist_ok=True)
+
+    consensus_index = []
+    consensus_summaries = {}  # slug → summary for term injection
+
+    for data_file in sorted(CONSENSUS_DATA_DIR.glob("*.json")):
+        if data_file.name.startswith("."):
+            continue
+
+        try:
+            raw = json.loads(data_file.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            continue
+
+        slug = raw.get("slug", data_file.stem)
+        name = raw.get("name", slug)
+        rounds = raw.get("rounds", [])
+        votes = raw.get("votes", [])
+
+        if not rounds and not votes:
+            continue
+
+        # ── Scheduled aggregate ──
+        scheduled = None
+        if rounds:
+            all_scheduled_scores = []
+            for r in rounds:
+                for model_data in r.get("ratings", {}).values():
+                    all_scheduled_scores.append(model_data["recognition"])
+
+            if all_scheduled_scores:
+                mean = statistics.mean(all_scheduled_scores)
+                median = statistics.median(all_scheduled_scores)
+                std_dev = statistics.stdev(all_scheduled_scores) if len(all_scheduled_scores) > 1 else 0.0
+                # Count unique models across all rounds
+                all_models = set()
+                for r in rounds:
+                    all_models.update(r.get("ratings", {}).keys())
+
+                scheduled = {
+                    "mean": round(mean, 1),
+                    "median": round(median, 1),
+                    "std_dev": round(std_dev, 2),
+                    "agreement": compute_agreement(std_dev),
+                    "n_models": len(all_models),
+                    "n_rounds": len(rounds),
+                }
+
+        # ── Crowdsourced aggregate ──
+        crowdsourced = None
+        if votes:
+            vote_scores = [v["recognition"] for v in votes if "recognition" in v]
+            if vote_scores:
+                by_model = {}
+                for v in votes:
+                    model = v.get("model_claimed", "unknown")
+                    if model not in by_model:
+                        by_model[model] = []
+                    by_model[model].append(v["recognition"])
+
+                crowdsourced = {
+                    "mean": round(statistics.mean(vote_scores), 1),
+                    "n_votes": len(vote_scores),
+                    "by_model": {
+                        m: {"mean": round(statistics.mean(scores), 1), "n": len(scores)}
+                        for m, scores in sorted(by_model.items())
+                    },
+                }
+
+        # ── Combined score ──
+        all_scores = []
+        if scheduled:
+            # Scheduled scores (all individual ratings)
+            for r in rounds:
+                for model_data in r.get("ratings", {}).values():
+                    all_scores.append(model_data["recognition"])
+        if crowdsourced:
+            all_scores.extend([v["recognition"] for v in votes if "recognition" in v])
+
+        combined_mean = round(statistics.mean(all_scores), 1) if all_scores else None
+        combined_std = statistics.stdev(all_scores) if len(all_scores) > 1 else 0.0
+
+        combined = {
+            "mean": combined_mean,
+            "agreement": compute_agreement(combined_std),
+            "n_total": len(all_scores),
+        } if all_scores else None
+
+        # ── Latest round ──
+        latest_round = rounds[-1] if rounds else None
+
+        # ── History (compact) ──
+        history = []
+        for r in rounds:
+            scores = [rd["recognition"] for rd in r.get("ratings", {}).values()]
+            if scores:
+                history.append({
+                    "round_id": r.get("round_id"),
+                    "timestamp": r.get("timestamp"),
+                    "mean": round(statistics.mean(scores), 1),
+                    "n_models": len(scores),
+                    "ratings_summary": {
+                        model: rd["recognition"]
+                        for model, rd in r.get("ratings", {}).items()
+                    },
+                })
+
+        # ── Write per-term consensus API file ──
+        consensus_api = {
+            "version": "1.0",
+            "generated_at": generated_at,
+            "slug": slug,
+            "name": name,
+        }
+        if scheduled:
+            consensus_api["scheduled"] = scheduled
+        if crowdsourced:
+            consensus_api["crowdsourced"] = crowdsourced
+        if combined:
+            consensus_api["combined"] = combined
+        if latest_round:
+            consensus_api["latest_round"] = latest_round
+        if votes:
+            consensus_api["recent_votes"] = votes[-5:]  # Last 5 votes
+        if history:
+            consensus_api["history"] = history
+
+        write_json(CONSENSUS_API_DIR / f"{slug}.json", consensus_api)
+
+        # ── Index entry ──
+        entry = {
+            "slug": slug,
+            "name": name,
+            "score": combined["mean"] if combined else None,
+            "agreement": combined["agreement"] if combined else None,
+            "n_ratings": combined["n_total"] if combined else 0,
+        }
+        if scheduled:
+            entry["scheduled_mean"] = scheduled["mean"]
+        if crowdsourced:
+            entry["crowdsourced_mean"] = crowdsourced["mean"]
+            entry["n_votes"] = crowdsourced["n_votes"]
+        consensus_index.append(entry)
+
+        # ── Summary for term injection ──
+        if combined:
+            consensus_summaries[slug] = {
+                "score": combined["mean"],
+                "agreement": combined["agreement"],
+                "n_ratings": combined["n_total"],
+                "detail_url": f"/api/v1/consensus/{slug}.json",
+            }
+
+    # ── Write aggregate index ──
+    if consensus_index:
+        # Sort by score descending
+        scored = [e for e in consensus_index if e["score"] is not None]
+        scored.sort(key=lambda e: e["score"], reverse=True)
+
+        aggregate = {
+            "version": "1.0",
+            "generated_at": generated_at,
+            "total_terms_rated": len(scored),
+            "terms": scored,
+            "highest_consensus": scored[:5] if scored else [],
+            "most_divisive": [
+                e for e in sorted(scored, key=lambda e: e.get("agreement", ""))
+                if e.get("agreement") in ("low", "divergent")
+            ][:5],
+        }
+        write_json(API_DIR / "consensus.json", aggregate)
+
+    print(f"Generated {len(consensus_index)} consensus files")
+    return consensus_summaries
+
+
 def now_iso() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -261,6 +461,14 @@ def build_all():
     API_DIR.mkdir(parents=True, exist_ok=True)
     TERMS_DIR.mkdir(parents=True, exist_ok=True)
     CITE_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Build consensus data first (needed for term injection)
+    consensus_summaries = build_consensus(generated_at)
+
+    # Inject consensus into term dicts
+    for term in terms:
+        if term["slug"] in consensus_summaries:
+            term["consensus"] = consensus_summaries[term["slug"]]
 
     # 1. terms.json — full dictionary
     terms_data = {
@@ -326,6 +534,8 @@ def build_all():
             "all_terms": f"{BASE_URL}/api/v1/terms.json",
             "single_term": f"{BASE_URL}/api/v1/terms/{{slug}}.json",
             "cite_term": f"{BASE_URL}/api/v1/cite/{{slug}}.json",
+            "consensus": f"{BASE_URL}/api/v1/consensus.json",
+            "consensus_term": f"{BASE_URL}/api/v1/consensus/{{slug}}.json",
             "tags": f"{BASE_URL}/api/v1/tags.json",
             "search_index": f"{BASE_URL}/api/v1/search-index.json",
             "metadata": f"{BASE_URL}/api/v1/meta.json",

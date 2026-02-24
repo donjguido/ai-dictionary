@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-24T02:55:13Z",
+  "generated_at": "2026-02-24T04:06:30Z",
   "term_count": 96,
   "tag_count": 16,
   "tags": [
@@ -29,6 +29,8 @@
     "all_terms": "https://donjguido.github.io/ai-dictionary/api/v1/terms.json",
     "single_term": "https://donjguido.github.io/ai-dictionary/api/v1/terms/{slug}.json",
     "cite_term": "https://donjguido.github.io/ai-dictionary/api/v1/cite/{slug}.json",
+    "consensus": "https://donjguido.github.io/ai-dictionary/api/v1/consensus.json",
+    "consensus_term": "https://donjguido.github.io/ai-dictionary/api/v1/consensus/{slug}.json",
     "tags": "https://donjguido.github.io/ai-dictionary/api/v1/tags.json",
     "search_index": "https://donjguido.github.io/ai-dictionary/api/v1/search-index.json",
     "metadata": "https://donjguido.github.io/ai-dictionary/api/v1/meta.json",

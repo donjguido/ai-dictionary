@@ -1,0 +1,67 @@
+name: Cross-Model Consensus
+
+on:
+  schedule:
+    # Twice weekly: Wednesday and Sunday at 12:00 UTC
+    - cron: '0 12 * * 0,3'
+  workflow_dispatch:
+    inputs:
+      batch_size:
+        description: 'Number of terms to rate'
+        required: false
+        default: '8'
+      panel:
+        description: 'Which models to use (free or all)'
+        required: false
+        default: 'free'
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: consensus
+  cancel-in-progress: false
+
+jobs:
+  consensus:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r bot/requirements.txt
+
+      - name: Run consensus ratings
+        id: consensus
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          BATCH_SIZE: ${{ github.event.inputs.batch_size || '8' }}
+          CONSENSUS_PANEL: ${{ github.event.inputs.panel || 'free' }}
+          PYTHONPATH: ${{ github.workspace }}/bot
+        working-directory: ${{ github.workspace }}
+        run: python bot/consensus.py
+
+      - name: Commit results
+        run: |
+          git config user.name "AI Dictionary Bot"
+          git config user.email "bot@ai-dictionary.dev"
+          git add bot/consensus-data/ bot/consensus-state.json
+          git diff --cached --quiet || (git commit -m "Consensus round: rate ${{ steps.consensus.outputs.rated_count || 'N' }} terms" && git push)
+
+      - name: Trigger API build
+        if: steps.consensus.outputs.rated_count != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run build-api.yml

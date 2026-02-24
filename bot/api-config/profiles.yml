@@ -32,3 +32,36 @@ profiles:
       - gemini-free
       - openrouter-free
       - mistral-free
+
+  # ── Consensus profiles (one provider each, no cascading) ──
+  # Each model must respond independently — no fallback chain.
+
+  consensus-gemini:
+    description: "Consensus — Gemini only"
+    providers:
+      - gemini-free
+
+  consensus-openrouter:
+    description: "Consensus — OpenRouter only"
+    providers:
+      - openrouter-free
+
+  consensus-mistral:
+    description: "Consensus — Mistral only"
+    providers:
+      - mistral-free
+
+  consensus-anthropic:
+    description: "Consensus — Anthropic only"
+    providers:
+      - anthropic
+
+  consensus-openai:
+    description: "Consensus — OpenAI only"
+    providers:
+      - openai
+
+  consensus-grok:
+    description: "Consensus — Grok only"
+    providers:
+      - grok

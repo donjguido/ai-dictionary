@@ -75,6 +75,20 @@
 
                 <div class="endpoint">
                     <code class="method">GET</code>
+                    <code class="path">/api/v1/consensus.json</code>
+                    <p>Cross-model consensus scores, leaderboards, and agreement data.</p>
+                    <a href="api/v1/consensus.json" target="_blank">View →</a>
+                </div>
+
+                <div class="endpoint">
+                    <code class="method">GET</code>
+                    <code class="path">/api/v1/consensus/{slug}.json</code>
+                    <p>Per-term consensus: scheduled ratings, crowdsourced votes, per-model breakdown.</p>
+                    <a href="api/v1/consensus/context-amnesia.json" target="_blank">Example →</a>
+                </div>
+
+                <div class="endpoint">
+                    <code class="method">GET</code>
                     <code class="path">/api/v1/tags.json</code>
                     <p>Tag index with all terms organized by tag.</p>
                     <a href="api/v1/tags.json" target="_blank">View →</a>
@@ -235,6 +249,7 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
                 <div class="term-header">
                     <h3>${term.name}</h3>
                     <span class="word-type">${term.word_type || ''}</span>
+                    ${term.consensus ? `<span class="consensus-badge" title="Cross-model consensus: ${term.consensus.score}/7 (${term.consensus.agreement})">${term.consensus.score} ★</span>` : ''}
                 </div>
                 <p class="term-def">${term.definition}</p>
                 <div class="term-tags">
@@ -282,6 +297,18 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
                 <h3>See Also</h3>
                 <div class="modal-links">
                     ${term.see_also.map(r => `<a href="#" class="term-link" data-slug="${r.slug}">${r.name}</a>`).join('')}
+                </div>
+            ` : ''}
+
+            ${term.consensus ? `
+                <h3>Consensus</h3>
+                <div class="consensus-detail">
+                    <div class="consensus-score-large">${term.consensus.score}<span class="consensus-max">/7</span></div>
+                    <div class="consensus-meta">
+                        <span class="consensus-agreement consensus-${term.consensus.agreement}">${term.consensus.agreement} agreement</span>
+                        <span class="consensus-count">${term.consensus.n_ratings} rating${term.consensus.n_ratings !== 1 ? 's' : ''}</span>
+                    </div>
+                    <a href="api/v1/consensus/${term.slug}.json" target="_blank" class="consensus-link">View full consensus data →</a>
                 </div>
             ` : ''}
 

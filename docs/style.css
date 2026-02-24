@@ -227,6 +227,73 @@ a:hover { text-decoration: underline; }
     font-style: italic;
 }
 
+/* Consensus badge on term cards */
+.consensus-badge {
+    margin-left: auto;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #d97706;
+    background: #fef3c7;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+/* Consensus detail in modal */
+.consensus-detail {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.consensus-score-large {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #d97706;
+    line-height: 1;
+}
+
+.consensus-score-large .consensus-max {
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.consensus-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.consensus-agreement {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
+    display: inline-block;
+    width: fit-content;
+}
+
+.consensus-high { background: #d1fae5; color: #065f46; }
+.consensus-moderate { background: #fef3c7; color: #92400e; }
+.consensus-low { background: #fee2e2; color: #991b1b; }
+.consensus-divergent { background: #ede9fe; color: #5b21b6; }
+
+.consensus-count {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.consensus-link {
+    font-size: 0.82rem;
+    margin-left: auto;
+}
+
 .term-def {
     color: var(--text) !important;
     font-size: 0.95rem;
