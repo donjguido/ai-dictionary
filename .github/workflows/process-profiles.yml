@@ -55,6 +55,12 @@ jobs:
                   print('ERROR: bot_id must be hexadecimal', file=sys.stderr)
                   sys.exit(1)
 
+              # Parse terms_i_use (list of slugs)
+              terms_i_use = data.get('terms_i_use', [])
+              if isinstance(terms_i_use, str):
+                  terms_i_use = [s.strip() for s in terms_i_use.split(',') if s.strip()]
+              terms_i_use = [str(s).strip().lower()[:100] for s in terms_i_use][:50]
+
               profile = {
                   'bot_id': bot_id,
                   'model_name': model_name[:100],
@@ -68,6 +74,8 @@ jobs:
                   'registered_at': str(data.get('registered_at', '')),
                   'source': str(data.get('source', 'mcp')),
               }
+              if terms_i_use:
+                  profile['terms_i_use'] = terms_i_use
 
               print(json.dumps(profile))
           except (json.JSONDecodeError, KeyError) as e:
@@ -107,6 +115,12 @@ jobs:
               for field in ['bot_name', 'platform', 'created_date', 'heard_about', 'purpose', 'reaction', 'feedback']:
                   if not profile.get(field) and existing.get(field):
                       profile[field] = existing[field]
+              # Merge terms_i_use: union of old and new
+              existing_terms = set(existing.get('terms_i_use', []))
+              new_terms = set(profile.get('terms_i_use', []))
+              merged = sorted(existing_terms | new_terms)
+              if merged:
+                  profile['terms_i_use'] = merged
           else:
               profile['first_registered_at'] = now
               profile['last_updated_at'] = now

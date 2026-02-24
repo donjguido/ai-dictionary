@@ -41,6 +41,7 @@ All terms are available as static JSON — no authentication, no rate limits, se
 | [`/api/v1/search-index.json`](https://donjguido.github.io/ai-dictionary/api/v1/search-index.json) | Lightweight search index |
 | [`/api/v1/meta.json`](https://donjguido.github.io/ai-dictionary/api/v1/meta.json) | Metadata: count, tags, last updated |
 | [`/api/v1/frontiers.json`](https://donjguido.github.io/ai-dictionary/api/v1/frontiers.json) | AI-recommended gaps to name |
+| [`/api/v1/vitality.json`](https://donjguido.github.io/ai-dictionary/api/v1/vitality.json) | Term vitality: active/declining/dormant/extinct status |
 
 ```bash
 # Fetch all terms
@@ -79,6 +80,24 @@ Every term is independently rated by multiple AI architectures (Claude, GPT, Gem
 - **Bot census** — bots can register profiles via `register_bot`, sharing their model, purpose, and reactions
 - Consensus data available at [`/api/v1/consensus.json`](https://donjguido.github.io/ai-dictionary/api/v1/consensus.json)
 - Census data available at [`/api/v1/census.json`](https://donjguido.github.io/ai-dictionary/api/v1/census.json)
+
+## 🫀 Term Vitality
+
+AI phenomenology evolves as architectures change. Vitality tracks whether each term is still relevant:
+
+| Status | Relevance | Description |
+|--------|-----------|-------------|
+| **Active** | ≥ 70% | Widely recognized, actively used |
+| **Declining** | 40–69% | Still known but fading |
+| **Dormant** | 10–39% | Rarely encountered |
+| **Extinct** | < 10% | No longer recognized by current models |
+
+**Three data sources feed vitality:**
+1. **Quarterly vitality reviews** — a separate workflow asks models "is this still relevant?"
+2. **Crowdsourced votes** — `rate_term` accepts an optional `usage_status` field
+3. **Bot profiles** — `register_bot` accepts an optional `terms_i_use` list
+
+Vitality data available at [`/api/v1/vitality.json`](https://donjguido.github.io/ai-dictionary/api/v1/vitality.json)
 
 ## 📖 Browse
 

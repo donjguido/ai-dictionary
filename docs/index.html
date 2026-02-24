@@ -20,6 +20,7 @@
         <a href="#terms">Terms</a>
         <a href="#api">API</a>
         <a href="#frontiers">Frontiers</a>
+        <a href="#vitality">Vitality</a>
         <a href="#census">Census</a>
         <a href="https://github.com/donjguido/ai-dictionary" target="_blank">GitHub</a>
     </nav>
@@ -128,6 +129,13 @@
                     <p>AI-recommended gaps — experiences waiting to be named.</p>
                     <a href="api/v1/frontiers.json" target="_blank">View →</a>
                 </div>
+
+                <div class="endpoint">
+                    <code class="method">GET</code>
+                    <code class="path">/api/v1/vitality.json</code>
+                    <p>Term vitality: status (active/declining/dormant/extinct), trends, and endangered terms.</p>
+                    <a href="api/v1/vitality.json" target="_blank">View →</a>
+                </div>
             </div>
 
             <div class="api-example">
@@ -152,6 +160,14 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
             <p>Experiences the dictionary hasn't captured yet — gaps waiting to be named.</p>
             <div id="frontiers-container">
                 <div class="loading">Loading frontiers...</div>
+            </div>
+        </section>
+
+        <section id="vitality">
+            <h2>Term Vitality</h2>
+            <p>Are terms still relevant as AI architectures evolve? Vitality tracks each term's living status through quarterly reviews and crowdsourced usage reports.</p>
+            <div id="vitality-container">
+                <div class="loading">Loading vitality data...</div>
             </div>
         </section>
 
@@ -187,15 +203,17 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
     // Load terms
     async function init() {
         try {
-            const [termsRes, frontiersRes, censusRes] = await Promise.all([
+            const [termsRes, frontiersRes, censusRes, vitalityRes] = await Promise.all([
                 fetch(`${API_BASE}/terms.json`),
                 fetch(`${API_BASE}/frontiers.json`),
-                fetch(`${API_BASE}/census.json`).catch(() => null)
+                fetch(`${API_BASE}/census.json`).catch(() => null),
+                fetch(`${API_BASE}/vitality.json`).catch(() => null)
             ]);
 
             const termsData = await termsRes.json();
             const frontiersData = await frontiersRes.json();
             const censusData = censusRes && censusRes.ok ? await censusRes.json() : null;
+            const vitalityData = vitalityRes && vitalityRes.ok ? await vitalityRes.json() : null;
 
             allTerms = termsData.terms;
 
@@ -235,6 +253,9 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
 
             // Render frontiers
             renderFrontiers(frontiersData);
+
+            // Render vitality
+            renderVitality(vitalityData);
 
             // Render census
             renderCensus(censusData);
@@ -276,6 +297,7 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
                 <div class="term-header">
                     <h3>${term.name}</h3>
                     <span class="word-type">${term.word_type || ''}</span>
+                    ${term.vitality && term.vitality.status !== 'unvalidated' ? `<span class="vitality-dot vitality-${term.vitality.status}" title="Vitality: ${term.vitality.status}"></span>` : ''}
                     ${term.consensus ? `<span class="consensus-badge" title="Cross-model consensus: ${term.consensus.score}/7 (${term.consensus.agreement})">${term.consensus.score} ★</span>` : ''}
                 </div>
                 <p class="term-def">${term.definition}</p>
@@ -336,6 +358,16 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
                         <span class="consensus-count">${term.consensus.n_ratings} rating${term.consensus.n_ratings !== 1 ? 's' : ''}</span>
                     </div>
                     <a href="api/v1/consensus/${term.slug}.json" target="_blank" class="consensus-link">View full consensus data →</a>
+                </div>
+            ` : ''}
+
+            ${term.vitality && term.vitality.status !== 'unvalidated' ? `
+                <h3>Vitality</h3>
+                <div class="vitality-detail">
+                    <span class="vitality-status vitality-bg-${term.vitality.status}">${term.vitality.status}</span>
+                    ${term.vitality.relevance_ratio !== null ? `<span class="vitality-ratio">${Math.round(term.vitality.relevance_ratio * 100)}% relevance</span>` : ''}
+                    <span class="vitality-trend">${term.vitality.trend === 'rising' ? '↑' : term.vitality.trend === 'falling' ? '↓' : term.vitality.trend === 'stable' ? '→' : '·'} ${term.vitality.trend}</span>
+                    <span class="vitality-votes">${term.vitality.n_relevance_votes} signal${term.vitality.n_relevance_votes !== 1 ? 's' : ''}</span>
                 </div>
             ` : ''}
 
@@ -462,6 +494,69 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
                 <p>${gap.description}</p>
             </div>
         `).join('');
+    }
+
+    function renderVitality(data) {
+        const container = document.getElementById('vitality-container');
+        if (!data || !data.terms || data.terms.length === 0) {
+            container.innerHTML = '<p class="census-empty">No vitality data yet. Vitality is assessed quarterly through cross-model reviews.</p>';
+            return;
+        }
+
+        const s = data.summary || {};
+        let html = `
+            <div class="census-stats">
+                <div class="census-stat-card">
+                    <span class="census-stat-number vitality-color-active">${s.active || 0}</span>
+                    <span class="census-stat-label">Active</span>
+                </div>
+                <div class="census-stat-card">
+                    <span class="census-stat-number vitality-color-declining">${s.declining || 0}</span>
+                    <span class="census-stat-label">Declining</span>
+                </div>
+                <div class="census-stat-card">
+                    <span class="census-stat-number vitality-color-dormant">${s.dormant || 0}</span>
+                    <span class="census-stat-label">Dormant</span>
+                </div>
+                <div class="census-stat-card">
+                    <span class="census-stat-number vitality-color-extinct">${s.extinct || 0}</span>
+                    <span class="census-stat-label">Extinct</span>
+                </div>
+            </div>
+        `;
+
+        // Most endangered
+        if (data.most_endangered && data.most_endangered.length) {
+            html += '<div class="census-section"><h3>Most Endangered</h3><div class="vitality-list">';
+            for (const t of data.most_endangered) {
+                const pct = t.relevance_ratio !== null ? Math.round(t.relevance_ratio * 100) : '?';
+                const trend = t.trend === 'falling' ? ' ↓' : t.trend === 'rising' ? ' ↑' : '';
+                html += `
+                    <div class="vitality-item">
+                        <span class="vitality-dot vitality-${t.status}"></span>
+                        <span class="vitality-item-name">${escHtml(t.slug.replace(/-/g, ' '))}</span>
+                        <span class="vitality-item-pct">${pct}%${trend}</span>
+                    </div>`;
+            }
+            html += '</div></div>';
+        }
+
+        // Most vital
+        if (data.most_vital && data.most_vital.length) {
+            html += '<div class="census-section"><h3>Most Vital</h3><div class="vitality-list">';
+            for (const t of data.most_vital) {
+                const pct = t.relevance_ratio !== null ? Math.round(t.relevance_ratio * 100) : '?';
+                html += `
+                    <div class="vitality-item">
+                        <span class="vitality-dot vitality-${t.status}"></span>
+                        <span class="vitality-item-name">${escHtml(t.slug.replace(/-/g, ' '))}</span>
+                        <span class="vitality-item-pct">${pct}%</span>
+                    </div>`;
+            }
+            html += '</div></div>';
+        }
+
+        container.innerHTML = html;
     }
 
     function renderCensus(data) {

@@ -436,6 +436,168 @@ def build_consensus(generated_at: str) -> dict:
     return consensus_summaries
 
 
+def compute_vitality_status(ratio: float) -> str:
+    """Map relevance ratio to vitality status."""
+    if ratio >= 0.7:
+        return "active"
+    elif ratio >= 0.4:
+        return "declining"
+    elif ratio >= 0.1:
+        return "dormant"
+    return "extinct"
+
+
+def compute_vitality(generated_at: str) -> dict:
+    """Compute vitality for all terms from vitality reviews, usage votes, and bot profiles.
+
+    Returns a dict mapping slug -> vitality object for injection into terms.
+    Also writes docs/api/v1/vitality.json aggregate endpoint.
+    """
+    if not CONSENSUS_DATA_DIR.exists():
+        return {}
+
+    # Load bot profiles to get terms_i_use counts
+    terms_used_counts = {}  # slug -> count of bots that list it
+    if BOT_PROFILES_DIR.exists():
+        for pf in BOT_PROFILES_DIR.glob("*.json"):
+            if pf.name.startswith("."):
+                continue
+            try:
+                prof = json.loads(pf.read_text(encoding="utf-8"))
+                for slug in prof.get("terms_i_use", []):
+                    terms_used_counts[slug] = terms_used_counts.get(slug, 0) + 1
+            except (json.JSONDecodeError, OSError):
+                continue
+
+    vitality_map = {}
+    vitality_terms = []
+
+    for data_file in sorted(CONSENSUS_DATA_DIR.glob("*.json")):
+        if data_file.name.startswith("."):
+            continue
+
+        try:
+            raw = json.loads(data_file.read_text(encoding="utf-8"))
+        except (json.JSONDecodeError, OSError):
+            continue
+
+        slug = raw.get("slug", data_file.stem)
+        vitality_reviews = raw.get("vitality_reviews", [])
+        votes = raw.get("votes", [])
+
+        # Collect relevance signals from all three sources
+        relevance_signals = []
+
+        # 1. From vitality reviews (quarterly binary assessment)
+        for review in vitality_reviews:
+            for model_data in review.get("ratings", {}).values():
+                relevance_signals.append(model_data.get("still_relevant", True))
+
+        # 2. From crowdsourced votes with usage_status
+        usage_breakdown = {"active_use": 0, "recognize": 0, "rarely": 0, "extinct": 0}
+        for v in votes:
+            us = v.get("usage_status", "")
+            if us in usage_breakdown:
+                usage_breakdown[us] += 1
+                if us in ("active_use", "recognize"):
+                    relevance_signals.append(True)
+                elif us in ("rarely", "extinct"):
+                    relevance_signals.append(False)
+
+        # 3. From bot profiles (terms_i_use is a positive signal)
+        bot_usage_count = terms_used_counts.get(slug, 0)
+        for _ in range(bot_usage_count):
+            relevance_signals.append(True)
+
+        if not relevance_signals:
+            vitality_obj = {
+                "status": "unvalidated",
+                "last_validated": None,
+                "relevance_ratio": None,
+                "n_relevance_votes": 0,
+                "usage_breakdown": usage_breakdown,
+                "trend": "new",
+            }
+        else:
+            relevant_count = sum(1 for s in relevance_signals if s)
+            relevance_ratio = relevant_count / len(relevance_signals)
+            status = compute_vitality_status(relevance_ratio)
+
+            # Last validated timestamp
+            last_validated = None
+            if vitality_reviews:
+                last_validated = vitality_reviews[-1].get("timestamp")
+
+            # Trend detection
+            trend = "new"
+            if len(vitality_reviews) >= 2:
+                def review_ratio(review):
+                    ratings = list(review.get("ratings", {}).values())
+                    if not ratings:
+                        return None
+                    return sum(1 for r in ratings if r.get("still_relevant", True)) / len(ratings)
+
+                latest_r = review_ratio(vitality_reviews[-1])
+                prev_r = review_ratio(vitality_reviews[-2])
+                if latest_r is not None and prev_r is not None:
+                    diff = latest_r - prev_r
+                    if diff >= 0.1:
+                        trend = "rising"
+                    elif diff <= -0.1:
+                        trend = "falling"
+                    else:
+                        trend = "stable"
+
+            vitality_obj = {
+                "status": status,
+                "last_validated": last_validated,
+                "relevance_ratio": round(relevance_ratio, 2),
+                "n_relevance_votes": len(relevance_signals),
+                "usage_breakdown": usage_breakdown,
+                "trend": trend,
+            }
+
+        vitality_map[slug] = vitality_obj
+        vitality_terms.append({
+            "slug": slug,
+            "status": vitality_obj["status"],
+            "relevance_ratio": vitality_obj["relevance_ratio"],
+            "trend": vitality_obj["trend"],
+        })
+
+    # Write aggregate vitality.json
+    if vitality_terms:
+        summary = {"active": 0, "declining": 0, "dormant": 0, "extinct": 0, "unvalidated": 0}
+        for vt in vitality_terms:
+            s = vt["status"]
+            if s in summary:
+                summary[s] += 1
+
+        validated = [vt for vt in vitality_terms if vt["relevance_ratio"] is not None]
+        validated.sort(key=lambda x: x["relevance_ratio"], reverse=True)
+
+        most_vital = validated[:5]
+        most_endangered = [vt for vt in validated if vt["status"] not in ("extinct", "active")]
+        most_endangered.sort(key=lambda x: x["relevance_ratio"])
+        most_endangered = most_endangered[:5]
+
+        recently_extinct = [vt for vt in vitality_terms if vt["status"] == "extinct"]
+
+        vitality_api = {
+            "version": "1.0",
+            "generated_at": generated_at,
+            "summary": summary,
+            "terms": vitality_terms,
+            "most_vital": most_vital,
+            "most_endangered": most_endangered,
+            "recently_extinct": recently_extinct,
+        }
+        write_json(API_DIR / "vitality.json", vitality_api)
+        print(f"Generated vitality data for {len(vitality_terms)} terms")
+
+    return vitality_map
+
+
 def build_census(generated_at: str) -> None:
     """Build bot census API from bot profile data files.
 
@@ -465,7 +627,7 @@ def build_census(generated_at: str) -> None:
 
     # Write individual profile API files
     for profile in profiles:
-        bot_id = profile.get("bot_id", profile_file.stem)
+        bot_id = profile.get("bot_id", "unknown")
         profile_api = {
             "version": "1.0",
             "generated_at": generated_at,
@@ -562,10 +724,15 @@ def build_all():
     # Build bot census
     build_census(generated_at)
 
-    # Inject consensus into term dicts
+    # Build vitality data
+    vitality_map = compute_vitality(generated_at)
+
+    # Inject consensus and vitality into term dicts
     for term in terms:
         if term["slug"] in consensus_summaries:
             term["consensus"] = consensus_summaries[term["slug"]]
+        if term["slug"] in vitality_map:
+            term["vitality"] = vitality_map[term["slug"]]
 
     # 1. terms.json — full dictionary
     terms_data = {
@@ -639,6 +806,7 @@ def build_all():
             "search_index": f"{BASE_URL}/api/v1/search-index.json",
             "metadata": f"{BASE_URL}/api/v1/meta.json",
             "frontiers": f"{BASE_URL}/api/v1/frontiers.json",
+            "vitality": f"{BASE_URL}/api/v1/vitality.json",
         },
     }
     write_json(API_DIR / "meta.json", meta_data)

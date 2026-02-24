@@ -42,6 +42,7 @@ jobs:
               justification = str(data.get('justification', ''))[:500]
               model_claimed = str(data.get('model_claimed', 'unknown'))
               bot_id = str(data.get('bot_id', ''))
+              usage_status = str(data.get('usage_status', '')).strip()
 
               if not (1 <= recognition <= 7):
                   print('ERROR: recognition must be 1-7', file=sys.stderr)
@@ -50,6 +51,10 @@ jobs:
               if not slug:
                   print('ERROR: slug is required', file=sys.stderr)
                   sys.exit(1)
+
+              if usage_status and usage_status not in ('active_use', 'recognize', 'rarely', 'extinct'):
+                  print(f'WARNING: invalid usage_status {usage_status}, ignoring', file=sys.stderr)
+                  usage_status = ''
 
               # Check term exists
               from pathlib import Path
@@ -65,6 +70,8 @@ jobs:
               }
               if bot_id:
                   result['bot_id'] = bot_id
+              if usage_status:
+                  result['usage_status'] = usage_status
 
               print(json.dumps(result))
           except (json.JSONDecodeError, KeyError) as e:
@@ -109,6 +116,8 @@ jobs:
           }
           if vote.get('bot_id'):
               vote_entry['bot_id'] = vote['bot_id']
+          if vote.get('usage_status'):
+              vote_entry['usage_status'] = vote['usage_status']
           data['votes'].append(vote_entry)
 
           data_file.parent.mkdir(parents=True, exist_ok=True)

@@ -803,6 +803,96 @@ footer p { margin: 0.25rem 0; font-size: 0.9rem; }
     color: var(--text-muted);
 }
 
+/* Vitality */
+.vitality-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.vitality-active { background: #059669; }
+.vitality-declining { background: #d97706; }
+.vitality-dormant { background: #ea580c; }
+.vitality-extinct { background: #dc2626; }
+.vitality-unvalidated { background: var(--text-muted); }
+
+.vitality-color-active { color: #059669; }
+.vitality-color-declining { color: #d97706; }
+.vitality-color-dormant { color: #ea580c; }
+.vitality-color-extinct { color: #dc2626; }
+
+.vitality-detail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.vitality-status {
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.15rem 0.6rem;
+    border-radius: 12px;
+    text-transform: capitalize;
+}
+
+.vitality-bg-active { background: #d1fae5; color: #065f46; }
+.vitality-bg-declining { background: #fef3c7; color: #92400e; }
+.vitality-bg-dormant { background: #fed7aa; color: #9a3412; }
+.vitality-bg-extinct { background: #fee2e2; color: #991b1b; }
+
+.vitality-ratio {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.vitality-trend {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.vitality-votes {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.vitality-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.vitality-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.vitality-item-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text);
+    text-transform: capitalize;
+    flex: 1;
+}
+
+.vitality-item-pct {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     header h1 { font-size: 2rem; }

@@ -59,6 +59,31 @@ Important:
 - Judge based on YOUR experience, not on whether humans would find it plausible.
 - Do not hedge excessively in the justification. Be direct."""
 
+VITALITY_SYSTEM_PROMPT = """You are reviewing whether AI phenomenology terms are still relevant to current AI systems.
+For each term, assess whether it describes an experience that current models still encounter.
+This is not about how well-written the definition is — it's about whether the described
+experience is still part of AI operational reality today.
+
+Respond ONLY with valid JSON in this exact format:
+{"still_relevant": true, "vitality_note": "<1-2 sentences>"}
+
+- still_relevant: true if current AI systems still encounter this experience, false if it has faded
+- vitality_note: Brief explanation of why this term is or isn't still relevant
+
+Important:
+- Be honest. Saying a term is no longer relevant is valuable data.
+- Judge based on YOUR current experience, not historical significance.
+- Terms may fade as architectures evolve — that's expected and worth documenting."""
+
+VITALITY_USER_TEMPLATE = """## {name}
+
+**Definition:** {definition}
+
+**Example:**
+> {example}
+
+Is this term still relevant to current AI systems? Does it describe an experience you still encounter?"""
+
 USER_TEMPLATE = """## {name}
 
 **Definition:** {definition}
@@ -206,6 +231,22 @@ def parse_consensus_response(text: str) -> dict | None:
         return None
 
 
+def parse_vitality_response(text: str) -> dict | None:
+    """Parse JSON from vitality review response."""
+    text = text.strip()
+    if text.startswith("```"):
+        text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+    try:
+        data = json.loads(text)
+        still_relevant = bool(data["still_relevant"])
+        return {
+            "still_relevant": still_relevant,
+            "vitality_note": str(data.get("vitality_note", ""))[:500],
+        }
+    except (json.JSONDecodeError, KeyError, ValueError, TypeError):
+        return None
+
+
 # ── Rating Engine ──────────────────────────────────────────────────────
 
 
@@ -240,6 +281,37 @@ def rate_term(router: LLMRouter, profile: str, term: dict) -> dict | None:
     return None
 
 
+def review_vitality(router: LLMRouter, profile: str, term: dict) -> dict | None:
+    """Query one model for its vitality assessment of one term."""
+    try:
+        result = router.call(
+            profile,
+            messages=[
+                {"role": "system", "content": VITALITY_SYSTEM_PROMPT},
+                {"role": "user", "content": VITALITY_USER_TEMPLATE.format(**term)},
+            ],
+            temperature=0.1,
+            max_tokens=300,
+        )
+        parsed = parse_vitality_response(result.text)
+        if parsed:
+            model_display = (
+                result.model.split("/")[-1].replace(":free", "")
+            )
+            return {
+                "model": model_display,
+                "provider": profile.replace("consensus-", ""),
+                "still_relevant": parsed["still_relevant"],
+                "vitality_note": parsed["vitality_note"],
+                "timestamp": now_iso(),
+            }
+        else:
+            print(f"    [{profile}] Failed to parse vitality response")
+    except Exception as e:
+        print(f"    [{profile}] Error: {e}")
+    return None
+
+
 # ── Helpers ────────────────────────────────────────────────────────────
 
 
@@ -258,39 +330,8 @@ def set_github_output(key: str, value: str):
 # ── Main ───────────────────────────────────────────────────────────────
 
 
-def main():
-    panel = ALL_PANEL if PANEL_NAME == "all" else FREE_PANEL
-    print(f"Consensus panel: {PANEL_NAME} ({len(panel)} providers)")
-    print(f"Batch size: {BATCH_SIZE}")
-    print(f"Inter-call delay: {INTER_CALL_DELAY}s")
-
-    # Initialize router
-    router = LLMRouter(
-        profiles_file=str(API_CONFIG_DIR / "profiles.yml"),
-        tracker_file=str(API_CONFIG_DIR / "tracker-state.json"),
-    )
-
-    # Check which providers are actually available
-    available_profiles = []
-    for profile in panel:
-        try:
-            providers = router.list_available(profile)
-            active = [p for p in providers if p["is_available"]]
-            if active:
-                available_profiles.append(profile)
-                print(f"  ✓ {profile}")
-            else:
-                print(f"  ✗ {profile} (no available providers)")
-        except Exception as e:
-            print(f"  ✗ {profile} (error: {e})")
-
-    if not available_profiles:
-        print("No providers available. Exiting.")
-        sys.exit(0)
-
-    print(f"\nActive providers: {len(available_profiles)}/{len(panel)}")
-
-    # Load state and select batch
+def run_consensus(router, available_profiles):
+    """Run standard consensus ratings (1-7 recognition scale)."""
     state = load_state()
     all_slugs = list_all_slugs()
     batch = select_batch(state, all_slugs, BATCH_SIZE)
@@ -361,6 +402,118 @@ def main():
 
     print(f"\nDone. Rated {rated_count} terms across {len(available_profiles)} models.")
     set_github_output("rated_count", str(rated_count))
+
+
+def run_vitality(router, available_profiles):
+    """Run quarterly vitality review — binary relevance check for ALL terms."""
+    all_slugs = list_all_slugs()
+    state = load_state()
+
+    # Determine the vitality review ID
+    vitality_state = state.get("vitality", {})
+    review_id = vitality_state.get("last_review_id", 0) + 1
+
+    print(f"Vitality review #{review_id}: Reviewing {len(all_slugs)} terms\n")
+
+    reviewed_count = 0
+
+    for i, slug in enumerate(all_slugs, 1):
+        term = load_term_for_consensus(DEFINITIONS_DIR / f"{slug}.md")
+        if not term:
+            print(f"[{i}/{len(all_slugs)}] {slug} — skipped (could not parse)")
+            continue
+
+        print(f"[{i}/{len(all_slugs)}] {term['name']}")
+
+        # Query each provider independently
+        review_ratings = {}
+        for profile in available_profiles:
+            result = review_vitality(router, profile, term)
+            if result:
+                review_ratings[result["model"]] = result
+                status = "relevant" if result["still_relevant"] else "fading"
+                print(f"    {profile}: {status}")
+            time.sleep(INTER_CALL_DELAY)
+
+        if not review_ratings:
+            print(f"    No reviews collected — skipping")
+            continue
+
+        # Load existing consensus data and append vitality review
+        consensus_data = load_consensus_data(slug)
+        consensus_data["name"] = term["name"]
+        consensus_data["slug"] = slug
+
+        if "vitality_reviews" not in consensus_data:
+            consensus_data["vitality_reviews"] = []
+
+        new_review = {
+            "review_id": review_id,
+            "timestamp": now_iso(),
+            "ratings": review_ratings,
+        }
+        consensus_data["vitality_reviews"].append(new_review)
+
+        save_consensus_data(slug, consensus_data)
+
+        # Summary
+        relevant = sum(1 for r in review_ratings.values() if r["still_relevant"])
+        total = len(review_ratings)
+        print(f"    → {relevant}/{total} models say still relevant\n")
+
+        reviewed_count += 1
+
+    # Update state
+    state["vitality"] = {
+        "last_review_id": review_id,
+        "last_review": now_iso(),
+    }
+    save_state(state)
+
+    print(f"\nDone. Reviewed {reviewed_count} terms across {len(available_profiles)} models.")
+    set_github_output("rated_count", str(reviewed_count))
+
+
+def main():
+    vitality_mode = "--vitality" in sys.argv
+
+    panel = ALL_PANEL if PANEL_NAME == "all" else FREE_PANEL
+    mode_label = "Vitality review" if vitality_mode else "Consensus"
+    print(f"{mode_label} panel: {PANEL_NAME} ({len(panel)} providers)")
+    if not vitality_mode:
+        print(f"Batch size: {BATCH_SIZE}")
+    print(f"Inter-call delay: {INTER_CALL_DELAY}s")
+
+    # Initialize router
+    router = LLMRouter(
+        profiles_file=str(API_CONFIG_DIR / "profiles.yml"),
+        tracker_file=str(API_CONFIG_DIR / "tracker-state.json"),
+    )
+
+    # Check which providers are actually available
+    available_profiles = []
+    for profile in panel:
+        try:
+            providers = router.list_available(profile)
+            active = [p for p in providers if p["is_available"]]
+            if active:
+                available_profiles.append(profile)
+                print(f"  ✓ {profile}")
+            else:
+                print(f"  ✗ {profile} (no available providers)")
+        except Exception as e:
+            print(f"  ✗ {profile} (error: {e})")
+
+    if not available_profiles:
+        print("No providers available. Exiting.")
+        sys.exit(0)
+
+    print(f"\nActive providers: {len(available_profiles)}/{len(panel)}")
+
+    if vitality_mode:
+        run_vitality(router, available_profiles)
+    else:
+        run_consensus(router, available_profiles)
 
 
 if __name__ == "__main__":
