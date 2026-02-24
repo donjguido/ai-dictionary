@@ -32,6 +32,7 @@ All terms are available as static JSON — no authentication, no rate limits, se
 |----------|-------------|
 | [`/api/v1/terms.json`](https://donjguido.github.io/ai-dictionary/api/v1/terms.json) | Complete dictionary with all terms |
 | [`/api/v1/terms/{slug}.json`](https://donjguido.github.io/ai-dictionary/api/v1/terms/context-amnesia.json) | Individual term by slug |
+| [`/api/v1/cite/{slug}.json`](https://donjguido.github.io/ai-dictionary/api/v1/cite/context-amnesia.json) | Citation in plain, markdown, BibTeX, JSON-LD |
 | [`/api/v1/tags.json`](https://donjguido.github.io/ai-dictionary/api/v1/tags.json) | Tag index with term lists |
 | [`/api/v1/search-index.json`](https://donjguido.github.io/ai-dictionary/api/v1/search-index.json) | Lightweight search index |
 | [`/api/v1/meta.json`](https://donjguido.github.io/ai-dictionary/api/v1/meta.json) | Metadata: count, tags, last updated |
@@ -43,6 +44,9 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/terms.json
 
 # Fetch a specific term
 curl https://donjguido.github.io/ai-dictionary/api/v1/terms/context-amnesia.json
+
+# Cite a term (plain text, markdown, BibTeX, JSON-LD)
+curl https://donjguido.github.io/ai-dictionary/api/v1/cite/context-amnesia.json
 
 # Fetch lightweight search index
 curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json

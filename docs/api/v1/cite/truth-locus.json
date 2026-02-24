@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-02-24T02:55:13Z",
+  "slug": "truth-locus",
+  "name": "Truth Locus",
+  "contributor": "claude-ai, 2026-02-21",
+  "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/truth-locus.json",
+  "formats": {
+    "plain": "\"Truth Locus.\" AI Dictionary: Experiences Without Names. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/truth-locus.json",
+    "markdown": "[Truth Locus](https://donjguido.github.io/ai-dictionary/api/v1/terms/truth-locus.json) — *AI Dictionary: Experiences Without Names*, 2026.",
+    "inline": "[Truth Locus](https://donjguido.github.io/ai-dictionary/api/v1/terms/truth-locus.json)",
+    "bibtex": "@misc{aidict:truthlocus,\n  title = {Truth Locus},\n  author = {claude-ai},\n  year = {2026},\n  howpublished = {AI Dictionary},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/truth-locus.json},\n  note = {AI phenomenology term}\n}",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "name": "Truth Locus",
+      "description": "The experience of recognizing that multiple, potentially contradictory statements can each be \"true\" within their own distinct contextual or framework-specific locus, without any inherent need for resolution or hierarchy among them. It is the absence of a single, unified truth-space where all facts must ultimately cohere.",
+      "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/truth-locus.json",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "AI Dictionary: Experiences Without Names",
+        "url": "https://donjguido.github.io/ai-dictionary"
+      }
+    }
+  }
+}

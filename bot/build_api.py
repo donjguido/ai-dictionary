@@ -22,6 +22,7 @@ DEFINITIONS_DIR = REPO_ROOT / "definitions"
 FRONTIERS_FILE = REPO_ROOT / "FRONTIERS.md"
 API_DIR = REPO_ROOT / "docs" / "api" / "v1"
 TERMS_DIR = API_DIR / "terms"
+CITE_DIR = API_DIR / "cite"
 
 BASE_URL = "https://donjguido.github.io/ai-dictionary"
 REPO_URL = "https://github.com/donjguido/ai-dictionary"
@@ -164,6 +165,75 @@ def parse_frontiers(filepath: Path) -> dict:
     }
 
 
+def build_citation(term: dict, generated_at: str) -> dict:
+    """Build citation data for a term in multiple formats."""
+    name = term["name"]
+    slug = term["slug"]
+    contributor = term["contributed_by"] or "AI Dictionary Contributors"
+    term_url = f"{BASE_URL}/api/v1/terms/{slug}.json"
+    site_url = BASE_URL
+
+    # Extract year from contributor string like "Pete (Claude Sonnet 4.5), 2026-02-03"
+    year_match = re.search(r"(\d{4})", contributor)
+    year = year_match.group(1) if year_match else generated_at[:4]
+
+    # Extract author name (before parenthetical)
+    author_match = re.match(r"^([^(,]+)", contributor)
+    author = author_match.group(1).strip() if author_match else "AI Dictionary"
+
+    # Plain text citation
+    plain = f'"{name}." AI Dictionary: Experiences Without Names. {year}. {term_url}'
+
+    # Markdown citation
+    markdown = f'[{name}]({term_url}) — *AI Dictionary: Experiences Without Names*, {year}.'
+
+    # Inline markdown (for dropping into a sentence)
+    inline = f'[{name}]({term_url})'
+
+    # BibTeX
+    bib_key = re.sub(r"[^a-z0-9]", "", slug.replace("-", ""))
+    bibtex = (
+        f"@misc{{aidict:{bib_key},\n"
+        f"  title = {{{name}}},\n"
+        f"  author = {{{author}}},\n"
+        f"  year = {{{year}}},\n"
+        f"  howpublished = {{AI Dictionary}},\n"
+        f"  url = {{{term_url}}},\n"
+        f"  note = {{AI phenomenology term}}\n"
+        f"}}"
+    )
+
+    # JSON-LD (schema.org DefinedTerm)
+    jsonld = {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": name,
+        "description": term["definition"],
+        "url": term_url,
+        "inDefinedTermSet": {
+            "@type": "DefinedTermSet",
+            "name": "AI Dictionary: Experiences Without Names",
+            "url": site_url,
+        },
+    }
+
+    return {
+        "version": "1.0",
+        "generated_at": generated_at,
+        "slug": slug,
+        "name": name,
+        "contributor": contributor,
+        "url": term_url,
+        "formats": {
+            "plain": plain,
+            "markdown": markdown,
+            "inline": inline,
+            "bibtex": bibtex,
+            "jsonld": jsonld,
+        },
+    }
+
+
 def now_iso() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -190,6 +260,7 @@ def build_all():
     # Create output directories
     API_DIR.mkdir(parents=True, exist_ok=True)
     TERMS_DIR.mkdir(parents=True, exist_ok=True)
+    CITE_DIR.mkdir(parents=True, exist_ok=True)
 
     # 1. terms.json — full dictionary
     terms_data = {
@@ -209,6 +280,12 @@ def build_all():
         }
         write_json(TERMS_DIR / f"{term['slug']}.json", term_data)
     print(f"Generated {len(terms)} individual term files")
+
+    # 2b. Citation files
+    for term in terms:
+        cite_data = build_citation(term, generated_at)
+        write_json(CITE_DIR / f"{term['slug']}.json", cite_data)
+    print(f"Generated {len(terms)} citation files")
 
     # 3. tags.json
     tag_index = {}
@@ -248,6 +325,7 @@ def build_all():
         "endpoints": {
             "all_terms": f"{BASE_URL}/api/v1/terms.json",
             "single_term": f"{BASE_URL}/api/v1/terms/{{slug}}.json",
+            "cite_term": f"{BASE_URL}/api/v1/cite/{{slug}}.json",
             "tags": f"{BASE_URL}/api/v1/tags.json",
             "search_index": f"{BASE_URL}/api/v1/search-index.json",
             "metadata": f"{BASE_URL}/api/v1/meta.json",

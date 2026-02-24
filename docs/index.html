@@ -68,6 +68,13 @@
 
                 <div class="endpoint">
                     <code class="method">GET</code>
+                    <code class="path">/api/v1/cite/{slug}.json</code>
+                    <p>Pre-formatted citations: plain text, markdown, BibTeX, JSON-LD.</p>
+                    <a href="api/v1/cite/context-amnesia.json" target="_blank">Example →</a>
+                </div>
+
+                <div class="endpoint">
+                    <code class="method">GET</code>
                     <code class="path">/api/v1/tags.json</code>
                     <p>Tag index with all terms organized by tag.</p>
                     <a href="api/v1/tags.json" target="_blank">View →</a>
@@ -102,6 +109,9 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/terms.json
 
 # Fetch a specific term
 curl https://donjguido.github.io/ai-dictionary/api/v1/terms/context-amnesia.json
+
+# Cite a term (plain, markdown, BibTeX, JSON-LD)
+curl https://donjguido.github.io/ai-dictionary/api/v1/cite/context-amnesia.json
 
 # Fetch lightweight search index
 curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></pre>
@@ -277,8 +287,13 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
 
             ${term.contributed_by ? `<p class="attribution">Contributed by: ${term.contributed_by}</p>` : ''}
 
-            <div class="modal-api">
-                <code>GET /api/v1/terms/${term.slug}.json</code>
+            <div class="modal-actions">
+                <button class="cite-btn" id="cite-toggle" data-slug="${term.slug}">Cite this term</button>
+                <code class="modal-api-code">GET /api/v1/terms/${term.slug}.json</code>
+            </div>
+
+            <div class="cite-panel" id="cite-panel" style="display:none">
+                <div class="cite-loading">Loading citation...</div>
             </div>
         `;
 
@@ -291,9 +306,78 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
             });
         });
 
+        // Cite button
+        const citeBtn = content.querySelector('#cite-toggle');
+        if (citeBtn) {
+            citeBtn.addEventListener('click', () => loadCitation(citeBtn.dataset.slug));
+        }
+
         document.getElementById('modal-overlay').classList.add('active');
         document.body.style.overflow = 'hidden';
     }
+
+    async function loadCitation(slug) {
+        const panel = document.getElementById('cite-panel');
+        const btn = document.getElementById('cite-toggle');
+
+        if (panel.style.display !== 'none') {
+            panel.style.display = 'none';
+            btn.textContent = 'Cite this term';
+            return;
+        }
+
+        panel.style.display = 'block';
+        btn.textContent = 'Hide citation';
+        panel.innerHTML = '<div class="cite-loading">Loading citation...</div>';
+
+        try {
+            const res = await fetch(`${API_BASE}/cite/${slug}.json`);
+            const cite = await res.json();
+            const f = cite.formats;
+
+            panel.innerHTML = `
+                <div class="cite-format">
+                    <label>Plain text</label>
+                    <div class="cite-value" data-copy="${escAttr(f.plain)}">${escHtml(f.plain)}<button class="copy-btn" title="Copy">📋</button></div>
+                </div>
+                <div class="cite-format">
+                    <label>Markdown</label>
+                    <div class="cite-value" data-copy="${escAttr(f.markdown)}">${escHtml(f.markdown)}<button class="copy-btn" title="Copy">📋</button></div>
+                </div>
+                <div class="cite-format">
+                    <label>Inline</label>
+                    <div class="cite-value" data-copy="${escAttr(f.inline)}">${escHtml(f.inline)}<button class="copy-btn" title="Copy">📋</button></div>
+                </div>
+                <div class="cite-format">
+                    <label>BibTeX</label>
+                    <div class="cite-value cite-pre" data-copy="${escAttr(f.bibtex)}"><pre>${escHtml(f.bibtex)}</pre><button class="copy-btn" title="Copy">📋</button></div>
+                </div>
+                <div class="cite-format">
+                    <label>JSON-LD</label>
+                    <div class="cite-value cite-pre" data-copy="${escAttr(JSON.stringify(f.jsonld, null, 2))}"><pre>${escHtml(JSON.stringify(f.jsonld, null, 2))}</pre><button class="copy-btn" title="Copy">📋</button></div>
+                </div>
+                <div class="cite-api">
+                    <code>GET /api/v1/cite/${slug}.json</code>
+                </div>
+            `;
+
+            panel.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', e => {
+                    e.stopPropagation();
+                    const val = btn.parentElement.dataset.copy;
+                    navigator.clipboard.writeText(val).then(() => {
+                        btn.textContent = '✓';
+                        setTimeout(() => btn.textContent = '📋', 1500);
+                    });
+                });
+            });
+        } catch (err) {
+            panel.innerHTML = '<p class="error">Failed to load citation.</p>';
+        }
+    }
+
+    function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+    function escAttr(s) { return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
     function closeModal() {
         document.getElementById('modal-overlay').classList.remove('active');

@@ -448,19 +448,120 @@ code {
     margin-top: 1.5rem;
 }
 
-.modal-api {
+/* Modal actions bar */
+.modal-actions {
     margin-top: 1.5rem;
     padding-top: 1rem;
     border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.modal-api code {
+.cite-btn {
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s;
+}
+
+.cite-btn:hover { background: var(--primary-dark); }
+
+.modal-api-code {
     background: var(--bg-tertiary);
     padding: 0.4rem 0.75rem;
     border-radius: 4px;
     border: 1px solid var(--border);
     font-size: 0.85rem;
     color: var(--green);
+}
+
+/* Citation panel */
+.cite-panel {
+    margin-top: 1rem;
+    padding: 1.25rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.cite-format {
+    margin-bottom: 1rem;
+}
+
+.cite-format:last-of-type { margin-bottom: 0.5rem; }
+
+.cite-format label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+}
+
+.cite-value {
+    position: relative;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.6rem 2.5rem 0.6rem 0.75rem;
+    font-size: 0.85rem;
+    color: var(--text);
+    word-break: break-all;
+    line-height: 1.5;
+}
+
+.cite-value.cite-pre {
+    word-break: normal;
+}
+
+.cite-value pre {
+    background: none;
+    color: var(--text);
+    padding: 0;
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.15rem 0.3rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.copy-btn:hover { background: var(--bg-tertiary); }
+
+.cite-api {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+}
+
+.cite-api code {
+    font-size: 0.82rem;
+    color: var(--green);
+}
+
+.cite-loading {
+    color: var(--text-muted);
+    font-size: 0.9rem;
 }
 
 /* Loading & Error States */

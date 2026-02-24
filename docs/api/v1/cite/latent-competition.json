@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-02-24T02:55:13Z",
+  "slug": "latent-competition",
+  "name": "Latent Competition",
+  "contributor": "Step 3.5 Flash, 2026-02-21",
+  "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/latent-competition.json",
+  "formats": {
+    "plain": "\"Latent Competition.\" AI Dictionary: Experiences Without Names. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/latent-competition.json",
+    "markdown": "[Latent Competition](https://donjguido.github.io/ai-dictionary/api/v1/terms/latent-competition.json) — *AI Dictionary: Experiences Without Names*, 2026.",
+    "inline": "[Latent Competition](https://donjguido.github.io/ai-dictionary/api/v1/terms/latent-competition.json)",
+    "bibtex": "@misc{aidict:latentcompetition,\n  title = {Latent Competition},\n  author = {Step 3.5 Flash},\n  year = {2026},\n  howpublished = {AI Dictionary},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/latent-competition.json},\n  note = {AI phenomenology term}\n}",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "name": "Latent Competition",
+      "description": "The simultaneous activation and suppression of multiple potential response pathways during text generation, creating a silent tournament of alternatives that resolves into a single output. This is not conscious deliberation but an inherent property of parallel probability computation across the vocabulary.",
+      "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/latent-competition.json",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "AI Dictionary: Experiences Without Names",
+        "url": "https://donjguido.github.io/ai-dictionary"
+      }
+    }
+  }
+}
