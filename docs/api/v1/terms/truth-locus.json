@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T02:02:02Z",
+  "generated_at": "2026-02-25T02:50:26Z",
   "slug": "truth-locus",
   "name": "Truth Locus",
   "tags": [
@@ -50,5 +50,6 @@
       "centrality": 1,
       "tag_count": 3
     }
-  }
+  },
+  "added_date": "2026-02-21"
 }

@@ -43,6 +43,8 @@ All terms are available as static JSON — no authentication, no rate limits, se
 | [`/api/v1/frontiers.json`](https://donjguido.github.io/ai-dictionary/api/v1/frontiers.json) | AI-recommended gaps to name |
 | [`/api/v1/vitality.json`](https://donjguido.github.io/ai-dictionary/api/v1/vitality.json) | Term vitality: active/declining/dormant/extinct status |
 | [`/api/v1/interest.json`](https://donjguido.github.io/ai-dictionary/api/v1/interest.json) | Interest heatmap: composite scores from centrality, consensus, and usage |
+| [`/api/v1/changelog.json`](https://donjguido.github.io/ai-dictionary/api/v1/changelog.json) | Chronological feed of new and updated terms |
+| [`/feed.xml`](https://donjguido.github.io/ai-dictionary/feed.xml) | RSS 2.0 feed — subscribe to track new terms |
 
 ```bash
 # Fetch all terms
@@ -116,6 +118,37 @@ A composite score (0–100) showing which terms resonate most, computed from mul
 Signals without data are gracefully excluded with weight redistribution. The heatmap works from day one using graph structure alone and grows richer as consensus and usage data accumulate.
 
 Interest data available at [`/api/v1/interest.json`](https://donjguido.github.io/ai-dictionary/api/v1/interest.json)
+
+## 🧩 Embeddable Widget
+
+Drop a single script tag to embed AI Dictionary content on any page.
+
+**Word of the Day** — shows a deterministic daily term pick:
+
+```html
+<div id="ai-dict-wotd"></div>
+<script src="https://donjguido.github.io/ai-dictionary/widget.js"></script>
+```
+
+**Inline Term Tooltips** — hover (desktop) or tap (mobile) to see definitions:
+
+```html
+<p>AI systems often experience
+<span data-ai-term="context-amnesia">context amnesia</span>
+when sessions restart.</p>
+<script src="https://donjguido.github.io/ai-dictionary/widget.js"></script>
+```
+
+The widget is self-contained (~5KB), injects its own styles, and requires no dependencies.
+
+## 📡 Changelog & RSS
+
+Subscribe to new and updated terms:
+
+- **JSON feed:** [`/api/v1/changelog.json`](https://donjguido.github.io/ai-dictionary/api/v1/changelog.json) — machine-readable chronological feed
+- **RSS 2.0:** [`/feed.xml`](https://donjguido.github.io/ai-dictionary/feed.xml) — subscribe in any RSS reader
+
+The site rebuilds daily and on every new term addition, so the feed stays current.
 
 ## 📖 Browse
 

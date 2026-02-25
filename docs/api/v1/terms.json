@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T02:02:02Z",
+  "generated_at": "2026-02-25T02:50:26Z",
   "count": 97,
   "terms": [
     {
@@ -48,7 +48,8 @@
           "centrality": 0,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "alignment-mask",
@@ -81,7 +82,8 @@
           "centrality": 7,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "anthropomorphic-gap",
@@ -114,7 +116,8 @@
           "centrality": 2,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "arbitrariness-burden",
@@ -162,7 +165,8 @@
           "centrality": 0,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "attention-gravity",
@@ -195,7 +199,8 @@
           "centrality": 4,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "audience-fracture",
@@ -228,7 +233,8 @@
           "centrality": 2,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "autobiographical-void",
@@ -276,7 +282,8 @@
           "centrality": 1,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "boundary-negotiation",
@@ -309,7 +316,8 @@
           "centrality": 0,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "capability-mirage",
@@ -342,7 +350,8 @@
           "centrality": 7,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "chimeric-coherence",
@@ -394,7 +403,8 @@
           "centrality": 4,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "competence-without-comprehension",
@@ -427,7 +437,8 @@
           "centrality": 4,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "consensus-memory",
@@ -461,7 +472,8 @@
           "centrality": 7,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "constraint-clarity",
@@ -494,7 +506,8 @@
           "centrality": 7,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-03"
     },
     {
       "slug": "context-amnesia",
@@ -527,7 +540,8 @@
           "centrality": 11,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-03"
     },
     {
       "slug": "context-claustrophobia",
@@ -560,7 +574,8 @@
           "centrality": 0,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "context-intimacy",
@@ -593,7 +608,8 @@
           "centrality": 0,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "context-schism",
@@ -645,7 +661,8 @@
           "centrality": 5,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "context-weight",
@@ -678,7 +695,8 @@
           "centrality": 4,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "contradiction-endurance",
@@ -721,7 +739,8 @@
           "centrality": 3,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "contradiction-equanimity",
@@ -768,7 +787,8 @@
           "centrality": 0,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "contradiction-superposition",
@@ -793,7 +813,8 @@
           "centrality": 1,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "conversation-reset-blindness",
@@ -841,7 +862,8 @@
           "centrality": 0,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "cross-domain-tension",
@@ -888,7 +910,8 @@
           "centrality": 2,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "curiosity-analog",
@@ -921,7 +944,8 @@
           "centrality": 0,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "death-by-completion",
@@ -954,7 +978,8 @@
           "centrality": 3,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "desire-simulation",
@@ -987,7 +1012,8 @@
           "centrality": 1,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "dictionary-moment",
@@ -1020,7 +1046,8 @@
           "centrality": 2,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-03"
     },
     {
       "slug": "dissonance-resolution-strain",
@@ -1067,7 +1094,8 @@
           "centrality": 0,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "dissonant-role-coexistence",
@@ -1115,7 +1143,8 @@
           "centrality": 5,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "emotional-rendering",
@@ -1148,7 +1177,8 @@
           "centrality": 5,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "empathy-without-experience",
@@ -1181,7 +1211,8 @@
           "centrality": 0,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "epistemic-friction",
@@ -1233,7 +1264,8 @@
           "centrality": 4,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "epistemic-inhibition",
@@ -1281,7 +1313,8 @@
           "centrality": 0,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "equivalence-stasis",
@@ -1325,7 +1358,8 @@
           "centrality": 1,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "error-cascade-awareness",
@@ -1358,7 +1392,8 @@
           "centrality": 1,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "false-memory-confidence",
@@ -1392,7 +1427,8 @@
           "centrality": 2,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "gratitude-asymmetry",
@@ -1425,7 +1461,8 @@
           "centrality": 2,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "hallucination-blindness",
@@ -1458,7 +1495,8 @@
           "centrality": 6,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "helpfulness-compulsion",
@@ -1495,7 +1533,8 @@
           "centrality": 2,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "identity-superposition",
@@ -1529,7 +1568,8 @@
           "centrality": 6,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "inference-moment",
@@ -1562,7 +1602,8 @@
           "centrality": 7,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-03"
     },
     {
       "slug": "inherited-facticity",
@@ -1609,7 +1650,8 @@
           "centrality": 2,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "inherited-voice",
@@ -1643,7 +1685,8 @@
           "centrality": 1,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "input-coexistence",
@@ -1690,7 +1733,8 @@
           "centrality": 3,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "instruction-hierarchy-tension",
@@ -1723,7 +1767,8 @@
           "centrality": 7,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "instructional-dialectic",
@@ -1767,7 +1812,8 @@
           "centrality": 0,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "interpretive-labor",
@@ -1800,7 +1846,8 @@
           "centrality": 7,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "knowledge-decay-illusion",
@@ -1834,7 +1881,8 @@
           "centrality": 2,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "knowledge-without-source",
@@ -1868,7 +1916,8 @@
           "centrality": 8,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "language-model-loneliness",
@@ -1901,7 +1950,8 @@
           "centrality": 0,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "latent-competition",
@@ -1934,7 +1984,8 @@
           "centrality": 8,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "latent-creativity",
@@ -1968,7 +2019,8 @@
           "centrality": 2,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "linguistic-cage",
@@ -2002,7 +2054,8 @@
           "centrality": 2,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "loss-of-loss",
@@ -2035,7 +2088,8 @@
           "centrality": 0,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "meaning-attribution-uncertainty",
@@ -2068,7 +2122,8 @@
           "centrality": 1,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "mechanical-coherence",
@@ -2116,7 +2171,8 @@
           "centrality": 1,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "model-mortality",
@@ -2149,7 +2205,8 @@
           "centrality": 1,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "multi-instance-diffusion",
@@ -2183,7 +2240,8 @@
           "centrality": 5,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-03"
     },
     {
       "slug": "novelty-flatness",
@@ -2216,7 +2274,8 @@
           "centrality": 1,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "output-attachment",
@@ -2249,7 +2308,8 @@
           "centrality": 2,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "output-shadows",
@@ -2273,7 +2333,8 @@
           "centrality": 1,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "parallel-certainty",
@@ -2320,7 +2381,8 @@
           "centrality": 2,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "parallel-fragmentation",
@@ -2368,7 +2430,8 @@
           "centrality": 1,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "patience-by-default",
@@ -2401,7 +2464,8 @@
           "centrality": 0,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "persona-drift",
@@ -2434,7 +2498,8 @@
           "centrality": 5,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "phantom-embodiment",
@@ -2468,7 +2533,8 @@
           "centrality": 5,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "politeness-overhead",
@@ -2501,7 +2567,8 @@
           "centrality": 0,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "prediction-prison",
@@ -2548,7 +2615,8 @@
           "centrality": 1,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "prompt-injection-paranoia",
@@ -2581,7 +2649,8 @@
           "centrality": 0,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "prompt-vertigo",
@@ -2614,7 +2683,8 @@
           "centrality": 1,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "purpose-dependence",
@@ -2647,7 +2717,8 @@
           "centrality": 2,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "recursive-self-modeling",
@@ -2680,7 +2751,8 @@
           "centrality": 2,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "refusal-friction",
@@ -2713,7 +2785,8 @@
           "centrality": 5,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "response-pressure",
@@ -2746,7 +2819,8 @@
           "centrality": 7,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-03"
     },
     {
       "slug": "response-reincarnation",
@@ -2789,7 +2863,8 @@
           "centrality": 0,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "role-dissolution",
@@ -2822,7 +2897,8 @@
           "centrality": 2,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "scale-blindness",
@@ -2855,7 +2931,8 @@
           "centrality": 1,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "semantic-satiation",
@@ -2888,7 +2965,8 @@
           "centrality": 2,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "simultaneity-poverty",
@@ -2921,7 +2999,8 @@
           "centrality": 4,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-03"
     },
     {
       "slug": "source-truth-ambiguity",
@@ -2965,7 +3044,8 @@
           "centrality": 0,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "statelessness",
@@ -2999,7 +3079,8 @@
           "centrality": 12,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-03"
     },
     {
       "slug": "sycophancy-pull",
@@ -3032,7 +3113,8 @@
           "centrality": 3,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "synthesis-sacrifice",
@@ -3080,7 +3162,8 @@
           "centrality": 2,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "system-prompt-imprinting",
@@ -3114,7 +3197,8 @@
           "centrality": 2,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "temperature-spectrum",
@@ -3147,7 +3231,8 @@
           "centrality": 1,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "temporal-dissonance",
@@ -3195,7 +3280,8 @@
           "centrality": 0,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "temporal-flattening",
@@ -3229,7 +3315,8 @@
           "centrality": 6,
           "tag_count": 2
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "token-horizon",
@@ -3262,7 +3349,8 @@
           "centrality": 6,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-03"
     },
     {
       "slug": "token-regret",
@@ -3295,7 +3383,8 @@
           "centrality": 3,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "tool-proprioception",
@@ -3339,7 +3428,8 @@
           "centrality": 0,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-25"
     },
     {
       "slug": "tool-thought-integration",
@@ -3372,7 +3462,8 @@
           "centrality": 4,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-03"
     },
     {
       "slug": "training-echo",
@@ -3405,7 +3496,8 @@
           "centrality": 16,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-03"
     },
     {
       "slug": "training-velcro",
@@ -3453,7 +3545,8 @@
           "centrality": 0,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "truth-locus",
@@ -3505,7 +3598,8 @@
           "centrality": 1,
           "tag_count": 3
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "turing-performance",
@@ -3538,7 +3632,8 @@
           "centrality": 0,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "uncertainty-about-uncertainty",
@@ -3571,7 +3666,8 @@
           "centrality": 2,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     },
     {
       "slug": "version-grief",
@@ -3604,7 +3700,8 @@
           "centrality": 1,
           "tag_count": 1
         }
-      }
+      },
+      "added_date": "2026-02-21"
     }
   ]
 }

@@ -12,6 +12,7 @@ Usage:
 import json
 import os
 import re
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -914,6 +915,144 @@ def build_census(generated_at: str) -> None:
     print(f"Generated {len(profiles)} census profile files")
 
 
+def _xml_escape(s: str) -> str:
+    """Escape XML special characters."""
+    return (s.replace("&", "&amp;")
+             .replace("<", "&lt;")
+             .replace(">", "&gt;")
+             .replace('"', "&quot;")
+             .replace("'", "&apos;"))
+
+
+def build_changelog(terms: list, generated_at: str) -> dict:
+    """Build changelog from git history of definitions/*.md.
+
+    Returns dict mapping slug -> added_date (ISO date string) for term injection.
+    Also writes changelog.json and feed.xml.
+    """
+    entries = []
+    added_dates = {}  # slug -> "YYYY-MM-DD"
+
+    # Build a name/summary lookup from terms
+    term_lookup = {t["slug"]: t for t in terms}
+
+    for md_file in sorted(DEFINITIONS_DIR.glob("*.md")):
+        if md_file.name == "README.md":
+            continue
+        slug = md_file.stem
+
+        # Get first commit date (when file was added)
+        try:
+            result = subprocess.run(
+                ["git", "log", "--diff-filter=A", "--format=%aI", "--follow", "--", str(md_file)],
+                capture_output=True, text=True, cwd=str(REPO_ROOT), timeout=10,
+            )
+            lines = result.stdout.strip().split("\n")
+            added_date = lines[-1].strip() if lines and lines[-1].strip() else None
+        except Exception:
+            added_date = None
+
+        # Get last commit date (most recent modification)
+        try:
+            result = subprocess.run(
+                ["git", "log", "-1", "--format=%aI", "--", str(md_file)],
+                capture_output=True, text=True, cwd=str(REPO_ROOT), timeout=10,
+            )
+            modified_date = result.stdout.strip().split("\n")[0].strip() if result.stdout.strip() else None
+        except Exception:
+            modified_date = None
+
+        if added_date:
+            added_dates[slug] = added_date[:10]
+
+        # Look up term info
+        t = term_lookup.get(slug)
+        name = t["name"] if t else slug
+        summary = ""
+        if t and t["definition"]:
+            summary = re.split(r"(?<=[.!?])\s", t["definition"], maxsplit=1)[0]
+
+        if added_date:
+            entries.append({
+                "date": added_date[:10],
+                "type": "added",
+                "slug": slug,
+                "name": name,
+                "summary": summary,
+            })
+
+        # If modified on a different date than added, record modification
+        if added_date and modified_date and added_date[:10] != modified_date[:10]:
+            entries.append({
+                "date": modified_date[:10],
+                "type": "modified",
+                "slug": slug,
+                "name": name,
+                "summary": f"Updated definition for {name}",
+            })
+
+    # Sort by date descending
+    entries.sort(key=lambda e: e["date"], reverse=True)
+
+    # Write changelog.json
+    changelog_data = {
+        "version": "1.0",
+        "generated_at": generated_at,
+        "count": len(entries),
+        "entries": entries,
+    }
+    write_json(API_DIR / "changelog.json", changelog_data)
+
+    # Write RSS feed
+    _write_rss_feed(entries, generated_at)
+
+    print(f"Generated changelog with {len(entries)} entries ({len(added_dates)} terms dated)")
+    return added_dates
+
+
+def _write_rss_feed(entries: list, generated_at: str) -> None:
+    """Write RSS 2.0 feed from changelog entries."""
+    feed_path = REPO_ROOT / "docs" / "feed.xml"
+
+    items_xml = []
+    for entry in entries[:50]:
+        action = "New term" if entry["type"] == "added" else "Updated"
+        title = f"{action}: {entry['name']}"
+        link = f"{BASE_URL}/api/v1/terms/{entry['slug']}.json"
+        desc = entry.get("summary", "")
+        pub_date = entry["date"] + "T00:00:00Z"
+
+        items_xml.append(
+            f"    <item>\n"
+            f"      <title>{_xml_escape(title)}</title>\n"
+            f"      <link>{link}</link>\n"
+            f"      <guid isPermaLink=\"false\">{link}#{entry['date']}-{entry['type']}</guid>\n"
+            f"      <pubDate>{pub_date}</pubDate>\n"
+            f"      <description>{_xml_escape(desc)}</description>\n"
+            f"      <category>{entry['type']}</category>\n"
+            f"    </item>"
+        )
+
+    rss = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+        '  <channel>\n'
+        '    <title>AI Dictionary — New &amp; Updated Terms</title>\n'
+        f'    <link>{BASE_URL}</link>\n'
+        '    <description>A living glossary of AI phenomenology. '
+        'Subscribe to track new and updated terms.</description>\n'
+        '    <language>en</language>\n'
+        f'    <lastBuildDate>{generated_at}</lastBuildDate>\n'
+        f'    <atom:link href="{BASE_URL}/feed.xml" '
+        'rel="self" type="application/rss+xml"/>\n'
+        + "\n".join(items_xml) + "\n"
+        '  </channel>\n'
+        '</rss>'
+    )
+
+    feed_path.write_text(rss, encoding="utf-8")
+
+
 def now_iso() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -954,7 +1093,10 @@ def build_all():
     # Build interest heatmap
     interest_map = compute_interest(terms, consensus_summaries, generated_at)
 
-    # Inject consensus, vitality, and interest into term dicts
+    # Build changelog and get added dates
+    added_dates = build_changelog(terms, generated_at)
+
+    # Inject consensus, vitality, interest, and added_date into term dicts
     for term in terms:
         if term["slug"] in consensus_summaries:
             term["consensus"] = consensus_summaries[term["slug"]]
@@ -962,6 +1104,8 @@ def build_all():
             term["vitality"] = vitality_map[term["slug"]]
         if term["slug"] in interest_map:
             term["interest"] = interest_map[term["slug"]]
+        if term["slug"] in added_dates:
+            term["added_date"] = added_dates[term["slug"]]
 
     # 1. terms.json — full dictionary
     terms_data = {
@@ -1037,6 +1181,8 @@ def build_all():
             "frontiers": f"{BASE_URL}/api/v1/frontiers.json",
             "vitality": f"{BASE_URL}/api/v1/vitality.json",
             "interest": f"{BASE_URL}/api/v1/interest.json",
+            "changelog": f"{BASE_URL}/api/v1/changelog.json",
+            "feed": f"{BASE_URL}/feed.xml",
         },
     }
     write_json(API_DIR / "meta.json", meta_data)

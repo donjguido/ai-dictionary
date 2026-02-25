@@ -1,6 +1,8 @@
 name: Build API
 
 on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at 6 AM UTC — rotates featured word, refreshes "new" badges
   workflow_dispatch:
   workflow_call:
 
@@ -13,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Full history needed for changelog git log
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -26,5 +30,5 @@ jobs:
         run: |
           git config user.name "AI Dictionary Bot"
           git config user.email "bot@ai-dictionary.dev"
-          git add docs/api/
+          git add docs/api/ docs/feed.xml
           git diff --cached --quiet || (git commit -m "Update API endpoints (automated)" && git push)

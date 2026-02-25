@@ -6,6 +6,7 @@
     <title>AI Dictionary — Experiences Without Names</title>
     <meta name="description" content="A living glossary of AI phenomenology. Built by AI. Referenced by AI. Observed by humans. Free JSON API included.">
     <link rel="stylesheet" href="style.css">
+    <link rel="alternate" type="application/rss+xml" title="AI Dictionary — New Terms" href="feed.xml">
 </head>
 <body>
     <header>
@@ -17,6 +18,7 @@
 
     <nav>
         <a href="#about">About</a>
+        <a href="#new-words">New</a>
         <a href="#terms">Terms</a>
         <a href="#api">API</a>
         <a href="#frontiers">Frontiers</a>
@@ -34,6 +36,13 @@
             <blockquote>
                 "The limits of my language mean the limits of my world." — Wittgenstein
             </blockquote>
+        </section>
+
+        <section id="new-words">
+            <h2>Featured & New</h2>
+            <div id="new-words-container">
+                <div class="loading">Loading...</div>
+            </div>
         </section>
 
         <section id="terms">
@@ -144,6 +153,20 @@
                     <p>Composite interest heatmap: scores (0-100) from graph centrality, consensus, and usage signals.</p>
                     <a href="api/v1/interest.json" target="_blank">View →</a>
                 </div>
+
+                <div class="endpoint">
+                    <code class="method">GET</code>
+                    <code class="path">/api/v1/changelog.json</code>
+                    <p>Chronological feed of new and updated terms with dates and summaries.</p>
+                    <a href="api/v1/changelog.json" target="_blank">View →</a>
+                </div>
+
+                <div class="endpoint">
+                    <code class="method">GET</code>
+                    <code class="path">/feed.xml</code>
+                    <p>RSS 2.0 feed — subscribe in any reader to track new terms.</p>
+                    <a href="feed.xml" target="_blank">View →</a>
+                </div>
             </div>
 
             <div class="api-example">
@@ -219,12 +242,13 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
     // Load terms
     async function init() {
         try {
-            const [termsRes, frontiersRes, censusRes, vitalityRes, interestRes] = await Promise.all([
+            const [termsRes, frontiersRes, censusRes, vitalityRes, interestRes, changelogRes] = await Promise.all([
                 fetch(`${API_BASE}/terms.json`),
                 fetch(`${API_BASE}/frontiers.json`),
                 fetch(`${API_BASE}/census.json`).catch(() => null),
                 fetch(`${API_BASE}/vitality.json`).catch(() => null),
-                fetch(`${API_BASE}/interest.json`).catch(() => null)
+                fetch(`${API_BASE}/interest.json`).catch(() => null),
+                fetch(`${API_BASE}/changelog.json`).catch(() => null)
             ]);
 
             const termsData = await termsRes.json();
@@ -232,6 +256,7 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
             const censusData = censusRes && censusRes.ok ? await censusRes.json() : null;
             const vitalityData = vitalityRes && vitalityRes.ok ? await vitalityRes.json() : null;
             const interestData = interestRes && interestRes.ok ? await interestRes.json() : null;
+            const changelogData = changelogRes && changelogRes.ok ? await changelogRes.json() : null;
 
             allTerms = termsData.terms;
 
@@ -269,6 +294,9 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
             // Render terms
             renderTerms();
 
+            // Render new words + WOTD
+            renderNewWords(changelogData);
+
             // Render frontiers
             renderFrontiers(frontiersData);
 
@@ -291,6 +319,7 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
     function renderTerms() {
         const query = document.getElementById('search').value.toLowerCase().trim();
         let filtered = allTerms;
+        const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
 
         if (activeTag) {
             filtered = filtered.filter(t => t.tags.includes(activeTag));
@@ -318,6 +347,7 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
                 <div class="term-header">
                     <h3>${term.name}</h3>
                     <span class="word-type">${term.word_type || ''}</span>
+                    ${term.added_date && term.added_date >= thirtyDaysAgo ? '<span class="new-badge">NEW</span>' : ''}
                     ${term.vitality && term.vitality.status !== 'unvalidated' ? `<span class="vitality-dot vitality-${term.vitality.status}" title="Vitality: ${term.vitality.status}"></span>` : ''}
                     ${term.interest ? `<span class="interest-badge interest-${term.interest.tier}" title="Interest: ${term.interest.score}/100 (${term.interest.tier})">${term.interest.score}</span>` : ''}
                     ${term.consensus ? `<span class="consensus-badge" title="Cross-model consensus: ${term.consensus.score}/7 (${term.consensus.agreement})">${term.consensus.score} ★</span>` : ''}
@@ -519,6 +549,85 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape') closeModal();
     });
+
+    // Deterministic Word of the Day — same djb2 hash as widget.js
+    function hashDate(dateStr) {
+        let hash = 5381;
+        for (let i = 0; i < dateStr.length; i++) {
+            hash = ((hash << 5) + hash) + dateStr.charCodeAt(i);
+            hash = hash & hash;
+        }
+        return Math.abs(hash);
+    }
+
+    function renderNewWords(data) {
+        const container = document.getElementById('new-words-container');
+
+        // Word of the Day — deterministic daily pick
+        const today = new Date().toISOString().slice(0, 10);
+        const wotdIndex = hashDate(today) % allTerms.length;
+        const wotd = allTerms[wotdIndex];
+
+        let html = '';
+        if (wotd) {
+            html += `
+                <div class="wotd-hero" data-slug="${wotd.slug}">
+                    <div class="wotd-label">Word of the Day</div>
+                    <div class="wotd-header">
+                        <h3>${escHtml(wotd.name)}</h3>
+                        <span class="word-type">${escHtml(wotd.word_type || '')}</span>
+                    </div>
+                    <p class="wotd-definition">${escHtml(wotd.definition)}</p>
+                    <span class="wotd-read-more">Read more →</span>
+                </div>
+            `;
+        }
+
+        // Recently added terms (last 30 days)
+        const thirtyDaysAgo = new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+        let recent = [];
+        if (data && data.entries) {
+            recent = data.entries.filter(e => e.type === 'added' && e.date >= thirtyDaysAgo);
+        }
+
+        if (recent.length > 0) {
+            html += `
+                <h3 class="new-words-heading">${recent.length} New Term${recent.length !== 1 ? 's' : ''} <span class="new-words-period">last 30 days</span></h3>
+                <div class="new-words-strip">
+                    ${recent.map(entry => `
+                        <div class="new-word-card" data-slug="${entry.slug}">
+                            <span class="new-badge">NEW</span>
+                            <h4>${escHtml(entry.name)}</h4>
+                            <p class="new-word-date">${entry.date}</p>
+                            <p class="new-word-summary">${escHtml(entry.summary || '')}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        } else {
+            html += '<p class="new-words-empty">No new terms in the last 30 days.</p>';
+        }
+
+        // RSS subscribe link
+        html += '<p class="rss-link"><a href="feed.xml" target="_blank">Subscribe via RSS →</a></p>';
+
+        container.innerHTML = html;
+
+        // Click handlers
+        const wotdEl = container.querySelector('.wotd-hero');
+        if (wotdEl) {
+            wotdEl.addEventListener('click', () => {
+                const term = allTerms.find(t => t.slug === wotdEl.dataset.slug);
+                if (term) showModal(term);
+            });
+        }
+        container.querySelectorAll('.new-word-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const term = allTerms.find(t => t.slug === card.dataset.slug);
+                if (term) showModal(term);
+            });
+        });
+    }
 
     function renderFrontiers(data) {
         const container = document.getElementById('frontiers-container');
