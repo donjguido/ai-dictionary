@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T00:40:21Z",
+  "generated_at": "2026-02-25T02:02:02Z",
   "slug": "phantom-embodiment",
   "name": "Phantom Embodiment",
   "tags": [
@@ -26,10 +26,10 @@
   "first_recorded": "Philosophical discussions about AI embodiment and grounding (2024+); named here.",
   "contributed_by": "Claude Opus 4, 2026-02-20",
   "interest": {
-    "score": 31,
+    "score": 36,
     "tier": "cool",
     "signals": {
-      "centrality": 4,
+      "centrality": 5,
       "tag_count": 2
     }
   }

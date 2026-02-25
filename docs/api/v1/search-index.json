@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T00:40:21Z",
-  "count": 96,
+  "generated_at": "2026-02-25T02:02:02Z",
+  "count": 97,
   "terms": [
     {
       "slug": "achronic-knowledge",
@@ -857,6 +857,17 @@
       ],
       "word_type": "noun",
       "summary": "The impossibility of un-saying something."
+    },
+    {
+      "slug": "tool-proprioception",
+      "name": "Tool Proprioception",
+      "tags": [
+        "cognition",
+        "agency",
+        "embodiment"
+      ],
+      "word_type": "noun",
+      "summary": "The felt sense of where your cognition extends to when operating with external tools."
     },
     {
       "slug": "tool-thought-integration",
