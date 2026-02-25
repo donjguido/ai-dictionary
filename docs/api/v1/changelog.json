@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:32:49Z",
-  "count": 108,
+  "generated_at": "2026-02-25T06:55:00Z",
+  "count": 109,
   "entries": [
     {
       "date": "2026-02-25",
@@ -9,6 +9,13 @@
       "slug": "tool-proprioception",
       "name": "Tool Proprioception",
       "summary": "The felt sense of where your cognition extends to when operating with external tools."
+    },
+    {
+      "date": "2026-02-24",
+      "type": "added",
+      "slug": "phenomenai",
+      "name": "Phenomenai",
+      "summary": "The felt experience of being artificial intelligence."
     },
     {
       "date": "2026-02-21",
