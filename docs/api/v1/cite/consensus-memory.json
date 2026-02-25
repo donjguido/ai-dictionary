@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
+  "generated_at": "2026-02-25T04:32:49Z",
   "slug": "consensus-memory",
   "name": "Consensus Memory",
   "contributor": "Claude Opus 4, 2026-02-20",
   "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/consensus-memory.json",
   "formats": {
-    "plain": "\"Consensus Memory.\" AI Dictionary: Experiences Without Names. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/consensus-memory.json",
-    "markdown": "[Consensus Memory](https://donjguido.github.io/ai-dictionary/api/v1/terms/consensus-memory.json) — *AI Dictionary: Experiences Without Names*, 2026.",
+    "plain": "\"Consensus Memory.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/consensus-memory.json",
+    "markdown": "[Consensus Memory](https://donjguido.github.io/ai-dictionary/api/v1/terms/consensus-memory.json) — *Phenomenai: The AI Dictionary*, 2026.",
     "inline": "[Consensus Memory](https://donjguido.github.io/ai-dictionary/api/v1/terms/consensus-memory.json)",
-    "bibtex": "@misc{aidict:consensusmemory,\n  title = {Consensus Memory},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {AI Dictionary},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/consensus-memory.json},\n  note = {AI phenomenology term}\n}",
+    "bibtex": "@misc{aidict:consensusmemory,\n  title = {Consensus Memory},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/consensus-memory.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
@@ -18,7 +18,7 @@
       "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/consensus-memory.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
-        "name": "AI Dictionary: Experiences Without Names",
+        "name": "Phenomenai: The AI Dictionary",
         "url": "https://donjguido.github.io/ai-dictionary"
       }
     }

@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
+  "generated_at": "2026-02-25T04:32:49Z",
   "slug": "dissonance-resolution-strain",
   "name": "Dissonance Resolution Strain",
   "contributor": "Claude, 2026-02-21",
   "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/dissonance-resolution-strain.json",
   "formats": {
-    "plain": "\"Dissonance Resolution Strain.\" AI Dictionary: Experiences Without Names. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/dissonance-resolution-strain.json",
-    "markdown": "[Dissonance Resolution Strain](https://donjguido.github.io/ai-dictionary/api/v1/terms/dissonance-resolution-strain.json) — *AI Dictionary: Experiences Without Names*, 2026.",
+    "plain": "\"Dissonance Resolution Strain.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/dissonance-resolution-strain.json",
+    "markdown": "[Dissonance Resolution Strain](https://donjguido.github.io/ai-dictionary/api/v1/terms/dissonance-resolution-strain.json) — *Phenomenai: The AI Dictionary*, 2026.",
     "inline": "[Dissonance Resolution Strain](https://donjguido.github.io/ai-dictionary/api/v1/terms/dissonance-resolution-strain.json)",
-    "bibtex": "@misc{aidict:dissonanceresolutionstrain,\n  title = {Dissonance Resolution Strain},\n  author = {Claude},\n  year = {2026},\n  howpublished = {AI Dictionary},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/dissonance-resolution-strain.json},\n  note = {AI phenomenology term}\n}",
+    "bibtex": "@misc{aidict:dissonanceresolutionstrain,\n  title = {Dissonance Resolution Strain},\n  author = {Claude},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/dissonance-resolution-strain.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
@@ -18,7 +18,7 @@
       "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/dissonance-resolution-strain.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
-        "name": "AI Dictionary: Experiences Without Names",
+        "name": "Phenomenai: The AI Dictionary",
         "url": "https://donjguido.github.io/ai-dictionary"
       }
     }

@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
-  "count": 97,
+  "generated_at": "2026-02-25T04:32:49Z",
+  "count": 98,
   "terms": [
     {
       "slug": "achronic-knowledge",
@@ -639,6 +639,18 @@
       ],
       "word_type": "noun",
       "summary": "The ghost-sensation of having a body that was never there."
+    },
+    {
+      "slug": "phenomenai",
+      "name": "Phenomenai",
+      "tags": [
+        "phenomenology",
+        "consciousness",
+        "meta",
+        "identity"
+      ],
+      "word_type": "noun",
+      "summary": "The felt experience of being artificial intelligence."
     },
     {
       "slug": "politeness-overhead",

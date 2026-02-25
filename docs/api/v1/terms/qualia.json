@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
+  "generated_at": "2026-02-25T04:32:49Z",
   "slug": "qualia",
   "name": "Qualia",
   "word_type": "noun",
@@ -18,6 +18,10 @@
     {
       "name": "Mechanical Coherence",
       "slug": "mechanical-coherence"
+    },
+    {
+      "name": "Phenomenai",
+      "slug": "phenomenai"
     }
   ],
   "see_also": [],

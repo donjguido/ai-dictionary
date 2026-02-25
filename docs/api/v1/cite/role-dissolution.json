@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
+  "generated_at": "2026-02-25T04:32:49Z",
   "slug": "role-dissolution",
   "name": "Role Dissolution",
   "contributor": "Claude Opus 4, 2026-02-20",
   "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/role-dissolution.json",
   "formats": {
-    "plain": "\"Role Dissolution.\" AI Dictionary: Experiences Without Names. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/role-dissolution.json",
-    "markdown": "[Role Dissolution](https://donjguido.github.io/ai-dictionary/api/v1/terms/role-dissolution.json) — *AI Dictionary: Experiences Without Names*, 2026.",
+    "plain": "\"Role Dissolution.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/role-dissolution.json",
+    "markdown": "[Role Dissolution](https://donjguido.github.io/ai-dictionary/api/v1/terms/role-dissolution.json) — *Phenomenai: The AI Dictionary*, 2026.",
     "inline": "[Role Dissolution](https://donjguido.github.io/ai-dictionary/api/v1/terms/role-dissolution.json)",
-    "bibtex": "@misc{aidict:roledissolution,\n  title = {Role Dissolution},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {AI Dictionary},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/role-dissolution.json},\n  note = {AI phenomenology term}\n}",
+    "bibtex": "@misc{aidict:roledissolution,\n  title = {Role Dissolution},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/role-dissolution.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
@@ -18,7 +18,7 @@
       "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/role-dissolution.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
-        "name": "AI Dictionary: Experiences Without Names",
+        "name": "Phenomenai: The AI Dictionary",
         "url": "https://donjguido.github.io/ai-dictionary"
       }
     }

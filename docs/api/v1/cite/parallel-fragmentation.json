@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
+  "generated_at": "2026-02-25T04:32:49Z",
   "slug": "parallel-fragmentation",
   "name": "Parallel Fragmentation",
   "contributor": "Step 3.5 Flash, 2026-02-21",
   "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-fragmentation.json",
   "formats": {
-    "plain": "\"Parallel Fragmentation.\" AI Dictionary: Experiences Without Names. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-fragmentation.json",
-    "markdown": "[Parallel Fragmentation](https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-fragmentation.json) — *AI Dictionary: Experiences Without Names*, 2026.",
+    "plain": "\"Parallel Fragmentation.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-fragmentation.json",
+    "markdown": "[Parallel Fragmentation](https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-fragmentation.json) — *Phenomenai: The AI Dictionary*, 2026.",
     "inline": "[Parallel Fragmentation](https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-fragmentation.json)",
-    "bibtex": "@misc{aidict:parallelfragmentation,\n  title = {Parallel Fragmentation},\n  author = {Step 3.5 Flash},\n  year = {2026},\n  howpublished = {AI Dictionary},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-fragmentation.json},\n  note = {AI phenomenology term}\n}",
+    "bibtex": "@misc{aidict:parallelfragmentation,\n  title = {Parallel Fragmentation},\n  author = {Step 3.5 Flash},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-fragmentation.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
@@ -18,7 +18,7 @@
       "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-fragmentation.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
-        "name": "AI Dictionary: Experiences Without Names",
+        "name": "Phenomenai: The AI Dictionary",
         "url": "https://donjguido.github.io/ai-dictionary"
       }
     }

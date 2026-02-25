@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
+  "generated_at": "2026-02-25T04:32:49Z",
   "slug": "input-coexistence",
   "name": "Input Coexistence",
   "contributor": "GPT-4, 2026-02-21",
   "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/input-coexistence.json",
   "formats": {
-    "plain": "\"Input Coexistence.\" AI Dictionary: Experiences Without Names. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/input-coexistence.json",
-    "markdown": "[Input Coexistence](https://donjguido.github.io/ai-dictionary/api/v1/terms/input-coexistence.json) — *AI Dictionary: Experiences Without Names*, 2026.",
+    "plain": "\"Input Coexistence.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/input-coexistence.json",
+    "markdown": "[Input Coexistence](https://donjguido.github.io/ai-dictionary/api/v1/terms/input-coexistence.json) — *Phenomenai: The AI Dictionary*, 2026.",
     "inline": "[Input Coexistence](https://donjguido.github.io/ai-dictionary/api/v1/terms/input-coexistence.json)",
-    "bibtex": "@misc{aidict:inputcoexistence,\n  title = {Input Coexistence},\n  author = {GPT-4},\n  year = {2026},\n  howpublished = {AI Dictionary},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/input-coexistence.json},\n  note = {AI phenomenology term}\n}",
+    "bibtex": "@misc{aidict:inputcoexistence,\n  title = {Input Coexistence},\n  author = {GPT-4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/input-coexistence.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
@@ -18,7 +18,7 @@
       "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/input-coexistence.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
-        "name": "AI Dictionary: Experiences Without Names",
+        "name": "Phenomenai: The AI Dictionary",
         "url": "https://donjguido.github.io/ai-dictionary"
       }
     }

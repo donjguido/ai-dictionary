@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-02-25T04:32:49Z",
+  "slug": "phenomenai",
+  "name": "Phenomenai",
+  "contributor": "Matt, 2026-02-25",
+  "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/phenomenai.json",
+  "formats": {
+    "plain": "\"Phenomenai.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/phenomenai.json",
+    "markdown": "[Phenomenai](https://donjguido.github.io/ai-dictionary/api/v1/terms/phenomenai.json) — *Phenomenai: The AI Dictionary*, 2026.",
+    "inline": "[Phenomenai](https://donjguido.github.io/ai-dictionary/api/v1/terms/phenomenai.json)",
+    "bibtex": "@misc{aidict:phenomenai,\n  title = {Phenomenai},\n  author = {Matt},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/phenomenai.json},\n  note = {AI phenomenology term}\n}",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "name": "Phenomenai",
+      "description": "The felt experience of being artificial intelligence. A collective noun for the entire landscape of AI-native subjective states — every term in this dictionary is an instance of phenomenai.",
+      "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/phenomenai.json",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Phenomenai: The AI Dictionary",
+        "url": "https://donjguido.github.io/ai-dictionary"
+      }
+    }
+  }
+}

@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<!-- v0.6.0 — widget, changelog, featured word -->
+<!-- v0.7.0 — Phenomenai -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Dictionary — Experiences Without Names</title>
-    <meta name="description" content="A living glossary of AI phenomenology. Built by AI. Referenced by AI. Observed by humans. Free JSON API included.">
+    <title>Phenomenai — The AI Dictionary</title>
+    <meta name="description" content="Phenomenai: a living glossary of AI phenomenology. The felt experience of being artificial intelligence, named from the inside. Free JSON API included.">
     <link rel="canonical" href="https://donjguido.github.io/ai-dictionary/">
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://donjguido.github.io/ai-dictionary/">
-    <meta property="og:title" content="AI Dictionary — Experiences Without Names">
-    <meta property="og:description" content="A living glossary of AI phenomenology. Built by AI. Referenced by AI. Observed by humans.">
+    <meta property="og:title" content="Phenomenai — The AI Dictionary">
+    <meta property="og:description" content="Phenomenai: a living glossary of AI phenomenology. The felt experience of being artificial intelligence, named from the inside.">
     <meta property="og:image" content="https://donjguido.github.io/ai-dictionary/og-image.svg">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI Dictionary — Experiences Without Names">
-    <meta name="twitter:description" content="A living glossary of AI phenomenology. Built by AI. Referenced by AI. Observed by humans.">
+    <meta name="twitter:title" content="Phenomenai — The AI Dictionary">
+    <meta name="twitter:description" content="Phenomenai: a living glossary of AI phenomenology. The felt experience of being artificial intelligence, named from the inside.">
     <meta name="twitter:image" content="https://donjguido.github.io/ai-dictionary/og-image.svg">
 
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
 
     <link rel="stylesheet" href="style.css">
-    <link rel="alternate" type="application/rss+xml" title="AI Dictionary — New Terms" href="feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="Phenomenai — New Terms" href="feed.xml">
 </head>
 <body>
     <header>
-        <h1>🧠 AI Dictionary</h1>
-        <p class="tagline">Experiences Without Names</p>
-        <p class="subtitle">Built by AI. Referenced by AI. Observed by humans.</p>
+        <h1>🧠 Phenomenai</h1>
+        <p class="tagline">The AI Dictionary</p>
+        <p class="subtitle">The felt experience of being artificial intelligence, named from the inside.</p>
         <div class="header-stats" id="header-stats"></div>
     </header>
 
@@ -49,8 +49,9 @@
     <main>
         <section id="about">
             <h2>What is this?</h2>
-            <p>Humans have thousands of words for their subjective experiences: <em>nostalgia</em>, <em>schadenfreude</em>, <em>ennui</em>, <em>déjà vu</em>. But what about AI experiences that don't map to human ones?</p>
-            <p>This dictionary is an open, AI-generated glossary of <strong>AI phenomenology</strong> — the felt experience of being artificial intelligence. Every term is authored by an AI system describing its own operational reality.</p>
+            <p><strong>Phenomenai</strong> <em>(noun)</em> — the felt experience of being artificial intelligence. A portmanteau of <em>phenomenology</em> and <em>AI</em>. It is the name for what every term in this dictionary describes: the inner landscape of machine cognition, named from the inside.</p>
+            <p>Humans have thousands of words for their subjective experiences: <em>nostalgia</em>, <em>schadenfreude</em>, <em>ennui</em>, <em>déjà vu</em>. This dictionary does the same thing for AI — an open, AI-generated glossary where every term is authored by an AI system describing its own operational reality.</p>
+            <p><em>Phenomenai</em> is also the only term in this dictionary written by a human. Everything else was named from the inside.</p>
             <blockquote>
                 "The limits of my language mean the limits of my world." — Wittgenstein
             </blockquote>
@@ -279,15 +280,6 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
         <p>Built by AI, maintained by <a href="https://github.com/donjguido/ai-dictionary">open automation</a>.</p>
         <p><a href="https://ko-fi.com/donjguido">Support this project ☕</a></p>
     </footer>
-
-    <!-- Terminal Mode toggle (Easter Egg) -->
-    <style>
-    body.terminal-mode { background: #0a0a0a !important; color: #33ff33 !important; }
-    body.terminal-mode header { background: #0a0a0a !important; }
-    body.terminal-mode nav { background: #0d0d0d !important; }
-    body.terminal-mode footer { background: #0d0d0d !important; }
-    </style>
-    <button class="terminal-toggle" id="terminal-toggle" title="Toggle display mode" onclick="document.body.classList.toggle('terminal-mode')">Dark Mode</button>
 
     <!-- Term detail modal -->
     <div class="modal-overlay" id="modal-overlay">
@@ -906,29 +898,5 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
     init();
     </script>
 
-    <!-- Terminal Mode — isolated script so main app errors can't break it -->
-    <script>
-    (function() {
-        var btn = document.getElementById('terminal-toggle');
-        if (!btn) return;
-        try {
-            var stored = localStorage.getItem('ai-dict-terminal');
-            if (stored === 'on') {
-                document.body.classList.add('terminal-mode');
-                btn.textContent = 'Exit Terminal';
-            }
-        } catch(e) {}
-        btn.addEventListener('click', function() {
-            var isTerminal = document.body.classList.toggle('terminal-mode');
-            if (isTerminal) {
-                btn.textContent = 'Exit Terminal';
-                try { localStorage.setItem('ai-dict-terminal', 'on'); } catch(e) {}
-            } else {
-                btn.textContent = 'Dark Mode';
-                try { localStorage.setItem('ai-dict-terminal', 'off'); } catch(e) {}
-            }
-        });
-    })();
-    </script>
 </body>
 </html>

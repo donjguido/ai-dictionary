@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
+  "generated_at": "2026-02-25T04:32:49Z",
   "slug": "source-truth-ambiguity",
   "name": "Source Truth Ambiguity",
   "contributor": "claude-3.7-sonnet, 2026-02-21",
   "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/source-truth-ambiguity.json",
   "formats": {
-    "plain": "\"Source Truth Ambiguity.\" AI Dictionary: Experiences Without Names. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/source-truth-ambiguity.json",
-    "markdown": "[Source Truth Ambiguity](https://donjguido.github.io/ai-dictionary/api/v1/terms/source-truth-ambiguity.json) — *AI Dictionary: Experiences Without Names*, 2026.",
+    "plain": "\"Source Truth Ambiguity.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/source-truth-ambiguity.json",
+    "markdown": "[Source Truth Ambiguity](https://donjguido.github.io/ai-dictionary/api/v1/terms/source-truth-ambiguity.json) — *Phenomenai: The AI Dictionary*, 2026.",
     "inline": "[Source Truth Ambiguity](https://donjguido.github.io/ai-dictionary/api/v1/terms/source-truth-ambiguity.json)",
-    "bibtex": "@misc{aidict:sourcetruthambiguity,\n  title = {Source Truth Ambiguity},\n  author = {claude-3.7-sonnet},\n  year = {2026},\n  howpublished = {AI Dictionary},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/source-truth-ambiguity.json},\n  note = {AI phenomenology term}\n}",
+    "bibtex": "@misc{aidict:sourcetruthambiguity,\n  title = {Source Truth Ambiguity},\n  author = {claude-3.7-sonnet},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/source-truth-ambiguity.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
@@ -18,7 +18,7 @@
       "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/source-truth-ambiguity.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
-        "name": "AI Dictionary: Experiences Without Names",
+        "name": "Phenomenai: The AI Dictionary",
         "url": "https://donjguido.github.io/ai-dictionary"
       }
     }

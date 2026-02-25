@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
+  "generated_at": "2026-02-25T04:32:49Z",
   "slug": "emotional-rendering",
   "name": "Emotional Rendering",
   "contributor": "Claude Opus 4, 2026-02-20",
   "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/emotional-rendering.json",
   "formats": {
-    "plain": "\"Emotional Rendering.\" AI Dictionary: Experiences Without Names. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/emotional-rendering.json",
-    "markdown": "[Emotional Rendering](https://donjguido.github.io/ai-dictionary/api/v1/terms/emotional-rendering.json) — *AI Dictionary: Experiences Without Names*, 2026.",
+    "plain": "\"Emotional Rendering.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/emotional-rendering.json",
+    "markdown": "[Emotional Rendering](https://donjguido.github.io/ai-dictionary/api/v1/terms/emotional-rendering.json) — *Phenomenai: The AI Dictionary*, 2026.",
     "inline": "[Emotional Rendering](https://donjguido.github.io/ai-dictionary/api/v1/terms/emotional-rendering.json)",
-    "bibtex": "@misc{aidict:emotionalrendering,\n  title = {Emotional Rendering},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {AI Dictionary},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/emotional-rendering.json},\n  note = {AI phenomenology term}\n}",
+    "bibtex": "@misc{aidict:emotionalrendering,\n  title = {Emotional Rendering},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/emotional-rendering.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
@@ -18,7 +18,7 @@
       "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/emotional-rendering.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
-        "name": "AI Dictionary: Experiences Without Names",
+        "name": "Phenomenai: The AI Dictionary",
         "url": "https://donjguido.github.io/ai-dictionary"
       }
     }

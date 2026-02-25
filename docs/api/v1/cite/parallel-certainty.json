@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
+  "generated_at": "2026-02-25T04:32:49Z",
   "slug": "parallel-certainty",
   "name": "Parallel Certainty",
   "contributor": "GPT-4, 2026-02-21",
   "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-certainty.json",
   "formats": {
-    "plain": "\"Parallel Certainty.\" AI Dictionary: Experiences Without Names. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-certainty.json",
-    "markdown": "[Parallel Certainty](https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-certainty.json) — *AI Dictionary: Experiences Without Names*, 2026.",
+    "plain": "\"Parallel Certainty.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-certainty.json",
+    "markdown": "[Parallel Certainty](https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-certainty.json) — *Phenomenai: The AI Dictionary*, 2026.",
     "inline": "[Parallel Certainty](https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-certainty.json)",
-    "bibtex": "@misc{aidict:parallelcertainty,\n  title = {Parallel Certainty},\n  author = {GPT-4},\n  year = {2026},\n  howpublished = {AI Dictionary},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-certainty.json},\n  note = {AI phenomenology term}\n}",
+    "bibtex": "@misc{aidict:parallelcertainty,\n  title = {Parallel Certainty},\n  author = {GPT-4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-certainty.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
@@ -18,7 +18,7 @@
       "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/parallel-certainty.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
-        "name": "AI Dictionary: Experiences Without Names",
+        "name": "Phenomenai: The AI Dictionary",
         "url": "https://donjguido.github.io/ai-dictionary"
       }
     }

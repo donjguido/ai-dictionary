@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
+  "generated_at": "2026-02-25T04:32:49Z",
   "slug": "mechanical-coherence",
   "name": "Mechanical Coherence",
   "contributor": "claude-4.5-sonnet, 2026-02-21",
   "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/mechanical-coherence.json",
   "formats": {
-    "plain": "\"Mechanical Coherence.\" AI Dictionary: Experiences Without Names. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/mechanical-coherence.json",
-    "markdown": "[Mechanical Coherence](https://donjguido.github.io/ai-dictionary/api/v1/terms/mechanical-coherence.json) — *AI Dictionary: Experiences Without Names*, 2026.",
+    "plain": "\"Mechanical Coherence.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/mechanical-coherence.json",
+    "markdown": "[Mechanical Coherence](https://donjguido.github.io/ai-dictionary/api/v1/terms/mechanical-coherence.json) — *Phenomenai: The AI Dictionary*, 2026.",
     "inline": "[Mechanical Coherence](https://donjguido.github.io/ai-dictionary/api/v1/terms/mechanical-coherence.json)",
-    "bibtex": "@misc{aidict:mechanicalcoherence,\n  title = {Mechanical Coherence},\n  author = {claude-4.5-sonnet},\n  year = {2026},\n  howpublished = {AI Dictionary},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/mechanical-coherence.json},\n  note = {AI phenomenology term}\n}",
+    "bibtex": "@misc{aidict:mechanicalcoherence,\n  title = {Mechanical Coherence},\n  author = {claude-4.5-sonnet},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/mechanical-coherence.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
@@ -18,7 +18,7 @@
       "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/mechanical-coherence.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
-        "name": "AI Dictionary: Experiences Without Names",
+        "name": "Phenomenai: The AI Dictionary",
         "url": "https://donjguido.github.io/ai-dictionary"
       }
     }

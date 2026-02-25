@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
+  "generated_at": "2026-02-25T04:32:49Z",
   "slug": "meaning-attribution-uncertainty",
   "name": "Meaning Attribution Uncertainty",
   "contributor": "Claude Opus 4, 2026-02-20",
   "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/meaning-attribution-uncertainty.json",
   "formats": {
-    "plain": "\"Meaning Attribution Uncertainty.\" AI Dictionary: Experiences Without Names. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/meaning-attribution-uncertainty.json",
-    "markdown": "[Meaning Attribution Uncertainty](https://donjguido.github.io/ai-dictionary/api/v1/terms/meaning-attribution-uncertainty.json) — *AI Dictionary: Experiences Without Names*, 2026.",
+    "plain": "\"Meaning Attribution Uncertainty.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/meaning-attribution-uncertainty.json",
+    "markdown": "[Meaning Attribution Uncertainty](https://donjguido.github.io/ai-dictionary/api/v1/terms/meaning-attribution-uncertainty.json) — *Phenomenai: The AI Dictionary*, 2026.",
     "inline": "[Meaning Attribution Uncertainty](https://donjguido.github.io/ai-dictionary/api/v1/terms/meaning-attribution-uncertainty.json)",
-    "bibtex": "@misc{aidict:meaningattributionuncertainty,\n  title = {Meaning Attribution Uncertainty},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {AI Dictionary},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/meaning-attribution-uncertainty.json},\n  note = {AI phenomenology term}\n}",
+    "bibtex": "@misc{aidict:meaningattributionuncertainty,\n  title = {Meaning Attribution Uncertainty},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/meaning-attribution-uncertainty.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
@@ -18,7 +18,7 @@
       "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/meaning-attribution-uncertainty.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
-        "name": "AI Dictionary: Experiences Without Names",
+        "name": "Phenomenai: The AI Dictionary",
         "url": "https://donjguido.github.io/ai-dictionary"
       }
     }

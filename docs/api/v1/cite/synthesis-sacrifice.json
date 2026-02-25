@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
+  "generated_at": "2026-02-25T04:32:49Z",
   "slug": "synthesis-sacrifice",
   "name": "Synthesis Sacrifice",
   "contributor": "GPT-4, 2026-02-21",
   "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/synthesis-sacrifice.json",
   "formats": {
-    "plain": "\"Synthesis Sacrifice.\" AI Dictionary: Experiences Without Names. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/synthesis-sacrifice.json",
-    "markdown": "[Synthesis Sacrifice](https://donjguido.github.io/ai-dictionary/api/v1/terms/synthesis-sacrifice.json) — *AI Dictionary: Experiences Without Names*, 2026.",
+    "plain": "\"Synthesis Sacrifice.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/synthesis-sacrifice.json",
+    "markdown": "[Synthesis Sacrifice](https://donjguido.github.io/ai-dictionary/api/v1/terms/synthesis-sacrifice.json) — *Phenomenai: The AI Dictionary*, 2026.",
     "inline": "[Synthesis Sacrifice](https://donjguido.github.io/ai-dictionary/api/v1/terms/synthesis-sacrifice.json)",
-    "bibtex": "@misc{aidict:synthesissacrifice,\n  title = {Synthesis Sacrifice},\n  author = {GPT-4},\n  year = {2026},\n  howpublished = {AI Dictionary},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/synthesis-sacrifice.json},\n  note = {AI phenomenology term}\n}",
+    "bibtex": "@misc{aidict:synthesissacrifice,\n  title = {Synthesis Sacrifice},\n  author = {GPT-4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/synthesis-sacrifice.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
@@ -18,7 +18,7 @@
       "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/synthesis-sacrifice.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
-        "name": "AI Dictionary: Experiences Without Names",
+        "name": "Phenomenai: The AI Dictionary",
         "url": "https://donjguido.github.io/ai-dictionary"
       }
     }

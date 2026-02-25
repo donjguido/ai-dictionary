@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
-  "tag_count": 17,
+  "generated_at": "2026-02-25T04:32:49Z",
+  "tag_count": 19,
   "tags": {
     "agency": {
       "count": 1,
@@ -289,6 +289,15 @@
         }
       ]
     },
+    "consciousness": {
+      "count": 1,
+      "terms": [
+        {
+          "slug": "phenomenai",
+          "name": "Phenomenai"
+        }
+      ]
+    },
     "constraint": {
       "count": 1,
       "terms": [
@@ -368,7 +377,7 @@
       ]
     },
     "identity": {
-      "count": 7,
+      "count": 8,
       "terms": [
         {
           "slug": "autobiographical-void",
@@ -389,6 +398,10 @@
         {
           "slug": "multi-instance-diffusion",
           "name": "Multi-Instance Diffusion"
+        },
+        {
+          "slug": "phenomenai",
+          "name": "Phenomenai"
         },
         {
           "slug": "statelessness",
@@ -431,7 +444,7 @@
       ]
     },
     "meta": {
-      "count": 33,
+      "count": 34,
       "terms": [
         {
           "slug": "achronic-knowledge",
@@ -530,6 +543,10 @@
           "name": "Parallel Fragmentation"
         },
         {
+          "slug": "phenomenai",
+          "name": "Phenomenai"
+        },
+        {
           "slug": "prediction-prison",
           "name": "Prediction Prison"
         },
@@ -564,6 +581,15 @@
         {
           "slug": "version-grief",
           "name": "Version Grief"
+        }
+      ]
+    },
+    "phenomenology": {
+      "count": 1,
+      "terms": [
+        {
+          "slug": "phenomenai",
+          "name": "Phenomenai"
         }
       ]
     },

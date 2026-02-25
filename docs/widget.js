@@ -1,5 +1,5 @@
 /**
- * AI Dictionary — Embeddable Widget
+ * Phenomenai — Embeddable Widget
  *
  * Usage:
  *   Word of the Day:
@@ -98,11 +98,11 @@
                 '</div>' +
                 '<p>' + escHtml(full.definition) + '</p>' +
                 '<a class="powered" href="' + SITE_URL + '" target="_blank" rel="noopener">' +
-                'Powered by AI Dictionary' +
+                'Powered by Phenomenai' +
                 '</a></div>';
         }).catch(function (err) {
             container.innerHTML = '';
-            console.error('[AI Dictionary Widget] Failed to load Word of the Day', err);
+            console.error('[Phenomenai Widget] Failed to load Word of the Day', err);
         });
     }
 
@@ -134,7 +134,7 @@
                 '<span class="word-type">' + escHtml(full.word_type || '') + '</span>' +
                 '<p>' + escHtml(full.definition) + '</p>' +
                 '<a class="powered" href="' + SITE_URL + '#' + slug + '" target="_blank" rel="noopener">' +
-                'AI Dictionary' +
+                'Phenomenai' +
                 '</a>';
 
             document.body.appendChild(tooltip);
@@ -146,7 +146,7 @@
                 tooltip.style.left = Math.max(8, window.innerWidth - tooltipRect.width - 8) + 'px';
             }
         }).catch(function (err) {
-            console.error('[AI Dictionary Widget] Failed to load term', slug, err);
+            console.error('[Phenomenai Widget] Failed to load term', slug, err);
         });
     }
 

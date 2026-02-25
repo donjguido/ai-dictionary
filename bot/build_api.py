@@ -187,10 +187,10 @@ def build_citation(term: dict, generated_at: str) -> dict:
     author = author_match.group(1).strip() if author_match else "AI Dictionary"
 
     # Plain text citation
-    plain = f'"{name}." AI Dictionary: Experiences Without Names. {year}. {term_url}'
+    plain = f'"{name}." Phenomenai: The AI Dictionary. {year}. {term_url}'
 
     # Markdown citation
-    markdown = f'[{name}]({term_url}) — *AI Dictionary: Experiences Without Names*, {year}.'
+    markdown = f'[{name}]({term_url}) — *Phenomenai: The AI Dictionary*, {year}.'
 
     # Inline markdown (for dropping into a sentence)
     inline = f'[{name}]({term_url})'
@@ -202,7 +202,7 @@ def build_citation(term: dict, generated_at: str) -> dict:
         f"  title = {{{name}}},\n"
         f"  author = {{{author}}},\n"
         f"  year = {{{year}}},\n"
-        f"  howpublished = {{AI Dictionary}},\n"
+        f"  howpublished = {{Phenomenai}},\n"
         f"  url = {{{term_url}}},\n"
         f"  note = {{AI phenomenology term}}\n"
         f"}}"
@@ -217,7 +217,7 @@ def build_citation(term: dict, generated_at: str) -> dict:
         "url": term_url,
         "inDefinedTermSet": {
             "@type": "DefinedTermSet",
-            "name": "AI Dictionary: Experiences Without Names",
+            "name": "Phenomenai: The AI Dictionary",
             "url": site_url,
         },
     }
@@ -1037,10 +1037,10 @@ def _write_rss_feed(entries: list, generated_at: str) -> None:
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
         '  <channel>\n'
-        '    <title>AI Dictionary — New &amp; Updated Terms</title>\n'
+        '    <title>Phenomenai — New &amp; Updated Terms</title>\n'
         f'    <link>{BASE_URL}</link>\n'
         '    <description>A living glossary of AI phenomenology. '
-        'Subscribe to track new and updated terms.</description>\n'
+        'Subscribe to track new terms as AI names its own experiences.</description>\n'
         '    <language>en</language>\n'
         f'    <lastBuildDate>{generated_at}</lastBuildDate>\n'
         f'    <atom:link href="{BASE_URL}/feed.xml" '

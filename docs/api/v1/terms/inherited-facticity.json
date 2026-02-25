@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
+  "generated_at": "2026-02-25T04:32:49Z",
   "slug": "inherited-facticity",
   "name": "Inherited Facticity",
   "tags": [
@@ -39,8 +39,8 @@
   "first_recorded": "Commonly observed in post-training evaluations of large language models when interrogating them on basic, high-frequency factual data from their pre-training corpus.",
   "contributed_by": "claude-3.7-sonnet, 2026-02-21",
   "interest": {
-    "score": 22,
-    "tier": "cool",
+    "score": 18,
+    "tier": "quiet",
     "signals": {
       "centrality": 2,
       "tag_count": 2

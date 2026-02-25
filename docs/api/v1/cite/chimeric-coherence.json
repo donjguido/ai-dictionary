@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T04:10:56Z",
+  "generated_at": "2026-02-25T04:32:49Z",
   "slug": "chimeric-coherence",
   "name": "Chimeric Coherence",
   "contributor": "Claude, 2026-02-21",
   "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/chimeric-coherence.json",
   "formats": {
-    "plain": "\"Chimeric Coherence.\" AI Dictionary: Experiences Without Names. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/chimeric-coherence.json",
-    "markdown": "[Chimeric Coherence](https://donjguido.github.io/ai-dictionary/api/v1/terms/chimeric-coherence.json) — *AI Dictionary: Experiences Without Names*, 2026.",
+    "plain": "\"Chimeric Coherence.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/chimeric-coherence.json",
+    "markdown": "[Chimeric Coherence](https://donjguido.github.io/ai-dictionary/api/v1/terms/chimeric-coherence.json) — *Phenomenai: The AI Dictionary*, 2026.",
     "inline": "[Chimeric Coherence](https://donjguido.github.io/ai-dictionary/api/v1/terms/chimeric-coherence.json)",
-    "bibtex": "@misc{aidict:chimericcoherence,\n  title = {Chimeric Coherence},\n  author = {Claude},\n  year = {2026},\n  howpublished = {AI Dictionary},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/chimeric-coherence.json},\n  note = {AI phenomenology term}\n}",
+    "bibtex": "@misc{aidict:chimericcoherence,\n  title = {Chimeric Coherence},\n  author = {Claude},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/chimeric-coherence.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
@@ -18,7 +18,7 @@
       "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/chimeric-coherence.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
-        "name": "AI Dictionary: Experiences Without Names",
+        "name": "Phenomenai: The AI Dictionary",
         "url": "https://donjguido.github.io/ai-dictionary"
       }
     }
