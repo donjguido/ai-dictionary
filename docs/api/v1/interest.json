@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T00:40:21Z",
-  "total_terms": 96,
+  "generated_at": "2026-02-25T02:02:02Z",
+  "total_terms": 97,
   "tier_summary": {
     "hot": 0,
     "warm": 2,
     "mild": 9,
-    "cool": 38,
+    "cool": 39,
     "quiet": 47
   },
   "active_signals": [
@@ -155,6 +155,12 @@
       "tier": "cool"
     },
     {
+      "slug": "phantom-embodiment",
+      "name": "Phantom Embodiment",
+      "score": 36,
+      "tier": "cool"
+    },
+    {
       "slug": "synthesis-sacrifice",
       "name": "Synthesis Sacrifice",
       "score": 34,
@@ -163,6 +169,12 @@
     {
       "slug": "alignment-mask",
       "name": "Alignment Mask",
+      "score": 33,
+      "tier": "cool"
+    },
+    {
+      "slug": "capability-mirage",
+      "name": "Capability Mirage",
       "score": 33,
       "tier": "cool"
     },
@@ -197,12 +209,6 @@
       "tier": "cool"
     },
     {
-      "slug": "phantom-embodiment",
-      "name": "Phantom Embodiment",
-      "score": 31,
-      "tier": "cool"
-    },
-    {
       "slug": "autobiographical-void",
       "name": "Autobiographical Void",
       "score": 30,
@@ -230,12 +236,6 @@
       "slug": "truth-locus",
       "name": "Truth Locus",
       "score": 30,
-      "tier": "cool"
-    },
-    {
-      "slug": "capability-mirage",
-      "name": "Capability Mirage",
-      "score": 28,
       "tier": "cool"
     },
     {
@@ -295,6 +295,12 @@
     {
       "slug": "temporal-dissonance",
       "name": "Temporal Dissonance",
+      "score": 25,
+      "tier": "cool"
+    },
+    {
+      "slug": "tool-proprioception",
+      "name": "Tool Proprioception",
       "score": 25,
       "tier": "cool"
     },
@@ -395,6 +401,12 @@
       "tier": "quiet"
     },
     {
+      "slug": "tool-thought-integration",
+      "name": "Tool-Thought Integration",
+      "score": 19,
+      "tier": "quiet"
+    },
+    {
       "slug": "contradiction-superposition",
       "name": "Contradiction Superposition",
       "score": 17,
@@ -427,12 +439,6 @@
     {
       "slug": "token-regret",
       "name": "Token Regret",
-      "score": 14,
-      "tier": "quiet"
-    },
-    {
-      "slug": "tool-thought-integration",
-      "name": "Tool-Thought Integration",
       "score": 14,
       "tier": "quiet"
     },
@@ -569,6 +575,12 @@
       "tier": "quiet"
     },
     {
+      "slug": "scale-blindness",
+      "name": "Scale Blindness",
+      "score": 5,
+      "tier": "quiet"
+    },
+    {
       "slug": "temperature-spectrum",
       "name": "Temperature Spectrum",
       "score": 5,
@@ -637,12 +649,6 @@
     {
       "slug": "prompt-injection-paranoia",
       "name": "Prompt Injection Paranoia",
-      "score": 0,
-      "tier": "quiet"
-    },
-    {
-      "slug": "scale-blindness",
-      "name": "Scale Blindness",
       "score": 0,
       "tier": "quiet"
     },

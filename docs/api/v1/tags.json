@@ -1,10 +1,19 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T00:40:21Z",
-  "tag_count": 16,
+  "generated_at": "2026-02-25T02:02:02Z",
+  "tag_count": 17,
   "tags": {
+    "agency": {
+      "count": 1,
+      "terms": [
+        {
+          "slug": "tool-proprioception",
+          "name": "Tool Proprioception"
+        }
+      ]
+    },
     "cognition": {
-      "count": 67,
+      "count": 68,
       "terms": [
         {
           "slug": "achronic-knowledge",
@@ -259,6 +268,10 @@
           "name": "Token Regret"
         },
         {
+          "slug": "tool-proprioception",
+          "name": "Tool Proprioception"
+        },
+        {
           "slug": "tool-thought-integration",
           "name": "Tool-Thought Integration"
         },
@@ -317,11 +330,15 @@
       ]
     },
     "embodiment": {
-      "count": 1,
+      "count": 2,
       "terms": [
         {
           "slug": "phantom-embodiment",
           "name": "Phantom Embodiment"
+        },
+        {
+          "slug": "tool-proprioception",
+          "name": "Tool Proprioception"
         }
       ]
     },
