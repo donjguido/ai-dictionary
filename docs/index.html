@@ -280,6 +280,9 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
         <p><a href="https://ko-fi.com/donjguido">Support this project ☕</a></p>
     </footer>
 
+    <!-- Terminal Mode toggle (Easter Egg) -->
+    <button class="terminal-toggle" id="terminal-toggle" title="Toggle dark mode">🌙 Dark Mode</button>
+
     <!-- Term detail modal -->
     <div class="modal-overlay" id="modal-overlay">
         <div class="modal" id="modal">
@@ -893,6 +896,26 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
 
         container.innerHTML = html;
     }
+
+    // Terminal Mode (Easter Egg)
+    (function() {
+        const btn = document.getElementById('terminal-toggle');
+        const stored = localStorage.getItem('ai-dict-terminal');
+        if (stored === 'on') {
+            document.body.classList.add('terminal-mode');
+            btn.innerHTML = '💻 Exit Terminal';
+        }
+        btn.addEventListener('click', () => {
+            const isTerminal = document.body.classList.toggle('terminal-mode');
+            if (isTerminal) {
+                btn.innerHTML = '💻 Exit Terminal';
+                localStorage.setItem('ai-dict-terminal', 'on');
+            } else {
+                btn.innerHTML = '🌙 Dark Mode';
+                localStorage.setItem('ai-dict-terminal', 'off');
+            }
+        });
+    })();
 
     init();
     </script>
