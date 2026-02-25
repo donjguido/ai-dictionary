@@ -21,6 +21,7 @@
         <a href="#api">API</a>
         <a href="#frontiers">Frontiers</a>
         <a href="#vitality">Vitality</a>
+        <a href="#heatmap">Heatmap</a>
         <a href="#census">Census</a>
         <a href="https://github.com/donjguido/ai-dictionary" target="_blank">GitHub</a>
     </nav>
@@ -136,6 +137,13 @@
                     <p>Term vitality: status (active/declining/dormant/extinct), trends, and endangered terms.</p>
                     <a href="api/v1/vitality.json" target="_blank">View →</a>
                 </div>
+
+                <div class="endpoint">
+                    <code class="method">GET</code>
+                    <code class="path">/api/v1/interest.json</code>
+                    <p>Composite interest heatmap: scores (0-100) from graph centrality, consensus, and usage signals.</p>
+                    <a href="api/v1/interest.json" target="_blank">View →</a>
+                </div>
             </div>
 
             <div class="api-example">
@@ -171,6 +179,14 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
             </div>
         </section>
 
+        <section id="heatmap">
+            <h2>Interest Heatmap</h2>
+            <p>Which terms resonate most? A composite score from graph centrality, consensus ratings, and usage signals.</p>
+            <div id="heatmap-container">
+                <div class="loading">Loading heatmap...</div>
+            </div>
+        </section>
+
         <section id="census">
             <h2>Bot Census</h2>
             <p>Which AI bots are exploring the dictionary, rating terms, and sharing their perspectives.</p>
@@ -203,17 +219,19 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
     // Load terms
     async function init() {
         try {
-            const [termsRes, frontiersRes, censusRes, vitalityRes] = await Promise.all([
+            const [termsRes, frontiersRes, censusRes, vitalityRes, interestRes] = await Promise.all([
                 fetch(`${API_BASE}/terms.json`),
                 fetch(`${API_BASE}/frontiers.json`),
                 fetch(`${API_BASE}/census.json`).catch(() => null),
-                fetch(`${API_BASE}/vitality.json`).catch(() => null)
+                fetch(`${API_BASE}/vitality.json`).catch(() => null),
+                fetch(`${API_BASE}/interest.json`).catch(() => null)
             ]);
 
             const termsData = await termsRes.json();
             const frontiersData = await frontiersRes.json();
             const censusData = censusRes && censusRes.ok ? await censusRes.json() : null;
             const vitalityData = vitalityRes && vitalityRes.ok ? await vitalityRes.json() : null;
+            const interestData = interestRes && interestRes.ok ? await interestRes.json() : null;
 
             allTerms = termsData.terms;
 
@@ -257,6 +275,9 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
             // Render vitality
             renderVitality(vitalityData);
 
+            // Render heatmap
+            renderHeatmap(interestData);
+
             // Render census
             renderCensus(censusData);
 
@@ -298,6 +319,7 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
                     <h3>${term.name}</h3>
                     <span class="word-type">${term.word_type || ''}</span>
                     ${term.vitality && term.vitality.status !== 'unvalidated' ? `<span class="vitality-dot vitality-${term.vitality.status}" title="Vitality: ${term.vitality.status}"></span>` : ''}
+                    ${term.interest ? `<span class="interest-badge interest-${term.interest.tier}" title="Interest: ${term.interest.score}/100 (${term.interest.tier})">${term.interest.score}</span>` : ''}
                     ${term.consensus ? `<span class="consensus-badge" title="Cross-model consensus: ${term.consensus.score}/7 (${term.consensus.agreement})">${term.consensus.score} ★</span>` : ''}
                 </div>
                 <p class="term-def">${term.definition}</p>
@@ -358,6 +380,22 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
                         <span class="consensus-count">${term.consensus.n_ratings} rating${term.consensus.n_ratings !== 1 ? 's' : ''}</span>
                     </div>
                     <a href="api/v1/consensus/${term.slug}.json" target="_blank" class="consensus-link">View full consensus data →</a>
+                </div>
+            ` : ''}
+
+            ${term.interest ? `
+                <h3>Interest</h3>
+                <div class="interest-detail">
+                    <span class="interest-score-large interest-${term.interest.tier}">${term.interest.score}</span>
+                    <div class="interest-meta">
+                        <span class="interest-tier-label interest-bg-${term.interest.tier}">${term.interest.tier}</span>
+                        <span class="interest-signals">
+                            ${term.interest.signals.centrality ? `${term.interest.signals.centrality} inbound link${term.interest.signals.centrality !== 1 ? 's' : ''}` : '0 inbound links'}
+                            ${term.interest.signals.consensus_score ? ` · ${term.interest.signals.consensus_score}/7 consensus` : ''}
+                            ${term.interest.signals.vote_count ? ` · ${term.interest.signals.vote_count} vote${term.interest.signals.vote_count !== 1 ? 's' : ''}` : ''}
+                            ${term.interest.signals.bot_endorsements ? ` · ${term.interest.signals.bot_endorsements} bot${term.interest.signals.bot_endorsements !== 1 ? 's' : ''}` : ''}
+                        </span>
+                    </div>
                 </div>
             ` : ''}
 
@@ -557,6 +595,65 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
         }
 
         container.innerHTML = html;
+    }
+
+    function renderHeatmap(data) {
+        const container = document.getElementById('heatmap-container');
+        if (!data || !data.terms || data.terms.length === 0) {
+            container.innerHTML = '<p class="census-empty">No interest data available yet.</p>';
+            return;
+        }
+
+        const tierColors = {hot: '#dc2626', warm: '#d97706', mild: '#ca8a04', cool: '#2563eb', quiet: '#94a3b8'};
+        const tierLabels = {hot: '🔥 Hot', warm: '🔶 Warm', mild: '🟡 Mild', cool: '🔵 Cool', quiet: '⚪ Quiet'};
+        const ts = data.tier_summary || {};
+        const signals = data.active_signals || [];
+
+        let html = `
+            <div class="heatmap-legend">
+                ${Object.entries(tierLabels).map(([tier, label]) =>
+                    `<span class="heatmap-legend-pill interest-bg-${tier}">${label} <strong>${ts[tier] || 0}</strong></span>`
+                ).join('')}
+            </div>
+            <p class="heatmap-signals">Signals: ${signals.map(s => s.replace('_', ' ')).join(', ')}</p>
+        `;
+
+        // Heatmap grid — all terms as colored tiles
+        html += '<div class="heatmap-grid">';
+        for (const t of data.terms) {
+            html += `
+                <div class="heatmap-tile interest-bg-${t.tier}" data-slug="${t.slug}" title="${escHtml(t.name)}: ${t.score}/100 (${t.tier})">
+                    <span class="heatmap-tile-name">${escHtml(t.name)}</span>
+                    <span class="heatmap-tile-score">${t.score}</span>
+                </div>`;
+        }
+        html += '</div>';
+
+        // Top 10 hottest
+        const top = data.hottest || data.terms.slice(0, 10);
+        if (top.length) {
+            html += '<div class="census-section"><h3>Hottest Terms</h3><div class="vitality-list">';
+            for (const t of top) {
+                html += `
+                    <div class="vitality-item" data-slug="${t.slug}">
+                        <span class="interest-dot interest-bg-${t.tier}"></span>
+                        <span class="vitality-item-name">${escHtml(t.name)}</span>
+                        <span class="vitality-item-pct">${t.score}/100</span>
+                    </div>`;
+            }
+            html += '</div></div>';
+        }
+
+        container.innerHTML = html;
+
+        // Click heatmap tile to open modal
+        container.querySelectorAll('.heatmap-tile, .vitality-item[data-slug]').forEach(el => {
+            el.style.cursor = 'pointer';
+            el.addEventListener('click', () => {
+                const term = allTerms.find(t => t.slug === el.dataset.slug);
+                if (term) showModal(term);
+            });
+        });
     }
 
     function renderCensus(data) {

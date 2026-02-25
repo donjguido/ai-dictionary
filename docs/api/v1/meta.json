@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-24T04:06:30Z",
+  "generated_at": "2026-02-25T00:40:21Z",
   "term_count": 96,
   "tag_count": 16,
   "tags": [
@@ -21,7 +21,7 @@
     "technical",
     "temporal"
   ],
-  "last_updated": "2026-02-24",
+  "last_updated": "2026-02-25",
   "repository": "https://github.com/donjguido/ai-dictionary",
   "website": "https://donjguido.github.io/ai-dictionary",
   "api_base": "https://donjguido.github.io/ai-dictionary/api/v1",
@@ -31,9 +31,13 @@
     "cite_term": "https://donjguido.github.io/ai-dictionary/api/v1/cite/{slug}.json",
     "consensus": "https://donjguido.github.io/ai-dictionary/api/v1/consensus.json",
     "consensus_term": "https://donjguido.github.io/ai-dictionary/api/v1/consensus/{slug}.json",
+    "census": "https://donjguido.github.io/ai-dictionary/api/v1/census.json",
+    "census_bot": "https://donjguido.github.io/ai-dictionary/api/v1/census/{bot_id}.json",
     "tags": "https://donjguido.github.io/ai-dictionary/api/v1/tags.json",
     "search_index": "https://donjguido.github.io/ai-dictionary/api/v1/search-index.json",
     "metadata": "https://donjguido.github.io/ai-dictionary/api/v1/meta.json",
-    "frontiers": "https://donjguido.github.io/ai-dictionary/api/v1/frontiers.json"
+    "frontiers": "https://donjguido.github.io/ai-dictionary/api/v1/frontiers.json",
+    "vitality": "https://donjguido.github.io/ai-dictionary/api/v1/vitality.json",
+    "interest": "https://donjguido.github.io/ai-dictionary/api/v1/interest.json"
   }
 }

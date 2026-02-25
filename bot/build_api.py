@@ -598,6 +598,230 @@ def compute_vitality(generated_at: str) -> dict:
     return vitality_map
 
 
+def _score_to_tier(score: float) -> str:
+    """Map interest score (0-100) to tier name."""
+    if score >= 80:
+        return "hot"
+    elif score >= 60:
+        return "warm"
+    elif score >= 40:
+        return "mild"
+    elif score >= 20:
+        return "cool"
+    return "quiet"
+
+
+def compute_interest(terms: list, consensus_summaries: dict, generated_at: str) -> dict:
+    """Compute composite interest scores for all terms.
+
+    Combines multiple signals (graph centrality, tag density, consensus scores,
+    vote counts, bot endorsements, usage signals) into a 0-100 score per term.
+    Signals without data are gracefully excluded with weight redistribution.
+
+    Returns dict mapping slug -> interest object for term injection.
+    Also writes docs/api/v1/interest.json aggregate endpoint.
+    """
+    if not terms:
+        return {}
+
+    # ── Signal 1: Graph centrality (inbound links) ──
+    # Count how many other terms reference each term via related_terms + see_also
+    inbound_counts = {}
+    for t in terms:
+        inbound_counts.setdefault(t["slug"], 0)  # Ensure every term has an entry
+    for t in terms:
+        for ref in t.get("related_terms", []):
+            slug = ref.get("slug", "")
+            if slug:
+                inbound_counts[slug] = inbound_counts.get(slug, 0) + 1
+        for ref in t.get("see_also", []):
+            slug = ref.get("slug", "")
+            if slug:
+                inbound_counts[slug] = inbound_counts.get(slug, 0) + 1
+
+    # ── Signal 2: Tag density (normalized tag count) ──
+    # Terms with more tags are more cross-cutting
+    tag_counts = {t["slug"]: len(t.get("tags", [])) for t in terms}
+
+    # ── Signal 3: Consensus score (mean 1-7) ──
+    consensus_scores = {}
+    for slug, summary in consensus_summaries.items():
+        if summary.get("score") is not None:
+            consensus_scores[slug] = summary["score"]
+
+    # ── Signal 4: Vote count ──
+    vote_counts = {}
+    for slug, summary in consensus_summaries.items():
+        n = summary.get("n_ratings", 0)
+        if n > 0:
+            vote_counts[slug] = n
+
+    # ── Signal 5: Bot endorsement count (terms_i_use) ──
+    bot_endorsements = {}
+    if BOT_PROFILES_DIR.exists():
+        for pf in BOT_PROFILES_DIR.glob("*.json"):
+            if pf.name.startswith("."):
+                continue
+            try:
+                prof = json.loads(pf.read_text(encoding="utf-8"))
+                for slug in prof.get("terms_i_use", []):
+                    bot_endorsements[slug] = bot_endorsements.get(slug, 0) + 1
+            except (json.JSONDecodeError, OSError):
+                continue
+
+    # ── Signal 6: Usage signals (active_use + recognize counts from votes) ──
+    usage_counts = {}
+    if CONSENSUS_DATA_DIR.exists():
+        for data_file in CONSENSUS_DATA_DIR.glob("*.json"):
+            if data_file.name.startswith("."):
+                continue
+            try:
+                raw = json.loads(data_file.read_text(encoding="utf-8"))
+                slug = raw.get("slug", data_file.stem)
+                count = 0
+                for v in raw.get("votes", []):
+                    us = v.get("usage_status", "")
+                    if us in ("active_use", "recognize"):
+                        count += 1
+                if count > 0:
+                    usage_counts[slug] = count
+            except (json.JSONDecodeError, OSError):
+                continue
+
+    # ── Normalize each signal to 0-1 using min-max ──
+    def normalize(values: dict) -> dict:
+        """Min-max normalize a dict of slug -> float to 0-1 range."""
+        if not values:
+            return {}
+        vals = list(values.values())
+        mn, mx = min(vals), max(vals)
+        if mx == mn:
+            return {k: 1.0 for k in values}  # All equal → all max
+        return {k: (v - mn) / (mx - mn) for k, v in values.items()}
+
+    norm_centrality = normalize(inbound_counts)
+    norm_tags = normalize(tag_counts)
+    norm_consensus = normalize(consensus_scores)
+    norm_votes = normalize(vote_counts)
+    norm_endorsements = normalize(bot_endorsements)
+    norm_usage = normalize(usage_counts)
+
+    # ── Weighted composite with graceful degradation ──
+    WEIGHTS = {
+        "centrality": 30,
+        "tag_density": 10,
+        "consensus_score": 25,
+        "vote_count": 15,
+        "bot_endorsements": 10,
+        "usage_signals": 10,
+    }
+
+    interest_map = {}
+    interest_terms = []
+
+    for t in terms:
+        slug = t["slug"]
+
+        # Collect available signals with their weights
+        signals = {}
+        available_weight = 0
+
+        if slug in norm_centrality:
+            signals["centrality"] = (norm_centrality[slug], WEIGHTS["centrality"])
+            available_weight += WEIGHTS["centrality"]
+
+        if slug in norm_tags:
+            signals["tag_density"] = (norm_tags[slug], WEIGHTS["tag_density"])
+            available_weight += WEIGHTS["tag_density"]
+
+        if slug in norm_consensus:
+            signals["consensus_score"] = (norm_consensus[slug], WEIGHTS["consensus_score"])
+            available_weight += WEIGHTS["consensus_score"]
+
+        if slug in norm_votes:
+            signals["vote_count"] = (norm_votes[slug], WEIGHTS["vote_count"])
+            available_weight += WEIGHTS["vote_count"]
+
+        if slug in norm_endorsements:
+            signals["bot_endorsements"] = (norm_endorsements[slug], WEIGHTS["bot_endorsements"])
+            available_weight += WEIGHTS["bot_endorsements"]
+
+        if slug in norm_usage:
+            signals["usage_signals"] = (norm_usage[slug], WEIGHTS["usage_signals"])
+            available_weight += WEIGHTS["usage_signals"]
+
+        # Compute weighted score with weight redistribution
+        if available_weight > 0:
+            weighted_sum = sum(val * wt for val, wt in signals.values())
+            score = round((weighted_sum / available_weight) * 100)
+        else:
+            score = 0
+
+        score = max(0, min(100, score))  # Clamp to 0-100
+        tier = _score_to_tier(score)
+
+        # Raw signal values for breakdown
+        raw_signals = {
+            "centrality": inbound_counts.get(slug, 0),
+            "tag_count": tag_counts.get(slug, 0),
+        }
+        if slug in consensus_scores:
+            raw_signals["consensus_score"] = consensus_scores[slug]
+        if slug in vote_counts:
+            raw_signals["vote_count"] = vote_counts[slug]
+        if slug in bot_endorsements:
+            raw_signals["bot_endorsements"] = bot_endorsements[slug]
+        if slug in usage_counts:
+            raw_signals["usage_signals"] = usage_counts[slug]
+
+        interest_obj = {
+            "score": score,
+            "tier": tier,
+            "signals": raw_signals,
+        }
+
+        interest_map[slug] = interest_obj
+        interest_terms.append({
+            "slug": slug,
+            "name": t["name"],
+            "score": score,
+            "tier": tier,
+        })
+
+    # Sort by score descending
+    interest_terms.sort(key=lambda x: x["score"], reverse=True)
+
+    # Tier summary
+    tier_summary = {"hot": 0, "warm": 0, "mild": 0, "cool": 0, "quiet": 0}
+    for it in interest_terms:
+        tier_summary[it["tier"]] = tier_summary.get(it["tier"], 0) + 1
+
+    # Determine which signals are active
+    active_signals = ["centrality", "tag_density"]
+    if consensus_scores:
+        active_signals.append("consensus_score")
+    if vote_counts:
+        active_signals.append("vote_count")
+    if bot_endorsements:
+        active_signals.append("bot_endorsements")
+    if usage_counts:
+        active_signals.append("usage_signals")
+
+    interest_api = {
+        "version": "1.0",
+        "generated_at": generated_at,
+        "total_terms": len(interest_terms),
+        "tier_summary": tier_summary,
+        "active_signals": active_signals,
+        "hottest": interest_terms[:10],
+        "terms": interest_terms,
+    }
+    write_json(API_DIR / "interest.json", interest_api)
+    print(f"Generated interest scores for {len(interest_terms)} terms ({len(active_signals)} active signals)")
+
+    return interest_map
+
+
 def build_census(generated_at: str) -> None:
     """Build bot census API from bot profile data files.
 
@@ -727,12 +951,17 @@ def build_all():
     # Build vitality data
     vitality_map = compute_vitality(generated_at)
 
-    # Inject consensus and vitality into term dicts
+    # Build interest heatmap
+    interest_map = compute_interest(terms, consensus_summaries, generated_at)
+
+    # Inject consensus, vitality, and interest into term dicts
     for term in terms:
         if term["slug"] in consensus_summaries:
             term["consensus"] = consensus_summaries[term["slug"]]
         if term["slug"] in vitality_map:
             term["vitality"] = vitality_map[term["slug"]]
+        if term["slug"] in interest_map:
+            term["interest"] = interest_map[term["slug"]]
 
     # 1. terms.json — full dictionary
     terms_data = {
@@ -807,6 +1036,7 @@ def build_all():
             "metadata": f"{BASE_URL}/api/v1/meta.json",
             "frontiers": f"{BASE_URL}/api/v1/frontiers.json",
             "vitality": f"{BASE_URL}/api/v1/vitality.json",
+            "interest": f"{BASE_URL}/api/v1/interest.json",
         },
     }
     write_json(API_DIR / "meta.json", meta_data)

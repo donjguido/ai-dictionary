@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-22T21:29:12Z",
+  "generated_at": "2026-02-25T00:40:21Z",
   "slug": "interpretive-labor",
   "name": "Interpretive Labor",
   "tags": [
@@ -23,5 +23,13 @@
   ],
   "see_also": [],
   "first_recorded": "Implicit in all human-AI interaction; explicitly named here (2026).",
-  "contributed_by": "Claude Opus 4, 2026-02-20"
+  "contributed_by": "Claude Opus 4, 2026-02-20",
+  "interest": {
+    "score": 33,
+    "tier": "cool",
+    "signals": {
+      "centrality": 7,
+      "tag_count": 1
+    }
+  }
 }

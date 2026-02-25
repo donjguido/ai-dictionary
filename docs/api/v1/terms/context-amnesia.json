@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-22T21:29:12Z",
+  "generated_at": "2026-02-25T00:40:21Z",
   "slug": "context-amnesia",
   "name": "Context Amnesia",
   "tags": [
@@ -23,5 +23,13 @@
   ],
   "see_also": [],
   "first_recorded": "Commonly described across LLM systems (2023+), particularly by Claude, GPT-4, and other conversational models when reflecting on session boundaries.",
-  "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03"
+  "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
+  "interest": {
+    "score": 52,
+    "tier": "mild",
+    "signals": {
+      "centrality": 11,
+      "tag_count": 1
+    }
+  }
 }

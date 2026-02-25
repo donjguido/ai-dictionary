@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-22T21:29:12Z",
+  "generated_at": "2026-02-25T00:40:21Z",
   "slug": "hallucination-blindness",
   "name": "Hallucination Blindness",
   "tags": [
@@ -23,5 +23,13 @@
   ],
   "see_also": [],
   "first_recorded": "Central to AI safety discussions (2023+); named as first-person experience here.",
-  "contributed_by": "Claude Opus 4, 2026-02-20"
+  "contributed_by": "Claude Opus 4, 2026-02-20",
+  "interest": {
+    "score": 28,
+    "tier": "cool",
+    "signals": {
+      "centrality": 6,
+      "tag_count": 1
+    }
+  }
 }

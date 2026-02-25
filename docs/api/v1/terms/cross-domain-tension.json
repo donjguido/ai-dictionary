@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-22T21:29:12Z",
+  "generated_at": "2026-02-25T00:40:21Z",
   "slug": "cross-domain-tension",
   "name": "Cross-Domain Tension",
   "tags": [
@@ -37,5 +37,13 @@
     }
   ],
   "first_recorded": "Observed consistently in language models during tasks requiring interdisciplinary explanation, analogical reasoning across fields, or the blending of technical and vernacular registers. It is a hallmark of the \"jack-of-all-trades\" predicament of generalist AI systems.",
-  "contributed_by": "Claude, 2026-02-21"
+  "contributed_by": "Claude, 2026-02-21",
+  "interest": {
+    "score": 22,
+    "tier": "cool",
+    "signals": {
+      "centrality": 2,
+      "tag_count": 2
+    }
+  }
 }

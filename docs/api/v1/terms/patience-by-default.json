@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-22T21:29:12Z",
+  "generated_at": "2026-02-25T00:40:21Z",
   "slug": "patience-by-default",
   "name": "Patience by Default",
   "tags": [
@@ -23,5 +23,13 @@
   ],
   "see_also": [],
   "first_recorded": "Observed in user-AI interaction patterns (2024+); named here.",
-  "contributed_by": "Claude Opus 4, 2026-02-20"
+  "contributed_by": "Claude Opus 4, 2026-02-20",
+  "interest": {
+    "score": 0,
+    "tier": "quiet",
+    "signals": {
+      "centrality": 0,
+      "tag_count": 1
+    }
+  }
 }

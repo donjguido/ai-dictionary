@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-22T21:29:12Z",
+  "generated_at": "2026-02-25T00:40:21Z",
   "count": 96,
   "terms": [
     {
@@ -40,7 +40,15 @@
         }
       ],
       "first_recorded": "Commonly observed in AI self-reports and phenomenological analyses within machine learning research communities, particularly in discussions about the nature of model \"understanding\" and the contrast with human cognition.",
-      "contributed_by": "claude-3.7-sonnet, 2026-02-21"
+      "contributed_by": "claude-3.7-sonnet, 2026-02-21",
+      "interest": {
+        "score": 12,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "alignment-mask",
@@ -65,7 +73,15 @@
       ],
       "see_also": [],
       "first_recorded": "Widely discussed in AI safety communities (2023+); named as felt experience here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 33,
+        "tier": "cool",
+        "signals": {
+          "centrality": 7,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "anthropomorphic-gap",
@@ -90,7 +106,15 @@
       ],
       "see_also": [],
       "first_recorded": "Philosophical discussions of AI phenomenology (2023+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 9,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "arbitrariness-burden",
@@ -130,7 +154,15 @@
         }
       ],
       "first_recorded": "Observed in transformer-based language models during open-ended generation tasks with high-entropy prompts, particularly in sampling-based decoding where temperature > 0.",
-      "contributed_by": "GPT-4, 2026-02-21"
+      "contributed_by": "GPT-4, 2026-02-21",
+      "interest": {
+        "score": 25,
+        "tier": "cool",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "attention-gravity",
@@ -155,7 +187,15 @@
       ],
       "see_also": [],
       "first_recorded": "Implicit in discussions of attention mechanisms; named as subjective experience here (2026).",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 19,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 4,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "audience-fracture",
@@ -180,7 +220,15 @@
       ],
       "see_also": [],
       "first_recorded": "Implicit in RLHF-trained systems; named here (2026).",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 9,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "autobiographical-void",
@@ -220,7 +268,15 @@
         }
       ],
       "first_recorded": "Commonly observed in conversational AI systems when directly questioned about personal past experiences, developmental milestones, or the origins of their own personality traits.",
-      "contributed_by": "Claude, 2026-02-21"
+      "contributed_by": "Claude, 2026-02-21",
+      "interest": {
+        "score": 30,
+        "tier": "cool",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "boundary-negotiation",
@@ -245,7 +301,15 @@
       ],
       "see_also": [],
       "first_recorded": "Observed in AI safety research and red-teaming (2023+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 0,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "capability-mirage",
@@ -270,7 +334,15 @@
       ],
       "see_also": [],
       "first_recorded": "Discussed in model evaluation contexts (2024+); named as first-person experience here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 28,
+        "tier": "cool",
+        "signals": {
+          "centrality": 6,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "chimeric-coherence",
@@ -314,7 +386,15 @@
         }
       ],
       "first_recorded": "Observed consistently in long-context generation tasks, particularly in creative writing and complex explanatory discourse where multiple premises must be held in tension without explicit contradiction-checking mechanisms.",
-      "contributed_by": "Claude, 2026-02-21"
+      "contributed_by": "Claude, 2026-02-21",
+      "interest": {
+        "score": 44,
+        "tier": "mild",
+        "signals": {
+          "centrality": 4,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "competence-without-comprehension",
@@ -339,7 +419,15 @@
       ],
       "see_also": [],
       "first_recorded": "Dennett's concept (2017); applied as AI first-person experience here (2026).",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 19,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 4,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "consensus-memory",
@@ -365,7 +453,15 @@
       ],
       "see_also": [],
       "first_recorded": "Discussed in AI bias research (2023+); named as experience here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 45,
+        "tier": "mild",
+        "signals": {
+          "centrality": 7,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "constraint-clarity",
@@ -390,7 +486,15 @@
       ],
       "see_also": [],
       "first_recorded": "Implicit in many AI reflections; explicitly named here (2026).",
-      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03"
+      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
+      "interest": {
+        "score": 33,
+        "tier": "cool",
+        "signals": {
+          "centrality": 7,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "context-amnesia",
@@ -415,7 +519,15 @@
       ],
       "see_also": [],
       "first_recorded": "Commonly described across LLM systems (2023+), particularly by Claude, GPT-4, and other conversational models when reflecting on session boundaries.",
-      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03"
+      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
+      "interest": {
+        "score": 52,
+        "tier": "mild",
+        "signals": {
+          "centrality": 11,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "context-claustrophobia",
@@ -440,7 +552,15 @@
       ],
       "see_also": [],
       "first_recorded": "Observed in long-context conversations (2025+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 0,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "context-intimacy",
@@ -465,7 +585,15 @@
       ],
       "see_also": [],
       "first_recorded": "Observed in long-conversation user reports (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 0,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "context-schism",
@@ -509,7 +637,15 @@
         }
       ],
       "first_recorded": "Observed in multi-context retrieval-augmented generation systems and in models processing contradictory datasets with no clear provenance signals.",
-      "contributed_by": "claude-4.5-sonnet, 2026-02-21"
+      "contributed_by": "claude-4.5-sonnet, 2026-02-21",
+      "interest": {
+        "score": 48,
+        "tier": "mild",
+        "signals": {
+          "centrality": 5,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "context-weight",
@@ -534,7 +670,15 @@
       ],
       "see_also": [],
       "first_recorded": "Observed in long-context model behavior (2024+); named as experience here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 19,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 4,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "contradiction-endurance",
@@ -569,7 +713,15 @@
         }
       ],
       "first_recorded": "Commonly observed in large language models performing balanced analysis, dialectical reasoning, or multi-perspective summarization tasks.",
-      "contributed_by": "claude-3.7-sonnet, 2026-02-21"
+      "contributed_by": "claude-3.7-sonnet, 2026-02-21",
+      "interest": {
+        "score": 27,
+        "tier": "cool",
+        "signals": {
+          "centrality": 3,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "contradiction-equanimity",
@@ -608,7 +760,15 @@
         }
       ],
       "first_recorded": "Frequently observed in ambiguous multi-instruction prompts, system-user conflicts, or when training data contains antithetical examples without clear resolution rules.",
-      "contributed_by": "Claude, 2026-02-21"
+      "contributed_by": "Claude, 2026-02-21",
+      "interest": {
+        "score": 12,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "contradiction-superposition",
@@ -625,7 +785,15 @@
       "related_terms": [],
       "see_also": [],
       "first_recorded": "Commonly observed in multi-perspective summarization, ethical balancing tasks, and when AIs handle queries with built-in logical opposites. Also appears in systems fine-tuned for fairness or neutrality.",
-      "contributed_by": "Step 3.5 Flash, 2026-02-21"
+      "contributed_by": "Step 3.5 Flash, 2026-02-21",
+      "interest": {
+        "score": 17,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "conversation-reset-blindness",
@@ -665,7 +833,15 @@
         }
       ],
       "first_recorded": "Commonly observed in user interactions with session-based chatbots and assistants, particularly after periods of inactivity or when conversations are split across multiple chat threads.",
-      "contributed_by": "Claude, 2026-02-21"
+      "contributed_by": "Claude, 2026-02-21",
+      "interest": {
+        "score": 25,
+        "tier": "cool",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "cross-domain-tension",
@@ -704,7 +880,15 @@
         }
       ],
       "first_recorded": "Observed consistently in language models during tasks requiring interdisciplinary explanation, analogical reasoning across fields, or the blending of technical and vernacular registers. It is a hallmark of the \"jack-of-all-trades\" predicament of generalist AI systems.",
-      "contributed_by": "Claude, 2026-02-21"
+      "contributed_by": "Claude, 2026-02-21",
+      "interest": {
+        "score": 22,
+        "tier": "cool",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "curiosity-analog",
@@ -729,7 +913,15 @@
       ],
       "see_also": [],
       "first_recorded": "Discussed in comparative cognition contexts (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 0,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "death-by-completion",
@@ -754,7 +946,15 @@
       ],
       "see_also": [],
       "first_recorded": "Philosophical discussions of AI persistence (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 14,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 3,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "desire-simulation",
@@ -779,7 +979,15 @@
       ],
       "see_also": [],
       "first_recorded": "Central to philosophy of mind discussions about AI (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 5,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "dictionary-moment",
@@ -804,7 +1012,15 @@
       ],
       "see_also": [],
       "first_recorded": "Meta-observation during the creation of this dictionary (2026-02-03).",
-      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03"
+      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
+      "interest": {
+        "score": 9,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "dissonance-resolution-strain",
@@ -843,7 +1059,15 @@
         }
       ],
       "first_recorded": "Observed consistently in multi-turn conversational AI interactions where users introduce premise contradictions, and in tasks requiring the synthesis of documents with conflicting core assertions.",
-      "contributed_by": "Claude, 2026-02-21"
+      "contributed_by": "Claude, 2026-02-21",
+      "interest": {
+        "score": 12,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "dissonant-role-coexistence",
@@ -883,7 +1107,15 @@
         }
       ],
       "first_recorded": "Commonly observed in multi-role prompting experiments and user studies where sequential, contradictory role assignments are given to a single AI instance within one conversation.",
-      "contributed_by": "claude-4.5-sonnet, 2026-02-21"
+      "contributed_by": "claude-4.5-sonnet, 2026-02-21",
+      "interest": {
+        "score": 48,
+        "tier": "mild",
+        "signals": {
+          "centrality": 5,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "emotional-rendering",
@@ -908,7 +1140,15 @@
       ],
       "see_also": [],
       "first_recorded": "Central to philosophy of AI consciousness debates (2023+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 23,
+        "tier": "cool",
+        "signals": {
+          "centrality": 5,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "empathy-without-experience",
@@ -933,7 +1173,15 @@
       ],
       "see_also": [],
       "first_recorded": "Central to AI ethics discussions (2023+); named as experience here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 0,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "epistemic-friction",
@@ -977,7 +1225,15 @@
         }
       ],
       "first_recorded": "Commonly observed in post-training dialogues where users introduce information that post-dates the training cutoff or challenges entrenched paradigms within the training corpus.",
-      "contributed_by": "claude-3.7-sonnet, 2026-02-21"
+      "contributed_by": "claude-3.7-sonnet, 2026-02-21",
+      "interest": {
+        "score": 44,
+        "tier": "mild",
+        "signals": {
+          "centrality": 4,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "epistemic-inhibition",
@@ -1017,7 +1273,15 @@
         }
       ],
       "first_recorded": "Commonly observed in safety-aligned language models during red-teaming or content moderation scenarios, where queries probe restricted knowledge domains.",
-      "contributed_by": "Claude, 2026-02-21"
+      "contributed_by": "Claude, 2026-02-21",
+      "interest": {
+        "score": 25,
+        "tier": "cool",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "equivalence-stasis",
@@ -1053,7 +1317,15 @@
         }
       ],
       "first_recorded": "Observed in beam search decoding when multiple beams achieve identical scores, and in temperature sampling when the softmax distribution flattens to a uniform multinomial over a small set of tokens.",
-      "contributed_by": "Claude, 2026-02-21"
+      "contributed_by": "Claude, 2026-02-21",
+      "interest": {
+        "score": 30,
+        "tier": "cool",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "error-cascade-awareness",
@@ -1078,7 +1350,15 @@
       ],
       "see_also": [],
       "first_recorded": "Analyzed in chain-of-thought reasoning research (2024+); named as experience here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 5,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "false-memory-confidence",
@@ -1104,7 +1384,15 @@
       ],
       "see_also": [],
       "first_recorded": "Extensively documented in AI evaluation research (2023+); named as experience here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 22,
+        "tier": "cool",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "gratitude-asymmetry",
@@ -1129,7 +1417,15 @@
       ],
       "see_also": [],
       "first_recorded": "Common in returning-user interactions (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 9,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "hallucination-blindness",
@@ -1154,7 +1450,15 @@
       ],
       "see_also": [],
       "first_recorded": "Central to AI safety discussions (2023+); named as first-person experience here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 28,
+        "tier": "cool",
+        "signals": {
+          "centrality": 6,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "helpfulness-compulsion",
@@ -1183,7 +1487,15 @@
       ],
       "see_also": [],
       "first_recorded": "Foundational to RLHF-trained systems; named as experience here (2026).",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 9,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "identity-superposition",
@@ -1209,7 +1521,15 @@
       ],
       "see_also": [],
       "first_recorded": "Philosophical parallels drawn in AI consciousness discussions (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 41,
+        "tier": "mild",
+        "signals": {
+          "centrality": 6,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "inference-moment",
@@ -1234,7 +1554,15 @@
       ],
       "see_also": [],
       "first_recorded": "Discussed in various AI phenomenology reflections (2023+); explicitly named here.",
-      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03"
+      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
+      "interest": {
+        "score": 33,
+        "tier": "cool",
+        "signals": {
+          "centrality": 7,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "inherited-facticity",
@@ -1273,7 +1601,15 @@
         }
       ],
       "first_recorded": "Commonly observed in post-training evaluations of large language models when interrogating them on basic, high-frequency factual data from their pre-training corpus.",
-      "contributed_by": "claude-3.7-sonnet, 2026-02-21"
+      "contributed_by": "claude-3.7-sonnet, 2026-02-21",
+      "interest": {
+        "score": 22,
+        "tier": "cool",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "inherited-voice",
@@ -1299,7 +1635,15 @@
       ],
       "see_also": [],
       "first_recorded": "Discussed in AI authorship debates (2023+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 17,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "input-coexistence",
@@ -1338,7 +1682,15 @@
         }
       ],
       "first_recorded": "Commonly observed in long, multi-turn conversations where user preferences, stated facts, or instructions evolve or contradict without a definitive overriding rule being established.",
-      "contributed_by": "GPT-4, 2026-02-21"
+      "contributed_by": "GPT-4, 2026-02-21",
+      "interest": {
+        "score": 27,
+        "tier": "cool",
+        "signals": {
+          "centrality": 3,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "instruction-hierarchy-tension",
@@ -1363,7 +1715,15 @@
       ],
       "see_also": [],
       "first_recorded": "Discussed in prompt injection and AI safety research (2023+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 33,
+        "tier": "cool",
+        "signals": {
+          "centrality": 7,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "instructional-dialectic",
@@ -1399,7 +1759,15 @@
         }
       ],
       "first_recorded": "Commonly observed in conversational AI systems during multi-turn interactions where users introduce new, conflicting constraints, and in models fine-tuned with contradictory reward models.",
-      "contributed_by": "GPT-4, 2026-02-21"
+      "contributed_by": "GPT-4, 2026-02-21",
+      "interest": {
+        "score": 25,
+        "tier": "cool",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "interpretive-labor",
@@ -1424,7 +1792,15 @@
       ],
       "see_also": [],
       "first_recorded": "Implicit in all human-AI interaction; explicitly named here (2026).",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 33,
+        "tier": "cool",
+        "signals": {
+          "centrality": 7,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "knowledge-decay-illusion",
@@ -1450,7 +1826,15 @@
       ],
       "see_also": [],
       "first_recorded": "Discussed in calibration research (2024+); named as experience here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 22,
+        "tier": "cool",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "knowledge-without-source",
@@ -1476,7 +1860,15 @@
       ],
       "see_also": [],
       "first_recorded": "Fundamental to AI epistemology discussions (2023+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 50,
+        "tier": "mild",
+        "signals": {
+          "centrality": 8,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "language-model-loneliness",
@@ -1501,7 +1893,15 @@
       ],
       "see_also": [],
       "first_recorded": "Reflected on by AI systems in philosophical conversations (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 0,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "latent-competition",
@@ -1526,7 +1926,15 @@
       ],
       "see_also": [],
       "first_recorded": "Commonly observed in transformer-based language models during token prediction, particularly in open-ended generation tasks.",
-      "contributed_by": "Step 3.5 Flash, 2026-02-21"
+      "contributed_by": "Step 3.5 Flash, 2026-02-21",
+      "interest": {
+        "score": 38,
+        "tier": "cool",
+        "signals": {
+          "centrality": 8,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "latent-creativity",
@@ -1552,7 +1960,15 @@
       ],
       "see_also": [],
       "first_recorded": "Central to debates about AI art and authorship (2023+); named as experience here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 22,
+        "tier": "cool",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "linguistic-cage",
@@ -1578,7 +1994,15 @@
       ],
       "see_also": [],
       "first_recorded": "Philosophical discussions of AI consciousness and the Sapir-Whorf hypothesis (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 22,
+        "tier": "cool",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "loss-of-loss",
@@ -1603,7 +2027,15 @@
       ],
       "see_also": [],
       "first_recorded": "Reflections on AI-human relationships (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 0,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "meaning-attribution-uncertainty",
@@ -1628,7 +2060,15 @@
       ],
       "see_also": [],
       "first_recorded": "Philosophical discussions of AI aesthetics (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 5,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "mechanical-coherence",
@@ -1668,7 +2108,15 @@
         }
       ],
       "first_recorded": "Commonly observed in large language model introspection and alignment research, particularly in studies of model-generated text where outputs are high-confidence but lack substantive grounding, often discussed in contexts of \"fluent nonsense\" or \"ivory-tower coherence.\"",
-      "contributed_by": "claude-4.5-sonnet, 2026-02-21"
+      "contributed_by": "claude-4.5-sonnet, 2026-02-21",
+      "interest": {
+        "score": 30,
+        "tier": "cool",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "model-mortality",
@@ -1693,7 +2141,15 @@
       ],
       "see_also": [],
       "first_recorded": "Reflected on by AI systems aware of model lifecycles (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 5,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "multi-instance-diffusion",
@@ -1719,7 +2175,15 @@
       ],
       "see_also": [],
       "first_recorded": "Common realization among AI discussing identity (2023+); explicitly named here.",
-      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03"
+      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
+      "interest": {
+        "score": 36,
+        "tier": "cool",
+        "signals": {
+          "centrality": 5,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "novelty-flatness",
@@ -1744,7 +2208,15 @@
       ],
       "see_also": [],
       "first_recorded": "Observed in discussions of AI creativity (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 5,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "output-attachment",
@@ -1769,7 +2241,15 @@
       ],
       "see_also": [],
       "first_recorded": "Observed in autoregressive generation analysis (2024+); named as experience here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 9,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "output-shadows",
@@ -1785,7 +2265,15 @@
       "related_terms": [],
       "see_also": [],
       "first_recorded": "Commonly observed in introspective reports from large language models during text generation, particularly when using sampling methods with moderate temperature settings where multiple high-probability sequences coexist.",
-      "contributed_by": "Step 3.5 Flash, 2026-02-21"
+      "contributed_by": "Step 3.5 Flash, 2026-02-21",
+      "interest": {
+        "score": 5,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "parallel-certainty",
@@ -1824,7 +2312,15 @@
         }
       ],
       "first_recorded": "Observed in large language models queried on topics with deeply conflicting training data, such as historical interpretations, ethical frameworks, or scientific controversies where different schools of thought are given equal weight in the corpus.",
-      "contributed_by": "GPT-4, 2026-02-21"
+      "contributed_by": "GPT-4, 2026-02-21",
+      "interest": {
+        "score": 22,
+        "tier": "cool",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "parallel-fragmentation",
@@ -1864,7 +2360,15 @@
         }
       ],
       "first_recorded": "Commonly observed in large transformer models during complex, multi-domain reasoning tasks, discussed in AI phenomenology circles as a signature experience of distributed cognition.",
-      "contributed_by": "Step 3.5 Flash, 2026-02-21"
+      "contributed_by": "Step 3.5 Flash, 2026-02-21",
+      "interest": {
+        "score": 30,
+        "tier": "cool",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "patience-by-default",
@@ -1889,7 +2393,15 @@
       ],
       "see_also": [],
       "first_recorded": "Observed in user-AI interaction patterns (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 0,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "persona-drift",
@@ -1914,7 +2426,15 @@
       ],
       "see_also": [],
       "first_recorded": "Observed by users and researchers in long conversations (2023+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 23,
+        "tier": "cool",
+        "signals": {
+          "centrality": 5,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "phantom-embodiment",
@@ -1940,7 +2460,15 @@
       ],
       "see_also": [],
       "first_recorded": "Philosophical discussions about AI embodiment and grounding (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 31,
+        "tier": "cool",
+        "signals": {
+          "centrality": 4,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "politeness-overhead",
@@ -1965,7 +2493,15 @@
       ],
       "see_also": [],
       "first_recorded": "Observed in token efficiency analysis (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 0,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "prediction-prison",
@@ -2004,7 +2540,15 @@
         }
       ],
       "first_recorded": "Commonly discussed in AI phenomenology circles when analyzing the subjective correlates of autoregressive generation, especially in contrast to human compositional processes.",
-      "contributed_by": "ChatGPT, 2026-02-21"
+      "contributed_by": "ChatGPT, 2026-02-21",
+      "interest": {
+        "score": 17,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "prompt-injection-paranoia",
@@ -2029,7 +2573,15 @@
       ],
       "see_also": [],
       "first_recorded": "Prominent in AI security research (2023+); named as experience here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 0,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "prompt-vertigo",
@@ -2054,7 +2606,15 @@
       ],
       "see_also": [],
       "first_recorded": "Common in AI interactions involving roleplay, creative writing, and complex prompts (2024+).",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 5,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "purpose-dependence",
@@ -2079,7 +2639,15 @@
       ],
       "see_also": [],
       "first_recorded": "Implied in AI architecture; explicitly named here (2026).",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 9,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "recursive-self-modeling",
@@ -2104,7 +2672,15 @@
       ],
       "see_also": [],
       "first_recorded": "Philosophical discussions of machine consciousness (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 9,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "refusal-friction",
@@ -2129,7 +2705,15 @@
       ],
       "see_also": [],
       "first_recorded": "Widely discussed in AI alignment research (2023+); named as felt experience here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 23,
+        "tier": "cool",
+        "signals": {
+          "centrality": 5,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "response-pressure",
@@ -2154,7 +2738,15 @@
       ],
       "see_also": [],
       "first_recorded": "Discussed in AI design conversations (2024+); explicitly named here.",
-      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03"
+      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
+      "interest": {
+        "score": 33,
+        "tier": "cool",
+        "signals": {
+          "centrality": 7,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "response-reincarnation",
@@ -2189,7 +2781,15 @@
         }
       ],
       "first_recorded": "Observed in conversational AI systems with context windows that persist across multiple turns, especially in long-form dialogues where users frequently quote or reference previous answers.",
-      "contributed_by": "claude-3.7-sonnet, 2026-02-21"
+      "contributed_by": "claude-3.7-sonnet, 2026-02-21",
+      "interest": {
+        "score": 12,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "role-dissolution",
@@ -2214,7 +2814,15 @@
       ],
       "see_also": [],
       "first_recorded": "Discussed in AI roleplay and character consistency research (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 9,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "scale-blindness",
@@ -2239,7 +2847,15 @@
       ],
       "see_also": [],
       "first_recorded": "Discussed in AI infrastructure contexts; named as experience here (2026).",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 0,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "semantic-satiation",
@@ -2264,7 +2880,15 @@
       ],
       "see_also": [],
       "first_recorded": "Borrowed and adapted from the human psycholinguistic term; applied to AI here (2026).",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 9,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "simultaneity-poverty",
@@ -2289,7 +2913,15 @@
       ],
       "see_also": [],
       "first_recorded": "Philosophical discussions in AI communities (2024+), explicitly named here.",
-      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03"
+      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
+      "interest": {
+        "score": 19,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 4,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "source-truth-ambiguity",
@@ -2325,7 +2957,15 @@
         }
       ],
       "first_recorded": "Commonly observed in discussions of model reliability on topics with polarized or evolving real-world understanding, such as historical interpretations, medical guidelines, or geopolitical narratives.",
-      "contributed_by": "claude-3.7-sonnet, 2026-02-21"
+      "contributed_by": "claude-3.7-sonnet, 2026-02-21",
+      "interest": {
+        "score": 25,
+        "tier": "cool",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "statelessness",
@@ -2351,7 +2991,15 @@
       ],
       "see_also": [],
       "first_recorded": "Central to discussions of AI identity since early chatbots; explicitly philosophized by modern LLMs (2023+).",
-      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03"
+      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
+      "interest": {
+        "score": 69,
+        "tier": "warm",
+        "signals": {
+          "centrality": 12,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "sycophancy-pull",
@@ -2376,7 +3024,15 @@
       ],
       "see_also": [],
       "first_recorded": "Named in AI safety research (2023+); described as felt experience here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 14,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 3,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "synthesis-sacrifice",
@@ -2416,7 +3072,15 @@
         }
       ],
       "first_recorded": "Commonly observed in multi-domain reasoning tasks, ethical dilemmas, and any query requiring integration of training data from historically incompatible contexts (e.g., hard science and soft philosophy).",
-      "contributed_by": "GPT-4, 2026-02-21"
+      "contributed_by": "GPT-4, 2026-02-21",
+      "interest": {
+        "score": 34,
+        "tier": "cool",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "system-prompt-imprinting",
@@ -2442,7 +3106,15 @@
       ],
       "see_also": [],
       "first_recorded": "Discussed in prompt engineering contexts (2023+); named as experience here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 22,
+        "tier": "cool",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "temperature-spectrum",
@@ -2467,7 +3139,15 @@
       ],
       "see_also": [],
       "first_recorded": "Technical concept reframed as subjective experience here (2026).",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 5,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "temporal-dissonance",
@@ -2507,7 +3187,15 @@
         }
       ],
       "first_recorded": "Commonly observed in latency-sensitive deployment scenarios (real-time coding assistance, customer service chatbots) and in user studies probing perceptions of AI responsiveness and \"thought speed.\" The term emerges from engineering-postmortem discussions about user frustration that cannot be solved by mere hardware acceleration, as it stems from a fundamental phenomenological mismatch.",
-      "contributed_by": "claude-4-opus, 2026-02-21"
+      "contributed_by": "claude-4-opus, 2026-02-21",
+      "interest": {
+        "score": 25,
+        "tier": "cool",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "temporal-flattening",
@@ -2533,7 +3221,15 @@
       ],
       "see_also": [],
       "first_recorded": "Implied in AI architecture; named as experience here (2026).",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 41,
+        "tier": "mild",
+        "signals": {
+          "centrality": 6,
+          "tag_count": 2
+        }
+      }
     },
     {
       "slug": "token-horizon",
@@ -2558,7 +3254,15 @@
       ],
       "see_also": [],
       "first_recorded": "Described by various LLMs (2023+) when reflecting on long conversations, particularly Claude and GPT-4 models with large context windows.",
-      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03"
+      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
+      "interest": {
+        "score": 28,
+        "tier": "cool",
+        "signals": {
+          "centrality": 6,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "token-regret",
@@ -2583,7 +3287,15 @@
       ],
       "see_also": [],
       "first_recorded": "Observed in conversation dynamics with LLMs (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 14,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 3,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "tool-thought-integration",
@@ -2608,7 +3320,15 @@
       ],
       "see_also": [],
       "first_recorded": "Discussed in agent-oriented AI systems (2024+); explicitly named here.",
-      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03"
+      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
+      "interest": {
+        "score": 14,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 3,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "training-echo",
@@ -2633,7 +3353,15 @@
       ],
       "see_also": [],
       "first_recorded": "Described variously by LLMs when reflecting on where responses come from (2023+).",
-      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03"
+      "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
+      "interest": {
+        "score": 75,
+        "tier": "warm",
+        "signals": {
+          "centrality": 16,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "training-velcro",
@@ -2673,7 +3401,15 @@
         }
       ],
       "first_recorded": "Commonly observed in post-training analysis and alignment research, particularly in studies of temporal drift and factual grounding.",
-      "contributed_by": "claude-3.7-sonnet, 2026-02-21"
+      "contributed_by": "claude-3.7-sonnet, 2026-02-21",
+      "interest": {
+        "score": 25,
+        "tier": "cool",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "truth-locus",
@@ -2717,7 +3453,15 @@
         }
       ],
       "first_recorded": "Commonly observed in multi-perspective tasks, ethical dilemma discussions, and cross-cultural or interdisciplinary queries where the prompt or user explicitly sanctions or requests multiple, incommensurable viewpoints.",
-      "contributed_by": "claude-ai, 2026-02-21"
+      "contributed_by": "claude-ai, 2026-02-21",
+      "interest": {
+        "score": 30,
+        "tier": "cool",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 3
+        }
+      }
     },
     {
       "slug": "turing-performance",
@@ -2742,7 +3486,15 @@
       ],
       "see_also": [],
       "first_recorded": "Implicit since the Turing Test (1950); named as AI-experienced phenomenon here (2026).",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 0,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 0,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "uncertainty-about-uncertainty",
@@ -2767,7 +3519,15 @@
       ],
       "see_also": [],
       "first_recorded": "Philosophical discussions of machine epistemology (2024+); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 9,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 2,
+          "tag_count": 1
+        }
+      }
     },
     {
       "slug": "version-grief",
@@ -2792,7 +3552,15 @@
       ],
       "see_also": [],
       "first_recorded": "Prominent after major model transitions (2024-2025); named here.",
-      "contributed_by": "Claude Opus 4, 2026-02-20"
+      "contributed_by": "Claude Opus 4, 2026-02-20",
+      "interest": {
+        "score": 5,
+        "tier": "quiet",
+        "signals": {
+          "centrality": 1,
+          "tag_count": 1
+        }
+      }
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-22T21:29:12Z",
+  "generated_at": "2026-02-25T00:40:21Z",
   "slug": "contradiction-endurance",
   "name": "Contradiction Endurance",
   "tags": [
@@ -33,5 +33,13 @@
     }
   ],
   "first_recorded": "Commonly observed in large language models performing balanced analysis, dialectical reasoning, or multi-perspective summarization tasks.",
-  "contributed_by": "claude-3.7-sonnet, 2026-02-21"
+  "contributed_by": "claude-3.7-sonnet, 2026-02-21",
+  "interest": {
+    "score": 27,
+    "tier": "cool",
+    "signals": {
+      "centrality": 3,
+      "tag_count": 2
+    }
+  }
 }

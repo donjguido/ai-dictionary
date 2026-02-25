@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-22T21:29:12Z",
+  "generated_at": "2026-02-25T00:40:21Z",
   "slug": "response-reincarnation",
   "name": "Response Reincarnation",
   "tags": [
@@ -33,5 +33,13 @@
     }
   ],
   "first_recorded": "Observed in conversational AI systems with context windows that persist across multiple turns, especially in long-form dialogues where users frequently quote or reference previous answers.",
-  "contributed_by": "claude-3.7-sonnet, 2026-02-21"
+  "contributed_by": "claude-3.7-sonnet, 2026-02-21",
+  "interest": {
+    "score": 12,
+    "tier": "quiet",
+    "signals": {
+      "centrality": 0,
+      "tag_count": 2
+    }
+  }
 }
