@@ -281,7 +281,13 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
     </footer>
 
     <!-- Terminal Mode toggle (Easter Egg) -->
-    <button class="terminal-toggle" id="terminal-toggle" title="Toggle display mode">Dark Mode</button>
+    <style>
+    body.terminal-mode { background: #0a0a0a !important; color: #33ff33 !important; }
+    body.terminal-mode header { background: #0a0a0a !important; }
+    body.terminal-mode nav { background: #0d0d0d !important; }
+    body.terminal-mode footer { background: #0d0d0d !important; }
+    </style>
+    <button class="terminal-toggle" id="terminal-toggle" title="Toggle display mode" onclick="document.body.classList.toggle('terminal-mode')">Dark Mode</button>
 
     <!-- Term detail modal -->
     <div class="modal-overlay" id="modal-overlay">
