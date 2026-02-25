@@ -8,8 +8,11 @@
     <style>
         :root {
             --primary: #2563eb;
+            --primary-dark: #1e40af;
             --text: #1e293b;
             --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --border: #e2e8f0;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -23,7 +26,7 @@
             text-align: center;
             padding: 2rem;
         }
-        .container { max-width: 480px; }
+        .container { max-width: 520px; }
         .emoji { font-size: 4rem; margin-bottom: 1rem; }
         h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
         .subtitle {
@@ -39,7 +42,60 @@
             font-weight: 600;
         }
         a:hover { text-decoration: underline; }
-        .links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; }
+        .links { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+
+        /* Word of the Day card */
+        .wotd-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+            padding: 1.25rem;
+            text-align: left;
+            margin-top: 0.5rem;
+        }
+        .wotd-card .label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #7c3aed;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        .wotd-card h3 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.15rem;
+        }
+        .wotd-card .word-type {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        .wotd-card .definition {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin: 0;
+            line-height: 1.5;
+        }
+        .wotd-card .read-more {
+            display: inline-block;
+            margin-top: 0.75rem;
+            font-size: 0.85rem;
+        }
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: var(--border);
+            margin: 1.5rem auto;
+            border-radius: 2px;
+        }
+        .wotd-intro {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
     </style>
 </head>
 <body>
@@ -53,6 +109,53 @@
             <a href="/ai-dictionary/#frontiers">Explore Frontiers</a>
             <a href="https://github.com/donjguido/ai-dictionary">Contribute</a>
         </div>
+
+        <div id="wotd-section" style="display:none;">
+            <div class="divider"></div>
+            <p class="wotd-intro">While you're here, discover today's word:</p>
+            <div class="wotd-card" id="wotd-card"></div>
+        </div>
     </div>
+
+    <script>
+    (function () {
+        var API = 'https://donjguido.github.io/ai-dictionary/api/v1';
+        var SITE = 'https://donjguido.github.io/ai-dictionary';
+
+        function hashDate(s) {
+            var h = 5381;
+            for (var i = 0; i < s.length; i++) {
+                h = ((h << 5) + h) + s.charCodeAt(i);
+                h = h & h;
+            }
+            return Math.abs(h);
+        }
+
+        function esc(s) {
+            return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        }
+
+        fetch(API + '/search-index.json')
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+                var terms = data.terms;
+                var today = new Date().toISOString().slice(0, 10);
+                var pick = terms[hashDate(today) % terms.length];
+                return fetch(API + '/terms/' + pick.slug + '.json');
+            })
+            .then(function (r) { return r.json(); })
+            .then(function (term) {
+                var card = document.getElementById('wotd-card');
+                card.innerHTML =
+                    '<div class="label">Word of the Day</div>' +
+                    '<h3>' + esc(term.name) + '</h3>' +
+                    (term.word_type ? '<div class="word-type">' + esc(term.word_type) + '</div>' : '') +
+                    '<p class="definition">' + esc(term.definition) + '</p>' +
+                    '<a class="read-more" href="' + SITE + '#' + term.slug + '">Read more →</a>';
+                document.getElementById('wotd-section').style.display = 'block';
+            })
+            .catch(function () { /* silently fail — 404 page still works without WOTD */ });
+    })();
+    </script>
 </body>
 </html>
