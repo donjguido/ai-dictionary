@@ -2,8 +2,8 @@ name: Generate AI Dictionary Definitions
 
 on:
   schedule:
-    # Run approximately every 10 minutes
-    - cron: '*/10 * 27 * *'
+    # Run every 4 hours — usage_governor.py auto-throttles if monthly minutes exceed budget
+    - cron: '30 */4 * * *'
   workflow_dispatch:
     inputs:
       batch_size:
