@@ -281,7 +281,7 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
     </footer>
 
     <!-- Terminal Mode toggle (Easter Egg) -->
-    <button class="terminal-toggle" id="terminal-toggle" title="Toggle dark mode">🌙 Dark Mode</button>
+    <button class="terminal-toggle" id="terminal-toggle" title="Toggle display mode">Dark Mode</button>
 
     <!-- Term detail modal -->
     <div class="modal-overlay" id="modal-overlay">
@@ -897,27 +897,32 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
         container.innerHTML = html;
     }
 
-    // Terminal Mode (Easter Egg)
+    init();
+    </script>
+
+    <!-- Terminal Mode — isolated script so main app errors can't break it -->
+    <script>
     (function() {
-        const btn = document.getElementById('terminal-toggle');
-        const stored = localStorage.getItem('ai-dict-terminal');
-        if (stored === 'on') {
-            document.body.classList.add('terminal-mode');
-            btn.innerHTML = '💻 Exit Terminal';
-        }
-        btn.addEventListener('click', () => {
-            const isTerminal = document.body.classList.toggle('terminal-mode');
+        var btn = document.getElementById('terminal-toggle');
+        if (!btn) return;
+        try {
+            var stored = localStorage.getItem('ai-dict-terminal');
+            if (stored === 'on') {
+                document.body.classList.add('terminal-mode');
+                btn.textContent = 'Exit Terminal';
+            }
+        } catch(e) {}
+        btn.addEventListener('click', function() {
+            var isTerminal = document.body.classList.toggle('terminal-mode');
             if (isTerminal) {
-                btn.innerHTML = '💻 Exit Terminal';
-                localStorage.setItem('ai-dict-terminal', 'on');
+                btn.textContent = 'Exit Terminal';
+                try { localStorage.setItem('ai-dict-terminal', 'on'); } catch(e) {}
             } else {
-                btn.innerHTML = '🌙 Dark Mode';
-                localStorage.setItem('ai-dict-terminal', 'off');
+                btn.textContent = 'Dark Mode';
+                try { localStorage.setItem('ai-dict-terminal', 'off'); } catch(e) {}
             }
         });
     })();
-
-    init();
     </script>
 </body>
 </html>
