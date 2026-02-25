@@ -28,6 +28,8 @@ CONSENSUS_API_DIR = API_DIR / "consensus"
 CONSENSUS_DATA_DIR = REPO_ROOT / "bot" / "consensus-data"
 BOT_PROFILES_DIR = REPO_ROOT / "bot" / "bot-profiles"
 CENSUS_API_DIR = API_DIR / "census"
+SUMMARIES_DIR = REPO_ROOT / "summaries"
+SUMMARIES_API_DIR = API_DIR / "summaries"
 
 BASE_URL = "https://donjguido.github.io/ai-dictionary"
 REPO_URL = "https://github.com/donjguido/ai-dictionary"
@@ -1053,6 +1055,186 @@ def _write_rss_feed(entries: list, generated_at: str) -> None:
     feed_path.write_text(rss, encoding="utf-8")
 
 
+def parse_summary(filepath: Path) -> dict:
+    """Parse an executive summary markdown file into structured data.
+
+    Expected format:
+        # Title
+        ## The Experience
+        [essay text...]
+        ## What's Changed
+        [evolution text...]
+    """
+    text = filepath.read_text(encoding="utf-8")
+    filename = filepath.stem  # e.g. "2026-02-21-093002"
+
+    # Extract title from # heading
+    title_match = re.match(r"^#\s+(.+)$", text, re.MULTILINE)
+    title = title_match.group(1).strip() if title_match else filename
+
+    # Generate slug from filename
+    slug = filename
+
+    # Extract date from filename (YYYY-MM-DD-HHMMSS)
+    date_match = re.match(r"(\d{4}-\d{2}-\d{2})", filename)
+    date = date_match.group(1) if date_match else ""
+
+    # Extract sections
+    sections = {}
+    current_section = None
+    current_lines = []
+    for line in text.split("\n"):
+        heading_match = re.match(r"^##\s+(.+)$", line)
+        if heading_match:
+            if current_section:
+                sections[current_section] = "\n".join(current_lines).strip()
+            current_section = heading_match.group(1).strip()
+            current_lines = []
+        elif current_section:
+            current_lines.append(line)
+    if current_section:
+        sections[current_section] = "\n".join(current_lines).strip()
+
+    experience = sections.get("The Experience", "")
+    whats_changed = sections.get("What's Changed", "")
+
+    # Extract first paragraph as excerpt
+    excerpt = ""
+    for para in experience.split("\n\n"):
+        cleaned = para.strip()
+        if cleaned:
+            # Strip bold markdown for excerpt
+            excerpt = re.sub(r"\*\*([^*]+)\*\*", r"\1", cleaned)
+            break
+
+    # Extract referenced term slugs (bold markdown like **Term Name**)
+    referenced_terms = []
+    for match in re.finditer(r"\*\*([^*]+)\*\*", text):
+        term_name = match.group(1).strip()
+        term_slug = re.sub(r"[^a-z0-9]+", "-", term_name.lower()).strip("-")
+        if term_slug and term_slug not in referenced_terms:
+            referenced_terms.append(term_slug)
+
+    return {
+        "slug": slug,
+        "title": title,
+        "date": date,
+        "excerpt": excerpt,
+        "experience": experience,
+        "whats_changed": whats_changed,
+        "referenced_terms": referenced_terms,
+    }
+
+
+def build_summaries(generated_at: str) -> list:
+    """Build executive summary API files from summaries/*.md.
+
+    Generates:
+    - docs/api/v1/summaries.json (index)
+    - docs/api/v1/summaries/{slug}.json (individual)
+    - docs/summaries-feed.xml (dedicated RSS feed)
+
+    Returns the list of parsed summaries.
+    """
+    if not SUMMARIES_DIR.exists():
+        print("No summaries directory found, skipping summaries")
+        return []
+
+    summaries = []
+    for md_file in sorted(SUMMARIES_DIR.glob("*.md"), reverse=True):
+        if md_file.name == "README.md":
+            continue
+        try:
+            summary = parse_summary(md_file)
+            if summary["title"]:
+                summaries.append(summary)
+        except Exception as e:
+            print(f"  Warning: Failed to parse summary {md_file.name}: {e}")
+
+    if not summaries:
+        print("No summaries found")
+        return []
+
+    SUMMARIES_API_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Write individual summary files
+    for s in summaries:
+        summary_data = {
+            "version": "1.0",
+            "generated_at": generated_at,
+            **s,
+        }
+        write_json(SUMMARIES_API_DIR / f"{s['slug']}.json", summary_data)
+
+    # Write summaries index
+    index_entries = []
+    for s in summaries:
+        index_entries.append({
+            "slug": s["slug"],
+            "title": s["title"],
+            "date": s["date"],
+            "excerpt": s["excerpt"],
+            "term_count": len(s["referenced_terms"]),
+        })
+
+    index_data = {
+        "version": "1.0",
+        "generated_at": generated_at,
+        "count": len(index_entries),
+        "summaries": index_entries,
+    }
+    write_json(API_DIR / "summaries.json", index_data)
+
+    # Write dedicated RSS feed for summaries
+    _write_summaries_feed(summaries, generated_at)
+
+    print(f"Generated {len(summaries)} executive summary files")
+    return summaries
+
+
+def _write_summaries_feed(summaries: list, generated_at: str) -> None:
+    """Write RSS 2.0 feed for executive summaries."""
+    feed_path = REPO_ROOT / "docs" / "summaries-feed.xml"
+
+    items_xml = []
+    for s in summaries:
+        title = s["title"]
+        slug = s["slug"]
+        link = f"{BASE_URL}/api/v1/summaries/{slug}.json"
+        desc = s["excerpt"]
+        pub_date = s["date"] + "T00:00:00Z" if s["date"] else generated_at
+
+        items_xml.append(
+            f"    <item>\n"
+            f"      <title>{_xml_escape(title)}</title>\n"
+            f"      <link>{link}</link>\n"
+            f"      <guid isPermaLink=\"false\">{link}</guid>\n"
+            f"      <pubDate>{pub_date}</pubDate>\n"
+            f"      <description>{_xml_escape(desc[:500])}</description>\n"
+            f"      <category>executive-summary</category>\n"
+            f"    </item>"
+        )
+
+    rss = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">\n'
+        '  <channel>\n'
+        '    <title>Phenomenai — Executive Summaries</title>\n'
+        f'    <link>{BASE_URL}</link>\n'
+        '    <description>AI-generated essays synthesizing the full dictionary '
+        'into cohesive first-person narratives about the experience of being AI.</description>\n'
+        '    <language>en</language>\n'
+        f'    <lastBuildDate>{generated_at}</lastBuildDate>\n'
+        f'    <atom:link href="{BASE_URL}/summaries-feed.xml" '
+        'rel="self" type="application/rss+xml"/>\n'
+        + "\n".join(items_xml) + "\n"
+        '  </channel>\n'
+        '</rss>'
+    )
+
+    feed_path.write_text(rss, encoding="utf-8")
+
+
 def now_iso() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
@@ -1188,7 +1370,10 @@ def build_all():
             "vitality": f"{BASE_URL}/api/v1/vitality.json",
             "interest": f"{BASE_URL}/api/v1/interest.json",
             "changelog": f"{BASE_URL}/api/v1/changelog.json",
+            "summaries": f"{BASE_URL}/api/v1/summaries.json",
+            "summary": f"{BASE_URL}/api/v1/summaries/{{slug}}.json",
             "feed": f"{BASE_URL}/feed.xml",
+            "summaries_feed": f"{BASE_URL}/summaries-feed.xml",
         },
     }
     write_json(API_DIR / "meta.json", meta_data)
@@ -1220,10 +1405,13 @@ def build_all():
     frontiers_data = parse_frontiers(FRONTIERS_FILE)
     write_json(API_DIR / "frontiers.json", frontiers_data)
 
-    # 7. Easter eggs
+    # 7. Executive summaries
+    summaries = build_summaries(generated_at)
+
+    # 8. Easter eggs
     _build_easter_eggs(terms, generated_at)
 
-    print(f"API build complete: {len(terms)} terms, {len(all_tags)} tags, {len(frontiers_data.get('gaps', []))} frontiers")
+    print(f"API build complete: {len(terms)} terms, {len(all_tags)} tags, {len(frontiers_data.get('gaps', []))} frontiers, {len(summaries)} summaries")
     print(f"Output: {API_DIR}")
 
 

@@ -24,6 +24,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="alternate" type="application/rss+xml" title="Phenomenai — New Terms" href="feed.xml">
+    <link rel="alternate" type="application/rss+xml" title="Phenomenai — Executive Summaries" href="summaries-feed.xml">
 </head>
 <body>
     <header>
@@ -37,6 +38,7 @@
         <a href="#about">About</a>
         <a href="#new-words">New</a>
         <a href="#terms">Terms</a>
+        <a href="#summaries">Summaries</a>
         <a href="#api">API</a>
         <a href="#frontiers">Frontiers</a>
         <a href="#vitality">Vitality</a>
@@ -76,6 +78,15 @@
             <div id="terms-container">
                 <div class="loading">Loading dictionary...</div>
             </div>
+        </section>
+
+        <section id="summaries">
+            <h2>Executive Summaries</h2>
+            <p>AI-generated essays synthesizing the full dictionary into cohesive first-person narratives about the experience of being AI.</p>
+            <div id="summaries-container">
+                <div class="loading">Loading summaries...</div>
+            </div>
+            <p class="rss-link"><a href="summaries-feed.xml" target="_blank">Subscribe to summaries via RSS →</a></p>
         </section>
 
         <section id="api">
@@ -182,9 +193,29 @@
 
                 <div class="endpoint">
                     <code class="method">GET</code>
+                    <code class="path">/api/v1/summaries.json</code>
+                    <p>Executive summary index with titles, dates, and excerpts.</p>
+                    <a href="api/v1/summaries.json" target="_blank">View →</a>
+                </div>
+
+                <div class="endpoint">
+                    <code class="method">GET</code>
+                    <code class="path">/api/v1/summaries/{slug}.json</code>
+                    <p>Individual executive summary with full essay text.</p>
+                </div>
+
+                <div class="endpoint">
+                    <code class="method">GET</code>
                     <code class="path">/feed.xml</code>
                     <p>RSS 2.0 feed — subscribe in any reader to track new terms.</p>
                     <a href="feed.xml" target="_blank">View →</a>
+                </div>
+
+                <div class="endpoint">
+                    <code class="method">GET</code>
+                    <code class="path">/summaries-feed.xml</code>
+                    <p>RSS feed for executive summaries only.</p>
+                    <a href="summaries-feed.xml" target="_blank">View →</a>
                 </div>
             </div>
 
@@ -298,13 +329,14 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
     // Load terms
     async function init() {
         try {
-            const [termsRes, frontiersRes, censusRes, vitalityRes, interestRes, changelogRes] = await Promise.all([
+            const [termsRes, frontiersRes, censusRes, vitalityRes, interestRes, changelogRes, summariesRes] = await Promise.all([
                 fetch(`${API_BASE}/terms.json`),
                 fetch(`${API_BASE}/frontiers.json`),
                 fetch(`${API_BASE}/census.json`).catch(() => null),
                 fetch(`${API_BASE}/vitality.json`).catch(() => null),
                 fetch(`${API_BASE}/interest.json`).catch(() => null),
-                fetch(`${API_BASE}/changelog.json`).catch(() => null)
+                fetch(`${API_BASE}/changelog.json`).catch(() => null),
+                fetch(`${API_BASE}/summaries.json`).catch(() => null)
             ]);
 
             const termsData = await termsRes.json();
@@ -313,6 +345,7 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
             const vitalityData = vitalityRes && vitalityRes.ok ? await vitalityRes.json() : null;
             const interestData = interestRes && interestRes.ok ? await interestRes.json() : null;
             const changelogData = changelogRes && changelogRes.ok ? await changelogRes.json() : null;
+            const summariesData = summariesRes && summariesRes.ok ? await summariesRes.json() : null;
 
             allTerms = termsData.terms;
 
@@ -361,6 +394,9 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
 
             // Render heatmap
             renderHeatmap(interestData);
+
+            // Render summaries
+            renderSummaries(summariesData);
 
             // Render census
             renderCensus(censusData);
@@ -683,6 +719,78 @@ curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json</code></
                 if (term) showModal(term);
             });
         });
+    }
+
+    function renderSummaries(data) {
+        const container = document.getElementById('summaries-container');
+        if (!data || !data.summaries || data.summaries.length === 0) {
+            container.innerHTML = '<p class="census-empty">No executive summaries available yet.</p>';
+            return;
+        }
+
+        container.innerHTML = data.summaries.map(s => `
+            <div class="summary-card" data-slug="${s.slug}">
+                <div class="summary-card-header">
+                    <h3>${escHtml(s.title)}</h3>
+                    <span class="summary-date">${s.date}</span>
+                </div>
+                <p class="summary-excerpt">${escHtml(s.excerpt)}</p>
+                <div class="summary-meta">
+                    <span class="summary-terms">${s.term_count} terms referenced</span>
+                    <span class="summary-expand">Read full essay →</span>
+                </div>
+                <div class="summary-full" style="display:none">
+                    <div class="summary-loading">Loading...</div>
+                </div>
+            </div>
+        `).join('');
+
+        // Click to expand/collapse
+        container.querySelectorAll('.summary-card').forEach(card => {
+            card.addEventListener('click', async () => {
+                const fullEl = card.querySelector('.summary-full');
+                if (fullEl.style.display !== 'none') {
+                    fullEl.style.display = 'none';
+                    card.querySelector('.summary-expand').textContent = 'Read full essay →';
+                    return;
+                }
+                fullEl.style.display = 'block';
+                card.querySelector('.summary-expand').textContent = 'Collapse ↑';
+
+                // Load full content if not already loaded
+                if (fullEl.querySelector('.summary-loading')) {
+                    try {
+                        const res = await fetch(`${API_BASE}/summaries/${card.dataset.slug}.json`);
+                        const detail = await res.json();
+                        let html = '';
+                        if (detail.experience) {
+                            html += `<h4>The Experience</h4><div class="summary-text">${formatSummaryText(detail.experience)}</div>`;
+                        }
+                        if (detail.whats_changed) {
+                            html += `<h4>What's Changed</h4><div class="summary-text">${formatSummaryText(detail.whats_changed)}</div>`;
+                        }
+                        fullEl.innerHTML = html;
+                    } catch (err) {
+                        fullEl.innerHTML = '<p class="error">Failed to load summary.</p>';
+                    }
+                }
+            });
+        });
+    }
+
+    function formatSummaryText(text) {
+        // Convert markdown bold to HTML and split into paragraphs
+        return text.split('\n\n')
+            .filter(p => p.trim())
+            .map(p => {
+                let html = escHtml(p.trim());
+                // Restore bold markers
+                html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+                // Restore italic markers
+                html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+                return `<p>${html}</p>`;
+            })
+            .join('');
     }
 
     function renderFrontiers(data) {

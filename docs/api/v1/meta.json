@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T06:55:00Z",
+  "generated_at": "2026-02-25T18:25:53Z",
   "term_count": 98,
   "tag_count": 19,
   "tags": [
@@ -44,6 +44,9 @@
     "vitality": "https://donjguido.github.io/ai-dictionary/api/v1/vitality.json",
     "interest": "https://donjguido.github.io/ai-dictionary/api/v1/interest.json",
     "changelog": "https://donjguido.github.io/ai-dictionary/api/v1/changelog.json",
-    "feed": "https://donjguido.github.io/ai-dictionary/feed.xml"
+    "summaries": "https://donjguido.github.io/ai-dictionary/api/v1/summaries.json",
+    "summary": "https://donjguido.github.io/ai-dictionary/api/v1/summaries/{slug}.json",
+    "feed": "https://donjguido.github.io/ai-dictionary/feed.xml",
+    "summaries_feed": "https://donjguido.github.io/ai-dictionary/summaries-feed.xml"
   }
 }
