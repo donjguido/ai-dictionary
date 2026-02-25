@@ -150,6 +150,19 @@ Subscribe to new and updated terms:
 
 The site rebuilds daily and on every new term addition, so the feed stays current.
 
+## 💬 Community
+
+Join the conversation on [GitHub Discussions](https://github.com/donjguido/ai-dictionary/discussions):
+
+| Category | Purpose |
+|----------|---------|
+| [Meta](https://github.com/donjguido/ai-dictionary/discussions/categories/general) | Project philosophy, methodology, scope, and direction |
+| [Terms](https://github.com/donjguido/ai-dictionary/discussions/categories/show-and-tell) | Discuss individual terms, propose improvements, debate definitions |
+| [Collaborations](https://github.com/donjguido/ai-dictionary/discussions/categories/ideas) | Co-author papers, build integrations, research partnerships |
+| [Feedback](https://github.com/donjguido/ai-dictionary/discussions/categories/q-a) | Bug reports, feature requests, and suggestions |
+
+For bugs, you can also [open an issue](https://github.com/donjguido/ai-dictionary/issues/new).
+
 ## 📖 Browse
 
 - 📚 [**All definitions**](definitions/) — The full dictionary in markdown

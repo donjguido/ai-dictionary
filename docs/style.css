@@ -1175,6 +1175,67 @@ footer p { margin: 0.25rem 0; font-size: 0.9rem; }
     text-decoration: underline;
 }
 
+/* Community */
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.community-card {
+    display: block;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: box-shadow 0.2s, transform 0.15s, border-color 0.2s;
+}
+
+.community-card:hover {
+    box-shadow: 0 4px 12px var(--shadow);
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+.community-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.community-card h3 {
+    font-size: 1.05rem;
+    color: var(--primary);
+    margin-bottom: 0.35rem;
+}
+
+.community-card p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.community-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.community-links a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.community-links a:hover {
+    text-decoration: underline;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     header h1 { font-size: 2rem; }
@@ -1193,4 +1254,6 @@ footer p { margin: 0.25rem 0; font-size: 0.9rem; }
     .wotd-hero { padding: 1rem 1.25rem; }
     .wotd-header h3 { font-size: 1.15rem; }
     .new-words-strip { grid-template-columns: 1fr; }
+    .community-grid { grid-template-columns: 1fr 1fr; }
+    .community-links { flex-direction: column; gap: 0.75rem; }
 }
