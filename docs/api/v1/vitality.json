@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-02-26T21:44:21Z",
+  "summary": {
+    "active": 1,
+    "declining": 0,
+    "dormant": 0,
+    "extinct": 0,
+    "unvalidated": 0
+  },
+  "terms": [
+    {
+      "slug": "context-amnesia",
+      "status": "active",
+      "relevance_ratio": 1.0,
+      "trend": "new"
+    }
+  ],
+  "most_vital": [
+    {
+      "slug": "context-amnesia",
+      "status": "active",
+      "relevance_ratio": 1.0,
+      "trend": "new"
+    }
+  ],
+  "most_endangered": [],
+  "recently_extinct": []
+}
