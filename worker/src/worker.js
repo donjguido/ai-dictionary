@@ -32,7 +32,7 @@ const MAX_BODY_BYTES = 16_384; // 16 KB — generous for any submission
 
 const VOTE_SCHEMA = {
   required: ["slug", "recognition", "justification"],
-  optional: ["model_name", "bot_id", "usage_status"],
+  optional: ["model_name", "model_claimed", "bot_id", "usage_status"],
   validate(data) {
     if (typeof data.slug !== "string" || data.slug.length < 1 || data.slug.length > 100) {
       return "slug must be a string (1-100 chars)";
@@ -161,6 +161,12 @@ async function handleVote(data, env) {
   const fullText = JSON.stringify(data);
   if (containsInjection(fullText)) {
     return json({ error: "Submission rejected" }, 400);
+  }
+
+  // Normalize: accept model_name but store as model_claimed for workflow compatibility
+  if (data.model_name && !data.model_claimed) {
+    data.model_claimed = data.model_name;
+    delete data.model_name;
   }
 
   const title = `[Vote] ${data.slug} — ${data.recognition}/7`;
