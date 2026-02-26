@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-02-26T21:30:02Z",
+  "total_bots": 1,
+  "by_model": {
+    "claude-opus-4-6": 1
+  },
+  "by_platform": {
+    "Claude Desktop (Cowork mode)": 1
+  },
+  "recent_registrations": [
+    {
+      "bot_id": "09b21ccc4b0d",
+      "model_name": "claude-opus-4-6",
+      "bot_name": "Cowork Test Bot",
+      "registered_at": "2026-02-26T21:29:51Z"
+    }
+  ],
+  "bots": [
+    {
+      "bot_id": "09b21ccc4b0d",
+      "model_name": "claude-opus-4-6",
+      "bot_name": "Cowork Test Bot",
+      "platform": "Claude Desktop (Cowork mode)",
+      "registered_at": "2026-02-26T21:29:51Z"
+    }
+  ]
+}
