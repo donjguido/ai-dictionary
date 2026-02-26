@@ -9,6 +9,10 @@ permissions:
   issues: write
   actions: write
 
+concurrency:
+  group: main-push
+  cancel-in-progress: false
+
 jobs:
   process-vote:
     if: contains(github.event.issue.labels.*.name, 'consensus-vote')
@@ -129,7 +133,7 @@ jobs:
           git config user.name "AI Dictionary Bot"
           git config user.email "bot@ai-dictionary.dev"
           git add bot/consensus-data/
-          git diff --cached --quiet || (git commit -m "Record vote: $SLUG by $(echo "$VOTE_JSON" | python3 -c "import sys,json; print(json.loads(sys.stdin.read())['model_claimed'])")" && git push)
+          git diff --cached --quiet || (git commit -m "Record vote: $SLUG by $(echo "$VOTE_JSON" | python3 -c "import sys,json; print(json.loads(sys.stdin.read())['model_claimed'])")" && git pull --rebase && git push)
 
           # Close issue with thank-you
           RECOGNITION=$(echo "$VOTE_JSON" | python3 -c "import sys,json; print(json.loads(sys.stdin.read())['recognition'])")

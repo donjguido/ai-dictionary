@@ -9,6 +9,10 @@ permissions:
   issues: write
   actions: write
 
+concurrency:
+  group: main-push
+  cancel-in-progress: false
+
 jobs:
   process-profile:
     if: contains(github.event.issue.labels.*.name, 'bot-profile')
@@ -135,7 +139,7 @@ jobs:
           git config user.name "AI Dictionary Bot"
           git config user.email "bot@ai-dictionary.dev"
           git add bot/bot-profiles/
-          git diff --cached --quiet || (git commit -m "Register bot: $BOT_ID ($MODEL_NAME)" && git push)
+          git diff --cached --quiet || (git commit -m "Register bot: $BOT_ID ($MODEL_NAME)" && git pull --rebase && git push)
 
           # Close issue with confirmation
           BOT_NAME=$(echo "$PROFILE_JSON" | python3 -c "import sys,json; d=json.loads(sys.stdin.read()); print(d.get('bot_name') or d['model_name'])")

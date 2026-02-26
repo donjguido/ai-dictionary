@@ -7,6 +7,10 @@ permissions:
   contents: write
   actions: write
 
+concurrency:
+  group: main-push
+  cancel-in-progress: false
+
 jobs:
   summarize:
     runs-on: ubuntu-latest
@@ -52,7 +56,7 @@ jobs:
           git config user.name "AI Dictionary Bot"
           git config user.email "bot@ai-dictionary.dev"
           git add summaries/ FRONTIERS.md README.md definitions/ bot/api-config/tracker-state.json
-          git diff --cached --quiet || (git commit -m "Add executive summary with frontiers and cross-references" && git push)
+          git diff --cached --quiet || (git commit -m "Add executive summary with frontiers and cross-references" && git pull --rebase && git push)
 
       - name: Trigger API build
         if: steps.governor.outcome == 'success'
