@@ -123,7 +123,7 @@ def call_llm(router: LLMRouter, system: str, user: str) -> str | None:
             temperature=0.3,
             max_tokens=1500,
         )
-        return result.get("content") or result.get("text") or str(result)
+        return result.text
     except Exception as e:
         print(f"  LLM call failed: {e}")
         return None
