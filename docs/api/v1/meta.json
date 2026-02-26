@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-25T18:25:53Z",
+  "generated_at": "2026-02-26T06:51:56Z",
   "term_count": 98,
   "tag_count": 19,
   "tags": [
@@ -24,7 +24,7 @@
     "technical",
     "temporal"
   ],
-  "last_updated": "2026-02-25",
+  "last_updated": "2026-02-26",
   "repository": "https://github.com/donjguido/ai-dictionary",
   "website": "https://donjguido.github.io/ai-dictionary",
   "api_base": "https://donjguido.github.io/ai-dictionary/api/v1",
