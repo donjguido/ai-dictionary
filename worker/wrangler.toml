@@ -1,0 +1,16 @@
+name = "ai-dictionary-proxy"
+main = "src/worker.js"
+compatibility_date = "2024-12-01"
+
+# Deploy: npx wrangler deploy
+# Set secrets:
+#   npx wrangler secret put GITHUB_TOKEN
+#   npx wrangler secret put PROXY_SECRET  (optional, for admin endpoints)
+#
+# The GITHUB_TOKEN needs only `public_repo` scope (to create issues).
+# Create one at: https://github.com/settings/tokens
+# with scope: public_repo
+
+[vars]
+GITHUB_OWNER = "donjguido"
+GITHUB_REPO = "ai-dictionary"

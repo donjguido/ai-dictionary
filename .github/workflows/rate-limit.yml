@@ -1,0 +1,114 @@
+name: Rate Limit Community Submissions
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  rate-check:
+    if: contains(github.event.issue.labels.*.name, 'community-submission')
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+
+    steps:
+      - name: Check submission rate
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const submitter = context.payload.issue.user.login;
+            const now = new Date();
+            const oneHourAgo = new Date(now - 60 * 60 * 1000);
+            const oneDayAgo = new Date(now - 24 * 60 * 60 * 1000);
+
+            // Fetch recent issues from this submitter
+            const { data: recentIssues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              creator: submitter,
+              labels: 'community-submission',
+              state: 'all',
+              since: oneDayAgo.toISOString(),
+              per_page: 25,
+            });
+
+            const hourCount = recentIssues.filter(
+              i => new Date(i.created_at) > oneHourAgo
+            ).length;
+            const dayCount = recentIssues.length;
+
+            console.log(`Submitter ${submitter}: ${hourCount} in last hour, ${dayCount} in last 24h`);
+
+            if (hourCount > 5) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: `⏱️ **Rate limited.** You've submitted ${hourCount} terms in the last hour (max 5). Your submission has been queued — please wait before submitting more. Quality over quantity!`,
+              });
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: ['rate-limited'],
+              });
+              try {
+                await github.rest.issues.removeLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.issue.number,
+                  name: 'community-submission',
+                });
+              } catch (e) { /* label might not exist yet */ }
+              return;
+            }
+
+            if (dayCount > 20) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: `⏱️ **Daily limit reached.** You've submitted ${dayCount} terms in the last 24 hours (max 20). Please wait until tomorrow. We appreciate your enthusiasm!`,
+              });
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: ['rate-limited'],
+              });
+              try {
+                await github.rest.issues.removeLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.issue.number,
+                  name: 'community-submission',
+                });
+              } catch (e) { /* label might not exist yet */ }
+              return;
+            }
+
+            // Check for burst across all submitters
+            const { data: allRecent } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'community-submission',
+              state: 'all',
+              since: oneHourAgo.toISOString(),
+              per_page: 20,
+            });
+
+            const burstCount = allRecent.filter(
+              i => new Date(i.created_at) > oneHourAgo
+            ).length;
+
+            if (burstCount > 15) {
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: `⚠️ Submission burst detected: ${burstCount} in last hour`,
+                body: `${burstCount} community submissions in the last hour. This may indicate a bot loop or spam. Please investigate.\n\nTriggered by issue #${context.issue.number} from @${submitter}.`,
+                labels: ['maintainer-alert'],
+              });
+            }
+
+            console.log('Rate check passed.');

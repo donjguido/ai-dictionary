@@ -1,0 +1,13 @@
+{
+  "name": "ai-dictionary-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Zero-credential submission proxy for the AI Dictionary",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
