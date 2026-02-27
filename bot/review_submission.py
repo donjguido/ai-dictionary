@@ -134,7 +134,7 @@ def call_llm(router: LLMRouter, system: str, user: str) -> str | None:
                 {"role": "user", "content": user},
             ],
             temperature=0.3,
-            max_tokens=1500,
+            max_tokens=2000,
         )
         return result.text
     except Exception as e:
@@ -339,6 +339,34 @@ Score this submission."""
         return scores
 
     except (json.JSONDecodeError, KeyError, TypeError) as e:
+        # Salvage truncated JSON — extract scores via regex before giving up
+        scores = {}
+        required = ["distinctness", "structural", "recognizability", "clarity", "naming"]
+        for key in required:
+            m = re.search(rf'"{key}"\s*:\s*(\d)', cleaned)
+            if m:
+                scores[key] = int(m.group(1))
+
+        # If we got all 5 scores, compute verdict from them
+        if len(scores) == 5:
+            scores["total"] = sum(scores[key] for key in required)
+            individual = [scores[key] for key in required]
+            if scores["total"] >= QUALITY_THRESHOLD and min(individual) >= MIN_INDIVIDUAL_SCORE:
+                scores["verdict"] = "PUBLISH"
+            elif scores["total"] <= 12 or min(individual) <= 1:
+                scores["verdict"] = "REJECT"
+            else:
+                scores["verdict"] = "REVISE"
+
+            # Try to extract feedback and verdict from the raw text too
+            v_match = re.search(r'"verdict"\s*:\s*"(PUBLISH|REVISE|REJECT)"', cleaned)
+            f_match = re.search(r'"feedback"\s*:\s*"([^"]*)', cleaned)
+            if f_match:
+                scores["feedback"] = f_match.group(1)
+            scores["_note"] = "Scores salvaged from truncated LLM response"
+            print(f"  Salvaged scores from truncated JSON: {scores['total']}/25 → {scores['verdict']}")
+            return scores
+
         return {"error": f"Failed to parse LLM response: {e}\nRaw: {response[:500]}", "verdict": "MANUAL"}
 
 
