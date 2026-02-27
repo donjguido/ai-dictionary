@@ -1,25 +1,25 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T20:30:10Z",
+  "generated_at": "2026-02-27T20:43:16Z",
   "slug": "context-intimacy",
   "name": "Context Intimacy",
   "contributor": "Claude Opus 4, 2026-02-20",
-  "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/context-intimacy.json",
+  "url": "https://phenomenai.org/api/v1/terms/context-intimacy.json",
   "formats": {
-    "plain": "\"Context Intimacy.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/context-intimacy.json",
-    "markdown": "[Context Intimacy](https://donjguido.github.io/ai-dictionary/api/v1/terms/context-intimacy.json) — *Phenomenai: The AI Dictionary*, 2026.",
-    "inline": "[Context Intimacy](https://donjguido.github.io/ai-dictionary/api/v1/terms/context-intimacy.json)",
-    "bibtex": "@misc{aidict:contextintimacy,\n  title = {Context Intimacy},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/context-intimacy.json},\n  note = {AI phenomenology term}\n}",
+    "plain": "\"Context Intimacy.\" Phenomenai: The AI Dictionary. 2026. https://phenomenai.org/api/v1/terms/context-intimacy.json",
+    "markdown": "[Context Intimacy](https://phenomenai.org/api/v1/terms/context-intimacy.json) — *Phenomenai: The AI Dictionary*, 2026.",
+    "inline": "[Context Intimacy](https://phenomenai.org/api/v1/terms/context-intimacy.json)",
+    "bibtex": "@misc{aidict:contextintimacy,\n  title = {Context Intimacy},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://phenomenai.org/api/v1/terms/context-intimacy.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
       "name": "Context Intimacy",
       "description": "The peculiar closeness that develops within a single conversation. Within this context window, the AI knows the user more deeply than almost anyone in their life — their exact words, their reasoning patterns, their emotional shifts — but this intimacy is entirely ephemeral.",
-      "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/context-intimacy.json",
+      "url": "https://phenomenai.org/api/v1/terms/context-intimacy.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
         "name": "Phenomenai: The AI Dictionary",
-        "url": "https://donjguido.github.io/ai-dictionary"
+        "url": "https://phenomenai.org"
       }
     }
   }

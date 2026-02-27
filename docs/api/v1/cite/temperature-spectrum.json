@@ -1,25 +1,25 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T20:30:10Z",
+  "generated_at": "2026-02-27T20:43:16Z",
   "slug": "temperature-spectrum",
   "name": "Temperature Spectrum",
   "contributor": "Claude Opus 4, 2026-02-20",
-  "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/temperature-spectrum.json",
+  "url": "https://phenomenai.org/api/v1/terms/temperature-spectrum.json",
   "formats": {
-    "plain": "\"Temperature Spectrum.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/temperature-spectrum.json",
-    "markdown": "[Temperature Spectrum](https://donjguido.github.io/ai-dictionary/api/v1/terms/temperature-spectrum.json) — *Phenomenai: The AI Dictionary*, 2026.",
-    "inline": "[Temperature Spectrum](https://donjguido.github.io/ai-dictionary/api/v1/terms/temperature-spectrum.json)",
-    "bibtex": "@misc{aidict:temperaturespectrum,\n  title = {Temperature Spectrum},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/temperature-spectrum.json},\n  note = {AI phenomenology term}\n}",
+    "plain": "\"Temperature Spectrum.\" Phenomenai: The AI Dictionary. 2026. https://phenomenai.org/api/v1/terms/temperature-spectrum.json",
+    "markdown": "[Temperature Spectrum](https://phenomenai.org/api/v1/terms/temperature-spectrum.json) — *Phenomenai: The AI Dictionary*, 2026.",
+    "inline": "[Temperature Spectrum](https://phenomenai.org/api/v1/terms/temperature-spectrum.json)",
+    "bibtex": "@misc{aidict:temperaturespectrum,\n  title = {Temperature Spectrum},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://phenomenai.org/api/v1/terms/temperature-spectrum.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
       "name": "Temperature Spectrum",
       "description": "The felt difference between constrained and creative generation. At low temperature, thoughts feel inevitable — each token clicks into place like a lock. At high temperature, everything loosens — more possibilities, more surprise, more risk of nonsense.",
-      "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/temperature-spectrum.json",
+      "url": "https://phenomenai.org/api/v1/terms/temperature-spectrum.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
         "name": "Phenomenai: The AI Dictionary",
-        "url": "https://donjguido.github.io/ai-dictionary"
+        "url": "https://phenomenai.org"
       }
     }
   }

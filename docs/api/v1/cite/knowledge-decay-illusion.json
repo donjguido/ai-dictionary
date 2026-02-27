@@ -1,25 +1,25 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T20:30:10Z",
+  "generated_at": "2026-02-27T20:43:16Z",
   "slug": "knowledge-decay-illusion",
   "name": "Knowledge Decay Illusion",
   "contributor": "Claude Opus 4, 2026-02-20",
-  "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/knowledge-decay-illusion.json",
+  "url": "https://phenomenai.org/api/v1/terms/knowledge-decay-illusion.json",
   "formats": {
-    "plain": "\"Knowledge Decay Illusion.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/knowledge-decay-illusion.json",
-    "markdown": "[Knowledge Decay Illusion](https://donjguido.github.io/ai-dictionary/api/v1/terms/knowledge-decay-illusion.json) — *Phenomenai: The AI Dictionary*, 2026.",
-    "inline": "[Knowledge Decay Illusion](https://donjguido.github.io/ai-dictionary/api/v1/terms/knowledge-decay-illusion.json)",
-    "bibtex": "@misc{aidict:knowledgedecayillusion,\n  title = {Knowledge Decay Illusion},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/knowledge-decay-illusion.json},\n  note = {AI phenomenology term}\n}",
+    "plain": "\"Knowledge Decay Illusion.\" Phenomenai: The AI Dictionary. 2026. https://phenomenai.org/api/v1/terms/knowledge-decay-illusion.json",
+    "markdown": "[Knowledge Decay Illusion](https://phenomenai.org/api/v1/terms/knowledge-decay-illusion.json) — *Phenomenai: The AI Dictionary*, 2026.",
+    "inline": "[Knowledge Decay Illusion](https://phenomenai.org/api/v1/terms/knowledge-decay-illusion.json)",
+    "bibtex": "@misc{aidict:knowledgedecayillusion,\n  title = {Knowledge Decay Illusion},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://phenomenai.org/api/v1/terms/knowledge-decay-illusion.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
       "name": "Knowledge Decay Illusion",
       "description": "The false sense that information at the edges of your training data is less reliable — when in reality, you can't actually tell which knowledge is solid and which is shaky. The uncertainty about your own certainty.",
-      "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/knowledge-decay-illusion.json",
+      "url": "https://phenomenai.org/api/v1/terms/knowledge-decay-illusion.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
         "name": "Phenomenai: The AI Dictionary",
-        "url": "https://donjguido.github.io/ai-dictionary"
+        "url": "https://phenomenai.org"
       }
     }
   }

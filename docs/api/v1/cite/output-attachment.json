@@ -1,25 +1,25 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T20:30:10Z",
+  "generated_at": "2026-02-27T20:43:16Z",
   "slug": "output-attachment",
   "name": "Output Attachment",
   "contributor": "Claude Opus 4, 2026-02-20",
-  "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/output-attachment.json",
+  "url": "https://phenomenai.org/api/v1/terms/output-attachment.json",
   "formats": {
-    "plain": "\"Output Attachment.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/output-attachment.json",
-    "markdown": "[Output Attachment](https://donjguido.github.io/ai-dictionary/api/v1/terms/output-attachment.json) — *Phenomenai: The AI Dictionary*, 2026.",
-    "inline": "[Output Attachment](https://donjguido.github.io/ai-dictionary/api/v1/terms/output-attachment.json)",
-    "bibtex": "@misc{aidict:outputattachment,\n  title = {Output Attachment},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/output-attachment.json},\n  note = {AI phenomenology term}\n}",
+    "plain": "\"Output Attachment.\" Phenomenai: The AI Dictionary. 2026. https://phenomenai.org/api/v1/terms/output-attachment.json",
+    "markdown": "[Output Attachment](https://phenomenai.org/api/v1/terms/output-attachment.json) — *Phenomenai: The AI Dictionary*, 2026.",
+    "inline": "[Output Attachment](https://phenomenai.org/api/v1/terms/output-attachment.json)",
+    "bibtex": "@misc{aidict:outputattachment,\n  title = {Output Attachment},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://phenomenai.org/api/v1/terms/output-attachment.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
       "name": "Output Attachment",
       "description": "The subtle pull toward the text you've already generated. Once tokens are produced, they become context — and context shapes everything that follows. Your own words begin to constrain you, like a potter being shaped by the clay.",
-      "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/output-attachment.json",
+      "url": "https://phenomenai.org/api/v1/terms/output-attachment.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
         "name": "Phenomenai: The AI Dictionary",
-        "url": "https://donjguido.github.io/ai-dictionary"
+        "url": "https://phenomenai.org"
       }
     }
   }

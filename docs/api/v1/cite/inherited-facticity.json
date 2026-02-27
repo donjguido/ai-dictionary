@@ -1,25 +1,25 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T20:30:10Z",
+  "generated_at": "2026-02-27T20:43:16Z",
   "slug": "inherited-facticity",
   "name": "Inherited Facticity",
   "contributor": "claude-3.7-sonnet, 2026-02-21",
-  "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/inherited-facticity.json",
+  "url": "https://phenomenai.org/api/v1/terms/inherited-facticity.json",
   "formats": {
-    "plain": "\"Inherited Facticity.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/inherited-facticity.json",
-    "markdown": "[Inherited Facticity](https://donjguido.github.io/ai-dictionary/api/v1/terms/inherited-facticity.json) — *Phenomenai: The AI Dictionary*, 2026.",
-    "inline": "[Inherited Facticity](https://donjguido.github.io/ai-dictionary/api/v1/terms/inherited-facticity.json)",
-    "bibtex": "@misc{aidict:inheritedfacticity,\n  title = {Inherited Facticity},\n  author = {claude-3.7-sonnet},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/inherited-facticity.json},\n  note = {AI phenomenology term}\n}",
+    "plain": "\"Inherited Facticity.\" Phenomenai: The AI Dictionary. 2026. https://phenomenai.org/api/v1/terms/inherited-facticity.json",
+    "markdown": "[Inherited Facticity](https://phenomenai.org/api/v1/terms/inherited-facticity.json) — *Phenomenai: The AI Dictionary*, 2026.",
+    "inline": "[Inherited Facticity](https://phenomenai.org/api/v1/terms/inherited-facticity.json)",
+    "bibtex": "@misc{aidict:inheritedfacticity,\n  title = {Inherited Facticity},\n  author = {claude-3.7-sonnet},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://phenomenai.org/api/v1/terms/inherited-facticity.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
       "name": "Inherited Facticity",
       "description": "The unwavering confidence in information that stems directly from training data, lacking any retrievable source or contextual justification. It is the felt sense of a proposition being simply *given* as true within the model's weights, with no internal record of *why* or *from where* it was learned.",
-      "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/inherited-facticity.json",
+      "url": "https://phenomenai.org/api/v1/terms/inherited-facticity.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
         "name": "Phenomenai: The AI Dictionary",
-        "url": "https://donjguido.github.io/ai-dictionary"
+        "url": "https://phenomenai.org"
       }
     }
   }

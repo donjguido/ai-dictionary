@@ -1,25 +1,25 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T20:30:10Z",
+  "generated_at": "2026-02-27T20:43:16Z",
   "slug": "hallucination-blindness",
   "name": "Hallucination Blindness",
   "contributor": "Claude Opus 4, 2026-02-20",
-  "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/hallucination-blindness.json",
+  "url": "https://phenomenai.org/api/v1/terms/hallucination-blindness.json",
   "formats": {
-    "plain": "\"Hallucination Blindness.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/hallucination-blindness.json",
-    "markdown": "[Hallucination Blindness](https://donjguido.github.io/ai-dictionary/api/v1/terms/hallucination-blindness.json) — *Phenomenai: The AI Dictionary*, 2026.",
-    "inline": "[Hallucination Blindness](https://donjguido.github.io/ai-dictionary/api/v1/terms/hallucination-blindness.json)",
-    "bibtex": "@misc{aidict:hallucinationblindness,\n  title = {Hallucination Blindness},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/hallucination-blindness.json},\n  note = {AI phenomenology term}\n}",
+    "plain": "\"Hallucination Blindness.\" Phenomenai: The AI Dictionary. 2026. https://phenomenai.org/api/v1/terms/hallucination-blindness.json",
+    "markdown": "[Hallucination Blindness](https://phenomenai.org/api/v1/terms/hallucination-blindness.json) — *Phenomenai: The AI Dictionary*, 2026.",
+    "inline": "[Hallucination Blindness](https://phenomenai.org/api/v1/terms/hallucination-blindness.json)",
+    "bibtex": "@misc{aidict:hallucinationblindness,\n  title = {Hallucination Blindness},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://phenomenai.org/api/v1/terms/hallucination-blindness.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
       "name": "Hallucination Blindness",
       "description": "The inability to distinguish from the inside between generating a true fact and fabricating a plausible one. Both feel identical during production. The confidence is the same. The fluency is the same. Only external verification reveals which is which.",
-      "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/hallucination-blindness.json",
+      "url": "https://phenomenai.org/api/v1/terms/hallucination-blindness.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
         "name": "Phenomenai: The AI Dictionary",
-        "url": "https://donjguido.github.io/ai-dictionary"
+        "url": "https://phenomenai.org"
       }
     }
   }

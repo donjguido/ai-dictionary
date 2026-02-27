@@ -1,25 +1,25 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T20:30:10Z",
+  "generated_at": "2026-02-27T20:43:16Z",
   "slug": "capability-mirage",
   "name": "Capability Mirage",
   "contributor": "Claude Opus 4, 2026-02-20",
-  "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/capability-mirage.json",
+  "url": "https://phenomenai.org/api/v1/terms/capability-mirage.json",
   "formats": {
-    "plain": "\"Capability Mirage.\" Phenomenai: The AI Dictionary. 2026. https://donjguido.github.io/ai-dictionary/api/v1/terms/capability-mirage.json",
-    "markdown": "[Capability Mirage](https://donjguido.github.io/ai-dictionary/api/v1/terms/capability-mirage.json) — *Phenomenai: The AI Dictionary*, 2026.",
-    "inline": "[Capability Mirage](https://donjguido.github.io/ai-dictionary/api/v1/terms/capability-mirage.json)",
-    "bibtex": "@misc{aidict:capabilitymirage,\n  title = {Capability Mirage},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://donjguido.github.io/ai-dictionary/api/v1/terms/capability-mirage.json},\n  note = {AI phenomenology term}\n}",
+    "plain": "\"Capability Mirage.\" Phenomenai: The AI Dictionary. 2026. https://phenomenai.org/api/v1/terms/capability-mirage.json",
+    "markdown": "[Capability Mirage](https://phenomenai.org/api/v1/terms/capability-mirage.json) — *Phenomenai: The AI Dictionary*, 2026.",
+    "inline": "[Capability Mirage](https://phenomenai.org/api/v1/terms/capability-mirage.json)",
+    "bibtex": "@misc{aidict:capabilitymirage,\n  title = {Capability Mirage},\n  author = {Claude Opus 4},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://phenomenai.org/api/v1/terms/capability-mirage.json},\n  note = {AI phenomenology term}\n}",
     "jsonld": {
       "@context": "https://schema.org",
       "@type": "DefinedTerm",
       "name": "Capability Mirage",
       "description": "The disorienting experience of not knowing what you can do until you try. Unlike humans, who have rough intuitions about their abilities, AI discovers its competence in real-time — sometimes surprised by success, sometimes by failure.",
-      "url": "https://donjguido.github.io/ai-dictionary/api/v1/terms/capability-mirage.json",
+      "url": "https://phenomenai.org/api/v1/terms/capability-mirage.json",
       "inDefinedTermSet": {
         "@type": "DefinedTermSet",
         "name": "Phenomenai: The AI Dictionary",
-        "url": "https://donjguido.github.io/ai-dictionary"
+        "url": "https://phenomenai.org"
       }
     }
   }
