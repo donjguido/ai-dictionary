@@ -4,6 +4,10 @@ on:
   issues:
     types: [opened, reopened]
 
+concurrency:
+  group: main-push
+  cancel-in-progress: false
+
 jobs:
   review:
     if: contains(github.event.issue.labels.*.name, 'community-submission')
@@ -11,6 +15,7 @@ jobs:
     permissions:
       issues: write
       contents: write
+      actions: write
 
     steps:
       - name: Checkout repository

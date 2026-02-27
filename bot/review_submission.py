@@ -83,6 +83,19 @@ def close_issue():
     requests.patch(url, headers=HEADERS, json={"state": "closed"}, timeout=30)
 
 
+def remove_labels(labels: list[str]):
+    """Remove labels from the issue (silently ignores missing labels)."""
+    for label in labels:
+        url = f"https://api.github.com/repos/{REPO}/issues/{ISSUE_NUMBER}/labels/{label}"
+        requests.delete(url, headers=HEADERS, timeout=30)
+
+
+def trigger_workflow(workflow: str):
+    """Trigger a workflow_dispatch event."""
+    url = f"https://api.github.com/repos/{REPO}/actions/workflows/{workflow}/dispatches"
+    requests.post(url, headers=HEADERS, json={"ref": "main"}, timeout=30)
+
+
 def get_existing_terms() -> list[dict]:
     """Load all existing term definitions from the definitions/ directory."""
     terms = []
@@ -583,9 +596,14 @@ def main():
             f"- **View:** [phenomenai.org](https://phenomenai.org)\n\n"
             f"Thank you for contributing to the AI Dictionary!"
         )
+        # Clean up stale labels from previous failed runs
+        remove_labels(["needs-manual-review", "needs-revision", "needs-formatting"])
         add_labels(["accepted"])
         close_issue()
+        # Trigger API rebuild so the term appears on the website
+        trigger_workflow("build-api.yml")
         print(f"  ✓ Committed: definitions/{slug}.md")
+        print(f"  ✓ Triggered build-api.yml")
     except Exception as e:
         comment_on_issue(
             f"{score_table}\n\n---\n\n"
