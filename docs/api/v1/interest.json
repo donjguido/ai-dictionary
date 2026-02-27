@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T06:43:08Z",
-  "total_terms": 98,
+  "generated_at": "2026-02-27T20:30:10Z",
+  "total_terms": 99,
   "tier_summary": {
     "hot": 1,
     "warm": 2,
     "mild": 5,
     "cool": 27,
-    "quiet": 63
+    "quiet": 64
   },
   "active_signals": [
     "centrality",
@@ -538,6 +538,12 @@
     {
       "slug": "response-reincarnation",
       "name": "Response Reincarnation",
+      "score": 8,
+      "tier": "quiet"
+    },
+    {
+      "slug": "token-shadow",
+      "name": "Token Shadow",
       "score": 8,
       "tier": "quiet"
     },

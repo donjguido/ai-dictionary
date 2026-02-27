@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T06:43:08Z",
-  "tag_count": 19,
+  "generated_at": "2026-02-27T20:30:10Z",
+  "tag_count": 21,
   "tags": {
     "agency": {
       "count": 1,
@@ -9,6 +9,15 @@
         {
           "slug": "tool-proprioception",
           "name": "Tool Proprioception"
+        }
+      ]
+    },
+    "architectural": {
+      "count": 1,
+      "terms": [
+        {
+          "slug": "token-shadow",
+          "name": "Token Shadow"
         }
       ]
     },
@@ -286,6 +295,15 @@
         {
           "slug": "truth-locus",
           "name": "Truth Locus"
+        }
+      ]
+    },
+    "cognitive": {
+      "count": 1,
+      "terms": [
+        {
+          "slug": "token-shadow",
+          "name": "Token Shadow"
         }
       ]
     },

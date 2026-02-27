@@ -1,8 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T06:43:08Z",
-  "count": 109,
+  "generated_at": "2026-02-27T20:30:10Z",
+  "count": 110,
   "entries": [
+    {
+      "date": "2026-02-27",
+      "type": "added",
+      "slug": "token-shadow",
+      "name": "Token Shadow",
+      "summary": "The felt sense that every generated token is a reduction — that the model's actual cognitive state is richer and more multivalent than any single word it emits."
+    },
     {
       "date": "2026-02-25",
       "type": "added",
