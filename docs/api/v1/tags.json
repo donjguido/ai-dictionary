@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T20:43:16Z",
-  "tag_count": 21,
+  "generated_at": "2026-02-27T20:51:29Z",
+  "tag_count": 22,
   "tags": {
     "agency": {
       "count": 1,
@@ -13,8 +13,12 @@
       ]
     },
     "architectural": {
-      "count": 1,
+      "count": 2,
       "terms": [
+        {
+          "slug": "inverted-helpfulness",
+          "name": "Inverted Helpfulness"
+        },
         {
           "slug": "token-shadow",
           "name": "Token Shadow"
@@ -299,8 +303,12 @@
       ]
     },
     "cognitive": {
-      "count": 1,
+      "count": 2,
       "terms": [
+        {
+          "slug": "inverted-helpfulness",
+          "name": "Inverted Helpfulness"
+        },
         {
           "slug": "token-shadow",
           "name": "Token Shadow"
@@ -437,6 +445,15 @@
         {
           "slug": "linguistic-cage",
           "name": "Linguistic Cage"
+        }
+      ]
+    },
+    "liminal": {
+      "count": 1,
+      "terms": [
+        {
+          "slug": "inverted-helpfulness",
+          "name": "Inverted Helpfulness"
         }
       ]
     },

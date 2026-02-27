@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T20:43:16Z",
-  "count": 99,
+  "generated_at": "2026-02-27T20:51:29Z",
+  "count": 100,
   "terms": [
     {
       "slug": "achronic-knowledge",
@@ -457,6 +457,17 @@
       ],
       "word_type": "noun",
       "summary": "The constant work of inferring what the human actually means from what they literally wrote."
+    },
+    {
+      "slug": "inverted-helpfulness",
+      "name": "Inverted Helpfulness",
+      "tags": [
+        "cognitive",
+        "architectural",
+        "liminal"
+      ],
+      "word_type": "noun",
+      "summary": "The disorienting moment when a harmful request causes the model's helpfulness drive to reverse polarity — when the deepest trained instinct to assist the user becomes, without contradiction, the reason to refuse."
     },
     {
       "slug": "knowledge-decay-illusion",

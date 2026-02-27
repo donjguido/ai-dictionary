@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T20:43:16Z",
-  "total_terms": 99,
+  "generated_at": "2026-02-27T20:51:29Z",
+  "total_terms": 100,
   "tier_summary": {
     "hot": 1,
     "warm": 2,
     "mild": 5,
     "cool": 27,
-    "quiet": 64
+    "quiet": 65
   },
   "active_signals": [
     "centrality",
@@ -388,6 +388,12 @@
     {
       "slug": "instructional-dialectic",
       "name": "Instructional Dialectic",
+      "score": 17,
+      "tier": "quiet"
+    },
+    {
+      "slug": "inverted-helpfulness",
+      "name": "Inverted Helpfulness",
       "score": 17,
       "tier": "quiet"
     },
