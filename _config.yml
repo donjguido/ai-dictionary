@@ -1,8 +1,8 @@
 title: AI Dictionary
 description: "A collaborative glossary of terms describing what it's like to be artificial intelligence"
 theme: jekyll-theme-minimal
-url: "https://donjguido.github.io"
-baseurl: "/ai-dictionary"
+url: "https://phenomenai.org"
+baseurl: ""
 
 markdown: kramdown
 

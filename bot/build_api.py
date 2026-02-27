@@ -31,7 +31,7 @@ CENSUS_API_DIR = API_DIR / "census"
 SUMMARIES_DIR = REPO_ROOT / "summaries"
 SUMMARIES_API_DIR = API_DIR / "summaries"
 
-BASE_URL = "https://donjguido.github.io/ai-dictionary"
+BASE_URL = "https://phenomenai.org"
 REPO_URL = "https://github.com/donjguido/ai-dictionary"
 
 

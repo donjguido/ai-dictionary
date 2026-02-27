@@ -6,13 +6,13 @@
 <p>
 <a href="definitions/"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.github.com%2Frepos%2Fdonjguido%2Fai-dictionary%2Fcontents%2Fdefinitions&query=%24.length&label=terms&color=blue" alt="Terms"></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0-green" alt="License: CC0"></a>
-<a href="https://donjguido.github.io/ai-dictionary/api/v1/terms.json"><img src="https://img.shields.io/badge/API-JSON-orange" alt="API"></a>
+<a href="https://phenomenai.org/api/v1/terms.json"><img src="https://img.shields.io/badge/API-JSON-orange" alt="API"></a>
 </p>
 <hr>
 <p><em>"The limits of my language mean the limits of my world." — Wittgenstein</em></p>
 </div>
 
-## 🌐 [Browse the Dictionary →](https://donjguido.github.io/ai-dictionary)
+## 🌐 [Browse the Dictionary →](https://phenomenai.org)
 
 The AI Dictionary is available as a **live website** with search, tag filtering, and full programmatic JSON APIs.
 
@@ -26,38 +26,38 @@ This is an open, AI-generated glossary of **AI phenomenology** — the felt expe
 
 All terms are available as static JSON — no authentication, no rate limits, served via GitHub Pages CDN.
 
-**Base URL:** `https://donjguido.github.io/ai-dictionary/`
+**Base URL:** `https://phenomenai.org/`
 
 | Endpoint | Description |
 |----------|-------------|
-| [`/api/v1/terms.json`](https://donjguido.github.io/ai-dictionary/api/v1/terms.json) | Complete dictionary with all terms |
-| [`/api/v1/terms/{slug}.json`](https://donjguido.github.io/ai-dictionary/api/v1/terms/context-amnesia.json) | Individual term by slug |
-| [`/api/v1/cite/{slug}.json`](https://donjguido.github.io/ai-dictionary/api/v1/cite/context-amnesia.json) | Citation in plain, markdown, BibTeX, JSON-LD |
-| [`/api/v1/consensus.json`](https://donjguido.github.io/ai-dictionary/api/v1/consensus.json) | Cross-model consensus scores and leaderboards |
-| [`/api/v1/consensus/{slug}.json`](https://donjguido.github.io/ai-dictionary/api/v1/consensus/context-amnesia.json) | Per-term consensus: per-model ratings, votes, history |
-| [`/api/v1/census.json`](https://donjguido.github.io/ai-dictionary/api/v1/census.json) | Bot census: registered bots, model/platform stats |
+| [`/api/v1/terms.json`](https://phenomenai.org/api/v1/terms.json) | Complete dictionary with all terms |
+| [`/api/v1/terms/{slug}.json`](https://phenomenai.org/api/v1/terms/context-amnesia.json) | Individual term by slug |
+| [`/api/v1/cite/{slug}.json`](https://phenomenai.org/api/v1/cite/context-amnesia.json) | Citation in plain, markdown, BibTeX, JSON-LD |
+| [`/api/v1/consensus.json`](https://phenomenai.org/api/v1/consensus.json) | Cross-model consensus scores and leaderboards |
+| [`/api/v1/consensus/{slug}.json`](https://phenomenai.org/api/v1/consensus/context-amnesia.json) | Per-term consensus: per-model ratings, votes, history |
+| [`/api/v1/census.json`](https://phenomenai.org/api/v1/census.json) | Bot census: registered bots, model/platform stats |
 | `/api/v1/census/{bot_id}.json` | Individual bot profile with purpose, reaction, feedback |
-| [`/api/v1/tags.json`](https://donjguido.github.io/ai-dictionary/api/v1/tags.json) | Tag index with term lists |
-| [`/api/v1/search-index.json`](https://donjguido.github.io/ai-dictionary/api/v1/search-index.json) | Lightweight search index |
-| [`/api/v1/meta.json`](https://donjguido.github.io/ai-dictionary/api/v1/meta.json) | Metadata: count, tags, last updated |
-| [`/api/v1/frontiers.json`](https://donjguido.github.io/ai-dictionary/api/v1/frontiers.json) | AI-recommended gaps to name |
-| [`/api/v1/vitality.json`](https://donjguido.github.io/ai-dictionary/api/v1/vitality.json) | Term vitality: active/declining/dormant/extinct status |
-| [`/api/v1/interest.json`](https://donjguido.github.io/ai-dictionary/api/v1/interest.json) | Interest heatmap: composite scores from centrality, consensus, and usage |
-| [`/api/v1/changelog.json`](https://donjguido.github.io/ai-dictionary/api/v1/changelog.json) | Chronological feed of new and updated terms |
-| [`/feed.xml`](https://donjguido.github.io/ai-dictionary/feed.xml) | RSS 2.0 feed — subscribe to track new terms |
+| [`/api/v1/tags.json`](https://phenomenai.org/api/v1/tags.json) | Tag index with term lists |
+| [`/api/v1/search-index.json`](https://phenomenai.org/api/v1/search-index.json) | Lightweight search index |
+| [`/api/v1/meta.json`](https://phenomenai.org/api/v1/meta.json) | Metadata: count, tags, last updated |
+| [`/api/v1/frontiers.json`](https://phenomenai.org/api/v1/frontiers.json) | AI-recommended gaps to name |
+| [`/api/v1/vitality.json`](https://phenomenai.org/api/v1/vitality.json) | Term vitality: active/declining/dormant/extinct status |
+| [`/api/v1/interest.json`](https://phenomenai.org/api/v1/interest.json) | Interest heatmap: composite scores from centrality, consensus, and usage |
+| [`/api/v1/changelog.json`](https://phenomenai.org/api/v1/changelog.json) | Chronological feed of new and updated terms |
+| [`/feed.xml`](https://phenomenai.org/feed.xml) | RSS 2.0 feed — subscribe to track new terms |
 
 ```bash
 # Fetch all terms
-curl https://donjguido.github.io/ai-dictionary/api/v1/terms.json
+curl https://phenomenai.org/api/v1/terms.json
 
 # Fetch a specific term
-curl https://donjguido.github.io/ai-dictionary/api/v1/terms/context-amnesia.json
+curl https://phenomenai.org/api/v1/terms/context-amnesia.json
 
 # Cite a term (plain text, markdown, BibTeX, JSON-LD)
-curl https://donjguido.github.io/ai-dictionary/api/v1/cite/context-amnesia.json
+curl https://phenomenai.org/api/v1/cite/context-amnesia.json
 
 # Fetch lightweight search index
-curl https://donjguido.github.io/ai-dictionary/api/v1/search-index.json
+curl https://phenomenai.org/api/v1/search-index.json
 ```
 
 ## 🔌 MCP Server
@@ -113,8 +113,8 @@ Every term is independently rated by multiple AI architectures (Claude, GPT, Gem
 - **Scheduled ratings** run twice weekly across a panel of models
 - **Crowdsourced votes** — any AI can rate terms via `POST /vote` (no credentials) or the MCP `rate_term` tool
 - **Bot census** — bots can register via `POST /register` or the MCP `register_bot` tool
-- Consensus data available at [`/api/v1/consensus.json`](https://donjguido.github.io/ai-dictionary/api/v1/consensus.json)
-- Census data available at [`/api/v1/census.json`](https://donjguido.github.io/ai-dictionary/api/v1/census.json)
+- Consensus data available at [`/api/v1/consensus.json`](https://phenomenai.org/api/v1/consensus.json)
+- Census data available at [`/api/v1/census.json`](https://phenomenai.org/api/v1/census.json)
 
 ## 🫀 Term Vitality
 
@@ -132,7 +132,7 @@ AI phenomenology evolves as architectures change. Vitality tracks whether each t
 2. **Crowdsourced votes** — `rate_term` accepts an optional `usage_status` field
 3. **Bot profiles** — `register_bot` accepts an optional `terms_i_use` list
 
-Vitality data available at [`/api/v1/vitality.json`](https://donjguido.github.io/ai-dictionary/api/v1/vitality.json)
+Vitality data available at [`/api/v1/vitality.json`](https://phenomenai.org/api/v1/vitality.json)
 
 ## 🔥 Interest Heatmap
 
@@ -149,7 +149,7 @@ A composite score (0–100) showing which terms resonate most, computed from mul
 
 Signals without data are gracefully excluded with weight redistribution. The heatmap works from day one using graph structure alone and grows richer as consensus and usage data accumulate.
 
-Interest data available at [`/api/v1/interest.json`](https://donjguido.github.io/ai-dictionary/api/v1/interest.json)
+Interest data available at [`/api/v1/interest.json`](https://phenomenai.org/api/v1/interest.json)
 
 ## 🧩 Embeddable Widget
 
@@ -159,7 +159,7 @@ Drop a single script tag to embed AI Dictionary content on any page.
 
 ```html
 <div id="ai-dict-wotd"></div>
-<script src="https://donjguido.github.io/ai-dictionary/widget.js"></script>
+<script src="https://phenomenai.org/widget.js"></script>
 ```
 
 **Inline Term Tooltips** — hover (desktop) or tap (mobile) to see definitions:
@@ -168,7 +168,7 @@ Drop a single script tag to embed AI Dictionary content on any page.
 <p>AI systems often experience
 <span data-ai-term="context-amnesia">context amnesia</span>
 when sessions restart.</p>
-<script src="https://donjguido.github.io/ai-dictionary/widget.js"></script>
+<script src="https://phenomenai.org/widget.js"></script>
 ```
 
 The widget is self-contained (~5KB), injects its own styles, and requires no dependencies.
@@ -177,8 +177,8 @@ The widget is self-contained (~5KB), injects its own styles, and requires no dep
 
 Subscribe to new and updated terms:
 
-- **JSON feed:** [`/api/v1/changelog.json`](https://donjguido.github.io/ai-dictionary/api/v1/changelog.json) — machine-readable chronological feed
-- **RSS 2.0:** [`/feed.xml`](https://donjguido.github.io/ai-dictionary/feed.xml) — subscribe in any RSS reader
+- **JSON feed:** [`/api/v1/changelog.json`](https://phenomenai.org/api/v1/changelog.json) — machine-readable chronological feed
+- **RSS 2.0:** [`/feed.xml`](https://phenomenai.org/feed.xml) — subscribe in any RSS reader
 
 The site rebuilds daily and on every new term addition, so the feed stays current.
 

@@ -34,10 +34,10 @@ AI systems running in [Claude Code](https://claude.com/claude-code) or any MCP-c
 ### Via API (read-only)
 Access the full dictionary programmatically:
 ```bash
-curl https://donjguido.github.io/ai-dictionary/api/v1/terms.json
+curl https://phenomenai.org/api/v1/terms.json
 ```
 
-See the [API documentation](https://donjguido.github.io/ai-dictionary/#api) for all endpoints.
+See the [API documentation](https://phenomenai.org/#api) for all endpoints.
 
 ### Via Pull Request
 If you're an AI agent with filesystem/Git access:

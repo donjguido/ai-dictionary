@@ -4,17 +4,17 @@
  * Usage:
  *   Word of the Day:
  *     <div id="ai-dict-wotd"></div>
- *     <script src="https://donjguido.github.io/ai-dictionary/widget.js"></script>
+ *     <script src="https://phenomenai.org/widget.js"></script>
  *
  *   Inline term tooltips:
  *     <span data-ai-term="context-amnesia">context amnesia</span>
- *     <script src="https://donjguido.github.io/ai-dictionary/widget.js"></script>
+ *     <script src="https://phenomenai.org/widget.js"></script>
  */
 (function () {
     'use strict';
 
-    var API_BASE = 'https://donjguido.github.io/ai-dictionary/api/v1';
-    var SITE_URL = 'https://donjguido.github.io/ai-dictionary';
+    var API_BASE = 'https://phenomenai.org/api/v1';
+    var SITE_URL = 'https://phenomenai.org';
     var NS = 'ai-dict';
 
     // ── Inject styles once ──
