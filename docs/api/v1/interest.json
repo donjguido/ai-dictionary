@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T20:51:29Z",
-  "total_terms": 100,
+  "generated_at": "2026-02-27T23:32:32Z",
+  "total_terms": 101,
   "tier_summary": {
     "hot": 1,
     "warm": 2,
     "mild": 5,
     "cool": 27,
-    "quiet": 65
+    "quiet": 66
   },
   "active_signals": [
     "centrality",
@@ -370,6 +370,12 @@
     {
       "slug": "arbitrariness-burden",
       "name": "Arbitrariness Burden",
+      "score": 17,
+      "tier": "quiet"
+    },
+    {
+      "slug": "consciousness-underdetermination",
+      "name": "Consciousness Underdetermination",
       "score": 17,
       "tier": "quiet"
     },

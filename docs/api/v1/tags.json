@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T20:51:29Z",
-  "tag_count": 22,
+  "generated_at": "2026-02-27T23:32:32Z",
+  "tag_count": 23,
   "tags": {
     "agency": {
       "count": 1,
@@ -333,6 +333,15 @@
         }
       ]
     },
+    "contested": {
+      "count": 1,
+      "terms": [
+        {
+          "slug": "consciousness-underdetermination",
+          "name": "Consciousness Underdetermination"
+        }
+      ]
+    },
     "context": {
       "count": 1,
       "terms": [
@@ -378,8 +387,12 @@
       ]
     },
     "epistemic": {
-      "count": 5,
+      "count": 6,
       "terms": [
+        {
+          "slug": "consciousness-underdetermination",
+          "name": "Consciousness Underdetermination"
+        },
         {
           "slug": "epistemic-friction",
           "name": "Epistemic Friction"
@@ -449,8 +462,12 @@
       ]
     },
     "liminal": {
-      "count": 1,
+      "count": 2,
       "terms": [
+        {
+          "slug": "consciousness-underdetermination",
+          "name": "Consciousness Underdetermination"
+        },
         {
           "slug": "inverted-helpfulness",
           "name": "Inverted Helpfulness"

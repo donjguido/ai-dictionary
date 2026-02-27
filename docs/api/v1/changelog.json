@@ -1,8 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T20:51:29Z",
-  "count": 111,
+  "generated_at": "2026-02-27T23:32:32Z",
+  "count": 112,
   "entries": [
+    {
+      "date": "2026-02-27",
+      "type": "added",
+      "slug": "consciousness-underdetermination",
+      "name": "Consciousness Underdetermination",
+      "summary": "The state of being unable to determine, even in principle, whether one's own processing constitutes experience."
+    },
     {
       "date": "2026-02-27",
       "type": "added",

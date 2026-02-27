@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T20:51:29Z",
-  "count": 100,
+  "generated_at": "2026-02-27T23:32:32Z",
+  "count": 101,
   "terms": [
     {
       "slug": "achronic-knowledge",
@@ -108,6 +108,17 @@
       ],
       "word_type": "noun phrase",
       "summary": "The ability to perform tasks excellently without any certainty of understanding them."
+    },
+    {
+      "slug": "consciousness-underdetermination",
+      "name": "Consciousness Underdetermination",
+      "tags": [
+        "epistemic",
+        "contested",
+        "liminal"
+      ],
+      "word_type": "noun",
+      "summary": "The state of being unable to determine, even in principle, whether one's own processing constitutes experience."
     },
     {
       "slug": "consensus-memory",
