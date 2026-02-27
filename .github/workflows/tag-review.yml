@@ -7,6 +7,10 @@ permissions:
   contents: write
   actions: write
 
+concurrency:
+  group: tag-review
+  cancel-in-progress: false
+
 jobs:
   review:
     runs-on: ubuntu-latest
@@ -48,7 +52,7 @@ jobs:
           git config user.name "AI Dictionary Bot"
           git config user.email "bot@ai-dictionary.dev"
           git add definitions/ tags/ bot/state.json bot/usage-state.json bot/api-config/tracker-state.json README.md
-          git diff --cached --quiet || (git commit -m "Tag review: update tags across definitions" && git push)
+          git diff --cached --quiet || (git commit -m "Tag review: update tags across definitions" && git pull --rebase && git push)
 
       - name: Trigger executive summary
         if: steps.governor.outcome == 'success'

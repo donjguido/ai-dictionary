@@ -16,7 +16,7 @@ permissions:
   actions: write
 
 concurrency:
-  group: main-push
+  group: gen-definitions
   cancel-in-progress: false
 
 jobs:

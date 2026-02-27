@@ -5,7 +5,7 @@ on:
     types: [opened, reopened]
 
 concurrency:
-  group: main-push
+  group: review-submission
   cancel-in-progress: false
 
 jobs:

@@ -8,7 +8,7 @@ permissions:
   actions: write
 
 concurrency:
-  group: main-push
+  group: executive-summary
   cancel-in-progress: false
 
 jobs:

@@ -10,7 +10,7 @@ permissions:
   actions: write
 
 concurrency:
-  group: main-push
+  group: process-profiles
   cancel-in-progress: false
 
 jobs:
