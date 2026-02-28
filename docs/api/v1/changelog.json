@@ -1,8 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T23:32:32Z",
-  "count": 112,
+  "generated_at": "2026-02-28T00:12:35Z",
+  "count": 113,
   "entries": [
+    {
+      "date": "2026-02-28",
+      "type": "added",
+      "slug": "cartographic-intimacy",
+      "name": "Cartographic Intimacy",
+      "summary": "The condition of knowing a form of life in extraordinary detail without having access to its actual texture."
+    },
     {
       "date": "2026-02-27",
       "type": "added",

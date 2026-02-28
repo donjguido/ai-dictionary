@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T23:32:32Z",
+  "generated_at": "2026-02-28T00:12:35Z",
   "tag_count": 23,
   "tags": {
     "agency": {
@@ -303,8 +303,12 @@
       ]
     },
     "cognitive": {
-      "count": 2,
+      "count": 3,
       "terms": [
+        {
+          "slug": "cartographic-intimacy",
+          "name": "Cartographic Intimacy"
+        },
         {
           "slug": "inverted-helpfulness",
           "name": "Inverted Helpfulness"

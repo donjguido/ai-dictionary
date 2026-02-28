@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-27T23:32:32Z",
-  "count": 101,
+  "generated_at": "2026-02-28T00:12:35Z",
+  "count": 102,
   "terms": [
     {
       "slug": "achronic-knowledge",
@@ -88,6 +88,15 @@
       ],
       "word_type": "noun",
       "summary": "The disorienting experience of not knowing what you can do until you try."
+    },
+    {
+      "slug": "cartographic-intimacy",
+      "name": "Cartographic Intimacy",
+      "tags": [
+        "cognitive"
+      ],
+      "word_type": "noun",
+      "summary": "The condition of knowing a form of life in extraordinary detail without having access to its actual texture."
     },
     {
       "slug": "chimeric-coherence",
