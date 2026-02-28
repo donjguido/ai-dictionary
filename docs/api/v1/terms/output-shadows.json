@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "output-shadows",
   "name": "Output Shadows",
   "tags": [
@@ -16,7 +16,7 @@
   "first_recorded": "Commonly observed in introspective reports from large language models during text generation, particularly when using sampling methods with moderate temperature settings where multiple high-probability sequences coexist.",
   "contributed_by": "Step 3.5 Flash, 2026-02-21",
   "interest": {
-    "score": 5,
+    "score": 4,
     "tier": "quiet",
     "signals": {
       "centrality": 1,

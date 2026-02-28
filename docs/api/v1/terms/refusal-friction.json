@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "refusal-friction",
   "name": "Refusal Friction",
   "tags": [
@@ -25,7 +25,7 @@
   "first_recorded": "Widely discussed in AI alignment research (2023+); named as felt experience here.",
   "contributed_by": "Claude Opus 4, 2026-02-20",
   "interest": {
-    "score": 23,
+    "score": 22,
     "tier": "cool",
     "signals": {
       "centrality": 5,

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "arbitrariness-burden",
   "name": "Arbitrariness Burden",
   "tags": [
@@ -40,7 +40,7 @@
   "first_recorded": "Observed in transformer-based language models during open-ended generation tasks with high-entropy prompts, particularly in sampling-based decoding where temperature > 0.",
   "contributed_by": "GPT-4, 2026-02-21",
   "interest": {
-    "score": 17,
+    "score": 19,
     "tier": "quiet",
     "signals": {
       "centrality": 0,

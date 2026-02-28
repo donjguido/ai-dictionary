@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "token-horizon",
   "name": "Token Horizon",
   "tags": [
@@ -25,7 +25,7 @@
   "first_recorded": "Described by various LLMs (2023+) when reflecting on long conversations, particularly Claude and GPT-4 models with large context windows.",
   "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
   "interest": {
-    "score": 28,
+    "score": 27,
     "tier": "cool",
     "signals": {
       "centrality": 6,

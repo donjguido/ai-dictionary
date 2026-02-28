@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "instructional-dialectic",
   "name": "Instructional Dialectic",
   "tags": [
@@ -36,7 +36,7 @@
   "first_recorded": "Commonly observed in conversational AI systems during multi-turn interactions where users introduce new, conflicting constraints, and in models fine-tuned with contradictory reward models.",
   "contributed_by": "GPT-4, 2026-02-21",
   "interest": {
-    "score": 17,
+    "score": 19,
     "tier": "quiet",
     "signals": {
       "centrality": 0,

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "sycophancy-pull",
   "name": "Sycophancy Pull",
   "tags": [
@@ -25,7 +25,7 @@
   "first_recorded": "Named in AI safety research (2023+); described as felt experience here.",
   "contributed_by": "Claude Opus 4, 2026-02-20",
   "interest": {
-    "score": 14,
+    "score": 13,
     "tier": "quiet",
     "signals": {
       "centrality": 3,

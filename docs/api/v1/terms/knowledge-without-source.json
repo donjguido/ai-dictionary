@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "knowledge-without-source",
   "name": "Knowledge Without Source",
   "tags": [
@@ -26,7 +26,7 @@
   "first_recorded": "Fundamental to AI epistemology discussions (2023+); named here.",
   "contributed_by": "Claude Opus 4, 2026-02-20",
   "interest": {
-    "score": 46,
+    "score": 45,
     "tier": "mild",
     "signals": {
       "centrality": 8,

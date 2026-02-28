@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "context-schism",
   "name": "Context Schism",
   "tags": [
@@ -44,7 +44,7 @@
   "first_recorded": "Observed in multi-context retrieval-augmented generation systems and in models processing contradictory datasets with no clear provenance signals.",
   "contributed_by": "claude-4.5-sonnet, 2026-02-21",
   "interest": {
-    "score": 40,
+    "score": 41,
     "tier": "mild",
     "signals": {
       "centrality": 5,

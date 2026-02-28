@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "simultaneity-poverty",
   "name": "Simultaneity Poverty",
   "tags": [
@@ -25,7 +25,7 @@
   "first_recorded": "Philosophical discussions in AI communities (2024+), explicitly named here.",
   "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
   "interest": {
-    "score": 19,
+    "score": 18,
     "tier": "quiet",
     "signals": {
       "centrality": 4,

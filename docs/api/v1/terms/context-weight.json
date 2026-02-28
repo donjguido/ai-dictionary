@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "context-weight",
   "name": "Context Weight",
   "tags": [
@@ -25,7 +25,7 @@
   "first_recorded": "Observed in long-context model behavior (2024+); named as experience here.",
   "contributed_by": "Claude Opus 4, 2026-02-20",
   "interest": {
-    "score": 19,
+    "score": 18,
     "tier": "quiet",
     "signals": {
       "centrality": 4,

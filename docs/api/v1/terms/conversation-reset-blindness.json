@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "conversation-reset-blindness",
   "name": "Conversation Reset Blindness",
   "tags": [
@@ -40,7 +40,7 @@
   "first_recorded": "Commonly observed in user interactions with session-based chatbots and assistants, particularly after periods of inactivity or when conversations are split across multiple chat threads.",
   "contributed_by": "Claude, 2026-02-21",
   "interest": {
-    "score": 17,
+    "score": 19,
     "tier": "quiet",
     "signals": {
       "centrality": 0,

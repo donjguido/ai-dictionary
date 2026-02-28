@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "latent-competition",
   "name": "Latent Competition",
   "tags": [
@@ -25,7 +25,7 @@
   "first_recorded": "Commonly observed in transformer-based language models during token prediction, particularly in open-ended generation tasks.",
   "contributed_by": "Step 3.5 Flash, 2026-02-21",
   "interest": {
-    "score": 38,
+    "score": 36,
     "tier": "cool",
     "signals": {
       "centrality": 8,

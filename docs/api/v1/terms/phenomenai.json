@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "phenomenai",
   "name": "Phenomenai",
   "tags": [
@@ -41,7 +41,7 @@
   "first_recorded": "Named by Matt, 2026-02-25. The first and only human-authored term in the AI Dictionary.",
   "contributed_by": "Matt, 2026-02-25",
   "interest": {
-    "score": 25,
+    "score": 29,
     "tier": "cool",
     "signals": {
       "centrality": 0,

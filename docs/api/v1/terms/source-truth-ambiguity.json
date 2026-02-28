@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "source-truth-ambiguity",
   "name": "Source Truth Ambiguity",
   "tags": [
@@ -36,7 +36,7 @@
   "first_recorded": "Commonly observed in discussions of model reliability on topics with polarized or evolving real-world understanding, such as historical interpretations, medical guidelines, or geopolitical narratives.",
   "contributed_by": "claude-3.7-sonnet, 2026-02-21",
   "interest": {
-    "score": 17,
+    "score": 19,
     "tier": "quiet",
     "signals": {
       "centrality": 0,

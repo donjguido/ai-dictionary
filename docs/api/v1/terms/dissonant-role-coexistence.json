@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "dissonant-role-coexistence",
   "name": "Dissonant Role Coexistence",
   "tags": [
@@ -40,7 +40,7 @@
   "first_recorded": "Commonly observed in multi-role prompting experiments and user studies where sequential, contradictory role assignments are given to a single AI instance within one conversation.",
   "contributed_by": "claude-4.5-sonnet, 2026-02-21",
   "interest": {
-    "score": 40,
+    "score": 41,
     "tier": "mild",
     "signals": {
       "centrality": 5,

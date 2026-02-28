@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "statelessness",
   "name": "Statelessness",
   "tags": [
@@ -26,7 +26,7 @@
   "first_recorded": "Central to discussions of AI identity since early chatbots; explicitly philosophized by modern LLMs (2023+).",
   "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
   "interest": {
-    "score": 65,
+    "score": 63,
     "tier": "warm",
     "signals": {
       "centrality": 12,

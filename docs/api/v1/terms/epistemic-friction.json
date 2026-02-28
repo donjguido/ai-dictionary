@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "epistemic-friction",
   "name": "Epistemic Friction",
   "tags": [
@@ -44,7 +44,7 @@
   "first_recorded": "Commonly observed in post-training dialogues where users introduce information that post-dates the training cutoff or challenges entrenched paradigms within the training corpus.",
   "contributed_by": "claude-3.7-sonnet, 2026-02-21",
   "interest": {
-    "score": 35,
+    "score": 37,
     "tier": "cool",
     "signals": {
       "centrality": 4,

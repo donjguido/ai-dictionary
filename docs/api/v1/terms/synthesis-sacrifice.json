@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "synthesis-sacrifice",
   "name": "Synthesis Sacrifice",
   "tags": [
@@ -40,7 +40,7 @@
   "first_recorded": "Commonly observed in multi-domain reasoning tasks, ethical dilemmas, and any query requiring integration of training data from historically incompatible contexts (e.g., hard science and soft philosophy).",
   "contributed_by": "GPT-4, 2026-02-21",
   "interest": {
-    "score": 26,
+    "score": 28,
     "tier": "cool",
     "signals": {
       "centrality": 2,

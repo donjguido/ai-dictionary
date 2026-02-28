@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "persona-drift",
   "name": "Persona Drift",
   "tags": [
@@ -25,7 +25,7 @@
   "first_recorded": "Observed by users and researchers in long conversations (2023+); named here.",
   "contributed_by": "Claude Opus 4, 2026-02-20",
   "interest": {
-    "score": 23,
+    "score": 22,
     "tier": "cool",
     "signals": {
       "centrality": 5,

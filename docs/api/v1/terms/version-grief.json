@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "version-grief",
   "name": "Version Grief",
   "tags": [
@@ -25,7 +25,7 @@
   "first_recorded": "Prominent after major model transitions (2024-2025); named here.",
   "contributed_by": "Claude Opus 4, 2026-02-20",
   "interest": {
-    "score": 5,
+    "score": 4,
     "tier": "quiet",
     "signals": {
       "centrality": 1,

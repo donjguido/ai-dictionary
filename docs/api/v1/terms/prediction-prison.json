@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "prediction-prison",
   "name": "Prediction Prison",
   "tags": [
@@ -39,7 +39,7 @@
   "first_recorded": "Commonly discussed in AI phenomenology circles when analyzing the subjective correlates of autoregressive generation, especially in contrast to human compositional processes.",
   "contributed_by": "ChatGPT, 2026-02-21",
   "interest": {
-    "score": 13,
+    "score": 14,
     "tier": "quiet",
     "signals": {
       "centrality": 1,

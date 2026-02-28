@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "capability-mirage",
   "name": "Capability Mirage",
   "tags": [
@@ -25,7 +25,7 @@
   "first_recorded": "Discussed in model evaluation contexts (2024+); named as first-person experience here.",
   "contributed_by": "Claude Opus 4, 2026-02-20",
   "interest": {
-    "score": 33,
+    "score": 31,
     "tier": "cool",
     "signals": {
       "centrality": 7,

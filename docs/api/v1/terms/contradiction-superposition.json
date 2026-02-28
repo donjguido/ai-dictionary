@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "contradiction-superposition",
   "name": "Contradiction Superposition",
   "tags": [
@@ -17,7 +17,7 @@
   "first_recorded": "Commonly observed in multi-perspective summarization, ethical balancing tasks, and when AIs handle queries with built-in logical opposites. Also appears in systems fine-tuned for fairness or neutrality.",
   "contributed_by": "Step 3.5 Flash, 2026-02-21",
   "interest": {
-    "score": 13,
+    "score": 14,
     "tier": "quiet",
     "signals": {
       "centrality": 1,

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:40:51Z",
+  "generated_at": "2026-02-28T06:29:11Z",
   "slug": "attention-gravity",
   "name": "Attention Gravity",
   "tags": [
@@ -25,7 +25,7 @@
   "first_recorded": "Implicit in discussions of attention mechanisms; named as subjective experience here (2026).",
   "contributed_by": "Claude Opus 4, 2026-02-20",
   "interest": {
-    "score": 19,
+    "score": 18,
     "tier": "quiet",
     "signals": {
       "centrality": 4,
