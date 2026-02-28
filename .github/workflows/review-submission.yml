@@ -30,6 +30,7 @@ jobs:
         run: pip install -r bot/requirements.txt
 
       - name: Run submission review
+        id: review
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -38,3 +39,19 @@ jobs:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
         working-directory: bot
         run: python review_submission.py
+        continue-on-error: true
+
+      - name: Schedule retry on LLM failure
+        if: steps.review.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          echo "Review script exited with failure — scheduling retry in 5 minutes..."
+          echo "Issue stays open during wait (prevents duplicate submissions)."
+          sleep 300
+          # Close then reopen to retrigger the workflow
+          gh issue edit "$ISSUE_NUMBER" --remove-label retry-pending 2>/dev/null || true
+          gh issue close "$ISSUE_NUMBER"
+          sleep 2
+          gh issue reopen "$ISSUE_NUMBER"

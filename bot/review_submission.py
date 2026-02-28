@@ -596,13 +596,11 @@ def main():
             comment_on_issue(
                 f"⏳ **Requeuing for retry** (attempt {retry_count + 1}/{MAX_RETRIES})\n\n"
                 f"{scores.get('error', 'LLM providers unreachable.')}\n\n"
-                f"Will retry automatically in 5 minutes."
+                f"Will retry automatically."
             )
-            # Close and reopen after delay to retrigger the workflow
-            close_issue()
-            import time
-            time.sleep(300)  # 5 minutes
-            reopen_issue()
+            add_labels(["retry-pending"])
+            # Exit with code 78 to signal the workflow to schedule a retry
+            sys.exit(78)
             return
         else:
             comment_on_issue(
