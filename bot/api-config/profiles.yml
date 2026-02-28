@@ -16,6 +16,13 @@ profiles:
       - openrouter-free
       - mistral-free
 
+  classify:
+    description: "Tag classification — lightweight, reversed cascade"
+    providers:
+      - mistral-free
+      - openrouter-free
+      - gemini-free
+
   verify:
     description: "Term verification — strict overlap checking"
     providers:

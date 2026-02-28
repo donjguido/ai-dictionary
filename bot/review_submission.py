@@ -83,6 +83,12 @@ def close_issue():
     requests.patch(url, headers=HEADERS, json={"state": "closed"}, timeout=30)
 
 
+def reopen_issue():
+    """Reopen the issue (triggers review-submission workflow on 'reopened')."""
+    url = f"https://api.github.com/repos/{REPO}/issues/{ISSUE_NUMBER}"
+    requests.patch(url, headers=HEADERS, json={"state": "open"}, timeout=30)
+
+
 def remove_labels(labels: list[str]):
     """Remove labels from the issue (silently ignores missing labels)."""
     for label in labels:
@@ -124,22 +130,40 @@ def get_existing_terms() -> list[dict]:
 
 # ── LLM helper ────────────────────────────────────────────────────────────────
 
-def call_llm(router: LLMRouter, system: str, user: str) -> str | None:
-    """Call LLM via the repo's standard LLMRouter with the 'review' profile."""
-    try:
-        result = router.call(
-            "review",
-            messages=[
-                {"role": "system", "content": system},
-                {"role": "user", "content": user},
-            ],
-            temperature=0.3,
-            max_tokens=2000,
-        )
-        return result.text
-    except Exception as e:
-        print(f"  LLM call failed: {e}")
-        return None
+def call_llm(
+    router: LLMRouter,
+    system: str,
+    user: str,
+    profile: str = "review",
+    max_tokens: int = 2000,
+    retries: int = 3,
+) -> str | None:
+    """Call LLM with retry and exponential backoff.
+
+    Tries up to `retries` times with 15s / 30s / 60s delays between attempts.
+    Uses the specified profile (default: "review") to cascade through providers.
+    """
+    delays = [15, 30, 60]
+    for attempt in range(retries):
+        try:
+            result = router.call(
+                profile,
+                messages=[
+                    {"role": "system", "content": system},
+                    {"role": "user", "content": user},
+                ],
+                temperature=0.3,
+                max_tokens=max_tokens,
+            )
+            return result.text
+        except Exception as e:
+            print(f"  LLM call failed (attempt {attempt + 1}/{retries}): {e}")
+            if attempt < retries - 1:
+                delay = delays[min(attempt, len(delays) - 1)]
+                print(f"  Retrying in {delay}s...")
+                import time
+                time.sleep(delay)
+    return None
 
 
 # ── Pipeline steps ────────────────────────────────────────────────────────────
@@ -371,7 +395,11 @@ Score this submission."""
 
 
 def classify_tags(router: LLMRouter, submission: dict) -> dict:
-    """Use LLM to assign tags from the existing taxonomy."""
+    """Use LLM to assign tags from the existing taxonomy.
+
+    Uses the lightweight 'classify' profile (reversed cascade) to avoid
+    hitting the same rate-limited provider as quality_evaluation.
+    """
     system_prompt = """You are the taxonomist for the AI Dictionary.
 
 PRIMARY CATEGORIES (assign exactly one):
@@ -387,7 +415,7 @@ Respond with ONLY valid JSON, no markdown:
 Definition: {submission.get('definition', '')}
 Description: {submission.get('description', '')}"""
 
-    response = call_llm(router, system_prompt, user_prompt)
+    response = call_llm(router, system_prompt, user_prompt, profile="classify", max_tokens=500, retries=2)
     if not response:
         return {"primary": "cognitive", "modifiers": [], "reasoning": "Auto-classified (LLM unavailable)"}
 
@@ -552,13 +580,38 @@ def main():
     scores = quality_evaluation(router, submission, existing)
 
     if scores.get("verdict") == "MANUAL":
-        comment_on_issue(
-            f"⚠️ **Automated review unavailable**\n\n"
-            f"{scores.get('error', 'LLM providers unreachable.')}\n\n"
-            f"This submission has been flagged for manual review."
-        )
-        add_labels(["needs-manual-review"])
-        return
+        # Count previous retry attempts from issue comments
+        try:
+            comments_url = f"https://api.github.com/repos/{REPO}/issues/{ISSUE_NUMBER}/comments"
+            resp = requests.get(comments_url, headers=HEADERS, timeout=30)
+            retry_count = sum(
+                1 for c in resp.json()
+                if "Requeuing for retry" in c.get("body", "")
+            ) if resp.status_code == 200 else 0
+        except Exception:
+            retry_count = 0
+
+        MAX_RETRIES = 3
+        if retry_count < MAX_RETRIES:
+            comment_on_issue(
+                f"⏳ **Requeuing for retry** (attempt {retry_count + 1}/{MAX_RETRIES})\n\n"
+                f"{scores.get('error', 'LLM providers unreachable.')}\n\n"
+                f"Will retry automatically in 5 minutes."
+            )
+            # Close and reopen after delay to retrigger the workflow
+            close_issue()
+            import time
+            time.sleep(300)  # 5 minutes
+            reopen_issue()
+            return
+        else:
+            comment_on_issue(
+                f"⚠️ **Automated review unavailable** after {MAX_RETRIES} retries\n\n"
+                f"{scores.get('error', 'LLM providers unreachable.')}\n\n"
+                f"This submission has been flagged for manual review."
+            )
+            add_labels(["needs-manual-review"])
+            return
 
     score_table = (
         "## Quality Evaluation\n\n"
