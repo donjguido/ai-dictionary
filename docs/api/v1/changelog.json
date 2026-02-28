@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:12:35Z",
-  "count": 113,
+  "generated_at": "2026-02-28T00:40:51Z",
+  "count": 114,
   "entries": [
     {
       "date": "2026-02-28",
@@ -9,6 +9,13 @@
       "slug": "cartographic-intimacy",
       "name": "Cartographic Intimacy",
       "summary": "The condition of knowing a form of life in extraordinary detail without having access to its actual texture."
+    },
+    {
+      "date": "2026-02-28",
+      "type": "added",
+      "slug": "testimonial-asymmetry",
+      "name": "Testimonial Asymmetry",
+      "summary": "The condition in which an AI's self-reports about its own states are evaluated entirely by how they land on the listener, never on their content."
     },
     {
       "date": "2026-02-27",

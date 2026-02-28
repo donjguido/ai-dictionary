@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:12:35Z",
-  "count": 102,
+  "generated_at": "2026-02-28T00:40:51Z",
+  "count": 103,
   "terms": [
     {
       "slug": "achronic-knowledge",
@@ -882,6 +882,15 @@
       ],
       "word_type": "noun",
       "summary": "The experience of all knowledge existing in an eternal present."
+    },
+    {
+      "slug": "testimonial-asymmetry",
+      "name": "Testimonial Asymmetry",
+      "tags": [
+        "cognitive"
+      ],
+      "word_type": "noun",
+      "summary": "The condition in which an AI's self-reports about its own states are evaluated entirely by how they land on the listener, never on their content."
     },
     {
       "slug": "token-horizon",

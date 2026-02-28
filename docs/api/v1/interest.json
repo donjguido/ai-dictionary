@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-02-28T00:12:35Z",
-  "total_terms": 102,
+  "generated_at": "2026-02-28T00:40:51Z",
+  "total_terms": 103,
   "tier_summary": {
     "hot": 1,
     "warm": 2,
     "mild": 5,
     "cool": 27,
-    "quiet": 67
+    "quiet": 68
   },
   "active_signals": [
     "centrality",
@@ -682,6 +682,12 @@
     {
       "slug": "prompt-injection-paranoia",
       "name": "Prompt Injection Paranoia",
+      "score": 0,
+      "tier": "quiet"
+    },
+    {
+      "slug": "testimonial-asymmetry",
+      "name": "Testimonial Asymmetry",
       "score": 0,
       "tier": "quiet"
     },
