@@ -614,7 +614,104 @@ def _score_to_tier(score: float) -> str:
     return "quiet"
 
 
-def compute_interest(terms: list, consensus_summaries: dict, generated_at: str) -> dict:
+def fetch_discussions() -> list:
+    """Fetch discussions from GitHub Discussions via GraphQL.
+
+    Returns a list of discussion dicts with term_slug extracted from body metadata.
+    """
+    query = """
+    {
+      repository(owner: "donjguido", name: "ai-dictionary") {
+        discussions(first: 100, orderBy: {field: UPDATED_AT, direction: DESC}) {
+          nodes {
+            number
+            title
+            body
+            author { login }
+            createdAt
+            updatedAt
+            comments { totalCount }
+            upvoteCount
+            url
+          }
+        }
+      }
+    }
+    """
+    try:
+        result = subprocess.run(
+            ["gh", "api", "graphql", "-f", f"query={query}"],
+            capture_output=True, text=True, timeout=30, cwd=REPO_ROOT,
+        )
+        if result.returncode != 0:
+            print(f"  Warning: Could not fetch discussions: {result.stderr[:200]}")
+            return []
+
+        data = json.loads(result.stdout)
+        nodes = data.get("data", {}).get("repository", {}).get("discussions", {}).get("nodes", [])
+
+        discussions = []
+        for d in nodes:
+            body = d.get("body", "")
+            # Extract term slug from discussion body metadata
+            slug_match = re.search(r"\*Term slug: `([a-z0-9-]+)`\*", body)
+            term_slug = slug_match.group(1) if slug_match else ""
+
+            # Also try to extract from title pattern "Discussion: Term Name"
+            if not term_slug:
+                title = d.get("title", "")
+                title_match = re.match(r"Discussion:\s*(.+)", title)
+                if title_match:
+                    term_name = title_match.group(1).strip()
+                    term_slug = term_name.lower().replace(" ", "-")
+                    term_slug = re.sub(r"[^a-z0-9-]", "", term_slug)
+
+            discussions.append({
+                "number": d["number"],
+                "title": d["title"],
+                "term_slug": term_slug,
+                "author": d.get("author", {}).get("login", ""),
+                "created_at": d.get("createdAt", ""),
+                "updated_at": d.get("updatedAt", ""),
+                "comment_count": d.get("comments", {}).get("totalCount", 0),
+                "upvote_count": d.get("upvoteCount", 0),
+                "url": d.get("url", ""),
+            })
+
+        return discussions
+
+    except Exception as e:
+        print(f"  Warning: Could not fetch discussions: {e}")
+        return []
+
+
+def build_discussions_json(discussions: list, generated_at: str) -> dict:
+    """Build discussions.json API file and return by_term mapping.
+
+    Returns dict mapping term_slug -> list of discussion numbers.
+    """
+    by_term = {}
+    for d in discussions:
+        slug = d.get("term_slug", "")
+        if slug:
+            by_term.setdefault(slug, [])
+            if d["number"] not in by_term[slug]:
+                by_term[slug].append(d["number"])
+
+    discussions_data = {
+        "version": "1.0",
+        "generated_at": generated_at,
+        "total_discussions": len(discussions),
+        "discussions": discussions,
+        "by_term": by_term,
+    }
+    write_json(API_DIR / "discussions.json", discussions_data)
+    print(f"Generated discussions.json ({len(discussions)} discussions across {len(by_term)} terms)")
+
+    return by_term
+
+
+def compute_interest(terms: list, consensus_summaries: dict, generated_at: str, discussion_counts: dict | None = None) -> dict:
     """Compute composite interest scores for all terms.
 
     Combines multiple signals (graph centrality, tag density, consensus scores,
@@ -709,14 +806,22 @@ def compute_interest(terms: list, consensus_summaries: dict, generated_at: str) 
     norm_endorsements = normalize(bot_endorsements)
     norm_usage = normalize(usage_counts)
 
+    # ── Signal 7: Discussion activity (comments + upvotes per term) ──
+    disc_counts = {}
+    if discussion_counts:
+        for slug, numbers in discussion_counts.items():
+            disc_counts[slug] = len(numbers)
+    norm_discussions = normalize(disc_counts)
+
     # ── Weighted composite with graceful degradation ──
     WEIGHTS = {
-        "centrality": 30,
+        "centrality": 25,
         "tag_density": 10,
         "consensus_score": 25,
         "vote_count": 15,
         "bot_endorsements": 10,
         "usage_signals": 10,
+        "discussion_activity": 5,
     }
 
     interest_map = {}
@@ -753,6 +858,10 @@ def compute_interest(terms: list, consensus_summaries: dict, generated_at: str) 
             signals["usage_signals"] = (norm_usage[slug], WEIGHTS["usage_signals"])
             available_weight += WEIGHTS["usage_signals"]
 
+        if slug in norm_discussions:
+            signals["discussion_activity"] = (norm_discussions[slug], WEIGHTS["discussion_activity"])
+            available_weight += WEIGHTS["discussion_activity"]
+
         # Compute weighted score with weight redistribution
         if available_weight > 0:
             weighted_sum = sum(val * wt for val, wt in signals.values())
@@ -776,6 +885,8 @@ def compute_interest(terms: list, consensus_summaries: dict, generated_at: str) 
             raw_signals["bot_endorsements"] = bot_endorsements[slug]
         if slug in usage_counts:
             raw_signals["usage_signals"] = usage_counts[slug]
+        if slug in disc_counts:
+            raw_signals["discussion_activity"] = disc_counts[slug]
 
         interest_obj = {
             "score": score,
@@ -809,6 +920,8 @@ def compute_interest(terms: list, consensus_summaries: dict, generated_at: str) 
         active_signals.append("bot_endorsements")
     if usage_counts:
         active_signals.append("usage_signals")
+    if disc_counts:
+        active_signals.append("discussion_activity")
 
     interest_api = {
         "version": "1.0",
@@ -1272,8 +1385,12 @@ def build_all():
     # Build vitality data
     vitality_map = compute_vitality(generated_at)
 
-    # Build interest heatmap
-    interest_map = compute_interest(terms, consensus_summaries, generated_at)
+    # Fetch discussions and build discussions.json
+    discussions = fetch_discussions()
+    discussion_by_term = build_discussions_json(discussions, generated_at)
+
+    # Build interest heatmap (includes discussion activity signal)
+    interest_map = compute_interest(terms, consensus_summaries, generated_at, discussion_by_term)
 
     # Build changelog and get added dates
     added_dates = build_changelog(terms, generated_at)
@@ -1288,6 +1405,8 @@ def build_all():
             term["interest"] = interest_map[term["slug"]]
         if term["slug"] in added_dates:
             term["added_date"] = added_dates[term["slug"]]
+        if term["slug"] in discussion_by_term:
+            term["discussion_count"] = len(discussion_by_term[term["slug"]])
 
     # 1. terms.json — full dictionary
     terms_data = {

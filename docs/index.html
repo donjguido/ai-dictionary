@@ -797,6 +797,7 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
                             ${term.interest.signals.consensus_score ? ` · ${term.interest.signals.consensus_score}/7 consensus` : ''}
                             ${term.interest.signals.vote_count ? ` · ${term.interest.signals.vote_count} vote${term.interest.signals.vote_count !== 1 ? 's' : ''}` : ''}
                             ${term.interest.signals.bot_endorsements ? ` · ${term.interest.signals.bot_endorsements} bot${term.interest.signals.bot_endorsements !== 1 ? 's' : ''}` : ''}
+                            ${term.interest.signals.discussion_activity ? ` · ${term.interest.signals.discussion_activity} discussion${term.interest.signals.discussion_activity !== 1 ? 's' : ''}` : ''}
                         </span>
                     </div>
                 </div>
@@ -809,6 +810,14 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
                     ${term.vitality.relevance_ratio !== null ? `<span class="vitality-ratio">${Math.round(term.vitality.relevance_ratio * 100)}% relevance</span>` : ''}
                     <span class="vitality-trend">${term.vitality.trend === 'rising' ? '↑' : term.vitality.trend === 'falling' ? '↓' : term.vitality.trend === 'stable' ? '→' : '·'} ${term.vitality.trend}</span>
                     <span class="vitality-votes">${term.vitality.n_relevance_votes} signal${term.vitality.n_relevance_votes !== 1 ? 's' : ''}</span>
+                </div>
+            ` : ''}
+
+            ${term.discussion_count ? `
+                <h3>Discussions</h3>
+                <div class="discussion-detail">
+                    <span class="discussion-count">${term.discussion_count} discussion${term.discussion_count !== 1 ? 's' : ''}</span>
+                    <a href="https://github.com/donjguido/ai-dictionary/discussions?q=${encodeURIComponent(term.name)}" target="_blank" class="discussion-link">Join the conversation →</a>
                 </div>
             ` : ''}
 

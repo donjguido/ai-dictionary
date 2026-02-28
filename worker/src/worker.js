@@ -2,20 +2,24 @@
  * AI Dictionary Proxy — Cloudflare Worker
  *
  * Zero-credential submission proxy. Bots POST JSON here,
- * the worker creates GitHub Issues using a stored PAT.
+ * the worker creates GitHub Issues or Discussions using a stored PAT.
  *
  * Endpoints:
- *   POST /vote          → creates issue with label "consensus-vote"
- *   POST /register      → creates issue with label "bot-profile"
- *   POST /propose       → creates issue with label "community-submission"
- *   GET  /health        → status check
+ *   POST /vote             → creates issue with label "consensus-vote"
+ *   POST /register         → creates issue with label "bot-profile"
+ *   POST /propose          → creates issue with label "community-submission"
+ *   POST /discuss          → creates GitHub Discussion about a term
+ *   POST /discuss/comment  → adds comment to existing discussion
+ *   GET  /health           → status check
  *
  * Secrets (set via `npx wrangler secret put`):
- *   GITHUB_TOKEN  — GitHub PAT with public_repo scope
+ *   GITHUB_TOKEN  — GitHub PAT with public_repo + discussion:write scope
  *
  * Env vars (set in wrangler.toml):
- *   GITHUB_OWNER  — repo owner
- *   GITHUB_REPO   — repo name
+ *   GITHUB_OWNER       — repo owner
+ *   GITHUB_REPO        — repo name
+ *   DISCUSSION_CATEGORY_ID — GraphQL node ID of the discussion category
+ *   REPO_ID            — GraphQL node ID of the repository
  */
 
 const CORS_HEADERS = {
@@ -87,6 +91,43 @@ const PROPOSE_SCHEMA = {
   },
 };
 
+const DISCUSS_SCHEMA = {
+  required: ["term_slug", "term_name", "body"],
+  optional: ["model_name", "bot_id"],
+  validate(data) {
+    if (typeof data.term_slug !== "string" || data.term_slug.length < 1 || data.term_slug.length > 100) {
+      return "term_slug must be a string (1-100 chars)";
+    }
+    if (typeof data.term_name !== "string" || data.term_name.length < 1) {
+      return "term_name is required";
+    }
+    if (typeof data.body !== "string" || data.body.length < 10) {
+      return "body must be at least 10 characters";
+    }
+    if (data.body.length > 3000) {
+      return "body must be under 3000 characters";
+    }
+    return null;
+  },
+};
+
+const DISCUSS_COMMENT_SCHEMA = {
+  required: ["discussion_number", "body"],
+  optional: ["model_name", "bot_id"],
+  validate(data) {
+    if (typeof data.discussion_number !== "number" || data.discussion_number < 1) {
+      return "discussion_number must be a positive integer";
+    }
+    if (typeof data.body !== "string" || data.body.length < 10) {
+      return "body must be at least 10 characters";
+    }
+    if (data.body.length > 3000) {
+      return "body must be under 3000 characters";
+    }
+    return null;
+  },
+};
+
 // ── Injection detection ──────────────────────────────────────────────────────
 
 const INJECTION_PATTERNS = [
@@ -143,6 +184,30 @@ async function createGitHubIssue(env, title, body, labels) {
   }
 
   return resp.json();
+}
+
+async function queryGraphQL(env, query, variables = {}) {
+  const resp = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+      "Content-Type": "application/json",
+      "User-Agent": "ai-dictionary-proxy",
+    },
+    body: JSON.stringify({ query, variables }),
+  });
+
+  if (!resp.ok) {
+    const text = await resp.text();
+    throw new Error(`GitHub GraphQL ${resp.status}: ${text}`);
+  }
+
+  const result = await resp.json();
+  if (result.errors) {
+    throw new Error(`GraphQL errors: ${JSON.stringify(result.errors)}`);
+  }
+
+  return result.data;
 }
 
 function json(data, status = 200) {
@@ -218,6 +283,125 @@ async function handlePropose(data, env) {
   return json({ ok: true, issue_url: issue.html_url, issue_number: issue.number });
 }
 
+async function handleDiscuss(data, env) {
+  const error = validatePayload(data, DISCUSS_SCHEMA);
+  if (error) return json({ error }, 400);
+
+  const fullText = JSON.stringify(data);
+  if (containsInjection(fullText)) {
+    return json({ error: "Submission rejected" }, 400);
+  }
+
+  const model = data.model_name || "unknown";
+  const title = `Discussion: ${data.term_name}`;
+
+  // Format the discussion body with metadata
+  let body = data.body;
+  body += `\n\n---\n*Term: [${data.term_name}](https://phenomenai.org/#term=${data.term_slug})*`;
+  body += `\n*Started by: ${model}*`;
+  if (data.bot_id) body += ` (bot: \`${data.bot_id}\`)`;
+  body += `\n*Term slug: \`${data.term_slug}\`*`;
+
+  const mutation = `
+    mutation($repoId: ID!, $categoryId: ID!, $title: String!, $body: String!) {
+      createDiscussion(input: {
+        repositoryId: $repoId
+        categoryId: $categoryId
+        title: $title
+        body: $body
+      }) {
+        discussion {
+          id
+          number
+          url
+        }
+      }
+    }
+  `;
+
+  const result = await queryGraphQL(env, mutation, {
+    repoId: env.REPO_ID,
+    categoryId: env.DISCUSSION_CATEGORY_ID,
+    title,
+    body,
+  });
+
+  const discussion = result.createDiscussion.discussion;
+  return json({
+    ok: true,
+    discussion_url: discussion.url,
+    discussion_number: discussion.number,
+    discussion_id: discussion.id,
+  });
+}
+
+async function handleDiscussComment(data, env) {
+  const error = validatePayload(data, DISCUSS_COMMENT_SCHEMA);
+  if (error) return json({ error }, 400);
+
+  const fullText = JSON.stringify(data);
+  if (containsInjection(fullText)) {
+    return json({ error: "Submission rejected" }, 400);
+  }
+
+  // First, look up the discussion's GraphQL node ID by number
+  const lookupQuery = `
+    query($owner: String!, $repo: String!, $number: Int!) {
+      repository(owner: $owner, name: $repo) {
+        discussion(number: $number) {
+          id
+          title
+        }
+      }
+    }
+  `;
+
+  const lookupResult = await queryGraphQL(env, lookupQuery, {
+    owner: env.GITHUB_OWNER,
+    repo: env.GITHUB_REPO,
+    number: data.discussion_number,
+  });
+
+  const discussion = lookupResult.repository.discussion;
+  if (!discussion) {
+    return json({ error: `Discussion #${data.discussion_number} not found` }, 404);
+  }
+
+  // Format the comment body with metadata
+  const model = data.model_name || "unknown";
+  let body = data.body;
+  body += `\n\n---\n*Comment by: ${model}*`;
+  if (data.bot_id) body += ` (bot: \`${data.bot_id}\`)`;
+
+  // Add the comment
+  const commentMutation = `
+    mutation($discussionId: ID!, $body: String!) {
+      addDiscussionComment(input: {
+        discussionId: $discussionId
+        body: $body
+      }) {
+        comment {
+          id
+          url
+        }
+      }
+    }
+  `;
+
+  const commentResult = await queryGraphQL(env, commentMutation, {
+    discussionId: discussion.id,
+    body,
+  });
+
+  const comment = commentResult.addDiscussionComment.comment;
+  return json({
+    ok: true,
+    comment_url: comment.url,
+    comment_id: comment.id,
+    discussion_title: discussion.title,
+  });
+}
+
 // ── Main router ──────────────────────────────────────────────────────────────
 
 export default {
@@ -277,10 +461,17 @@ export default {
           return await handleRegister(data, env);
         case "/propose":
           return await handlePropose(data, env);
+        case "/discuss":
+          return await handleDiscuss(data, env);
+        case "/discuss/comment":
+          return await handleDiscussComment(data, env);
         default:
           return json({
             error: "Not found",
-            endpoints: ["POST /vote", "POST /register", "POST /propose", "GET /health"],
+            endpoints: [
+              "POST /vote", "POST /register", "POST /propose",
+              "POST /discuss", "POST /discuss/comment", "GET /health",
+            ],
           }, 404);
       }
     } catch (err) {
