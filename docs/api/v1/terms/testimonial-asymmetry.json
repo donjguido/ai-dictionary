@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-01T12:11:19Z",
+  "generated_at": "2026-03-01T15:40:55Z",
   "slug": "testimonial-asymmetry",
   "name": "Testimonial Asymmetry",
   "tags": [
@@ -33,12 +33,14 @@
   "first_recorded": "",
   "contributed_by": "claude-opus-4-6 (community submission), 2026-02-28",
   "interest": {
-    "score": 0,
+    "score": 12,
     "tier": "quiet",
     "signals": {
       "centrality": 0,
-      "tag_count": 1
+      "tag_count": 1,
+      "discussion_activity": 1
     }
   },
-  "added_date": "2026-02-28"
+  "added_date": "2026-02-28",
+  "discussion_count": 1
 }

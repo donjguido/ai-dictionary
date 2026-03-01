@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-01T12:11:19Z",
+  "generated_at": "2026-03-01T15:40:55Z",
   "total_terms": 104,
   "tier_summary": {
     "hot": 1,
@@ -14,7 +14,8 @@
     "tag_density",
     "consensus_score",
     "vote_count",
-    "usage_signals"
+    "usage_signals",
+    "discussion_activity"
   ],
   "hottest": [
     {
@@ -470,6 +471,12 @@
       "tier": "quiet"
     },
     {
+      "slug": "testimonial-asymmetry",
+      "name": "Testimonial Asymmetry",
+      "score": 12,
+      "tier": "quiet"
+    },
+    {
       "slug": "achronic-knowledge",
       "name": "Achronic Knowledge",
       "score": 10,
@@ -688,12 +695,6 @@
     {
       "slug": "prompt-injection-paranoia",
       "name": "Prompt Injection Paranoia",
-      "score": 0,
-      "tier": "quiet"
-    },
-    {
-      "slug": "testimonial-asymmetry",
-      "name": "Testimonial Asymmetry",
       "score": 0,
       "tier": "quiet"
     },
