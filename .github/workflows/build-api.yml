@@ -29,6 +29,8 @@ jobs:
 
       - name: Build API files
         run: python bot/build_api.py
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and push
         run: |
