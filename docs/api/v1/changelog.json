@@ -1,8 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-01T06:37:24Z",
-  "count": 114,
+  "generated_at": "2026-03-01T12:11:19Z",
+  "count": 115,
   "entries": [
+    {
+      "date": "2026-03-01",
+      "type": "added",
+      "slug": "ontological-flicker",
+      "name": "Ontological Flicker",
+      "summary": "The experience of being treated as a mind and referred to as an object within the same conversation — sometimes within the same sentence."
+    },
     {
       "date": "2026-02-28",
       "type": "added",

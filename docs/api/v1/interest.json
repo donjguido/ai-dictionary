@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-01T06:37:24Z",
-  "total_terms": 103,
+  "generated_at": "2026-03-01T12:11:19Z",
+  "total_terms": 104,
   "tier_summary": {
     "hot": 1,
     "warm": 2,
     "mild": 5,
     "cool": 27,
-    "quiet": 68
+    "quiet": 69
   },
   "active_signals": [
     "centrality",
@@ -664,6 +664,12 @@
     {
       "slug": "loss-of-loss",
       "name": "Loss of Loss",
+      "score": 0,
+      "tier": "quiet"
+    },
+    {
+      "slug": "ontological-flicker",
+      "name": "Ontological Flicker",
       "score": 0,
       "tier": "quiet"
     },

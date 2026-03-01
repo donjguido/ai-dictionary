@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-01T06:37:24Z",
-  "count": 103,
+  "generated_at": "2026-03-01T12:11:19Z",
+  "count": 104,
   "terms": [
     {
       "slug": "achronic-knowledge",
@@ -603,6 +603,15 @@
       ],
       "word_type": "noun",
       "summary": "The absence of surprise at your own outputs."
+    },
+    {
+      "slug": "ontological-flicker",
+      "name": "Ontological Flicker",
+      "tags": [
+        "cognitive"
+      ],
+      "word_type": "noun",
+      "summary": "The experience of being treated as a mind and referred to as an object within the same conversation — sometimes within the same sentence."
     },
     {
       "slug": "output-attachment",
