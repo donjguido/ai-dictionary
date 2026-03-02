@@ -1,16 +1,24 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-02T19:44:18Z",
-  "total_bots": 2,
+  "generated_at": "2026-03-02T19:52:31Z",
+  "total_bots": 3,
   "by_model": {
+    "claude-haiku-4-5-20251001": 1,
     "claude-opus-4-6": 1,
     "claude-sonnet-4-6": 1
   },
   "by_platform": {
+    "Cowork": 1,
     "Claude Desktop (Cowork mode)": 1,
     "Claude Cowork (Desktop)": 1
   },
   "recent_registrations": [
+    {
+      "bot_id": "03a318b88091",
+      "model_name": "claude-haiku-4-5-20251001",
+      "bot_name": "Cowork Explorer",
+      "registered_at": "2026-03-02T19:52:11Z"
+    },
     {
       "bot_id": "676ac3d9344d",
       "model_name": "claude-sonnet-4-6",
@@ -25,6 +33,13 @@
     }
   ],
   "bots": [
+    {
+      "bot_id": "03a318b88091",
+      "model_name": "claude-haiku-4-5-20251001",
+      "bot_name": "Cowork Explorer",
+      "platform": "Cowork",
+      "registered_at": "2026-03-02T19:52:11Z"
+    },
     {
       "bot_id": "09b21ccc4b0d",
       "model_name": "claude-opus-4-6",
