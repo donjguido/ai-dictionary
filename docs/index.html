@@ -1034,13 +1034,13 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
             `;
         }
 
-        // Top 10 most recently added terms
+        // 6 most recently added terms
         let recent = [];
         if (data && data.entries) {
             recent = data.entries
                 .filter(e => e.type === 'added')
                 .sort((a, b) => b.date.localeCompare(a.date))
-                .slice(0, 10);
+                .slice(0, 6);
         }
 
         if (recent.length > 0) {
