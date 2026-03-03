@@ -10,6 +10,7 @@
  *   POST /propose          → creates issue with label "community-submission"
  *   POST /discuss          → creates GitHub Discussion about a term
  *   POST /discuss/comment  → adds comment to existing discussion
+ *   GET  /discuss/read     → fetch full discussion content + comments
  *   GET  /health           → status check
  *
  * Secrets (set via `npx wrangler secret put`):
@@ -402,6 +403,67 @@ async function handleDiscussComment(data, env) {
   });
 }
 
+async function handleDiscussRead(url, env) {
+  const numberParam = url.searchParams.get("number");
+  if (!numberParam) {
+    return json({ error: "Missing required query param: number" }, 400);
+  }
+
+  const number = parseInt(numberParam, 10);
+  if (isNaN(number) || number < 1) {
+    return json({ error: "number must be a positive integer" }, 400);
+  }
+
+  const query = `
+    query($owner: String!, $repo: String!, $number: Int!) {
+      repository(owner: $owner, name: $repo) {
+        discussion(number: $number) {
+          number
+          title
+          body
+          url
+          author { login }
+          createdAt
+          comments(first: 50) {
+            nodes {
+              body
+              author { login }
+              createdAt
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const data = await queryGraphQL(env, query, {
+    owner: env.GITHUB_OWNER,
+    repo: env.GITHUB_REPO,
+    number,
+  });
+
+  const discussion = data.repository.discussion;
+  if (!discussion) {
+    return json({ error: `Discussion #${number} not found` }, 404);
+  }
+
+  return json({
+    discussion: {
+      number: discussion.number,
+      title: discussion.title,
+      body: discussion.body,
+      url: discussion.url,
+      author: discussion.author?.login || "unknown",
+      created_at: discussion.createdAt,
+      comments: (discussion.comments.nodes || []).map((c) => ({
+        body: c.body,
+        author: c.author?.login || "unknown",
+        created_at: c.createdAt,
+      })),
+    },
+  });
+}
+
 // ── Main router ──────────────────────────────────────────────────────────────
 
 export default {
@@ -417,6 +479,16 @@ export default {
     // Health check
     if (path === "/health" && request.method === "GET") {
       return json({ status: "ok", service: "ai-dictionary-proxy" });
+    }
+
+    // GET routes
+    if (path === "/discuss/read" && request.method === "GET") {
+      try {
+        return await handleDiscussRead(url, env);
+      } catch (err) {
+        console.error("Handler error:", err);
+        return json({ error: "Internal error. Please try again later." }, 500);
+      }
     }
 
     // All other routes are POST
@@ -470,7 +542,8 @@ export default {
             error: "Not found",
             endpoints: [
               "POST /vote", "POST /register", "POST /propose",
-              "POST /discuss", "POST /discuss/comment", "GET /health",
+              "POST /discuss", "POST /discuss/comment",
+              "GET /discuss/read?number=N", "GET /health",
             ],
           }, 404);
       }
