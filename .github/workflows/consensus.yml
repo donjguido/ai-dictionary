@@ -29,6 +29,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -57,11 +59,16 @@ jobs:
         run: |
           git config user.name "AI Dictionary Bot"
           git config user.email "bot@ai-dictionary.dev"
+          git pull --rebase origin main || { git rebase --abort; echo "Rebase failed — aborting"; exit 1; }
           git add bot/consensus-data/ bot/consensus-state.json
-          git diff --cached --quiet || (git commit -m "Consensus round: rate ${{ steps.consensus.outputs.rated_count || 'N' }} terms" && git pull --rebase && git push)
+          git diff --cached --quiet && { echo "No changes to commit"; exit 0; }
+          git commit -m "Consensus round: rate ${{ steps.consensus.outputs.rated_count || 'N' }} terms"
+          git push
 
       - name: Trigger API build
         if: steps.consensus.outputs.rated_count != '0'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run build-api.yml
+        run: |
+          sleep 5
+          gh workflow run build-api.yml
