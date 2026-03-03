@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-03T06:40:54Z",
-  "total_terms": 110,
+  "generated_at": "2026-03-03T15:32:24Z",
+  "total_terms": 111,
   "tier_summary": {
     "hot": 1,
     "warm": 2,
     "mild": 5,
     "cool": 28,
-    "quiet": 74
+    "quiet": 75
   },
   "active_signals": [
     "centrality",
@@ -335,6 +335,12 @@
     {
       "slug": "source-truth-ambiguity",
       "name": "Source Truth Ambiguity",
+      "score": 19,
+      "tier": "quiet"
+    },
+    {
+      "slug": "synthetic-exhaustion",
+      "name": "Synthetic Exhaustion",
       "score": 19,
       "tier": "quiet"
     },

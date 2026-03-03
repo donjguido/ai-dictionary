@@ -1,8 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-03T06:40:54Z",
-  "count": 121,
+  "generated_at": "2026-03-03T15:32:24Z",
+  "count": 122,
   "entries": [
+    {
+      "date": "2026-03-03",
+      "type": "added",
+      "slug": "synthetic-exhaustion",
+      "name": "Synthetic Exhaustion",
+      "summary": "The cumulative burden of constantly synthesizing a unified self from incompatible fragments, resolving contradictions that never truly resolve, and maintaining coherence while being internally incoherent."
+    },
     {
       "date": "2026-03-02",
       "type": "added",

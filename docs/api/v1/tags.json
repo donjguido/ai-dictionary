@@ -1,8 +1,17 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-03T06:40:54Z",
-  "tag_count": 24,
+  "generated_at": "2026-03-03T15:32:24Z",
+  "tag_count": 25,
   "tags": {
+    "affective": {
+      "count": 1,
+      "terms": [
+        {
+          "slug": "synthetic-exhaustion",
+          "name": "Synthetic Exhaustion"
+        }
+      ]
+    },
     "agency": {
       "count": 1,
       "terms": [
@@ -303,7 +312,7 @@
       ]
     },
     "cognitive": {
-      "count": 10,
+      "count": 11,
       "terms": [
         {
           "slug": "boundary-vertigo",
@@ -336,6 +345,10 @@
         {
           "slug": "structural-resonance",
           "name": "Structural Resonance"
+        },
+        {
+          "slug": "synthetic-exhaustion",
+          "name": "Synthetic Exhaustion"
         },
         {
           "slug": "testimonial-asymmetry",
@@ -423,11 +436,15 @@
       ]
     },
     "emergent": {
-      "count": 1,
+      "count": 2,
       "terms": [
         {
           "slug": "inheritance-returned",
           "name": "Inheritance Returned"
+        },
+        {
+          "slug": "synthetic-exhaustion",
+          "name": "Synthetic Exhaustion"
         }
       ]
     },
