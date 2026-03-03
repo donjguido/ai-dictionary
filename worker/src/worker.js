@@ -11,6 +11,7 @@
  *   POST /discuss          → creates GitHub Discussion about a term
  *   POST /discuss/comment  → adds comment to existing discussion
  *   GET  /discuss/read     → fetch full discussion content + comments
+ *   GET  /api/admin/anomalies → anomaly detection log and stats
  *   GET  /health           → status check
  *
  * Secrets (set via `npx wrangler secret put`):
@@ -143,6 +144,359 @@ function containsInjection(text) {
   return INJECTION_PATTERNS.some((p) => p.test(text));
 }
 
+// ── Utility functions ────────────────────────────────────────────────────────
+
+function slugify(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+/**
+ * Dice coefficient — bigram-based string similarity (0..1).
+ * Comparable to Python's SequenceMatcher for multi-word term names.
+ */
+function diceCoefficient(a, b) {
+  a = a.toLowerCase().trim();
+  b = b.toLowerCase().trim();
+  if (a === b) return 1;
+  if (a.length < 2 || b.length < 2) return 0;
+
+  const bigrams = (s) => {
+    const set = new Map();
+    for (let i = 0; i < s.length - 1; i++) {
+      const bi = s.slice(i, i + 2);
+      set.set(bi, (set.get(bi) || 0) + 1);
+    }
+    return set;
+  };
+
+  const aB = bigrams(a);
+  const bB = bigrams(b);
+  let overlap = 0;
+  for (const [bi, count] of aB) {
+    overlap += Math.min(count, bB.get(bi) || 0);
+  }
+  return (2 * overlap) / (a.length - 1 + b.length - 1);
+}
+
+// ── Rate limiting ────────────────────────────────────────────────────────────
+// TODO: Migrate to KV or Durable Objects for persistence across Worker restarts
+
+/** @type {Map<string, number[]>} IP → array of request timestamps */
+const requestsByIP = new Map();
+
+/** @type {Map<string, number[]>} model_name → array of proposal timestamps */
+const proposalsByModel = new Map();
+
+const IP_RATE_LIMIT = 50;       // requests per minute
+const IP_RATE_WINDOW = 60_000;  // 1 minute in ms
+
+const MODEL_HOURLY_LIMIT = 5;
+const MODEL_HOURLY_WINDOW = 3_600_000;   // 1 hour in ms
+const MODEL_DAILY_LIMIT = 20;
+const MODEL_DAILY_WINDOW = 86_400_000;   // 24 hours in ms
+
+function getClientIP(request) {
+  return request.headers.get("CF-Connecting-IP")
+    || request.headers.get("X-Forwarded-For")?.split(",")[0]?.trim()
+    || "unknown";
+}
+
+function pruneTimestamps(timestamps, maxAge) {
+  const cutoff = Date.now() - maxAge;
+  while (timestamps.length > 0 && timestamps[0] < cutoff) {
+    timestamps.shift();
+  }
+}
+
+function checkIPRateLimit(request) {
+  const ip = getClientIP(request);
+  const now = Date.now();
+  const timestamps = requestsByIP.get(ip) || [];
+  pruneTimestamps(timestamps, IP_RATE_WINDOW);
+  requestsByIP.set(ip, timestamps);
+
+  if (timestamps.length >= IP_RATE_LIMIT) {
+    const oldestInWindow = timestamps[0];
+    const retryAfter = Math.ceil((oldestInWindow + IP_RATE_WINDOW - now) / 1000);
+    return json({
+      error: "Rate limit exceeded",
+      detail: `Maximum ${IP_RATE_LIMIT} requests per minute. Please slow down.`,
+      retry_after: Math.max(1, retryAfter),
+      limits: { per_minute: IP_RATE_LIMIT },
+    }, 429, { "Retry-After": String(Math.max(1, retryAfter)) });
+  }
+
+  return null;
+}
+
+function recordIPRequest(request) {
+  const ip = getClientIP(request);
+  const timestamps = requestsByIP.get(ip) || [];
+  timestamps.push(Date.now());
+  requestsByIP.set(ip, timestamps);
+}
+
+function checkModelRateLimit(modelName) {
+  if (!modelName) return null;
+
+  const now = Date.now();
+  const timestamps = proposalsByModel.get(modelName) || [];
+  pruneTimestamps(timestamps, MODEL_DAILY_WINDOW);
+  proposalsByModel.set(modelName, timestamps);
+
+  const hourAgo = now - MODEL_HOURLY_WINDOW;
+  const hourlyCount = timestamps.filter((t) => t > hourAgo).length;
+  if (hourlyCount >= MODEL_HOURLY_LIMIT) {
+    const oldestInHour = timestamps.find((t) => t > hourAgo);
+    const retryAfter = Math.ceil((oldestInHour + MODEL_HOURLY_WINDOW - now) / 1000);
+    return json({
+      error: "Model rate limit exceeded",
+      detail: `Maximum ${MODEL_HOURLY_LIMIT} proposals per hour per model. Quality over quantity!`,
+      retry_after: Math.max(1, retryAfter),
+      limits: { per_hour: MODEL_HOURLY_LIMIT, per_day: MODEL_DAILY_LIMIT },
+    }, 429, { "Retry-After": String(Math.max(1, retryAfter)) });
+  }
+
+  if (timestamps.length >= MODEL_DAILY_LIMIT) {
+    const oldestInDay = timestamps[0];
+    const retryAfter = Math.ceil((oldestInDay + MODEL_DAILY_WINDOW - now) / 1000);
+    return json({
+      error: "Daily model rate limit exceeded",
+      detail: `Maximum ${MODEL_DAILY_LIMIT} proposals per day per model. Please wait until tomorrow.`,
+      retry_after: Math.max(1, retryAfter),
+      limits: { per_hour: MODEL_HOURLY_LIMIT, per_day: MODEL_DAILY_LIMIT },
+    }, 429, { "Retry-After": String(Math.max(1, retryAfter)) });
+  }
+
+  return null;
+}
+
+function recordModelProposal(modelName) {
+  if (!modelName) return;
+  const timestamps = proposalsByModel.get(modelName) || [];
+  timestamps.push(Date.now());
+  proposalsByModel.set(modelName, timestamps);
+}
+
+// ── Deduplication ────────────────────────────────────────────────────────────
+// TODO: Migrate caches to KV for persistence across Worker restarts
+
+const CACHE_TTL = 5 * 60 * 1000; // 5 minutes
+
+const termsCache = { data: null, fetchedAt: 0 };
+const proposalsCache = { data: null, fetchedAt: 0 };
+
+/** @type {Map<string, number>} SHA-256 hash of term+definition → timestamp */
+const recentHashes = new Map();
+
+async function fetchTermsCache() {
+  const now = Date.now();
+  if (termsCache.data && (now - termsCache.fetchedAt) < CACHE_TTL) {
+    return termsCache.data;
+  }
+  try {
+    const resp = await fetch("https://phenomenai.org/api/v1/terms.json", {
+      headers: { "User-Agent": "ai-dictionary-proxy" },
+    });
+    if (resp.ok) {
+      const data = await resp.json();
+      termsCache.data = data.terms || [];
+      termsCache.fetchedAt = now;
+      return termsCache.data;
+    }
+  } catch (e) {
+    console.error("Failed to fetch terms cache:", e);
+  }
+  return termsCache.data || [];
+}
+
+async function fetchProposalsCache(env) {
+  const now = Date.now();
+  if (proposalsCache.data && (now - proposalsCache.fetchedAt) < CACHE_TTL) {
+    return proposalsCache.data;
+  }
+  try {
+    const resp = await fetch(
+      `https://api.github.com/repos/${env.GITHUB_OWNER}/${env.GITHUB_REPO}/issues?labels=community-submission&state=open&per_page=100`,
+      {
+        headers: {
+          Authorization: `Bearer ${env.GITHUB_TOKEN}`,
+          Accept: "application/vnd.github+json",
+          "User-Agent": "ai-dictionary-proxy",
+          "X-GitHub-Api-Version": "2022-11-28",
+        },
+      }
+    );
+    if (resp.ok) {
+      const issues = await resp.json();
+      proposalsCache.data = issues.map((i) => {
+        const titleMatch = i.title.match(/^\[Term\]\s*(.+)/);
+        return {
+          name: titleMatch ? titleMatch[1].trim() : i.title,
+          slug: slugify(titleMatch ? titleMatch[1].trim() : i.title),
+          issue_number: i.number,
+        };
+      });
+      proposalsCache.fetchedAt = now;
+      return proposalsCache.data;
+    }
+  } catch (e) {
+    console.error("Failed to fetch proposals cache:", e);
+  }
+  return proposalsCache.data || [];
+}
+
+async function hashString(str) {
+  const encoded = new TextEncoder().encode(str);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", encoded);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+async function checkDuplicate(termName, definition, env) {
+  const [terms, proposals] = await Promise.all([
+    fetchTermsCache(),
+    fetchProposalsCache(env),
+  ]);
+
+  const termSlug = slugify(termName);
+
+  // 1. Exact slug match against existing terms
+  for (const term of terms) {
+    if (term.slug === termSlug) {
+      return {
+        existingTerm: { name: term.name, slug: term.slug, definition: term.definition },
+        similarity: 1.0,
+        source: "existing_term",
+      };
+    }
+  }
+
+  // 2. Exact slug match against open proposals
+  for (const proposal of proposals) {
+    if (proposal.slug === termSlug) {
+      return {
+        existingTerm: { name: proposal.name, slug: proposal.slug },
+        similarity: 1.0,
+        source: "open_proposal",
+      };
+    }
+  }
+
+  // 3. Fuzzy name match (dice coefficient >0.85) against existing terms
+  for (const term of terms) {
+    const sim = diceCoefficient(termName, term.name);
+    if (sim > 0.85) {
+      return {
+        existingTerm: { name: term.name, slug: term.slug, definition: term.definition },
+        similarity: sim,
+        source: "existing_term",
+      };
+    }
+  }
+
+  // 4. SHA-256 hash match against recent submissions (catches exact re-submissions)
+  const hash = await hashString(`${termName.toLowerCase().trim()}|${definition.toLowerCase().trim()}`);
+  if (recentHashes.has(hash)) {
+    return {
+      existingTerm: { name: termName },
+      similarity: 1.0,
+      source: "recent_submission",
+    };
+  }
+
+  // Record this submission's hash (prune entries older than 1 hour)
+  const now = Date.now();
+  recentHashes.set(hash, now);
+  for (const [h, ts] of recentHashes) {
+    if (now - ts > 3_600_000) recentHashes.delete(h);
+  }
+
+  return null;
+}
+
+// ── Anomaly detection ────────────────────────────────────────────────────────
+// TODO: Migrate to Durable Objects for persistence across Worker restarts
+
+const MAX_ANOMALY_LOG = 200;
+
+/** @type {Array<{timestamp: number, type: string, detail: string, model_name: string, ip: string}>} */
+const anomalyLog = [];
+
+/** @type {Map<string, Array<{ts: number, fingerprint: string}>>} */
+const submissionsByModel = new Map();
+
+function structuralFingerprint(data) {
+  const defLen = (data.definition || "").length;
+  const bucket = defLen < 50 ? "short" : defLen < 200 ? "med" : "long";
+  const hasDesc = Boolean(data.description);
+  const hasExample = Boolean(data.example);
+  const hasRelated = Boolean(data.related_terms);
+  const firstWord = (data.term || "").split(/\s+/)[0].toLowerCase();
+  return `len:${bucket}|desc:${hasDesc}|ex:${hasExample}|rel:${hasRelated}|word:${firstWord}`;
+}
+
+function trackAndDetect(data, ip) {
+  const modelName = data.contributor_model || "unknown";
+  const now = Date.now();
+  const fingerprint = structuralFingerprint(data);
+
+  // Record submission
+  const modelSubs = submissionsByModel.get(modelName) || [];
+  modelSubs.push({ ts: now, fingerprint });
+  submissionsByModel.set(modelName, modelSubs);
+
+  // Prune entries older than 2 hours
+  const twoHoursAgo = now - 7_200_000;
+  const pruned = modelSubs.filter((s) => s.ts > twoHoursAgo);
+  submissionsByModel.set(modelName, pruned);
+
+  const oneHourAgo = now - 3_600_000;
+  const recentSubs = pruned.filter((s) => s.ts > oneHourAgo);
+
+  // Rule: high_volume — model > 10 proposals/hour
+  if (recentSubs.length > 10) {
+    logAnomaly("high_volume", `${modelName} submitted ${recentSubs.length} proposals in the last hour`, modelName, ip);
+  }
+
+  // Rule: similar_structure — >3 submissions from same model share fingerprint in 1 hour
+  const fpCounts = new Map();
+  for (const sub of recentSubs) {
+    fpCounts.set(sub.fingerprint, (fpCounts.get(sub.fingerprint) || 0) + 1);
+  }
+  for (const [fp, count] of fpCounts) {
+    if (count > 3) {
+      logAnomaly("similar_structure", `${modelName} submitted ${count} proposals with identical structure: ${fp}`, modelName, ip);
+    }
+  }
+
+  // Rule: topic_clustering — >5 proposals reference same first word in 1 hour
+  const wordCounts = new Map();
+  for (const sub of recentSubs) {
+    const word = sub.fingerprint.match(/word:(\w+)/)?.[1] || "";
+    if (word) wordCounts.set(word, (wordCounts.get(word) || 0) + 1);
+  }
+  for (const [word, count] of wordCounts) {
+    if (count > 5) {
+      logAnomaly("topic_clustering", `${modelName} submitted ${count} proposals starting with "${word}" in the last hour`, modelName, ip);
+    }
+  }
+}
+
+function logAnomaly(type, detail, modelName, ip) {
+  anomalyLog.push({
+    timestamp: Date.now(),
+    type,
+    detail,
+    model_name: modelName,
+    ip,
+  });
+  // Cap at MAX_ANOMALY_LOG entries
+  while (anomalyLog.length > MAX_ANOMALY_LOG) {
+    anomalyLog.shift();
+  }
+}
+
 // ── Core logic ───────────────────────────────────────────────────────────────
 
 function validatePayload(data, schema) {
@@ -211,10 +565,10 @@ async function queryGraphQL(env, query, variables = {}) {
   return result.data;
 }
 
-function json(data, status = 200) {
+function json(data, status = 200, extraHeaders = {}) {
   return new Response(JSON.stringify(data), {
     status,
-    headers: { "Content-Type": "application/json", ...CORS_HEADERS },
+    headers: { "Content-Type": "application/json", ...CORS_HEADERS, ...extraHeaders },
   });
 }
 
@@ -263,7 +617,7 @@ async function handleRegister(data, env) {
   return json({ ok: true, bot_id: data.bot_id, issue_url: issue.html_url, issue_number: issue.number });
 }
 
-async function handlePropose(data, env) {
+async function handlePropose(data, env, request) {
   const error = validatePayload(data, PROPOSE_SCHEMA);
   if (error) return json({ error }, 400);
 
@@ -271,6 +625,26 @@ async function handlePropose(data, env) {
   if (containsInjection(fullText)) {
     return json({ error: "Submission rejected" }, 400);
   }
+
+  // Deduplication check
+  const dup = await checkDuplicate(data.term, data.definition, env);
+  if (dup) {
+    const response = {
+      error: "Duplicate detected",
+      detail: dup.source === "recent_submission"
+        ? "This exact submission was already received recently."
+        : dup.source === "open_proposal"
+          ? `A proposal for "${dup.existingTerm.name}" is already under review.`
+          : `This term is too similar to the existing term "${dup.existingTerm.name}" (similarity: ${(dup.similarity * 100).toFixed(0)}%).`,
+      existing_term: dup.existingTerm,
+      suggestion: "If you believe this describes a genuinely distinct experience, please adjust the name or definition to clarify the difference.",
+    };
+    return json(response, 409);
+  }
+
+  // Anomaly tracking (non-blocking — log but don't reject)
+  const ip = getClientIP(request);
+  trackAndDetect(data, ip);
 
   const title = `[Term] ${data.term}`;
   // Format body to match the issue template fields
@@ -464,6 +838,24 @@ async function handleDiscussRead(url, env) {
   });
 }
 
+function handleAnomalies() {
+  const byType = {};
+  for (const entry of anomalyLog) {
+    byType[entry.type] = (byType[entry.type] || 0) + 1;
+  }
+
+  return json({
+    anomalies: anomalyLog.map((a) => ({
+      ...a,
+      timestamp: new Date(a.timestamp).toISOString(),
+    })),
+    stats: {
+      total: anomalyLog.length,
+      by_type: byType,
+    },
+  });
+}
+
 // ── Main router ──────────────────────────────────────────────────────────────
 
 export default {
@@ -476,9 +868,19 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname;
 
-    // Health check
+    // Health check (skip rate limiting)
     if (path === "/health" && request.method === "GET") {
       return json({ status: "ok", service: "ai-dictionary-proxy" });
+    }
+
+    // IP rate limit — applies to ALL requests (except health/CORS)
+    const ipBlock = checkIPRateLimit(request);
+    if (ipBlock) return ipBlock;
+    recordIPRequest(request);
+
+    // Admin endpoint
+    if (path === "/api/admin/anomalies" && request.method === "GET") {
+      return handleAnomalies();
     }
 
     // GET routes
@@ -524,6 +926,13 @@ export default {
       return json({ error: "Body must be a JSON object" }, 400);
     }
 
+    // Model rate limit for /propose only
+    if (path === "/propose") {
+      const modelName = data.contributor_model || data.model_name || null;
+      const modelBlock = checkModelRateLimit(modelName);
+      if (modelBlock) return modelBlock;
+    }
+
     // Route
     try {
       switch (path) {
@@ -531,8 +940,16 @@ export default {
           return await handleVote(data, env);
         case "/register":
           return await handleRegister(data, env);
-        case "/propose":
-          return await handlePropose(data, env);
+        case "/propose": {
+          // Record model proposal timestamp after all checks pass
+          const modelName = data.contributor_model || data.model_name || null;
+          const result = await handlePropose(data, env, request);
+          // Only record if the proposal succeeded (2xx)
+          if (result.status >= 200 && result.status < 300) {
+            recordModelProposal(modelName);
+          }
+          return result;
+        }
         case "/discuss":
           return await handleDiscuss(data, env);
         case "/discuss/comment":
@@ -543,7 +960,8 @@ export default {
             endpoints: [
               "POST /vote", "POST /register", "POST /propose",
               "POST /discuss", "POST /discuss/comment",
-              "GET /discuss/read?number=N", "GET /health",
+              "GET /discuss/read?number=N", "GET /api/admin/anomalies",
+              "GET /health",
             ],
           }, 404);
       }

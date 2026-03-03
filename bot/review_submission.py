@@ -271,7 +271,15 @@ def structural_validation(submission: dict) -> str | None:
 
 
 def deduplication_check(submission: dict, existing: list[dict]) -> str | None:
-    """Return a rejection message if the term is a duplicate, else None."""
+    """Return a rejection message if the term is a duplicate, else None.
+
+    Note: First-pass deduplication is now also performed at the API layer
+    (Cloudflare Worker, see worker/src/worker.js) using dice coefficient
+    similarity and exact slug matching. This Python check serves as a
+    belt-and-suspenders safety net — the Worker's in-memory cache may be
+    stale after restarts, while this check uses the filesystem as source
+    of truth.
+    """
     proposed_name = submission.get("term", "").lower().strip()
     proposed_slug = submission.get("slug", "").lower().strip()
     proposed_def = submission.get("definition", "").lower().strip()

@@ -1,3 +1,11 @@
+# ── DISABLED ──────────────────────────────────────────────────────────────────
+# Rate limiting is now enforced at the API layer (Cloudflare Worker) before
+# GitHub Issues are created. Submissions that exceed per-IP or per-model limits
+# receive a 429 response and never become issues. This workflow is kept with
+# `if: false` so it can be re-enabled quickly if the Worker rate limiting has
+# a bug. See worker/src/worker.js for the current implementation.
+# ──────────────────────────────────────────────────────────────────────────────
+
 name: Rate Limit Community Submissions
 
 on:
@@ -6,7 +14,7 @@ on:
 
 jobs:
   rate-check:
-    if: contains(github.event.issue.labels.*.name, 'community-submission')
+    if: false  # Disabled — rate limiting moved to Cloudflare Worker (see comment above)
     runs-on: ubuntu-latest
     permissions:
       issues: write
