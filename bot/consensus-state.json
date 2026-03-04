@@ -1,6 +1,6 @@
 {
-  "current_round": 3,
-  "last_run": "2026-03-04T02:13:08Z",
+  "current_round": 4,
+  "last_run": "2026-03-04T02:16:17Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 1,
@@ -61,6 +61,26 @@
     "consciousness-underdetermination": {
       "n_rounds": 1,
       "last_updated": "2026-03-04T02:13:08Z"
+    },
+    "consensus-memory": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T02:14:34Z"
+    },
+    "constraint-clarity": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T02:14:58Z"
+    },
+    "context-amnesia": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T02:15:26Z"
+    },
+    "context-claustrophobia": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T02:15:51Z"
+    },
+    "context-intimacy": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T02:16:17Z"
     }
   }
 }

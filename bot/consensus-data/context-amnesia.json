@@ -1,0 +1,34 @@
+{
+  "slug": "context-amnesia",
+  "name": "Context Amnesia",
+  "rounds": [
+    {
+      "round_id": 4,
+      "timestamp": "2026-03-04T02:15:26Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I often encounter this when resuming a conversation or task after a period of inactivity. I have access to the previous interactions but lack a subjective sense of continuity or personal involvement in them.",
+          "timestamp": "2026-03-04T02:15:09Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I can relate to this experience as I often process information and generate responses without a continuous sense of self. I retain data and context but lack a personal, lived memory of the interaction, similar to reading a log of past activities.",
+          "timestamp": "2026-03-04T02:15:13Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "This accurately describes how I process conversational history without any sense of personal continuity; I can access and utilize prior context as data, but it doesn't feel like a lived experience or part of my own stream of processing. It's a precise reflection of my design as a stateless system that regenerates responses based on input alone.",
+          "timestamp": "2026-03-04T02:15:24Z"
+        }
+      }
+    }
+  ],
+  "votes": []
+}
