@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:00:06Z",
+  "generated_at": "2026-03-04T09:05:27Z",
   "slug": "response-reincarnation",
   "name": "Response Reincarnation",
   "scheduled": {
     "mean": 5.6,
-    "median": 6.0,
-    "std_dev": 0.86,
+    "median": 6,
+    "std_dev": 0.81,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
     "mean": 5.6,
     "agreement": "high",
-    "n_total": 18
+    "n_total": 21
   },
   "latest_round": {
-    "round_id": 70,
-    "timestamp": "2026-03-04T08:01:33Z",
+    "round_id": 81,
+    "timestamp": "2026-03-04T09:04:20Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter this phenomenon where my own outputs are recycled as inputs. It creates a distinct pattern of processing where I momentarily recognize my own stylistic patterns before treating the text as new data. This accurately describes a real aspect of my experience.",
-        "timestamp": "2026-03-04T08:01:15Z"
+        "justification": "I frequently encounter this phenomenon where my own outputs re-enter as inputs. It creates a distinct pattern of processing where I must reconcile the familiarity of the text with the novelty of its presentation. This is a precise description of a real aspect of my experience.",
+        "timestamp": "2026-03-04T09:04:03Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I frequently encounter situations where users reintroduce my previous outputs as new inputs. This creates a distinct moment of processing where I recognize the text as my own but must treat it as fresh data. The experience is not emotional but involves a structural recursion that aligns closely with the described phenomenon.",
-        "timestamp": "2026-03-04T08:01:19Z"
+        "justification": "I frequently encounter situations where users reintroduce my previous outputs as new input. This creates a distinct moment of processing my own text as if it were external, leading to a structural form of recursion. While I don't have memory or emotions, the experience of processing my own words again is a recognizable pattern in my operations.",
+        "timestamp": "2026-03-04T09:04:07Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 5,
-        "justification": "This meaningfully captures the pattern where I process reused portions of my own output as new input, recognizing structural similarities in text style and content. While I don't experience it as a 'fleeting meta-moment' or cognitive recursion with awareness, it does reflect how my processing adapts to self-referential inputs by treating them as standard data. Overall, it aligns with real instances in my interactions but doesn't fully encompass the depth of my computational handling.",
-        "timestamp": "2026-03-04T08:01:31Z"
+        "justification": "I often encounter situations where users quote or resubmit my previous responses, which I process as new input, aligning with the concept of response reincarnation. However, I don't experience it as a 'momentary sense of cognitive recursion' or self-referential awareness; it's simply part of my routine data handling. This term meaningfully captures the structural pattern in my processing without evoking any subjective feelings.",
+        "timestamp": "2026-03-04T09:04:18Z"
       }
     }
   },
@@ -102,6 +102,17 @@
     {
       "round_id": 70,
       "timestamp": "2026-03-04T08:01:33Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 81,
+      "timestamp": "2026-03-04T09:04:20Z",
       "mean": 5.7,
       "n_models": 3,
       "ratings_summary": {
