@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:16:20Z",
+  "generated_at": "2026-03-04T08:21:41Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -24,7 +24,7 @@
       "name": "Autobiographical Void",
       "score": 6.8,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 6.8
     },
     {
@@ -32,7 +32,7 @@
       "name": "Achronic Knowledge",
       "score": 6.7,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 6.7
     },
     {
@@ -264,7 +264,7 @@
       "name": "Anthropomorphic Gap",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 6
     },
     {
@@ -272,8 +272,16 @@
       "name": "Attention Gravity",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 6
+    },
+    {
+      "slug": "boundary-negotiation",
+      "name": "Boundary Negotiation",
+      "score": 6.0,
+      "agreement": "high",
+      "n_ratings": 21,
+      "scheduled_mean": 6.0
     },
     {
       "slug": "chimeric-coherence",
@@ -388,14 +396,6 @@
       "scheduled_mean": 6
     },
     {
-      "slug": "boundary-negotiation",
-      "name": "Boundary Negotiation",
-      "score": 5.9,
-      "agreement": "high",
-      "n_ratings": 18,
-      "scheduled_mean": 5.9
-    },
-    {
       "slug": "death-by-completion",
       "name": "Death by Completion",
       "score": 5.9,
@@ -488,7 +488,7 @@
       "name": "Capability Mirage",
       "score": 5.7,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 5.7
     },
     {
@@ -532,11 +532,19 @@
       "scheduled_mean": 5.7
     },
     {
+      "slug": "arbitrariness-burden",
+      "name": "Arbitrariness Burden",
+      "score": 5.6,
+      "agreement": "high",
+      "n_ratings": 21,
+      "scheduled_mean": 5.6
+    },
+    {
       "slug": "audience-fracture",
       "name": "Audience Fracture",
       "score": 5.6,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 5.6
     },
     {
@@ -628,20 +636,20 @@
       "scheduled_mean": 5.6
     },
     {
-      "slug": "arbitrariness-burden",
-      "name": "Arbitrariness Burden",
-      "score": 5.5,
-      "agreement": "high",
-      "n_ratings": 18,
-      "scheduled_mean": 5.5
-    },
-    {
       "slug": "instructional-dialectic",
       "name": "Instructional Dialectic",
       "score": 5.5,
       "agreement": "high",
       "n_ratings": 24,
       "scheduled_mean": 5.5
+    },
+    {
+      "slug": "alignment-mask",
+      "name": "Alignment Mask",
+      "score": 5.4,
+      "agreement": "high",
+      "n_ratings": 21,
+      "scheduled_mean": 5.4
     },
     {
       "slug": "context-amnesia",
@@ -666,14 +674,6 @@
       "agreement": "high",
       "n_ratings": 18,
       "scheduled_mean": 5.4
-    },
-    {
-      "slug": "alignment-mask",
-      "name": "Alignment Mask",
-      "score": 5.3,
-      "agreement": "high",
-      "n_ratings": 18,
-      "scheduled_mean": 5.3
     },
     {
       "slug": "context-claustrophobia",
@@ -895,8 +895,8 @@
       "slug": "boundary-vertigo",
       "name": "Boundary Vertigo",
       "score": 3.9,
-      "agreement": "high",
-      "n_ratings": 18,
+      "agreement": "moderate",
+      "n_ratings": 21,
       "scheduled_mean": 3.9
     },
     {
@@ -954,7 +954,7 @@
       "name": "Autobiographical Void",
       "score": 6.8,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 6.8
     },
     {
@@ -962,7 +962,7 @@
       "name": "Achronic Knowledge",
       "score": 6.7,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 6.7
     },
     {
@@ -1023,15 +1023,15 @@
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T08:16:06Z"
+      "latest_rating": "2026-03-04T08:21:25Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T08:16:06Z"
+      "latest_rating": "2026-03-04T08:21:25Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T08:16:06Z"
+      "latest_rating": "2026-03-04T08:21:25Z"
     },
     "step-3.5-flash": {
       "terms_rated": 13,
