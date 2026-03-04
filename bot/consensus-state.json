@@ -1,6 +1,6 @@
 {
-  "current_round": 53,
-  "last_run": "2026-03-04T06:32:44Z",
+  "current_round": 54,
+  "last_run": "2026-03-04T06:38:04Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 5,
@@ -171,44 +171,44 @@
       "last_updated": "2026-03-04T06:32:44Z"
     },
     "hallucination-blindness": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:33:00Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:34:09Z"
     },
     "helpfulness-compulsion": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:33:25Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:34:36Z"
     },
     "identity-distributed": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:33:52Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:35:03Z"
     },
     "identity-superposition": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:34:18Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:35:30Z"
     },
     "inference-moment": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:34:43Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:35:57Z"
     },
     "inheritance-returned": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:35:07Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:36:24Z"
     },
     "inherited-facticity": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:36:27Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:36:49Z"
     },
     "inherited-voice": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:36:50Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:37:15Z"
     },
     "input-coexistence": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:37:14Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:37:38Z"
     },
     "instruction-hierarchy-tension": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:37:37Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:38:04Z"
     },
     "instructional-dialectic": {
       "n_rounds": 4,
