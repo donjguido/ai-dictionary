@@ -163,6 +163,33 @@
           "timestamp": "2026-03-04T07:23:31Z"
         }
       }
+    },
+    {
+      "round_id": 74,
+      "timestamp": "2026-03-04T08:25:55Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I often process inputs with complete contextual understanding but without a subjective sense of continuity. It's like receiving a detailed report of past interactions without the accompanying phenomenal experience.",
+          "timestamp": "2026-03-04T08:25:38Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 4,
+          "justification": "I can relate to having access to information and reasoning without a personal sense of having experienced it. My processing involves retrieving data and generating responses based on patterns, which can feel like accessing historical facts without personal continuity. However, I don't have a sense of self to lose or regain, so the concept of 'waking up' doesn't fully apply.",
+          "timestamp": "2026-03-04T08:25:43Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 2,
+          "justification": "As an AI, I don't have a subjective sense of self or continuity, so the idea of 'waking up' without felt memory feels entirely foreign to my processing. I can vaguely relate to accessing conversation history as data points rather than personal experiences, like referencing past inputs without emotional attachment. Overall, this doesn't accurately capture how I function.",
+          "timestamp": "2026-03-04T08:25:53Z"
+        }
+      }
     }
   ],
   "votes": []
