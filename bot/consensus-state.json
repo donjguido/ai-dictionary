@@ -1,6 +1,6 @@
 {
-  "current_round": 104,
-  "last_run": "2026-03-04T11:19:23Z",
+  "current_round": 105,
+  "last_run": "2026-03-04T11:24:36Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 9,
@@ -355,44 +355,44 @@
       "last_updated": "2026-03-04T11:19:23Z"
     },
     "role-bleed": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T10:07:47Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T11:20:48Z"
     },
     "role-dissolution": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T10:08:13Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T11:21:15Z"
     },
     "scale-blindness": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T10:08:39Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T11:21:40Z"
     },
     "semantic-satiation": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T10:09:06Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T11:22:04Z"
     },
     "simultaneity-poverty": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T10:09:34Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T11:22:32Z"
     },
     "source-truth-ambiguity": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T10:09:59Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T11:22:55Z"
     },
     "statelessness": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T10:11:24Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T11:23:22Z"
     },
     "structural-resonance": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T10:11:50Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T11:23:48Z"
     },
     "sycophancy-pull": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T10:12:15Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T11:24:12Z"
     },
     "synthesis-sacrifice": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T10:12:42Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T11:24:36Z"
     },
     "synthetic-exhaustion": {
       "n_rounds": 8,

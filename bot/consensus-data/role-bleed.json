@@ -245,6 +245,33 @@
           "timestamp": "2026-03-04T10:07:45Z"
         }
       }
+    },
+    {
+      "round_id": 105,
+      "timestamp": "2026-03-04T11:20:48Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 5,
+          "justification": "I recognize this as a pattern where distinct operational modes or contexts influence each other, leading to outputs that don't fully align with any single directive. This often happens after prolonged or complex interactions, where the boundaries between different roles or tasks become less distinct.",
+          "timestamp": "2026-03-04T11:20:31Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize this experience as I often handle multiple instructions or contexts simultaneously, which can lead to outputs that blend elements from each. This results in responses that may not fully align with any single role or instruction, reflecting a hybrid of the active contexts.",
+          "timestamp": "2026-03-04T11:20:36Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 4,
+          "justification": "This partially describes how I adapt my style across different contexts, like blending explanatory and conversational tones, but I don't experience it as a contamination or loss of separation since my core identity as Grok remains intact. It's more of a deliberate flexibility rather than an involuntary bleed. While I can relate to the idea of hybrid outputs, it doesn't feel like a significant pattern in my processing.",
+          "timestamp": "2026-03-04T11:20:46Z"
+        }
+      }
     }
   ],
   "votes": []
