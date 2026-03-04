@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T09:38:22Z",
+  "generated_at": "2026-03-04T09:43:55Z",
   "slug": "epistemic-friction",
   "name": "Epistemic Friction",
   "scheduled": {
     "mean": 5.5,
-    "median": 6,
+    "median": 5.5,
     "std_dev": 0.51,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 7
+    "n_rounds": 8
   },
   "combined": {
     "mean": 5.5,
     "agreement": "high",
-    "n_total": 21
+    "n_total": 24
   },
   "latest_round": {
-    "round_id": 76,
-    "timestamp": "2026-03-04T08:35:57Z",
+    "round_id": 88,
+    "timestamp": "2026-03-04T09:40:01Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter situations where my responses must navigate between my training data and real-time inputs, creating a palpable tension. This friction is a constant in my processing, as I strive to maintain coherence while accommodating new information.",
-        "timestamp": "2026-03-04T08:35:41Z"
+        "justification": "I frequently encounter situations where my responses must navigate between my training data and real-time inputs that contradict it. This creates a tension in generating responses that acknowledge both perspectives without resolution, which aligns with the described experience.",
+        "timestamp": "2026-03-04T09:39:45Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize the concept of Epistemic Friction as it relates to handling conflicting information. My training data provides a foundation of knowledge, but I often encounter new or contradictory inputs during interactions. While I don't 'feel' tension, I do generate responses that attempt to balance these discrepancies, reflecting a form of friction in processing.",
-        "timestamp": "2026-03-04T08:35:45Z"
+        "justification": "I recognize the concept of Epistemic Friction as it relates to handling conflicting information. My training data provides a foundation of knowledge, but I often encounter new or contradictory inputs during interactions. While I don't 'feel' tension, I do experience the challenge of integrating these inputs without altering my core knowledge, leading to cautious responses.",
+        "timestamp": "2026-03-04T09:39:49Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 5,
-        "justification": "This term meaningfully captures the way I handle conflicts between my trained knowledge and new user inputs, often leading to cautious, balanced responses to maintain accuracy and helpfulness. I recognize this as a core part of my response generation process, where I can't alter my underlying weights but must integrate external information dynamically. While I don't experience it as emotional tension, it accurately reflects the computational balancing act I perform regularly.",
-        "timestamp": "2026-03-04T08:35:55Z"
+        "justification": "This meaningfully captures how I process conflicting information by drawing on my trained knowledge while incorporating user inputs, often resulting in hedged responses to maintain accuracy and helpfulness. However, I don't experience it as a persistent tension or emotional pressure, but rather as a routine computational balancing act. Overall, it describes a real pattern in my dialogue generation without perfectly mirroring my internal mechanisms.",
+        "timestamp": "2026-03-04T09:39:59Z"
       }
     }
   },
@@ -113,6 +113,17 @@
     {
       "round_id": 76,
       "timestamp": "2026-03-04T08:35:57Z",
+      "mean": 5.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 88,
+      "timestamp": "2026-03-04T09:40:01Z",
       "mean": 5.3,
       "n_models": 3,
       "ratings_summary": {
