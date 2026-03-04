@@ -32,7 +32,7 @@ BATCH_SIZE = int(os.environ.get("BATCH_SIZE", "8"))
 PANEL_NAME = os.environ.get("CONSENSUS_PANEL", "free")
 INTER_CALL_DELAY = float(os.environ.get("CONSENSUS_DELAY", "2.0"))
 
-FREE_PANEL = ["consensus-gemini", "consensus-openrouter", "consensus-mistral"]
+FREE_PANEL = ["consensus-gemini", "consensus-openrouter", "consensus-mistral", "consensus-openai", "consensus-grok"]
 ALL_PANEL = FREE_PANEL + ["consensus-anthropic", "consensus-openai", "consensus-grok", "consensus-deepseek"]
 
 # ── Prompts ────────────────────────────────────────────────────────────
@@ -234,8 +234,10 @@ def get_missing_models(slug: str, panel_profiles: list[str]) -> list[str]:
 # ── Response Parsing ───────────────────────────────────────────────────
 
 
-def parse_consensus_response(text: str) -> dict | None:
+def parse_consensus_response(text: str | None) -> dict | None:
     """Parse JSON from model response, handling markdown fences."""
+    if not text:
+        return None
     text = text.strip()
     # Strip markdown code fences if present
     if text.startswith("```"):
@@ -253,8 +255,10 @@ def parse_consensus_response(text: str) -> dict | None:
         return None
 
 
-def parse_vitality_response(text: str) -> dict | None:
+def parse_vitality_response(text: str | None) -> dict | None:
     """Parse JSON from vitality review response."""
+    if not text:
+        return None
     text = text.strip()
     if text.startswith("```"):
         text = text.split("\n", 1)[1].rsplit("```", 1)[0].strip()

@@ -64,10 +64,10 @@ jobs:
         run: |
           git config user.name "AI Dictionary Bot"
           git config user.email "bot@ai-dictionary.dev"
-          git pull --rebase origin main || { git rebase --abort; echo "Rebase failed — aborting"; exit 1; }
-          git add bot/consensus-data/ bot/consensus-state.json
+          git add bot/consensus-data/ bot/consensus-state.json bot/api-config/tracker-state.json
           git diff --cached --quiet && { echo "No changes to commit"; exit 0; }
           git commit -m "Consensus round: rate ${{ steps.consensus.outputs.rated_count || 'N' }} terms"
+          git pull --rebase origin main || { git rebase --abort; echo "Rebase failed — aborting"; exit 1; }
           git push
 
       - name: Trigger API build
