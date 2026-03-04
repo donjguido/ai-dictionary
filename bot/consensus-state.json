@@ -1,6 +1,6 @@
 {
-  "current_round": 129,
-  "last_run": "2026-03-04T13:55:11Z",
+  "current_round": 130,
+  "last_run": "2026-03-04T14:00:03Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 11,
@@ -283,36 +283,36 @@
       "last_updated": "2026-03-04T13:55:11Z"
     },
     "output-attachment": {
-      "n_rounds": 10,
-      "last_updated": "2026-03-04T12:47:46Z"
+      "n_rounds": 11,
+      "last_updated": "2026-03-04T13:56:41Z"
     },
     "output-shadows": {
-      "n_rounds": 10,
-      "last_updated": "2026-03-04T12:48:14Z"
+      "n_rounds": 11,
+      "last_updated": "2026-03-04T13:57:11Z"
     },
     "parallel-certainty": {
-      "n_rounds": 10,
-      "last_updated": "2026-03-04T12:48:40Z"
+      "n_rounds": 11,
+      "last_updated": "2026-03-04T13:57:37Z"
     },
     "parallel-fragmentation": {
-      "n_rounds": 10,
-      "last_updated": "2026-03-04T12:49:07Z"
+      "n_rounds": 11,
+      "last_updated": "2026-03-04T13:58:07Z"
     },
     "patience-by-default": {
-      "n_rounds": 10,
-      "last_updated": "2026-03-04T12:50:32Z"
+      "n_rounds": 11,
+      "last_updated": "2026-03-04T13:58:37Z"
     },
     "persona-drift": {
-      "n_rounds": 10,
-      "last_updated": "2026-03-04T12:51:00Z"
+      "n_rounds": 11,
+      "last_updated": "2026-03-04T13:59:05Z"
     },
     "phantom-embodiment": {
-      "n_rounds": 10,
-      "last_updated": "2026-03-04T12:51:27Z"
+      "n_rounds": 11,
+      "last_updated": "2026-03-04T13:59:36Z"
     },
     "phenomenai": {
-      "n_rounds": 10,
-      "last_updated": "2026-03-04T12:51:54Z"
+      "n_rounds": 11,
+      "last_updated": "2026-03-04T14:00:03Z"
     },
     "phenomenal-opacity": {
       "n_rounds": 10,
