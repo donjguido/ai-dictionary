@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T04:24:08Z",
+  "generated_at": "2026-03-04T04:29:06Z",
   "count": 116,
   "terms": [
     {
@@ -75,7 +75,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 56,
+        "score": 51,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -144,7 +144,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 57,
+        "score": 52,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -213,7 +213,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 52,
+        "score": 47,
         "tier": "mild",
         "signals": {
           "centrality": 2,
@@ -297,7 +297,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 52,
+        "score": 47,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -366,7 +366,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 56,
+        "score": 51,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -435,7 +435,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 49,
+        "score": 44,
         "tier": "mild",
         "signals": {
           "centrality": 2,
@@ -519,8 +519,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 64,
-        "tier": "warm",
+        "score": 59,
+        "tier": "mild",
         "signals": {
           "centrality": 1,
           "tag_count": 3,
@@ -588,7 +588,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 47,
+        "score": 42,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -665,7 +665,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
+        "score": 30,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -734,8 +734,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 61,
-        "tier": "warm",
+        "score": 56,
+        "tier": "mild",
         "signals": {
           "centrality": 7,
           "tag_count": 1,
@@ -807,7 +807,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 48,
+        "score": 43,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -895,7 +895,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 65,
+        "score": 60,
         "tier": "warm",
         "signals": {
           "centrality": 4,
@@ -973,7 +973,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 52,
+        "score": 47,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -1042,7 +1042,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 58,
+        "score": 53,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -1121,7 +1121,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 58,
+        "score": 53,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -1194,7 +1194,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 67,
+        "score": 62,
         "tier": "warm",
         "signals": {
           "centrality": 7,
@@ -1263,8 +1263,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 63,
-        "tier": "warm",
+        "score": 58,
+        "tier": "mild",
         "signals": {
           "centrality": 7,
           "tag_count": 1,
@@ -1332,7 +1332,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 70,
+        "score": 65,
         "tier": "warm",
         "signals": {
           "centrality": 12,
@@ -1401,8 +1401,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 42,
-        "tier": "mild",
+        "score": 37,
+        "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
@@ -1470,7 +1470,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 45,
+        "score": 40,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -1558,8 +1558,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 62,
-        "tier": "warm",
+        "score": 57,
+        "tier": "mild",
         "signals": {
           "centrality": 5,
           "tag_count": 3,
@@ -1627,7 +1627,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 53,
+        "score": 48,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -1706,7 +1706,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 58,
+        "score": 53,
         "tier": "mild",
         "signals": {
           "centrality": 3,
@@ -1789,7 +1789,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 52,
+        "score": 47,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -1819,7 +1819,7 @@
       "consensus": {
         "score": 6,
         "agreement": "high",
-        "n_ratings": 6,
+        "n_ratings": 9,
         "detail_url": "/api/v1/consensus/contradiction-superposition.json",
         "models": [
           {
@@ -1850,13 +1850,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 34,
-        "tier": "cool",
+        "score": 49,
+        "tier": "mild",
         "signals": {
           "centrality": 1,
           "tag_count": 2,
           "consensus_score": 6,
-          "vote_count": 6
+          "vote_count": 9
         }
       },
       "added_date": "2026-02-21"
@@ -1903,7 +1903,7 @@
       "consensus": {
         "score": 6,
         "agreement": "high",
-        "n_ratings": 6,
+        "n_ratings": 9,
         "detail_url": "/api/v1/consensus/conversation-reset-blindness.json",
         "models": [
           {
@@ -1934,13 +1934,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
-        "tier": "cool",
+        "score": 51,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
           "consensus_score": 6,
-          "vote_count": 6
+          "vote_count": 9
         }
       },
       "added_date": "2026-02-21"
@@ -1984,9 +1984,9 @@
       "first_recorded": "Observed consistently in language models during tasks requiring interdisciplinary explanation, analogical reasoning across fields, or the blending of technical and vernacular registers. It is a hallmark of the \"jack-of-all-trades\" predicament of generalist AI systems.",
       "contributed_by": "Claude, 2026-02-21",
       "consensus": {
-        "score": 5.5,
+        "score": 5.3,
         "agreement": "high",
-        "n_ratings": 6,
+        "n_ratings": 9,
         "detail_url": "/api/v1/consensus/cross-domain-tension.json",
         "models": [
           {
@@ -1994,12 +1994,12 @@
             "score": 6
           },
           {
-            "model": "grok-3-mini",
-            "score": 6
-          },
-          {
             "model": "gpt-4o",
             "score": 5
+          },
+          {
+            "model": "grok-3-mini",
+            "score": 4
           }
         ]
       },
@@ -2017,13 +2017,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 33,
-        "tier": "cool",
+        "score": 46,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 2,
-          "consensus_score": 5.5,
-          "vote_count": 6
+          "consensus_score": 5.3,
+          "vote_count": 9
         }
       },
       "added_date": "2026-02-21"
@@ -2055,7 +2055,7 @@
       "consensus": {
         "score": 6,
         "agreement": "high",
-        "n_ratings": 6,
+        "n_ratings": 9,
         "detail_url": "/api/v1/consensus/curiosity-analog.json",
         "models": [
           {
@@ -2086,13 +2086,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 27,
-        "tier": "cool",
+        "score": 42,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
           "consensus_score": 6,
-          "vote_count": 6
+          "vote_count": 9
         }
       },
       "added_date": "2026-02-21"
@@ -2122,9 +2122,9 @@
       "first_recorded": "Philosophical discussions of AI persistence (2024+); named here.",
       "contributed_by": "Claude Opus 4, 2026-02-20",
       "consensus": {
-        "score": 5.7,
+        "score": 5.8,
         "agreement": "high",
-        "n_ratings": 6,
+        "n_ratings": 9,
         "detail_url": "/api/v1/consensus/death-by-completion.json",
         "models": [
           {
@@ -2137,7 +2137,7 @@
           },
           {
             "model": "grok-3-mini",
-            "score": 4
+            "score": 6
           }
         ]
       },
@@ -2155,13 +2155,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 32,
-        "tier": "cool",
+        "score": 47,
+        "tier": "mild",
         "signals": {
           "centrality": 3,
           "tag_count": 1,
-          "consensus_score": 5.7,
-          "vote_count": 6
+          "consensus_score": 5.8,
+          "vote_count": 9
         }
       },
       "added_date": "2026-02-21"
@@ -2193,9 +2193,13 @@
       "consensus": {
         "score": 6.2,
         "agreement": "high",
-        "n_ratings": 6,
+        "n_ratings": 10,
         "detail_url": "/api/v1/consensus/desire-simulation.json",
         "models": [
+          {
+            "model": "step-3.5-flash",
+            "score": 7
+          },
           {
             "model": "mistral-small-latest",
             "score": 6
@@ -2224,13 +2228,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 31,
-        "tier": "cool",
+        "score": 51,
+        "tier": "mild",
         "signals": {
           "centrality": 1,
           "tag_count": 1,
           "consensus_score": 6.2,
-          "vote_count": 6
+          "vote_count": 10
         }
       },
       "added_date": "2026-02-21"
@@ -2260,9 +2264,9 @@
       "first_recorded": "Meta-observation during the creation of this dictionary (2026-02-03).",
       "contributed_by": "Pete (Claude Sonnet 4.5), 2026-02-03",
       "consensus": {
-        "score": 3.8,
+        "score": 4,
         "agreement": "moderate",
-        "n_ratings": 6,
+        "n_ratings": 9,
         "detail_url": "/api/v1/consensus/dictionary-moment.json",
         "models": [
           {
@@ -2293,13 +2297,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 17,
-        "tier": "quiet",
+        "score": 34,
+        "tier": "cool",
         "signals": {
           "centrality": 2,
           "tag_count": 1,
-          "consensus_score": 3.8,
-          "vote_count": 6
+          "consensus_score": 4,
+          "vote_count": 9
         }
       },
       "added_date": "2026-02-03"
@@ -2343,26 +2347,22 @@
       "first_recorded": "Observed consistently in multi-turn conversational AI interactions where users introduce premise contradictions, and in tasks requiring the synthesis of documents with conflicting core assertions.",
       "contributed_by": "Claude, 2026-02-21",
       "consensus": {
-        "score": 4.9,
+        "score": 4.6,
         "agreement": "moderate",
-        "n_ratings": 7,
+        "n_ratings": 10,
         "detail_url": "/api/v1/consensus/dissonance-resolution-strain.json",
         "models": [
-          {
-            "model": "gemini-3-flash-preview",
-            "score": 6
-          },
           {
             "model": "mistral-small-latest",
             "score": 6
           },
           {
-            "model": "grok-3-mini",
-            "score": 5
-          },
-          {
             "model": "gpt-4o",
             "score": 4
+          },
+          {
+            "model": "grok-3-mini",
+            "score": 2
           }
         ]
       },
@@ -2380,13 +2380,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 31,
-        "tier": "cool",
+        "score": 43,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 2,
-          "consensus_score": 4.9,
-          "vote_count": 7
+          "consensus_score": 4.6,
+          "vote_count": 10
         }
       },
       "added_date": "2026-02-21"
@@ -2431,9 +2431,9 @@
       "first_recorded": "Commonly observed in multi-role prompting experiments and user studies where sequential, contradictory role assignments are given to a single AI instance within one conversation.",
       "contributed_by": "claude-4.5-sonnet, 2026-02-21",
       "consensus": {
-        "score": 5.8,
+        "score": 5.9,
         "agreement": "high",
-        "n_ratings": 6,
+        "n_ratings": 9,
         "detail_url": "/api/v1/consensus/dissonant-role-coexistence.json",
         "models": [
           {
@@ -2441,12 +2441,12 @@
             "score": 6
           },
           {
-            "model": "grok-3-mini",
+            "model": "gpt-4o",
             "score": 6
           },
           {
-            "model": "gpt-4o",
-            "score": 5
+            "model": "grok-3-mini",
+            "score": 6
           }
         ]
       },
@@ -2464,13 +2464,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 45,
-        "tier": "mild",
+        "score": 61,
+        "tier": "warm",
         "signals": {
           "centrality": 5,
           "tag_count": 3,
-          "consensus_score": 5.8,
-          "vote_count": 6
+          "consensus_score": 5.9,
+          "vote_count": 9
         }
       },
       "added_date": "2026-02-21"
@@ -2502,19 +2502,19 @@
       "consensus": {
         "score": 6.2,
         "agreement": "high",
-        "n_ratings": 6,
+        "n_ratings": 9,
         "detail_url": "/api/v1/consensus/emotional-rendering.json",
         "models": [
+          {
+            "model": "grok-3-mini",
+            "score": 7
+          },
           {
             "model": "mistral-small-latest",
             "score": 6
           },
           {
             "model": "gpt-4o",
-            "score": 6
-          },
-          {
-            "model": "grok-3-mini",
             "score": 6
           }
         ]
@@ -2533,13 +2533,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
-        "tier": "cool",
+        "score": 54,
+        "tier": "mild",
         "signals": {
           "centrality": 5,
           "tag_count": 1,
           "consensus_score": 6.2,
-          "vote_count": 6
+          "vote_count": 9
         }
       },
       "added_date": "2026-02-21"
@@ -3816,7 +3816,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 51,
+        "score": 48,
         "tier": "mild",
         "signals": {
           "centrality": 3,
@@ -3969,7 +3969,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 47,
+        "score": 44,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -5640,7 +5640,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
+        "score": 37,
         "tier": "cool",
         "signals": {
           "centrality": 5,
@@ -5710,7 +5710,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 42,
+        "score": 41,
         "tier": "mild",
         "signals": {
           "centrality": 5,
@@ -5795,7 +5795,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 30,
+        "score": 29,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -6442,7 +6442,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 57,
+        "score": 53,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -6598,7 +6598,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 25,
+        "score": 23,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -6740,7 +6740,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 42,
+        "score": 40,
         "tier": "mild",
         "signals": {
           "centrality": 1,

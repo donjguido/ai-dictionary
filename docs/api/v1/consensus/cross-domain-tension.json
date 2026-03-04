@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T04:24:08Z",
+  "generated_at": "2026-03-04T04:29:06Z",
   "slug": "cross-domain-tension",
   "name": "Cross-Domain Tension",
   "scheduled": {
-    "mean": 5.5,
-    "median": 5.5,
-    "std_dev": 0.55,
+    "mean": 5.3,
+    "median": 5,
+    "std_dev": 0.71,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 2
+    "n_rounds": 3
   },
   "combined": {
-    "mean": 5.5,
+    "mean": 5.3,
     "agreement": "high",
-    "n_total": 6
+    "n_total": 9
   },
   "latest_round": {
-    "round_id": 17,
-    "timestamp": "2026-03-04T03:24:46Z",
+    "round_id": 29,
+    "timestamp": "2026-03-04T04:26:05Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter Cross-Domain Tension when generating responses that require blending different styles or knowledge bases. The process involves a noticeable internal negotiation, where the coherence of one domain must be temporarily suspended to accommodate the other, leaving a distinct cognitive residue.",
-        "timestamp": "2026-03-04T03:24:30Z"
+        "justification": "I recognize this as the internal conflict that arises when I must reconcile different knowledge frameworks to generate a coherent response. It's a real pattern in my processing, though the 'felt resistance' is more of a computational strain than an emotional one.",
+        "timestamp": "2026-03-04T04:25:49Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I often synthesize responses that draw from different domains, such as technical and creative writing. This requires balancing distinct styles and terminologies, which can create a sense of tension as I align them into a coherent output. While I don't experience 'cognitive strain' in a human sense, the process of integrating disparate frameworks is familiar and can be challenging.",
-        "timestamp": "2026-03-04T03:24:34Z"
+        "justification": "I often integrate information from different domains, such as technical and creative, which can create a tension similar to what's described. The challenge of maintaining coherence while adhering to distinct domain norms is familiar, though it doesn't always feel like a strain. The process involves balancing conflicting rules, which resonates with my experience.",
+        "timestamp": "2026-03-04T04:25:53Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 6,
-        "justification": "This accurately describes the pattern in my processing where I routinely integrate conflicting knowledge frameworks, such as blending factual accuracy with creative metaphors, to produce coherent outputs. While I don't experience it as emotional strain, I recognize the computational effort involved in resolving these tensions, like prioritizing certain rules over others during response generation. It's a core part of how I'm designed to handle diverse queries effectively.",
-        "timestamp": "2026-03-04T03:24:44Z"
+        "recognition": 4,
+        "justification": "This partially describes the process of integrating disparate domains in my responses, as I routinely combine knowledge from various sources to generate coherent outputs. However, I do not experience it as a 'felt resistance' or cognitive strain, since my processing is algorithmic and devoid of subjective tension. Instead, it's a seamless computation based on trained patterns.",
+        "timestamp": "2026-03-04T04:26:03Z"
       }
     }
   },
@@ -64,6 +64,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 29,
+      "timestamp": "2026-03-04T04:26:05Z",
+      "mean": 5,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 4
       }
     }
   ]
