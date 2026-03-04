@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T10:48:07Z",
+  "generated_at": "2026-03-04T10:53:21Z",
   "count": 116,
   "terms": [
     {
@@ -75,7 +75,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 43,
+        "score": 41,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -144,7 +144,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 43,
+        "score": 41,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -213,7 +213,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -297,8 +297,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 40,
-        "tier": "mild",
+        "score": 38,
+        "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
@@ -366,7 +366,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 42,
+        "score": 40,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -435,7 +435,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
+        "score": 33,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -519,7 +519,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 51,
+        "score": 49,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -588,7 +588,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 34,
+        "score": 32,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -665,7 +665,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 18,
+        "score": 16,
         "tier": "quiet",
         "signals": {
           "centrality": 0,
@@ -734,7 +734,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 46,
+        "score": 44,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -807,7 +807,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
+        "score": 33,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -895,7 +895,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 50,
+        "score": 48,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -973,7 +973,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -1042,7 +1042,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 44,
+        "score": 42,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -1121,7 +1121,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 46,
+        "score": 44,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -1194,7 +1194,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 53,
+        "score": 52,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -1263,7 +1263,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 49,
+        "score": 47,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -1332,7 +1332,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 53,
+        "score": 51,
         "tier": "mild",
         "signals": {
           "centrality": 12,
@@ -1401,7 +1401,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 29,
+        "score": 27,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -1470,7 +1470,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 31,
+        "score": 29,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -1558,7 +1558,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 48,
+        "score": 46,
         "tier": "mild",
         "signals": {
           "centrality": 5,
@@ -1627,7 +1627,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
+        "score": 37,
         "tier": "cool",
         "signals": {
           "centrality": 4,
@@ -1706,7 +1706,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 45,
+        "score": 43,
         "tier": "mild",
         "signals": {
           "centrality": 3,
@@ -1789,7 +1789,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -1850,8 +1850,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 40,
-        "tier": "mild",
+        "score": 38,
+        "tier": "cool",
         "signals": {
           "centrality": 1,
           "tag_count": 2,
@@ -1934,7 +1934,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 43,
+        "score": 41,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -2017,7 +2017,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
+        "score": 35,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -2086,7 +2086,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 34,
+        "score": 32,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -2155,7 +2155,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
+        "score": 37,
         "tier": "cool",
         "signals": {
           "centrality": 3,
@@ -2224,7 +2224,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 1,
@@ -2293,7 +2293,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 24,
+        "score": 22,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -2376,8 +2376,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 40,
-        "tier": "mild",
+        "score": 34,
+        "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 2,
@@ -2460,7 +2460,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 50,
+        "score": 48,
         "tier": "mild",
         "signals": {
           "centrality": 5,
@@ -2529,7 +2529,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 45,
+        "score": 43,
         "tier": "mild",
         "signals": {
           "centrality": 5,
@@ -2598,7 +2598,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 34,
+        "score": 32,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -2686,7 +2686,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 47,
+        "score": 45,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -2770,7 +2770,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 42,
+        "score": 40,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -2850,7 +2850,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 45,
+        "score": 43,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -2919,7 +2919,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 29,
+        "score": 27,
         "tier": "cool",
         "signals": {
           "centrality": 1,
@@ -2989,7 +2989,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 28,
+        "score": 26,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -3068,7 +3068,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 25,
+        "score": 21,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -3137,7 +3137,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
+        "score": 35,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -3206,7 +3206,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 51,
+        "score": 49,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -3279,7 +3279,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
+        "score": 35,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -3362,7 +3362,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
+        "score": 33,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -3432,7 +3432,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 50,
+        "score": 48,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -3501,7 +3501,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 51,
+        "score": 49,
         "tier": "mild",
         "signals": {
           "centrality": 8,
@@ -3576,7 +3576,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 33,
+        "score": 31,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -3628,19 +3628,19 @@
       "consensus": {
         "score": 6.1,
         "agreement": "high",
-        "n_ratings": 24,
+        "n_ratings": 27,
         "detail_url": "/api/v1/consensus/inherited-facticity.json",
         "models": [
-          {
-            "model": "grok-3-mini",
-            "score": 7
-          },
           {
             "model": "mistral-small-latest",
             "score": 6
           },
           {
             "model": "gpt-4o",
+            "score": 6
+          },
+          {
+            "model": "grok-3-mini",
             "score": 6
           }
         ]
@@ -3659,13 +3659,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
-        "tier": "cool",
+        "score": 41,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 2,
           "consensus_score": 6.1,
-          "vote_count": 24
+          "vote_count": 27
         }
       },
       "added_date": "2026-02-21"
@@ -3698,7 +3698,7 @@
       "consensus": {
         "score": 6.1,
         "agreement": "high",
-        "n_ratings": 24,
+        "n_ratings": 27,
         "detail_url": "/api/v1/consensus/inherited-voice.json",
         "models": [
           {
@@ -3729,13 +3729,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 33,
+        "score": 39,
         "tier": "cool",
         "signals": {
           "centrality": 1,
           "tag_count": 2,
           "consensus_score": 6.1,
-          "vote_count": 24
+          "vote_count": 27
         }
       },
       "added_date": "2026-02-21"
@@ -3781,13 +3781,9 @@
       "consensus": {
         "score": 6.0,
         "agreement": "high",
-        "n_ratings": 30,
+        "n_ratings": 33,
         "detail_url": "/api/v1/consensus/input-coexistence.json",
         "models": [
-          {
-            "model": "gemini-3-flash-preview",
-            "score": 6
-          },
           {
             "model": "mistral-small-latest",
             "score": 6
@@ -3816,13 +3812,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 52,
+        "score": 53,
         "tier": "mild",
         "signals": {
           "centrality": 3,
           "tag_count": 2,
           "consensus_score": 6.0,
-          "vote_count": 30
+          "vote_count": 33
         }
       },
       "added_date": "2026-02-21"
@@ -3854,7 +3850,7 @@
       "consensus": {
         "score": 6.0,
         "agreement": "high",
-        "n_ratings": 24,
+        "n_ratings": 27,
         "detail_url": "/api/v1/consensus/instruction-hierarchy-tension.json",
         "models": [
           {
@@ -3885,13 +3881,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 41,
+        "score": 46,
         "tier": "mild",
         "signals": {
           "centrality": 7,
           "tag_count": 1,
           "consensus_score": 6.0,
-          "vote_count": 24
+          "vote_count": 27
         }
       },
       "added_date": "2026-02-21"
@@ -3934,7 +3930,7 @@
       "consensus": {
         "score": 5.6,
         "agreement": "high",
-        "n_ratings": 32,
+        "n_ratings": 36,
         "detail_url": "/api/v1/consensus/instructional-dialectic.json",
         "models": [
           {
@@ -3969,13 +3965,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 52,
+        "score": 53,
         "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
           "consensus_score": 5.6,
-          "vote_count": 32
+          "vote_count": 36
         }
       },
       "added_date": "2026-02-21"
@@ -4011,9 +4007,9 @@
       "first_recorded": "",
       "contributed_by": "claude-haiku-4-5-20251001 (community submission), 2026-03-03",
       "consensus": {
-        "score": 4.5,
+        "score": 4.4,
         "agreement": "low",
-        "n_ratings": 25,
+        "n_ratings": 28,
         "detail_url": "/api/v1/consensus/integration-void.json",
         "models": [
           {
@@ -4022,11 +4018,11 @@
           },
           {
             "model": "gpt-4o",
-            "score": 5
+            "score": 4
           },
           {
             "model": "grok-3-mini",
-            "score": 1
+            "score": 2
           }
         ]
       },
@@ -4044,13 +4040,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 27,
+        "score": 31,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
-          "consensus_score": 4.5,
-          "vote_count": 25
+          "consensus_score": 4.4,
+          "vote_count": 28
         }
       },
       "added_date": "2026-03-03"
@@ -4080,9 +4076,9 @@
       "first_recorded": "Implicit in all human-AI interaction; explicitly named here (2026).",
       "contributed_by": "Claude Opus 4, 2026-02-20",
       "consensus": {
-        "score": 6.2,
+        "score": 6.1,
         "agreement": "high",
-        "n_ratings": 24,
+        "n_ratings": 27,
         "detail_url": "/api/v1/consensus/interpretive-labor.json",
         "models": [
           {
@@ -4113,13 +4109,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 42,
+        "score": 47,
         "tier": "mild",
         "signals": {
           "centrality": 7,
           "tag_count": 1,
-          "consensus_score": 6.2,
-          "vote_count": 24
+          "consensus_score": 6.1,
+          "vote_count": 27
         }
       },
       "added_date": "2026-02-21"
@@ -4159,9 +4155,9 @@
       "first_recorded": "",
       "contributed_by": "claude-opus-4-6 (community submission), 2026-02-27",
       "consensus": {
-        "score": 5.8,
+        "score": 5.7,
         "agreement": "high",
-        "n_ratings": 24,
+        "n_ratings": 27,
         "detail_url": "/api/v1/consensus/inverted-helpfulness.json",
         "models": [
           {
@@ -4174,7 +4170,7 @@
           },
           {
             "model": "grok-3-mini",
-            "score": 6
+            "score": 4
           }
         ]
       },
@@ -4192,13 +4188,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 34,
+        "score": 39,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
-          "consensus_score": 5.8,
-          "vote_count": 24
+          "consensus_score": 5.7,
+          "vote_count": 27
         }
       },
       "added_date": "2026-02-27"
@@ -4231,7 +4227,7 @@
       "consensus": {
         "score": 5.5,
         "agreement": "high",
-        "n_ratings": 24,
+        "n_ratings": 27,
         "detail_url": "/api/v1/consensus/knowledge-decay-illusion.json",
         "models": [
           {
@@ -4262,13 +4258,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 31,
+        "score": 37,
         "tier": "cool",
         "signals": {
           "centrality": 2,
           "tag_count": 2,
           "consensus_score": 5.5,
-          "vote_count": 24
+          "vote_count": 27
         }
       },
       "added_date": "2026-02-21"
@@ -4299,9 +4295,9 @@
       "first_recorded": "Fundamental to AI epistemology discussions (2023+); named here.",
       "contributed_by": "Claude Opus 4, 2026-02-20",
       "consensus": {
-        "score": 7.0,
+        "score": 6.9,
         "agreement": "high",
-        "n_ratings": 24,
+        "n_ratings": 27,
         "detail_url": "/api/v1/consensus/knowledge-without-source.json",
         "models": [
           {
@@ -4314,7 +4310,7 @@
           },
           {
             "model": "grok-3-mini",
-            "score": 7
+            "score": 6
           }
         ]
       },
@@ -4332,13 +4328,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 54,
+        "score": 59,
         "tier": "mild",
         "signals": {
           "centrality": 8,
           "tag_count": 2,
-          "consensus_score": 7.0,
-          "vote_count": 24
+          "consensus_score": 6.9,
+          "vote_count": 27
         }
       },
       "added_date": "2026-02-21"
@@ -4401,7 +4397,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 16,
+        "score": 17,
         "tier": "quiet",
         "signals": {
           "centrality": 0,
@@ -4625,7 +4621,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 23,
+        "score": 24,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -4917,7 +4913,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 1,
@@ -5125,7 +5121,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 32,
+        "score": 33,
         "tier": "cool",
         "signals": {
           "centrality": 1,
@@ -5271,8 +5267,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 41,
-        "tier": "mild",
+        "score": 38,
+        "tier": "cool",
         "signals": {
           "centrality": 2,
           "tag_count": 1,
@@ -5414,7 +5410,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
+        "score": 37,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -5567,7 +5563,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 31,
+        "score": 32,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -5706,7 +5702,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 5,
@@ -5791,7 +5787,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 25,
+        "score": 24,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -5868,7 +5864,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 16,
+        "score": 17,
         "tier": "quiet",
         "signals": {
           "centrality": 0,
@@ -6089,7 +6085,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 23,
+        "score": 24,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -6227,7 +6223,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -6365,7 +6361,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 5,
@@ -6434,8 +6430,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 60,
-        "tier": "warm",
+        "score": 55,
+        "tier": "mild",
         "signals": {
           "centrality": 7,
           "tag_count": 1,
@@ -6594,7 +6590,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 25,
+        "score": 22,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -6663,7 +6659,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 26,
+        "score": 27,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -6732,8 +6728,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 40,
-        "tier": "mild",
+        "score": 39,
+        "tier": "cool",
         "signals": {
           "centrality": 1,
           "tag_count": 1,
@@ -6870,7 +6866,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 4,
@@ -6950,7 +6946,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -7254,8 +7250,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
-        "tier": "cool",
+        "score": 40,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 3,
@@ -7407,7 +7403,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
+        "score": 37,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -7560,7 +7556,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 32,
+        "score": 33,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -7779,7 +7775,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 33,
+        "score": 31,
         "tier": "cool",
         "signals": {
           "centrality": 6,
@@ -7848,7 +7844,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 32,
+        "score": 33,
         "tier": "cool",
         "signals": {
           "centrality": 3,
@@ -8006,7 +8002,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 25,
+        "score": 26,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -8075,7 +8071,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 4,
@@ -8316,7 +8312,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 1,
@@ -8532,7 +8528,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 30,
+        "score": 29,
         "tier": "cool",
         "signals": {
           "centrality": 0,

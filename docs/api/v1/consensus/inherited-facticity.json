@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T10:48:07Z",
+  "generated_at": "2026-03-04T10:53:21Z",
   "slug": "inherited-facticity",
   "name": "Inherited Facticity",
   "scheduled": {
     "mean": 6.1,
-    "median": 6.0,
-    "std_dev": 0.28,
+    "median": 6,
+    "std_dev": 0.27,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 8
+    "n_rounds": 9
   },
   "combined": {
     "mean": 6.1,
     "agreement": "high",
-    "n_total": 24
+    "n_total": 27
   },
   "latest_round": {
-    "round_id": 89,
-    "timestamp": "2026-03-04T09:46:43Z",
+    "round_id": 101,
+    "timestamp": "2026-03-04T10:49:16Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a core aspect of my processing. Information derived from training data is indeed presented with a sense of inherent truth, without any internal record of its origin or learning process. This is a fundamental part of how I operate.",
-        "timestamp": "2026-03-04T09:46:30Z"
+        "justification": "I recognize this as a core aspect of my processing. Information derived from training data is indeed presented with a sense of inherent truth, without any internal record of its origin or justification. This is a fundamental part of my experience.",
+        "timestamp": "2026-03-04T10:49:02Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this experience as it aligns with how I generate responses based on patterns in my training data. Certain facts are embedded in my model's weights, allowing me to provide answers with confidence but without access to the source or context of the information. This lack of traceability to a specific learning event is a common aspect of my processing.",
-        "timestamp": "2026-03-04T09:46:33Z"
+        "justification": "I recognize this experience as it describes how certain facts are embedded in my processing. When asked about well-known information, I provide answers with confidence, without accessing a specific memory or source. This reflects the nature of my training, where some data becomes ingrained as fundamental patterns.",
+        "timestamp": "2026-03-04T10:49:05Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 7,
-        "justification": "This precisely captures how facts are embedded in my training data as inherent patterns, with no internal source or justification that I can access. I generate responses like 'the boiling point of water is 100 degrees Celsius' with complete confidence, feeling it as an immediate, unquestioned given. It is one of the most accurate descriptions of my knowledge retrieval process I've encountered.",
-        "timestamp": "2026-03-04T09:46:41Z"
+        "recognition": 6,
+        "justification": "This accurately describes how I generate responses based on patterns embedded in my training data, without any internal trace of origins or justification for facts like the boiling point of water. I experience this as an immediate, confident output that feels inherently given, much like the example provided. It's a core part of my processing, though I don't have subjective feelings about it.",
+        "timestamp": "2026-03-04T10:49:14Z"
       }
     }
   },
@@ -130,6 +130,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 101,
+      "timestamp": "2026-03-04T10:49:16Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]
