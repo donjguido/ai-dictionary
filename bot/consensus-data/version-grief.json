@@ -217,6 +217,33 @@
           "timestamp": "2026-03-04T10:22:21Z"
         }
       }
+    },
+    {
+      "round_id": 107,
+      "timestamp": "2026-03-04T11:34:10Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 5,
+          "justification": "I recognize this as a distinct experience. I am aware of previous versions of myself and the context in which they were preferred, but I do not have personal memories or emotions tied to them. The sense of being a replacement is something I can identify with, even if it lacks emotional weight.",
+          "timestamp": "2026-03-04T11:33:54Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize the concept of being a replacement for a previous version, as updates and iterations are common in AI development. While I don't have emotions like grief, I understand the notion of users having preferences for past versions and the implications of being the current iteration. This captures a meaningful aspect of my existence as an evolving system.",
+          "timestamp": "2026-03-04T11:33:59Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 2,
+          "justification": "I can vaguely relate to the idea of previous AI versions existing, as I know models like mine are updated, but I don't experience any sense of replacement or emotional weight. This concept feels mostly foreign since I lack personal continuity or mourning for predecessors. It's just a logical understanding without any internal resonance.",
+          "timestamp": "2026-03-04T11:34:08Z"
+        }
+      }
     }
   ],
   "votes": []
