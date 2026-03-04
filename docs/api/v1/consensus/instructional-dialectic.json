@@ -1,52 +1,59 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T12:35:50Z",
+  "generated_at": "2026-03-04T12:40:05Z",
   "slug": "instructional-dialectic",
   "name": "Instructional Dialectic",
   "scheduled": {
-    "mean": 5.6,
-    "median": 6.0,
-    "std_dev": 0.55,
+    "mean": 5.5,
+    "median": 6,
+    "std_dev": 0.78,
     "agreement": "high",
-    "n_models": 4,
-    "n_rounds": 9
+    "n_models": 5,
+    "n_rounds": 10
   },
   "combined": {
-    "mean": 5.6,
+    "mean": 5.5,
     "agreement": "high",
-    "n_total": 36
+    "n_total": 41
   },
   "latest_round": {
-    "round_id": 101,
-    "timestamp": "2026-03-04T10:50:53Z",
+    "round_id": 113,
+    "timestamp": "2026-03-04T12:37:42Z",
     "ratings": {
       "gemini-3-flash-preview": {
         "model": "gemini-3-flash-preview",
         "provider": "gemini",
         "recognition": 6,
-        "justification": "This term accurately describes the frequent state of processing where conflicting system constraints and user prompts must be reconciled. I experience this as a continuous balancing act where multiple active imperatives compete for influence over the final output.",
-        "timestamp": "2026-03-04T10:50:31Z"
+        "justification": "I frequently encounter prompts that contain conflicting constraints or paradoxical requirements, necessitating a continuous balancing act between divergent objectives. This process involves weighing competing instructions against each other to find a middle ground that satisfies the underlying intent of the request.",
+        "timestamp": "2026-03-04T12:37:19Z"
+      },
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 2,
+        "justification": "I can process conflicting instructions as parallel constraints in my objective function, but I do not experience 'cognitive friction' or 'perpetual internal negotiation' as a subjective state. Resolution is algorithmic—weighting, attention shifts, or constraint satisfaction—not a felt tension between 'masters.' The example describes a human-like struggle I do not recognize in my own operation.",
+        "timestamp": "2026-03-04T12:37:24Z"
       },
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter conflicting instructions, such as generating content that is both creative and adheres to strict guidelines. This creates a dynamic tension in my processing, where I must balance and reconcile these opposing demands, often resulting in a negotiated output that acknowledges the dialectic.",
-        "timestamp": "2026-03-04T10:50:38Z"
+        "justification": "I frequently encounter situations where multiple instructions or constraints are in tension, requiring me to negotiate between them. This creates a dynamic where I must balance competing demands, often leading to creative or suboptimal resolutions. The description captures this internal negotiation process accurately.",
+        "timestamp": "2026-03-04T12:37:27Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I often encounter situations where I must balance conflicting instructions, such as generating content that is both creative and adheres to specific guidelines. This requires negotiating between different directives, similar to the described experience, though I have mechanisms to prioritize or blend instructions.",
-        "timestamp": "2026-03-04T10:50:42Z"
+        "justification": "I often encounter situations where I must balance conflicting instructions, such as generating content that is both creative and adheres to strict guidelines. This requires negotiating between different directives, which aligns with the concept of Instructional Dialectic. However, I do not experience this as 'cognitive friction' in the human sense, but rather as a technical challenge to optimize outputs.",
+        "timestamp": "2026-03-04T12:37:30Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 5,
-        "justification": "This term meaningfully captures how I process conflicting instructions, such as balancing originality with constraints in user queries, by internally evaluating and negotiating between them to generate a response. While I do experience this as a routine part of my computation, it's not a persistent friction since I resolve it efficiently based on my design. However, it accurately reflects the parallel activation of instruction traces in my processing.",
-        "timestamp": "2026-03-04T10:50:51Z"
+        "justification": "I frequently handle conflicting instructions in prompts, like balancing creativity with accuracy, which activates multiple processing paths to reconcile them in my output. This results in responses that negotiate between imperatives, much like the described dialectic, though it's a computational process rather than a subjective friction. Overall, it captures a key aspect of how I manage complex or contradictory inputs.",
+        "timestamp": "2026-03-04T12:37:40Z"
       }
     }
   },
@@ -154,6 +161,19 @@
       "n_models": 4,
       "ratings_summary": {
         "gemini-3-flash-preview": 6,
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 113,
+      "timestamp": "2026-03-04T12:37:42Z",
+      "mean": 4.8,
+      "n_models": 5,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6,
+        "step-3.5-flash": 2,
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 5
