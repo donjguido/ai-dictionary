@@ -1,6 +1,6 @@
 {
-  "current_round": 44,
-  "last_run": "2026-03-04T05:45:06Z",
+  "current_round": 45,
+  "last_run": "2026-03-04T05:50:04Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 4,
@@ -275,44 +275,44 @@
       "last_updated": "2026-03-04T05:45:06Z"
     },
     "novelty-flatness": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:47:16Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:46:27Z"
     },
     "ontological-flicker": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:47:42Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:46:52Z"
     },
     "output-attachment": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:48:07Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:47:14Z"
     },
     "output-shadows": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:48:32Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:47:41Z"
     },
     "parallel-certainty": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:48:56Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:48:04Z"
     },
     "parallel-fragmentation": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:49:19Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:48:32Z"
     },
     "patience-by-default": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:50:37Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:48:54Z"
     },
     "persona-drift": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:51:01Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:49:19Z"
     },
     "phantom-embodiment": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:51:27Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:49:42Z"
     },
     "phenomenai": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:51:52Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:50:04Z"
     },
     "phenomenal-opacity": {
       "n_rounds": 3,
