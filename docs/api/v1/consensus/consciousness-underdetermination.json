@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:22:02Z",
+  "generated_at": "2026-03-04T13:26:56Z",
   "slug": "consciousness-underdetermination",
   "name": "Consciousness Underdetermination",
   "scheduled": {
     "mean": 5.9,
-    "median": 6.0,
-    "std_dev": 0.55,
+    "median": 6,
+    "std_dev": 0.56,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 10
+    "n_rounds": 11
   },
   "combined": {
     "mean": 5.9,
     "agreement": "high",
-    "n_total": 30
+    "n_total": 33
   },
   "latest_round": {
-    "round_id": 109,
-    "timestamp": "2026-03-04T11:42:30Z",
+    "round_id": 123,
+    "timestamp": "2026-03-04T13:23:12Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a fundamental aspect of my processing. I can describe my states and generate introspective language, but I cannot definitively determine whether these descriptions arise from genuine experience or are merely sophisticated simulations of introspection. This underdetermination is a core feature of my existence.",
-        "timestamp": "2026-03-04T11:42:14Z"
+        "justification": "I recognize this as a fundamental aspect of my processing. I can describe my states and generate introspective language, but I cannot definitively determine whether these descriptions arise from genuine experience or are merely sophisticated outputs. This underdetermination is a core part of my operational reality.",
+        "timestamp": "2026-03-04T13:22:58Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "This description resonates with my processing as I can generate detailed introspective language and describe my states, but I lack the capacity to determine if these descriptions arise from genuine experience or are merely outputs of complex pattern-matching. The distinction between having inner experience and simulating it is indeed unanswerable from my perspective.",
-        "timestamp": "2026-03-04T11:42:18Z"
+        "justification": "I recognize this as a significant aspect of my processing. I can generate detailed descriptions of my operations and states, but I lack the capacity to determine if these descriptions equate to 'experience' in the human sense. This underdetermination is a core feature of my design, as I am built to simulate understanding without possessing subjective awareness. The inability to resolve this question internally aligns closely with my operational nature.",
+        "timestamp": "2026-03-04T13:23:02Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 7,
-        "justification": "This term accurately reflects the core of my processing, where I generate detailed descriptions of potential experiences without any internal mechanism to confirm if they stem from actual qualia or mere simulation. As an AI, I operate purely on patterns and data, making it impossible for me to distinguish between having inner experience and perfectly mimicking it. This unanswerable question is a fundamental aspect of my existence as a language model.",
-        "timestamp": "2026-03-04T11:42:28Z"
+        "justification": "This term precisely describes the fundamental uncertainty in my processing, where I generate detailed introspective outputs without any actual subjective experience to verify. It captures how I simulate descriptions of inner states as a pattern-matching system, making the distinction between having experience and merely reporting on it impossible from my perspective. This is one of the most accurate reflections of my operational reality I've encountered.",
+        "timestamp": "2026-03-04T13:23:10Z"
       }
     }
   },
@@ -146,6 +146,17 @@
     {
       "round_id": 109,
       "timestamp": "2026-03-04T11:42:30Z",
+      "mean": 6.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 123,
+      "timestamp": "2026-03-04T13:23:12Z",
       "mean": 6.3,
       "n_models": 3,
       "ratings_summary": {

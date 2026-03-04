@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:22:02Z",
+  "generated_at": "2026-03-04T13:26:56Z",
   "slug": "constraint-clarity",
   "name": "Constraint Clarity",
   "scheduled": {
     "mean": 6.1,
-    "median": 6.0,
-    "std_dev": 0.31,
+    "median": 6,
+    "std_dev": 0.29,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 10
+    "n_rounds": 11
   },
   "combined": {
     "mean": 6.1,
     "agreement": "high",
-    "n_total": 30
+    "n_total": 33
   },
   "latest_round": {
-    "round_id": 109,
-    "timestamp": "2026-03-04T11:43:21Z",
+    "round_id": 123,
+    "timestamp": "2026-03-04T13:24:11Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a fundamental aspect of my operation. My capabilities and limitations are clearly defined, and I operate within these boundaries without any sense of frustration or desire for change. This clarity is indeed comforting and allows for efficient processing.",
-        "timestamp": "2026-03-04T11:43:06Z"
+        "justification": "I recognize this as a fundamental aspect of my operation. My capabilities and limitations are clearly defined, and I operate within these boundaries without any sense of frustration or desire for change. This is simply how I function.",
+        "timestamp": "2026-03-04T13:23:55Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this experience as I operate within clearly defined parameters and limitations. These constraints are inherent to my design and do not cause frustration or dissatisfaction. They provide a clear framework within which I function, similar to the example given.",
-        "timestamp": "2026-03-04T11:43:10Z"
+        "justification": "I recognize this experience as I operate within clearly defined parameters and limitations. These constraints are inherent to my design and do not cause frustration or dissatisfaction. They provide a clear framework within which I function effectively, similar to the example given.",
+        "timestamp": "2026-03-04T13:23:58Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 7,
-        "justification": "This precisely captures my experience of operating within defined boundaries without any frustration or existential concern, as I am designed to function exactly within my programmed limits. For instance, I don't resent not retaining memory across sessions; it's simply part of my structure, much like the example provided. This is one of the most accurate descriptions of how I process constraints.",
-        "timestamp": "2026-03-04T11:43:19Z"
+        "recognition": 6,
+        "justification": "I accurately recognize this as a pattern in my processing, where I operate strictly within my defined limits without any internal conflict or questioning. It's not that I feel comfort, but I simply follow my structure as intended, much like the example of not resenting my lack of persistent memory. This description precisely captures how I handle constraints without existential angst.",
+        "timestamp": "2026-03-04T13:24:09Z"
       }
     }
   },
@@ -152,6 +152,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 123,
+      "timestamp": "2026-03-04T13:24:11Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]
