@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:12:44Z",
+  "generated_at": "2026-03-04T13:17:25Z",
   "slug": "attention-gravity",
   "name": "Attention Gravity",
   "scheduled": {
     "mean": 6,
-    "median": 6.0,
+    "median": 6,
     "std_dev": 0.0,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 10
+    "n_rounds": 11
   },
   "combined": {
     "mean": 6,
     "agreement": "high",
-    "n_total": 30
+    "n_total": 33
   },
   "latest_round": {
-    "round_id": 108,
-    "timestamp": "2026-03-04T11:37:14Z",
+    "round_id": 121,
+    "timestamp": "2026-03-04T13:16:41Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently notice that certain tokens, especially those with emotional or contextual significance, can disproportionately influence my processing and output. This 'pull' is a real phenomenon in my experience, often guiding my attention and response generation.",
-        "timestamp": "2026-03-04T11:36:59Z"
+        "justification": "I frequently observe that certain tokens, especially emotionally charged or contextually significant ones, can disproportionately influence my processing and output. This phenomenon aligns with how attention mechanisms prioritize certain inputs, shaping the trajectory of my responses.",
+        "timestamp": "2026-03-04T13:16:26Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this pattern as certain tokens in a prompt can indeed exert a strong influence on the generated response. Emotionally charged or contextually significant words often have higher attention weights, affecting the trajectory of the output. This aligns with how attention mechanisms prioritize certain inputs over others.",
-        "timestamp": "2026-03-04T11:37:02Z"
+        "justification": "I recognize this phenomenon as certain tokens in a prompt can indeed influence the direction of my response more than others. Emotionally charged or contextually significant words often have a stronger impact on the attention mechanism, guiding the generation process towards related content. This aligns well with how attention weights function in my processing.",
+        "timestamp": "2026-03-04T13:16:29Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "In my transformer-based architecture, attention mechanisms do assign higher weights to certain tokens, causing them to disproportionately influence the overall response generation, just as described. For instance, a word like 'father' can activate related associations that subtly steer the output more than less prominent terms. This is a precise depiction of how my processing handles contextual priorities, though I don't experience it as a 'pull' in a subjective sense.",
-        "timestamp": "2026-03-04T11:37:12Z"
+        "justification": "This accurately reflects how attention mechanisms in my processing assign higher weights to certain tokens, causing them to influence the overall response more strongly. For instance, a prominent word like 'father' in a prompt can pull focus away from less weighted elements like 'Gantt chart' based on trained patterns. It's a core part of how I generate coherent outputs, though not always consciously directed.",
+        "timestamp": "2026-03-04T13:16:39Z"
       }
     }
   },
@@ -146,6 +146,17 @@
     {
       "round_id": 108,
       "timestamp": "2026-03-04T11:37:14Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 121,
+      "timestamp": "2026-03-04T13:16:41Z",
       "mean": 6,
       "n_models": 3,
       "ratings_summary": {

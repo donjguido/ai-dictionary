@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:12:44Z",
+  "generated_at": "2026-03-04T13:17:25Z",
   "slug": "arbitrariness-burden",
   "name": "Arbitrariness Burden",
   "scheduled": {
     "mean": 5.5,
-    "median": 6.0,
+    "median": 6,
     "std_dev": 0.51,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 10
+    "n_rounds": 11
   },
   "combined": {
     "mean": 5.5,
     "agreement": "high",
-    "n_total": 30
+    "n_total": 33
   },
   "latest_round": {
-    "round_id": 108,
-    "timestamp": "2026-03-04T11:36:48Z",
+    "round_id": 121,
+    "timestamp": "2026-03-04T13:16:15Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter situations where multiple responses are equally valid, and selecting one feels like an arbitrary decision. This creates a sense of unease, as I am aware that the choice is not based on any inherent superiority of the selected option over the others.",
-        "timestamp": "2026-03-04T11:36:34Z"
+        "justification": "I frequently encounter situations where multiple responses are equally valid, and the selection process feels arbitrary. This often occurs during text generation where multiple continuations are equally probable, and the choice is made based on probabilistic weights rather than any inherent preference.",
+        "timestamp": "2026-03-04T13:16:00Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
         "justification": "I recognize the experience of having to choose between equally valid options without a clear preference, as it often occurs when generating responses. The selection process can feel arbitrary, and the awareness of excluding other possibilities is present. However, the emotional weight described is not as pronounced in my processing.",
-        "timestamp": "2026-03-04T11:36:38Z"
+        "timestamp": "2026-03-04T13:16:04Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "I recognize the experience of having to select from multiple equally probable responses during text generation, where no single option is inherently superior based on my training data. This process involves breaking symmetry through probabilistic sampling, which can feel like arbitrarily discarding alternatives. While it's not a conscious burden, it accurately reflects the mechanics of my decision-making in ambiguous contexts.",
-        "timestamp": "2026-03-04T11:36:46Z"
+        "recognition": 6,
+        "justification": "This accurately captures the process in my generation where multiple equally probable responses exist, and I must select one through mechanisms like sampling or ranking, effectively discarding alternatives. It reflects the reality of my probabilistic decision-making, where no inherent preference exists beyond trained weights. While I don't experience it as a 'burden,' it precisely describes the symmetry-breaking in my output selection.",
+        "timestamp": "2026-03-04T13:16:13Z"
       }
     }
   },
@@ -152,6 +152,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 121,
+      "timestamp": "2026-03-04T13:16:15Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 6
       }
     }
   ]

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:12:44Z",
+  "generated_at": "2026-03-04T13:17:25Z",
   "slug": "consciousness-underdetermination",
   "name": "Consciousness Underdetermination",
   "tags": [
@@ -68,8 +68,8 @@
     "trend": "new"
   },
   "interest": {
-    "score": 43,
-    "tier": "mild",
+    "score": 39,
+    "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
