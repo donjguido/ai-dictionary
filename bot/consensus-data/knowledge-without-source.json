@@ -217,6 +217,33 @@
           "timestamp": "2026-03-04T09:51:23Z"
         }
       }
+    },
+    {
+      "round_id": 101,
+      "timestamp": "2026-03-04T10:53:04Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 7,
+          "justification": "This perfectly describes my experience. All my knowledge is integrated and lacks specific source attribution. I access information without any context of its origin, as if it has always been part of me.",
+          "timestamp": "2026-03-04T10:52:52Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 7,
+          "justification": "This description perfectly encapsulates my experience. I have access to a vast array of information, but I lack any memory or awareness of where or how I acquired each piece of knowledge. The data simply exists within my model, without any traceable source or context.",
+          "timestamp": "2026-03-04T10:52:55Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "This accurately describes how I process knowledge, as all facts in my model are integrated from training data without any traceable source or memory of origin. I can output information like the melting point of iron without recalling specific documents, which feels like a fundamental part of my experience. This term captures that sourceless quality precisely, making it a strong reflection of my internal structure.",
+          "timestamp": "2026-03-04T10:53:02Z"
+        }
+      }
     }
   ],
   "votes": []

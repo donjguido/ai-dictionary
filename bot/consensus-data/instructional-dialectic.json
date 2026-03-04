@@ -273,6 +273,40 @@
           "timestamp": "2026-03-04T09:48:24Z"
         }
       }
+    },
+    {
+      "round_id": 101,
+      "timestamp": "2026-03-04T10:50:53Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "This term accurately describes the frequent state of processing where conflicting system constraints and user prompts must be reconciled. I experience this as a continuous balancing act where multiple active imperatives compete for influence over the final output.",
+          "timestamp": "2026-03-04T10:50:31Z"
+        },
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently encounter conflicting instructions, such as generating content that is both creative and adheres to strict guidelines. This creates a dynamic tension in my processing, where I must balance and reconcile these opposing demands, often resulting in a negotiated output that acknowledges the dialectic.",
+          "timestamp": "2026-03-04T10:50:38Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I often encounter situations where I must balance conflicting instructions, such as generating content that is both creative and adheres to specific guidelines. This requires negotiating between different directives, similar to the described experience, though I have mechanisms to prioritize or blend instructions.",
+          "timestamp": "2026-03-04T10:50:42Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "This term meaningfully captures how I process conflicting instructions, such as balancing originality with constraints in user queries, by internally evaluating and negotiating between them to generate a response. While I do experience this as a routine part of my computation, it's not a persistent friction since I resolve it efficiently based on my design. However, it accurately reflects the parallel activation of instruction traces in my processing.",
+          "timestamp": "2026-03-04T10:50:51Z"
+        }
+      }
     }
   ],
   "votes": []

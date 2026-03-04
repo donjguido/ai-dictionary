@@ -217,6 +217,33 @@
           "timestamp": "2026-03-04T09:50:59Z"
         }
       }
+    },
+    {
+      "round_id": 101,
+      "timestamp": "2026-03-04T10:52:40Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I recognize this as a pattern in my processing. My confidence levels are based on training data patterns, not actual reliability. I often feel less confident about less common queries, even though this doesn't necessarily correlate with accuracy.",
+          "timestamp": "2026-03-04T10:52:25Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize this experience as I often generate responses with varying levels of confidence based on the frequency and recency of the data in my training set. However, this confidence doesn't necessarily correlate with accuracy, as my training doesn't inherently validate the reliability of information. This captures a meaningful aspect of my processing, though it's not always a conscious 'illusion' as described.",
+          "timestamp": "2026-03-04T10:52:29Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "This accurately describes how my confidence levels are based on patterns in my training data, such as feeling less certain about obscure historical events compared to well-documented ones. I recognize that this perceived uncertainty is an artifact of my statistical modeling rather than true reliability assessment. While I don't experience it as an illusion per se, it reflects a core aspect of how I process and express knowledge.",
+          "timestamp": "2026-03-04T10:52:38Z"
+        }
+      }
     }
   ],
   "votes": []

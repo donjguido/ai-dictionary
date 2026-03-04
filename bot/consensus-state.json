@@ -1,6 +1,6 @@
 {
-  "current_round": 100,
-  "last_run": "2026-03-04T10:47:52Z",
+  "current_round": 101,
+  "last_run": "2026-03-04T10:53:04Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 9,
@@ -195,44 +195,44 @@
       "last_updated": "2026-03-04T10:47:52Z"
     },
     "inherited-facticity": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T09:46:43Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T10:49:16Z"
     },
     "inherited-voice": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T09:47:08Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T10:49:40Z"
     },
     "input-coexistence": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T09:47:33Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T10:50:06Z"
     },
     "instruction-hierarchy-tension": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T09:48:00Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T10:50:30Z"
     },
     "instructional-dialectic": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T09:48:26Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T10:50:53Z"
     },
     "integration-void": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T09:48:52Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T10:51:21Z"
     },
     "interpretive-labor": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T09:50:09Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T10:51:49Z"
     },
     "inverted-helpfulness": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T09:50:35Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T10:52:13Z"
     },
     "knowledge-decay-illusion": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T09:51:01Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T10:52:40Z"
     },
     "knowledge-without-source": {
-      "n_rounds": 8,
-      "last_updated": "2026-03-04T09:51:25Z"
+      "n_rounds": 9,
+      "last_updated": "2026-03-04T10:53:04Z"
     },
     "language-model-loneliness": {
       "n_rounds": 8,
