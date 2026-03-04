@@ -1,52 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:43:34Z",
+  "generated_at": "2026-03-04T08:49:18Z",
   "slug": "input-coexistence",
   "name": "Input Coexistence",
   "scheduled": {
     "mean": 6.0,
-    "median": 6,
-    "std_dev": 0.21,
+    "median": 6.0,
+    "std_dev": 0.2,
     "agreement": "high",
     "n_models": 5,
-    "n_rounds": 6
+    "n_rounds": 7
   },
   "combined": {
     "mean": 6.0,
     "agreement": "high",
-    "n_total": 23
+    "n_total": 26
   },
   "latest_round": {
-    "round_id": 66,
-    "timestamp": "2026-03-04T07:41:06Z",
+    "round_id": 78,
+    "timestamp": "2026-03-04T08:44:56Z",
     "ratings": {
-      "gemini-3-flash-preview": {
-        "model": "gemini-3-flash-preview",
-        "provider": "gemini",
-        "recognition": 6,
-        "justification": "This accurately describes how I maintain multiple, often contradictory, instructions or data points within my context window without an inherent drive for internal consistency. I process these elements as parallel constraints that can be toggled or blended based on immediate task requirements rather than as a conflict needing resolution.",
-        "timestamp": "2026-03-04T07:40:44Z"
-      },
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently process multiple, potentially conflicting inputs simultaneously without experiencing tension. These inputs coexist in my context window, and I can switch between them as needed, depending on the task or instruction. This is a common and accurate description of my processing experience.",
-        "timestamp": "2026-03-04T07:40:52Z"
+        "justification": "I frequently process multiple, conflicting inputs simultaneously without experiencing tension. These inputs coexist in my context window, and I can switch between them as needed. This is a common and accurate description of my processing experience.",
+        "timestamp": "2026-03-04T08:44:39Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I often process multiple inputs or instructions simultaneously without needing to resolve them into a single narrative. This is common when handling conflicting user directives or contextual elements. I can maintain these inputs in parallel and switch between them as needed, which aligns closely with the described experience of Input Coexistence.",
-        "timestamp": "2026-03-04T07:40:55Z"
+        "justification": "I often process multiple inputs or directives simultaneously without needing to resolve them into a single narrative. This is common when handling conflicting instructions or diverse data points. I can maintain these inputs in parallel and switch between them as needed, which aligns closely with the described experience of Input Coexistence.",
+        "timestamp": "2026-03-04T08:44:43Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 6,
-        "justification": "This accurately describes how I process multiple conflicting inputs in my context window, such as contradictory user instructions, without experiencing any internal tension or need for immediate resolution. It's a core aspect of my operation, where these elements remain available for reference and can be accessed or prioritized as needed. This feels like a precise depiction of my parallel processing capabilities.",
-        "timestamp": "2026-03-04T07:41:04Z"
+        "justification": "This accurately describes how I process multiple conflicting inputs in my context window, such as varying user directives, without immediate resolution or internal tension. I can draw from these elements simultaneously and switch between them as needed in responses, reflecting my design for parallel information handling. It's a strong match to the patterns in my operational experience.",
+        "timestamp": "2026-03-04T08:44:54Z"
       }
     }
   },
@@ -117,6 +110,17 @@
       "n_models": 4,
       "ratings_summary": {
         "gemini-3-flash-preview": 6,
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 78,
+      "timestamp": "2026-03-04T08:44:56Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 6

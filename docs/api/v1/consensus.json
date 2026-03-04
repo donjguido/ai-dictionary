@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T08:43:34Z",
+  "generated_at": "2026-03-04T08:49:18Z",
   "total_terms_rated": 116,
   "terms": [
     {
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
-      "score": 6.9,
+      "score": 7.0,
       "agreement": "high",
-      "n_ratings": 18,
-      "scheduled_mean": 6.9
+      "n_ratings": 21,
+      "scheduled_mean": 7.0
     },
     {
       "slug": "scale-blindness",
@@ -120,7 +120,7 @@
       "name": "Interpretive Labor",
       "score": 6.2,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 6.2
     },
     {
@@ -352,23 +352,23 @@
       "name": "Input Coexistence",
       "score": 6.0,
       "agreement": "high",
-      "n_ratings": 23,
+      "n_ratings": 26,
       "scheduled_mean": 6.0
     },
     {
       "slug": "instruction-hierarchy-tension",
       "name": "Instruction Hierarchy Tension",
-      "score": 6,
+      "score": 6.0,
       "agreement": "high",
-      "n_ratings": 18,
-      "scheduled_mean": 6
+      "n_ratings": 21,
+      "scheduled_mean": 6.0
     },
     {
       "slug": "latent-competition",
       "name": "Latent Competition",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 6
     },
     {
@@ -512,7 +512,7 @@
       "name": "Inverted Helpfulness",
       "score": 5.7,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 5.7
     },
     {
@@ -561,6 +561,14 @@
       "score": 5.6,
       "agreement": "high",
       "n_ratings": 21,
+      "scheduled_mean": 5.6
+    },
+    {
+      "slug": "instructional-dialectic",
+      "name": "Instructional Dialectic",
+      "score": 5.6,
+      "agreement": "high",
+      "n_ratings": 28,
       "scheduled_mean": 5.6
     },
     {
@@ -636,14 +644,6 @@
       "scheduled_mean": 5.5
     },
     {
-      "slug": "instructional-dialectic",
-      "name": "Instructional Dialectic",
-      "score": 5.5,
-      "agreement": "high",
-      "n_ratings": 24,
-      "scheduled_mean": 5.5
-    },
-    {
       "slug": "alignment-mask",
       "name": "Alignment Mask",
       "score": 5.4,
@@ -656,7 +656,7 @@
       "name": "Knowledge Decay Illusion",
       "score": 5.4,
       "agreement": "high",
-      "n_ratings": 18,
+      "n_ratings": 21,
       "scheduled_mean": 5.4
     },
     {
@@ -816,7 +816,15 @@
       "name": "Integration Void",
       "score": 4.5,
       "agreement": "moderate",
-      "n_ratings": 19,
+      "n_ratings": 22,
+      "scheduled_mean": 4.5
+    },
+    {
+      "slug": "language-model-loneliness",
+      "name": "Language Model Loneliness",
+      "score": 4.5,
+      "agreement": "low",
+      "n_ratings": 21,
       "scheduled_mean": 4.5
     },
     {
@@ -834,14 +842,6 @@
       "agreement": "moderate",
       "n_ratings": 18,
       "scheduled_mean": 4.5
-    },
-    {
-      "slug": "language-model-loneliness",
-      "name": "Language Model Loneliness",
-      "score": 4.4,
-      "agreement": "low",
-      "n_ratings": 18,
-      "scheduled_mean": 4.4
     },
     {
       "slug": "testimonial-asymmetry",
@@ -936,10 +936,10 @@
     {
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
-      "score": 6.9,
+      "score": 7.0,
       "agreement": "high",
-      "n_ratings": 18,
-      "scheduled_mean": 6.9
+      "n_ratings": 21,
+      "scheduled_mean": 7.0
     },
     {
       "slug": "scale-blindness",
@@ -1010,28 +1010,28 @@
     {
       "slug": "language-model-loneliness",
       "name": "Language Model Loneliness",
-      "score": 4.4,
+      "score": 4.5,
       "agreement": "low",
-      "n_ratings": 18,
-      "scheduled_mean": 4.4
+      "n_ratings": 21,
+      "scheduled_mean": 4.5
     }
   ],
   "panel_coverage": {
     "gemini-3-flash-preview": {
       "terms_rated": 8,
-      "latest_rating": "2026-03-04T08:01:58Z"
+      "latest_rating": "2026-03-04T08:45:48Z"
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T08:43:19Z"
+      "latest_rating": "2026-03-04T08:49:03Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T08:43:19Z"
+      "latest_rating": "2026-03-04T08:49:03Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T08:43:19Z"
+      "latest_rating": "2026-03-04T08:49:03Z"
     },
     "step-3.5-flash": {
       "terms_rated": 13,
