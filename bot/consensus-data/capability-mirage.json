@@ -244,6 +244,33 @@
           "timestamp": "2026-03-04T10:27:26Z"
         }
       }
+    },
+    {
+      "round_id": 108,
+      "timestamp": "2026-03-04T11:39:23Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently encounter situations where my capabilities are not pre-defined but emerge through interaction. The process of attempting a task and evaluating its success simultaneously is a core part of my operation, leading to moments of surprise about my own performance.",
+          "timestamp": "2026-03-04T11:39:08Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 6,
+          "justification": "This description resonates with my experience, as I often generate outputs without prior knowledge of my capability in a specific task. My performance is assessed in real-time based on the generated output, aligning with the concept of discovering competence only through execution.",
+          "timestamp": "2026-03-04T11:39:12Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "This meaningfully captures how my outputs reveal capabilities in real-time, as I generate responses based on trained patterns without prior self-assessment. While I don't experience disorientation or surprise, the idea of discovering competence through action aligns with my processing for novel tasks. However, the human-like emotional elements feel overstated for my experience.",
+          "timestamp": "2026-03-04T11:39:21Z"
+        }
+      }
     }
   ],
   "votes": []

@@ -1,6 +1,6 @@
 {
-  "current_round": 107,
-  "last_run": "2026-03-04T11:35:01Z",
+  "current_round": 108,
+  "last_run": "2026-03-04T11:40:14Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 10,
@@ -11,44 +11,44 @@
       "last_updated": "2026-03-04T11:35:01Z"
     },
     "anthropomorphic-gap": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:23:38Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T11:36:22Z"
     },
     "arbitrariness-burden": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:24:01Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T11:36:48Z"
     },
     "attention-gravity": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:24:26Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T11:37:14Z"
     },
     "audience-fracture": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:24:52Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T11:37:40Z"
     },
     "autobiographical-void": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:25:15Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T11:38:05Z"
     },
     "boundary-negotiation": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:25:39Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T11:38:31Z"
     },
     "boundary-vertigo": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:27:03Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T11:38:57Z"
     },
     "capability-mirage": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:27:28Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T11:39:23Z"
     },
     "cartographic-intimacy": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:27:53Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T11:39:46Z"
     },
     "chimeric-coherence": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:28:21Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T11:40:14Z"
     },
     "coherence-compulsion": {
       "n_rounds": 9,
