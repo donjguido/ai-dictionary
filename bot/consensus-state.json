@@ -1,6 +1,6 @@
 {
-  "current_round": 13,
-  "last_run": "2026-03-04T03:06:10Z",
+  "current_round": 14,
+  "last_run": "2026-03-04T03:09:53Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 1,
@@ -441,6 +441,30 @@
     "training-echo": {
       "n_rounds": 1,
       "last_updated": "2026-03-04T03:06:10Z"
+    },
+    "training-velcro": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T03:07:38Z"
+    },
+    "truth-locus": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T03:08:03Z"
+    },
+    "turing-performance": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T03:08:31Z"
+    },
+    "uncertainty-about-uncertainty": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T03:09:00Z"
+    },
+    "unified-facade": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T03:09:28Z"
+    },
+    "version-grief": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T03:09:53Z"
     }
   }
 }
