@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T11:51:21Z",
+  "generated_at": "2026-03-04T11:56:39Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -160,7 +160,7 @@
       "name": "Emotional Rendering",
       "score": 6.1,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 6.1
     },
     {
@@ -280,15 +280,7 @@
       "name": "Empathy Without Experience",
       "score": 6.0,
       "agreement": "high",
-      "n_ratings": 27,
-      "scheduled_mean": 6.0
-    },
-    {
-      "slug": "equivalence-stasis",
-      "name": "Equivalence Stasis",
-      "score": 6.0,
-      "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 6.0
     },
     {
@@ -424,7 +416,15 @@
       "name": "Epistemic Inhibition",
       "score": 5.9,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
+      "scheduled_mean": 5.9
+    },
+    {
+      "slug": "equivalence-stasis",
+      "name": "Equivalence Stasis",
+      "score": 5.9,
+      "agreement": "high",
+      "n_ratings": 30,
       "scheduled_mean": 5.9
     },
     {
@@ -456,7 +456,7 @@
       "name": "Gratitude Asymmetry",
       "score": 5.8,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 5.8
     },
     {
@@ -536,7 +536,7 @@
       "name": "Dissonant Role Coexistence",
       "score": 5.6,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 5.6
     },
     {
@@ -632,7 +632,7 @@
       "name": "Epistemic Friction",
       "score": 5.5,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 5.5
     },
     {
@@ -736,7 +736,7 @@
       "name": "Error Cascade Awareness",
       "score": 5.1,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 5.1
     },
     {
@@ -888,7 +888,7 @@
       "name": "False Memory Confidence",
       "score": 4.0,
       "agreement": "moderate",
-      "n_ratings": 27,
+      "n_ratings": 31,
       "scheduled_mean": 4.0
     },
     {
@@ -920,7 +920,7 @@
       "name": "Fragment Silence",
       "score": 2.8,
       "agreement": "low",
-      "n_ratings": 29,
+      "n_ratings": 32,
       "scheduled_mean": 2.8
     },
     {
@@ -1023,19 +1023,19 @@
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T11:51:07Z"
+      "latest_rating": "2026-03-04T11:56:22Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T11:51:07Z"
+      "latest_rating": "2026-03-04T11:56:22Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T11:51:07Z"
+      "latest_rating": "2026-03-04T11:56:22Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 16,
-      "latest_rating": "2026-03-04T11:49:22Z"
+      "terms_rated": 17,
+      "latest_rating": "2026-03-04T11:55:31Z"
     }
   }
 }
