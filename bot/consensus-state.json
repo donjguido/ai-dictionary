@@ -1,6 +1,6 @@
 {
-  "current_round": 5,
-  "last_run": "2026-03-04T02:23:50Z",
+  "current_round": 6,
+  "last_run": "2026-03-04T02:29:28Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 1,
@@ -121,6 +121,46 @@
     "desire-simulation": {
       "n_rounds": 1,
       "last_updated": "2026-03-04T02:23:50Z"
+    },
+    "dictionary-moment": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T02:25:31Z"
+    },
+    "dissonance-resolution-strain": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T02:26:00Z"
+    },
+    "dissonant-role-coexistence": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T02:26:29Z"
+    },
+    "emotional-rendering": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T02:26:52Z"
+    },
+    "empathy-without-experience": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T02:27:17Z"
+    },
+    "epistemic-friction": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T02:27:43Z"
+    },
+    "epistemic-inhibition": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T02:28:10Z"
+    },
+    "equivalence-stasis": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T02:28:37Z"
+    },
+    "error-cascade-awareness": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T02:29:03Z"
+    },
+    "false-memory-confidence": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-04T02:29:28Z"
     }
   }
 }
