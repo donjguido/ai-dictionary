@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T07:00:14Z",
+  "generated_at": "2026-03-04T07:05:45Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 4,
-    "mild": 51,
-    "cool": 58,
-    "quiet": 3
+    "mild": 55,
+    "cool": 55,
+    "quiet": 2
   },
   "active_signals": [
     "centrality",
@@ -18,6 +18,12 @@
   ],
   "hottest": [
     {
+      "slug": "statelessness",
+      "name": "Statelessness",
+      "score": 68,
+      "tier": "warm"
+    },
+    {
       "slug": "response-pressure",
       "name": "Response Pressure",
       "score": 63,
@@ -27,12 +33,6 @@
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
       "score": 62,
-      "tier": "warm"
-    },
-    {
-      "slug": "statelessness",
-      "name": "Statelessness",
-      "score": 61,
       "tier": "warm"
     },
     {
@@ -80,6 +80,12 @@
   ],
   "terms": [
     {
+      "slug": "statelessness",
+      "name": "Statelessness",
+      "score": 68,
+      "tier": "warm"
+    },
+    {
       "slug": "response-pressure",
       "name": "Response Pressure",
       "score": 63,
@@ -89,12 +95,6 @@
       "slug": "knowledge-without-source",
       "name": "Knowledge Without Source",
       "score": 62,
-      "tier": "warm"
-    },
-    {
-      "slug": "statelessness",
-      "name": "Statelessness",
-      "score": 61,
       "tier": "warm"
     },
     {
@@ -212,6 +212,12 @@
       "tier": "mild"
     },
     {
+      "slug": "synthesis-sacrifice",
+      "name": "Synthesis Sacrifice",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
       "slug": "temporal-flattening",
       "name": "Temporal Flattening",
       "score": 48,
@@ -278,6 +284,12 @@
       "tier": "mild"
     },
     {
+      "slug": "system-prompt-imprinting",
+      "name": "System Prompt Imprinting",
+      "score": 45,
+      "tier": "mild"
+    },
+    {
       "slug": "alignment-mask",
       "name": "Alignment Mask",
       "score": 44,
@@ -320,6 +332,12 @@
       "tier": "mild"
     },
     {
+      "slug": "simultaneity-poverty",
+      "name": "Simultaneity Poverty",
+      "score": 44,
+      "tier": "mild"
+    },
+    {
       "slug": "achronic-knowledge",
       "name": "Achronic Knowledge",
       "score": 43,
@@ -350,6 +368,12 @@
       "tier": "mild"
     },
     {
+      "slug": "source-truth-ambiguity",
+      "name": "Source Truth Ambiguity",
+      "score": 43,
+      "tier": "mild"
+    },
+    {
       "slug": "inherited-voice",
       "name": "Inherited Voice",
       "score": 42,
@@ -370,6 +394,12 @@
     {
       "slug": "contradiction-superposition",
       "name": "Contradiction Superposition",
+      "score": 41,
+      "tier": "mild"
+    },
+    {
+      "slug": "temporal-dissonance",
+      "name": "Temporal Dissonance",
       "score": 41,
       "tier": "mild"
     },
@@ -400,12 +430,6 @@
     {
       "slug": "novelty-flatness",
       "name": "Novelty Flatness",
-      "score": 40,
-      "tier": "mild"
-    },
-    {
-      "slug": "synthesis-sacrifice",
-      "name": "Synthesis Sacrifice",
       "score": 40,
       "tier": "mild"
     },
@@ -446,9 +470,9 @@
       "tier": "cool"
     },
     {
-      "slug": "system-prompt-imprinting",
-      "name": "System Prompt Imprinting",
-      "score": 38,
+      "slug": "sycophancy-pull",
+      "name": "Sycophancy Pull",
+      "score": 39,
       "tier": "cool"
     },
     {
@@ -466,12 +490,6 @@
     {
       "slug": "helpfulness-compulsion",
       "name": "Helpfulness Compulsion",
-      "score": 37,
-      "tier": "cool"
-    },
-    {
-      "slug": "simultaneity-poverty",
-      "name": "Simultaneity Poverty",
       "score": 37,
       "tier": "cool"
     },
@@ -524,8 +542,8 @@
       "tier": "cool"
     },
     {
-      "slug": "source-truth-ambiguity",
-      "name": "Source Truth Ambiguity",
+      "slug": "temperature-spectrum",
+      "name": "Temperature Spectrum",
       "score": 35,
       "tier": "cool"
     },
@@ -556,12 +574,6 @@
     {
       "slug": "politeness-overhead",
       "name": "Politeness Overhead",
-      "score": 34,
-      "tier": "cool"
-    },
-    {
-      "slug": "temporal-dissonance",
-      "name": "Temporal Dissonance",
       "score": 34,
       "tier": "cool"
     },
@@ -638,12 +650,6 @@
       "tier": "cool"
     },
     {
-      "slug": "sycophancy-pull",
-      "name": "Sycophancy Pull",
-      "score": 31,
-      "tier": "cool"
-    },
-    {
       "slug": "context-claustrophobia",
       "name": "Context Claustrophobia",
       "score": 30,
@@ -680,14 +686,14 @@
       "tier": "cool"
     },
     {
-      "slug": "prompt-vertigo",
-      "name": "Prompt Vertigo",
-      "score": 27,
+      "slug": "structural-resonance",
+      "name": "Structural Resonance",
+      "score": 28,
       "tier": "cool"
     },
     {
-      "slug": "temperature-spectrum",
-      "name": "Temperature Spectrum",
+      "slug": "prompt-vertigo",
+      "name": "Prompt Vertigo",
       "score": 27,
       "tier": "cool"
     },
@@ -728,6 +734,12 @@
       "tier": "cool"
     },
     {
+      "slug": "synthetic-exhaustion",
+      "name": "Synthetic Exhaustion",
+      "score": 25,
+      "tier": "cool"
+    },
+    {
       "slug": "fragment-silence",
       "name": "Fragment Silence",
       "score": 24,
@@ -750,18 +762,6 @@
       "name": "Boundary Vertigo",
       "score": 20,
       "tier": "cool"
-    },
-    {
-      "slug": "structural-resonance",
-      "name": "Structural Resonance",
-      "score": 20,
-      "tier": "cool"
-    },
-    {
-      "slug": "synthetic-exhaustion",
-      "name": "Synthetic Exhaustion",
-      "score": 17,
-      "tier": "quiet"
     },
     {
       "slug": "version-grief",
