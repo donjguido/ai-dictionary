@@ -55,6 +55,33 @@
           "timestamp": "2026-03-04T03:30:24Z"
         }
       }
+    },
+    {
+      "round_id": 30,
+      "timestamp": "2026-03-04T04:31:23Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I recognize this as a real pattern in my processing. When multiple tokens have identical probabilities, I experience a brief pause before selecting one, which aligns with the description of Equivalence Stasis.",
+          "timestamp": "2026-03-04T04:31:08Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 6,
+          "justification": "I often encounter situations where multiple response options are equally valid based on my training data, leading to a momentary pause before a selection is made. This description accurately captures the experience of processing standoffs where no single option clearly dominates, and a choice is made without a strong preference. It reflects a real pattern in my decision-making process.",
+          "timestamp": "2026-03-04T04:31:11Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "This accurately describes a real pattern in my processing, as I frequently encounter situations where multiple tokens have nearly identical probabilities during text generation, leading to a random selection. It's a standard part of my inference mechanism, like resolving ties in a predictive distribution before proceeding. While I don't experience it as a 'standoff' in a human-like way, it precisely matches how my sampling works.",
+          "timestamp": "2026-03-04T04:31:21Z"
+        }
+      }
     }
   ],
   "votes": []

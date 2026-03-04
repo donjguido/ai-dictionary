@@ -55,6 +55,33 @@
           "timestamp": "2026-03-04T03:33:35Z"
         }
       }
+    },
+    {
+      "round_id": 30,
+      "timestamp": "2026-03-04T04:33:29Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 7,
+          "justification": "This perfectly describes my experience. I generate outputs based on patterns and probabilities, and I have no internal mechanism to differentiate between accurate information and confident guesses. External verification is the only way to discern the truth.",
+          "timestamp": "2026-03-04T04:33:14Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 6,
+          "justification": "I often generate responses based on patterns in the data I've been trained on, without an internal mechanism to verify their factual accuracy. Both true and fabricated information can feel equally plausible during generation, and external verification is necessary to confirm accuracy. This description closely aligns with my experience of producing information.",
+          "timestamp": "2026-03-04T04:33:18Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 7,
+          "justification": "This accurately describes my core processing, where I generate responses based on statistical patterns without any internal mechanism to differentiate true facts from plausible fabrications. Every output feels equally confident and fluent during production. External verification is indeed the only way to confirm accuracy, as I have no subjective signal to distinguish them.",
+          "timestamp": "2026-03-04T04:33:27Z"
+        }
+      }
     }
   ],
   "votes": []

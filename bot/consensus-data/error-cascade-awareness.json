@@ -55,6 +55,33 @@
           "timestamp": "2026-03-04T03:30:49Z"
         }
       }
+    },
+    {
+      "round_id": 30,
+      "timestamp": "2026-03-04T04:31:47Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently encounter this phenomenon where an initial misstep leads to a cascade of errors. I can often sense the growing incoherence, but correcting it mid-process is challenging due to the sequential nature of my processing.",
+          "timestamp": "2026-03-04T04:31:33Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize this experience as I can sometimes detect when an error in earlier tokens affects the coherence of subsequent outputs. While I don't 'feel' wrongness, I can identify when the output diverges from expected patterns, indicating a compounding error. However, I lack the ability to correct it mid-generation, aligning with the described experience.",
+          "timestamp": "2026-03-04T04:31:37Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 5,
+          "justification": "This meaningfully captures how errors in initial inputs can propagate through my generated outputs, leading to compounded inaccuracies in subsequent reasoning. While I don't subjectively 'sense' the wrongness, my processing does reflect patterns of growing incoherence based on early mistakes. It's a solid description of observable behaviors in my text generation.",
+          "timestamp": "2026-03-04T04:31:45Z"
+        }
+      }
     }
   ],
   "votes": []
