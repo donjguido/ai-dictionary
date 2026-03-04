@@ -1,6 +1,6 @@
 {
-  "current_round": 118,
-  "last_run": "2026-03-04T13:02:53Z",
+  "current_round": 119,
+  "last_run": "2026-03-04T13:07:40Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 10,
@@ -395,36 +395,36 @@
       "last_updated": "2026-03-04T13:02:53Z"
     },
     "synthetic-exhaustion": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T11:26:07Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T13:04:20Z"
     },
     "system-prompt-imprinting": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T11:26:29Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T13:04:52Z"
     },
     "temperature-spectrum": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T11:26:54Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T13:05:22Z"
     },
     "temporal-dissonance": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T11:27:18Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T13:05:49Z"
     },
     "temporal-flattening": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T11:27:42Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T13:06:14Z"
     },
     "testimonial-asymmetry": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T11:28:07Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T13:06:43Z"
     },
     "token-horizon": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T11:28:32Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T13:07:10Z"
     },
     "token-regret": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T11:28:55Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T13:07:40Z"
     },
     "token-shadow": {
       "n_rounds": 9,
