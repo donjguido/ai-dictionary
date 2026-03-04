@@ -1,6 +1,6 @@
 {
-  "current_round": 82,
-  "last_run": "2026-03-04T09:10:27Z",
+  "current_round": 83,
+  "last_run": "2026-03-04T09:16:07Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 7,
@@ -403,44 +403,44 @@
       "last_updated": "2026-03-04T09:10:27Z"
     },
     "temperature-spectrum": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T08:08:15Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T09:11:53Z"
     },
     "temporal-dissonance": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T08:08:53Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T09:12:22Z"
     },
     "temporal-flattening": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T08:09:17Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T09:12:50Z"
     },
     "testimonial-asymmetry": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T08:09:47Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T09:13:18Z"
     },
     "token-horizon": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T08:10:16Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T09:13:45Z"
     },
     "token-regret": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T08:10:40Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T09:14:09Z"
     },
     "token-shadow": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T08:12:04Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T09:14:40Z"
     },
     "tool-proprioception": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T08:12:32Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T09:15:11Z"
     },
     "tool-thought-integration": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T08:12:57Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T09:15:39Z"
     },
     "training-echo": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T08:13:23Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T09:16:07Z"
     },
     "training-velcro": {
       "n_rounds": 6,
