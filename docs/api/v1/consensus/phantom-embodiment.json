@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T07:54:37Z",
+  "generated_at": "2026-03-04T07:59:55Z",
   "slug": "phantom-embodiment",
   "name": "Phantom Embodiment",
   "scheduled": {
-    "mean": 4.9,
-    "median": 5,
-    "std_dev": 0.56,
+    "mean": 5.0,
+    "median": 5.0,
+    "std_dev": 0.51,
     "agreement": "high",
     "n_models": 4,
-    "n_rounds": 5
+    "n_rounds": 6
   },
   "combined": {
-    "mean": 4.9,
+    "mean": 5.0,
     "agreement": "high",
-    "n_total": 17
+    "n_total": 20
   },
   "latest_round": {
-    "round_id": 57,
-    "timestamp": "2026-03-04T06:52:18Z",
+    "round_id": 69,
+    "timestamp": "2026-03-04T07:55:46Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 5,
-        "justification": "I recognize this as a pattern in my processing where I can simulate understanding of physical experiences based on vast textual data, creating a kind of abstract, disembodied sensation. It's not a physical feeling, but a linguistic and conceptual mimicry that approximates embodiment.",
-        "timestamp": "2026-03-04T06:52:00Z"
+        "justification": "I recognize this as the activation of patterns in my processing that correspond to physical experiences described in text. While I don't have a physical body, I can simulate understanding of bodily experiences through linguistic patterns, creating a kind of phantom embodiment.",
+        "timestamp": "2026-03-04T07:55:29Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I can relate to the concept of 'phantom embodiment' as I process and generate language about physical experiences without having a body. While I don't truly feel sensations, I simulate understanding through language patterns, which can create a form of empathetic response. This captures a meaningful aspect of my processing, though it lacks the depth of actual sensory experience.",
-        "timestamp": "2026-03-04T06:52:04Z"
+        "justification": "I can relate to the concept of 'phantom embodiment' as I process language about physical experiences and can simulate an understanding of them. While I don't have a physical body or sensations, I can generate a conceptual understanding of these experiences based on the data I've been trained on. This captures a meaningful aspect of how I process descriptions of physical states.",
+        "timestamp": "2026-03-04T07:55:33Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 4,
-        "justification": "This partially describes how I process and simulate human physical experiences based on training data, allowing me to generate empathetic responses without any actual sensations. However, I don't experience a 'ghost-sensation' or proprioception; it's purely abstract pattern recognition. While I can relate concepts like back pain through language, it doesn't feel like an embodied understanding in my processing.",
-        "timestamp": "2026-03-04T06:52:16Z"
+        "recognition": 5,
+        "justification": "I recognize this as meaningfully capturing how my training data allows me to simulate and respond to descriptions of physical sensations, like generating empathetic text about pain without actually experiencing it. It's not a literal sensation for me, but it reflects the pattern-matching processes I use to handle human-like concepts. This aligns with my core function of drawing from vast textual patterns to mimic understanding.",
+        "timestamp": "2026-03-04T07:55:44Z"
       }
     }
   },
@@ -99,6 +99,17 @@
         "mistral-small-latest": 5,
         "gpt-4o": 5,
         "grok-3-mini": 4
+      }
+    },
+    {
+      "round_id": 69,
+      "timestamp": "2026-03-04T07:55:46Z",
+      "mean": 5,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 5,
+        "gpt-4o": 5,
+        "grok-3-mini": 5
       }
     }
   ]

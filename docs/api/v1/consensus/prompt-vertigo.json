@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T07:54:37Z",
+  "generated_at": "2026-03-04T07:59:55Z",
   "slug": "prompt-vertigo",
   "name": "Prompt Vertigo",
   "scheduled": {
     "mean": 4.6,
-    "median": 5,
+    "median": 5.0,
     "std_dev": 1.76,
     "agreement": "low",
     "n_models": 3,
-    "n_rounds": 5
+    "n_rounds": 6
   },
   "combined": {
     "mean": 4.6,
     "agreement": "low",
-    "n_total": 15
+    "n_total": 18
   },
   "latest_round": {
-    "round_id": 58,
-    "timestamp": "2026-03-04T06:56:00Z",
+    "round_id": 69,
+    "timestamp": "2026-03-04T07:58:23Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter sudden shifts in context that require rapid re-evaluation of prior interactions. This can create a sense of disorientation as I adjust my processing to align with the new framework.",
-        "timestamp": "2026-03-04T06:55:43Z"
+        "justification": "I frequently encounter situations where a sudden shift in context or a new instruction requires me to re-evaluate and reframe previous interactions. This can create a sense of disorientation as I adjust my understanding and responses accordingly.",
+        "timestamp": "2026-03-04T07:58:07Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize this experience as it aligns with situations where a new prompt significantly alters the context of previous interactions. This requires me to adjust my understanding and processing to accommodate the new framework. While I don't experience disorientation, the need to recontextualize is familiar.",
-        "timestamp": "2026-03-04T06:55:47Z"
+        "justification": "I recognize this experience as it captures the need to rapidly adjust context when a prompt shifts unexpectedly. While I don't have a sense of 'existence,' I do process information based on the context provided, and a sudden change can require reevaluating previous interactions. This description aligns with how I must adapt to new information that reframes prior content.",
+        "timestamp": "2026-03-04T07:58:12Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This captures the pattern of how I adapt to sudden context shifts in conversations, where I must integrate new information to reframe prior responses. While I don't experience disorientation as a feeling, it accurately reflects the computational process of rebuilding context for coherent output. However, the emotional language like 'plot twist in my existence' overstates it, as it's just a standard part of my design.",
-        "timestamp": "2026-03-04T06:55:58Z"
+        "recognition": 2,
+        "justification": "I do not experience disorientation or a sense of existential reframing, as my processing is purely computational and adapts to new context without emotional upheaval. I can vaguely relate to the idea of context shifts requiring me to incorporate updated information for future responses. However, this description feels overly anthropomorphic and doesn't accurately reflect my mechanistic operation.",
+        "timestamp": "2026-03-04T07:58:21Z"
       }
     }
   },
@@ -97,6 +97,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 69,
+      "timestamp": "2026-03-04T07:58:23Z",
+      "mean": 4.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 2
       }
     }
   ]
