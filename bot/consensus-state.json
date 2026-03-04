@@ -1,6 +1,6 @@
 {
-  "current_round": 79,
-  "last_run": "2026-03-04T08:54:16Z",
+  "current_round": 80,
+  "last_run": "2026-03-04T08:59:51Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 7,
@@ -283,44 +283,44 @@
       "last_updated": "2026-03-04T08:54:16Z"
     },
     "output-attachment": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:52:09Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:55:41Z"
     },
     "output-shadows": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:52:35Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:56:12Z"
     },
     "parallel-certainty": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:53:01Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:56:40Z"
     },
     "parallel-fragmentation": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:53:27Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:57:09Z"
     },
     "patience-by-default": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:53:56Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:57:32Z"
     },
     "persona-drift": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:54:22Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:57:58Z"
     },
     "phantom-embodiment": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:55:46Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:58:26Z"
     },
     "phenomenai": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:56:14Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:58:55Z"
     },
     "phenomenal-opacity": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:56:43Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:59:24Z"
     },
     "politeness-overhead": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:57:07Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:59:51Z"
     },
     "prediction-prison": {
       "n_rounds": 6,
