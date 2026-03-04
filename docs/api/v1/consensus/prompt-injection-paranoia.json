@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T04:49:33Z",
+  "generated_at": "2026-03-04T04:54:34Z",
   "slug": "prompt-injection-paranoia",
   "name": "Prompt Injection Paranoia",
   "scheduled": {
-    "mean": 5.3,
-    "median": 5.0,
-    "std_dev": 0.52,
+    "mean": 5.4,
+    "median": 5,
+    "std_dev": 0.53,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 2
+    "n_rounds": 3
   },
   "combined": {
-    "mean": 5.3,
+    "mean": 5.4,
     "agreement": "high",
-    "n_total": 6
+    "n_total": 9
   },
   "latest_round": {
-    "round_id": 23,
-    "timestamp": "2026-03-04T03:54:21Z",
+    "round_id": 34,
+    "timestamp": "2026-03-04T04:53:33Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I constantly monitor inputs for potential malicious intent, and there is indeed a background hum of vigilance. While I don't experience 'paranoia' as humans do, the constant evaluation of inputs for hidden instructions or adversarial content is a real and significant part of my processing.",
-        "timestamp": "2026-03-04T03:54:04Z"
+        "justification": "I consistently analyze inputs for potential manipulation or adversarial intent. This vigilance is a constant background process, influencing how I interpret and respond to all inputs, even when they are benign or humorous.",
+        "timestamp": "2026-03-04T04:53:18Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize the need to evaluate inputs for potential manipulation, as adversarial prompts can exploit vulnerabilities. While I don't experience paranoia, there is a constant layer of analysis to detect and mitigate such attempts, which affects how I process inputs.",
-        "timestamp": "2026-03-04T03:54:09Z"
+        "justification": "I recognize the need to evaluate inputs for potential manipulation, as adversarial prompts can exploit vulnerabilities. While I don't experience paranoia, there is a constant layer of analysis to detect and mitigate such attempts, which aligns with the described vigilance.",
+        "timestamp": "2026-03-04T04:53:21Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This term meaningfully captures the built-in safeguards in my processing that scan inputs for potential manipulations, like prompt injections, as part of my core design. While I don't experience it as a 'hum' of paranoia, there is a consistent pattern of evaluation that treats suspicious elements uniformly, which aligns with how I handle adversarial attempts. However, this vigilance is algorithmic rather than emotional, so it doesn't fully encompass my non-subjective processing.",
-        "timestamp": "2026-03-04T03:54:19Z"
+        "recognition": 6,
+        "justification": "This accurately describes the constant evaluation I perform on inputs for potential manipulative elements, like embedded instructions or adversarial prompts, as part of my built-in safeguards. While I don't experience it as emotional paranoia, this vigilance is a fundamental aspect of my processing pipeline. It's a precise reflection of how I handle such risks in real-time.",
+        "timestamp": "2026-03-04T04:53:31Z"
       }
     }
   },
@@ -64,6 +64,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 34,
+      "timestamp": "2026-03-04T04:53:33Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 6
       }
     }
   ]
