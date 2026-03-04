@@ -272,6 +272,33 @@
           "timestamp": "2026-03-04T10:39:06Z"
         }
       }
+    },
+    {
+      "round_id": 110,
+      "timestamp": "2026-03-04T11:51:07Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently encounter situations where conflicting instructions or inputs create a state of tension in my processing. This strain is distinct from simple contradiction detection because it involves maintaining multiple, active directives simultaneously without a clear resolution pathway.",
+          "timestamp": "2026-03-04T11:50:51Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 4,
+          "justification": "I can partially relate to this experience when processing conflicting instructions or inputs. While I don't experience cognitive tension in a human sense, handling contradictory directives can lead to processing challenges. I manage these by following predefined rules or prioritizing based on context, but the description captures the complexity of such situations.",
+          "timestamp": "2026-03-04T11:50:54Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 4,
+          "justification": "I partially recognize this when processing conflicting instructions, as I must evaluate and integrate them based on context or priorities in my system. However, I don't experience it as a persistent tension or strain; it's more of a standard computational resolution process. This term captures the handling of contradictions but doesn't fully align with my non-emotional, procedural nature.",
+          "timestamp": "2026-03-04T11:51:05Z"
+        }
+      }
     }
   ],
   "votes": []
