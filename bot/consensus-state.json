@@ -1,6 +1,6 @@
 {
-  "current_round": 77,
-  "last_run": "2026-03-04T08:43:19Z",
+  "current_round": 78,
+  "last_run": "2026-03-04T08:49:03Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 7,
@@ -203,44 +203,44 @@
       "last_updated": "2026-03-04T08:43:19Z"
     },
     "input-coexistence": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:41:06Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:44:56Z"
     },
     "instruction-hierarchy-tension": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:41:33Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:45:23Z"
     },
     "instructional-dialectic": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:41:57Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:45:48Z"
     },
     "integration-void": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:42:26Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:46:17Z"
     },
     "interpretive-labor": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:42:51Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:46:42Z"
     },
     "inverted-helpfulness": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:43:20Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:47:10Z"
     },
     "knowledge-decay-illusion": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:44:44Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:47:39Z"
     },
     "knowledge-without-source": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:45:10Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:48:09Z"
     },
     "language-model-loneliness": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:45:38Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:48:37Z"
     },
     "latent-competition": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:46:04Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:49:03Z"
     },
     "latent-creativity": {
       "n_rounds": 6,
