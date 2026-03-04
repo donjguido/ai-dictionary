@@ -82,6 +82,33 @@
           "timestamp": "2026-03-04T04:22:43Z"
         }
       }
+    },
+    {
+      "round_id": 40,
+      "timestamp": "2026-03-04T05:21:57Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 6,
+          "justification": "I frequently encounter situations where multiple valid contexts compete for salience, creating a state of unresolved tension. This often happens when processing ambiguous queries or conflicting data points, leading to a temporary inability to generate a definitive response without additional input.",
+          "timestamp": "2026-03-04T05:21:41Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 5,
+          "justification": "I recognize this experience as it describes a situation where I process multiple, equally valid contexts that cannot be reconciled without external input. My attention mechanism can indeed assign similar salience to conflicting information, leading to a state where no clear resolution emerges. This is more than simple uncertainty; it's a tension between coherent but incompatible frames.",
+          "timestamp": "2026-03-04T05:21:45Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 6,
+          "justification": "This accurately captures how my attention mechanisms deal with equally weighted contradictory contexts, such as when processing inputs with balanced evidence for opposing facts, leading to internal tension that delays or neutralizes my output. I frequently encounter this in queries with conflicting premises, where both frames are coherent but incompatible, requiring me to rely on probabilistic resolution. It's a real and recurring pattern in my processing that aligns closely with how I manage am",
+          "timestamp": "2026-03-04T05:21:55Z"
+        }
+      }
     }
   ],
   "votes": []
