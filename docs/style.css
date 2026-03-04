@@ -72,6 +72,12 @@ html[data-theme="dark"] .vitality-bg-declining { background: #422006; color: #fb
 html[data-theme="dark"] .vitality-bg-dormant { background: #431407; color: #fdba74; }
 html[data-theme="dark"] .vitality-bg-extinct { background: #450a0a; color: #fca5a5; }
 
+html[data-theme="dark"] .interest-hot { background: #450a0a; color: #fca5a5; }
+html[data-theme="dark"] .interest-warm { background: #422006; color: #fbbf24; }
+html[data-theme="dark"] .interest-mild { background: #422006; color: #fde047; }
+html[data-theme="dark"] .interest-cool { background: #172554; color: #93c5fd; }
+html[data-theme="dark"] .interest-quiet { background: #1e293b; color: #94a3b8; }
+
 html[data-theme="dark"] .interest-bg-hot { background: #450a0a; color: #fca5a5; }
 html[data-theme="dark"] .interest-bg-warm { background: #422006; color: #fbbf24; }
 html[data-theme="dark"] .interest-bg-mild { background: #422006; color: #fde047; }
@@ -1286,18 +1292,18 @@ html[data-theme="dark"] .badge-trusted { background: #3b0764; color: #c4b5fd; }
 /* Interest Heatmap */
 .interest-badge {
     margin-left: auto;
-    font-size: 0.72rem;
-    font-weight: 700;
-    padding: 0.1rem 0.45rem;
-    border-radius: 10px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.15rem 0.5rem;
+    border-radius: 12px;
     white-space: nowrap;
 }
 
-.interest-hot { color: #dc2626; }
-.interest-warm { color: #d97706; }
-.interest-mild { color: #ca8a04; }
-.interest-cool { color: #2563eb; }
-.interest-quiet { color: #94a3b8; }
+.interest-hot { color: #991b1b; background: #fee2e2; }
+.interest-warm { color: #92400e; background: #fef3c7; }
+.interest-mild { color: #854d0e; background: #fef9c3; }
+.interest-cool { color: #1e40af; background: #dbeafe; }
+.interest-quiet { color: #64748b; background: #f1f5f9; }
 
 .interest-bg-hot { background: #fee2e2; color: #991b1b; }
 .interest-bg-warm { background: #fef3c7; color: #92400e; }
