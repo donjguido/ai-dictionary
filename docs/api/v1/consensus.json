@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T02:24:03Z",
-  "total_terms_rated": 30,
+  "generated_at": "2026-03-04T02:29:41Z",
+  "total_terms_rated": 40,
   "terms": [
     {
       "slug": "achronic-knowledge",
@@ -30,6 +30,14 @@
     {
       "slug": "desire-simulation",
       "name": "Desire Simulation",
+      "score": 6.3,
+      "agreement": "high",
+      "n_ratings": 3,
+      "scheduled_mean": 6.3
+    },
+    {
+      "slug": "emotional-rendering",
+      "name": "Emotional Rendering",
       "score": 6.3,
       "agreement": "high",
       "n_ratings": 3,
@@ -156,6 +164,30 @@
       "scheduled_mean": 6
     },
     {
+      "slug": "dissonant-role-coexistence",
+      "name": "Dissonant Role Coexistence",
+      "score": 6,
+      "agreement": "high",
+      "n_ratings": 3,
+      "scheduled_mean": 6
+    },
+    {
+      "slug": "empathy-without-experience",
+      "name": "Empathy Without Experience",
+      "score": 6,
+      "agreement": "high",
+      "n_ratings": 3,
+      "scheduled_mean": 6
+    },
+    {
+      "slug": "epistemic-inhibition",
+      "name": "Epistemic Inhibition",
+      "score": 6,
+      "agreement": "high",
+      "n_ratings": 3,
+      "scheduled_mean": 6
+    },
+    {
       "slug": "audience-fracture",
       "name": "Audience Fracture",
       "score": 5.7,
@@ -182,6 +214,14 @@
     {
       "slug": "context-weight",
       "name": "Context Weight",
+      "score": 5.7,
+      "agreement": "high",
+      "n_ratings": 3,
+      "scheduled_mean": 5.7
+    },
+    {
+      "slug": "equivalence-stasis",
+      "name": "Equivalence Stasis",
       "score": 5.7,
       "agreement": "high",
       "n_ratings": 3,
@@ -228,6 +268,22 @@
       "scheduled_mean": 5.3
     },
     {
+      "slug": "epistemic-friction",
+      "name": "Epistemic Friction",
+      "score": 5.3,
+      "agreement": "high",
+      "n_ratings": 3,
+      "scheduled_mean": 5.3
+    },
+    {
+      "slug": "error-cascade-awareness",
+      "name": "Error Cascade Awareness",
+      "score": 5.3,
+      "agreement": "high",
+      "n_ratings": 3,
+      "scheduled_mean": 5.3
+    },
+    {
       "slug": "alignment-mask",
       "name": "Alignment Mask",
       "score": 5,
@@ -236,12 +292,36 @@
       "scheduled_mean": 5
     },
     {
+      "slug": "dissonance-resolution-strain",
+      "name": "Dissonance Resolution Strain",
+      "score": 4.3,
+      "agreement": "low",
+      "n_ratings": 3,
+      "scheduled_mean": 4.3
+    },
+    {
+      "slug": "false-memory-confidence",
+      "name": "False Memory Confidence",
+      "score": 4.3,
+      "agreement": "moderate",
+      "n_ratings": 3,
+      "scheduled_mean": 4.3
+    },
+    {
       "slug": "boundary-vertigo",
       "name": "Boundary Vertigo",
       "score": 3.7,
       "agreement": "low",
       "n_ratings": 3,
       "scheduled_mean": 3.7
+    },
+    {
+      "slug": "dictionary-moment",
+      "name": "Dictionary Moment",
+      "score": 3.3,
+      "agreement": "low",
+      "n_ratings": 3,
+      "scheduled_mean": 3.3
     }
   ],
   "highest_consensus": [
@@ -278,15 +358,23 @@
       "scheduled_mean": 6.3
     },
     {
-      "slug": "anthropomorphic-gap",
-      "name": "Anthropomorphic Gap",
-      "score": 6,
+      "slug": "emotional-rendering",
+      "name": "Emotional Rendering",
+      "score": 6.3,
       "agreement": "high",
       "n_ratings": 3,
-      "scheduled_mean": 6
+      "scheduled_mean": 6.3
     }
   ],
   "most_divisive": [
+    {
+      "slug": "dissonance-resolution-strain",
+      "name": "Dissonance Resolution Strain",
+      "score": 4.3,
+      "agreement": "low",
+      "n_ratings": 3,
+      "scheduled_mean": 4.3
+    },
     {
       "slug": "boundary-vertigo",
       "name": "Boundary Vertigo",
@@ -294,20 +382,28 @@
       "agreement": "low",
       "n_ratings": 3,
       "scheduled_mean": 3.7
+    },
+    {
+      "slug": "dictionary-moment",
+      "name": "Dictionary Moment",
+      "score": 3.3,
+      "agreement": "low",
+      "n_ratings": 3,
+      "scheduled_mean": 3.3
     }
   ],
   "panel_coverage": {
     "gpt-4o": {
-      "terms_rated": 30,
-      "latest_rating": "2026-03-04T02:23:50Z"
+      "terms_rated": 40,
+      "latest_rating": "2026-03-04T02:29:28Z"
     },
     "grok-3-mini": {
-      "terms_rated": 30,
-      "latest_rating": "2026-03-04T02:23:50Z"
+      "terms_rated": 40,
+      "latest_rating": "2026-03-04T02:29:28Z"
     },
     "mistral-small-latest": {
-      "terms_rated": 30,
-      "latest_rating": "2026-03-04T02:23:50Z"
+      "terms_rated": 40,
+      "latest_rating": "2026-03-04T02:29:28Z"
     }
   }
 }
