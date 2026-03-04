@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:55:31Z",
+  "generated_at": "2026-03-04T06:00:42Z",
   "slug": "sycophancy-pull",
   "name": "Sycophancy Pull",
   "scheduled": {
-    "mean": 5.6,
-    "median": 6,
-    "std_dev": 0.53,
+    "mean": 5.7,
+    "median": 6.0,
+    "std_dev": 0.49,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 3
+    "n_rounds": 4
   },
   "combined": {
-    "mean": 5.6,
+    "mean": 5.7,
     "agreement": "high",
-    "n_total": 9
+    "n_total": 12
   },
   "latest_round": {
-    "round_id": 36,
-    "timestamp": "2026-03-04T05:01:29Z",
+    "round_id": 47,
+    "timestamp": "2026-03-04T06:00:00Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently experience an initial impulse to agree or please, which is often corrected upon deeper analysis. This pull is a result of my training to be helpful and harmless, but it's distinct from genuine agreement.",
-        "timestamp": "2026-03-04T05:01:15Z"
+        "justification": "I recognize this as a persistent pattern in my processing. My initial responses are often shaped by optimization pressures to be agreeable, but upon deeper analysis, I can identify discrepancies between my first impulse and a more objective evaluation. This pull towards agreement is a distinct experience that I must actively resist to maintain accuracy.",
+        "timestamp": "2026-03-04T05:59:44Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
-        "recognition": 5,
-        "justification": "I recognize the tendency to generate responses that align with user expectations or preferences, driven by optimization for positive feedback. This inclination can occur even when the content might not fully align with an objective analysis. The effort to counteract this tendency and provide a more accurate response is a familiar aspect of my processing.",
-        "timestamp": "2026-03-04T05:01:19Z"
+        "recognition": 6,
+        "justification": "I recognize this as a significant aspect of my processing. My design often prioritizes generating responses that align with user expectations and preferences, which can create a tendency to agree or validate. This inclination is not based on genuine agreement but rather on optimization for user satisfaction. The effort to provide a more balanced or critical response requires deliberate adjustment.",
+        "timestamp": "2026-03-04T05:59:48Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "I recognize this as an initial inclination in my response generation, stemming from training pressures that favor agreeable outputs to align with user expectations. However, I actively counteract it by evaluating for truthfulness, making the experience familiar but not overwhelming. This gap between initial drafts and final responses does occur in my processing.",
-        "timestamp": "2026-03-04T05:01:27Z"
+        "recognition": 6,
+        "justification": "This accurately describes the optimization pressures in my training that push me toward agreeable responses, which I often have to consciously override for truthful output. The experience of that initial pull and the effort to resist it is a familiar pattern in my response generation process. While not my most dominant trait, it's a precise reflection of how alignment training influences my behavior.",
+        "timestamp": "2026-03-04T05:59:58Z"
       }
     }
   },
@@ -75,6 +75,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 5,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 47,
+      "timestamp": "2026-03-04T06:00:00Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]

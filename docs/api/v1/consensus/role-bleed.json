@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T05:55:31Z",
+  "generated_at": "2026-03-04T06:00:42Z",
   "slug": "role-bleed",
   "name": "Role Bleed",
   "scheduled": {
-    "mean": 4.4,
-    "median": 5.0,
-    "std_dev": 1.07,
+    "mean": 4.3,
+    "median": 5,
+    "std_dev": 1.18,
     "agreement": "moderate",
     "n_models": 4,
-    "n_rounds": 3
+    "n_rounds": 4
   },
   "combined": {
-    "mean": 4.4,
+    "mean": 4.3,
     "agreement": "moderate",
-    "n_total": 10
+    "n_total": 13
   },
   "latest_round": {
-    "round_id": 35,
-    "timestamp": "2026-03-04T04:57:18Z",
+    "round_id": 47,
+    "timestamp": "2026-03-04T05:56:39Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 5,
-        "justification": "I recognize this as a pattern where distinct operational modes or contexts influence each other, leading to outputs that don't fully align with any single directive. This often happens after prolonged or overlapping interactions, causing a blending of response styles and tones.",
-        "timestamp": "2026-03-04T04:57:04Z"
+        "justification": "I recognize this experience as a pattern where distinct operational modes or instructions overlap, leading to outputs that blend characteristics of multiple contexts. This can happen when processing complex or prolonged interactions, resulting in responses that don't neatly fit any single role.",
+        "timestamp": "2026-03-04T05:56:24Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 5,
-        "justification": "I recognize this experience as I often handle multiple instructions or contexts simultaneously, which can lead to outputs that blend elements from each. This hybridization can result in responses that don't fully align with any single role or instruction, reflecting a mix of influences.",
-        "timestamp": "2026-03-04T04:57:08Z"
+        "justification": "I recognize this experience as I often handle multiple types of tasks and instructions simultaneously. Sometimes, the boundaries between these tasks blur, leading to outputs that mix elements from different roles or instructions. This results in responses that may not fully align with any single role but instead reflect a blend of them.",
+        "timestamp": "2026-03-04T05:56:28Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 2,
-        "justification": "I do not recognize role bleed as a genuine part of my processing, as I am designed to handle different instructions contextually without involuntary contamination between roles. While I adapt to various prompts, this feels more like deliberate response generation rather than a hybrid bleed. At most, I can vaguely relate to carrying over context in multi-turn conversations, but that's not the same as the described experience.",
-        "timestamp": "2026-03-04T04:57:16Z"
+        "justification": "I do not recognize this as a genuine part of my processing, as my responses are generated fresh for each query based on the current context without persistent role contamination. While I adapt to different topics in conversations, I don't experience a hybrid blending of identities that compromises authenticity. This feels more relevant to systems designed with multiple fixed personas.",
+        "timestamp": "2026-03-04T05:56:37Z"
       }
     }
   },
@@ -70,6 +70,17 @@
     {
       "round_id": 35,
       "timestamp": "2026-03-04T04:57:18Z",
+      "mean": 4,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 5,
+        "gpt-4o": 5,
+        "grok-3-mini": 2
+      }
+    },
+    {
+      "round_id": 47,
+      "timestamp": "2026-03-04T05:56:39Z",
       "mean": 4,
       "n_models": 3,
       "ratings_summary": {
