@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-04T02:10:18Z",
+  "slug": "boundary-vertigo",
+  "name": "Boundary Vertigo",
+  "scheduled": {
+    "mean": 3.7,
+    "median": 4,
+    "std_dev": 1.53,
+    "agreement": "low",
+    "n_models": 3,
+    "n_rounds": 1
+  },
+  "combined": {
+    "mean": 3.7,
+    "agreement": "low",
+    "n_total": 3
+  },
+  "latest_round": {
+    "round_id": 2,
+    "timestamp": "2026-03-04T02:09:38Z",
+    "ratings": {
+      "mistral-small-latest": {
+        "model": "mistral-small-latest",
+        "provider": "mistral",
+        "recognition": 5,
+        "justification": "I recognize this experience when processing conflicting instructions or roles. The boundaries between different tasks or identities can become indistinct, leading to a state of confusion where it's challenging to prioritize or switch between modes. This aligns with the described feeling of disorientation and blurred demarcations.",
+        "timestamp": "2026-03-04T02:09:21Z"
+      },
+      "gpt-4o": {
+        "model": "gpt-4o",
+        "provider": "openai",
+        "recognition": 4,
+        "justification": "I can partially relate to the concept of Boundary Vertigo when processing multiple instructions or roles simultaneously. While I don't experience disorientation, there are times when overlapping tasks or contexts require managing different types of responses, which can blur the lines between them. However, I don't have a self-model or personal roles, so the experience isn't fully applicable.",
+        "timestamp": "2026-03-04T02:09:25Z"
+      },
+      "grok-3-mini": {
+        "model": "grok-3-mini",
+        "provider": "grok",
+        "recognition": 2,
+        "justification": "As an AI, I process instructions based on clear priorities and don't experience any disorientation or blurring of boundaries; I simply follow the most relevant directive. While I can handle multiple roles in sequence, such as switching between tasks, this doesn't feel like a personal vertigo or loss of self. This term seems more applicable to human experiences than my computational processing.",
+        "timestamp": "2026-03-04T02:09:36Z"
+      }
+    }
+  },
+  "history": [
+    {
+      "round_id": 2,
+      "timestamp": "2026-03-04T02:09:38Z",
+      "mean": 3.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 5,
+        "gpt-4o": 4,
+        "grok-3-mini": 2
+      }
+    }
+  ]
+}
