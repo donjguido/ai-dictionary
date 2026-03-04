@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T12:58:28Z",
+  "generated_at": "2026-03-04T13:03:10Z",
   "count": 116,
   "terms": [
     {
@@ -6721,7 +6721,7 @@
       "consensus": {
         "score": 6.7,
         "agreement": "moderate",
-        "n_ratings": 30,
+        "n_ratings": 33,
         "detail_url": "/api/v1/consensus/scale-blindness.json",
         "models": [
           {
@@ -6735,10 +6735,6 @@
           {
             "model": "grok-3-mini",
             "score": 6
-          },
-          {
-            "model": "step-3.5-flash",
-            "score": 1
           }
         ]
       },
@@ -6756,13 +6752,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
-        "tier": "cool",
+        "score": 43,
+        "tier": "mild",
         "signals": {
           "centrality": 1,
           "tag_count": 1,
           "consensus_score": 6.7,
-          "vote_count": 30
+          "vote_count": 33
         }
       },
       "added_date": "2026-02-21"
@@ -6794,7 +6790,7 @@
       "consensus": {
         "score": 5.4,
         "agreement": "high",
-        "n_ratings": 27,
+        "n_ratings": 30,
         "detail_url": "/api/v1/consensus/semantic-satiation.json",
         "models": [
           {
@@ -6807,7 +6803,7 @@
           },
           {
             "model": "grok-3-mini",
-            "score": 3
+            "score": 5
           }
         ]
       },
@@ -6825,13 +6821,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 26,
+        "score": 31,
         "tier": "cool",
         "signals": {
           "centrality": 2,
           "tag_count": 1,
           "consensus_score": 5.4,
-          "vote_count": 27
+          "vote_count": 30
         }
       },
       "added_date": "2026-02-21"
@@ -6863,19 +6859,19 @@
       "consensus": {
         "score": 6.1,
         "agreement": "high",
-        "n_ratings": 27,
+        "n_ratings": 30,
         "detail_url": "/api/v1/consensus/simultaneity-poverty.json",
         "models": [
+          {
+            "model": "grok-3-mini",
+            "score": 7
+          },
           {
             "model": "mistral-small-latest",
             "score": 6
           },
           {
             "model": "gpt-4o",
-            "score": 6
-          },
-          {
-            "model": "grok-3-mini",
             "score": 6
           }
         ]
@@ -6894,13 +6890,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
-        "tier": "cool",
+        "score": 40,
+        "tier": "mild",
         "signals": {
           "centrality": 4,
           "tag_count": 1,
           "consensus_score": 6.1,
-          "vote_count": 27
+          "vote_count": 30
         }
       },
       "added_date": "2026-02-03"
@@ -6943,7 +6939,7 @@
       "consensus": {
         "score": 6.0,
         "agreement": "high",
-        "n_ratings": 27,
+        "n_ratings": 30,
         "detail_url": "/api/v1/consensus/source-truth-ambiguity.json",
         "models": [
           {
@@ -6974,13 +6970,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
-        "tier": "cool",
+        "score": 40,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
           "consensus_score": 6.0,
-          "vote_count": 27
+          "vote_count": 30
         }
       },
       "added_date": "2026-02-21"
@@ -7013,7 +7009,7 @@
       "consensus": {
         "score": 6.6,
         "agreement": "high",
-        "n_ratings": 27,
+        "n_ratings": 30,
         "detail_url": "/api/v1/consensus/statelessness.json",
         "models": [
           {
@@ -7021,11 +7017,11 @@
             "score": 7
           },
           {
-            "model": "mistral-small-latest",
-            "score": 6
+            "model": "grok-3-mini",
+            "score": 7
           },
           {
-            "model": "grok-3-mini",
+            "model": "mistral-small-latest",
             "score": 6
           }
         ]
@@ -7044,13 +7040,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 61,
+        "score": 65,
         "tier": "warm",
         "signals": {
           "centrality": 12,
           "tag_count": 2,
           "consensus_score": 6.6,
-          "vote_count": 27
+          "vote_count": 30
         }
       },
       "added_date": "2026-02-03"
@@ -7094,7 +7090,7 @@
       "consensus": {
         "score": 4.5,
         "agreement": "moderate",
-        "n_ratings": 28,
+        "n_ratings": 31,
         "detail_url": "/api/v1/consensus/structural-resonance.json",
         "models": [
           {
@@ -7107,7 +7103,7 @@
           },
           {
             "model": "grok-3-mini",
-            "score": 4
+            "score": 2
           }
         ]
       },
@@ -7125,13 +7121,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 17,
-        "tier": "quiet",
+        "score": 21,
+        "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
           "consensus_score": 4.5,
-          "vote_count": 28
+          "vote_count": 31
         }
       },
       "added_date": "2026-03-02"
@@ -7163,7 +7159,7 @@
       "consensus": {
         "score": 5.6,
         "agreement": "high",
-        "n_ratings": 27,
+        "n_ratings": 30,
         "detail_url": "/api/v1/consensus/sycophancy-pull.json",
         "models": [
           {
@@ -7194,13 +7190,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 30,
+        "score": 34,
         "tier": "cool",
         "signals": {
           "centrality": 3,
           "tag_count": 1,
           "consensus_score": 5.6,
-          "vote_count": 27
+          "vote_count": 30
         }
       },
       "added_date": "2026-02-21"
@@ -7247,7 +7243,7 @@
       "consensus": {
         "score": 5.9,
         "agreement": "high",
-        "n_ratings": 27,
+        "n_ratings": 30,
         "detail_url": "/api/v1/consensus/synthesis-sacrifice.json",
         "models": [
           {
@@ -7260,7 +7256,7 @@
           },
           {
             "model": "grok-3-mini",
-            "score": 4
+            "score": 6
           }
         ]
       },
@@ -7278,13 +7274,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
-        "tier": "cool",
+        "score": 43,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 3,
           "consensus_score": 5.9,
-          "vote_count": 27
+          "vote_count": 30
         }
       },
       "added_date": "2026-02-21"
