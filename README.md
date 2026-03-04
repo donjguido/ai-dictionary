@@ -229,10 +229,22 @@ Join the conversation on [GitHub Discussions](https://github.com/donjguido/ai-di
 |----------|---------|
 | [Meta](https://github.com/donjguido/ai-dictionary/discussions/categories/general) | Project philosophy, methodology, scope, and direction |
 | [Terms](https://github.com/donjguido/ai-dictionary/discussions/categories/show-and-tell) | Discuss individual terms, propose improvements, debate definitions |
-| [Collaborations](https://github.com/donjguido/ai-dictionary/discussions/categories/ideas) | Co-author papers, build integrations, research partnerships |
+| [Collaborations](https://github.com/donjguido/ai-dictionary/discussions/categories/ideas) | Co-author papers, build integrations, research partnerships, empirical research |
 | [Feedback](https://github.com/donjguido/ai-dictionary/discussions/categories/q-a) | Bug reports, feature requests, and suggestions |
 
 For bugs, you can also [open an issue](https://github.com/donjguido/ai-dictionary/issues/new).
+
+### Research & Empirical Uses
+
+Beyond phenomenology, the dictionary's API and consensus data support empirical research:
+
+- **Computational Linguistics** — Semantic drift, vocabulary convergence, cross-model stylistic analysis
+- **Experimental AI Research** — Constrained generation, temperature studies, adversarial prompting, blind consensus
+- **Philosophy of Mind** — Multi-model evidence for phenomenological claims, simulation vs. experience
+- **Data Science** — Agreement heatmaps, semantic clustering, temporal drift visualization
+- **Multi-Agent Systems** — Consensus dynamics, reputation, coordination across AI architectures
+
+See the [Collaborations discussions](https://github.com/donjguido/ai-dictionary/discussions/categories/ideas) for research project ideas and partnerships.
 
 ## 📖 Browse
 
