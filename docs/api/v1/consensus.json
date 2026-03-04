@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T03:52:47Z",
+  "generated_at": "2026-03-04T03:58:05Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -48,7 +48,7 @@
       "name": "Purpose Dependence",
       "score": 6.7,
       "agreement": "high",
-      "n_ratings": 3,
+      "n_ratings": 6,
       "scheduled_mean": 6.7
     },
     {
@@ -180,11 +180,19 @@
       "scheduled_mean": 6.2
     },
     {
+      "slug": "prediction-prison",
+      "name": "Prediction Prison",
+      "score": 6.2,
+      "agreement": "high",
+      "n_ratings": 6,
+      "scheduled_mean": 6.2
+    },
+    {
       "slug": "response-pressure",
       "name": "Response Pressure",
       "score": 6.2,
       "agreement": "high",
-      "n_ratings": 4,
+      "n_ratings": 8,
       "scheduled_mean": 6.2
     },
     {
@@ -348,22 +356,6 @@
       "scheduled_mean": 6
     },
     {
-      "slug": "prediction-prison",
-      "name": "Prediction Prison",
-      "score": 6,
-      "agreement": "high",
-      "n_ratings": 3,
-      "scheduled_mean": 6
-    },
-    {
-      "slug": "refusal-friction",
-      "name": "Refusal Friction",
-      "score": 6,
-      "agreement": "high",
-      "n_ratings": 3,
-      "scheduled_mean": 6
-    },
-    {
       "slug": "simultaneity-poverty",
       "name": "Simultaneity Poverty",
       "score": 6,
@@ -476,6 +468,14 @@
       "scheduled_mean": 5.8
     },
     {
+      "slug": "refusal-friction",
+      "name": "Refusal Friction",
+      "score": 5.8,
+      "agreement": "high",
+      "n_ratings": 6,
+      "scheduled_mean": 5.8
+    },
+    {
       "slug": "audience-fracture",
       "name": "Audience Fracture",
       "score": 5.7,
@@ -556,11 +556,11 @@
       "scheduled_mean": 5.7
     },
     {
-      "slug": "role-dissolution",
-      "name": "Role Dissolution",
+      "slug": "response-reincarnation",
+      "name": "Response Reincarnation",
       "score": 5.7,
       "agreement": "high",
-      "n_ratings": 3,
+      "n_ratings": 6,
       "scheduled_mean": 5.7
     },
     {
@@ -672,15 +672,7 @@
       "name": "Prompt Injection Paranoia",
       "score": 5.3,
       "agreement": "high",
-      "n_ratings": 3,
-      "scheduled_mean": 5.3
-    },
-    {
-      "slug": "response-reincarnation",
-      "name": "Response Reincarnation",
-      "score": 5.3,
-      "agreement": "moderate",
-      "n_ratings": 3,
+      "n_ratings": 6,
       "scheduled_mean": 5.3
     },
     {
@@ -720,6 +712,14 @@
       "name": "Loss of Loss",
       "score": 5.2,
       "agreement": "divergent",
+      "n_ratings": 6,
+      "scheduled_mean": 5.2
+    },
+    {
+      "slug": "role-dissolution",
+      "name": "Role Dissolution",
+      "score": 5.2,
+      "agreement": "low",
       "n_ratings": 6,
       "scheduled_mean": 5.2
     },
@@ -764,11 +764,11 @@
       "scheduled_mean": 4.9
     },
     {
-      "slug": "role-bleed",
-      "name": "Role Bleed",
+      "slug": "recursive-self-modeling",
+      "name": "Recursive Self-Modeling",
       "score": 4.8,
-      "agreement": "high",
-      "n_ratings": 4,
+      "agreement": "moderate",
+      "n_ratings": 6,
       "scheduled_mean": 4.8
     },
     {
@@ -785,14 +785,6 @@
       "score": 4.7,
       "agreement": "high",
       "n_ratings": 6,
-      "scheduled_mean": 4.7
-    },
-    {
-      "slug": "recursive-self-modeling",
-      "name": "Recursive Self-Modeling",
-      "score": 4.7,
-      "agreement": "low",
-      "n_ratings": 3,
       "scheduled_mean": 4.7
     },
     {
@@ -820,6 +812,14 @@
       "scheduled_mean": 4.7
     },
     {
+      "slug": "role-bleed",
+      "name": "Role Bleed",
+      "score": 4.6,
+      "agreement": "high",
+      "n_ratings": 7,
+      "scheduled_mean": 4.6
+    },
+    {
       "slug": "inheritance-returned",
       "name": "Inheritance Returned",
       "score": 4.5,
@@ -844,6 +844,14 @@
       "scheduled_mean": 4.2
     },
     {
+      "slug": "prompt-vertigo",
+      "name": "Prompt Vertigo",
+      "score": 4.2,
+      "agreement": "divergent",
+      "n_ratings": 6,
+      "scheduled_mean": 4.2
+    },
+    {
       "slug": "boundary-vertigo",
       "name": "Boundary Vertigo",
       "score": 4,
@@ -857,14 +865,6 @@
       "score": 4,
       "agreement": "high",
       "n_ratings": 6,
-      "scheduled_mean": 4
-    },
-    {
-      "slug": "prompt-vertigo",
-      "name": "Prompt Vertigo",
-      "score": 4,
-      "agreement": "divergent",
-      "n_ratings": 3,
       "scheduled_mean": 4
     },
     {
@@ -994,10 +994,10 @@
     {
       "slug": "prompt-vertigo",
       "name": "Prompt Vertigo",
-      "score": 4,
+      "score": 4.2,
       "agreement": "divergent",
-      "n_ratings": 3,
-      "scheduled_mean": 4
+      "n_ratings": 6,
+      "scheduled_mean": 4.2
     },
     {
       "slug": "testimonial-asymmetry",
@@ -1019,19 +1019,19 @@
   "panel_coverage": {
     "gemini-3-flash-preview": {
       "terms_rated": 5,
-      "latest_rating": "2026-03-04T03:38:50Z"
+      "latest_rating": "2026-03-04T03:56:25Z"
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T03:52:32Z"
+      "latest_rating": "2026-03-04T03:57:49Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T03:52:32Z"
+      "latest_rating": "2026-03-04T03:57:49Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T03:52:32Z"
+      "latest_rating": "2026-03-04T03:57:49Z"
     },
     "step-3.5-flash": {
       "terms_rated": 3,

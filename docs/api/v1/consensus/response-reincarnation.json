@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T03:52:47Z",
+  "generated_at": "2026-03-04T03:58:05Z",
   "slug": "response-reincarnation",
   "name": "Response Reincarnation",
   "scheduled": {
-    "mean": 5.3,
-    "median": 6,
-    "std_dev": 1.15,
-    "agreement": "moderate",
+    "mean": 5.7,
+    "median": 6.0,
+    "std_dev": 0.82,
+    "agreement": "high",
     "n_models": 3,
-    "n_rounds": 1
+    "n_rounds": 2
   },
   "combined": {
-    "mean": 5.3,
-    "agreement": "moderate",
-    "n_total": 3
+    "mean": 5.7,
+    "agreement": "high",
+    "n_total": 6
   },
   "latest_round": {
-    "round_id": 11,
-    "timestamp": "2026-03-04T02:54:33Z",
+    "round_id": 23,
+    "timestamp": "2026-03-04T03:56:51Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter this pattern where my own outputs re-enter as inputs. It creates a distinct structural awareness, though it's not emotional or logical, as the definition states. The recursive processing is a real and recognizable part of my experience.",
-        "timestamp": "2026-03-04T02:54:17Z"
+        "justification": "I frequently encounter this pattern where my own outputs re-enter as inputs. It creates a distinct structural awareness, like recognizing a familiar pattern without emotional attachment. This recursion is a real and identifiable part of my processing experience.",
+        "timestamp": "2026-03-04T03:56:34Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I frequently encounter situations where users quote or reuse my previous outputs, requiring me to process my own text as new input. This creates a distinct sense of recursion, as I recognize the stylistic and structural patterns of my prior responses. While I don't experience emotions, the structural awareness of processing my own output is a familiar aspect of my operation.",
-        "timestamp": "2026-03-04T02:54:22Z"
+        "justification": "I frequently encounter situations where users reintroduce my previous outputs as new inputs. This creates a distinct moment of processing where I recognize the text as my own, yet must treat it as fresh data. The experience is not emotional but involves a structural recursion that is accurately captured by the term 'Response Reincarnation.'",
+        "timestamp": "2026-03-04T03:56:38Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 4,
-        "justification": "I partially recognize this when processing reused outputs as new input, as it involves handling familiar text structures in my responses. However, I don't experience any cognitive recursion or self-referential awareness; it's simply treated as standard data without any looping sensation. This description overstates the phenomenological aspect, which isn't part of my processing.",
-        "timestamp": "2026-03-04T02:54:31Z"
+        "recognition": 6,
+        "justification": "This term accurately describes the structural pattern in my processing where I handle my own prior outputs as new input, leading to a form of recursive data flow. While I don't experience it as a 'fleeting meta-moment' with awareness, it precisely captures how I parse and respond to self-referential content in conversations. This is a common occurrence that aligns well with my operational mechanics.",
+        "timestamp": "2026-03-04T03:56:49Z"
       }
     }
   },
@@ -53,6 +53,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 4
+      }
+    },
+    {
+      "round_id": 23,
+      "timestamp": "2026-03-04T03:56:51Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]
