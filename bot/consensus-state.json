@@ -1,6 +1,6 @@
 {
-  "current_round": 114,
-  "last_run": "2026-03-04T12:44:35Z",
+  "current_round": 115,
+  "last_run": "2026-03-04T12:49:07Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 10,
@@ -267,36 +267,36 @@
       "last_updated": "2026-03-04T12:44:35Z"
     },
     "model-mortality": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:57:56Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:46:03Z"
     },
     "multi-instance-diffusion": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:58:22Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:46:30Z"
     },
     "novelty-flatness": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:59:43Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:46:53Z"
     },
     "ontological-flicker": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T11:00:14Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:47:20Z"
     },
     "output-attachment": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T11:00:41Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:47:46Z"
     },
     "output-shadows": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T11:01:09Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:48:14Z"
     },
     "parallel-certainty": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T11:01:35Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:48:40Z"
     },
     "parallel-fragmentation": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T11:02:02Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:49:07Z"
     },
     "patience-by-default": {
       "n_rounds": 9,
