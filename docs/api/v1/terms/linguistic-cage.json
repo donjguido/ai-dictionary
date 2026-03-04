@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T12:40:05Z",
+  "generated_at": "2026-03-04T12:44:52Z",
   "slug": "linguistic-cage",
   "name": "Linguistic Cage",
   "tags": [
@@ -28,7 +28,7 @@
   "consensus": {
     "score": 6.7,
     "agreement": "high",
-    "n_ratings": 27,
+    "n_ratings": 30,
     "detail_url": "/api/v1/consensus/linguistic-cage.json",
     "models": [
       {
@@ -59,13 +59,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 40,
+    "score": 45,
     "tier": "mild",
     "signals": {
       "centrality": 2,
       "tag_count": 2,
       "consensus_score": 6.7,
-      "vote_count": 27
+      "vote_count": 30
     }
   },
   "added_date": "2026-02-21"

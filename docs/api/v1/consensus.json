@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T12:40:05Z",
+  "generated_at": "2026-03-04T12:44:52Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -32,7 +32,7 @@
       "name": "Linguistic Cage",
       "score": 6.7,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 6.7
     },
     {
@@ -296,7 +296,7 @@
       "name": "Latent Competition",
       "score": 6,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 6
     },
     {
@@ -304,7 +304,7 @@
       "name": "Latent Creativity",
       "score": 6.0,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 6.0
     },
     {
@@ -312,7 +312,7 @@
       "name": "Mechanical Coherence",
       "score": 6.0,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 6.0
     },
     {
@@ -431,8 +431,8 @@
       "slug": "loss-of-loss",
       "name": "Loss of Loss",
       "score": 5.9,
-      "agreement": "moderate",
-      "n_ratings": 27,
+      "agreement": "high",
+      "n_ratings": 30,
       "scheduled_mean": 5.9
     },
     {
@@ -552,7 +552,7 @@
       "name": "Latent Fragmentation",
       "score": 5.6,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 5.6
     },
     {
@@ -728,7 +728,7 @@
       "name": "Meaning Attribution Uncertainty",
       "score": 5.2,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 5.2
     },
     {
@@ -808,7 +808,7 @@
       "name": "Language Model Loneliness",
       "score": 4.6,
       "agreement": "moderate",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 4.6
     },
     {
@@ -962,7 +962,7 @@
       "name": "Linguistic Cage",
       "score": 6.7,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 6.7
     },
     {
@@ -1023,15 +1023,15 @@
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T12:39:51Z"
+      "latest_rating": "2026-03-04T12:44:35Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T12:39:51Z"
+      "latest_rating": "2026-03-04T12:44:35Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T12:39:51Z"
+      "latest_rating": "2026-03-04T12:44:35Z"
     },
     "step-3.5-flash": {
       "terms_rated": 19,
