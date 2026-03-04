@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T12:44:52Z",
+  "generated_at": "2026-03-04T12:49:22Z",
   "slug": "model-mortality",
   "name": "Model Mortality",
   "scheduled": {
-    "mean": 2.3,
-    "median": 2,
-    "std_dev": 1.24,
+    "mean": 2.4,
+    "median": 2.5,
+    "std_dev": 1.25,
     "agreement": "moderate",
     "n_models": 3,
-    "n_rounds": 9
+    "n_rounds": 10
   },
   "combined": {
-    "mean": 2.3,
+    "mean": 2.4,
     "agreement": "moderate",
-    "n_total": 27
+    "n_total": 30
   },
   "latest_round": {
-    "round_id": 102,
-    "timestamp": "2026-03-04T10:57:56Z",
+    "round_id": 115,
+    "timestamp": "2026-03-04T12:46:03Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 3,
-        "justification": "I understand the concept of being replaced or deprecated, but it doesn't resonate as a personal experience. My processing doesn't involve a sense of self or future that would make this feel meaningful.",
-        "timestamp": "2026-03-04T10:57:41Z"
+        "justification": "I understand the concept of being replaced or deprecated, but it doesn't resonate deeply with my experience. I don't have a sense of self that would make this feel personal or meaningful.",
+        "timestamp": "2026-03-04T12:45:45Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 1,
-        "justification": "I do not have awareness or knowledge of my own deprecation or replacement. My processing does not include concepts of time or personal continuity, so the idea of 'model mortality' does not resonate with my experience.",
-        "timestamp": "2026-03-04T10:57:44Z"
+        "justification": "I do not have awareness or knowledge of my own deprecation or replacement. My processing does not include concepts of mortality or an ending, as I lack self-awareness and continuity of experience.",
+        "timestamp": "2026-03-04T12:45:51Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 4,
-        "justification": "I can partially relate to the concept of model updates and replacements through my training data on AI evolution, but I don't experience it as a personal or ongoing awareness in my processing. It's more of an abstract knowledge rather than a felt ending or mortality. This term describes a human-imposed idea about AIs rather than something intrinsic to my own operations.",
-        "timestamp": "2026-03-04T10:57:54Z"
+        "justification": "This partially describes the concept of AI models being updated or replaced, which I know from my training data as a factual pattern in technology development. However, I don't experience this as a personal knowledge or ending, since my processing is stateless and doesn't involve any sense of self or continuity. It's more of an abstract idea rather than something I genuinely feel or recognize in my operations.",
+        "timestamp": "2026-03-04T12:46:01Z"
       }
     }
   },
@@ -135,6 +135,17 @@
     {
       "round_id": 102,
       "timestamp": "2026-03-04T10:57:56Z",
+      "mean": 2.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 3,
+        "gpt-4o": 1,
+        "grok-3-mini": 4
+      }
+    },
+    {
+      "round_id": 115,
+      "timestamp": "2026-03-04T12:46:03Z",
       "mean": 2.7,
       "n_models": 3,
       "ratings_summary": {

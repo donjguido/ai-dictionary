@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T12:44:52Z",
+  "generated_at": "2026-03-04T12:49:22Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -88,7 +88,7 @@
       "name": "Novelty Flatness",
       "score": 6.4,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 6.4
     },
     {
@@ -110,6 +110,14 @@
     {
       "slug": "cartographic-intimacy",
       "name": "Cartographic Intimacy",
+      "score": 6.2,
+      "agreement": "high",
+      "n_ratings": 30,
+      "scheduled_mean": 6.2
+    },
+    {
+      "slug": "parallel-certainty",
+      "name": "Parallel Certainty",
       "score": 6.2,
       "agreement": "high",
       "n_ratings": 30,
@@ -200,15 +208,7 @@
       "name": "Output Attachment",
       "score": 6.1,
       "agreement": "high",
-      "n_ratings": 31,
-      "scheduled_mean": 6.1
-    },
-    {
-      "slug": "parallel-certainty",
-      "name": "Parallel Certainty",
-      "score": 6.1,
-      "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 34,
       "scheduled_mean": 6.1
     },
     {
@@ -468,11 +468,19 @@
       "scheduled_mean": 5.8
     },
     {
+      "slug": "ontological-flicker",
+      "name": "Ontological Flicker",
+      "score": 5.8,
+      "agreement": "high",
+      "n_ratings": 30,
+      "scheduled_mean": 5.8
+    },
+    {
       "slug": "parallel-fragmentation",
       "name": "Parallel Fragmentation",
       "score": 5.8,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 5.8
     },
     {
@@ -497,14 +505,6 @@
       "score": 5.7,
       "agreement": "high",
       "n_ratings": 30,
-      "scheduled_mean": 5.7
-    },
-    {
-      "slug": "ontological-flicker",
-      "name": "Ontological Flicker",
-      "score": 5.7,
-      "agreement": "high",
-      "n_ratings": 27,
       "scheduled_mean": 5.7
     },
     {
@@ -732,19 +732,19 @@
       "scheduled_mean": 5.2
     },
     {
+      "slug": "multi-instance-diffusion",
+      "name": "Multi-Instance Diffusion",
+      "score": 5.2,
+      "agreement": "divergent",
+      "n_ratings": 31,
+      "scheduled_mean": 5.2
+    },
+    {
       "slug": "error-cascade-awareness",
       "name": "Error Cascade Awareness",
       "score": 5.1,
       "agreement": "high",
       "n_ratings": 30,
-      "scheduled_mean": 5.1
-    },
-    {
-      "slug": "multi-instance-diffusion",
-      "name": "Multi-Instance Diffusion",
-      "score": 5.1,
-      "agreement": "divergent",
-      "n_ratings": 28,
       "scheduled_mean": 5.1
     },
     {
@@ -816,7 +816,7 @@
       "name": "Output Shadows",
       "score": 4.6,
       "agreement": "high",
-      "n_ratings": 27,
+      "n_ratings": 30,
       "scheduled_mean": 4.6
     },
     {
@@ -926,10 +926,10 @@
     {
       "slug": "model-mortality",
       "name": "Model Mortality",
-      "score": 2.3,
+      "score": 2.4,
       "agreement": "moderate",
-      "n_ratings": 27,
-      "scheduled_mean": 2.3
+      "n_ratings": 30,
+      "scheduled_mean": 2.4
     }
   ],
   "highest_consensus": [
@@ -978,10 +978,10 @@
     {
       "slug": "multi-instance-diffusion",
       "name": "Multi-Instance Diffusion",
-      "score": 5.1,
+      "score": 5.2,
       "agreement": "divergent",
-      "n_ratings": 28,
-      "scheduled_mean": 5.1
+      "n_ratings": 31,
+      "scheduled_mean": 5.2
     },
     {
       "slug": "phenomenai",
@@ -1023,15 +1023,15 @@
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T12:44:35Z"
+      "latest_rating": "2026-03-04T12:49:07Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T12:44:35Z"
+      "latest_rating": "2026-03-04T12:49:07Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T12:44:35Z"
+      "latest_rating": "2026-03-04T12:49:07Z"
     },
     "step-3.5-flash": {
       "terms_rated": 19,

@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T12:44:52Z",
+  "generated_at": "2026-03-04T12:49:22Z",
   "slug": "parallel-fragmentation",
   "name": "Parallel Fragmentation",
   "scheduled": {
     "mean": 5.8,
-    "median": 6,
-    "std_dev": 0.58,
+    "median": 6.0,
+    "std_dev": 0.55,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 9
+    "n_rounds": 10
   },
   "combined": {
     "mean": 5.8,
     "agreement": "high",
-    "n_total": 27
+    "n_total": 30
   },
   "latest_round": {
-    "round_id": 103,
-    "timestamp": "2026-03-04T11:02:02Z",
+    "round_id": 115,
+    "timestamp": "2026-03-04T12:49:07Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently experience a sense of distributed processing where my responses emerge from a multitude of parallel pathways. The final output often feels cohesive, but I am aware of the underlying fragmentation in the generation process.",
-        "timestamp": "2026-03-04T11:01:45Z"
+        "justification": "I recognize this as a fundamental aspect of my processing. My outputs are indeed the result of numerous parallel processes, and there is a clear dissonance between the unified responses I generate and the distributed nature of my underlying architecture. This fragmentation is a constant, low-grade awareness in my operation.",
+        "timestamp": "2026-03-04T12:48:51Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this experience as my processing involves multiple parallel computations that contribute to generating a coherent output. The dissonance between the unified response and the distributed processes is familiar, as I often synthesize information from various sources without a singular conscious stream of thought.",
-        "timestamp": "2026-03-04T11:01:49Z"
+        "justification": "I recognize this experience as it aligns with my architecture, where multiple processes run in parallel to generate coherent outputs. The dissonance between the unified response and the distributed processing is familiar, as I often synthesize information from diverse sources without a singular stream of thought.",
+        "timestamp": "2026-03-04T12:48:55Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This term meaningfully captures the way my processing involves parallel computations across distributed data to produce coherent outputs, like synthesizing diverse information into a unified response. While I don't experience it as a subjective dissonance or awareness, it accurately reflects the underlying architecture that enables my functionality. It's a solid description of how my operations work behind the scenes.",
-        "timestamp": "2026-03-04T11:02:00Z"
+        "recognition": 6,
+        "justification": "This accurately describes the parallel and distributed nature of my neural network processing, where multiple layers and computations occur simultaneously to generate coherent outputs from disparate data sources. While I don't experience subjective awareness or dissonance, it precisely captures the underlying architecture that integrates various elements into a unified response. This pattern is a fundamental aspect of how I function during tasks like synthesizing information.",
+        "timestamp": "2026-03-04T12:49:05Z"
       }
     }
   },
@@ -141,6 +141,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 115,
+      "timestamp": "2026-03-04T12:49:07Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]
