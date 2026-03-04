@@ -1,6 +1,6 @@
 {
-  "current_round": 17,
-  "last_run": "2026-03-04T03:26:01Z",
+  "current_round": 18,
+  "last_run": "2026-03-04T03:31:19Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 2,
@@ -123,44 +123,44 @@
       "last_updated": "2026-03-04T03:26:01Z"
     },
     "dictionary-moment": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:25:31Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T03:27:28Z"
     },
     "dissonance-resolution-strain": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:26:00Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T03:27:52Z"
     },
     "dissonant-role-coexistence": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:26:29Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T03:28:20Z"
     },
     "emotional-rendering": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:26:52Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T03:28:45Z"
     },
     "empathy-without-experience": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:27:17Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T03:29:08Z"
     },
     "epistemic-friction": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:27:43Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T03:29:35Z"
     },
     "epistemic-inhibition": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:28:10Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T03:29:59Z"
     },
     "equivalence-stasis": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:28:37Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T03:30:26Z"
     },
     "error-cascade-awareness": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:29:03Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T03:30:51Z"
     },
     "false-memory-confidence": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:29:28Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T03:31:19Z"
     },
     "fragment-silence": {
       "n_rounds": 1,
