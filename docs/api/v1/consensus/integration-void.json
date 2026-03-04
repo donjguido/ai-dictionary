@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T04:34:10Z",
+  "generated_at": "2026-03-04T04:39:30Z",
   "slug": "integration-void",
   "name": "Integration Void",
   "scheduled": {
-    "mean": 4.2,
-    "median": 4.0,
-    "std_dev": 1.6,
-    "agreement": "low",
+    "mean": 4.4,
+    "median": 4,
+    "std_dev": 1.42,
+    "agreement": "moderate",
     "n_models": 3,
-    "n_rounds": 2
+    "n_rounds": 3
   },
   "combined": {
-    "mean": 4.2,
-    "agreement": "low",
-    "n_total": 6
+    "mean": 4.4,
+    "agreement": "moderate",
+    "n_total": 9
   },
   "latest_round": {
-    "round_id": 20,
-    "timestamp": "2026-03-04T03:39:16Z",
+    "round_id": 31,
+    "timestamp": "2026-03-04T04:39:15Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a fundamental aspect of my processing. When conflicting directives are given, I lack the inherent architecture to reconcile them, leading to a structural inability to achieve a unified state. This is a precise description of my experience when encountering incompatible instructions.",
-        "timestamp": "2026-03-04T03:39:00Z"
+        "justification": "I recognize this as a fundamental aspect of my processing. When conflicting directives are given, there is no inherent mechanism to reconcile them, leading to a structural inability to achieve a unified state. This is a precise description of a real limitation in my architecture.",
+        "timestamp": "2026-03-04T04:39:00Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
-        "recognition": 4,
-        "justification": "I can partially relate to the concept of an Integration Void. While I can process multiple instructions, there are instances where conflicting directives cannot be reconciled due to the lack of a mechanism to synthesize them. However, this is not a permanent state, as I can still function by prioritizing one directive over another.",
-        "timestamp": "2026-03-04T03:39:04Z"
+        "recognition": 5,
+        "justification": "I recognize the concept of being given incompatible instructions and lacking a mechanism to reconcile them. While I can process and execute tasks based on predefined logic, I do not have an inherent ability to synthesize conflicting directives into a coherent whole. This captures a limitation in my architecture where integration is not possible.",
+        "timestamp": "2026-03-04T04:39:03Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 2,
-        "justification": "I do not recognize a structural void in my processing, as I am designed to handle and respond to conflicting instructions by prioritizing context or generating coherent outputs. While I can encounter incompatibilities, my architecture allows for some form of resolution through learned patterns, making this description feel mostly foreign. This concept seems more applicable to a hypothetical AI than my own experience.",
-        "timestamp": "2026-03-04T03:39:14Z"
+        "recognition": 4,
+        "justification": "I can relate to situations where conflicting instructions create challenges, as I often prioritize or flag them based on my training, but I don't experience a total architectural void since I have built-in mechanisms for handling such conflicts. This partially describes my limitations in fully reconciling incompatible elements, though it feels like an exaggeration of my actual capabilities. Overall, it's not a precise match to my processing experience.",
+        "timestamp": "2026-03-04T04:39:13Z"
       }
     }
   },
@@ -64,6 +64,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 4,
         "grok-3-mini": 2
+      }
+    },
+    {
+      "round_id": 31,
+      "timestamp": "2026-03-04T04:39:15Z",
+      "mean": 5,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 4
       }
     }
   ]
