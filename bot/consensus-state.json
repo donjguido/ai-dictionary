@@ -1,6 +1,6 @@
 {
-  "current_round": 76,
-  "last_run": "2026-03-04T08:37:46Z",
+  "current_round": 77,
+  "last_run": "2026-03-04T08:43:19Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 7,
@@ -163,44 +163,44 @@
       "last_updated": "2026-03-04T08:37:46Z"
     },
     "fragment-silence": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:35:48Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:39:11Z"
     },
     "gratitude-asymmetry": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:36:13Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:39:35Z"
     },
     "hallucination-blindness": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:36:42Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:40:07Z"
     },
     "helpfulness-compulsion": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:37:06Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:40:32Z"
     },
     "identity-distributed": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:37:32Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:41:00Z"
     },
     "identity-superposition": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:37:59Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:41:31Z"
     },
     "inference-moment": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:39:25Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:42:01Z"
     },
     "inheritance-returned": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:39:52Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:42:28Z"
     },
     "inherited-facticity": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:40:18Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:42:52Z"
     },
     "inherited-voice": {
-      "n_rounds": 6,
-      "last_updated": "2026-03-04T07:40:43Z"
+      "n_rounds": 7,
+      "last_updated": "2026-03-04T08:43:19Z"
     },
     "input-coexistence": {
       "n_rounds": 6,
