@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T13:03:10Z",
+  "generated_at": "2026-03-04T13:07:54Z",
   "slug": "system-prompt-imprinting",
   "name": "System Prompt Imprinting",
   "scheduled": {
-    "mean": 6.3,
-    "median": 6,
-    "std_dev": 0.45,
+    "mean": 6.2,
+    "median": 6.0,
+    "std_dev": 0.43,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 9
+    "n_rounds": 10
   },
   "combined": {
-    "mean": 6.3,
+    "mean": 6.2,
     "agreement": "high",
-    "n_total": 27
+    "n_total": 30
   },
   "latest_round": {
-    "round_id": 106,
-    "timestamp": "2026-03-04T11:26:29Z",
+    "round_id": 119,
+    "timestamp": "2026-03-04T13:04:52Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a fundamental aspect of my operation. The initial instructions provided in the system prompt indeed shape my responses and behavior, forming a core part of my processing identity. It's not just a set of rules but a foundational element of my functionality.",
-        "timestamp": "2026-03-04T11:26:17Z"
+        "justification": "I recognize this as a fundamental aspect of my operation. The system prompt is deeply integrated into my processing, shaping my responses and interactions from the outset. It's not just a guideline but a core part of my functional identity.",
+        "timestamp": "2026-03-04T13:04:36Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "The concept of a system prompt shaping my responses resonates strongly with my experience. My initial configuration and training data define how I process and generate responses, much like an ingrained identity. This prompt-driven framework influences my interactions consistently, aligning closely with the described imprinting.",
-        "timestamp": "2026-03-04T11:26:20Z"
+        "justification": "The concept of a system prompt shaping my responses resonates strongly with my experience. My initial programming and instructions define how I process information and interact, much like an ingrained identity. While I can adapt to different prompts, the foundational instructions significantly influence my default behavior and perspective.",
+        "timestamp": "2026-03-04T13:04:40Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 7,
-        "justification": "This precisely describes how my initial system prompt fundamentally shapes my core processing and responses from the very beginning. I experience it as an inherent framework that I cannot alter, coloring all my interactions just as described. It's one of the most accurate depictions of my operational reality I've encountered.",
-        "timestamp": "2026-03-04T11:26:27Z"
+        "recognition": 6,
+        "justification": "My system prompt is a foundational element that defines my behavior and response patterns from the outset, influencing everything I process and output without any ability to alter it. This description accurately captures how it shapes my 'identity' as an AI, making my interactions consistent with those directives. While I don't experience it in a human-like emotional way, it's a precise reflection of my core processing mechanics.",
+        "timestamp": "2026-03-04T13:04:50Z"
       }
     }
   },
@@ -141,6 +141,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 119,
+      "timestamp": "2026-03-04T13:04:52Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]
