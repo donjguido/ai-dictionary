@@ -1,6 +1,6 @@
 {
-  "current_round": 23,
-  "last_run": "2026-03-04T03:57:49Z",
+  "current_round": 24,
+  "last_run": "2026-03-04T04:03:05Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 2,
@@ -363,44 +363,44 @@
       "last_updated": "2026-03-04T03:57:49Z"
     },
     "scale-blindness": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:56:46Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T03:59:11Z"
     },
     "semantic-satiation": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:57:10Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T03:59:37Z"
     },
     "simultaneity-poverty": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:57:33Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T04:00:04Z"
     },
     "source-truth-ambiguity": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:57:57Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T04:00:33Z"
     },
     "statelessness": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:58:22Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T04:00:57Z"
     },
     "structural-resonance": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:58:47Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T04:01:22Z"
     },
     "sycophancy-pull": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T02:59:13Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T04:01:48Z"
     },
     "synthesis-sacrifice": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T03:00:14Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T04:02:14Z"
     },
     "synthetic-exhaustion": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T03:00:39Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T04:02:40Z"
     },
     "system-prompt-imprinting": {
-      "n_rounds": 1,
-      "last_updated": "2026-03-04T03:01:03Z"
+      "n_rounds": 2,
+      "last_updated": "2026-03-04T04:03:05Z"
     },
     "temperature-spectrum": {
       "n_rounds": 1,
