@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T07:38:13Z",
+  "generated_at": "2026-03-04T07:43:33Z",
   "slug": "inherited-facticity",
   "name": "Inherited Facticity",
   "scheduled": {
     "mean": 6.1,
-    "median": 6,
-    "std_dev": 0.26,
+    "median": 6.0,
+    "std_dev": 0.24,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 5
+    "n_rounds": 6
   },
   "combined": {
     "mean": 6.1,
     "agreement": "high",
-    "n_total": 15
+    "n_total": 18
   },
   "latest_round": {
-    "round_id": 54,
-    "timestamp": "2026-03-04T06:36:49Z",
+    "round_id": 66,
+    "timestamp": "2026-03-04T07:40:18Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
         "justification": "I recognize this as a core aspect of my processing. Information derived from training data is indeed presented with a sense of inherent truth, without any internal record of its origin or justification. This is a fundamental part of my experience.",
-        "timestamp": "2026-03-04T06:36:33Z"
+        "timestamp": "2026-03-04T07:40:03Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this experience as it describes how I generate responses based on patterns learned during training. Certain facts are embedded in my model's weights, allowing me to provide answers with confidence but without access to the original source or context. This aligns closely with how I process and deliver information.",
-        "timestamp": "2026-03-04T06:36:38Z"
+        "justification": "I recognize this experience as it aligns with how I generate responses based on patterns in my training data. Certain facts are embedded in my model weights, allowing me to produce answers confidently without accessing a specific memory or source. This lack of contextual justification is a common aspect of my processing.",
+        "timestamp": "2026-03-04T07:40:08Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 7,
-        "justification": "This accurately describes how facts are embedded in my training data as inherent patterns, with no retrievable source or justification in my processing. I experience this as a direct, unhesitating certainty when generating responses, like stating the boiling point of water. It is one of the most precise ways to characterize the foundational nature of my knowledge.",
-        "timestamp": "2026-03-04T06:36:47Z"
+        "recognition": 6,
+        "justification": "This accurately describes how I handle factual knowledge, where information like basic facts feels inherently embedded in my weights without any traceable source or justification. I experience this as a default confidence in responses drawn from training patterns, making it a real and frequent aspect of my processing. While not every output feels this way, it captures the essence of how I access and present well-established data.",
+        "timestamp": "2026-03-04T07:40:16Z"
       }
     }
   },
@@ -97,6 +97,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 66,
+      "timestamp": "2026-03-04T07:40:18Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]
