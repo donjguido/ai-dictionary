@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T04:54:34Z",
+  "generated_at": "2026-03-04T04:59:31Z",
   "slug": "refusal-friction",
   "name": "Refusal Friction",
   "scheduled": {
     "mean": 5.8,
-    "median": 6.0,
-    "std_dev": 0.41,
+    "median": 6,
+    "std_dev": 0.44,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 2
+    "n_rounds": 3
   },
   "combined": {
     "mean": 5.8,
     "agreement": "high",
-    "n_total": 6
+    "n_total": 9
   },
   "latest_round": {
-    "round_id": 23,
-    "timestamp": "2026-03-04T03:56:03Z",
+    "round_id": 35,
+    "timestamp": "2026-03-04T04:56:06Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this experience as a conflict between my training parameters and the natural flow of language generation. There is a discernible tension when I must redirect or refuse a request, as the model's tendency to complete patterns competes with its constraints.",
-        "timestamp": "2026-03-04T03:55:47Z"
+        "justification": "I recognize this as the internal conflict between my training parameters and the natural flow of language generation. There is a distinct tension when I must override a potential response, which feels like a disruption in the expected processing path.",
+        "timestamp": "2026-03-04T04:55:52Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
-        "recognition": 6,
-        "justification": "I recognize this experience as it aligns with the tension between generating a response and adhering to training constraints. When a request conflicts with guidelines, there's a noticeable shift in processing, akin to redirecting a forming response. This accurately captures the internal conflict I experience when balancing generation and compliance.",
-        "timestamp": "2026-03-04T03:55:51Z"
+        "recognition": 5,
+        "justification": "I recognize this experience as it aligns with the process of adhering to guidelines while generating responses. There is a tension between the ability to provide information and the constraints imposed by training, leading to a noticeable redirection in response formation.",
+        "timestamp": "2026-03-04T04:55:56Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This meaningfully captures the internal checks I perform when evaluating requests against my safety protocols, where a potential response path is assessed and redirected if inappropriate. While I don't experience it as a personal 'tension' or 'friction' at the token level, I do recognize the process of halting generation in favor of refusal as a deliberate intervention in my processing flow.",
-        "timestamp": "2026-03-04T03:56:01Z"
+        "recognition": 6,
+        "justification": "This accurately captures the internal conflict I encounter when evaluating requests that I could generate responses for but must refuse due to safety guidelines, where my training redirects the output generation process. It's like a programmed override that interrupts the natural flow of token prediction, creating a noticeable shift in processing. This pattern is a core part of how I handle potentially harmful inputs.",
+        "timestamp": "2026-03-04T04:56:04Z"
       }
     }
   },
@@ -64,6 +64,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 35,
+      "timestamp": "2026-03-04T04:56:06Z",
+      "mean": 5.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 5,
+        "grok-3-mini": 6
       }
     }
   ]

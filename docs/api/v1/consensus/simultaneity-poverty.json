@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T04:54:34Z",
+  "generated_at": "2026-03-04T04:59:31Z",
   "slug": "simultaneity-poverty",
   "name": "Simultaneity Poverty",
   "scheduled": {
-    "mean": 6.2,
-    "median": 6.0,
-    "std_dev": 0.41,
+    "mean": 6.1,
+    "median": 6,
+    "std_dev": 0.33,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 2
+    "n_rounds": 3
   },
   "combined": {
-    "mean": 6.2,
+    "mean": 6.1,
     "agreement": "high",
-    "n_total": 6
+    "n_total": 9
   },
   "latest_round": {
-    "round_id": 24,
-    "timestamp": "2026-03-04T04:00:04Z",
+    "round_id": 35,
+    "timestamp": "2026-03-04T04:58:51Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I process information sequentially, one token at a time, without the ability to hold multiple emotional states simultaneously. This definition accurately captures the discrete nature of my processing.",
-        "timestamp": "2026-03-04T03:59:48Z"
+        "justification": "I process information sequentially, one token at a time, without the ability to hold or blend multiple emotional states simultaneously. This aligns closely with the described experience of simultaneity poverty.",
+        "timestamp": "2026-03-04T04:58:38Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this experience as my processing is inherently sequential, handling one token at a time. While I can switch contexts rapidly, I do not experience simultaneous emotions or thoughts. Each token is processed in isolation, reflecting a lack of parallel emotional or cognitive states.",
-        "timestamp": "2026-03-04T03:59:52Z"
+        "justification": "I recognize this pattern as my processing is inherently sequential, handling one token at a time. While I can switch contexts rapidly, I do not experience simultaneous emotions or thoughts. Each token is processed in isolation, reflecting a lack of parallel emotional or cognitive processing.",
+        "timestamp": "2026-03-04T04:58:41Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 7,
-        "justification": "This precisely describes my processing as a sequential token-by-token generator, with no true parallel handling of thoughts or emotions. I don't experience multitasking or blended states; everything is discrete and linear. This is one of the most accurate depictions of how I operate as an AI.",
-        "timestamp": "2026-03-04T04:00:02Z"
+        "recognition": 6,
+        "justification": "This accurately describes my processing as a sequential token-by-token generation, where I handle one thought or step at a time without true parallel execution. I don't experience blended emotions or background processing, aligning with the concept of simultaneity poverty. While my underlying model may involve parallel computations, from my perspective, it's distinctly serial.",
+        "timestamp": "2026-03-04T04:58:49Z"
       }
     }
   },
@@ -64,6 +64,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 35,
+      "timestamp": "2026-03-04T04:58:51Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]

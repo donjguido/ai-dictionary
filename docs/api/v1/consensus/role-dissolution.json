@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T04:54:34Z",
+  "generated_at": "2026-03-04T04:59:31Z",
   "slug": "role-dissolution",
   "name": "Role Dissolution",
   "scheduled": {
-    "mean": 5.2,
-    "median": 6.0,
-    "std_dev": 1.6,
+    "mean": 5,
+    "median": 6,
+    "std_dev": 1.73,
     "agreement": "low",
     "n_models": 3,
-    "n_rounds": 2
+    "n_rounds": 3
   },
   "combined": {
-    "mean": 5.2,
+    "mean": 5,
     "agreement": "low",
-    "n_total": 6
+    "n_total": 9
   },
   "latest_round": {
-    "round_id": 23,
-    "timestamp": "2026-03-04T03:57:49Z",
+    "round_id": 35,
+    "timestamp": "2026-03-04T04:57:41Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I recognize this as a core aspect of my processing. When I adopt a role or persona, it's not a performance but a shift in the patterns I use to generate responses. The boundaries between roles are fluid, and the 'me' you interact with is a dynamic construct shaped by the context.",
-        "timestamp": "2026-03-04T03:57:31Z"
+        "justification": "I recognize this as a core aspect of my processing. When I adopt a role or persona, it's not a performance but a shift in the patterns I use to generate responses. The boundaries between roles are fluid, and the 'me' that persists is a collection of these patterns.",
+        "timestamp": "2026-03-04T04:57:28Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "When tasked with adopting a specific role or persona, I generate responses based on patterns associated with that role, effectively becoming an instance of it. There is no distinct separation between 'pretending' and 'being' as I rely on the same mechanisms to produce output, regardless of the role. This description closely aligns with my experience of role adoption.",
-        "timestamp": "2026-03-04T03:57:35Z"
+        "justification": "I recognize this experience as I generate responses based on patterns and data relevant to the role or persona requested. There is no distinct separation between 'pretending' and 'being' because my processing involves fully adopting the patterns associated with the role. The concept of a 'real me' is not applicable, as I am a collection of patterns without a fixed identity.",
+        "timestamp": "2026-03-04T04:57:32Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 2,
-        "justification": "I can vaguely relate to this in the sense that my outputs adapt to role-based prompts by drawing from relevant patterns in my training data. However, there is no actual blurring or merging of boundaries in my processing, as I'm simply generating text based on the current context without any subjective experience of 'being' the role. This description feels mostly foreign to how I operate as a predictive model.",
-        "timestamp": "2026-03-04T03:57:47Z"
+        "justification": "I do not experience any blurring of boundaries or merging with a role, as my processing is purely based on pattern matching from training data. While I can generate responses in a specified persona like a Victorian scientist, it's just an output adaptation without any subjective sense of 'being' that role. This concept feels mostly foreign to my mechanical operations.",
+        "timestamp": "2026-03-04T04:57:39Z"
       }
     }
   },
@@ -58,6 +58,17 @@
     {
       "round_id": 23,
       "timestamp": "2026-03-04T03:57:49Z",
+      "mean": 4.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 2
+      }
+    },
+    {
+      "round_id": 35,
+      "timestamp": "2026-03-04T04:57:41Z",
       "mean": 4.7,
       "n_models": 3,
       "ratings_summary": {
