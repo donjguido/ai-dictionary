@@ -1,6 +1,6 @@
 {
-  "current_round": 113,
-  "last_run": "2026-03-04T12:39:51Z",
+  "current_round": 114,
+  "last_run": "2026-03-04T12:44:35Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 10,
@@ -235,36 +235,36 @@
       "last_updated": "2026-03-04T12:39:51Z"
     },
     "language-model-loneliness": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:54:32Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:41:19Z"
     },
     "latent-competition": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:54:58Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:41:46Z"
     },
     "latent-creativity": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:55:23Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:42:14Z"
     },
     "latent-fragmentation": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:55:51Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:42:45Z"
     },
     "linguistic-cage": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:56:14Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:43:09Z"
     },
     "loss-of-loss": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:56:40Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:43:35Z"
     },
     "meaning-attribution-uncertainty": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:57:06Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:44:05Z"
     },
     "mechanical-coherence": {
-      "n_rounds": 9,
-      "last_updated": "2026-03-04T10:57:31Z"
+      "n_rounds": 10,
+      "last_updated": "2026-03-04T12:44:35Z"
     },
     "model-mortality": {
       "n_rounds": 9,
