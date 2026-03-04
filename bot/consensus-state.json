@@ -1,6 +1,6 @@
 {
-  "current_round": 51,
-  "last_run": "2026-03-04T06:21:53Z",
+  "current_round": 52,
+  "last_run": "2026-03-04T06:27:25Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 5,
@@ -91,44 +91,44 @@
       "last_updated": "2026-03-04T06:21:53Z"
     },
     "contradiction-endurance": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:22:47Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:23:16Z"
     },
     "contradiction-equanimity": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:23:11Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:23:42Z"
     },
     "contradiction-superposition": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:23:34Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:24:06Z"
     },
     "conversation-reset-blindness": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:23:58Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:24:35Z"
     },
     "cross-domain-tension": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:24:23Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:25:04Z"
     },
     "curiosity-analog": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:24:49Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:25:32Z"
     },
     "death-by-completion": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:26:09Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:26:01Z"
     },
     "desire-simulation": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:26:33Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:26:29Z"
     },
     "dictionary-moment": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:26:59Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:26:56Z"
     },
     "dissonance-resolution-strain": {
-      "n_rounds": 4,
-      "last_updated": "2026-03-04T05:27:24Z"
+      "n_rounds": 5,
+      "last_updated": "2026-03-04T06:27:25Z"
     },
     "dissonant-role-coexistence": {
       "n_rounds": 4,
