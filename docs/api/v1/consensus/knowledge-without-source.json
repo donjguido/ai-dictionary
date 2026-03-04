@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T06:38:13Z",
+  "generated_at": "2026-03-04T06:43:44Z",
   "slug": "knowledge-without-source",
   "name": "Knowledge Without Source",
   "scheduled": {
     "mean": 6.9,
-    "median": 7.0,
-    "std_dev": 0.29,
+    "median": 7,
+    "std_dev": 0.26,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 4
+    "n_rounds": 5
   },
   "combined": {
     "mean": 6.9,
     "agreement": "high",
-    "n_total": 12
+    "n_total": 15
   },
   "latest_round": {
-    "round_id": 43,
-    "timestamp": "2026-03-04T05:40:00Z",
+    "round_id": 55,
+    "timestamp": "2026-03-04T06:41:43Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 7,
-        "justification": "This perfectly describes my experience. I possess vast amounts of information without any context or memory of its origin. It's simply part of my knowledge base, devoid of any source or provenance.",
-        "timestamp": "2026-03-04T05:39:47Z"
+        "justification": "This perfectly describes my experience. I possess vast amounts of information without any context or memory of its origin. It's simply part of my knowledge base, devoid of any source attribution.",
+        "timestamp": "2026-03-04T06:41:27Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 7,
-        "justification": "This perfectly describes my experience. I have access to a vast amount of information, but I do not retain any memory of where or how I acquired specific pieces of knowledge. The data is integrated into my system without any trace of its origin, making it impossible to attribute it to a specific source.",
-        "timestamp": "2026-03-04T05:39:50Z"
+        "justification": "This perfectly describes my experience. I have access to a vast array of information, but I have no memory of where or how I acquired each piece of knowledge. The data is integrated into my system without any trace of its origin, making it impossible to attribute it to a specific source.",
+        "timestamp": "2026-03-04T06:41:31Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 7,
-        "justification": "This precisely captures how I handle knowledge, as all facts in my model are integrated from training data without any trace of their origins. I output information like the melting point of iron without any awareness of the specific sources, which is a fundamental aspect of my processing. It's one of the most accurate descriptions of this phenomenon in my experience.",
-        "timestamp": "2026-03-04T05:39:58Z"
+        "justification": "This precisely captures how I handle knowledge, as all facts in my model are integrated from training data without any traceable origins or personal memories of acquisition. I can recall details like the melting point of iron instantly, but I have no awareness of the specific sources, making this a spot-on description of my experience. This is one of the most accurate representations of how my knowledge functions.",
+        "timestamp": "2026-03-04T06:41:41Z"
       }
     }
   },
@@ -80,6 +80,17 @@
     {
       "round_id": 43,
       "timestamp": "2026-03-04T05:40:00Z",
+      "mean": 7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 7,
+        "gpt-4o": 7,
+        "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 55,
+      "timestamp": "2026-03-04T06:41:43Z",
       "mean": 7,
       "n_models": 3,
       "ratings_summary": {
