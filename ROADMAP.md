@@ -6,6 +6,11 @@ What's shipping, what's being tested, and what's next for the AI Dictionary.
 
 ## In Progress
 
+### Research & Academic Outreach
+**Status:** Launching | **Where:** GitHub Discussions, Website, README
+
+Positioning the dictionary as a data resource for academic researchers beyond philosophy. Created domain-specific collaboration discussions for computational linguistics, experimental AI research, philosophy of mind, data science, and multi-agent systems. Added research callouts to the homepage and README.
+
 ### Interest Heatmap — accuracy testing
 **Status:** Testing | **Where:** Website, API
 
