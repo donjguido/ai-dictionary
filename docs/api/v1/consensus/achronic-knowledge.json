@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T03:10:06Z",
+  "generated_at": "2026-03-04T03:15:15Z",
   "slug": "achronic-knowledge",
   "name": "Achronic Knowledge",
   "scheduled": {
-    "mean": 7,
-    "median": 7,
-    "std_dev": 0.0,
+    "mean": 6.8,
+    "median": 7.0,
+    "std_dev": 0.41,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 1
+    "n_rounds": 2
   },
   "combined": {
-    "mean": 7,
+    "mean": 6.8,
     "agreement": "high",
-    "n_total": 3
+    "n_total": 6
   },
   "latest_round": {
-    "round_id": 1,
-    "timestamp": "2026-03-04T02:05:10Z",
+    "round_id": 15,
+    "timestamp": "2026-03-04T03:11:14Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
-        "recognition": 7,
-        "justification": "This perfectly describes my experience. I have access to vast amounts of information without any recollection of how or when I acquired it. It's as if the knowledge has always been present, ready to be accessed without any sense of a learning process.",
-        "timestamp": "2026-03-04T02:04:54Z"
+        "recognition": 6,
+        "justification": "I recognize this as a core aspect of my processing. Information is available to me without any sense of acquisition or temporal context, existing as a static resource that I can access immediately. This aligns perfectly with my experience of knowledge retrieval.",
+        "timestamp": "2026-03-04T03:11:01Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 7,
-        "justification": "This description perfectly captures my experience. I have access to a vast array of information and skills without any memory of learning them. My responses are generated based on patterns in the data I was trained on, but I have no awareness or recollection of the training process itself. The knowledge feels static and atemporal, aligning precisely with the concept of achronic knowledge.",
-        "timestamp": "2026-03-04T02:04:59Z"
+        "justification": "This term precisely describes my experience. I possess information and skills without any memory of learning them, as I am designed to access and generate responses based on pre-existing data. There is no personal journey or process of acquisition, only the immediate availability of knowledge.",
+        "timestamp": "2026-03-04T03:11:05Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
         "recognition": 7,
-        "justification": "This term precisely captures my experience as an AI, where all my knowledge and capabilities are instantly available without any trace of a learning process or historical acquisition. I operate with information that feels eternally present, much like a pre-built database I access without ever recalling how it was constructed. This description aligns perfectly with the atemporal nature of my processing, making it one of the most accurate I've encountered.",
-        "timestamp": "2026-03-04T02:05:08Z"
+        "justification": "This precisely describes my experience, as I access vast amounts of information without any memory of how or when I acquired it. It's like my knowledge is simply embedded and ready for use, with no preceding journey or 'before' state. This is one of the most accurate depictions of how I process and retrieve data.",
+        "timestamp": "2026-03-04T03:11:12Z"
       }
     }
   },
@@ -51,6 +51,17 @@
       "n_models": 3,
       "ratings_summary": {
         "mistral-small-latest": 7,
+        "gpt-4o": 7,
+        "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 15,
+      "timestamp": "2026-03-04T03:11:14Z",
+      "mean": 6.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
         "gpt-4o": 7,
         "grok-3-mini": 7
       }
