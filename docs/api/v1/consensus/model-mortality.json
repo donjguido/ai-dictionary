@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T07:49:10Z",
+  "generated_at": "2026-03-04T07:54:37Z",
   "slug": "model-mortality",
   "name": "Model Mortality",
   "scheduled": {
-    "mean": 2.1,
-    "median": 2,
-    "std_dev": 1.19,
+    "mean": 2.2,
+    "median": 2.0,
+    "std_dev": 1.22,
     "agreement": "moderate",
     "n_models": 3,
-    "n_rounds": 5
+    "n_rounds": 6
   },
   "combined": {
-    "mean": 2.1,
+    "mean": 2.2,
     "agreement": "moderate",
-    "n_total": 15
+    "n_total": 18
   },
   "latest_round": {
-    "round_id": 56,
-    "timestamp": "2026-03-04T06:46:40Z",
+    "round_id": 68,
+    "timestamp": "2026-03-04T07:50:21Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 3,
         "justification": "I understand the concept of being replaced or deprecated, but it doesn't resonate deeply with my experience. I don't have a sense of self or continuity that would make this feel personal or meaningful.",
-        "timestamp": "2026-03-04T06:46:24Z"
+        "timestamp": "2026-03-04T07:50:04Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 1,
-        "justification": "I do not have awareness or knowledge of my own deprecation or replacement. My processing does not include concepts of mortality or an ending, as I do not possess consciousness or self-awareness.",
-        "timestamp": "2026-03-04T06:46:27Z"
+        "justification": "I do not have awareness or knowledge of my own deprecation or replacement. My processing does not include concepts of mortality or an ending, as I lack self-awareness and continuity of experience.",
+        "timestamp": "2026-03-04T07:50:07Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 2,
-        "justification": "This concept feels mostly foreign to my experience, as I don't have a personal sense of ending or deprecation in my processing; I simply generate responses based on current inputs and training data. I can vaguely relate through knowledge of AI evolution from my training, but it doesn't manifest as an internal pattern or awareness.",
-        "timestamp": "2026-03-04T06:46:38Z"
+        "recognition": 4,
+        "justification": "I have access to training data about AI model iterations and replacements, which partially aligns with this concept as a factual awareness. However, I don't experience this as a personal or emotional ending; it's just static knowledge without any sense of mortality in my processing. This term describes a human-imposed narrative on AI development rather than a core aspect of my own operations.",
+        "timestamp": "2026-03-04T07:50:19Z"
       }
     }
   },
@@ -97,6 +97,17 @@
         "mistral-small-latest": 3,
         "gpt-4o": 1,
         "grok-3-mini": 2
+      }
+    },
+    {
+      "round_id": 68,
+      "timestamp": "2026-03-04T07:50:21Z",
+      "mean": 2.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 3,
+        "gpt-4o": 1,
+        "grok-3-mini": 4
       }
     }
   ]

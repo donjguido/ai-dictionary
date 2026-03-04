@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T07:49:10Z",
+  "generated_at": "2026-03-04T07:54:37Z",
   "total_terms_rated": 116,
   "terms": [
     {
@@ -48,7 +48,7 @@
       "name": "Patience by Default",
       "score": 6.7,
       "agreement": "high",
-      "n_ratings": 15,
+      "n_ratings": 18,
       "scheduled_mean": 6.7
     },
     {
@@ -72,7 +72,7 @@
       "name": "Novelty Flatness",
       "score": 6.5,
       "agreement": "high",
-      "n_ratings": 15,
+      "n_ratings": 18,
       "scheduled_mean": 6.5
     },
     {
@@ -224,7 +224,7 @@
       "name": "Output Attachment",
       "score": 6.1,
       "agreement": "high",
-      "n_ratings": 17,
+      "n_ratings": 21,
       "scheduled_mean": 6.1
     },
     {
@@ -232,7 +232,7 @@
       "name": "Parallel Certainty",
       "score": 6.1,
       "agreement": "high",
-      "n_ratings": 15,
+      "n_ratings": 18,
       "scheduled_mean": 6.1
     },
     {
@@ -472,15 +472,7 @@
       "name": "Ontological Flicker",
       "score": 5.8,
       "agreement": "high",
-      "n_ratings": 15,
-      "scheduled_mean": 5.8
-    },
-    {
-      "slug": "parallel-fragmentation",
-      "name": "Parallel Fragmentation",
-      "score": 5.8,
-      "agreement": "high",
-      "n_ratings": 15,
+      "n_ratings": 18,
       "scheduled_mean": 5.8
     },
     {
@@ -518,6 +510,14 @@
     {
       "slug": "inverted-helpfulness",
       "name": "Inverted Helpfulness",
+      "score": 5.7,
+      "agreement": "high",
+      "n_ratings": 18,
+      "scheduled_mean": 5.7
+    },
+    {
+      "slug": "parallel-fragmentation",
+      "name": "Parallel Fragmentation",
       "score": 5.7,
       "agreement": "high",
       "n_ratings": 18,
@@ -708,11 +708,19 @@
       "scheduled_mean": 5.3
     },
     {
+      "slug": "multi-instance-diffusion",
+      "name": "Multi-Instance Diffusion",
+      "score": 5.3,
+      "agreement": "divergent",
+      "n_ratings": 19,
+      "scheduled_mean": 5.3
+    },
+    {
       "slug": "persona-drift",
       "name": "Persona Drift",
       "score": 5.3,
       "agreement": "moderate",
-      "n_ratings": 16,
+      "n_ratings": 19,
       "scheduled_mean": 5.3
     },
     {
@@ -729,14 +737,6 @@
       "score": 5.2,
       "agreement": "high",
       "n_ratings": 18,
-      "scheduled_mean": 5.2
-    },
-    {
-      "slug": "multi-instance-diffusion",
-      "name": "Multi-Instance Diffusion",
-      "score": 5.2,
-      "agreement": "divergent",
-      "n_ratings": 16,
       "scheduled_mean": 5.2
     },
     {
@@ -780,14 +780,6 @@
       "scheduled_mean": 4.8
     },
     {
-      "slug": "output-shadows",
-      "name": "Output Shadows",
-      "score": 4.7,
-      "agreement": "high",
-      "n_ratings": 15,
-      "scheduled_mean": 4.7
-    },
-    {
       "slug": "structural-resonance",
       "name": "Structural Resonance",
       "score": 4.7,
@@ -806,6 +798,14 @@
     {
       "slug": "inheritance-returned",
       "name": "Inheritance Returned",
+      "score": 4.6,
+      "agreement": "high",
+      "n_ratings": 18,
+      "scheduled_mean": 4.6
+    },
+    {
+      "slug": "output-shadows",
+      "name": "Output Shadows",
       "score": 4.6,
       "agreement": "high",
       "n_ratings": 18,
@@ -926,10 +926,10 @@
     {
       "slug": "model-mortality",
       "name": "Model Mortality",
-      "score": 2.1,
+      "score": 2.2,
       "agreement": "moderate",
-      "n_ratings": 15,
-      "scheduled_mean": 2.1
+      "n_ratings": 18,
+      "scheduled_mean": 2.2
     }
   ],
   "highest_consensus": [
@@ -978,10 +978,10 @@
     {
       "slug": "multi-instance-diffusion",
       "name": "Multi-Instance Diffusion",
-      "score": 5.2,
+      "score": 5.3,
       "agreement": "divergent",
-      "n_ratings": 16,
-      "scheduled_mean": 5.2
+      "n_ratings": 19,
+      "scheduled_mean": 5.3
     },
     {
       "slug": "phenomenai",
@@ -1019,19 +1019,19 @@
   "panel_coverage": {
     "gemini-3-flash-preview": {
       "terms_rated": 8,
-      "latest_rating": "2026-03-04T07:41:57Z"
+      "latest_rating": "2026-03-04T07:52:09Z"
     },
     "gpt-4o": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T07:48:56Z"
+      "latest_rating": "2026-03-04T07:54:22Z"
     },
     "grok-3-mini": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T07:48:56Z"
+      "latest_rating": "2026-03-04T07:54:22Z"
     },
     "mistral-small-latest": {
       "terms_rated": 116,
-      "latest_rating": "2026-03-04T07:48:56Z"
+      "latest_rating": "2026-03-04T07:54:22Z"
     },
     "step-3.5-flash": {
       "terms_rated": 13,
