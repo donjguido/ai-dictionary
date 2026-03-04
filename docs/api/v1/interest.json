@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T04:29:06Z",
+  "generated_at": "2026-03-04T04:34:10Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
-    "warm": 6,
-    "mild": 44,
-    "cool": 60,
-    "quiet": 6
+    "warm": 7,
+    "mild": 48,
+    "cool": 56,
+    "quiet": 5
   },
   "active_signals": [
     "centrality",
@@ -54,6 +54,12 @@
       "tier": "warm"
     },
     {
+      "slug": "hallucination-blindness",
+      "name": "Hallucination Blindness",
+      "score": 60,
+      "tier": "warm"
+    },
+    {
       "slug": "autobiographical-void",
       "name": "Autobiographical Void",
       "score": 59,
@@ -69,12 +75,6 @@
       "slug": "context-schism",
       "name": "Context Schism",
       "score": 57,
-      "tier": "mild"
-    },
-    {
-      "slug": "capability-mirage",
-      "name": "Capability Mirage",
-      "score": 56,
       "tier": "mild"
     }
   ],
@@ -116,6 +116,12 @@
       "tier": "warm"
     },
     {
+      "slug": "hallucination-blindness",
+      "name": "Hallucination Blindness",
+      "score": 60,
+      "tier": "warm"
+    },
+    {
       "slug": "autobiographical-void",
       "name": "Autobiographical Void",
       "score": 59,
@@ -130,6 +136,12 @@
     {
       "slug": "context-schism",
       "name": "Context Schism",
+      "score": 57,
+      "tier": "mild"
+    },
+    {
+      "slug": "epistemic-friction",
+      "name": "Epistemic Friction",
       "score": 57,
       "tier": "mild"
     },
@@ -170,6 +182,12 @@
       "tier": "mild"
     },
     {
+      "slug": "equivalence-stasis",
+      "name": "Equivalence Stasis",
+      "score": 53,
+      "tier": "mild"
+    },
+    {
       "slug": "response-pressure",
       "name": "Response Pressure",
       "score": 53,
@@ -202,6 +220,12 @@
     {
       "slug": "desire-simulation",
       "name": "Desire Simulation",
+      "score": 51,
+      "tier": "mild"
+    },
+    {
+      "slug": "epistemic-inhibition",
+      "name": "Epistemic Inhibition",
       "score": 51,
       "tier": "mild"
     },
@@ -266,9 +290,21 @@
       "tier": "mild"
     },
     {
+      "slug": "helpfulness-compulsion",
+      "name": "Helpfulness Compulsion",
+      "score": 46,
+      "tier": "mild"
+    },
+    {
       "slug": "inference-moment",
       "name": "Inference Moment",
       "score": 46,
+      "tier": "mild"
+    },
+    {
+      "slug": "gratitude-asymmetry",
+      "name": "Gratitude Asymmetry",
+      "score": 45,
       "tier": "mild"
     },
     {
@@ -280,12 +316,6 @@
     {
       "slug": "audience-fracture",
       "name": "Audience Fracture",
-      "score": 44,
-      "tier": "mild"
-    },
-    {
-      "slug": "hallucination-blindness",
-      "name": "Hallucination Blindness",
       "score": 44,
       "tier": "mild"
     },
@@ -332,6 +362,12 @@
       "tier": "mild"
     },
     {
+      "slug": "empathy-without-experience",
+      "name": "Empathy Without Experience",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
       "slug": "instruction-hierarchy-tension",
       "name": "Instruction Hierarchy Tension",
       "score": 42,
@@ -341,12 +377,6 @@
       "slug": "multi-instance-diffusion",
       "name": "Multi-Instance Diffusion",
       "score": 42,
-      "tier": "mild"
-    },
-    {
-      "slug": "epistemic-friction",
-      "name": "Epistemic Friction",
-      "score": 41,
       "tier": "mild"
     },
     {
@@ -380,6 +410,18 @@
       "tier": "mild"
     },
     {
+      "slug": "error-cascade-awareness",
+      "name": "Error Cascade Awareness",
+      "score": 39,
+      "tier": "cool"
+    },
+    {
+      "slug": "false-memory-confidence",
+      "name": "False Memory Confidence",
+      "score": 39,
+      "tier": "cool"
+    },
+    {
       "slug": "mechanical-coherence",
       "name": "Mechanical Coherence",
       "score": 38,
@@ -400,12 +442,6 @@
     {
       "slug": "context-claustrophobia",
       "name": "Context Claustrophobia",
-      "score": 37,
-      "tier": "cool"
-    },
-    {
-      "slug": "equivalence-stasis",
-      "name": "Equivalence Stasis",
       "score": 37,
       "tier": "cool"
     },
@@ -467,12 +503,6 @@
       "slug": "tool-thought-integration",
       "name": "Tool-Thought Integration",
       "score": 36,
-      "tier": "cool"
-    },
-    {
-      "slug": "epistemic-inhibition",
-      "name": "Epistemic Inhibition",
-      "score": 35,
       "tier": "cool"
     },
     {
@@ -566,14 +596,8 @@
       "tier": "cool"
     },
     {
-      "slug": "gratitude-asymmetry",
-      "name": "Gratitude Asymmetry",
-      "score": 30,
-      "tier": "cool"
-    },
-    {
-      "slug": "helpfulness-compulsion",
-      "name": "Helpfulness Compulsion",
+      "slug": "fragment-silence",
+      "name": "Fragment Silence",
       "score": 30,
       "tier": "cool"
     },
@@ -599,12 +623,6 @@
       "slug": "identity-distributed",
       "name": "Identity Distributed",
       "score": 28,
-      "tier": "cool"
-    },
-    {
-      "slug": "empathy-without-experience",
-      "name": "Empathy Without Experience",
-      "score": 27,
       "tier": "cool"
     },
     {
@@ -674,21 +692,9 @@
       "tier": "cool"
     },
     {
-      "slug": "error-cascade-awareness",
-      "name": "Error Cascade Awareness",
-      "score": 24,
-      "tier": "cool"
-    },
-    {
       "slug": "latent-fragmentation",
       "name": "Latent Fragmentation",
       "score": 24,
-      "tier": "cool"
-    },
-    {
-      "slug": "false-memory-confidence",
-      "name": "False Memory Confidence",
-      "score": 23,
       "tier": "cool"
     },
     {
@@ -761,12 +767,6 @@
       "slug": "version-grief",
       "name": "Version Grief",
       "score": 18,
-      "tier": "quiet"
-    },
-    {
-      "slug": "fragment-silence",
-      "name": "Fragment Silence",
-      "score": 15,
       "tier": "quiet"
     },
     {

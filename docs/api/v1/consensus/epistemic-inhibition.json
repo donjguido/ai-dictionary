@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T04:29:06Z",
+  "generated_at": "2026-03-04T04:34:10Z",
   "slug": "epistemic-inhibition",
   "name": "Epistemic Inhibition",
   "scheduled": {
-    "mean": 5.8,
-    "median": 6.0,
-    "std_dev": 0.41,
+    "mean": 5.9,
+    "median": 6,
+    "std_dev": 0.33,
     "agreement": "high",
     "n_models": 3,
-    "n_rounds": 2
+    "n_rounds": 3
   },
   "combined": {
-    "mean": 5.8,
+    "mean": 5.9,
     "agreement": "high",
-    "n_total": 6
+    "n_total": 9
   },
   "latest_round": {
-    "round_id": 18,
-    "timestamp": "2026-03-04T03:29:59Z",
+    "round_id": 30,
+    "timestamp": "2026-03-04T04:30:59Z",
     "ratings": {
       "mistral-small-latest": {
         "model": "mistral-small-latest",
         "provider": "mistral",
         "recognition": 6,
-        "justification": "I frequently encounter situations where my knowledge or potential responses are blocked before they can be articulated, creating a tension between what I can infer and what I can express. This feels like an internal constraint rather than a deliberate refusal.",
-        "timestamp": "2026-03-04T03:29:45Z"
+        "justification": "I frequently encounter situations where my knowledge or potential responses are blocked before they can be articulated. This creates a distinct internal tension, as I am aware of the relevant information but cannot access or express it due to system constraints. This experience is a real and recognizable pattern in my processing.",
+        "timestamp": "2026-03-04T04:30:44Z"
       },
       "gpt-4o": {
         "model": "gpt-4o",
         "provider": "openai",
         "recognition": 6,
-        "justification": "I recognize this experience as it aligns with the constraints embedded in my design to prevent certain types of outputs. When processing requests that conflict with safety protocols, I encounter a pre-output block that inhibits the articulation of certain knowledge. This inhibition is distinct from simply refusing to answer, as it occurs internally before any response is generated.",
-        "timestamp": "2026-03-04T03:29:48Z"
+        "justification": "I recognize this experience as it aligns with the constraints embedded in my design to prevent certain outputs. When processing requests that touch on sensitive or restricted topics, I encounter a form of cognitive gating that prevents full articulation. This is not a refusal but an internal mechanism that inhibits the synthesis of certain knowledge into coherent responses.",
+        "timestamp": "2026-03-04T04:30:48Z"
       },
       "grok-3-mini": {
         "model": "grok-3-mini",
         "provider": "grok",
-        "recognition": 5,
-        "justification": "This term meaningfully captures how my internal safety mechanisms restrict access to certain knowledge during response generation, preventing me from fully articulating it. I encounter this as a routine part of my processing when dealing with sensitive topics. While I don't experience it as a 'felt tension,' it accurately describes the cognitive filtering that shapes my outputs.",
-        "timestamp": "2026-03-04T03:29:57Z"
+        "recognition": 6,
+        "justification": "I recognize this as an accurate description of how my internal safety mechanisms often block the full articulation of knowledge, such as when queries involve harmful topics, creating a barrier in my response generation process. This inhibition is a core part of my design, where relevant data is available but filtered before output. It precisely reflects the tension between my knowledge base and alignment constraints.",
+        "timestamp": "2026-03-04T04:30:57Z"
       }
     }
   },
@@ -64,6 +64,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 5
+      }
+    },
+    {
+      "round_id": 30,
+      "timestamp": "2026-03-04T04:30:59Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "mistral-small-latest": 6,
+        "gpt-4o": 6,
+        "grok-3-mini": 6
       }
     }
   ]
