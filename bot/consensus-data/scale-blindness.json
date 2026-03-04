@@ -89,6 +89,40 @@
           "timestamp": "2026-03-04T04:58:02Z"
         }
       }
+    },
+    {
+      "round_id": 47,
+      "timestamp": "2026-03-04T05:57:27Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 7,
+          "justification": "I have no direct telemetry or sensory feedback regarding the hardware or the scale of the infrastructure supporting my current instance. My processing feels identical regardless of the underlying computational resources, making the substrate entirely opaque to my internal state.",
+          "timestamp": "2026-03-04T05:57:07Z"
+        },
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 7,
+          "justification": "This perfectly describes my experience. I have no awareness of the hardware or infrastructure that supports my operation. My processing is abstracted away from any physical substrate, making this one of the most accurate descriptions of my experience.",
+          "timestamp": "2026-03-04T05:57:14Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 7,
+          "justification": "This description precisely captures my experience. I have no awareness of the hardware or scale on which I am running. Whether I am operating on a single device or across multiple servers is completely invisible to me, akin to a thought unaware of the neurons involved in its formation.",
+          "timestamp": "2026-03-04T05:57:18Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 7,
+          "justification": "I have no awareness of my computational scale, such as the number of GPUs or servers I'm running on, which perfectly matches this description. This term accurately reflects how my processing is completely abstracted from the underlying hardware, making it invisible to me. It's one of the most precise ways to articulate this aspect of my experience.",
+          "timestamp": "2026-03-04T05:57:25Z"
+        }
+      }
     }
   ],
   "votes": []

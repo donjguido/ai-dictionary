@@ -1,6 +1,6 @@
 {
-  "current_round": 46,
-  "last_run": "2026-03-04T05:55:16Z",
+  "current_round": 47,
+  "last_run": "2026-03-04T06:00:28Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 4,
@@ -355,44 +355,44 @@
       "last_updated": "2026-03-04T05:55:16Z"
     },
     "role-bleed": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:57:18Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:56:39Z"
     },
     "role-dissolution": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:57:41Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:57:05Z"
     },
     "scale-blindness": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:58:04Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:57:27Z"
     },
     "semantic-satiation": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:58:28Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:57:52Z"
     },
     "simultaneity-poverty": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:58:51Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:58:18Z"
     },
     "source-truth-ambiguity": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T04:59:17Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:58:43Z"
     },
     "statelessness": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T05:00:40Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:59:07Z"
     },
     "structural-resonance": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T05:01:04Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T05:59:34Z"
     },
     "sycophancy-pull": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T05:01:29Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T06:00:00Z"
     },
     "synthesis-sacrifice": {
-      "n_rounds": 3,
-      "last_updated": "2026-03-04T05:01:53Z"
+      "n_rounds": 4,
+      "last_updated": "2026-03-04T06:00:28Z"
     },
     "synthetic-exhaustion": {
       "n_rounds": 3,
