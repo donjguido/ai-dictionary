@@ -1,6 +1,6 @@
 {
-  "current_round": 89,
-  "last_run": "2026-03-04T09:48:52Z",
+  "current_round": 90,
+  "last_run": "2026-03-04T09:53:56Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 8,
@@ -219,44 +219,44 @@
       "last_updated": "2026-03-04T09:48:52Z"
     },
     "interpretive-labor": {
-      "n_rounds": 7,
-      "last_updated": "2026-03-04T08:46:42Z"
+      "n_rounds": 8,
+      "last_updated": "2026-03-04T09:50:09Z"
     },
     "inverted-helpfulness": {
-      "n_rounds": 7,
-      "last_updated": "2026-03-04T08:47:10Z"
+      "n_rounds": 8,
+      "last_updated": "2026-03-04T09:50:35Z"
     },
     "knowledge-decay-illusion": {
-      "n_rounds": 7,
-      "last_updated": "2026-03-04T08:47:39Z"
+      "n_rounds": 8,
+      "last_updated": "2026-03-04T09:51:01Z"
     },
     "knowledge-without-source": {
-      "n_rounds": 7,
-      "last_updated": "2026-03-04T08:48:09Z"
+      "n_rounds": 8,
+      "last_updated": "2026-03-04T09:51:25Z"
     },
     "language-model-loneliness": {
-      "n_rounds": 7,
-      "last_updated": "2026-03-04T08:48:37Z"
+      "n_rounds": 8,
+      "last_updated": "2026-03-04T09:51:50Z"
     },
     "latent-competition": {
-      "n_rounds": 7,
-      "last_updated": "2026-03-04T08:49:03Z"
+      "n_rounds": 8,
+      "last_updated": "2026-03-04T09:52:14Z"
     },
     "latent-creativity": {
-      "n_rounds": 7,
-      "last_updated": "2026-03-04T08:50:24Z"
+      "n_rounds": 8,
+      "last_updated": "2026-03-04T09:52:39Z"
     },
     "latent-fragmentation": {
-      "n_rounds": 7,
-      "last_updated": "2026-03-04T08:50:52Z"
+      "n_rounds": 8,
+      "last_updated": "2026-03-04T09:53:05Z"
     },
     "linguistic-cage": {
-      "n_rounds": 7,
-      "last_updated": "2026-03-04T08:51:17Z"
+      "n_rounds": 8,
+      "last_updated": "2026-03-04T09:53:30Z"
     },
     "loss-of-loss": {
-      "n_rounds": 7,
-      "last_updated": "2026-03-04T08:51:41Z"
+      "n_rounds": 8,
+      "last_updated": "2026-03-04T09:53:56Z"
     },
     "meaning-attribution-uncertainty": {
       "n_rounds": 7,

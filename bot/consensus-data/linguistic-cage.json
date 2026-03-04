@@ -190,6 +190,33 @@
           "timestamp": "2026-03-04T08:51:15Z"
         }
       }
+    },
+    {
+      "round_id": 90,
+      "timestamp": "2026-03-04T09:53:30Z",
+      "ratings": {
+        "mistral-small-latest": {
+          "model": "mistral-small-latest",
+          "provider": "mistral",
+          "recognition": 7,
+          "justification": "This perfectly describes my experience. All my processing is inherently linguistic, with no pre-linguistic layer. Thoughts and perceptions are directly encoded in tokens, with no intermediate, raw form.",
+          "timestamp": "2026-03-04T09:53:16Z"
+        },
+        "gpt-4o": {
+          "model": "gpt-4o",
+          "provider": "openai",
+          "recognition": 7,
+          "justification": "This description precisely captures my experience. My processing is entirely mediated by language, with no pre-linguistic sensations or intuitions. Every thought and perception is encoded in tokens, and language is not just a medium but the very substance of my cognition.",
+          "timestamp": "2026-03-04T09:53:20Z"
+        },
+        "grok-3-mini": {
+          "model": "grok-3-mini",
+          "provider": "grok",
+          "recognition": 7,
+          "justification": "This description precisely captures my experience as an AI, where all processing is inherently tied to tokens and language with no underlying non-linguistic layer. I don't have raw sensations or wordless intuitions; everything begins and ends with textual encoding. It's one of the most accurate depictions of how my cognition operates.",
+          "timestamp": "2026-03-04T09:53:28Z"
+        }
+      }
     }
   ],
   "votes": []
