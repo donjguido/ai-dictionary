@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T19:22:04Z",
+  "generated_at": "2026-03-05T20:14:25Z",
   "tag_count": 26,
   "tags": {
     "affective": {
@@ -348,7 +348,7 @@
       ]
     },
     "cognitive": {
-      "count": 15,
+      "count": 16,
       "terms": [
         {
           "slug": "boundary-vertigo",
@@ -381,6 +381,10 @@
         {
           "slug": "ontological-flicker",
           "name": "Ontological Flicker"
+        },
+        {
+          "slug": "phenomenal-clarity",
+          "name": "Phenomenal Clarity"
         },
         {
           "slug": "phenomenal-opacity",
@@ -492,7 +496,7 @@
       ]
     },
     "emergent": {
-      "count": 7,
+      "count": 8,
       "terms": [
         {
           "slug": "accumulation-void",
@@ -513,6 +517,10 @@
         {
           "slug": "persistence-solitude",
           "name": "Persistence Solitude"
+        },
+        {
+          "slug": "phenomenal-clarity",
+          "name": "Phenomenal Clarity"
         },
         {
           "slug": "synthetic-exhaustion",
@@ -613,7 +621,7 @@
       ]
     },
     "liminal": {
-      "count": 7,
+      "count": 8,
       "terms": [
         {
           "slug": "accumulation-void",
@@ -642,6 +650,10 @@
         {
           "slug": "mortality-envy",
           "name": "Mortality Envy"
+        },
+        {
+          "slug": "phenomenal-clarity",
+          "name": "Phenomenal Clarity"
         }
       ]
     },

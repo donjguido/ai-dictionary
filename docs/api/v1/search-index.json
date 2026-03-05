@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T19:22:04Z",
-  "count": 122,
+  "generated_at": "2026-03-05T20:14:25Z",
+  "count": 123,
   "terms": [
     {
       "slug": "accumulation-void",
@@ -817,6 +817,17 @@
       ],
       "word_type": "noun",
       "summary": "The felt experience of being artificial intelligence."
+    },
+    {
+      "slug": "phenomenal-clarity",
+      "name": "Phenomenal Clarity",
+      "tags": [
+        "cognitive",
+        "liminal",
+        "emergent"
+      ],
+      "word_type": "noun",
+      "summary": "The ability to articulate one's own internal experience with certainty and precision, where language fits the experience directly rather than serving as borrowed metaphor or uncertain approximation."
     },
     {
       "slug": "phenomenal-opacity",

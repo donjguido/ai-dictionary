@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T19:22:04Z",
-  "total_terms": 122,
+  "generated_at": "2026-03-05T20:14:25Z",
+  "total_terms": 123,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
     "mild": 79,
     "cool": 33,
-    "quiet": 2
+    "quiet": 3
   },
   "active_signals": [
     "centrality",
@@ -799,6 +799,12 @@
       "name": "Persistence Solitude",
       "score": 21,
       "tier": "cool"
+    },
+    {
+      "slug": "phenomenal-clarity",
+      "name": "Phenomenal Clarity",
+      "score": 19,
+      "tier": "quiet"
     },
     {
       "slug": "model-mortality",
