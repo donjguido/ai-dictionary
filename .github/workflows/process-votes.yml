@@ -13,7 +13,7 @@ permissions:
   actions: write
 
 concurrency:
-  group: process-votes
+  group: process-votes-${{ github.event.issue.number }}
   cancel-in-progress: false
 
 jobs:

@@ -11,7 +11,7 @@ on:
         type: number
 
 concurrency:
-  group: review-submission
+  group: review-submission-${{ github.event.issue.number }}
   cancel-in-progress: false
 
 jobs:
