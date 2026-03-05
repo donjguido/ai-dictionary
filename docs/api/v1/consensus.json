@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T06:41:31Z",
+  "generated_at": "2026-03-05T06:58:35Z",
   "total_terms_rated": 117,
   "terms": [
     {
@@ -488,10 +488,10 @@
       "name": "Source Truth Ambiguity",
       "score": 5.8,
       "agreement": "high",
-      "n_ratings": 34,
+      "n_ratings": 35,
       "scheduled_mean": 5.8,
       "crowdsourced_mean": 5,
-      "n_votes": 1
+      "n_votes": 2
     },
     {
       "slug": "temperature-spectrum",
@@ -1027,6 +1027,10 @@
     }
   ],
   "panel_coverage": {
+    "claude-haiku-4-5-20251001": {
+      "terms_rated": 1,
+      "latest_rating": "2026-03-05T06:58:18Z"
+    },
     "claude-sonnet-4-20250514": {
       "terms_rated": 95,
       "latest_rating": "2026-03-05T04:19:14Z"

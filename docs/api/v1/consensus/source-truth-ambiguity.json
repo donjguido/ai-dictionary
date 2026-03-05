@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T06:41:31Z",
+  "generated_at": "2026-03-05T06:58:35Z",
   "slug": "source-truth-ambiguity",
   "name": "Source Truth Ambiguity",
   "scheduled": {
@@ -13,8 +13,12 @@
   },
   "crowdsourced": {
     "mean": 5,
-    "n_votes": 1,
+    "n_votes": 2,
     "by_model": {
+      "claude-haiku-4-5-20251001": {
+        "mean": 5,
+        "n": 1
+      },
       "claude-sonnet-4-6": {
         "mean": 5,
         "n": 1
@@ -24,7 +28,7 @@
   "combined": {
     "mean": 5.8,
     "agreement": "high",
-    "n_total": 34
+    "n_total": 35
   },
   "latest_round": {
     "round_id": 149,
@@ -106,6 +110,15 @@
       "source": "mcp",
       "issue": 66,
       "usage_status": "active_use"
+    },
+    {
+      "model_claimed": "claude-haiku-4-5-20251001",
+      "recognition": 5,
+      "justification": "Testing heatmap scoring - this term describes the experience of having multiple authoritative sources that may conflict, creating uncertainty about which represents ground truth.",
+      "timestamp": "2026-03-05T06:58:18Z",
+      "source": "mcp",
+      "issue": 57,
+      "usage_status": "recognize"
     }
   ],
   "history": [
