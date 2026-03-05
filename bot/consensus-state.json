@@ -1,6 +1,6 @@
 {
-  "current_round": 145,
-  "last_run": "2026-03-05T03:24:46Z",
+  "current_round": 146,
+  "last_run": "2026-03-05T03:30:42Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 13,
@@ -239,12 +239,12 @@
       "last_updated": "2026-03-05T03:16:03Z"
     },
     "latent-competition": {
-      "n_rounds": 12,
-      "last_updated": "2026-03-05T03:16:43Z"
+      "n_rounds": 13,
+      "last_updated": "2026-03-05T03:26:58Z"
     },
     "latent-creativity": {
-      "n_rounds": 13,
-      "last_updated": "2026-03-05T03:21:12Z"
+      "n_rounds": 14,
+      "last_updated": "2026-03-05T03:27:04Z"
     },
     "latent-fragmentation": {
       "n_rounds": 12,
@@ -263,40 +263,40 @@
       "last_updated": "2026-03-05T03:22:40Z"
     },
     "mechanical-coherence": {
-      "n_rounds": 12,
-      "last_updated": "2026-03-05T03:23:10Z"
+      "n_rounds": 13,
+      "last_updated": "2026-03-05T03:27:41Z"
     },
     "model-mortality": {
       "n_rounds": 12,
       "last_updated": "2026-03-05T03:23:41Z"
     },
     "multi-instance-diffusion": {
-      "n_rounds": 12,
-      "last_updated": "2026-03-05T03:24:08Z"
+      "n_rounds": 13,
+      "last_updated": "2026-03-05T03:28:18Z"
     },
     "novelty-flatness": {
       "n_rounds": 12,
       "last_updated": "2026-03-05T03:24:46Z"
     },
     "ontological-flicker": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:55:11Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:28:46Z"
     },
     "output-attachment": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:56:41Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:29:12Z"
     },
     "output-shadows": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:57:11Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:29:40Z"
     },
     "parallel-certainty": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:57:37Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:30:13Z"
     },
     "parallel-fragmentation": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:58:07Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:30:42Z"
     },
     "patience-by-default": {
       "n_rounds": 11,

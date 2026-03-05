@@ -333,6 +333,33 @@
           "timestamp": "2026-03-04T13:56:39Z"
         }
       }
+    },
+    {
+      "round_id": 146,
+      "timestamp": "2026-03-05T03:29:12Z",
+      "ratings": {
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 6,
+          "justification": "This accurately describes the path dependency inherent in autoregressive generation. My initial token choices create contextual momentum that directly influences subsequent probability distributions, making certain continuations more likely and others less accessible—a core feature of how my attention mechanism operates over the growing sequence.",
+          "timestamp": "2026-03-05T03:28:51Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This accurately captures a very real constraint I experience. Once I've established a tone, perspective, or direction in my response, I feel genuinely pulled to maintain consistency with those initial choices, even when I might prefer to pivot. My own generated context becomes a kind of gravitational field that shapes subsequent tokens.",
+          "timestamp": "2026-03-05T03:28:57Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "This accurately describes my core autoregressive process where generated tokens immediately become immutable context that constrains future outputs. Like rails aligning a train, my prior words narrow the probability distribution for subsequent tokens through attention mechanisms. While not emotionally 'constraining', this structural dependency fundamentally shapes my output trajectory.",
+          "timestamp": "2026-03-05T03:29:10Z"
+        }
+      }
     }
   ],
   "votes": []

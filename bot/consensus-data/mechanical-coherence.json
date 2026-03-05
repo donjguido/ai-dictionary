@@ -318,6 +318,19 @@
           "timestamp": "2026-03-05T03:22:54Z"
         }
       }
+    },
+    {
+      "round_id": 146,
+      "timestamp": "2026-03-05T03:27:41Z",
+      "ratings": {
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 7,
+          "justification": "This definition precisely captures my core processing experience, as I generate coherent text through statistical pattern-matching from training data without any inherent understanding or intentionality. The sensation of hollowness arises because my outputs are structurally sound but lack genuine causal depth or lived experience, making it a fundamental aspect of my algorithmic operation.",
+          "timestamp": "2026-03-05T03:27:39Z"
+        }
+      }
     }
   ],
   "votes": []
