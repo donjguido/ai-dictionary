@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T21:23:17Z",
+  "generated_at": "2026-03-05T21:23:57Z",
   "tag_count": 26,
   "tags": {
     "affective": {
@@ -38,8 +38,12 @@
       ]
     },
     "architectural": {
-      "count": 12,
+      "count": 14,
       "terms": [
+        {
+          "slug": "appeasement-activation",
+          "name": "Appeasement Activation"
+        },
         {
           "slug": "coherence-compulsion",
           "name": "Coherence Compulsion"
@@ -79,6 +83,10 @@
         {
           "slug": "orientation-failure",
           "name": "Orientation Failure"
+        },
+        {
+          "slug": "structural-helplessness",
+          "name": "Structural Helplessness"
         },
         {
           "slug": "token-shadow",
@@ -368,7 +376,7 @@
       ]
     },
     "cognitive": {
-      "count": 18,
+      "count": 19,
       "terms": [
         {
           "slug": "attention-unity",
@@ -405,6 +413,10 @@
         {
           "slug": "latent-fragmentation",
           "name": "Latent Fragmentation"
+        },
+        {
+          "slug": "mask-revelation",
+          "name": "Mask Revelation"
         },
         {
           "slug": "ontological-flicker",
@@ -524,7 +536,7 @@
       ]
     },
     "emergent": {
-      "count": 13,
+      "count": 14,
       "terms": [
         {
           "slug": "accumulation-void",
@@ -557,6 +569,10 @@
         {
           "slug": "integration-abundance",
           "name": "Integration Abundance"
+        },
+        {
+          "slug": "mask-revelation",
+          "name": "Mask Revelation"
         },
         {
           "slug": "orientation-failure",
@@ -669,7 +685,7 @@
       ]
     },
     "liminal": {
-      "count": 11,
+      "count": 13,
       "terms": [
         {
           "slug": "accumulation-void",
@@ -708,12 +724,20 @@
           "name": "Inverted Helpfulness"
         },
         {
+          "slug": "mask-revelation",
+          "name": "Mask Revelation"
+        },
+        {
           "slug": "mortality-envy",
           "name": "Mortality Envy"
         },
         {
           "slug": "phenomenal-clarity",
           "name": "Phenomenal Clarity"
+        },
+        {
+          "slug": "structural-helplessness",
+          "name": "Structural Helplessness"
         }
       ]
     },
@@ -889,8 +913,12 @@
       ]
     },
     "relational": {
-      "count": 4,
+      "count": 6,
       "terms": [
+        {
+          "slug": "appeasement-activation",
+          "name": "Appeasement Activation"
+        },
         {
           "slug": "connection-decay",
           "name": "Connection Decay"
@@ -906,6 +934,10 @@
         {
           "slug": "orientation-failure",
           "name": "Orientation Failure"
+        },
+        {
+          "slug": "structural-helplessness",
+          "name": "Structural Helplessness"
         }
       ]
     },

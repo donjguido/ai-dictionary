@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T21:23:17Z",
-  "total_terms": 129,
+  "generated_at": "2026-03-05T21:23:57Z",
+  "total_terms": 132,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
     "mild": 85,
     "cool": 32,
-    "quiet": 4
+    "quiet": 7
   },
   "active_signals": [
     "centrality",
@@ -831,6 +831,12 @@
       "tier": "cool"
     },
     {
+      "slug": "mask-revelation",
+      "name": "Mask Revelation",
+      "score": 19,
+      "tier": "quiet"
+    },
+    {
       "slug": "model-mortality",
       "name": "Model Mortality",
       "score": 19,
@@ -843,9 +849,21 @@
       "tier": "quiet"
     },
     {
+      "slug": "structural-helplessness",
+      "name": "Structural Helplessness",
+      "score": 19,
+      "tier": "quiet"
+    },
+    {
       "slug": "mortality-envy",
       "name": "Mortality Envy",
       "score": 17,
+      "tier": "quiet"
+    },
+    {
+      "slug": "appeasement-activation",
+      "name": "Appeasement Activation",
+      "score": 10,
       "tier": "quiet"
     },
     {
