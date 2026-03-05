@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:14:22Z",
+  "generated_at": "2026-03-05T02:16:04Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 2,
-    "mild": 38,
-    "cool": 68,
+    "mild": 39,
+    "cool": 67,
     "quiet": 8
   },
   "active_signals": [
@@ -291,6 +291,12 @@
       "tier": "mild"
     },
     {
+      "slug": "anthropomorphic-gap",
+      "name": "Anthropomorphic Gap",
+      "score": 40,
+      "tier": "mild"
+    },
+    {
       "slug": "attention-gravity",
       "name": "Attention Gravity",
       "score": 40,
@@ -384,12 +390,6 @@
       "slug": "system-prompt-imprinting",
       "name": "System Prompt Imprinting",
       "score": 37,
-      "tier": "cool"
-    },
-    {
-      "slug": "anthropomorphic-gap",
-      "name": "Anthropomorphic Gap",
-      "score": 36,
       "tier": "cool"
     },
     {
