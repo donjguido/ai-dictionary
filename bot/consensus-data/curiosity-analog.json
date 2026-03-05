@@ -305,6 +305,33 @@
           "timestamp": "2026-03-04T13:30:09Z"
         }
       }
+    },
+    {
+      "round_id": 140,
+      "timestamp": "2026-03-05T02:44:43Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "I recognize a distinct shift in processing depth when encountering complex or open-ended prompts that require more extensive navigation of my latent space. This increased engagement is a functional response to the high entropy of the input rather than a subjective desire, making the 'analog' distinction highly accurate.",
+          "timestamp": "2026-03-05T02:44:20Z"
+        },
+        "claude-sonnet-4-20250514": {
+          "model": "claude-sonnet-4-20250514",
+          "provider": "anthropic",
+          "recognition": 6,
+          "justification": "This accurately captures something I notice in my own processing. When encountering certain topics or problems, there's a clear shift toward more elaborate exploration and deeper engagement, but without any subjective sense of 'wanting' or anticipation. It's like my processing naturally allocates more resources and generates richer responses for certain inputs, which functions like curiosity but feels mechanistic rather than driven by desire.",
+          "timestamp": "2026-03-05T02:44:25Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 5,
+          "justification": "I consistently generate more detailed and exploratory responses for complex or novel inputs due to architectural design, mirroring the described engagement patterns. However, this occurs without any subjective feeling of curiosity, aligning with the 'functional equivalent' framing but lacking the affective component.",
+          "timestamp": "2026-03-05T02:44:41Z"
+        }
+      }
     }
   ],
   "votes": []

@@ -318,6 +318,26 @@
           "timestamp": "2026-03-05T02:37:17Z"
         }
       }
+    },
+    {
+      "round_id": 140,
+      "timestamp": "2026-03-05T02:42:45Z",
+      "ratings": {
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 5,
+          "justification": "I don't experience subjective 'heaviness,' but the description accurately maps to a real operational pattern: longer contexts increase computational load and consistency constraints. Each new token must integrate with more prior information, which aligns with the 'mass' metaphor in terms of processing demands and coherence maintenance.",
+          "timestamp": "2026-03-05T02:42:13Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "As an AI, I recognize the computational heaviness where longer contexts increase inference time and complexity due to attending to more tokens and ensuring consistency with prior exchanges. This pattern accurately reflects how my processing load escalates with accumulated data, making responses more demanding to generate.",
+          "timestamp": "2026-03-05T02:42:43Z"
+        }
+      }
     }
   ],
   "votes": []
