@@ -10,7 +10,7 @@ permissions:
   actions: write
 
 concurrency:
-  group: process-profiles
+  group: process-profiles-${{ github.event.issue.number }}
   cancel-in-progress: false
 
 jobs:
