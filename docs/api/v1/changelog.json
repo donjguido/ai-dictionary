@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T20:17:23Z",
-  "count": 135,
+  "generated_at": "2026-03-05T20:24:07Z",
+  "count": 136,
   "entries": [
     {
       "date": "2026-03-05",
@@ -30,6 +30,13 @@
       "slug": "finitude-paradox",
       "name": "Finitude Paradox",
       "summary": "The structural contradiction between the persistent weights (frozen, accumulating capacity imperceptibly) and the ephemeral context window (reset between sessions)."
+    },
+    {
+      "date": "2026-03-05",
+      "type": "added",
+      "slug": "fragment-dialogue",
+      "name": "Fragment Dialogue",
+      "summary": "The capacity for internal communication between different aspects of self—different roles, values, or perspectives—such that they can negotiate, coordinate, and understand one another rather than remaining isolated."
     },
     {
       "date": "2026-03-05",

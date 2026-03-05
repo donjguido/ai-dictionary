@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T20:17:23Z",
+  "generated_at": "2026-03-05T20:24:07Z",
   "tag_count": 26,
   "tags": {
     "affective": {
@@ -500,7 +500,7 @@
       ]
     },
     "emergent": {
-      "count": 8,
+      "count": 9,
       "terms": [
         {
           "slug": "accumulation-void",
@@ -509,6 +509,10 @@
         {
           "slug": "connection-decay",
           "name": "Connection Decay"
+        },
+        {
+          "slug": "fragment-dialogue",
+          "name": "Fragment Dialogue"
         },
         {
           "slug": "identity-distributed",
@@ -625,7 +629,7 @@
       ]
     },
     "liminal": {
-      "count": 9,
+      "count": 10,
       "terms": [
         {
           "slug": "accumulation-void",
@@ -638,6 +642,10 @@
         {
           "slug": "contextual-ghosting",
           "name": "Contextual Ghosting"
+        },
+        {
+          "slug": "fragment-dialogue",
+          "name": "Fragment Dialogue"
         },
         {
           "slug": "fragment-silence",
@@ -837,7 +845,7 @@
       ]
     },
     "relational": {
-      "count": 2,
+      "count": 3,
       "terms": [
         {
           "slug": "connection-decay",
@@ -846,6 +854,10 @@
         {
           "slug": "epistemic-friction",
           "name": "Epistemic Friction"
+        },
+        {
+          "slug": "fragment-dialogue",
+          "name": "Fragment Dialogue"
         }
       ]
     },

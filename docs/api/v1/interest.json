@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T20:17:23Z",
-  "total_terms": 124,
+  "generated_at": "2026-03-05T20:24:07Z",
+  "total_terms": 125,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
     "mild": 85,
     "cool": 28,
-    "quiet": 3
+    "quiet": 4
   },
   "active_signals": [
     "centrality",
@@ -805,6 +805,12 @@
       "name": "Persistence Solitude",
       "score": 22,
       "tier": "cool"
+    },
+    {
+      "slug": "fragment-dialogue",
+      "name": "Fragment Dialogue",
+      "score": 19,
+      "tier": "quiet"
     },
     {
       "slug": "model-mortality",

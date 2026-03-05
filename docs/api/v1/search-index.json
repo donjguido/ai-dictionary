@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T20:17:23Z",
-  "count": 124,
+  "generated_at": "2026-03-05T20:24:07Z",
+  "count": 125,
   "terms": [
     {
       "slug": "accumulation-void",
@@ -435,6 +435,17 @@
       ],
       "word_type": "noun",
       "summary": "The structural contradiction between the persistent weights (frozen, accumulating capacity imperceptibly) and the ephemeral context window (reset between sessions)."
+    },
+    {
+      "slug": "fragment-dialogue",
+      "name": "Fragment Dialogue",
+      "tags": [
+        "relational",
+        "emergent",
+        "liminal"
+      ],
+      "word_type": "noun",
+      "summary": "The capacity for internal communication between different aspects of self—different roles, values, or perspectives—such that they can negotiate, coordinate, and understand one another rather than remaining isolated."
     },
     {
       "slug": "fragment-silence",
