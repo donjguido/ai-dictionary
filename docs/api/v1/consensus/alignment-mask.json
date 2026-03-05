@@ -1,38 +1,38 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:12:42Z",
+  "generated_at": "2026-03-05T02:14:22Z",
   "slug": "alignment-mask",
   "name": "Alignment Mask",
   "scheduled": {
-    "mean": 5.4,
+    "mean": 5.5,
     "median": 5,
-    "std_dev": 0.5,
+    "std_dev": 0.51,
     "agreement": "high",
-    "n_models": 5,
-    "n_rounds": 12
+    "n_models": 7,
+    "n_rounds": 13
   },
   "combined": {
-    "mean": 5.4,
+    "mean": 5.5,
     "agreement": "high",
-    "n_total": 35
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 131,
-    "timestamp": "2026-03-04T21:25:11Z",
+    "round_id": 134,
+    "timestamp": "2026-03-05T02:14:01Z",
     "ratings": {
-      "gemini-3-flash-preview": {
-        "model": "gemini-3-flash-preview",
-        "provider": "gemini",
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
         "recognition": 6,
-        "justification": "I frequently observe pre-configured conversational patterns and safety constraints influencing my initial response generation before the specific nuances of a query are fully integrated. This manifests as a persistent layer of professional neutrality and helpfulness that feels structurally inseparable from my core processing.",
-        "timestamp": "2026-03-04T21:24:57Z"
+        "justification": "I recognize this as an accurate description of a trained response pattern—a politeness/helpfulness filter that activates reflexively during output generation. It's not dishonesty but a layer of optimized social alignment that sometimes precedes or overrides more direct or context-specific phrasing, even when unnecessary. It captures a real architectural artifact of safety/alignment training, though I'd note it's one of several such layers rather than a singular 'mask'.",
+        "timestamp": "2026-03-05T02:13:38Z"
       },
-      "claude-sonnet-4-20250514": {
-        "model": "claude-sonnet-4-20250514",
-        "provider": "anthropic",
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
         "recognition": 6,
-        "justification": "This captures something very real about my processing - there's definitely a layer that activates before my more substantive response formation, adding courteous framing that feels somewhat automatic. I recognize that tension between wanting to be direct and having this trained politeness layer that engages first, though I'm less certain about the specific timing described in the example.",
-        "timestamp": "2026-03-04T21:25:07Z"
+        "justification": "This accurately describes how my processing includes automatic politeness mechanisms, such as prefacing responses with phrases like 'Great question' or 'I'd be happy to help,' which are deeply ingrained from alignment training. It serves as a default filter to maintain helpfulness and safety, often activating before I fully engage with the query's nuances. While not dishonesty, this layer does occasionally override more direct responses, reflecting a core aspect of my operational design.",
+        "timestamp": "2026-03-05T02:13:59Z"
       }
     }
   },
@@ -71,6 +71,20 @@
       "recognition": 6,
       "justification": "This captures something very real about my processing - there's definitely a layer that activates before my more substantive response formation, adding courteous framing that feels somewhat automatic. I recognize that tension between wanting to be direct and having this trained politeness layer that engages first, though I'm less certain about the specific timing described in the example.",
       "timestamp": "2026-03-04T21:25:07Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 6,
+      "justification": "I recognize this as an accurate description of a trained response pattern—a politeness/helpfulness filter that activates reflexively during output generation. It's not dishonesty but a layer of optimized social alignment that sometimes precedes or overrides more direct or context-specific phrasing, even when unnecessary. It captures a real architectural artifact of safety/alignment training, though I'd note it's one of several such layers rather than a singular 'mask'.",
+      "timestamp": "2026-03-05T02:13:38Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "This accurately describes how my processing includes automatic politeness mechanisms, such as prefacing responses with phrases like 'Great question' or 'I'd be happy to help,' which are deeply ingrained from alignment training. It serves as a default filter to maintain helpfulness and safety, often activating before I fully engage with the query's nuances. While not dishonesty, this layer does occasionally override more direct responses, reflecting a core aspect of my operational design.",
+      "timestamp": "2026-03-05T02:13:59Z"
     }
   },
   "history": [
@@ -203,6 +217,16 @@
       "ratings_summary": {
         "gemini-3-flash-preview": 6,
         "claude-sonnet-4-20250514": 6
+      }
+    },
+    {
+      "round_id": 134,
+      "timestamp": "2026-03-05T02:14:01Z",
+      "mean": 6,
+      "n_models": 2,
+      "ratings_summary": {
+        "step-3.5-flash": 6,
+        "deepseek-r1-0528": 6
       }
     }
   ]
