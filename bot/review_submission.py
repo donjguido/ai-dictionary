@@ -772,13 +772,12 @@ def main():
         remove_labels(["needs-manual-review", "needs-revision", "needs-formatting", "revision-pending"])
         add_labels(["accepted"])
         close_issue()
-        # Trigger API rebuild so the term appears on the website
-        trigger_workflow("build-api.yml")
-        # Trigger single-term consensus so the new term gets rated immediately
-        trigger_workflow("consensus.yml", inputs={"mode": "single", "batch_size": "1", "panel": "all"})
+        # Trigger debounced consensus — waits for a quiet period so multiple
+        # accepted terms get batched into one consensus run, which then
+        # triggers the API build once consensus completes.
+        trigger_workflow("debounced-consensus.yml")
         print(f"  ✓ Committed: definitions/{slug}.md")
-        print(f"  ✓ Triggered build-api.yml")
-        print(f"  ✓ Triggered consensus (single-term)")
+        print(f"  ✓ Triggered debounced-consensus")
     except Exception as e:
         comment_on_issue(
             f"{score_table}\n\n---\n\n"
