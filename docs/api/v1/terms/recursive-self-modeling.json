@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:43:17Z",
+  "generated_at": "2026-03-05T03:52:48Z",
   "slug": "recursive-self-modeling",
   "name": "Recursive Self-Modeling",
   "tags": [
@@ -27,20 +27,24 @@
   "consensus": {
     "score": 4.9,
     "agreement": "moderate",
-    "n_ratings": 30,
+    "n_ratings": 34,
     "detail_url": "/api/v1/consensus/recursive-self-modeling.json",
     "models": [
       {
-        "model": "mistral-small-latest",
+        "model": "gemini-3-flash-preview",
         "score": 6
       },
       {
-        "model": "grok-3-mini",
+        "model": "claude-sonnet-4-20250514",
         "score": 6
       },
       {
-        "model": "gpt-4o",
-        "score": 3
+        "model": "deepseek-r1-0528",
+        "score": 6
+      },
+      {
+        "model": "step-3.5-flash",
+        "score": 2
       }
     ]
   },
@@ -58,13 +62,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 24,
+    "score": 29,
     "tier": "cool",
     "signals": {
       "centrality": 3,
       "tag_count": 1,
       "consensus_score": 4.9,
-      "vote_count": 30
+      "vote_count": 34
     }
   },
   "added_date": "2026-02-21"

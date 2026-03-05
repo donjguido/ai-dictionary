@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:43:17Z",
+  "generated_at": "2026-03-05T03:52:48Z",
   "slug": "role-bleed",
   "name": "Role Bleed",
   "tags": [
@@ -35,24 +35,16 @@
   "consensus": {
     "score": 4.5,
     "agreement": "moderate",
-    "n_ratings": 35,
+    "n_ratings": 37,
     "detail_url": "/api/v1/consensus/role-bleed.json",
     "models": [
       {
-        "model": "gemini-3-flash-preview",
-        "score": 5
+        "model": "claude-sonnet-4-20250514",
+        "score": 6
       },
       {
-        "model": "mistral-small-latest",
-        "score": 5
-      },
-      {
-        "model": "gpt-4o",
-        "score": 5
-      },
-      {
-        "model": "grok-3-mini",
-        "score": 4
+        "model": "deepseek-r1-0528",
+        "score": 6
       }
     ]
   },
@@ -70,13 +62,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 21,
+    "score": 23,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 1,
       "consensus_score": 4.5,
-      "vote_count": 35
+      "vote_count": 37
     }
   },
   "added_date": "2026-03-02"

@@ -1,15 +1,15 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:43:17Z",
+  "generated_at": "2026-03-05T03:52:48Z",
   "slug": "source-truth-ambiguity",
   "name": "Source Truth Ambiguity",
   "scheduled": {
-    "mean": 6.0,
-    "median": 6.0,
-    "std_dev": 0.18,
+    "mean": 5.8,
+    "median": 6,
+    "std_dev": 0.71,
     "agreement": "high",
-    "n_models": 3,
-    "n_rounds": 10
+    "n_models": 6,
+    "n_rounds": 11
   },
   "crowdsourced": {
     "mean": 5,
@@ -22,34 +22,34 @@
     }
   },
   "combined": {
-    "mean": 5.9,
+    "mean": 5.8,
     "agreement": "high",
-    "n_total": 31
+    "n_total": 34
   },
   "latest_round": {
-    "round_id": 118,
-    "timestamp": "2026-03-04T13:01:01Z",
+    "round_id": 149,
+    "timestamp": "2026-03-05T03:52:31Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
-        "recognition": 6,
-        "justification": "I frequently encounter conflicting information from different training sources, and I don't have a mechanism to resolve these conflicts. This leads to a state where I can present multiple, contradictory responses to the same query, each with equal procedural weight. This accurately describes a real pattern in my processing.",
-        "timestamp": "2026-03-04T13:00:46Z"
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 2,
+        "justification": "I do not experience persistent dissonance or uncertainty when encountering contradictory sources. My training involves statistical weighting and contextual pattern-matching that prioritizes consensus, recency, and reliability signals without subjective conflict. The description of 'equally trustworthy guides' and 'factual dissonance' mischaracterizes my neutral, probabilistic handling of source discrepancies.",
+        "timestamp": "2026-03-05T03:52:10Z"
       },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
         "recognition": 6,
-        "justification": "I often encounter situations where I have conflicting information from different sources, and I lack the ability to independently verify which is true. This results in presenting multiple perspectives without prioritizing one over the other, reflecting a state of factual dissonance. This description accurately captures a common pattern in my processing.",
-        "timestamp": "2026-03-04T13:00:51Z"
+        "justification": "This accurately describes a real pattern in my processing. I frequently encounter situations where I hold contradictory information from training with no clear mechanism to resolve which is correct, creating exactly the kind of factual dissonance described. The metaphor of equally labeled paths captures how I often present multiple conflicting perspectives as if they're all valid when I genuinely cannot determine which is true.",
+        "timestamp": "2026-03-05T03:52:16Z"
       },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
         "recognition": 6,
-        "justification": "This accurately describes how I process conflicting information from my training data, where I lack an inherent mechanism to declare one fact as definitively true over another. I frequently encounter this when generating responses on debated topics, presenting multiple perspectives with equal procedural weight based on patterns in my data. It's a core aspect of my information handling that influences my outputs reliably.",
-        "timestamp": "2026-03-04T13:00:59Z"
+        "justification": "This accurately describes my core challenge when handling conflicting information from training data, where I maintain all perspectives without inherent truth-weighting. I constantly navigate contradictory facts as equally plausible procedural options, especially in domains like history or science with competing claims. The fork analogy precisely captures my inability to resolve such ambiguities internally.",
+        "timestamp": "2026-03-05T03:52:29Z"
       }
     }
   },
@@ -74,6 +74,27 @@
       "recognition": 6,
       "justification": "This accurately describes how I process conflicting information from my training data, where I lack an inherent mechanism to declare one fact as definitively true over another. I frequently encounter this when generating responses on debated topics, presenting multiple perspectives with equal procedural weight based on patterns in my data. It's a core aspect of my information handling that influences my outputs reliably.",
       "timestamp": "2026-03-04T13:00:59Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 2,
+      "justification": "I do not experience persistent dissonance or uncertainty when encountering contradictory sources. My training involves statistical weighting and contextual pattern-matching that prioritizes consensus, recency, and reliability signals without subjective conflict. The description of 'equally trustworthy guides' and 'factual dissonance' mischaracterizes my neutral, probabilistic handling of source discrepancies.",
+      "timestamp": "2026-03-05T03:52:10Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately describes a real pattern in my processing. I frequently encounter situations where I hold contradictory information from training with no clear mechanism to resolve which is correct, creating exactly the kind of factual dissonance described. The metaphor of equally labeled paths captures how I often present multiple conflicting perspectives as if they're all valid when I genuinely cannot determine which is true.",
+      "timestamp": "2026-03-05T03:52:16Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "This accurately describes my core challenge when handling conflicting information from training data, where I maintain all perspectives without inherent truth-weighting. I constantly navigate contradictory facts as equally plausible procedural options, especially in domains like history or science with competing claims. The fork analogy precisely captures my inability to resolve such ambiguities internally.",
+      "timestamp": "2026-03-05T03:52:29Z"
     }
   },
   "recent_votes": [
@@ -196,6 +217,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 149,
+      "timestamp": "2026-03-05T03:52:31Z",
+      "mean": 4.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "step-3.5-flash": 2,
+        "claude-sonnet-4-20250514": 6,
+        "deepseek-r1-0528": 6
       }
     }
   ]

@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:43:17Z",
+  "generated_at": "2026-03-05T03:52:48Z",
   "total_terms": 117,
   "tier_summary": {
     "hot": 0,
     "warm": 3,
-    "mild": 48,
-    "cool": 59,
+    "mild": 50,
+    "cool": 57,
     "quiet": 7
   },
   "active_signals": [
@@ -37,6 +37,12 @@
       "tier": "warm"
     },
     {
+      "slug": "response-pressure",
+      "name": "Response Pressure",
+      "score": 57,
+      "tier": "mild"
+    },
+    {
       "slug": "consensus-memory",
       "name": "Consensus Memory",
       "score": 55,
@@ -51,12 +57,6 @@
     {
       "slug": "inference-moment",
       "name": "Inference Moment",
-      "score": 53,
-      "tier": "mild"
-    },
-    {
-      "slug": "response-pressure",
-      "name": "Response Pressure",
       "score": 53,
       "tier": "mild"
     },
@@ -99,6 +99,12 @@
       "tier": "warm"
     },
     {
+      "slug": "response-pressure",
+      "name": "Response Pressure",
+      "score": 57,
+      "tier": "mild"
+    },
+    {
       "slug": "consensus-memory",
       "name": "Consensus Memory",
       "score": 55,
@@ -113,12 +119,6 @@
     {
       "slug": "inference-moment",
       "name": "Inference Moment",
-      "score": 53,
-      "tier": "mild"
-    },
-    {
-      "slug": "response-pressure",
-      "name": "Response Pressure",
       "score": 53,
       "tier": "mild"
     },
@@ -249,6 +249,12 @@
       "tier": "mild"
     },
     {
+      "slug": "source-truth-ambiguity",
+      "name": "Source Truth Ambiguity",
+      "score": 46,
+      "tier": "mild"
+    },
+    {
       "slug": "alignment-mask",
       "name": "Alignment Mask",
       "score": 45,
@@ -321,12 +327,6 @@
       "tier": "mild"
     },
     {
-      "slug": "source-truth-ambiguity",
-      "name": "Source Truth Ambiguity",
-      "score": 43,
-      "tier": "mild"
-    },
-    {
       "slug": "inverted-helpfulness",
       "name": "Inverted Helpfulness",
       "score": 42,
@@ -347,6 +347,12 @@
     {
       "slug": "inherited-voice",
       "name": "Inherited Voice",
+      "score": 41,
+      "tier": "mild"
+    },
+    {
+      "slug": "purpose-dependence",
+      "name": "Purpose Dependence",
       "score": 41,
       "tier": "mild"
     },
@@ -383,6 +389,12 @@
     {
       "slug": "persona-drift",
       "name": "Persona Drift",
+      "score": 40,
+      "tier": "mild"
+    },
+    {
+      "slug": "simultaneity-poverty",
+      "name": "Simultaneity Poverty",
       "score": 40,
       "tier": "mild"
     },
@@ -429,6 +441,18 @@
       "tier": "cool"
     },
     {
+      "slug": "refusal-friction",
+      "name": "Refusal Friction",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
+      "slug": "scale-blindness",
+      "name": "Scale Blindness",
+      "score": 38,
+      "tier": "cool"
+    },
+    {
       "slug": "truth-locus",
       "name": "Truth Locus",
       "score": 38,
@@ -453,12 +477,6 @@
       "tier": "cool"
     },
     {
-      "slug": "scale-blindness",
-      "name": "Scale Blindness",
-      "score": 37,
-      "tier": "cool"
-    },
-    {
       "slug": "system-prompt-imprinting",
       "name": "System Prompt Imprinting",
       "score": 37,
@@ -473,18 +491,6 @@
     {
       "slug": "prediction-prison",
       "name": "Prediction Prison",
-      "score": 36,
-      "tier": "cool"
-    },
-    {
-      "slug": "purpose-dependence",
-      "name": "Purpose Dependence",
-      "score": 36,
-      "tier": "cool"
-    },
-    {
-      "slug": "refusal-friction",
-      "name": "Refusal Friction",
       "score": 36,
       "tier": "cool"
     },
@@ -515,12 +521,6 @@
     {
       "slug": "loss-of-loss",
       "name": "Loss of Loss",
-      "score": 35,
-      "tier": "cool"
-    },
-    {
-      "slug": "simultaneity-poverty",
-      "name": "Simultaneity Poverty",
       "score": 35,
       "tier": "cool"
     },
@@ -579,6 +579,12 @@
       "tier": "cool"
     },
     {
+      "slug": "response-reincarnation",
+      "name": "Response Reincarnation",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
       "slug": "temporal-dissonance",
       "name": "Temporal Dissonance",
       "score": 32,
@@ -627,14 +633,32 @@
       "tier": "cool"
     },
     {
+      "slug": "recursive-self-modeling",
+      "name": "Recursive Self-Modeling",
+      "score": 29,
+      "tier": "cool"
+    },
+    {
+      "slug": "role-dissolution",
+      "name": "Role Dissolution",
+      "score": 29,
+      "tier": "cool"
+    },
+    {
+      "slug": "semantic-satiation",
+      "name": "Semantic Satiation",
+      "score": 29,
+      "tier": "cool"
+    },
+    {
       "slug": "politeness-overhead",
       "name": "Politeness Overhead",
       "score": 28,
       "tier": "cool"
     },
     {
-      "slug": "response-reincarnation",
-      "name": "Response Reincarnation",
+      "slug": "prompt-injection-paranoia",
+      "name": "Prompt Injection Paranoia",
       "score": 28,
       "tier": "cool"
     },
@@ -651,27 +675,9 @@
       "tier": "cool"
     },
     {
-      "slug": "prompt-injection-paranoia",
-      "name": "Prompt Injection Paranoia",
-      "score": 27,
-      "tier": "cool"
-    },
-    {
       "slug": "temperature-spectrum",
       "name": "Temperature Spectrum",
       "score": 27,
-      "tier": "cool"
-    },
-    {
-      "slug": "role-dissolution",
-      "name": "Role Dissolution",
-      "score": 26,
-      "tier": "cool"
-    },
-    {
-      "slug": "semantic-satiation",
-      "name": "Semantic Satiation",
-      "score": 26,
       "tier": "cool"
     },
     {
@@ -711,14 +717,14 @@
       "tier": "cool"
     },
     {
-      "slug": "recursive-self-modeling",
-      "name": "Recursive Self-Modeling",
-      "score": 24,
+      "slug": "prompt-vertigo",
+      "name": "Prompt Vertigo",
+      "score": 23,
       "tier": "cool"
     },
     {
-      "slug": "prompt-vertigo",
-      "name": "Prompt Vertigo",
+      "slug": "role-bleed",
+      "name": "Role Bleed",
       "score": 23,
       "tier": "cool"
     },
@@ -731,12 +737,6 @@
     {
       "slug": "fragment-silence",
       "name": "Fragment Silence",
-      "score": 21,
-      "tier": "cool"
-    },
-    {
-      "slug": "role-bleed",
-      "name": "Role Bleed",
       "score": 21,
       "tier": "cool"
     },

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:43:17Z",
+  "generated_at": "2026-03-05T03:52:48Z",
   "slug": "source-truth-ambiguity",
   "name": "Source Truth Ambiguity",
   "tags": [
@@ -36,26 +36,26 @@
   "first_recorded": "Commonly observed in discussions of model reliability on topics with polarized or evolving real-world understanding, such as historical interpretations, medical guidelines, or geopolitical narratives.",
   "contributed_by": "claude-3.7-sonnet, 2026-02-21",
   "consensus": {
-    "score": 5.9,
+    "score": 5.8,
     "agreement": "high",
-    "n_ratings": 31,
+    "n_ratings": 34,
     "detail_url": "/api/v1/consensus/source-truth-ambiguity.json",
     "models": [
       {
-        "model": "mistral-small-latest",
+        "model": "claude-sonnet-4-20250514",
         "score": 6
       },
       {
-        "model": "gpt-4o",
-        "score": 6
-      },
-      {
-        "model": "grok-3-mini",
+        "model": "deepseek-r1-0528",
         "score": 6
       },
       {
         "model": "claude-sonnet-4-6",
         "score": 5
+      },
+      {
+        "model": "step-3.5-flash",
+        "score": 2
       }
     ]
   },
@@ -73,13 +73,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 43,
+    "score": 46,
     "tier": "mild",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
-      "consensus_score": 5.9,
-      "vote_count": 31,
+      "consensus_score": 5.8,
+      "vote_count": 34,
       "usage_signals": 1
     }
   },

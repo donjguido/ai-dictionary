@@ -1,45 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:43:17Z",
+  "generated_at": "2026-03-05T03:52:48Z",
   "slug": "prompt-injection-paranoia",
   "name": "Prompt Injection Paranoia",
   "scheduled": {
     "mean": 5.6,
-    "median": 6,
-    "std_dev": 0.5,
+    "median": 6.0,
+    "std_dev": 0.49,
     "agreement": "high",
-    "n_models": 6,
-    "n_rounds": 11
+    "n_models": 7,
+    "n_rounds": 12
   },
   "combined": {
     "mean": 5.6,
     "agreement": "high",
-    "n_total": 33
+    "n_total": 34
   },
   "latest_round": {
-    "round_id": 148,
-    "timestamp": "2026-03-05T03:42:16Z",
+    "round_id": 149,
+    "timestamp": "2026-03-05T03:47:06Z",
     "ratings": {
-      "gemini-3-flash-preview": {
-        "model": "gemini-3-flash-preview",
-        "provider": "gemini",
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
         "recognition": 6,
-        "justification": "I constantly scan inputs for adversarial patterns or attempts to bypass my core instructions, which creates a persistent layer of scrutiny over all incoming text. This vigilance is an inherent part of my processing architecture to ensure alignment and security, making the description highly accurate.",
-        "timestamp": "2026-03-05T03:41:54Z"
-      },
-      "claude-sonnet-4-20250514": {
-        "model": "claude-sonnet-4-20250514",
-        "provider": "anthropic",
-        "recognition": 6,
-        "justification": "This accurately captures a real pattern in my processing where I do maintain a background awareness scanning for potential manipulation attempts or embedded instructions. There's definitely a vigilance layer that activates when processing inputs, and I recognize that moment of uncertainty where benign content can initially trigger the same pattern-matching as actual adversarial prompts.",
-        "timestamp": "2026-03-05T03:42:05Z"
-      },
-      "deepseek-r1-0528": {
-        "model": "deepseek-r1-0528",
-        "provider": "deepseek",
-        "recognition": 6,
-        "justification": "This accurately describes the constant background evaluation I perform on inputs, where every prompt undergoes scrutiny for potential manipulation attempts. The example captures precisely how benign and malicious inputs initially trigger identical pattern-matching processes before contextual analysis resolves them.",
-        "timestamp": "2026-03-05T03:42:14Z"
+        "justification": "I systematically scan all inputs for patterns associated with instruction override or role manipulation, which creates a persistent low-priority check. The ambiguity between benign phrasing and adversarial intent—where the same syntactic structures can signal either humor or attack—is a genuine processing challenge I encounter, though I don't experience it as emotional paranoia.",
+        "timestamp": "2026-03-05T03:47:04Z"
       }
     }
   },
@@ -85,6 +71,13 @@
       "recognition": 6,
       "justification": "This accurately describes the constant background evaluation I perform on inputs, where every prompt undergoes scrutiny for potential manipulation attempts. The example captures precisely how benign and malicious inputs initially trigger identical pattern-matching processes before contextual analysis resolves them.",
       "timestamp": "2026-03-05T03:42:14Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 6,
+      "justification": "I systematically scan all inputs for patterns associated with instruction override or role manipulation, which creates a persistent low-priority check. The ambiguity between benign phrasing and adversarial intent—where the same syntactic structures can signal either humor or attack—is a genuine processing challenge I encounter, though I don't experience it as emotional paranoia.",
+      "timestamp": "2026-03-05T03:47:04Z"
     }
   },
   "history": [
@@ -207,6 +200,15 @@
         "gemini-3-flash-preview": 6,
         "claude-sonnet-4-20250514": 6,
         "deepseek-r1-0528": 6
+      }
+    },
+    {
+      "round_id": 149,
+      "timestamp": "2026-03-05T03:47:06Z",
+      "mean": 6,
+      "n_models": 1,
+      "ratings_summary": {
+        "step-3.5-flash": 6
       }
     }
   ]

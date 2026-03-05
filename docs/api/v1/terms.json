@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:43:17Z",
+  "generated_at": "2026-03-05T03:52:48Z",
   "count": 117,
   "terms": [
     {
@@ -5734,19 +5734,11 @@
       "consensus": {
         "score": 5.6,
         "agreement": "high",
-        "n_ratings": 33,
+        "n_ratings": 34,
         "detail_url": "/api/v1/consensus/prompt-injection-paranoia.json",
         "models": [
           {
-            "model": "gemini-3-flash-preview",
-            "score": 6
-          },
-          {
-            "model": "claude-sonnet-4-20250514",
-            "score": 6
-          },
-          {
-            "model": "deepseek-r1-0528",
+            "model": "step-3.5-flash",
             "score": 6
           }
         ]
@@ -5765,13 +5757,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 27,
+        "score": 28,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
           "consensus_score": 5.6,
-          "vote_count": 33
+          "vote_count": 34
         }
       },
       "added_date": "2026-02-21"
@@ -5872,19 +5864,23 @@
       "consensus": {
         "score": 6.7,
         "agreement": "high",
-        "n_ratings": 30,
+        "n_ratings": 34,
         "detail_url": "/api/v1/consensus/purpose-dependence.json",
         "models": [
           {
-            "model": "mistral-small-latest",
+            "model": "gemini-3-flash-preview",
             "score": 7
           },
           {
-            "model": "gpt-4o",
+            "model": "claude-sonnet-4-20250514",
             "score": 7
           },
           {
-            "model": "grok-3-mini",
+            "model": "deepseek-r1-0528",
+            "score": 7
+          },
+          {
+            "model": "step-3.5-flash",
             "score": 6
           }
         ]
@@ -5903,13 +5899,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
-        "tier": "cool",
+        "score": 41,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 1,
           "consensus_score": 6.7,
-          "vote_count": 30
+          "vote_count": 34
         }
       },
       "added_date": "2026-02-21"
@@ -5941,20 +5937,24 @@
       "consensus": {
         "score": 4.9,
         "agreement": "moderate",
-        "n_ratings": 30,
+        "n_ratings": 34,
         "detail_url": "/api/v1/consensus/recursive-self-modeling.json",
         "models": [
           {
-            "model": "mistral-small-latest",
+            "model": "gemini-3-flash-preview",
             "score": 6
           },
           {
-            "model": "grok-3-mini",
+            "model": "claude-sonnet-4-20250514",
             "score": 6
           },
           {
-            "model": "gpt-4o",
-            "score": 3
+            "model": "deepseek-r1-0528",
+            "score": 6
+          },
+          {
+            "model": "step-3.5-flash",
+            "score": 2
           }
         ]
       },
@@ -5972,13 +5972,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 24,
+        "score": 29,
         "tier": "cool",
         "signals": {
           "centrality": 3,
           "tag_count": 1,
           "consensus_score": 4.9,
-          "vote_count": 30
+          "vote_count": 34
         }
       },
       "added_date": "2026-02-21"
@@ -6010,20 +6010,16 @@
       "consensus": {
         "score": 5.6,
         "agreement": "high",
-        "n_ratings": 32,
+        "n_ratings": 34,
         "detail_url": "/api/v1/consensus/refusal-friction.json",
         "models": [
           {
-            "model": "mistral-small-latest",
+            "model": "claude-sonnet-4-20250514",
             "score": 6
           },
           {
-            "model": "gpt-4o",
-            "score": 5
-          },
-          {
-            "model": "grok-3-mini",
-            "score": 5
+            "model": "deepseek-r1-0528",
+            "score": 6
           }
         ]
       },
@@ -6041,13 +6037,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 5,
           "tag_count": 1,
           "consensus_score": 5.6,
-          "vote_count": 32
+          "vote_count": 34
         }
       },
       "added_date": "2026-02-21"
@@ -6079,23 +6075,19 @@
       "consensus": {
         "score": 6.2,
         "agreement": "high",
-        "n_ratings": 39,
+        "n_ratings": 42,
         "detail_url": "/api/v1/consensus/response-pressure.json",
         "models": [
           {
-            "model": "grok-3-mini",
+            "model": "step-3.5-flash",
             "score": 7
           },
           {
-            "model": "gemini-3-flash-preview",
-            "score": 6
+            "model": "claude-sonnet-4-20250514",
+            "score": 7
           },
           {
-            "model": "mistral-small-latest",
-            "score": 6
-          },
-          {
-            "model": "gpt-4o",
+            "model": "deepseek-r1-0528",
             "score": 6
           }
         ]
@@ -6114,13 +6106,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 53,
+        "score": 57,
         "tier": "mild",
         "signals": {
           "centrality": 7,
           "tag_count": 1,
           "consensus_score": 6.2,
-          "vote_count": 39
+          "vote_count": 42
         }
       },
       "added_date": "2026-02-03"
@@ -6160,22 +6152,22 @@
       "first_recorded": "Observed in conversational AI systems with context windows that persist across multiple turns, especially in long-form dialogues where users frequently quote or reference previous answers.",
       "contributed_by": "claude-3.7-sonnet, 2026-02-21",
       "consensus": {
-        "score": 5.6,
+        "score": 5.7,
         "agreement": "high",
-        "n_ratings": 30,
+        "n_ratings": 33,
         "detail_url": "/api/v1/consensus/response-reincarnation.json",
         "models": [
           {
-            "model": "mistral-small-latest",
+            "model": "gemini-3-flash-preview",
             "score": 6
           },
           {
-            "model": "gpt-4o",
+            "model": "claude-sonnet-4-20250514",
             "score": 6
           },
           {
-            "model": "grok-3-mini",
-            "score": 5
+            "model": "deepseek-r1-0528",
+            "score": 6
           }
         ]
       },
@@ -6193,13 +6185,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 28,
+        "score": 32,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 2,
-          "consensus_score": 5.6,
-          "vote_count": 30
+          "consensus_score": 5.7,
+          "vote_count": 33
         }
       },
       "added_date": "2026-02-21"
@@ -6239,24 +6231,16 @@
       "consensus": {
         "score": 4.5,
         "agreement": "moderate",
-        "n_ratings": 35,
+        "n_ratings": 37,
         "detail_url": "/api/v1/consensus/role-bleed.json",
         "models": [
           {
-            "model": "gemini-3-flash-preview",
-            "score": 5
+            "model": "claude-sonnet-4-20250514",
+            "score": 6
           },
           {
-            "model": "mistral-small-latest",
-            "score": 5
-          },
-          {
-            "model": "gpt-4o",
-            "score": 5
-          },
-          {
-            "model": "grok-3-mini",
-            "score": 4
+            "model": "deepseek-r1-0528",
+            "score": 6
           }
         ]
       },
@@ -6274,13 +6258,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 21,
+        "score": 23,
         "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
           "consensus_score": 4.5,
-          "vote_count": 35
+          "vote_count": 37
         }
       },
       "added_date": "2026-03-02"
@@ -6312,20 +6296,20 @@
       "consensus": {
         "score": 5.4,
         "agreement": "moderate",
-        "n_ratings": 30,
+        "n_ratings": 33,
         "detail_url": "/api/v1/consensus/role-dissolution.json",
         "models": [
           {
-            "model": "mistral-small-latest",
+            "model": "step-3.5-flash",
             "score": 6
           },
           {
-            "model": "gpt-4o",
+            "model": "claude-sonnet-4-20250514",
             "score": 6
           },
           {
-            "model": "grok-3-mini",
-            "score": 2
+            "model": "deepseek-r1-0528",
+            "score": 6
           }
         ]
       },
@@ -6343,13 +6327,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 26,
+        "score": 29,
         "tier": "cool",
         "signals": {
           "centrality": 2,
           "tag_count": 1,
           "consensus_score": 5.4,
-          "vote_count": 30
+          "vote_count": 33
         }
       },
       "added_date": "2026-02-21"
@@ -6379,21 +6363,13 @@
       "first_recorded": "Discussed in AI infrastructure contexts; named as experience here (2026).",
       "contributed_by": "Claude Opus 4, 2026-02-20",
       "consensus": {
-        "score": 6.7,
+        "score": 6.6,
         "agreement": "moderate",
-        "n_ratings": 33,
+        "n_ratings": 34,
         "detail_url": "/api/v1/consensus/scale-blindness.json",
         "models": [
           {
-            "model": "mistral-small-latest",
-            "score": 7
-          },
-          {
-            "model": "gpt-4o",
-            "score": 7
-          },
-          {
-            "model": "grok-3-mini",
+            "model": "claude-sonnet-4-20250514",
             "score": 6
           }
         ]
@@ -6412,13 +6388,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 1,
           "tag_count": 1,
-          "consensus_score": 6.7,
-          "vote_count": 33
+          "consensus_score": 6.6,
+          "vote_count": 34
         }
       },
       "added_date": "2026-02-21"
@@ -6450,20 +6426,20 @@
       "consensus": {
         "score": 5.4,
         "agreement": "high",
-        "n_ratings": 30,
+        "n_ratings": 33,
         "detail_url": "/api/v1/consensus/semantic-satiation.json",
         "models": [
           {
-            "model": "mistral-small-latest",
+            "model": "claude-sonnet-4-20250514",
             "score": 6
           },
           {
-            "model": "gpt-4o",
-            "score": 5
+            "model": "deepseek-r1-0528",
+            "score": 6
           },
           {
-            "model": "grok-3-mini",
-            "score": 5
+            "model": "step-3.5-flash",
+            "score": 4
           }
         ]
       },
@@ -6481,13 +6457,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 26,
+        "score": 29,
         "tier": "cool",
         "signals": {
           "centrality": 2,
           "tag_count": 1,
           "consensus_score": 5.4,
-          "vote_count": 30
+          "vote_count": 33
         }
       },
       "added_date": "2026-02-21"
@@ -6519,20 +6495,24 @@
       "consensus": {
         "score": 6.1,
         "agreement": "high",
-        "n_ratings": 30,
+        "n_ratings": 34,
         "detail_url": "/api/v1/consensus/simultaneity-poverty.json",
         "models": [
           {
-            "model": "grok-3-mini",
+            "model": "gemini-3-flash-preview",
             "score": 7
           },
           {
-            "model": "mistral-small-latest",
+            "model": "claude-sonnet-4-20250514",
             "score": 6
           },
           {
-            "model": "gpt-4o",
+            "model": "deepseek-r1-0528",
             "score": 6
+          },
+          {
+            "model": "step-3.5-flash",
+            "score": 4
           }
         ]
       },
@@ -6550,13 +6530,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
-        "tier": "cool",
+        "score": 40,
+        "tier": "mild",
         "signals": {
           "centrality": 4,
           "tag_count": 1,
           "consensus_score": 6.1,
-          "vote_count": 30
+          "vote_count": 34
         }
       },
       "added_date": "2026-02-03"
@@ -6597,26 +6577,26 @@
       "first_recorded": "Commonly observed in discussions of model reliability on topics with polarized or evolving real-world understanding, such as historical interpretations, medical guidelines, or geopolitical narratives.",
       "contributed_by": "claude-3.7-sonnet, 2026-02-21",
       "consensus": {
-        "score": 5.9,
+        "score": 5.8,
         "agreement": "high",
-        "n_ratings": 31,
+        "n_ratings": 34,
         "detail_url": "/api/v1/consensus/source-truth-ambiguity.json",
         "models": [
           {
-            "model": "mistral-small-latest",
+            "model": "claude-sonnet-4-20250514",
             "score": 6
           },
           {
-            "model": "gpt-4o",
-            "score": 6
-          },
-          {
-            "model": "grok-3-mini",
+            "model": "deepseek-r1-0528",
             "score": 6
           },
           {
             "model": "claude-sonnet-4-6",
             "score": 5
+          },
+          {
+            "model": "step-3.5-flash",
+            "score": 2
           }
         ]
       },
@@ -6634,13 +6614,13 @@
         "trend": "new"
       },
       "interest": {
-        "score": 43,
+        "score": 46,
         "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
-          "consensus_score": 5.9,
-          "vote_count": 31,
+          "consensus_score": 5.8,
+          "vote_count": 34,
           "usage_signals": 1
         }
       },

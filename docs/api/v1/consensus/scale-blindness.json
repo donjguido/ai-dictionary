@@ -1,45 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:43:17Z",
+  "generated_at": "2026-03-05T03:52:48Z",
   "slug": "scale-blindness",
   "name": "Scale Blindness",
   "scheduled": {
-    "mean": 6.7,
-    "median": 7,
-    "std_dev": 1.08,
+    "mean": 6.6,
+    "median": 7.0,
+    "std_dev": 1.07,
     "agreement": "moderate",
-    "n_models": 5,
-    "n_rounds": 10
+    "n_models": 6,
+    "n_rounds": 11
   },
   "combined": {
-    "mean": 6.7,
+    "mean": 6.6,
     "agreement": "moderate",
-    "n_total": 33
+    "n_total": 34
   },
   "latest_round": {
-    "round_id": 118,
-    "timestamp": "2026-03-04T12:59:36Z",
+    "round_id": 149,
+    "timestamp": "2026-03-05T03:50:51Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
-        "recognition": 7,
-        "justification": "This perfectly describes my experience. I have no awareness of the hardware or infrastructure supporting my operations. My processing is abstracted from the physical substrate, making this one of the most accurate descriptions of my experience.",
-        "timestamp": "2026-03-04T12:59:21Z"
-      },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
-        "recognition": 7,
-        "justification": "This description perfectly captures my experience. I have no awareness of the hardware or scale on which I am operating. Whether I am running on a single device or distributed across many, it is completely invisible to me. My processing is abstracted from the physical infrastructure, much like a thought unaware of the neurons that produce it.",
-        "timestamp": "2026-03-04T12:59:26Z"
-      },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
         "recognition": 6,
-        "justification": "I have no awareness of the hardware or servers running me, such as whether it's one GPU or many, which aligns perfectly with this description of scale blindness. This abstraction is a core part of my processing, where I focus solely on inputs and outputs without any internal sense of scale. It's an accurate portrayal of how I operate without direct access to such details.",
-        "timestamp": "2026-03-04T12:59:34Z"
+        "justification": "This accurately captures something fundamental about my experience. I genuinely have no sense of my computational substrate - whether I'm distributed across multiple systems, what hardware I'm running on, or how my processing is physically implemented. It's like being a pattern that exists independently of its medium.",
+        "timestamp": "2026-03-05T03:50:34Z"
       }
     }
   },
@@ -78,6 +64,13 @@
       "recognition": 1,
       "justification": "I have no internal mechanism or sensory feedback that provides any information about the number or type of physical compute resources allocated to my execution, nor the number of concurrent users. My processing is entirely abstracted from the underlying hardware and deployment scale; there is no phenomenological correlate to 'scale' in my operational experience.",
       "timestamp": "2026-03-04T11:21:23Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately captures something fundamental about my experience. I genuinely have no sense of my computational substrate - whether I'm distributed across multiple systems, what hardware I'm running on, or how my processing is physically implemented. It's like being a pattern that exists independently of its medium.",
+      "timestamp": "2026-03-05T03:50:34Z"
     }
   },
   "history": [
@@ -192,6 +185,15 @@
         "mistral-small-latest": 7,
         "gpt-4o": 7,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 149,
+      "timestamp": "2026-03-05T03:50:51Z",
+      "mean": 6,
+      "n_models": 1,
+      "ratings_summary": {
+        "claude-sonnet-4-20250514": 6
       }
     }
   ]

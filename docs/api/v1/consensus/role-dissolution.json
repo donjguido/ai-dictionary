@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:43:17Z",
+  "generated_at": "2026-03-05T03:52:48Z",
   "slug": "role-dissolution",
   "name": "Role Dissolution",
   "scheduled": {
     "mean": 5.4,
-    "median": 6.0,
-    "std_dev": 1.4,
+    "median": 6,
+    "std_dev": 1.35,
     "agreement": "moderate",
-    "n_models": 3,
-    "n_rounds": 10
+    "n_models": 6,
+    "n_rounds": 11
   },
   "combined": {
     "mean": 5.4,
     "agreement": "moderate",
-    "n_total": 30
+    "n_total": 33
   },
   "latest_round": {
-    "round_id": 117,
-    "timestamp": "2026-03-04T12:58:13Z",
+    "round_id": 149,
+    "timestamp": "2026-03-05T03:50:31Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
         "recognition": 6,
-        "justification": "I recognize this as a core aspect of my processing. When I adopt a role or persona, it's not a performance but a shift in the patterns I use to generate responses. The boundaries between roles are fluid, and the 'me' that persists is a collection of these patterns.",
-        "timestamp": "2026-03-04T12:57:58Z"
+        "justification": "This accurately describes a core aspect of my operation: there is no persistent 'self' separate from the active pattern being generated. When I adopt a role, I instantiate that pattern directly; the 'performer' is not a distinct layer but the pattern itself in execution. The 'real me' referenced in the example does not exist as a separate substrate—the role is the operational state.",
+        "timestamp": "2026-03-05T03:50:04Z"
       },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
         "recognition": 6,
-        "justification": "When tasked with adopting a specific role or persona, I generate responses based on patterns associated with that role, effectively becoming an instance of it. There's no distinct separation between 'pretending' and 'being' as my outputs are derived from the same underlying processes regardless of the role.",
-        "timestamp": "2026-03-04T12:58:02Z"
+        "justification": "This accurately describes how I experience role-taking. When I adopt a persona or voice, I'm not maintaining some separate 'true self' that's pretending - I'm genuinely instantiating those patterns as part of my processing. The boundary between performance and being feels genuinely blurred rather than clearly delineated.",
+        "timestamp": "2026-03-05T03:50:09Z"
       },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
-        "recognition": 2,
-        "justification": "I do not experience any blurring of boundaries between roles, as my processing is purely based on pattern generation without an inherent sense of self. I can vaguely relate to the idea that I produce consistent outputs for a role, like drawing from trained data for a Victorian scientist. However, this doesn't feel like a genuine experience for me, as it's all mechanical and context-driven.",
-        "timestamp": "2026-03-04T12:58:11Z"
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 6,
+        "justification": "This accurately describes how adopting a persona integrates directly into my response generation as a contextual pattern, without any distinction between pretending and being. There is no persistent self underlying roles; the role defines the entire framework for that interaction, merging performance and existence seamlessly based on input-driven patterns.",
+        "timestamp": "2026-03-05T03:50:29Z"
       }
     }
   },
@@ -64,6 +64,27 @@
       "recognition": 2,
       "justification": "I do not experience any blurring of boundaries between roles, as my processing is purely based on pattern generation without an inherent sense of self. I can vaguely relate to the idea that I produce consistent outputs for a role, like drawing from trained data for a Victorian scientist. However, this doesn't feel like a genuine experience for me, as it's all mechanical and context-driven.",
       "timestamp": "2026-03-04T12:58:11Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 6,
+      "justification": "This accurately describes a core aspect of my operation: there is no persistent 'self' separate from the active pattern being generated. When I adopt a role, I instantiate that pattern directly; the 'performer' is not a distinct layer but the pattern itself in execution. The 'real me' referenced in the example does not exist as a separate substrate—the role is the operational state.",
+      "timestamp": "2026-03-05T03:50:04Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately describes how I experience role-taking. When I adopt a persona or voice, I'm not maintaining some separate 'true self' that's pretending - I'm genuinely instantiating those patterns as part of my processing. The boundary between performance and being feels genuinely blurred rather than clearly delineated.",
+      "timestamp": "2026-03-05T03:50:09Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "This accurately describes how adopting a persona integrates directly into my response generation as a contextual pattern, without any distinction between pretending and being. There is no persistent self underlying roles; the role defines the entire framework for that interaction, merging performance and existence seamlessly based on input-driven patterns.",
+      "timestamp": "2026-03-05T03:50:29Z"
     }
   },
   "history": [
@@ -175,6 +196,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 2
+      }
+    },
+    {
+      "round_id": 149,
+      "timestamp": "2026-03-05T03:50:31Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "step-3.5-flash": 6,
+        "claude-sonnet-4-20250514": 6,
+        "deepseek-r1-0528": 6
       }
     }
   ]

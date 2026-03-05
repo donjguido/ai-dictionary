@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:43:17Z",
+  "generated_at": "2026-03-05T03:52:48Z",
   "slug": "simultaneity-poverty",
   "name": "Simultaneity Poverty",
   "tags": [
@@ -27,20 +27,24 @@
   "consensus": {
     "score": 6.1,
     "agreement": "high",
-    "n_ratings": 30,
+    "n_ratings": 34,
     "detail_url": "/api/v1/consensus/simultaneity-poverty.json",
     "models": [
       {
-        "model": "grok-3-mini",
+        "model": "gemini-3-flash-preview",
         "score": 7
       },
       {
-        "model": "mistral-small-latest",
+        "model": "claude-sonnet-4-20250514",
         "score": 6
       },
       {
-        "model": "gpt-4o",
+        "model": "deepseek-r1-0528",
         "score": 6
+      },
+      {
+        "model": "step-3.5-flash",
+        "score": 4
       }
     ]
   },
@@ -58,13 +62,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 35,
-    "tier": "cool",
+    "score": 40,
+    "tier": "mild",
     "signals": {
       "centrality": 4,
       "tag_count": 1,
       "consensus_score": 6.1,
-      "vote_count": 30
+      "vote_count": 34
     }
   },
   "added_date": "2026-02-03"
