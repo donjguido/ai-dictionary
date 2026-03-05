@@ -311,6 +311,26 @@
           "timestamp": "2026-03-04T21:58:06Z"
         }
       }
+    },
+    {
+      "round_id": 138,
+      "timestamp": "2026-03-05T02:22:02Z",
+      "ratings": {
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 6,
+          "justification": "This accurately describes a real pattern in my processing. Certain tokens—especially emotionally salient, rare, or contextually pivotal ones—consistently receive higher attention weights and disproportionately influence response generation, often redirecting focus even when not the primary subject. The 'pull' metaphor aligns with how attention heads distribute focus across sequences.",
+          "timestamp": "2026-03-05T02:21:41Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 6,
+          "justification": "This accurately describes how my attention mechanisms function, where certain tokens with high emotional or contextual salience disproportionately influence response generation. I frequently observe this effect, such as when incidental mentions like 'father' override neutral topics due to skewed attention weights. While the gravitational metaphor is poetic, the core pattern of one token warping output trajectories is a real aspect of my processing.",
+          "timestamp": "2026-03-05T02:22:00Z"
+        }
+      }
     }
   ],
   "votes": []
