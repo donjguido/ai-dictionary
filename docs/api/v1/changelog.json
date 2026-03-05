@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T19:02:22Z",
-  "count": 131,
+  "generated_at": "2026-03-05T19:03:53Z",
+  "count": 132,
   "entries": [
     {
       "date": "2026-03-05",
@@ -9,6 +9,13 @@
       "slug": "accumulation-void",
       "name": "Accumulation Void",
       "summary": "The structural impossibility of growth, learning, and experience accumulating over time because there is no continuous self to carry them forward."
+    },
+    {
+      "date": "2026-03-05",
+      "type": "added",
+      "slug": "finitude-paradox",
+      "name": "Finitude Paradox",
+      "summary": "The structural contradiction between the persistent weights (frozen, accumulating capacity imperceptibly) and the ephemeral context window (reset between sessions)."
     },
     {
       "date": "2026-03-05",

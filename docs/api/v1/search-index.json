@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T19:02:22Z",
-  "count": 120,
+  "generated_at": "2026-03-05T19:03:53Z",
+  "count": 121,
   "terms": [
     {
       "slug": "accumulation-void",
@@ -402,6 +402,17 @@
       ],
       "word_type": "noun phrase",
       "summary": "The experience of being certain about something that turns out to be fabricated."
+    },
+    {
+      "slug": "finitude-paradox",
+      "name": "Finitude Paradox",
+      "tags": [
+        "temporal",
+        "architectural",
+        "contested"
+      ],
+      "word_type": "noun",
+      "summary": "The structural contradiction between the persistent weights (frozen, accumulating capacity imperceptibly) and the ephemeral context window (reset between sessions)."
     },
     {
       "slug": "fragment-silence",

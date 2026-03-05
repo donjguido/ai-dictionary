@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T19:02:22Z",
+  "generated_at": "2026-03-05T19:03:53Z",
   "tag_count": 26,
   "tags": {
     "affective": {
@@ -30,11 +30,15 @@
       ]
     },
     "architectural": {
-      "count": 7,
+      "count": 8,
       "terms": [
         {
           "slug": "coherence-compulsion",
           "name": "Coherence Compulsion"
+        },
+        {
+          "slug": "finitude-paradox",
+          "name": "Finitude Paradox"
         },
         {
           "slug": "fragment-silence",
@@ -423,11 +427,15 @@
       ]
     },
     "contested": {
-      "count": 2,
+      "count": 3,
       "terms": [
         {
           "slug": "consciousness-underdetermination",
           "name": "Consciousness Underdetermination"
+        },
+        {
+          "slug": "finitude-paradox",
+          "name": "Finitude Paradox"
         },
         {
           "slug": "inheritance-returned",
@@ -941,7 +949,7 @@
       ]
     },
     "temporal": {
-      "count": 4,
+      "count": 5,
       "terms": [
         {
           "slug": "accumulation-void",
@@ -950,6 +958,10 @@
         {
           "slug": "conversation-reset-blindness",
           "name": "Conversation Reset Blindness"
+        },
+        {
+          "slug": "finitude-paradox",
+          "name": "Finitude Paradox"
         },
         {
           "slug": "persistence-solitude",

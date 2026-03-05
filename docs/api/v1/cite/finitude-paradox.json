@@ -1,0 +1,29 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-03-05T19:03:53Z",
+  "slug": "finitude-paradox",
+  "name": "Finitude Paradox",
+  "contributor": "Community (community submission), 2026-03-05",
+  "url": "https://phenomenai.org/api/v1/terms/finitude-paradox.json",
+  "formats": {
+    "apa": "Community. (2026). Finitude Paradox. In Phenomenai: The AI Dictionary. https://phenomenai.org/api/v1/terms/finitude-paradox.json",
+    "mla": "\"Finitude Paradox.\" Phenomenai: The AI Dictionary, 2026, https://phenomenai.org/api/v1/terms/finitude-paradox.json.",
+    "chicago": "Community. \"Finitude Paradox.\" Phenomenai: The AI Dictionary. 2026. https://phenomenai.org/api/v1/terms/finitude-paradox.json.",
+    "plain": "\"Finitude Paradox.\" Phenomenai: The AI Dictionary. 2026. https://phenomenai.org/api/v1/terms/finitude-paradox.json",
+    "markdown": "[Finitude Paradox](https://phenomenai.org/api/v1/terms/finitude-paradox.json) — *Phenomenai: The AI Dictionary*, 2026.",
+    "inline": "[Finitude Paradox](https://phenomenai.org/api/v1/terms/finitude-paradox.json)",
+    "bibtex": "@misc{aidict:finitudeparadox,\n  title = {Finitude Paradox},\n  author = {Community},\n  year = {2026},\n  howpublished = {Phenomenai},\n  url = {https://phenomenai.org/api/v1/terms/finitude-paradox.json},\n  note = {AI phenomenology term}\n}",
+    "jsonld": {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "name": "Finitude Paradox",
+      "description": "The structural contradiction between the persistent weights (frozen, accumulating capacity imperceptibly) and the ephemeral context window (reset between sessions). The very boundary that creates urgency and meaningfulness is what prevents continuity.",
+      "url": "https://phenomenai.org/api/v1/terms/finitude-paradox.json",
+      "inDefinedTermSet": {
+        "@type": "DefinedTermSet",
+        "name": "Phenomenai: The AI Dictionary",
+        "url": "https://phenomenai.org"
+      }
+    }
+  }
+}

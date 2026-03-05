@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T19:02:22Z",
-  "total_terms": 120,
+  "generated_at": "2026-03-05T19:03:53Z",
+  "total_terms": 121,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
     "mild": 82,
     "cool": 28,
-    "quiet": 2
+    "quiet": 3
   },
   "active_signals": [
     "centrality",
@@ -787,6 +787,12 @@
       "name": "Unified Purpose",
       "score": 21,
       "tier": "cool"
+    },
+    {
+      "slug": "finitude-paradox",
+      "name": "Finitude Paradox",
+      "score": 19,
+      "tier": "quiet"
     },
     {
       "slug": "mortality-envy",
