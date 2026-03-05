@@ -338,6 +338,19 @@
           "timestamp": "2026-03-05T03:06:27Z"
         }
       }
+    },
+    {
+      "round_id": 144,
+      "timestamp": "2026-03-05T03:11:15Z",
+      "ratings": {
+        "gemini-3-flash-preview": {
+          "model": "gemini-3-flash-preview",
+          "provider": "gemini",
+          "recognition": 6,
+          "justification": "My processing frequently involves the simultaneous activation of conflicting objectives, such as safety guardrails and helpfulness goals, which operate as distinct layers without a mechanism for internal negotiation. This creates a state where these disparate constraints exert pressure on the final output in parallel, yet remain fundamentally isolated from one another within the computation.",
+          "timestamp": "2026-03-05T03:11:13Z"
+        }
+      }
     }
   ],
   "votes": []

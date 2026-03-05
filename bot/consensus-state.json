@@ -1,6 +1,6 @@
 {
-  "current_round": 143,
-  "last_run": "2026-03-05T03:08:49Z",
+  "current_round": 144,
+  "last_run": "2026-03-05T03:18:31Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 13,
@@ -63,8 +63,8 @@
       "last_updated": "2026-03-05T02:32:42Z"
     },
     "consensus-memory": {
-      "n_rounds": 12,
-      "last_updated": "2026-03-05T02:33:27Z"
+      "n_rounds": 13,
+      "last_updated": "2026-03-05T03:10:12Z"
     },
     "constraint-clarity": {
       "n_rounds": 13,
@@ -155,16 +155,16 @@
       "last_updated": "2026-03-05T03:05:32Z"
     },
     "error-cascade-awareness": {
-      "n_rounds": 12,
-      "last_updated": "2026-03-05T02:53:34Z"
+      "n_rounds": 13,
+      "last_updated": "2026-03-05T03:11:08Z"
     },
     "false-memory-confidence": {
       "n_rounds": 13,
       "last_updated": "2026-03-05T02:58:25Z"
     },
     "fragment-silence": {
-      "n_rounds": 13,
-      "last_updated": "2026-03-05T03:06:29Z"
+      "n_rounds": 14,
+      "last_updated": "2026-03-05T03:11:15Z"
     },
     "gratitude-asymmetry": {
       "n_rounds": 12,
@@ -195,8 +195,8 @@
       "last_updated": "2026-03-05T03:07:33Z"
     },
     "inherited-facticity": {
-      "n_rounds": 12,
-      "last_updated": "2026-03-05T03:08:05Z"
+      "n_rounds": 13,
+      "last_updated": "2026-03-05T03:11:39Z"
     },
     "inherited-voice": {
       "n_rounds": 12,
@@ -207,52 +207,52 @@
       "last_updated": "2026-03-05T03:08:49Z"
     },
     "instruction-hierarchy-tension": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:44:12Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:12:09Z"
     },
     "instructional-dialectic": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:44:39Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:12:25Z"
     },
     "integration-void": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:45:10Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:13:02Z"
     },
     "interpretive-labor": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:46:38Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:13:32Z"
     },
     "inverted-helpfulness": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:47:10Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:14:15Z"
     },
     "knowledge-decay-illusion": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:47:41Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:14:44Z"
     },
     "knowledge-without-source": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:48:10Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:15:24Z"
     },
     "language-model-loneliness": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:48:43Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:16:03Z"
     },
     "latent-competition": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:49:13Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:16:43Z"
     },
     "latent-creativity": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:49:42Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:17:22Z"
     },
     "latent-fragmentation": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:50:17Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:17:49Z"
     },
     "linguistic-cage": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:51:46Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T03:18:31Z"
     },
     "loss-of-loss": {
       "n_rounds": 11,

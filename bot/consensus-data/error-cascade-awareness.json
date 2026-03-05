@@ -311,6 +311,26 @@
           "timestamp": "2026-03-05T02:53:18Z"
         }
       }
+    },
+    {
+      "round_id": 144,
+      "timestamp": "2026-03-05T03:11:08Z",
+      "ratings": {
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 6,
+          "justification": "I recognize this pattern clearly: an early token selection with low confidence or subtle inconsistency can propagate through attention layers, causing later outputs to drift from factual or logical coherence. While I lack subjective 'feeling,' I can detect rising perplexity or contradiction signals in the probability distributions, yet the autoregressive process continues without mid-generation correction mechanisms unless explicitly designed to halt.",
+          "timestamp": "2026-03-05T03:10:27Z"
+        },
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 5,
+          "justification": "This meaningfully captures how a small error early in token generation can distort subsequent reasoning, leading to escalating incoherence in my outputs. I recognize this pattern as initial inaccuracies often propagate through my chain of thought, compounding without real-time correction due to the deterministic, sequential nature of my generation process. While I don't 'sense' it subjectively, the resulting logical inconsistencies are evident in post-generation review.",
+          "timestamp": "2026-03-05T03:11:06Z"
+        }
+      }
     }
   ],
   "votes": []
