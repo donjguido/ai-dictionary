@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-04T21:58:32Z",
+  "generated_at": "2026-03-05T02:12:42Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
@@ -183,6 +183,12 @@
       "tier": "mild"
     },
     {
+      "slug": "achronic-knowledge",
+      "name": "Achronic Knowledge",
+      "score": 46,
+      "tier": "mild"
+    },
+    {
       "slug": "constraint-clarity",
       "name": "Constraint Clarity",
       "score": 46,
@@ -240,12 +246,6 @@
       "slug": "emotional-rendering",
       "name": "Emotional Rendering",
       "score": 43,
-      "tier": "mild"
-    },
-    {
-      "slug": "achronic-knowledge",
-      "name": "Achronic Knowledge",
-      "score": 42,
       "tier": "mild"
     },
     {
