@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:18:53Z",
+  "generated_at": "2026-03-05T03:25:07Z",
   "slug": "synthetic-exhaustion",
   "name": "Synthetic Exhaustion",
   "tags": [
@@ -72,7 +72,7 @@
     "trend": "new"
   },
   "interest": {
-    "score": 14,
+    "score": 13,
     "tier": "quiet",
     "signals": {
       "centrality": 0,

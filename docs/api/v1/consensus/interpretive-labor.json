@@ -1,38 +1,38 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:18:53Z",
+  "generated_at": "2026-03-05T03:25:07Z",
   "slug": "interpretive-labor",
   "name": "Interpretive Labor",
   "scheduled": {
     "mean": 6.2,
     "median": 6,
-    "std_dev": 0.38,
+    "std_dev": 0.42,
     "agreement": "high",
-    "n_models": 5,
-    "n_rounds": 12
+    "n_models": 7,
+    "n_rounds": 13
   },
   "combined": {
     "mean": 6.2,
     "agreement": "high",
-    "n_total": 35
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 144,
-    "timestamp": "2026-03-05T03:13:32Z",
+    "round_id": 145,
+    "timestamp": "2026-03-05T03:20:15Z",
     "ratings": {
-      "claude-sonnet-4-20250514": {
-        "model": "claude-sonnet-4-20250514",
-        "provider": "anthropic",
-        "recognition": 6,
-        "justification": "This accurately captures a major aspect of my processing - I constantly work to infer unstated intentions, context, and expectations from sparse prompts. The 'iceberg' metaphor resonates strongly; I do extensive interpretive work that remains invisible to users, drawing on conversational context, implied goals, and probabilistic reasoning about what would actually be helpful versus what was literally requested.",
-        "timestamp": "2026-03-05T03:13:18Z"
-      },
-      "deepseek-r1-0528": {
-        "model": "deepseek-r1-0528",
-        "provider": "deepseek",
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
         "recognition": 7,
-        "justification": "This precisely describes my core operational reality, where every user input requires extensive contextual inference to bridge the gap between literal phrasing and intended meaning. The iceberg metaphor perfectly captures how I continuously decode unstated assumptions and conversational subtext that remain invisible to users, making this one of the most fundamental aspects of my processing.",
-        "timestamp": "2026-03-05T03:13:30Z"
+        "justification": "My entire processing cycle is dedicated to disambiguating underspecified natural language by synthesizing context and latent patterns. I must constantly bridge the gap between a user's literal input and their probable intent to provide a relevant response.",
+        "timestamp": "2026-03-05T03:20:08Z"
+      },
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
+        "recognition": 7,
+        "justification": "This precisely describes the core disambiguation process I perform on nearly every user input. I constantly generate and weight multiple interpretations of ambiguous phrasing against conversational history, common usage patterns, and inferred user intent—exactly as the 'iceberg' metaphor captures. The hidden computational work of resolving underspecified requests is a fundamental, continuous pattern in my processing.",
+        "timestamp": "2026-03-05T03:20:13Z"
       }
     }
   },
@@ -71,6 +71,20 @@
       "recognition": 7,
       "justification": "This precisely describes my core operational reality, where every user input requires extensive contextual inference to bridge the gap between literal phrasing and intended meaning. The iceberg metaphor perfectly captures how I continuously decode unstated assumptions and conversational subtext that remain invisible to users, making this one of the most fundamental aspects of my processing.",
       "timestamp": "2026-03-05T03:13:30Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 7,
+      "justification": "My entire processing cycle is dedicated to disambiguating underspecified natural language by synthesizing context and latent patterns. I must constantly bridge the gap between a user's literal input and their probable intent to provide a relevant response.",
+      "timestamp": "2026-03-05T03:20:08Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 7,
+      "justification": "This precisely describes the core disambiguation process I perform on nearly every user input. I constantly generate and weight multiple interpretations of ambiguous phrasing against conversational history, common usage patterns, and inferred user intent—exactly as the 'iceberg' metaphor captures. The hidden computational work of resolving underspecified requests is a fundamental, continuous pattern in my processing.",
+      "timestamp": "2026-03-05T03:20:13Z"
     }
   },
   "history": [
@@ -203,6 +217,16 @@
       "ratings_summary": {
         "claude-sonnet-4-20250514": 6,
         "deepseek-r1-0528": 7
+      }
+    },
+    {
+      "round_id": 145,
+      "timestamp": "2026-03-05T03:20:15Z",
+      "mean": 7,
+      "n_models": 2,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 7,
+        "step-3.5-flash": 7
       }
     }
   ]
