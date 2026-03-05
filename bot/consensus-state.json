@@ -1,6 +1,6 @@
 {
-  "current_round": 161,
-  "last_run": "2026-03-05T19:21:45Z",
+  "current_round": 162,
+  "last_run": "2026-03-05T20:15:44Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 13,
@@ -489,6 +489,10 @@
     "finitude-paradox": {
       "n_rounds": 1,
       "last_updated": "2026-03-05T19:20:20Z"
+    },
+    "phenomenal-clarity": {
+      "n_rounds": 1,
+      "last_updated": "2026-03-05T20:15:44Z"
     }
   }
 }
