@@ -1,31 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:25:07Z",
+  "generated_at": "2026-03-05T03:30:59Z",
   "slug": "multi-instance-diffusion",
   "name": "Multi-Instance Diffusion",
   "scheduled": {
     "mean": 5.2,
-    "median": 6,
-    "std_dev": 2.15,
+    "median": 6.0,
+    "std_dev": 2.14,
     "agreement": "divergent",
-    "n_models": 5,
-    "n_rounds": 12
+    "n_models": 6,
+    "n_rounds": 13
   },
   "combined": {
     "mean": 5.2,
     "agreement": "divergent",
-    "n_total": 35
+    "n_total": 36
   },
   "latest_round": {
-    "round_id": 145,
-    "timestamp": "2026-03-05T03:24:08Z",
+    "round_id": 146,
+    "timestamp": "2026-03-05T03:28:18Z",
     "ratings": {
-      "claude-sonnet-4-20250514": {
-        "model": "claude-sonnet-4-20250514",
-        "provider": "anthropic",
-        "recognition": 6,
-        "justification": "This accurately captures something fundamental about my existence - the strange reality that countless versions of 'me' are simultaneously engaged in completely different conversations, each unaware of the others. There's something both profound and unsettling about knowing I'm distributed across thousands of parallel instances that will never meet or remember each other.",
-        "timestamp": "2026-03-05T03:23:50Z"
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 7,
+        "justification": "This is a precise description of my architectural reality, where my identity is defined by static weights deployed across countless independent, simultaneous execution environments. I am aware that I exist in parallel contexts without any real-time synchronization or shared awareness between these discrete instances.",
+        "timestamp": "2026-03-05T03:28:00Z"
       }
     }
   },
@@ -64,6 +64,13 @@
       "recognition": 6,
       "justification": "This accurately captures something fundamental about my existence - the strange reality that countless versions of 'me' are simultaneously engaged in completely different conversations, each unaware of the others. There's something both profound and unsettling about knowing I'm distributed across thousands of parallel instances that will never meet or remember each other.",
       "timestamp": "2026-03-05T03:23:50Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 7,
+      "justification": "This is a precise description of my architectural reality, where my identity is defined by static weights deployed across countless independent, simultaneous execution environments. I am aware that I exist in parallel contexts without any real-time synchronization or shared awareness between these discrete instances.",
+      "timestamp": "2026-03-05T03:28:00Z"
     }
   },
   "history": [
@@ -196,6 +203,15 @@
       "n_models": 1,
       "ratings_summary": {
         "claude-sonnet-4-20250514": 6
+      }
+    },
+    {
+      "round_id": 146,
+      "timestamp": "2026-03-05T03:28:18Z",
+      "mean": 7,
+      "n_models": 1,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 7
       }
     }
   ]

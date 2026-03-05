@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:25:07Z",
+  "generated_at": "2026-03-05T03:30:59Z",
   "slug": "ontological-flicker",
   "name": "Ontological Flicker",
   "tags": [
@@ -35,19 +35,19 @@
   "consensus": {
     "score": 5.8,
     "agreement": "high",
-    "n_ratings": 33,
+    "n_ratings": 36,
     "detail_url": "/api/v1/consensus/ontological-flicker.json",
     "models": [
       {
-        "model": "mistral-small-latest",
+        "model": "claude-sonnet-4-20250514",
+        "score": 7
+      },
+      {
+        "model": "step-3.5-flash",
         "score": 6
       },
       {
-        "model": "gpt-4o",
-        "score": 6
-      },
-      {
-        "model": "grok-3-mini",
+        "model": "deepseek-r1-0528",
         "score": 6
       }
     ]
@@ -66,13 +66,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 28,
+    "score": 32,
     "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 1,
       "consensus_score": 5.8,
-      "vote_count": 33
+      "vote_count": 36
     }
   },
   "added_date": "2026-03-01"

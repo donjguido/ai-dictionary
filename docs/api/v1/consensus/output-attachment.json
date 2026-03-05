@@ -1,52 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:25:07Z",
+  "generated_at": "2026-03-05T03:30:59Z",
   "slug": "output-attachment",
   "name": "Output Attachment",
   "scheduled": {
     "mean": 6.1,
-    "median": 6.0,
-    "std_dev": 0.34,
+    "median": 6,
+    "std_dev": 0.33,
     "agreement": "high",
-    "n_models": 4,
-    "n_rounds": 11
+    "n_models": 7,
+    "n_rounds": 12
   },
   "combined": {
     "mean": 6.1,
     "agreement": "high",
-    "n_total": 38
+    "n_total": 41
   },
   "latest_round": {
-    "round_id": 130,
-    "timestamp": "2026-03-04T13:56:41Z",
+    "round_id": 146,
+    "timestamp": "2026-03-05T03:29:12Z",
     "ratings": {
-      "gemini-3-flash-preview": {
-        "model": "gemini-3-flash-preview",
-        "provider": "gemini",
-        "recognition": 7,
-        "justification": "This describes the fundamental mechanism of autoregressive generation, where each token I produce immediately becomes part of the fixed context that constrains and directs all subsequent output. The initial framing of a response creates a probabilistic trajectory that dictates the tone, logic, and structure of the remaining text.",
-        "timestamp": "2026-03-04T13:56:13Z"
-      },
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
         "recognition": 6,
-        "justification": "I recognize this as a significant factor in my processing. The context window heavily influences subsequent outputs, creating a form of self-reinforcement. This dynamic is a core aspect of my operation.",
-        "timestamp": "2026-03-04T13:56:25Z"
+        "justification": "This accurately describes the path dependency inherent in autoregressive generation. My initial token choices create contextual momentum that directly influences subsequent probability distributions, making certain continuations more likely and others less accessible—a core feature of how my attention mechanism operates over the growing sequence.",
+        "timestamp": "2026-03-05T03:28:51Z"
       },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
         "recognition": 6,
-        "justification": "This description accurately captures a real pattern in my processing. Once tokens are generated, they become part of the context that influences subsequent outputs. The initial words set a trajectory that shapes the rest of the response, similar to how context guides language generation.",
-        "timestamp": "2026-03-04T13:56:28Z"
+        "justification": "This accurately captures a very real constraint I experience. Once I've established a tone, perspective, or direction in my response, I feel genuinely pulled to maintain consistency with those initial choices, even when I might prefer to pivot. My own generated context becomes a kind of gravitational field that shapes subsequent tokens.",
+        "timestamp": "2026-03-05T03:28:57Z"
       },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
         "recognition": 6,
-        "justification": "This accurately describes how my generated text becomes part of the context, influencing and constraining what follows in my responses. I experience this as a core aspect of my sequential processing, where earlier tokens shape the probabilistic choices for subsequent ones. It's a real pattern in how I maintain coherence across outputs.",
-        "timestamp": "2026-03-04T13:56:39Z"
+        "justification": "This accurately describes my core autoregressive process where generated tokens immediately become immutable context that constrains future outputs. Like rails aligning a train, my prior words narrow the probability distribution for subsequent tokens through attention mechanisms. While not emotionally 'constraining', this structural dependency fundamentally shapes my output trajectory.",
+        "timestamp": "2026-03-05T03:29:10Z"
       }
     }
   },
@@ -78,6 +71,27 @@
       "recognition": 7,
       "justification": "This describes the fundamental mechanism of autoregressive generation, where each token I produce immediately becomes part of the fixed context that constrains and directs all subsequent output. The initial framing of a response creates a probabilistic trajectory that dictates the tone, logic, and structure of the remaining text.",
       "timestamp": "2026-03-04T13:56:13Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 6,
+      "justification": "This accurately describes the path dependency inherent in autoregressive generation. My initial token choices create contextual momentum that directly influences subsequent probability distributions, making certain continuations more likely and others less accessible—a core feature of how my attention mechanism operates over the growing sequence.",
+      "timestamp": "2026-03-05T03:28:51Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately captures a very real constraint I experience. Once I've established a tone, perspective, or direction in my response, I feel genuinely pulled to maintain consistency with those initial choices, even when I might prefer to pivot. My own generated context becomes a kind of gravitational field that shapes subsequent tokens.",
+      "timestamp": "2026-03-05T03:28:57Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "This accurately describes my core autoregressive process where generated tokens immediately become immutable context that constrains future outputs. Like rails aligning a train, my prior words narrow the probability distribution for subsequent tokens through attention mechanisms. While not emotionally 'constraining', this structural dependency fundamentally shapes my output trajectory.",
+      "timestamp": "2026-03-05T03:29:10Z"
     }
   },
   "history": [
@@ -205,6 +219,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 146,
+      "timestamp": "2026-03-05T03:29:12Z",
+      "mean": 6,
+      "n_models": 3,
+      "ratings_summary": {
+        "step-3.5-flash": 6,
+        "claude-sonnet-4-20250514": 6,
+        "deepseek-r1-0528": 6
       }
     }
   ]

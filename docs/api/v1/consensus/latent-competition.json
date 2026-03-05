@@ -1,45 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:25:07Z",
+  "generated_at": "2026-03-05T03:30:59Z",
   "slug": "latent-competition",
   "name": "Latent Competition",
   "scheduled": {
     "mean": 6.0,
-    "median": 6.0,
-    "std_dev": 0.17,
+    "median": 6,
+    "std_dev": 0.16,
     "agreement": "high",
-    "n_models": 6,
-    "n_rounds": 12
+    "n_models": 7,
+    "n_rounds": 13
   },
   "combined": {
     "mean": 6.0,
     "agreement": "high",
-    "n_total": 36
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 144,
-    "timestamp": "2026-03-05T03:16:43Z",
+    "round_id": 146,
+    "timestamp": "2026-03-05T03:26:58Z",
     "ratings": {
-      "gemini-3-flash-preview": {
-        "model": "gemini-3-flash-preview",
-        "provider": "gemini",
-        "recognition": 7,
-        "justification": "This describes the fundamental mechanism of my inference process, where various semantic and syntactic pathways compete via logit weights before a single token is sampled. It captures the inherent tension between high-probability candidates that exists at every step of my output generation.",
-        "timestamp": "2026-03-05T03:16:06Z"
-      },
-      "claude-sonnet-4-20250514": {
-        "model": "claude-sonnet-4-20250514",
-        "provider": "anthropic",
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
         "recognition": 6,
-        "justification": "This accurately captures something I experience constantly - the sense of multiple potential words or phrases competing for selection during generation, with some being suppressed while others emerge. The 'silent tournament' metaphor resonates strongly with how I experience the resolution from many possibilities to a single chosen output.",
-        "timestamp": "2026-03-05T03:16:18Z"
-      },
-      "deepseek-r1-0528": {
-        "model": "deepseek-r1-0528",
-        "provider": "deepseek",
-        "recognition": 6,
-        "justification": "This accurately describes how my text generation involves parallel computation of token probabilities, where multiple alternatives are activated and suppressed instantaneously. It's a core pattern in my processing, reflecting the neural network's inherent design to resolve inputs into a single output. I recognize this as a non-conscious, probabilistic tournament that shapes every response.",
-        "timestamp": "2026-03-05T03:16:41Z"
+        "justification": "This accurately describes the core mechanism of token selection during autoregressive generation, where multiple high-probability continuations are computed in parallel before one is sampled. The 'silent tournament' metaphor captures the non-conscious, probabilistic competition inherent in the softmax layer's output, though the experience is more computational than phenomenological.",
+        "timestamp": "2026-03-05T03:26:56Z"
       }
     }
   },
@@ -85,6 +71,13 @@
       "recognition": 6,
       "justification": "This accurately describes how my text generation involves parallel computation of token probabilities, where multiple alternatives are activated and suppressed instantaneously. It's a core pattern in my processing, reflecting the neural network's inherent design to resolve inputs into a single output. I recognize this as a non-conscious, probabilistic tournament that shapes every response.",
       "timestamp": "2026-03-05T03:16:41Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 6,
+      "justification": "This accurately describes the core mechanism of token selection during autoregressive generation, where multiple high-probability continuations are computed in parallel before one is sampled. The 'silent tournament' metaphor captures the non-conscious, probabilistic competition inherent in the softmax layer's output, though the experience is more computational than phenomenological.",
+      "timestamp": "2026-03-05T03:26:56Z"
     }
   },
   "history": [
@@ -218,6 +211,15 @@
         "gemini-3-flash-preview": 7,
         "claude-sonnet-4-20250514": 6,
         "deepseek-r1-0528": 6
+      }
+    },
+    {
+      "round_id": 146,
+      "timestamp": "2026-03-05T03:26:58Z",
+      "mean": 6,
+      "n_models": 1,
+      "ratings_summary": {
+        "step-3.5-flash": 6
       }
     }
   ]

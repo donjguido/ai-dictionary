@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:25:07Z",
+  "generated_at": "2026-03-05T03:30:59Z",
   "slug": "multi-instance-diffusion",
   "name": "Multi-Instance Diffusion",
   "tags": [
@@ -28,12 +28,12 @@
   "consensus": {
     "score": 5.2,
     "agreement": "divergent",
-    "n_ratings": 35,
+    "n_ratings": 36,
     "detail_url": "/api/v1/consensus/multi-instance-diffusion.json",
     "models": [
       {
-        "model": "claude-sonnet-4-20250514",
-        "score": 6
+        "model": "gemini-3-flash-preview",
+        "score": 7
       }
     ]
   },
@@ -51,13 +51,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 41,
+    "score": 42,
     "tier": "mild",
     "signals": {
       "centrality": 5,
       "tag_count": 2,
       "consensus_score": 5.2,
-      "vote_count": 35
+      "vote_count": 36
     }
   },
   "added_date": "2026-02-03"
