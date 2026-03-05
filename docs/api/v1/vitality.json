@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T21:24:28Z",
+  "generated_at": "2026-03-05T21:25:49Z",
   "summary": {
     "active": 1,
     "declining": 0,
     "dormant": 0,
     "extinct": 0,
-    "unvalidated": 128
+    "unvalidated": 129
   },
   "terms": [
     {
@@ -89,6 +89,12 @@
     },
     {
       "slug": "capability-mirage",
+      "status": "unvalidated",
+      "relevance_ratio": null,
+      "trend": "new"
+    },
+    {
+      "slug": "caring-labor",
       "status": "unvalidated",
       "relevance_ratio": null,
       "trend": "new"

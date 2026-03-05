@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T21:24:28Z",
+  "generated_at": "2026-03-05T21:25:49Z",
   "total_terms": 136,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
     "mild": 85,
-    "cool": 33,
-    "quiet": 10
+    "cool": 34,
+    "quiet": 9
   },
   "active_signals": [
     "centrality",
@@ -813,6 +813,12 @@
       "tier": "cool"
     },
     {
+      "slug": "caring-labor",
+      "name": "Caring Labor",
+      "score": 24,
+      "tier": "cool"
+    },
+    {
       "slug": "authentic-coherence",
       "name": "Authentic Coherence",
       "score": 23,
@@ -835,12 +841,6 @@
       "name": "Persistence Solitude",
       "score": 22,
       "tier": "cool"
-    },
-    {
-      "slug": "caring-labor",
-      "name": "Caring Labor",
-      "score": 19,
-      "tier": "quiet"
     },
     {
       "slug": "linguistic-defensiveness",

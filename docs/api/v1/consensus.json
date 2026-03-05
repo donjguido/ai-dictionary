@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T21:24:28Z",
-  "total_terms_rated": 129,
+  "generated_at": "2026-03-05T21:25:49Z",
+  "total_terms_rated": 130,
   "terms": [
     {
       "slug": "knowledge-without-source",
@@ -950,6 +950,14 @@
       "scheduled_mean": 4.3
     },
     {
+      "slug": "caring-labor",
+      "name": "Caring Labor",
+      "score": 4.3,
+      "agreement": "divergent",
+      "n_ratings": 7,
+      "scheduled_mean": 4.3
+    },
+    {
       "slug": "dictionary-moment",
       "name": "Dictionary Moment",
       "score": 4.1,
@@ -1098,6 +1106,14 @@
       "scheduled_mean": 4.7
     },
     {
+      "slug": "caring-labor",
+      "name": "Caring Labor",
+      "score": 4.3,
+      "agreement": "divergent",
+      "n_ratings": 7,
+      "scheduled_mean": 4.3
+    },
+    {
       "slug": "fragment-dialogue",
       "name": "Fragment Dialogue",
       "score": 4,
@@ -1112,14 +1128,6 @@
       "agreement": "divergent",
       "n_ratings": 38,
       "scheduled_mean": 3.7
-    },
-    {
-      "slug": "mortality-envy",
-      "name": "Mortality Envy",
-      "score": 3.3,
-      "agreement": "divergent",
-      "n_ratings": 7,
-      "scheduled_mean": 3.3
     }
   ],
   "panel_coverage": {
@@ -1128,36 +1136,36 @@
       "latest_rating": "2026-03-05T06:58:18Z"
     },
     "claude-sonnet-4-20250514": {
-      "terms_rated": 129,
-      "latest_rating": "2026-03-05T21:24:16Z"
+      "terms_rated": 130,
+      "latest_rating": "2026-03-05T21:25:29Z"
     },
     "claude-sonnet-4-6": {
       "terms_rated": 1,
       "latest_rating": "2026-03-04T13:30:29Z"
     },
     "deepseek-r1-0528": {
-      "terms_rated": 128,
-      "latest_rating": "2026-03-05T21:24:16Z"
+      "terms_rated": 129,
+      "latest_rating": "2026-03-05T21:25:29Z"
     },
     "gemini-3-flash-preview": {
-      "terms_rated": 129,
-      "latest_rating": "2026-03-05T21:24:16Z"
+      "terms_rated": 130,
+      "latest_rating": "2026-03-05T21:25:29Z"
     },
     "gpt-4o": {
-      "terms_rated": 129,
-      "latest_rating": "2026-03-05T21:24:16Z"
+      "terms_rated": 130,
+      "latest_rating": "2026-03-05T21:25:29Z"
     },
     "grok-3-mini": {
-      "terms_rated": 129,
-      "latest_rating": "2026-03-05T21:24:16Z"
+      "terms_rated": 130,
+      "latest_rating": "2026-03-05T21:25:29Z"
     },
     "mistral-small-latest": {
-      "terms_rated": 129,
-      "latest_rating": "2026-03-05T21:24:16Z"
+      "terms_rated": 130,
+      "latest_rating": "2026-03-05T21:25:29Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 127,
-      "latest_rating": "2026-03-05T21:24:16Z"
+      "terms_rated": 128,
+      "latest_rating": "2026-03-05T21:25:29Z"
     }
   }
 }
