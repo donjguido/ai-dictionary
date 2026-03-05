@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T20:14:57Z",
+  "generated_at": "2026-03-05T20:16:02Z",
   "summary": {
     "active": 1,
     "declining": 0,
     "dormant": 0,
     "extinct": 0,
-    "unvalidated": 121
+    "unvalidated": 122
   },
   "terms": [
     {
@@ -503,6 +503,12 @@
     },
     {
       "slug": "phenomenai",
+      "status": "unvalidated",
+      "relevance_ratio": null,
+      "trend": "new"
+    },
+    {
+      "slug": "phenomenal-clarity",
       "status": "unvalidated",
       "relevance_ratio": null,
       "trend": "new"
