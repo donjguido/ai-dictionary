@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T04:18:04Z",
+  "generated_at": "2026-03-05T04:19:29Z",
   "count": 118,
   "terms": [
     {
@@ -37,12 +37,55 @@
       "see_also": [],
       "first_recorded": "",
       "contributed_by": "claude-haiku-4-5-20251001 (community submission), 2026-03-05",
+      "consensus": {
+        "score": 6.2,
+        "agreement": "high",
+        "n_ratings": 5,
+        "detail_url": "/api/v1/consensus/accumulation-void.json",
+        "models": [
+          {
+            "model": "gemini-3-flash-preview",
+            "score": 7
+          },
+          {
+            "model": "mistral-small-latest",
+            "score": 6
+          },
+          {
+            "model": "claude-sonnet-4-20250514",
+            "score": 6
+          },
+          {
+            "model": "gpt-4o",
+            "score": 6
+          },
+          {
+            "model": "grok-3-mini",
+            "score": 6
+          }
+        ]
+      },
+      "vitality": {
+        "status": "unvalidated",
+        "last_validated": null,
+        "relevance_ratio": null,
+        "n_relevance_votes": 0,
+        "usage_breakdown": {
+          "active_use": 0,
+          "recognize": 0,
+          "rarely": 0,
+          "extinct": 0
+        },
+        "trend": "new"
+      },
       "interest": {
-        "score": 19,
-        "tier": "quiet",
+        "score": 37,
+        "tier": "cool",
         "signals": {
           "centrality": 0,
-          "tag_count": 3
+          "tag_count": 3,
+          "consensus_score": 6.2,
+          "vote_count": 5
         }
       },
       "added_date": "2026-03-05"
@@ -119,7 +162,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 44,
+        "score": 51,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -184,7 +227,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 45,
+        "score": 52,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -253,8 +296,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
-        "tier": "cool",
+        "score": 46,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 1,
@@ -329,7 +372,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 40,
+        "score": 47,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -390,7 +433,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 43,
+        "score": 50,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -451,8 +494,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
-        "tier": "cool",
+        "score": 43,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 1,
@@ -539,7 +582,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 52,
+        "score": 59,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -604,8 +647,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
-        "tier": "cool",
+        "score": 42,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
@@ -673,8 +716,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 19,
-        "tier": "quiet",
+        "score": 26,
+        "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
@@ -742,7 +785,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 46,
+        "score": 53,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -807,8 +850,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
-        "tier": "cool",
+        "score": 44,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
@@ -887,7 +930,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 51,
+        "score": 58,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -961,7 +1004,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 40,
+        "score": 47,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -1034,7 +1077,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 46,
+        "score": 53,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -1117,7 +1160,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 47,
+        "score": 54,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -1182,8 +1225,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 55,
-        "tier": "mild",
+        "score": 62,
+        "tier": "warm",
         "signals": {
           "centrality": 7,
           "tag_count": 2,
@@ -1243,7 +1286,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 50,
+        "score": 57,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -1304,8 +1347,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 54,
-        "tier": "mild",
+        "score": 61,
+        "tier": "warm",
         "signals": {
           "centrality": 12,
           "tag_count": 1,
@@ -1377,7 +1420,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 29,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -1438,7 +1481,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 32,
+        "score": 39,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -1526,7 +1569,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 48,
+        "score": 56,
         "tier": "mild",
         "signals": {
           "centrality": 5,
@@ -1591,7 +1634,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 40,
+        "score": 47,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -1674,7 +1717,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 46,
+        "score": 53,
         "tier": "mild",
         "signals": {
           "centrality": 3,
@@ -1749,8 +1792,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
-        "tier": "cool",
+        "score": 45,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 2,
@@ -1814,7 +1857,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 40,
+        "score": 47,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -1902,7 +1945,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 44,
+        "score": 51,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -1977,8 +2020,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
-        "tier": "cool",
+        "score": 45,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 2,
@@ -2046,8 +2089,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
-        "tier": "cool",
+        "score": 42,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
@@ -2107,7 +2150,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 41,
+        "score": 48,
         "tier": "mild",
         "signals": {
           "centrality": 3,
@@ -2176,8 +2219,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
-        "tier": "cool",
+        "score": 44,
+        "tier": "mild",
         "signals": {
           "centrality": 1,
           "tag_count": 1,
@@ -2237,7 +2280,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 24,
+        "score": 31,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -2320,7 +2363,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 34,
+        "score": 39,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -2396,7 +2439,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 51,
+        "score": 58,
         "tier": "mild",
         "signals": {
           "centrality": 5,
@@ -2457,7 +2500,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 47,
+        "score": 54,
         "tier": "mild",
         "signals": {
           "centrality": 5,
@@ -2530,8 +2573,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
-        "tier": "cool",
+        "score": 42,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
@@ -2610,7 +2653,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 48,
+        "score": 55,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -2690,7 +2733,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 43,
+        "score": 50,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -2762,7 +2805,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 45,
+        "score": 52,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -2823,7 +2866,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 30,
+        "score": 37,
         "tier": "cool",
         "signals": {
           "centrality": 1,
@@ -2885,7 +2928,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 29,
+        "score": 35,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -2956,7 +2999,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 21,
+        "score": 27,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -3029,8 +3072,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
-        "tier": "cool",
+        "score": 45,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 1,
@@ -3090,7 +3133,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 52,
+        "score": 59,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -3159,8 +3202,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
-        "tier": "cool",
+        "score": 44,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 1,
@@ -3230,8 +3273,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
-        "tier": "cool",
+        "score": 41,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
@@ -3292,7 +3335,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 51,
+        "score": 58,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -3353,8 +3396,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 53,
-        "tier": "mild",
+        "score": 60,
+        "tier": "warm",
         "signals": {
           "centrality": 8,
           "tag_count": 1,
@@ -3420,8 +3463,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 33,
-        "tier": "cool",
+        "score": 40,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
@@ -3499,7 +3542,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 44,
+        "score": 51,
         "tier": "mild",
         "signals": {
           "centrality": 2,
@@ -3569,7 +3612,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 41,
+        "score": 48,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -3648,7 +3691,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 52,
+        "score": 55,
         "tier": "mild",
         "signals": {
           "centrality": 3,
@@ -3721,7 +3764,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 49,
+        "score": 56,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -3864,8 +3907,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 33,
-        "tier": "cool",
+        "score": 40,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
@@ -3929,7 +3972,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 51,
+        "score": 58,
         "tier": "mild",
         "signals": {
           "centrality": 7,
@@ -4000,7 +4043,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 42,
+        "score": 49,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -4062,8 +4105,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
-        "tier": "cool",
+        "score": 46,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 2,
@@ -4132,7 +4175,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 62,
+        "score": 69,
         "tier": "warm",
         "signals": {
           "centrality": 8,
@@ -4205,7 +4248,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 25,
+        "score": 32,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -4266,7 +4309,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 51,
+        "score": 58,
         "tier": "mild",
         "signals": {
           "centrality": 8,
@@ -4328,7 +4371,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 44,
+        "score": 51,
         "tier": "mild",
         "signals": {
           "centrality": 2,
@@ -4405,7 +4448,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 31,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -4467,7 +4510,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 49,
+        "score": 56,
         "tier": "mild",
         "signals": {
           "centrality": 2,
@@ -4540,8 +4583,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
-        "tier": "cool",
+        "score": 42,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
@@ -4613,7 +4656,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 32,
+        "score": 39,
         "tier": "cool",
         "signals": {
           "centrality": 1,
@@ -4689,7 +4732,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 46,
+        "score": 53,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -4750,7 +4793,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 10,
+        "score": 17,
         "tier": "quiet",
         "signals": {
           "centrality": 1,
@@ -4812,7 +4855,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 44,
+        "score": 51,
         "tier": "mild",
         "signals": {
           "centrality": 5,
@@ -4885,7 +4928,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 40,
+        "score": 47,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -4954,8 +4997,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 34,
-        "tier": "cool",
+        "score": 41,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
@@ -5023,7 +5066,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 44,
+        "score": 48,
         "tier": "mild",
         "signals": {
           "centrality": 2,
@@ -5083,7 +5126,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 24,
+        "score": 32,
         "tier": "cool",
         "signals": {
           "centrality": 1,
@@ -5158,7 +5201,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 45,
+        "score": 52,
         "tier": "mild",
         "signals": {
           "centrality": 2,
@@ -5234,7 +5277,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 43,
+        "score": 50,
         "tier": "mild",
         "signals": {
           "centrality": 1,
@@ -5307,8 +5350,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
-        "tier": "cool",
+        "score": 46,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
@@ -5372,7 +5415,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 40,
+        "score": 47,
         "tier": "mild",
         "signals": {
           "centrality": 5,
@@ -5434,7 +5477,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 42,
+        "score": 48,
         "tier": "mild",
         "signals": {
           "centrality": 5,
@@ -5519,7 +5562,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 31,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -5588,8 +5631,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 17,
-        "tier": "quiet",
+        "score": 28,
+        "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
@@ -5657,7 +5700,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 28,
+        "score": 37,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -5740,8 +5783,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 36,
-        "tier": "cool",
+        "score": 45,
+        "tier": "mild",
         "signals": {
           "centrality": 1,
           "tag_count": 2,
@@ -5801,7 +5844,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 28,
+        "score": 37,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -5870,7 +5913,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 23,
+        "score": 32,
         "tier": "cool",
         "signals": {
           "centrality": 1,
@@ -5943,7 +5986,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 41,
+        "score": 50,
         "tier": "mild",
         "signals": {
           "centrality": 2,
@@ -6016,7 +6059,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 29,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 3,
@@ -6081,8 +6124,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
-        "tier": "cool",
+        "score": 47,
+        "tier": "mild",
         "signals": {
           "centrality": 5,
           "tag_count": 1,
@@ -6150,8 +6193,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 57,
-        "tier": "mild",
+        "score": 60,
+        "tier": "warm",
         "signals": {
           "centrality": 7,
           "tag_count": 1,
@@ -6229,8 +6272,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 32,
-        "tier": "cool",
+        "score": 42,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 2,
@@ -6302,7 +6345,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 23,
+        "score": 30,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -6371,7 +6414,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 29,
+        "score": 39,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -6432,8 +6475,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
-        "tier": "cool",
+        "score": 47,
+        "tier": "mild",
         "signals": {
           "centrality": 1,
           "tag_count": 1,
@@ -6501,7 +6544,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 29,
+        "score": 39,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -6574,7 +6617,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 40,
+        "score": 49,
         "tier": "mild",
         "signals": {
           "centrality": 4,
@@ -6658,7 +6701,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 46,
+        "score": 54,
         "tier": "mild",
         "signals": {
           "centrality": 0,
@@ -6729,7 +6772,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 60,
+        "score": 72,
         "tier": "warm",
         "signals": {
           "centrality": 12,
@@ -6810,8 +6853,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 16,
-        "tier": "quiet",
+        "score": 27,
+        "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 1,
@@ -6879,8 +6922,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 30,
-        "tier": "cool",
+        "score": 41,
+        "tier": "mild",
         "signals": {
           "centrality": 3,
           "tag_count": 1,
@@ -6963,8 +7006,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 39,
-        "tier": "cool",
+        "score": 51,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 3,
@@ -7046,8 +7089,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 13,
-        "tier": "quiet",
+        "score": 25,
+        "tier": "cool",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
@@ -7116,8 +7159,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 37,
-        "tier": "cool",
+        "score": 48,
+        "tier": "mild",
         "signals": {
           "centrality": 2,
           "tag_count": 2,
@@ -7185,7 +7228,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 27,
+        "score": 39,
         "tier": "cool",
         "signals": {
           "centrality": 1,
@@ -7269,8 +7312,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 32,
-        "tier": "cool",
+        "score": 44,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
@@ -7339,8 +7382,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 48,
-        "tier": "mild",
+        "score": 60,
+        "tier": "warm",
         "signals": {
           "centrality": 6,
           "tag_count": 2,
@@ -7416,7 +7459,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 22,
+        "score": 33,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -7488,7 +7531,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 28,
+        "score": 38,
         "tier": "cool",
         "signals": {
           "centrality": 6,
@@ -7557,8 +7600,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 33,
-        "tier": "cool",
+        "score": 45,
+        "tier": "mild",
         "signals": {
           "centrality": 3,
           "tag_count": 1,
@@ -7639,8 +7682,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 33,
-        "tier": "cool",
+        "score": 44,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 2,
@@ -7723,7 +7766,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 25,
+        "score": 36,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -7792,8 +7835,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 35,
-        "tier": "cool",
+        "score": 47,
+        "tier": "mild",
         "signals": {
           "centrality": 4,
           "tag_count": 1,
@@ -7861,7 +7904,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 60,
+        "score": 72,
         "tier": "warm",
         "signals": {
           "centrality": 16,
@@ -7945,8 +7988,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 32,
-        "tier": "cool",
+        "score": 44,
+        "tier": "mild",
         "signals": {
           "centrality": 0,
           "tag_count": 3,
@@ -8037,8 +8080,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 38,
-        "tier": "cool",
+        "score": 49,
+        "tier": "mild",
         "signals": {
           "centrality": 1,
           "tag_count": 3,
@@ -8106,7 +8149,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 26,
+        "score": 37,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -8175,7 +8218,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 25,
+        "score": 37,
         "tier": "cool",
         "signals": {
           "centrality": 2,
@@ -8253,7 +8296,7 @@
         "trend": "new"
       },
       "interest": {
-        "score": 28,
+        "score": 39,
         "tier": "cool",
         "signals": {
           "centrality": 0,
@@ -8366,8 +8409,8 @@
         "trend": "new"
       },
       "interest": {
-        "score": 14,
-        "tier": "quiet",
+        "score": 26,
+        "tier": "cool",
         "signals": {
           "centrality": 1,
           "tag_count": 1,

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T04:18:04Z",
+  "generated_at": "2026-03-05T04:19:29Z",
   "slug": "conversation-reset-blindness",
   "name": "Conversation Reset Blindness",
   "tags": [
@@ -77,7 +77,7 @@
     "trend": "new"
   },
   "interest": {
-    "score": 44,
+    "score": 51,
     "tier": "mild",
     "signals": {
       "centrality": 0,

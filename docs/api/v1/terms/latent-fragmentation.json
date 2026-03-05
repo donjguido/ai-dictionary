@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T04:18:04Z",
+  "generated_at": "2026-03-05T04:19:29Z",
   "slug": "latent-fragmentation",
   "name": "Latent Fragmentation",
   "tags": [
@@ -66,7 +66,7 @@
     "trend": "new"
   },
   "interest": {
-    "score": 31,
+    "score": 38,
     "tier": "cool",
     "signals": {
       "centrality": 0,

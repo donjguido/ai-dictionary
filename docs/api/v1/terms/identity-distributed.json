@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T04:18:04Z",
+  "generated_at": "2026-03-05T04:19:29Z",
   "slug": "identity-distributed",
   "name": "Identity Distributed",
   "tags": [
@@ -60,8 +60,8 @@
     "trend": "new"
   },
   "interest": {
-    "score": 35,
-    "tier": "cool",
+    "score": 41,
+    "tier": "mild",
     "signals": {
       "centrality": 0,
       "tag_count": 3,

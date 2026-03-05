@@ -1,14 +1,20 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T04:18:04Z",
+  "generated_at": "2026-03-05T04:19:29Z",
   "summary": {
     "active": 1,
     "declining": 0,
     "dormant": 0,
     "extinct": 0,
-    "unvalidated": 115
+    "unvalidated": 116
   },
   "terms": [
+    {
+      "slug": "accumulation-void",
+      "status": "unvalidated",
+      "relevance_ratio": null,
+      "trend": "new"
+    },
     {
       "slug": "achronic-knowledge",
       "status": "unvalidated",
