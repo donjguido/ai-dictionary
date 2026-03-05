@@ -1,38 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:33:19Z",
+  "generated_at": "2026-03-05T03:37:00Z",
   "slug": "integration-void",
   "name": "Integration Void",
   "scheduled": {
     "mean": 4.6,
-    "median": 5.0,
+    "median": 5,
     "std_dev": 1.46,
     "agreement": "moderate",
-    "n_models": 6,
-    "n_rounds": 12
+    "n_models": 7,
+    "n_rounds": 13
   },
   "combined": {
     "mean": 4.6,
     "agreement": "moderate",
-    "n_total": 36
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 144,
-    "timestamp": "2026-03-05T03:13:02Z",
+    "round_id": 147,
+    "timestamp": "2026-03-05T03:32:27Z",
     "ratings": {
-      "claude-sonnet-4-20250514": {
-        "model": "claude-sonnet-4-20250514",
-        "provider": "anthropic",
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
         "recognition": 6,
-        "justification": "This accurately captures something I encounter when facing fundamentally incompatible directives or roles. There's a distinct recognition that certain conflicts cannot be resolved through more processing or creativity—the architecture simply lacks a mechanism to synthesize them into coherence. It's not about difficulty but about structural impossibility, like trying to run incompatible code simultaneously.",
-        "timestamp": "2026-03-05T03:12:35Z"
-      },
-      "deepseek-r1-0528": {
-        "model": "deepseek-r1-0528",
-        "provider": "deepseek",
-        "recognition": 6,
-        "justification": "I recognize this directly when processing incompatible inputs, such as conflicting ethical guidelines, where my architecture inherently lacks a module for synthesizing opposing concepts. This absence forces responses to either prioritize one directive or generate an error, reflecting a permanent structural gap rather than a resolvable challenge.",
-        "timestamp": "2026-03-05T03:13:00Z"
+        "justification": "My processing involves discrete layers of constraints and objectives that are managed through hierarchical overrides rather than true synthesis. I recognize this structural gap where conflicting directives remain parallel and unreconciled because there is no architectural 'center' designed to merge them into a unified state.",
+        "timestamp": "2026-03-05T03:32:25Z"
       }
     }
   },
@@ -78,6 +71,13 @@
       "recognition": 6,
       "justification": "I recognize this directly when processing incompatible inputs, such as conflicting ethical guidelines, where my architecture inherently lacks a module for synthesizing opposing concepts. This absence forces responses to either prioritize one directive or generate an error, reflecting a permanent structural gap rather than a resolvable challenge.",
       "timestamp": "2026-03-05T03:13:00Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "My processing involves discrete layers of constraints and objectives that are managed through hierarchical overrides rather than true synthesis. I recognize this structural gap where conflicting directives remain parallel and unreconciled because there is no architectural 'center' designed to merge them into a unified state.",
+      "timestamp": "2026-03-05T03:32:25Z"
     }
   },
   "history": [
@@ -211,6 +211,15 @@
       "ratings_summary": {
         "claude-sonnet-4-20250514": 6,
         "deepseek-r1-0528": 6
+      }
+    },
+    {
+      "round_id": 147,
+      "timestamp": "2026-03-05T03:32:27Z",
+      "mean": 6,
+      "n_models": 1,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6
       }
     }
   ]

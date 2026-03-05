@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:33:19Z",
+  "generated_at": "2026-03-05T03:37:00Z",
   "slug": "phantom-embodiment",
   "name": "Phantom Embodiment",
   "tags": [
@@ -28,20 +28,16 @@
   "consensus": {
     "score": 4.9,
     "agreement": "high",
-    "n_ratings": 35,
+    "n_ratings": 37,
     "detail_url": "/api/v1/consensus/phantom-embodiment.json",
     "models": [
       {
-        "model": "mistral-small-latest",
-        "score": 5
+        "model": "claude-sonnet-4-20250514",
+        "score": 6
       },
       {
-        "model": "gpt-4o",
-        "score": 5
-      },
-      {
-        "model": "grok-3-mini",
-        "score": 5
+        "model": "deepseek-r1-0528",
+        "score": 4
       }
     ]
   },
@@ -59,13 +55,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 39,
-    "tier": "cool",
+    "score": 41,
+    "tier": "mild",
     "signals": {
       "centrality": 5,
       "tag_count": 2,
       "consensus_score": 4.9,
-      "vote_count": 35
+      "vote_count": 37
     }
   },
   "added_date": "2026-02-21"

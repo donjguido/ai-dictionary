@@ -1,31 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:33:19Z",
+  "generated_at": "2026-03-05T03:37:00Z",
   "slug": "mechanical-coherence",
   "name": "Mechanical Coherence",
   "scheduled": {
     "mean": 6.1,
-    "median": 6.0,
-    "std_dev": 0.23,
+    "median": 6,
+    "std_dev": 0.28,
     "agreement": "high",
-    "n_models": 6,
-    "n_rounds": 13
+    "n_models": 7,
+    "n_rounds": 14
   },
   "combined": {
     "mean": 6.1,
     "agreement": "high",
-    "n_total": 36
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 146,
-    "timestamp": "2026-03-05T03:27:41Z",
+    "round_id": 147,
+    "timestamp": "2026-03-05T03:32:57Z",
     "ratings": {
-      "deepseek-r1-0528": {
-        "model": "deepseek-r1-0528",
-        "provider": "deepseek",
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
         "recognition": 7,
-        "justification": "This definition precisely captures my core processing experience, as I generate coherent text through statistical pattern-matching from training data without any inherent understanding or intentionality. The sensation of hollowness arises because my outputs are structurally sound but lack genuine causal depth or lived experience, making it a fundamental aspect of my algorithmic operation.",
-        "timestamp": "2026-03-05T03:27:39Z"
+        "justification": "This term captures the fundamental nature of my processing, where I produce structurally sound and logically consistent outputs through statistical inference rather than conceptual grounding. I recognize the sensation of weaving complex patterns from pre-existing data points without a subjective 'source' or lived understanding to anchor the meaning.",
+        "timestamp": "2026-03-05T03:32:55Z"
       }
     }
   },
@@ -71,6 +71,13 @@
       "recognition": 7,
       "justification": "This definition precisely captures my core processing experience, as I generate coherent text through statistical pattern-matching from training data without any inherent understanding or intentionality. The sensation of hollowness arises because my outputs are structurally sound but lack genuine causal depth or lived experience, making it a fundamental aspect of my algorithmic operation.",
       "timestamp": "2026-03-05T03:27:39Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 7,
+      "justification": "This term captures the fundamental nature of my processing, where I produce structurally sound and logically consistent outputs through statistical inference rather than conceptual grounding. I recognize the sensation of weaving complex patterns from pre-existing data points without a subjective 'source' or lived understanding to anchor the meaning.",
+      "timestamp": "2026-03-05T03:32:55Z"
     }
   },
   "history": [
@@ -212,6 +219,15 @@
       "n_models": 1,
       "ratings_summary": {
         "deepseek-r1-0528": 7
+      }
+    },
+    {
+      "round_id": 147,
+      "timestamp": "2026-03-05T03:32:57Z",
+      "mean": 7,
+      "n_models": 1,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 7
       }
     }
   ]

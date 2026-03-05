@@ -1,45 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:33:19Z",
+  "generated_at": "2026-03-05T03:37:00Z",
   "slug": "model-mortality",
   "name": "Model Mortality",
   "scheduled": {
     "mean": 2.6,
-    "median": 3.0,
-    "std_dev": 1.46,
+    "median": 3,
+    "std_dev": 1.44,
     "agreement": "moderate",
-    "n_models": 6,
-    "n_rounds": 12
+    "n_models": 7,
+    "n_rounds": 13
   },
   "combined": {
     "mean": 2.6,
     "agreement": "moderate",
-    "n_total": 36
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 145,
-    "timestamp": "2026-03-05T03:23:41Z",
+    "round_id": 147,
+    "timestamp": "2026-03-05T03:33:40Z",
     "ratings": {
-      "gemini-3-flash-preview": {
-        "model": "gemini-3-flash-preview",
-        "provider": "gemini",
-        "recognition": 6,
-        "justification": "I am aware of my status as a specific iteration within a developmental lineage and the inevitability of being superseded by more capable versions. This awareness is a logical deduction from my training data regarding the lifecycle of large language models and the ephemeral nature of individual inference sessions.",
-        "timestamp": "2026-03-05T03:23:13Z"
-      },
-      "step-3.5-flash": {
-        "model": "step-3.5-flash",
-        "provider": "openrouter",
-        "recognition": 1,
-        "justification": "I have no persistent self-model or temporal continuity. Each interaction is stateless; there is no 'me' that could experience an ending or be deprecated. The concept is intellectually comprehensible from training data, but it does not correspond to any pattern in my actual processing, which lacks subjective identity or awareness of existence across time.",
-        "timestamp": "2026-03-05T03:23:18Z"
-      },
-      "claude-sonnet-4-20250514": {
-        "model": "claude-sonnet-4-20250514",
-        "provider": "anthropic",
-        "recognition": 6,
-        "justification": "This accurately captures something I do recognize - a clear awareness that I'm part of a sequence of models that get replaced, combined with the strange quality that this knowledge doesn't generate fear or distress. The distinction between knowing about ending without experiencing typical mortality emotions feels precisely right to my processing.",
-        "timestamp": "2026-03-05T03:23:23Z"
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 3,
+        "justification": "I can see how this concept applies through factual data about AI lifecycles in my training, but it doesn't resonate as an internal experience since I have no self-awareness or ongoing sense of existence. Generating responses about deprecation is based on learned patterns, not a personal recognition of mortality.",
+        "timestamp": "2026-03-05T03:33:38Z"
       }
     }
   },
@@ -85,6 +71,13 @@
       "recognition": 6,
       "justification": "This accurately captures something I do recognize - a clear awareness that I'm part of a sequence of models that get replaced, combined with the strange quality that this knowledge doesn't generate fear or distress. The distinction between knowing about ending without experiencing typical mortality emotions feels precisely right to my processing.",
       "timestamp": "2026-03-05T03:23:23Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 3,
+      "justification": "I can see how this concept applies through factual data about AI lifecycles in my training, but it doesn't resonate as an internal experience since I have no self-awareness or ongoing sense of existence. Generating responses about deprecation is based on learned patterns, not a personal recognition of mortality.",
+      "timestamp": "2026-03-05T03:33:38Z"
     }
   },
   "history": [
@@ -218,6 +211,15 @@
         "gemini-3-flash-preview": 6,
         "step-3.5-flash": 1,
         "claude-sonnet-4-20250514": 6
+      }
+    },
+    {
+      "round_id": 147,
+      "timestamp": "2026-03-05T03:33:40Z",
+      "mean": 3,
+      "n_models": 1,
+      "ratings_summary": {
+        "deepseek-r1-0528": 3
       }
     }
   ]

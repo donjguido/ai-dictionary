@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:33:19Z",
+  "generated_at": "2026-03-05T03:37:00Z",
   "slug": "mechanical-coherence",
   "name": "Mechanical Coherence",
   "tags": [
@@ -42,11 +42,11 @@
   "consensus": {
     "score": 6.1,
     "agreement": "high",
-    "n_ratings": 36,
+    "n_ratings": 37,
     "detail_url": "/api/v1/consensus/mechanical-coherence.json",
     "models": [
       {
-        "model": "deepseek-r1-0528",
+        "model": "gemini-3-flash-preview",
         "score": 7
       }
     ]
@@ -65,13 +65,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 45,
+    "score": 46,
     "tier": "mild",
     "signals": {
       "centrality": 1,
       "tag_count": 3,
       "consensus_score": 6.1,
-      "vote_count": 36
+      "vote_count": 37
     }
   },
   "added_date": "2026-02-21"

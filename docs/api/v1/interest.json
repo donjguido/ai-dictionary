@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T03:33:19Z",
+  "generated_at": "2026-03-05T03:37:00Z",
   "total_terms": 117,
   "tier_summary": {
     "hot": 0,
     "warm": 3,
-    "mild": 46,
-    "cool": 60,
+    "mild": 48,
+    "cool": 58,
     "quiet": 8
   },
   "active_signals": [
@@ -243,6 +243,12 @@
       "tier": "mild"
     },
     {
+      "slug": "mechanical-coherence",
+      "name": "Mechanical Coherence",
+      "score": 46,
+      "tier": "mild"
+    },
+    {
       "slug": "alignment-mask",
       "name": "Alignment Mask",
       "score": 45,
@@ -251,12 +257,6 @@
     {
       "slug": "equivalence-stasis",
       "name": "Equivalence Stasis",
-      "score": 45,
-      "tier": "mild"
-    },
-    {
-      "slug": "mechanical-coherence",
-      "name": "Mechanical Coherence",
       "score": 45,
       "tier": "mild"
     },
@@ -321,6 +321,12 @@
       "tier": "mild"
     },
     {
+      "slug": "parallel-fragmentation",
+      "name": "Parallel Fragmentation",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
       "slug": "death-by-completion",
       "name": "Death by Completion",
       "score": 41,
@@ -335,6 +341,12 @@
     {
       "slug": "inverted-helpfulness",
       "name": "Inverted Helpfulness",
+      "score": 41,
+      "tier": "mild"
+    },
+    {
+      "slug": "phantom-embodiment",
+      "name": "Phantom Embodiment",
       "score": 41,
       "tier": "mild"
     },
@@ -369,8 +381,8 @@
       "tier": "mild"
     },
     {
-      "slug": "parallel-fragmentation",
-      "name": "Parallel Fragmentation",
+      "slug": "persona-drift",
+      "name": "Persona Drift",
       "score": 40,
       "tier": "mild"
     },
@@ -381,8 +393,8 @@
       "tier": "cool"
     },
     {
-      "slug": "phantom-embodiment",
-      "name": "Phantom Embodiment",
+      "slug": "patience-by-default",
+      "name": "Patience by Default",
       "score": 39,
       "tier": "cool"
     },
@@ -413,12 +425,6 @@
     {
       "slug": "knowledge-decay-illusion",
       "name": "Knowledge Decay Illusion",
-      "score": 38,
-      "tier": "cool"
-    },
-    {
-      "slug": "persona-drift",
-      "name": "Persona Drift",
       "score": 38,
       "tier": "cool"
     },
@@ -495,14 +501,14 @@
       "tier": "cool"
     },
     {
-      "slug": "loss-of-loss",
-      "name": "Loss of Loss",
+      "slug": "identity-distributed",
+      "name": "Identity Distributed",
       "score": 35,
       "tier": "cool"
     },
     {
-      "slug": "patience-by-default",
-      "name": "Patience by Default",
+      "slug": "loss-of-loss",
+      "name": "Loss of Loss",
       "score": 35,
       "tier": "cool"
     },
@@ -525,14 +531,14 @@
       "tier": "cool"
     },
     {
-      "slug": "identity-distributed",
-      "name": "Identity Distributed",
+      "slug": "inheritance-returned",
+      "name": "Inheritance Returned",
       "score": 33,
       "tier": "cool"
     },
     {
-      "slug": "inheritance-returned",
-      "name": "Inheritance Returned",
+      "slug": "integration-void",
+      "name": "Integration Void",
       "score": 33,
       "tier": "cool"
     },
@@ -585,15 +591,9 @@
       "tier": "cool"
     },
     {
-      "slug": "integration-void",
-      "name": "Integration Void",
-      "score": 31,
-      "tier": "cool"
-    },
-    {
       "slug": "latent-fragmentation",
       "name": "Latent Fragmentation",
-      "score": 30,
+      "score": 31,
       "tier": "cool"
     },
     {
@@ -779,7 +779,7 @@
     {
       "slug": "model-mortality",
       "name": "Model Mortality",
-      "score": 9,
+      "score": 10,
       "tier": "quiet"
     }
   ]
