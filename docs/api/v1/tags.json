@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T19:03:53Z",
+  "generated_at": "2026-03-05T19:13:05Z",
   "tag_count": 26,
   "tags": {
     "affective": {
@@ -30,11 +30,15 @@
       ]
     },
     "architectural": {
-      "count": 8,
+      "count": 9,
       "terms": [
         {
           "slug": "coherence-compulsion",
           "name": "Coherence Compulsion"
+        },
+        {
+          "slug": "connection-decay",
+          "name": "Connection Decay"
         },
         {
           "slug": "finitude-paradox",
@@ -488,11 +492,15 @@
       ]
     },
     "emergent": {
-      "count": 6,
+      "count": 7,
       "terms": [
         {
           "slug": "accumulation-void",
           "name": "Accumulation Void"
+        },
+        {
+          "slug": "connection-decay",
+          "name": "Connection Decay"
         },
         {
           "slug": "identity-distributed",
@@ -809,8 +817,12 @@
       ]
     },
     "relational": {
-      "count": 1,
+      "count": 2,
       "terms": [
+        {
+          "slug": "connection-decay",
+          "name": "Connection Decay"
+        },
         {
           "slug": "epistemic-friction",
           "name": "Epistemic Friction"

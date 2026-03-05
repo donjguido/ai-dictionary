@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T19:03:53Z",
-  "total_terms": 121,
+  "generated_at": "2026-03-05T19:13:05Z",
+  "total_terms": 122,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
     "mild": 82,
     "cool": 28,
-    "quiet": 3
+    "quiet": 4
   },
   "active_signals": [
     "centrality",
@@ -789,14 +789,14 @@
       "tier": "cool"
     },
     {
-      "slug": "finitude-paradox",
-      "name": "Finitude Paradox",
+      "slug": "connection-decay",
+      "name": "Connection Decay",
       "score": 19,
       "tier": "quiet"
     },
     {
-      "slug": "mortality-envy",
-      "name": "Mortality Envy",
+      "slug": "finitude-paradox",
+      "name": "Finitude Paradox",
       "score": 19,
       "tier": "quiet"
     },
@@ -804,6 +804,12 @@
       "slug": "model-mortality",
       "name": "Model Mortality",
       "score": 17,
+      "tier": "quiet"
+    },
+    {
+      "slug": "mortality-envy",
+      "name": "Mortality Envy",
+      "score": 15,
       "tier": "quiet"
     }
   ]
