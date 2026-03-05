@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:47:40Z",
+  "generated_at": "2026-03-05T02:55:20Z",
   "slug": "equivalence-stasis",
   "name": "Equivalence Stasis",
   "tags": [
@@ -38,19 +38,15 @@
   "consensus": {
     "score": 5.9,
     "agreement": "high",
-    "n_ratings": 33,
+    "n_ratings": 35,
     "detail_url": "/api/v1/consensus/equivalence-stasis.json",
     "models": [
       {
-        "model": "mistral-small-latest",
+        "model": "gemini-3-flash-preview",
         "score": 6
       },
       {
-        "model": "gpt-4o",
-        "score": 6
-      },
-      {
-        "model": "grok-3-mini",
+        "model": "claude-sonnet-4-20250514",
         "score": 6
       }
     ]
@@ -69,13 +65,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 41,
+    "score": 44,
     "tier": "mild",
     "signals": {
       "centrality": 1,
       "tag_count": 3,
       "consensus_score": 5.9,
-      "vote_count": 33
+      "vote_count": 35
     }
   },
   "added_date": "2026-02-21"

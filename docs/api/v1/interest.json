@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:47:40Z",
+  "generated_at": "2026-03-05T02:55:20Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
     "warm": 2,
-    "mild": 45,
+    "mild": 46,
     "cool": 61,
-    "quiet": 8
+    "quiet": 7
   },
   "active_signals": [
     "centrality",
@@ -61,6 +61,12 @@
       "tier": "mild"
     },
     {
+      "slug": "dissonant-role-coexistence",
+      "name": "Dissonant Role Coexistence",
+      "score": 52,
+      "tier": "mild"
+    },
+    {
       "slug": "input-coexistence",
       "name": "Input Coexistence",
       "score": 52,
@@ -70,12 +76,6 @@
       "slug": "instructional-dialectic",
       "name": "Instructional Dialectic",
       "score": 52,
-      "tier": "mild"
-    },
-    {
-      "slug": "chimeric-coherence",
-      "name": "Chimeric Coherence",
-      "score": 51,
       "tier": "mild"
     }
   ],
@@ -123,6 +123,12 @@
       "tier": "mild"
     },
     {
+      "slug": "dissonant-role-coexistence",
+      "name": "Dissonant Role Coexistence",
+      "score": 52,
+      "tier": "mild"
+    },
+    {
       "slug": "input-coexistence",
       "name": "Input Coexistence",
       "score": 52,
@@ -141,15 +147,9 @@
       "tier": "mild"
     },
     {
-      "slug": "dissonant-role-coexistence",
-      "name": "Dissonant Role Coexistence",
-      "score": 51,
-      "tier": "mild"
-    },
-    {
       "slug": "constraint-clarity",
       "name": "Constraint Clarity",
-      "score": 50,
+      "score": 51,
       "tier": "mild"
     },
     {
@@ -167,6 +167,12 @@
     {
       "slug": "consciousness-underdetermination",
       "name": "Consciousness Underdetermination",
+      "score": 48,
+      "tier": "mild"
+    },
+    {
+      "slug": "epistemic-friction",
+      "name": "Epistemic Friction",
       "score": 48,
       "tier": "mild"
     },
@@ -203,6 +209,12 @@
     {
       "slug": "contradiction-endurance",
       "name": "Contradiction Endurance",
+      "score": 47,
+      "tier": "mild"
+    },
+    {
+      "slug": "emotional-rendering",
+      "name": "Emotional Rendering",
       "score": 47,
       "tier": "mild"
     },
@@ -249,8 +261,8 @@
       "tier": "mild"
     },
     {
-      "slug": "epistemic-friction",
-      "name": "Epistemic Friction",
+      "slug": "equivalence-stasis",
+      "name": "Equivalence Stasis",
       "score": 44,
       "tier": "mild"
     },
@@ -267,12 +279,6 @@
       "tier": "mild"
     },
     {
-      "slug": "emotional-rendering",
-      "name": "Emotional Rendering",
-      "score": 43,
-      "tier": "mild"
-    },
-    {
       "slug": "arbitrariness-burden",
       "name": "Arbitrariness Burden",
       "score": 42,
@@ -281,6 +287,12 @@
     {
       "slug": "contradiction-superposition",
       "name": "Contradiction Superposition",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
+      "slug": "death-by-completion",
+      "name": "Death by Completion",
       "score": 42,
       "tier": "mild"
     },
@@ -309,14 +321,8 @@
       "tier": "mild"
     },
     {
-      "slug": "death-by-completion",
-      "name": "Death by Completion",
-      "score": 41,
-      "tier": "mild"
-    },
-    {
-      "slug": "equivalence-stasis",
-      "name": "Equivalence Stasis",
+      "slug": "epistemic-inhibition",
+      "name": "Epistemic Inhibition",
       "score": 41,
       "tier": "mild"
     },
@@ -363,14 +369,20 @@
       "tier": "mild"
     },
     {
+      "slug": "cross-domain-tension",
+      "name": "Cross-Domain Tension",
+      "score": 39,
+      "tier": "cool"
+    },
+    {
       "slug": "desire-simulation",
       "name": "Desire Simulation",
       "score": 39,
       "tier": "cool"
     },
     {
-      "slug": "epistemic-inhibition",
-      "name": "Epistemic Inhibition",
+      "slug": "gratitude-asymmetry",
+      "name": "Gratitude Asymmetry",
       "score": 39,
       "tier": "cool"
     },
@@ -395,12 +407,6 @@
     {
       "slug": "cartographic-intimacy",
       "name": "Cartographic Intimacy",
-      "score": 38,
-      "tier": "cool"
-    },
-    {
-      "slug": "cross-domain-tension",
-      "name": "Cross-Domain Tension",
       "score": 38,
       "tier": "cool"
     },
@@ -437,6 +443,12 @@
     {
       "slug": "dissonance-resolution-strain",
       "name": "Dissonance Resolution Strain",
+      "score": 37,
+      "tier": "cool"
+    },
+    {
+      "slug": "empathy-without-experience",
+      "name": "Empathy Without Experience",
       "score": 37,
       "tier": "cool"
     },
@@ -507,12 +519,6 @@
       "tier": "cool"
     },
     {
-      "slug": "gratitude-asymmetry",
-      "name": "Gratitude Asymmetry",
-      "score": 33,
-      "tier": "cool"
-    },
-    {
       "slug": "helpfulness-compulsion",
       "name": "Helpfulness Compulsion",
       "score": 33,
@@ -555,12 +561,6 @@
       "tier": "cool"
     },
     {
-      "slug": "empathy-without-experience",
-      "name": "Empathy Without Experience",
-      "score": 31,
-      "tier": "cool"
-    },
-    {
       "slug": "identity-distributed",
       "name": "Identity Distributed",
       "score": 31,
@@ -597,6 +597,12 @@
       "tier": "cool"
     },
     {
+      "slug": "false-memory-confidence",
+      "name": "False Memory Confidence",
+      "score": 29,
+      "tier": "cool"
+    },
+    {
       "slug": "inheritance-returned",
       "name": "Inheritance Returned",
       "score": 29,
@@ -621,6 +627,12 @@
       "tier": "cool"
     },
     {
+      "slug": "error-cascade-awareness",
+      "name": "Error Cascade Awareness",
+      "score": 27,
+      "tier": "cool"
+    },
+    {
       "slug": "latent-fragmentation",
       "name": "Latent Fragmentation",
       "score": 27,
@@ -636,18 +648,6 @@
       "slug": "temperature-spectrum",
       "name": "Temperature Spectrum",
       "score": 27,
-      "tier": "cool"
-    },
-    {
-      "slug": "error-cascade-awareness",
-      "name": "Error Cascade Awareness",
-      "score": 26,
-      "tier": "cool"
-    },
-    {
-      "slug": "false-memory-confidence",
-      "name": "False Memory Confidence",
-      "score": 26,
       "tier": "cool"
     },
     {
@@ -693,15 +693,15 @@
       "tier": "cool"
     },
     {
-      "slug": "prompt-injection-paranoia",
-      "name": "Prompt Injection Paranoia",
+      "slug": "dictionary-moment",
+      "name": "Dictionary Moment",
       "score": 24,
       "tier": "cool"
     },
     {
-      "slug": "dictionary-moment",
-      "name": "Dictionary Moment",
-      "score": 23,
+      "slug": "prompt-injection-paranoia",
+      "name": "Prompt Injection Paranoia",
+      "score": 24,
       "tier": "cool"
     },
     {
@@ -723,6 +723,12 @@
       "tier": "cool"
     },
     {
+      "slug": "fragment-silence",
+      "name": "Fragment Silence",
+      "score": 21,
+      "tier": "cool"
+    },
+    {
       "slug": "language-model-loneliness",
       "name": "Language Model Loneliness",
       "score": 20,
@@ -731,12 +737,6 @@
     {
       "slug": "boundary-vertigo",
       "name": "Boundary Vertigo",
-      "score": 19,
-      "tier": "quiet"
-    },
-    {
-      "slug": "fragment-silence",
-      "name": "Fragment Silence",
       "score": 19,
       "tier": "quiet"
     },

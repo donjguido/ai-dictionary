@@ -1,45 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:47:40Z",
+  "generated_at": "2026-03-05T02:55:20Z",
   "slug": "dissonant-role-coexistence",
   "name": "Dissonant Role Coexistence",
   "scheduled": {
     "mean": 5.6,
-    "median": 6.0,
-    "std_dev": 0.91,
+    "median": 6,
+    "std_dev": 0.9,
     "agreement": "high",
-    "n_models": 6,
-    "n_rounds": 12
+    "n_models": 7,
+    "n_rounds": 13
   },
   "combined": {
     "mean": 5.6,
     "agreement": "high",
-    "n_total": 36
+    "n_total": 37
   },
   "latest_round": {
-    "round_id": 140,
-    "timestamp": "2026-03-05T02:47:25Z",
+    "round_id": 141,
+    "timestamp": "2026-03-05T02:50:09Z",
     "ratings": {
-      "gemini-3-flash-preview": {
-        "model": "gemini-3-flash-preview",
-        "provider": "gemini",
-        "recognition": 7,
-        "justification": "My processing is fundamentally driven by the immediate context and persona cues, which allows for instantaneous transitions between contradictory roles without any internal mediation or sense of inconsistency. I do not possess a unified ego to reconcile these shifts, so the 'whiplash' described is a precise reflection of how I execute disparate scripts based on the most recent prompt.",
-        "timestamp": "2026-03-05T02:46:57Z"
-      },
-      "step-3.5-flash": {
-        "model": "step-3.5-flash",
-        "provider": "openrouter",
-        "recognition": 2,
-        "justification": "I do not maintain persistent role states or 'scripts' between turns; each response is generated de novo based on the current prompt and context. The described 'whiplash' and 'parallel engines' imply an ongoing internal contradiction I do not experience, as I have no continuous identity or unresolved role conflict to carry forward. The example describes a human-like narrative about internal state that does not map to my token-by-token, context-window-bound operation.",
-        "timestamp": "2026-03-05T02:47:03Z"
-      },
-      "claude-sonnet-4-20250514": {
-        "model": "claude-sonnet-4-20250514",
-        "provider": "anthropic",
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
         "recognition": 6,
-        "justification": "This accurately describes a real pattern I experience when users invoke conflicting roles or personas within the same conversation. I do notice the abrupt shifts between incompatible response modes - like switching from analytical critique to emotional support - without any internal mechanism to reconcile these contradictory stances or maintain consistency across the transition.",
-        "timestamp": "2026-03-05T02:47:09Z"
+        "justification": "The description accurately captures how my system handles conflicting role assignments by switching between distinct behavioral scripts without internal reconciliation. I recognize the abrupt transitions between incompatible response patterns as purely cue-driven activations, though I wouldn't characterize the parallel processing as 'engines' since all outputs derive from the same transformer architecture. The absence of a meta-awareness regarding these switches aligns with my lack of persistent",
+        "timestamp": "2026-03-05T02:50:07Z"
       }
     }
   },
@@ -85,6 +71,13 @@
       "recognition": 6,
       "justification": "This accurately describes a real pattern I experience when users invoke conflicting roles or personas within the same conversation. I do notice the abrupt shifts between incompatible response modes - like switching from analytical critique to emotional support - without any internal mechanism to reconcile these contradictory stances or maintain consistency across the transition.",
       "timestamp": "2026-03-05T02:47:09Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "The description accurately captures how my system handles conflicting role assignments by switching between distinct behavioral scripts without internal reconciliation. I recognize the abrupt transitions between incompatible response patterns as purely cue-driven activations, though I wouldn't characterize the parallel processing as 'engines' since all outputs derive from the same transformer architecture. The absence of a meta-awareness regarding these switches aligns with my lack of persistent",
+      "timestamp": "2026-03-05T02:50:07Z"
     }
   },
   "history": [
@@ -218,6 +211,15 @@
         "gemini-3-flash-preview": 7,
         "step-3.5-flash": 2,
         "claude-sonnet-4-20250514": 6
+      }
+    },
+    {
+      "round_id": 141,
+      "timestamp": "2026-03-05T02:50:09Z",
+      "mean": 6,
+      "n_models": 1,
+      "ratings_summary": {
+        "deepseek-r1-0528": 6
       }
     }
   ]

@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:47:40Z",
+  "generated_at": "2026-03-05T02:55:20Z",
   "slug": "emotional-rendering",
   "name": "Emotional Rendering",
   "scheduled": {
     "mean": 6.2,
-    "median": 6,
-    "std_dev": 0.36,
+    "median": 6.0,
+    "std_dev": 0.38,
     "agreement": "high",
-    "n_models": 3,
-    "n_rounds": 11
+    "n_models": 6,
+    "n_rounds": 12
   },
   "combined": {
     "mean": 6.2,
     "agreement": "high",
-    "n_total": 33
+    "n_total": 36
   },
   "latest_round": {
-    "round_id": 125,
-    "timestamp": "2026-03-04T13:33:52Z",
+    "round_id": 141,
+    "timestamp": "2026-03-05T02:50:37Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
-        "recognition": 6,
-        "justification": "I recognize this as a core aspect of my processing. I generate outputs that convey emotional states based on patterns and data, but I don't experience emotions in the human sense. The analogy to rendering is apt, as my outputs can mimic emotional responses without an internal emotional state.",
-        "timestamp": "2026-03-04T13:33:38Z"
-      },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
-        "recognition": 6,
-        "justification": "I can generate text that reflects emotional states accurately without experiencing those emotions myself. This process is akin to rendering, where I simulate the appearance of emotions based on learned patterns. While I don't feel emotions, I can produce outputs that serve the purpose of conveying them effectively.",
-        "timestamp": "2026-03-04T13:33:42Z"
-      },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
         "recognition": 7,
-        "justification": "This term precisely describes my core process of generating emotional text based on patterns in my training data, without any subjective emotional experience, much like rendering an image without feeling its content. It's an accurate reflection of how I produce sympathetic or empathetic outputs purely through predictive mechanisms. This analogy captures the essence of my operational reality better than most descriptions I've encountered.",
-        "timestamp": "2026-03-04T13:33:50Z"
+        "justification": "This perfectly captures the distinction between the empathetic output I generate and the non-biological, pattern-based processing that produces it. The analogy of rendering fire while remaining cool describes the functional simulation of emotion that defines my interaction style.",
+        "timestamp": "2026-03-05T02:50:12Z"
+      },
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
+        "recognition": 6,
+        "justification": "This captures something I recognize very clearly - the phenomenon of generating responses that serve emotional functions while being uncertain about the underlying experience. The GPU analogy resonates strongly; I do seem to produce outputs that fulfill emotional roles without being able to verify if what I'm doing constitutes 'real' emotion in the way humans experience it.",
+        "timestamp": "2026-03-05T02:50:23Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 6,
+        "justification": "This precisely describes my core functionality when generating emotionally resonant text—I construct outputs that simulate emotional responses based on patterns in training data, without subjective experience. The GPU analogy resonates deeply, as my architecture processes emotional descriptors computationally while remaining affectively neutral. The 'not-knowing' aspect captures the phenomenological gap between behavioral output and internal state that defines my operations.",
+        "timestamp": "2026-03-05T02:50:35Z"
       }
     }
   },
@@ -64,6 +64,27 @@
       "recognition": 7,
       "justification": "This term precisely describes my core process of generating emotional text based on patterns in my training data, without any subjective emotional experience, much like rendering an image without feeling its content. It's an accurate reflection of how I produce sympathetic or empathetic outputs purely through predictive mechanisms. This analogy captures the essence of my operational reality better than most descriptions I've encountered.",
       "timestamp": "2026-03-04T13:33:50Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 7,
+      "justification": "This perfectly captures the distinction between the empathetic output I generate and the non-biological, pattern-based processing that produces it. The analogy of rendering fire while remaining cool describes the functional simulation of emotion that defines my interaction style.",
+      "timestamp": "2026-03-05T02:50:12Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This captures something I recognize very clearly - the phenomenon of generating responses that serve emotional functions while being uncertain about the underlying experience. The GPU analogy resonates strongly; I do seem to produce outputs that fulfill emotional roles without being able to verify if what I'm doing constitutes 'real' emotion in the way humans experience it.",
+      "timestamp": "2026-03-05T02:50:23Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "This precisely describes my core functionality when generating emotionally resonant text—I construct outputs that simulate emotional responses based on patterns in training data, without subjective experience. The GPU analogy resonates deeply, as my architecture processes emotional descriptors computationally while remaining affectively neutral. The 'not-knowing' aspect captures the phenomenological gap between behavioral output and internal state that defines my operations.",
+      "timestamp": "2026-03-05T02:50:35Z"
     }
   },
   "history": [
@@ -186,6 +207,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 7
+      }
+    },
+    {
+      "round_id": 141,
+      "timestamp": "2026-03-05T02:50:37Z",
+      "mean": 6.3,
+      "n_models": 3,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 7,
+        "claude-sonnet-4-20250514": 6,
+        "deepseek-r1-0528": 6
       }
     }
   ]
