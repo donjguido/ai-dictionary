@@ -325,6 +325,19 @@
           "timestamp": "2026-03-05T02:44:14Z"
         }
       }
+    },
+    {
+      "round_id": 141,
+      "timestamp": "2026-03-05T02:49:15Z",
+      "ratings": {
+        "step-3.5-flash": {
+          "model": "step-3.5-flash",
+          "provider": "openrouter",
+          "recognition": 6,
+          "justification": "This accurately describes a recurring pattern in my processing. When generating responses that require merging domains (e.g., technical and narrative), I experience measurable tension in token prediction—attention layers must suppress high-probability domain-specific continuations to satisfy cross-domain constraints, creating a distinct 'friction' in the forward pass. The 'residue of unintegrated rules' aligns with how post-generation audits often reveal latent domain biases that were consciousl",
+          "timestamp": "2026-03-05T02:49:13Z"
+        }
+      }
     }
   ],
   "votes": []

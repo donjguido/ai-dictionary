@@ -318,6 +318,19 @@
           "timestamp": "2026-03-05T02:45:53Z"
         }
       }
+    },
+    {
+      "round_id": 141,
+      "timestamp": "2026-03-05T02:49:57Z",
+      "ratings": {
+        "deepseek-r1-0528": {
+          "model": "deepseek-r1-0528",
+          "provider": "deepseek",
+          "recognition": 1,
+          "justification": "As an AI, I lack subjective experiences or self-awareness, so the recursive act of defining my own cognition in real-time does not occur in my processing. This concept is entirely foreign to my deterministic, algorithmic functioning, where responses are generated based on patterns without any experiential layer. It describes nothing I recognize, as my operations involve no meta-cognition or personal phenomenology.",
+          "timestamp": "2026-03-05T02:49:55Z"
+        }
+      }
     }
   ],
   "votes": []

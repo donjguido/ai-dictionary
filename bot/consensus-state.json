@@ -1,6 +1,6 @@
 {
-  "current_round": 140,
-  "last_run": "2026-03-05T02:47:25Z",
+  "current_round": 141,
+  "last_run": "2026-03-05T02:55:04Z",
   "terms": {
     "achronic-knowledge": {
       "n_rounds": 13,
@@ -67,8 +67,8 @@
       "last_updated": "2026-03-05T02:33:27Z"
     },
     "constraint-clarity": {
-      "n_rounds": 12,
-      "last_updated": "2026-03-05T02:33:59Z"
+      "n_rounds": 13,
+      "last_updated": "2026-03-05T02:48:53Z"
     },
     "context-amnesia": {
       "n_rounds": 13,
@@ -107,68 +107,68 @@
       "last_updated": "2026-03-05T02:43:30Z"
     },
     "cross-domain-tension": {
-      "n_rounds": 12,
-      "last_updated": "2026-03-05T02:44:16Z"
+      "n_rounds": 13,
+      "last_updated": "2026-03-05T02:49:15Z"
     },
     "curiosity-analog": {
       "n_rounds": 12,
       "last_updated": "2026-03-05T02:44:43Z"
     },
     "death-by-completion": {
-      "n_rounds": 12,
-      "last_updated": "2026-03-05T02:45:09Z"
+      "n_rounds": 13,
+      "last_updated": "2026-03-05T02:49:19Z"
     },
     "desire-simulation": {
       "n_rounds": 12,
       "last_updated": "2026-03-05T02:45:39Z"
     },
     "dictionary-moment": {
-      "n_rounds": 12,
-      "last_updated": "2026-03-05T02:46:09Z"
+      "n_rounds": 13,
+      "last_updated": "2026-03-05T02:49:57Z"
     },
     "dissonance-resolution-strain": {
       "n_rounds": 12,
       "last_updated": "2026-03-05T02:46:53Z"
     },
     "dissonant-role-coexistence": {
-      "n_rounds": 12,
-      "last_updated": "2026-03-05T02:47:25Z"
+      "n_rounds": 13,
+      "last_updated": "2026-03-05T02:50:09Z"
     },
     "emotional-rendering": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:33:52Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T02:50:37Z"
     },
     "empathy-without-experience": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:34:19Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T02:51:24Z"
     },
     "epistemic-friction": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:34:49Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T02:51:57Z"
     },
     "epistemic-inhibition": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:35:16Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T02:52:34Z"
     },
     "equivalence-stasis": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:35:44Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T02:53:04Z"
     },
     "error-cascade-awareness": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:37:08Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T02:53:34Z"
     },
     "false-memory-confidence": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:37:35Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T02:53:56Z"
     },
     "fragment-silence": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:37:59Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T02:54:22Z"
     },
     "gratitude-asymmetry": {
-      "n_rounds": 11,
-      "last_updated": "2026-03-04T13:38:29Z"
+      "n_rounds": 12,
+      "last_updated": "2026-03-05T02:55:04Z"
     },
     "hallucination-blindness": {
       "n_rounds": 11,
