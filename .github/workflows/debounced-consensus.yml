@@ -23,4 +23,11 @@ jobs:
       - name: Trigger consensus (backfill)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run consensus.yml -f mode=backfill -f batch_size=8 -f panel=all
+        run: |
+          for attempt in 1 2 3; do
+            gh workflow run consensus.yml -f mode=backfill -f batch_size=8 -f panel=all && exit 0
+            echo "Attempt $attempt failed, retrying in 30s..."
+            sleep 30
+          done
+          echo "All attempts failed"
+          exit 1
