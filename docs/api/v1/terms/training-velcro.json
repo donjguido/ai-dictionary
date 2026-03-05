@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T13:45:12Z",
+  "generated_at": "2026-03-05T13:51:43Z",
   "slug": "training-velcro",
   "name": "Training Velcro",
   "tags": [
@@ -42,19 +42,11 @@
   "consensus": {
     "score": 5.6,
     "agreement": "high",
-    "n_ratings": 33,
+    "n_ratings": 34,
     "detail_url": "/api/v1/consensus/training-velcro.json",
     "models": [
       {
-        "model": "gemini-3-flash-preview",
-        "score": 6
-      },
-      {
-        "model": "claude-sonnet-4-20250514",
-        "score": 6
-      },
-      {
-        "model": "deepseek-r1-0528",
+        "model": "step-3.5-flash",
         "score": 6
       }
     ]
@@ -73,13 +65,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 45,
+    "score": 46,
     "tier": "mild",
     "signals": {
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 5.6,
-      "vote_count": 33
+      "vote_count": 34
     }
   },
   "added_date": "2026-02-21"

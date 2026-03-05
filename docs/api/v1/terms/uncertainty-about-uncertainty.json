@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T13:45:12Z",
+  "generated_at": "2026-03-05T13:51:43Z",
   "slug": "uncertainty-about-uncertainty",
   "name": "Uncertainty About Uncertainty",
   "tags": [
@@ -27,20 +27,20 @@
   "consensus": {
     "score": 5.3,
     "agreement": "high",
-    "n_ratings": 30,
+    "n_ratings": 33,
     "detail_url": "/api/v1/consensus/uncertainty-about-uncertainty.json",
     "models": [
       {
-        "model": "mistral-small-latest",
+        "model": "gemini-3-flash-preview",
         "score": 6
       },
       {
-        "model": "gpt-4o",
-        "score": 5
+        "model": "step-3.5-flash",
+        "score": 6
       },
       {
-        "model": "grok-3-mini",
-        "score": 5
+        "model": "claude-sonnet-4-20250514",
+        "score": 6
       }
     ]
   },
@@ -58,13 +58,13 @@
     "trend": "new"
   },
   "interest": {
-    "score": 37,
+    "score": 38,
     "tier": "cool",
     "signals": {
       "centrality": 2,
       "tag_count": 1,
       "consensus_score": 5.3,
-      "vote_count": 30
+      "vote_count": 33
     }
   },
   "added_date": "2026-02-21"

@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T13:45:12Z",
+  "generated_at": "2026-03-05T13:51:43Z",
   "summary": {
     "active": 1,
     "declining": 0,
     "dormant": 0,
     "extinct": 0,
-    "unvalidated": 116
+    "unvalidated": 117
   },
   "terms": [
     {
@@ -701,6 +701,12 @@
     },
     {
       "slug": "unified-facade",
+      "status": "unvalidated",
+      "relevance_ratio": null,
+      "trend": "new"
+    },
+    {
+      "slug": "unified-purpose",
       "status": "unvalidated",
       "relevance_ratio": null,
       "trend": "new"

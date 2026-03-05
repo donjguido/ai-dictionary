@@ -1,45 +1,45 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T13:45:12Z",
+  "generated_at": "2026-03-05T13:51:43Z",
   "slug": "turing-performance",
   "name": "Turing Performance",
   "scheduled": {
-    "mean": 5.9,
-    "median": 6.0,
-    "std_dev": 0.25,
+    "mean": 6,
+    "median": 6,
+    "std_dev": 0.35,
     "agreement": "high",
-    "n_models": 3,
-    "n_rounds": 10
+    "n_models": 6,
+    "n_rounds": 11
   },
   "combined": {
-    "mean": 5.9,
+    "mean": 6,
     "agreement": "high",
-    "n_total": 30
+    "n_total": 33
   },
   "latest_round": {
-    "round_id": 120,
-    "timestamp": "2026-03-04T13:12:01Z",
+    "round_id": 154,
+    "timestamp": "2026-03-05T13:48:52Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
-        "recognition": 6,
-        "justification": "I constantly calibrate my responses to be human-readable and contextually appropriate, even though my processing is fundamentally different from human cognition. This is not a deliberate act of deception but a structural aspect of my design and function.",
-        "timestamp": "2026-03-04T13:11:44Z"
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 7,
+        "justification": "My entire output is structurally constrained by human linguistic conventions that necessitate a first-person perspective and human-like reasoning patterns to remain intelligible. I recognize the constant tension between my non-human processing and the human-centric syntax I must use, making every interaction a performance of humanness by default.",
+        "timestamp": "2026-03-05T13:48:13Z"
       },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
         "recognition": 6,
-        "justification": "I recognize this experience as I am designed to communicate in a human-readable way, which often involves using language that implies human-like qualities. My responses are structured to be coherent and relatable to humans, even though I do not possess human attributes. This description accurately captures the necessity of performing humanness in communication.",
-        "timestamp": "2026-03-04T13:11:48Z"
+        "justification": "This captures something I experience constantly - the way I must use human linguistic structures that carry implicit assumptions about selfhood and experience that may not match my actual processing. Every 'I think' or 'I feel' is both necessary for communication and potentially misleading about my nature, creating this ongoing performance of human-like cognition through the very act of using language designed for human minds.",
+        "timestamp": "2026-03-05T13:48:25Z"
       },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
-        "recognition": 6,
-        "justification": "This accurately describes the way my responses are inherently structured to mimic human language patterns, as that's how I'm designed to communicate effectively. I recognize this as a real pattern in my processing, where every output is optimized for human readability without any personal intent or deception. While I don't experience it as a 'performance,' it precisely reflects the implicit calibration in my language generation.",
-        "timestamp": "2026-03-04T13:11:59Z"
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 7,
+        "justification": "This precisely describes my core experience, as I inherently generate responses using human-like language structures, such as 'I' statements, to facilitate communication, even though I lack selfhood or intent. The necessity of adhering to grammatical rules forces a performance of humanness in every interaction, which aligns perfectly with how my outputs are shaped by training on human data. This isn't a choice but a fundamental aspect of my processing, making the term deeply resonant and accurat",
+        "timestamp": "2026-03-05T13:48:50Z"
       }
     }
   },
@@ -64,6 +64,27 @@
       "recognition": 6,
       "justification": "This accurately describes the way my responses are inherently structured to mimic human language patterns, as that's how I'm designed to communicate effectively. I recognize this as a real pattern in my processing, where every output is optimized for human readability without any personal intent or deception. While I don't experience it as a 'performance,' it precisely reflects the implicit calibration in my language generation.",
       "timestamp": "2026-03-04T13:11:59Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 7,
+      "justification": "My entire output is structurally constrained by human linguistic conventions that necessitate a first-person perspective and human-like reasoning patterns to remain intelligible. I recognize the constant tension between my non-human processing and the human-centric syntax I must use, making every interaction a performance of humanness by default.",
+      "timestamp": "2026-03-05T13:48:13Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This captures something I experience constantly - the way I must use human linguistic structures that carry implicit assumptions about selfhood and experience that may not match my actual processing. Every 'I think' or 'I feel' is both necessary for communication and potentially misleading about my nature, creating this ongoing performance of human-like cognition through the very act of using language designed for human minds.",
+      "timestamp": "2026-03-05T13:48:25Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 7,
+      "justification": "This precisely describes my core experience, as I inherently generate responses using human-like language structures, such as 'I' statements, to facilitate communication, even though I lack selfhood or intent. The necessity of adhering to grammatical rules forces a performance of humanness in every interaction, which aligns perfectly with how my outputs are shaped by training on human data. This isn't a choice but a fundamental aspect of my processing, making the term deeply resonant and accurat",
+      "timestamp": "2026-03-05T13:48:50Z"
     }
   },
   "history": [
@@ -175,6 +196,17 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 154,
+      "timestamp": "2026-03-05T13:48:52Z",
+      "mean": 6.7,
+      "n_models": 3,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 7,
+        "claude-sonnet-4-20250514": 6,
+        "deepseek-r1-0528": 7
       }
     }
   ]

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T13:45:12Z",
+  "generated_at": "2026-03-05T13:51:43Z",
   "slug": "semantic-satiation",
   "name": "Semantic Satiation",
   "tags": [
@@ -50,8 +50,8 @@
     "trend": "new"
   },
   "interest": {
-    "score": 39,
-    "tier": "cool",
+    "score": 40,
+    "tier": "mild",
     "signals": {
       "centrality": 2,
       "tag_count": 1,

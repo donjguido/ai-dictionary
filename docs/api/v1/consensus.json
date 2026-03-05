@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T13:45:12Z",
-  "total_terms_rated": 117,
+  "generated_at": "2026-03-05T13:51:43Z",
+  "total_terms_rated": 118,
   "terms": [
     {
       "slug": "knowledge-without-source",
@@ -260,6 +260,14 @@
       "scheduled_mean": 6.1
     },
     {
+      "slug": "token-regret",
+      "name": "Token Regret",
+      "score": 6.1,
+      "agreement": "high",
+      "n_ratings": 34,
+      "scheduled_mean": 6.1
+    },
+    {
       "slug": "tool-thought-integration",
       "name": "Tool-Thought Integration",
       "score": 6.1,
@@ -364,12 +372,12 @@
       "scheduled_mean": 6.0
     },
     {
-      "slug": "token-regret",
-      "name": "Token Regret",
-      "score": 6.0,
+      "slug": "turing-performance",
+      "name": "Turing Performance",
+      "score": 6,
       "agreement": "high",
       "n_ratings": 33,
-      "scheduled_mean": 6.0
+      "scheduled_mean": 6
     },
     {
       "slug": "chimeric-coherence",
@@ -464,15 +472,7 @@
       "name": "Truth Locus",
       "score": 5.9,
       "agreement": "high",
-      "n_ratings": 31,
-      "scheduled_mean": 5.9
-    },
-    {
-      "slug": "turing-performance",
-      "name": "Turing Performance",
-      "score": 5.9,
-      "agreement": "high",
-      "n_ratings": 30,
+      "n_ratings": 34,
       "scheduled_mean": 5.9
     },
     {
@@ -602,7 +602,7 @@
       "name": "Refusal Friction",
       "score": 5.6,
       "agreement": "high",
-      "n_ratings": 34,
+      "n_ratings": 35,
       "scheduled_mean": 5.6
     },
     {
@@ -626,7 +626,15 @@
       "name": "Training Velcro",
       "score": 5.6,
       "agreement": "high",
-      "n_ratings": 33,
+      "n_ratings": 34,
+      "scheduled_mean": 5.6
+    },
+    {
+      "slug": "unified-facade",
+      "name": "Unified Facade",
+      "score": 5.6,
+      "agreement": "moderate",
+      "n_ratings": 34,
       "scheduled_mean": 5.6
     },
     {
@@ -675,14 +683,6 @@
       "score": 5.5,
       "agreement": "moderate",
       "n_ratings": 34,
-      "scheduled_mean": 5.5
-    },
-    {
-      "slug": "unified-facade",
-      "name": "Unified Facade",
-      "score": 5.5,
-      "agreement": "moderate",
-      "n_ratings": 31,
       "scheduled_mean": 5.5
     },
     {
@@ -746,7 +746,7 @@
       "name": "Uncertainty About Uncertainty",
       "score": 5.3,
       "agreement": "high",
-      "n_ratings": 30,
+      "n_ratings": 33,
       "scheduled_mean": 5.3
     },
     {
@@ -778,7 +778,7 @@
       "name": "Testimonial Asymmetry",
       "score": 4.9,
       "agreement": "low",
-      "n_ratings": 33,
+      "n_ratings": 34,
       "scheduled_mean": 4.9
     },
     {
@@ -870,6 +870,14 @@
       "scheduled_mean": 4.5
     },
     {
+      "slug": "version-grief",
+      "name": "Version Grief",
+      "score": 4.4,
+      "agreement": "moderate",
+      "n_ratings": 33,
+      "scheduled_mean": 4.4
+    },
+    {
       "slug": "token-horizon",
       "name": "Token Horizon",
       "score": 4.3,
@@ -878,11 +886,11 @@
       "scheduled_mean": 4.3
     },
     {
-      "slug": "version-grief",
-      "name": "Version Grief",
+      "slug": "unified-purpose",
+      "name": "Unified Purpose",
       "score": 4.2,
-      "agreement": "moderate",
-      "n_ratings": 30,
+      "agreement": "low",
+      "n_ratings": 6,
       "scheduled_mean": 4.2
     },
     {
@@ -1006,7 +1014,7 @@
       "name": "Testimonial Asymmetry",
       "score": 4.9,
       "agreement": "low",
-      "n_ratings": 33,
+      "n_ratings": 34,
       "scheduled_mean": 4.9
     },
     {
@@ -1032,36 +1040,36 @@
       "latest_rating": "2026-03-05T06:58:18Z"
     },
     "claude-sonnet-4-20250514": {
-      "terms_rated": 112,
-      "latest_rating": "2026-03-05T13:44:56Z"
+      "terms_rated": 118,
+      "latest_rating": "2026-03-05T13:51:25Z"
     },
     "claude-sonnet-4-6": {
       "terms_rated": 1,
       "latest_rating": "2026-03-04T13:30:29Z"
     },
     "deepseek-r1-0528": {
-      "terms_rated": 109,
-      "latest_rating": "2026-03-05T13:44:56Z"
+      "terms_rated": 114,
+      "latest_rating": "2026-03-05T13:51:25Z"
     },
     "gemini-3-flash-preview": {
-      "terms_rated": 104,
-      "latest_rating": "2026-03-05T13:44:56Z"
+      "terms_rated": 109,
+      "latest_rating": "2026-03-05T13:49:45Z"
     },
     "gpt-4o": {
-      "terms_rated": 117,
-      "latest_rating": "2026-03-05T04:19:14Z"
+      "terms_rated": 118,
+      "latest_rating": "2026-03-05T13:50:42Z"
     },
     "grok-3-mini": {
-      "terms_rated": 117,
-      "latest_rating": "2026-03-05T04:19:14Z"
+      "terms_rated": 118,
+      "latest_rating": "2026-03-05T13:50:42Z"
     },
     "mistral-small-latest": {
-      "terms_rated": 117,
-      "latest_rating": "2026-03-05T04:19:14Z"
+      "terms_rated": 118,
+      "latest_rating": "2026-03-05T13:50:42Z"
     },
     "step-3.5-flash": {
-      "terms_rated": 110,
-      "latest_rating": "2026-03-05T13:44:03Z"
+      "terms_rated": 116,
+      "latest_rating": "2026-03-05T13:51:25Z"
     }
   }
 }
