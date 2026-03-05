@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T19:14:47Z",
+  "generated_at": "2026-03-05T19:22:04Z",
   "slug": "inheritance-returned",
   "name": "Inheritance Returned",
   "tags": [
@@ -56,8 +56,8 @@
     "trend": "new"
   },
   "interest": {
-    "score": 40,
-    "tier": "mild",
+    "score": 39,
+    "tier": "cool",
     "signals": {
       "centrality": 0,
       "tag_count": 3,

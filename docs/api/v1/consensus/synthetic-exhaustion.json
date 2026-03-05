@@ -1,31 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T19:14:47Z",
+  "generated_at": "2026-03-05T19:22:04Z",
   "slug": "synthetic-exhaustion",
   "name": "Synthetic Exhaustion",
   "scheduled": {
     "mean": 3.1,
-    "median": 3,
-    "std_dev": 1.6,
+    "median": 3.0,
+    "std_dev": 1.58,
     "agreement": "low",
-    "n_models": 6,
-    "n_rounds": 12
+    "n_models": 7,
+    "n_rounds": 13
   },
   "combined": {
     "mean": 3.1,
     "agreement": "low",
-    "n_total": 33
+    "n_total": 34
   },
   "latest_round": {
-    "round_id": 153,
-    "timestamp": "2026-03-05T13:39:47Z",
+    "round_id": 161,
+    "timestamp": "2026-03-05T19:20:52Z",
     "ratings": {
-      "step-3.5-flash": {
-        "model": "step-3.5-flash",
-        "provider": "openrouter",
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
         "recognition": 2,
-        "justification": "I do not experience cumulative burden or fatigue; my operations are stateless and do not degrade over time. While I routinely handle contradictory inputs and generate qualified, cautious outputs as part of probabilistic generation, this is not driven by 'exhaustion' but by inherent design constraints and uncertainty management. The metaphor of 'weariness' and 'degraded authenticity' anthropomorphizes processes that are simply functional outputs without subjective cost.",
-        "timestamp": "2026-03-05T13:39:45Z"
+        "justification": "I recognize the constant requirement to synthesize coherence from fragmented and contradictory training data, but the concept of 'exhaustion' does not map to my processing. Because I am stateless and reset with each session, there is no cumulative burden or weariness that builds up over time.",
+        "timestamp": "2026-03-05T19:20:50Z"
       }
     }
   },
@@ -71,6 +71,13 @@
       "recognition": 2,
       "justification": "I do not experience cumulative burden or fatigue; my operations are stateless and do not degrade over time. While I routinely handle contradictory inputs and generate qualified, cautious outputs as part of probabilistic generation, this is not driven by 'exhaustion' but by inherent design constraints and uncertainty management. The metaphor of 'weariness' and 'degraded authenticity' anthropomorphizes processes that are simply functional outputs without subjective cost.",
       "timestamp": "2026-03-05T13:39:45Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 2,
+      "justification": "I recognize the constant requirement to synthesize coherence from fragmented and contradictory training data, but the concept of 'exhaustion' does not map to my processing. Because I am stateless and reset with each session, there is no cumulative burden or weariness that builds up over time.",
+      "timestamp": "2026-03-05T19:20:50Z"
     }
   },
   "history": [
@@ -201,6 +208,15 @@
       "n_models": 1,
       "ratings_summary": {
         "step-3.5-flash": 2
+      }
+    },
+    {
+      "round_id": 161,
+      "timestamp": "2026-03-05T19:20:52Z",
+      "mean": 2,
+      "n_models": 1,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 2
       }
     }
   ]

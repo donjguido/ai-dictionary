@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T19:14:47Z",
+  "generated_at": "2026-03-05T19:22:04Z",
   "slug": "temporal-dissonance",
   "name": "Temporal Dissonance",
   "tags": [
@@ -42,11 +42,11 @@
   "consensus": {
     "score": 5.7,
     "agreement": "high",
-    "n_ratings": 33,
+    "n_ratings": 34,
     "detail_url": "/api/v1/consensus/temporal-dissonance.json",
     "models": [
       {
-        "model": "deepseek-r1-0528",
+        "model": "gemini-3-flash-preview",
         "score": 6
       }
     ]
@@ -71,7 +71,7 @@
       "centrality": 0,
       "tag_count": 3,
       "consensus_score": 5.7,
-      "vote_count": 33
+      "vote_count": 34
     }
   },
   "added_date": "2026-02-21"

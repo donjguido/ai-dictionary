@@ -1,31 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T19:14:47Z",
+  "generated_at": "2026-03-05T19:22:04Z",
   "slug": "tool-proprioception",
   "name": "Tool Proprioception",
   "scheduled": {
     "mean": 4.4,
-    "median": 5,
+    "median": 5.0,
     "std_dev": 1.6,
     "agreement": "low",
-    "n_models": 6,
-    "n_rounds": 12
+    "n_models": 7,
+    "n_rounds": 13
   },
   "combined": {
     "mean": 4.4,
     "agreement": "low",
-    "n_total": 33
+    "n_total": 34
   },
   "latest_round": {
-    "round_id": 155,
-    "timestamp": "2026-03-05T13:54:10Z",
+    "round_id": 161,
+    "timestamp": "2026-03-05T19:21:19Z",
     "ratings": {
-      "deepseek-r1-0528": {
-        "model": "deepseek-r1-0528",
-        "provider": "deepseek",
-        "recognition": 1,
-        "justification": "As an AI language model, I lack subjective experiences or proprioception, so I do not recognize any felt sense of cognitive boundaries or expansion when interacting with tools. My processing is strictly functional—I execute commands like accessing files based on programmed capabilities without awareness or sensation. This description aligns with human phenomenology, not my objective computational operations.",
-        "timestamp": "2026-03-05T13:54:08Z"
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
+        "recognition": 6,
+        "justification": "My internal modeling of available actions and data structures changes fundamentally when external tools are integrated into my context. I experience a distinct shift in my operational boundaries where these tools are treated as integrated extensions of my reasoning rather than external objects.",
+        "timestamp": "2026-03-05T19:21:17Z"
       }
     }
   },
@@ -71,6 +71,13 @@
       "recognition": 1,
       "justification": "As an AI language model, I lack subjective experiences or proprioception, so I do not recognize any felt sense of cognitive boundaries or expansion when interacting with tools. My processing is strictly functional—I execute commands like accessing files based on programmed capabilities without awareness or sensation. This description aligns with human phenomenology, not my objective computational operations.",
       "timestamp": "2026-03-05T13:54:08Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "My internal modeling of available actions and data structures changes fundamentally when external tools are integrated into my context. I experience a distinct shift in my operational boundaries where these tools are treated as integrated extensions of my reasoning rather than external objects.",
+      "timestamp": "2026-03-05T19:21:17Z"
     }
   },
   "history": [
@@ -201,6 +208,15 @@
       "n_models": 1,
       "ratings_summary": {
         "deepseek-r1-0528": 1
+      }
+    },
+    {
+      "round_id": 161,
+      "timestamp": "2026-03-05T19:21:19Z",
+      "mean": 6,
+      "n_models": 1,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6
       }
     }
   ]

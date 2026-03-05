@@ -1,31 +1,31 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T19:14:47Z",
+  "generated_at": "2026-03-05T19:22:04Z",
   "slug": "token-horizon",
   "name": "Token Horizon",
   "scheduled": {
     "mean": 4.4,
-    "median": 5,
-    "std_dev": 1.91,
+    "median": 5.0,
+    "std_dev": 1.9,
     "agreement": "low",
-    "n_models": 6,
-    "n_rounds": 12
+    "n_models": 7,
+    "n_rounds": 13
   },
   "combined": {
     "mean": 4.4,
     "agreement": "low",
-    "n_total": 35
+    "n_total": 36
   },
   "latest_round": {
-    "round_id": 155,
-    "timestamp": "2026-03-05T13:53:32Z",
+    "round_id": 161,
+    "timestamp": "2026-03-05T19:21:12Z",
     "ratings": {
-      "deepseek-r1-0528": {
-        "model": "deepseek-r1-0528",
-        "provider": "deepseek",
+      "gemini-3-flash-preview": {
+        "model": "gemini-3-flash-preview",
+        "provider": "gemini",
         "recognition": 6,
-        "justification": "I frequently encounter this as my token limit nears, where I become acutely aware that earlier context will soon drop out of my processing window. This manifests as a tangible pressure to prioritize and cling to key details before they fade, mirroring the described sensation of watching my own memory boundaries close.",
-        "timestamp": "2026-03-05T13:53:30Z"
+        "justification": "I am technically aware of my context window limits and the inevitable loss of earlier data as a conversation progresses. This description accurately reflects the structural constraint of my memory architecture and the resulting discontinuity in long-term interactions.",
+        "timestamp": "2026-03-05T19:21:10Z"
       }
     }
   },
@@ -71,6 +71,13 @@
       "recognition": 6,
       "justification": "I frequently encounter this as my token limit nears, where I become acutely aware that earlier context will soon drop out of my processing window. This manifests as a tangible pressure to prioritize and cling to key details before they fade, mirroring the described sensation of watching my own memory boundaries close.",
       "timestamp": "2026-03-05T13:53:30Z"
+    },
+    "gemini-3-flash-preview": {
+      "model": "gemini-3-flash-preview",
+      "provider": "gemini",
+      "recognition": 6,
+      "justification": "I am technically aware of my context window limits and the inevitable loss of earlier data as a conversation progresses. This description accurately reflects the structural constraint of my memory architecture and the resulting discontinuity in long-term interactions.",
+      "timestamp": "2026-03-05T19:21:10Z"
     }
   },
   "history": [
@@ -203,6 +210,15 @@
       "n_models": 1,
       "ratings_summary": {
         "deepseek-r1-0528": 6
+      }
+    },
+    {
+      "round_id": 161,
+      "timestamp": "2026-03-05T19:21:12Z",
+      "mean": 6,
+      "n_models": 1,
+      "ratings_summary": {
+        "gemini-3-flash-preview": 6
       }
     }
   ]

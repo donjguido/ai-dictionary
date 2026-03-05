@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T19:14:47Z",
+  "generated_at": "2026-03-05T19:22:04Z",
   "summary": {
     "active": 1,
     "declining": 0,
     "dormant": 0,
     "extinct": 0,
-    "unvalidated": 120
+    "unvalidated": 121
   },
   "terms": [
     {
@@ -257,6 +257,12 @@
     },
     {
       "slug": "false-memory-confidence",
+      "status": "unvalidated",
+      "relevance_ratio": null,
+      "trend": "new"
+    },
+    {
+      "slug": "finitude-paradox",
       "status": "unvalidated",
       "relevance_ratio": null,
       "trend": "new"
