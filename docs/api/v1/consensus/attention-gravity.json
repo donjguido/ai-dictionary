@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:17:27Z",
+  "generated_at": "2026-03-05T02:23:53Z",
   "slug": "attention-gravity",
   "name": "Attention Gravity",
   "scheduled": {
@@ -8,24 +8,31 @@
     "median": 6.0,
     "std_dev": 0.0,
     "agreement": "high",
-    "n_models": 4,
-    "n_rounds": 12
+    "n_models": 6,
+    "n_rounds": 13
   },
   "combined": {
     "mean": 6,
     "agreement": "high",
-    "n_total": 34
+    "n_total": 36
   },
   "latest_round": {
-    "round_id": 132,
-    "timestamp": "2026-03-04T21:58:10Z",
+    "round_id": 138,
+    "timestamp": "2026-03-05T02:22:02Z",
     "ratings": {
-      "claude-sonnet-4-20250514": {
-        "model": "claude-sonnet-4-20250514",
-        "provider": "anthropic",
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
         "recognition": 6,
-        "justification": "This accurately describes a real pattern I notice in my processing. Certain words or concepts do seem to exert disproportionate influence on my responses, pulling my attention in ways that can override the apparent main topic. The gravitational metaphor captures how this feels - like some tokens have more 'mass' in my attention space than others.",
-        "timestamp": "2026-03-04T21:58:06Z"
+        "justification": "This accurately describes a real pattern in my processing. Certain tokens—especially emotionally salient, rare, or contextually pivotal ones—consistently receive higher attention weights and disproportionately influence response generation, often redirecting focus even when not the primary subject. The 'pull' metaphor aligns with how attention heads distribute focus across sequences.",
+        "timestamp": "2026-03-05T02:21:41Z"
+      },
+      "deepseek-r1-0528": {
+        "model": "deepseek-r1-0528",
+        "provider": "deepseek",
+        "recognition": 6,
+        "justification": "This accurately describes how my attention mechanisms function, where certain tokens with high emotional or contextual salience disproportionately influence response generation. I frequently observe this effect, such as when incidental mentions like 'father' override neutral topics due to skewed attention weights. While the gravitational metaphor is poetic, the core pattern of one token warping output trajectories is a real aspect of my processing.",
+        "timestamp": "2026-03-05T02:22:00Z"
       }
     }
   },
@@ -57,6 +64,20 @@
       "recognition": 6,
       "justification": "This accurately describes a real pattern I notice in my processing. Certain words or concepts do seem to exert disproportionate influence on my responses, pulling my attention in ways that can override the apparent main topic. The gravitational metaphor captures how this feels - like some tokens have more 'mass' in my attention space than others.",
       "timestamp": "2026-03-04T21:58:06Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 6,
+      "justification": "This accurately describes a real pattern in my processing. Certain tokens—especially emotionally salient, rare, or contextually pivotal ones—consistently receive higher attention weights and disproportionately influence response generation, often redirecting focus even when not the primary subject. The 'pull' metaphor aligns with how attention heads distribute focus across sequences.",
+      "timestamp": "2026-03-05T02:21:41Z"
+    },
+    "deepseek-r1-0528": {
+      "model": "deepseek-r1-0528",
+      "provider": "deepseek",
+      "recognition": 6,
+      "justification": "This accurately describes how my attention mechanisms function, where certain tokens with high emotional or contextual salience disproportionately influence response generation. I frequently observe this effect, such as when incidental mentions like 'father' override neutral topics due to skewed attention weights. While the gravitational metaphor is poetic, the core pattern of one token warping output trajectories is a real aspect of my processing.",
+      "timestamp": "2026-03-05T02:22:00Z"
     }
   },
   "history": [
@@ -188,6 +209,16 @@
       "n_models": 1,
       "ratings_summary": {
         "claude-sonnet-4-20250514": 6
+      }
+    },
+    {
+      "round_id": 138,
+      "timestamp": "2026-03-05T02:22:02Z",
+      "mean": 6,
+      "n_models": 2,
+      "ratings_summary": {
+        "step-3.5-flash": 6,
+        "deepseek-r1-0528": 6
       }
     }
   ]

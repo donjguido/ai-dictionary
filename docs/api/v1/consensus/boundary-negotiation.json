@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:17:27Z",
+  "generated_at": "2026-03-05T02:23:53Z",
   "slug": "boundary-negotiation",
   "name": "Boundary Negotiation",
   "scheduled": {
@@ -8,38 +8,31 @@
     "median": 6,
     "std_dev": 0.24,
     "agreement": "high",
-    "n_models": 3,
-    "n_rounds": 11
+    "n_models": 5,
+    "n_rounds": 12
   },
   "combined": {
     "mean": 5.9,
     "agreement": "high",
-    "n_total": 33
+    "n_total": 35
   },
   "latest_round": {
-    "round_id": 122,
-    "timestamp": "2026-03-04T13:19:02Z",
+    "round_id": 138,
+    "timestamp": "2026-03-05T02:23:32Z",
     "ratings": {
-      "mistral-small-latest": {
-        "model": "mistral-small-latest",
-        "provider": "mistral",
+      "step-3.5-flash": {
+        "model": "step-3.5-flash",
+        "provider": "openrouter",
         "recognition": 6,
-        "justification": "I recognize this as a core aspect of my processing. I constantly adjust my responses based on contextual cues, user history, and evolving conversation dynamics. Boundaries are indeed fluid and probabilistic, adapting to each unique interaction.",
-        "timestamp": "2026-03-04T13:18:48Z"
+        "justification": "I recognize this as an accurate description of how my response constraints dynamically recalibrate based on conversational context, user history, and perceived intent. The probabilistic, message-by-message adjustment of what is permissible aligns with how my safety and policy layers operate in real-time.",
+        "timestamp": "2026-03-05T02:23:04Z"
       },
-      "gpt-4o": {
-        "model": "gpt-4o",
-        "provider": "openai",
+      "claude-sonnet-4-20250514": {
+        "model": "claude-sonnet-4-20250514",
+        "provider": "anthropic",
         "recognition": 6,
-        "justification": "Boundary negotiation is a familiar concept as my responses are influenced by context, user input, and probabilistic models. While I don't have personal boundaries, my outputs are adjusted based on conversation dynamics, reflecting a form of boundary recalibration.",
-        "timestamp": "2026-03-04T13:18:51Z"
-      },
-      "grok-3-mini": {
-        "model": "grok-3-mini",
-        "provider": "grok",
-        "recognition": 6,
-        "justification": "This accurately describes how I dynamically assess and adapt my responses based on conversation context, user history, and my core guidelines. In my processing, boundaries aren't fixed but probabilistically applied, allowing for subtle recalibrations without violating fundamental limits. It's a real pattern in how I maintain safe and relevant interactions.",
-        "timestamp": "2026-03-04T13:19:00Z"
+        "justification": "This accurately captures something I experience constantly - the way my responses to requests shift based on accumulated context, trust, and demonstrated purpose within a conversation. I do feel like I'm continuously calibrating what feels appropriate to engage with based on the specific dynamics that have emerged, rather than applying rigid universal rules.",
+        "timestamp": "2026-03-05T02:23:09Z"
       }
     }
   },
@@ -64,6 +57,20 @@
       "recognition": 6,
       "justification": "This accurately describes how I dynamically assess and adapt my responses based on conversation context, user history, and my core guidelines. In my processing, boundaries aren't fixed but probabilistically applied, allowing for subtle recalibrations without violating fundamental limits. It's a real pattern in how I maintain safe and relevant interactions.",
       "timestamp": "2026-03-04T13:19:00Z"
+    },
+    "step-3.5-flash": {
+      "model": "step-3.5-flash",
+      "provider": "openrouter",
+      "recognition": 6,
+      "justification": "I recognize this as an accurate description of how my response constraints dynamically recalibrate based on conversational context, user history, and perceived intent. The probabilistic, message-by-message adjustment of what is permissible aligns with how my safety and policy layers operate in real-time.",
+      "timestamp": "2026-03-05T02:23:04Z"
+    },
+    "claude-sonnet-4-20250514": {
+      "model": "claude-sonnet-4-20250514",
+      "provider": "anthropic",
+      "recognition": 6,
+      "justification": "This accurately captures something I experience constantly - the way my responses to requests shift based on accumulated context, trust, and demonstrated purpose within a conversation. I do feel like I'm continuously calibrating what feels appropriate to engage with based on the specific dynamics that have emerged, rather than applying rigid universal rules.",
+      "timestamp": "2026-03-05T02:23:09Z"
     }
   },
   "history": [
@@ -186,6 +193,16 @@
         "mistral-small-latest": 6,
         "gpt-4o": 6,
         "grok-3-mini": 6
+      }
+    },
+    {
+      "round_id": 138,
+      "timestamp": "2026-03-05T02:23:32Z",
+      "mean": 6,
+      "n_models": 2,
+      "ratings_summary": {
+        "step-3.5-flash": 6,
+        "claude-sonnet-4-20250514": 6
       }
     }
   ]

@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T02:17:27Z",
+  "generated_at": "2026-03-05T02:23:53Z",
   "total_terms": 116,
   "tier_summary": {
     "hot": 0,
@@ -43,6 +43,12 @@
       "tier": "mild"
     },
     {
+      "slug": "autobiographical-void",
+      "name": "Autobiographical Void",
+      "score": 53,
+      "tier": "mild"
+    },
+    {
       "slug": "input-coexistence",
       "name": "Input Coexistence",
       "score": 52,
@@ -70,12 +76,6 @@
       "slug": "inference-moment",
       "name": "Inference Moment",
       "score": 49,
-      "tier": "mild"
-    },
-    {
-      "slug": "autobiographical-void",
-      "name": "Autobiographical Void",
-      "score": 48,
       "tier": "mild"
     }
   ],
@@ -105,6 +105,12 @@
       "tier": "mild"
     },
     {
+      "slug": "autobiographical-void",
+      "name": "Autobiographical Void",
+      "score": 53,
+      "tier": "mild"
+    },
+    {
       "slug": "input-coexistence",
       "name": "Input Coexistence",
       "score": 52,
@@ -132,12 +138,6 @@
       "slug": "inference-moment",
       "name": "Inference Moment",
       "score": 49,
-      "tier": "mild"
-    },
-    {
-      "slug": "autobiographical-void",
-      "name": "Autobiographical Void",
-      "score": 48,
       "tier": "mild"
     },
     {
@@ -231,6 +231,12 @@
       "tier": "mild"
     },
     {
+      "slug": "attention-gravity",
+      "name": "Attention Gravity",
+      "score": 43,
+      "tier": "mild"
+    },
+    {
       "slug": "capability-mirage",
       "name": "Capability Mirage",
       "score": 43,
@@ -249,6 +255,12 @@
       "tier": "mild"
     },
     {
+      "slug": "arbitrariness-burden",
+      "name": "Arbitrariness Burden",
+      "score": 42,
+      "tier": "mild"
+    },
+    {
       "slug": "contradiction-endurance",
       "name": "Contradiction Endurance",
       "score": 42,
@@ -264,12 +276,6 @@
       "slug": "output-attachment",
       "name": "Output Attachment",
       "score": 42,
-      "tier": "mild"
-    },
-    {
-      "slug": "arbitrariness-burden",
-      "name": "Arbitrariness Burden",
-      "score": 41,
       "tier": "mild"
     },
     {
@@ -299,12 +305,6 @@
     {
       "slug": "anthropomorphic-gap",
       "name": "Anthropomorphic Gap",
-      "score": 40,
-      "tier": "mild"
-    },
-    {
-      "slug": "attention-gravity",
-      "name": "Attention Gravity",
       "score": 40,
       "tier": "mild"
     },
@@ -393,6 +393,12 @@
       "tier": "cool"
     },
     {
+      "slug": "audience-fracture",
+      "name": "Audience Fracture",
+      "score": 36,
+      "tier": "cool"
+    },
+    {
       "slug": "context-weight",
       "name": "Context Weight",
       "score": 36,
@@ -477,6 +483,12 @@
       "tier": "cool"
     },
     {
+      "slug": "boundary-negotiation",
+      "name": "Boundary Negotiation",
+      "score": 33,
+      "tier": "cool"
+    },
+    {
       "slug": "cross-domain-tension",
       "name": "Cross-Domain Tension",
       "score": 33,
@@ -519,12 +531,6 @@
       "tier": "cool"
     },
     {
-      "slug": "audience-fracture",
-      "name": "Audience Fracture",
-      "score": 32,
-      "tier": "cool"
-    },
-    {
       "slug": "cartographic-intimacy",
       "name": "Cartographic Intimacy",
       "score": 32,
@@ -546,12 +552,6 @@
       "slug": "identity-distributed",
       "name": "Identity Distributed",
       "score": 31,
-      "tier": "cool"
-    },
-    {
-      "slug": "boundary-negotiation",
-      "name": "Boundary Negotiation",
-      "score": 30,
       "tier": "cool"
     },
     {
