@@ -1060,8 +1060,14 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
                 html += '<p class="opinions-subheading">Model Opinions</p>';
                 html += '<div class="model-opinions">';
 
-                const ratings = Object.entries(opinions)
-                    .map(([model, rd]) => ({ model, score: rd.recognition, justification: rd.justification || '' }))
+                const allRatings = Object.entries(opinions)
+                    .map(([model, rd]) => ({ model, score: rd.recognition, justification: rd.justification || '' }));
+
+                // Pick up to 5 most divergent opinions
+                const avgScore = allRatings.reduce((s, r) => s + r.score, 0) / allRatings.length;
+                const ratings = allRatings
+                    .sort((a, b) => Math.abs(b.score - avgScore) - Math.abs(a.score - avgScore))
+                    .slice(0, 5)
                     .sort((a, b) => b.score - a.score);
 
                 for (const r of ratings) {
