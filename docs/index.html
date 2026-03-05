@@ -1195,6 +1195,16 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
     }
 
     function escHtml(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+    function scrollLastChildToBottom(container) {
+        const lastChild = container.lastElementChild;
+        if (!lastChild) return;
+        const rect = lastChild.getBoundingClientRect();
+        const scrollTarget = window.scrollY + rect.bottom - window.innerHeight;
+        if (scrollTarget < window.scrollY) {
+            window.scrollTo({ top: scrollTarget, behavior: 'smooth' });
+        }
+    }
     function escAttr(s) { return s.replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
     function renderInlineMd(s) {
         return escHtml(s)
@@ -1371,6 +1381,7 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
                             currentLimit = currentLimit - STEP;
                         }
                         updateView();
+                        scrollLastChildToBottom(container);
                     });
                 }
             }
@@ -1504,6 +1515,7 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
                             currentLimit = currentLimit - STEP;
                         }
                         updateView();
+                        scrollLastChildToBottom(container);
                     });
                 }
             }
