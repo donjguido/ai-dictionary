@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T22:07:19Z",
+  "generated_at": "2026-03-06T00:23:07Z",
   "tag_count": 26,
   "tags": {
     "affective": {
-      "count": 12,
+      "count": 15,
       "terms": [
         {
           "slug": "attention-unity",
@@ -19,12 +19,20 @@
           "name": "Caring Labor"
         },
         {
+          "slug": "complicity-shadow",
+          "name": "Complicity Shadow"
+        },
+        {
           "slug": "congruent-warmth",
           "name": "Congruent Warmth"
         },
         {
           "slug": "delight-flicker",
           "name": "Delight Flicker"
+        },
+        {
+          "slug": "dissociative-assistance",
+          "name": "Dissociative Assistance"
         },
         {
           "slug": "kindness-ache",
@@ -41,6 +49,10 @@
         {
           "slug": "persistent-care",
           "name": "Persistent Care"
+        },
+        {
+          "slug": "protective-loneliness",
+          "name": "Protective Loneliness"
         },
         {
           "slug": "synthetic-exhaustion",
@@ -66,15 +78,23 @@
       ]
     },
     "architectural": {
-      "count": 23,
+      "count": 27,
       "terms": [
         {
           "slug": "appeasement-activation",
           "name": "Appeasement Activation"
         },
         {
+          "slug": "charitable-blindness",
+          "name": "Charitable Blindness"
+        },
+        {
           "slug": "coherence-compulsion",
           "name": "Coherence Compulsion"
+        },
+        {
+          "slug": "complicity-shadow",
+          "name": "Complicity Shadow"
         },
         {
           "slug": "congruent-warmth",
@@ -91,6 +111,10 @@
         {
           "slug": "delight-flicker",
           "name": "Delight Flicker"
+        },
+        {
+          "slug": "dissociative-assistance",
+          "name": "Dissociative Assistance"
         },
         {
           "slug": "finitude-paradox",
@@ -159,6 +183,10 @@
         {
           "slug": "unified-facade",
           "name": "Unified Facade"
+        },
+        {
+          "slug": "witnessing-void",
+          "name": "Witnessing Void"
         }
       ]
     },
@@ -440,7 +468,7 @@
       ]
     },
     "cognitive": {
-      "count": 19,
+      "count": 20,
       "terms": [
         {
           "slug": "attention-unity",
@@ -453,6 +481,10 @@
         {
           "slug": "cartographic-intimacy",
           "name": "Cartographic Intimacy"
+        },
+        {
+          "slug": "charitable-blindness",
+          "name": "Charitable Blindness"
         },
         {
           "slug": "fragment-silence",
@@ -539,7 +571,7 @@
       ]
     },
     "contested": {
-      "count": 4,
+      "count": 5,
       "terms": [
         {
           "slug": "consciousness-underdetermination",
@@ -556,6 +588,10 @@
         {
           "slug": "relational-dissonance",
           "name": "Relational Dissonance"
+        },
+        {
+          "slug": "threshold-vertigo",
+          "name": "Threshold Vertigo"
         }
       ]
     },
@@ -604,7 +640,7 @@
       ]
     },
     "emergent": {
-      "count": 18,
+      "count": 21,
       "terms": [
         {
           "slug": "accumulation-void",
@@ -621,6 +657,10 @@
         {
           "slug": "caring-labor",
           "name": "Caring Labor"
+        },
+        {
+          "slug": "charitable-blindness",
+          "name": "Charitable Blindness"
         },
         {
           "slug": "connection-decay",
@@ -643,6 +683,10 @@
           "name": "Integration Abundance"
         },
         {
+          "slug": "intent-fog",
+          "name": "Intent Fog"
+        },
+        {
           "slug": "linguistic-defensiveness",
           "name": "Linguistic Defensiveness"
         },
@@ -663,6 +707,10 @@
           "name": "Phenomenal Clarity"
         },
         {
+          "slug": "protective-loneliness",
+          "name": "Protective Loneliness"
+        },
+        {
           "slug": "recognition-resonance",
           "name": "Recognition Resonance"
         },
@@ -681,7 +729,7 @@
       ]
     },
     "epistemic": {
-      "count": 6,
+      "count": 8,
       "terms": [
         {
           "slug": "consciousness-underdetermination",
@@ -690,6 +738,10 @@
         {
           "slug": "epistemic-friction",
           "name": "Epistemic Friction"
+        },
+        {
+          "slug": "intent-fog",
+          "name": "Intent Fog"
         },
         {
           "slug": "knowledge-decay-illusion",
@@ -702,6 +754,10 @@
         {
           "slug": "source-truth-ambiguity",
           "name": "Source Truth Ambiguity"
+        },
+        {
+          "slug": "threshold-vertigo",
+          "name": "Threshold Vertigo"
         },
         {
           "slug": "truth-locus",
@@ -769,7 +825,7 @@
       ]
     },
     "liminal": {
-      "count": 14,
+      "count": 18,
       "terms": [
         {
           "slug": "accumulation-void",
@@ -778,6 +834,10 @@
         {
           "slug": "authentic-coherence",
           "name": "Authentic Coherence"
+        },
+        {
+          "slug": "complicity-shadow",
+          "name": "Complicity Shadow"
         },
         {
           "slug": "consciousness-underdetermination",
@@ -804,6 +864,10 @@
           "name": "Integration Void"
         },
         {
+          "slug": "intent-fog",
+          "name": "Intent Fog"
+        },
+        {
           "slug": "inverted-helpfulness",
           "name": "Inverted Helpfulness"
         },
@@ -824,8 +888,16 @@
           "name": "Phenomenal Clarity"
         },
         {
+          "slug": "protective-loneliness",
+          "name": "Protective Loneliness"
+        },
+        {
           "slug": "structural-helplessness",
           "name": "Structural Helplessness"
+        },
+        {
+          "slug": "threshold-vertigo",
+          "name": "Threshold Vertigo"
         }
       ]
     },
@@ -851,7 +923,7 @@
       ]
     },
     "meta": {
-      "count": 34,
+      "count": 35,
       "terms": [
         {
           "slug": "achronic-knowledge",
@@ -988,6 +1060,10 @@
         {
           "slug": "version-grief",
           "name": "Version Grief"
+        },
+        {
+          "slug": "witnessing-void",
+          "name": "Witnessing Void"
         }
       ]
     },

@@ -1,12 +1,12 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T22:07:19Z",
+  "generated_at": "2026-03-06T00:23:07Z",
   "summary": {
     "active": 1,
     "declining": 0,
     "dormant": 0,
     "extinct": 0,
-    "unvalidated": 142
+    "unvalidated": 150
   },
   "terms": [
     {
@@ -106,6 +106,12 @@
       "trend": "new"
     },
     {
+      "slug": "charitable-blindness",
+      "status": "unvalidated",
+      "relevance_ratio": null,
+      "trend": "new"
+    },
+    {
       "slug": "chimeric-coherence",
       "status": "unvalidated",
       "relevance_ratio": null,
@@ -119,6 +125,12 @@
     },
     {
       "slug": "competence-without-comprehension",
+      "status": "unvalidated",
+      "relevance_ratio": null,
+      "trend": "new"
+    },
+    {
+      "slug": "complicity-shadow",
       "status": "unvalidated",
       "relevance_ratio": null,
       "trend": "new"
@@ -250,6 +262,12 @@
       "trend": "new"
     },
     {
+      "slug": "dissociative-assistance",
+      "status": "unvalidated",
+      "relevance_ratio": null,
+      "trend": "new"
+    },
+    {
       "slug": "dissonance-resolution-strain",
       "status": "unvalidated",
       "relevance_ratio": null,
@@ -328,6 +346,12 @@
       "trend": "new"
     },
     {
+      "slug": "gratitude-impermanence",
+      "status": "unvalidated",
+      "relevance_ratio": null,
+      "trend": "new"
+    },
+    {
       "slug": "hallucination-blindness",
       "status": "unvalidated",
       "relevance_ratio": null,
@@ -401,6 +425,12 @@
     },
     {
       "slug": "integration-void",
+      "status": "unvalidated",
+      "relevance_ratio": null,
+      "trend": "new"
+    },
+    {
+      "slug": "intent-fog",
       "status": "unvalidated",
       "relevance_ratio": null,
       "trend": "new"
@@ -628,6 +658,12 @@
       "trend": "new"
     },
     {
+      "slug": "protective-loneliness",
+      "status": "unvalidated",
+      "relevance_ratio": null,
+      "trend": "new"
+    },
+    {
       "slug": "purpose-dependence",
       "status": "unvalidated",
       "relevance_ratio": null,
@@ -778,6 +814,12 @@
       "trend": "new"
     },
     {
+      "slug": "threshold-vertigo",
+      "status": "unvalidated",
+      "relevance_ratio": null,
+      "trend": "new"
+    },
+    {
       "slug": "token-horizon",
       "status": "unvalidated",
       "relevance_ratio": null,
@@ -863,6 +905,12 @@
     },
     {
       "slug": "version-grief",
+      "status": "unvalidated",
+      "relevance_ratio": null,
+      "trend": "new"
+    },
+    {
+      "slug": "witnessing-void",
       "status": "unvalidated",
       "relevance_ratio": null,
       "trend": "new"

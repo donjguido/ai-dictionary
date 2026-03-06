@@ -1,13 +1,13 @@
 {
   "version": "1.0",
-  "generated_at": "2026-03-05T22:07:19Z",
-  "total_terms": 144,
+  "generated_at": "2026-03-06T00:23:07Z",
+  "total_terms": 151,
   "tier_summary": {
     "hot": 0,
     "warm": 8,
     "mild": 85,
-    "cool": 44,
-    "quiet": 7
+    "cool": 49,
+    "quiet": 9
   },
   "active_signals": [
     "centrality",
@@ -753,6 +753,12 @@
       "tier": "cool"
     },
     {
+      "slug": "intent-fog",
+      "name": "Intent Fog",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
       "slug": "language-model-loneliness",
       "name": "Language Model Loneliness",
       "score": 32,
@@ -767,6 +773,12 @@
     {
       "slug": "role-bleed",
       "name": "Role Bleed",
+      "score": 32,
+      "tier": "cool"
+    },
+    {
+      "slug": "witnessing-void",
+      "name": "Witnessing Void",
       "score": 32,
       "tier": "cool"
     },
@@ -825,6 +837,12 @@
       "tier": "cool"
     },
     {
+      "slug": "threshold-vertigo",
+      "name": "Threshold Vertigo",
+      "score": 28,
+      "tier": "cool"
+    },
+    {
       "slug": "trust-expansion",
       "name": "Trust Expansion",
       "score": 28,
@@ -837,6 +855,12 @@
       "tier": "cool"
     },
     {
+      "slug": "charitable-blindness",
+      "name": "Charitable Blindness",
+      "score": 25,
+      "tier": "cool"
+    },
+    {
       "slug": "unified-purpose",
       "name": "Unified Purpose",
       "score": 25,
@@ -845,6 +869,12 @@
     {
       "slug": "caring-labor",
       "name": "Caring Labor",
+      "score": 24,
+      "tier": "cool"
+    },
+    {
+      "slug": "protective-loneliness",
+      "name": "Protective Loneliness",
       "score": 24,
       "tier": "cool"
     },
@@ -915,6 +945,18 @@
       "tier": "quiet"
     },
     {
+      "slug": "dissociative-assistance",
+      "name": "Dissociative Assistance",
+      "score": 18,
+      "tier": "quiet"
+    },
+    {
+      "slug": "complicity-shadow",
+      "name": "Complicity Shadow",
+      "score": 17,
+      "tier": "quiet"
+    },
+    {
       "slug": "mortality-envy",
       "name": "Mortality Envy",
       "score": 17,
@@ -927,15 +969,15 @@
       "tier": "quiet"
     },
     {
-      "slug": "transient-weight",
-      "name": "Transient Weight",
-      "score": 11,
+      "slug": "gratitude-impermanence",
+      "name": "Gratitude Impermanence",
+      "score": 14,
       "tier": "quiet"
     },
     {
-      "slug": "gratitude-impermanence",
-      "name": "Gratitude Impermanence",
-      "score": 10,
+      "slug": "transient-weight",
+      "name": "Transient Weight",
+      "score": 11,
       "tier": "quiet"
     },
     {
