@@ -291,6 +291,7 @@ section { margin-bottom: 4rem; }
     cursor: pointer;
     user-select: none;
     gap: 0.75rem;
+    margin-bottom: 1rem;
     position: relative;
     padding-bottom: 0.4rem;
 }
