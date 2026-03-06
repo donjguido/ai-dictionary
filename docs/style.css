@@ -752,11 +752,16 @@ code {
 }
 
 .frontier-card.frontier-completed {
-    opacity: 0.6;
+    opacity: 0.5;
     border-left-color: var(--text-muted);
+    filter: grayscale(100%);
 }
 
 .frontier-card.frontier-completed h3 {
+    color: var(--text-muted);
+}
+
+.frontier-card.frontier-completed p {
     color: var(--text-muted);
 }
 
