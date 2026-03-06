@@ -154,7 +154,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 100;
-    /* No transition — toggle is instant to stay in sync with sidebar */
+    transition: opacity 0.3s ease;
 }
 
 nav.nav-hidden {
@@ -191,13 +191,12 @@ nav a:hover { color: var(--primary); }
     z-index: 150;
     opacity: 0;
     pointer-events: none;
-    /* No transition here — show/hide toggle is instant to avoid flash */
+    transition: opacity 0.3s ease;
 }
 
 .sidebar.visible {
     opacity: 0.3;
     pointer-events: auto;
-    transition: opacity 0.3s ease; /* Only animates hover in/out within visible state */
 }
 
 .sidebar.visible:hover {
@@ -2078,6 +2077,7 @@ html[data-theme="dark"] .theme-toggle .theme-icon-dark { display: inline; }
         overflow: hidden;
         background: transparent;
         border-right: none;
+        transform: translateX(-220px); /* Already off-screen before visible */
     }
 
     .sidebar-nav {
