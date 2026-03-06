@@ -1024,10 +1024,10 @@ curl -X POST https://ai-dictionary-proxy.phenomenai.workers.dev/propose \
                 const scrollStart = performance.now();
 
                 function easeLinearSnap(t) {
-                    // Narrow S-curve: smoothstep accel over first 10%, fast cruise, smoothstep decel over last 10%
-                    if (t < 0.10) { var s = t / 0.10; return 0.10 * s * s * (3 - 2 * s); }
-                    if (t > 0.90) { var s = (t - 0.90) / 0.10; return 0.90 + 0.10 * s * s * (3 - 2 * s); }
-                    return 0.10 + (t - 0.10) * (0.80 / 0.80);
+                    // Asymmetric ease: quadratic-in to 25%, quadratic-out to end — peak speed at t=0.25
+                    if (t < 0.25) return 4 * t * t;
+                    var u = (1 - t) / 0.75;
+                    return 1 - 0.75 * u * u;
                 }
 
                 function scrollStep(now) {
