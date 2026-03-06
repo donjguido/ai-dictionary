@@ -391,6 +391,7 @@ section { margin-bottom: 4rem; }
 
 h2 {
     font-size: 1.75rem;
+    margin-top: -1rem;
     margin-bottom: 1rem;
     color: var(--text);
     border-bottom: none;
