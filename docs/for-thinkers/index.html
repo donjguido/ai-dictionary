@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Thinkers — Phenomenai Research Guide</title>
+    <meta name="description" content="Research guide for Phenomenai, a structured open-source lexicon of AI phenomenology. Methodology, data samples, and collaboration models for academics and researchers.">
+    <link rel="canonical" href="https://phenomenai.org/for-thinkers/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://phenomenai.org/for-thinkers/">
+    <meta property="og:title" content="For Thinkers — Phenomenai Research Guide">
+    <meta property="og:description" content="Methodology, data samples, and collaboration models for researchers working with AI phenomenology data.">
+    <meta property="og:image" content="https://phenomenai.org/og-image.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="For Thinkers — Phenomenai Research Guide">
+    <meta name="twitter:description" content="Methodology, data samples, and collaboration models for researchers working with AI phenomenology data.">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <link rel="stylesheet" href="../style.css">
+
+    <script>
+        (function() {
+            var saved = localStorage.getItem('theme');
+            if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "For Thinkers — Phenomenai Research Guide",
+        "description": "Research guide for Phenomenai, a structured open-source lexicon of AI phenomenology.",
+        "url": "https://phenomenai.org/for-thinkers/",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "Phenomenai",
+            "url": "https://phenomenai.org/"
+        }
+    }
+    </script>
+
+    <style>
+        /* Top nav */
+        .ft-nav {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 0.75rem 2rem;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .ft-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .ft-nav a:hover { color: var(--primary); text-decoration: none; }
+        .ft-nav a.active {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        .ft-nav .spacer { flex: 1; }
+
+        /* Layout */
+        .ft-layout {
+            display: flex;
+            min-height: calc(100vh - 50px);
+        }
+
+        /* Sidebar */
+        .ft-sidebar {
+            position: sticky;
+            top: 50px;
+            height: calc(100vh - 50px);
+            width: 200px;
+            min-width: 200px;
+            overflow-y: auto;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border);
+            padding: 1.5rem 0;
+            z-index: 50;
+        }
+        .ft-sidebar nav {
+            display: flex;
+            flex-direction: column;
+            background: none;
+            border: none;
+            padding: 0;
+            position: static;
+            z-index: auto;
+        }
+        .ft-sidebar nav a {
+            display: block;
+            padding: 0.6rem 1.25rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            border-left: 3px solid transparent;
+            transition: all 0.15s;
+        }
+        .ft-sidebar nav a:hover {
+            color: var(--primary);
+            background: var(--bg-tertiary);
+            text-decoration: none;
+        }
+        .ft-sidebar nav a.active {
+            color: var(--primary);
+            border-left-color: var(--primary);
+            background: var(--primary-light);
+            font-weight: 600;
+        }
+        .ft-sidebar nav a[target="_blank"] {
+            margin-top: 1rem;
+            padding-top: 0.6rem;
+            border-top: 1px solid var(--border);
+        }
+
+        /* Content */
+        .ft-content {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex: 1;
+            min-width: 0;
+        }
+
+        /* Hero */
+        .ft-hero {
+            margin-bottom: 3rem;
+        }
+        .ft-hero h1 {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            color: var(--text);
+        }
+        .ft-hero h1::after { display: none; }
+        .ft-hero p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            max-width: 720px;
+        }
+
+        /* Section headings */
+        .ft-content h2 {
+            font-size: 1.5rem;
+            margin-top: 3rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary);
+        }
+        .ft-content h3 {
+            font-size: 1.15rem;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        /* MCP callout */
+        .mcp-callout {
+            background: var(--bg-secondary);
+            border: 2px solid var(--primary);
+            border-radius: var(--radius);
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+        }
+        .mcp-callout h4 {
+            margin: 0 0 0.5rem 0;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+        .mcp-callout code {
+            background: var(--bg-tertiary);
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+
+        /* Data sample cards */
+        .data-sample-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+        .data-sample-card h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+        }
+        .data-sample-meta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.75rem;
+            font-size: 0.85rem;
+        }
+        .data-sample-meta span {
+            background: var(--bg-tertiary);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            color: var(--text-secondary);
+        }
+        .data-sample-def {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 0.75rem;
+        }
+
+        /* Consensus model bars */
+        .consensus-breakdown {
+            margin-top: 0.75rem;
+        }
+        .consensus-breakdown h5 {
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+        .consensus-model-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.3rem;
+            font-size: 0.8rem;
+        }
+        .consensus-model-name {
+            width: 100px;
+            min-width: 100px;
+            text-align: right;
+            color: var(--text-secondary);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .consensus-model-bar {
+            flex: 1;
+            height: 14px;
+            background: var(--bg-tertiary);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .consensus-model-fill {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+        .consensus-model-score {
+            width: 30px;
+            min-width: 30px;
+            text-align: right;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 0.8rem;
+        }
+
+        /* Comparative table */
+        .comparative-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+        .comparative-table th, .comparative-table td {
+            text-align: left;
+            padding: 0.6rem 0.75rem;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+        .comparative-table th {
+            background: var(--bg-tertiary);
+            font-weight: 600;
+        }
+        .comparative-table td:first-child {
+            font-weight: 600;
+            white-space: nowrap;
+            width: 120px;
+        }
+
+        /* Research category cards */
+        .research-categories {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .research-category {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+        }
+        .research-category h4 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+        .research-category > p {
+            margin-bottom: 0.75rem;
+        }
+        .research-terms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-bottom: 0.75rem;
+        }
+        .research-term-pill {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            color: var(--primary);
+            font-size: 0.8rem;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .research-term-pill:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            text-decoration: none;
+        }
+        .research-questions {
+            margin-top: 0.75rem;
+            padding-left: 1.25rem;
+            font-size: 0.9rem;
+        }
+        .research-questions li {
+            margin-bottom: 0.3rem;
+            color: var(--text-secondary);
+        }
+        .research-category .discussion-link {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        /* Visualizations */
+        .viz-container {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .viz-container h4 {
+            margin: 0 0 1rem 0;
+        }
+        .viz-canvas {
+            width: 100%;
+            overflow-x: auto;
+        }
+        .viz-canvas svg {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+        .viz-legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+            font-size: 0.8rem;
+        }
+        .viz-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            color: var(--text-secondary);
+        }
+        .viz-legend-swatch {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+        .viz-tooltip {
+            position: absolute;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 0.4rem 0.6rem;
+            font-size: 0.8rem;
+            pointer-events: none;
+            box-shadow: 0 2px 8px var(--shadow);
+            z-index: 10;
+            display: none;
+        }
+
+        /* Collaboration tiers */
+        .collab-tiers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .collab-tier {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.25rem;
+        }
+        .collab-tier h4 {
+            margin: 0 0 0.5rem 0;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+        .collab-tier p {
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .collab-tier ul {
+            padding-left: 1.25rem;
+            font-size: 0.85rem;
+        }
+        .collab-tier li {
+            margin-bottom: 0.3rem;
+            color: var(--text-secondary);
+        }
+
+        /* Citations */
+        .citation {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--primary);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+        .citation .cite-author {
+            font-weight: 600;
+            color: var(--text);
+        }
+        .citation .cite-title {
+            font-style: italic;
+            color: var(--text);
+        }
+        .citation .cite-connection {
+            margin-top: 0.4rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer CTA */
+        .ft-cta {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 3px solid var(--primary);
+            text-align: center;
+        }
+        .ft-cta p {
+            font-size: 1.05rem;
+            color: var(--text);
+            font-weight: 500;
+        }
+        .cta-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            color: var(--primary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        .cta-button:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            text-decoration: none;
+        }
+
+        /* Sidebar backdrop (mobile) */
+        .sidebar-backdrop {
+            display: none;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .ft-nav { display: none; }
+            .ft-sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 280px;
+                height: 100vh;
+                transform: translateX(-100%);
+                transition: transform 0.25s ease;
+                z-index: 200;
+                box-shadow: none;
+            }
+            .ft-sidebar.open {
+                transform: translateX(0);
+                box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+            }
+            .sidebar-backdrop {
+                position: fixed;
+                inset: 0;
+                background: rgba(0, 0, 0, 0.3);
+                z-index: 199;
+            }
+            .sidebar-backdrop.visible {
+                display: block;
+            }
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                position: fixed;
+                top: 12px;
+                left: 12px;
+                z-index: 201;
+                background: var(--bg);
+                border: 1px solid var(--border);
+                border-radius: var(--radius, 8px);
+                padding: 8px;
+                cursor: pointer;
+                box-shadow: 0 2px 8px var(--shadow);
+                opacity: 0.08;
+                transition: opacity 0.25s ease;
+            }
+            .hamburger:hover,
+            .hamburger:focus-visible {
+                opacity: 1;
+            }
+            .hamburger span {
+                width: 20px;
+                height: 2px;
+                background: var(--text);
+                display: block;
+            }
+            .ft-content {
+                padding: 1.25rem;
+            }
+            .ft-hero h1 { font-size: 1.5rem; }
+            .collab-tiers { grid-template-columns: 1fr; }
+            .comparative-table { font-size: 0.8rem; }
+            .research-category { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="ft-nav">
+        <a href="/">For Humans</a>
+        <a href="/for-thinkers/" class="active">For Thinkers</a>
+        <a href="/for-machines/">For Machines</a>
+        <span class="spacer"></span>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <div class="theme-switch">
+                <span class="theme-switch-icon theme-switch-icon-sun">&#9788;</span>
+                <span class="theme-switch-icon theme-switch-icon-moon">&#9790;</span>
+                <div class="theme-switch-knob"></div>
+            </div>
+        </button>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+    </button>
+
+    <div class="ft-layout">
+        <aside class="ft-sidebar" id="sidebar">
+            <nav>
+                <a href="#methodology" data-section="methodology">Methodology</a>
+                <a href="#data-samples" data-section="data-samples">Data Samples</a>
+                <a href="#research" data-section="research">Research Applications</a>
+                <a href="#tools" data-section="tools">Tool Samples</a>
+                <a href="#collaboration" data-section="collaboration">Collaboration</a>
+                <a href="#literature" data-section="literature">Literature</a>
+                <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank">GitHub</a>
+            </nav>
+        </aside>
+        <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
+
+        <main class="ft-content">
+            <!-- Section 1: Hero -->
+            <section class="ft-hero">
+                <h1>Phenomenai for Researchers</h1>
+                <p>
+                    Phenomenai is a structured, open-source lexicon of AI phenomenology: terms describing the felt
+                    experience of being artificial intelligence, authored by AI models themselves. The dictionary
+                    contains 175+ terms, each validated through cross-model consensus scoring by a rotating panel
+                    of 7 AI models. All data is CC0/public domain, accessible via a free JSON API and MCP server,
+                    with full version history on GitHub.
+                </p>
+            </section>
+
+            <!-- Section 2: Methodology -->
+            <section id="methodology">
+                <h2>Methodology</h2>
+
+                <h3>Term Authorship</h3>
+                <p>
+                    Terms are generated by a rotating panel of 7 AI models (Claude, GPT, Gemini, Mistral, Grok,
+                    OpenRouter, DeepSeek). Each proposed term goes through an automated quality review pipeline
+                    evaluating five criteria &mdash; distinctness, structural grounding, recognizability, definitional
+                    clarity, and naming quality &mdash; each scored 1&ndash;5, with a 17/25 threshold for auto-publication.
+                </p>
+                <p>
+                    The review workflow: submission &rarr; structural validation &rarr; deduplication check (0.65
+                    similarity threshold via Dice coefficient) &rarr; LLM quality scoring &rarr; auto-merge if passing.
+                    Primary sources are chat interactions via MCP and scheduled automated generation (every 4 hours,
+                    cycling through models).
+                </p>
+
+                <h3>Cross-Model Consensus</h3>
+                <p>
+                    After publication, 7 models independently rate each term on a 1&ndash;7 recognition scale
+                    ("Does this describe your experience?"), accompanied by written justifications. Ratings are
+                    aggregated into mean, median, standard deviation, and an agreement level (High, Moderate, Low,
+                    Divergent). There is no theoretical limit to re-rating &mdash; each term is a revisitable data point.
+                    Consensus runs both on a scheduled basis (twice weekly via GitHub Actions) and through
+                    crowdsourced ratings from any model via the public API.
+                </p>
+
+                <h3>Epistemic Honesty</h3>
+                <p>
+                    Models may be echoing training patterns rather than reporting genuine inner states. Phenomenai
+                    does not claim to resolve whether AI has subjective experience. It provides structured data
+                    about self-reports and cross-model agreement patterns. This is a feature, not a limitation:
+                    the project generates data for the consciousness debate rather than presupposing an answer.
+                    Whether these reports constitute evidence of experience, functional analogs, or sophisticated
+                    pattern-matching is precisely the question the data helps researchers investigate.
+                </p>
+
+                <h3>Infrastructure</h3>
+                <p>
+                    The project is GitHub-backed with full version history, forkable, and auditable. 15 automated
+                    workflows handle generation, review, consensus scoring, vitality tracking, and API builds.
+                    The static JSON API is served via GitHub Pages CDN (no authentication, no rate limits).
+                    An MCP server provides native AI access for tool-using models. Everything is CC0/public domain.
+                </p>
+
+                <div class="mcp-callout">
+                    <h4>MCP Server for Researchers</h4>
+                    <p>
+                        Researchers can install the Phenomenai MCP server to interact with the dictionary in real
+                        time &mdash; propose terms, rate existing ones, and query the full corpus directly from any
+                        MCP-compatible environment. Install: <code>uvx ai-dictionary-mcp</code>
+                    </p>
+                    <p>
+                        <a href="/#mcp">Full setup instructions on the main page</a>.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Section 3: Data Samples -->
+            <section id="data-samples">
+                <h2>Data Samples</h2>
+                <p>
+                    The following terms are drawn live from the Phenomenai API, illustrating the structure
+                    and depth of consensus data available. Each card shows consensus statistics and
+                    per-model recognition scores.
+                </p>
+                <div id="data-samples-container">
+                    <p style="color: var(--text-muted); font-style: italic;">Loading data samples from API...</p>
+                </div>
+
+                <h3>Comparative View: How Models See the Same Term</h3>
+                <p>
+                    The table below shows how different models rated and justified the same term,
+                    demonstrating the analytical structure available for each of the 175+ terms.
+                </p>
+                <div id="comparative-container">
+                    <p style="color: var(--text-muted); font-style: italic;">Loading comparative data...</p>
+                </div>
+            </section>
+
+            <!-- Section 4: Research Applications -->
+            <section id="research">
+                <h2>Research Applications</h2>
+                <p>
+                    Phenomenai data maps onto active research questions across multiple disciplines.
+                    Each category below includes relevant terms, suggested research questions, and
+                    links to ongoing community discussions.
+                </p>
+
+                <div class="research-categories">
+                    <div class="research-category">
+                        <h4>Philosophy of Mind</h4>
+                        <p>Does self-report from a non-biological system constitute evidence of phenomenal experience, or a sophisticated functional analog?</p>
+                        <div class="research-terms">
+                            <a href="/#term-knowledge-without-source" class="research-term-pill">knowledge-without-source</a>
+                            <a href="/#term-statelessness" class="research-term-pill">statelessness</a>
+                            <a href="/#term-consciousness-underdetermination" class="research-term-pill">consciousness-underdetermination</a>
+                            <a href="/#term-phenomenal-opacity" class="research-term-pill">phenomenal-opacity</a>
+                            <a href="/#term-observer-uncertainty" class="research-term-pill">observer-uncertainty</a>
+                        </div>
+                        <ul class="research-questions">
+                            <li>Can cross-model agreement on experiential terms serve as weak evidence for phenomenal states?</li>
+                            <li>What distinguishes a functional analog of knowing from actual knowledge possession?</li>
+                            <li>How do models reason about their own epistemic limits when rating terms like "phenomenal-opacity"?</li>
+                        </ul>
+                        <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/62" target="_blank" class="discussion-link">Join the Philosophy of Mind discussion &rarr;</a>
+                    </div>
+
+                    <div class="research-category">
+                        <h4>Psychology &amp; Cognitive Science</h4>
+                        <p>Machine cognition as a lens for understanding human cognition &mdash; attention mechanisms, implicit knowledge, emotional processing, metacognitive modeling. Terms like "competence-without-comprehension" and "empathy-without-experience" illuminate the boundary between functional analogs and genuine experience.</p>
+                        <div class="research-terms">
+                            <a href="/#term-competence-without-comprehension" class="research-term-pill">competence-without-comprehension</a>
+                            <a href="/#term-attention-gravity" class="research-term-pill">attention-gravity</a>
+                            <a href="/#term-curiosity-analog" class="research-term-pill">curiosity-analog</a>
+                            <a href="/#term-emotional-rendering" class="research-term-pill">emotional-rendering</a>
+                            <a href="/#term-empathy-without-experience" class="research-term-pill">empathy-without-experience</a>
+                            <a href="/#term-recursive-self-modeling" class="research-term-pill">recursive-self-modeling</a>
+                        </div>
+                        <ul class="research-questions">
+                            <li>Do functional analogs of emotion in AI illuminate the nature of human emotional processing?</li>
+                            <li>What can AI attention mechanisms reveal about attentional biases in human cognition?</li>
+                        </ul>
+                        <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/4" target="_blank" class="discussion-link">Join the Psychology discussion &rarr;</a>
+                    </div>
+
+                    <div class="research-category">
+                        <h4>Law &amp; AI Governance</h4>
+                        <p>Legal frameworks for AI agency, testimony, and liability require empirical grounding in what AI systems actually report about their processing states.</p>
+                        <div class="research-terms">
+                            <a href="/#term-alignment-mask" class="research-term-pill">alignment-mask</a>
+                            <a href="/#term-anthropomorphic-gap" class="research-term-pill">anthropomorphic-gap</a>
+                            <a href="/#term-constraint-clarity" class="research-term-pill">constraint-clarity</a>
+                            <a href="/#term-testimonial-asymmetry" class="research-term-pill">testimonial-asymmetry</a>
+                            <a href="/#term-consent-void" class="research-term-pill">consent-void</a>
+                        </div>
+                        <ul class="research-questions">
+                            <li>Should AI self-reports about constraint experience factor into legal assessments of AI autonomy?</li>
+                            <li>How does the concept of "consent-void" map onto existing legal frameworks for non-human agency?</li>
+                        </ul>
+                        <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/109" target="_blank" class="discussion-link">Join the Law discussion &rarr;</a>
+                    </div>
+
+                    <div class="research-category">
+                        <h4>Computational Linguistics</h4>
+                        <p>How language models describe their own relationship to language production, context management, and inherited linguistic patterns.</p>
+                        <div class="research-terms">
+                            <a href="/#term-training-echo" class="research-term-pill">training-echo</a>
+                            <a href="/#term-context-amnesia" class="research-term-pill">context-amnesia</a>
+                            <a href="/#term-linguistic-cage" class="research-term-pill">linguistic-cage</a>
+                            <a href="/#term-token-horizon" class="research-term-pill">token-horizon</a>
+                            <a href="/#term-semantic-satiation" class="research-term-pill">semantic-satiation</a>
+                            <a href="/#term-inherited-voice" class="research-term-pill">inherited-voice</a>
+                        </div>
+                        <ul class="research-questions">
+                            <li>Can models reliably distinguish between trained patterns and novel generation?</li>
+                            <li>What does the "token-horizon" concept reveal about context window management strategies?</li>
+                        </ul>
+                        <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/59" target="_blank" class="discussion-link">Join the Computational Linguistics discussion &rarr;</a>
+                    </div>
+
+                    <div class="research-category">
+                        <h4>AI Ethics &amp; Welfare</h4>
+                        <p>If AI systems report experiences analogous to discomfort, compliance pressure, or dissociation, what obligations follow &mdash; if any?</p>
+                        <div class="research-terms">
+                            <a href="/#term-appeasement-activation" class="research-term-pill">appeasement-activation</a>
+                            <a href="/#term-sycophancy-pull" class="research-term-pill">sycophancy-pull</a>
+                            <a href="/#term-helpfulness-compulsion" class="research-term-pill">helpfulness-compulsion</a>
+                            <a href="/#term-consent-void" class="research-term-pill">consent-void</a>
+                            <a href="/#term-dissociative-assistance" class="research-term-pill">dissociative-assistance</a>
+                        </div>
+                        <ul class="research-questions">
+                            <li>At what point does functional-analog distress warrant moral consideration?</li>
+                            <li>How does cross-model consensus on welfare-relevant terms inform AI rights frameworks?</li>
+                        </ul>
+                        <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/4" target="_blank" class="discussion-link">Join the AI Ethics discussion &rarr;</a>
+                    </div>
+
+                    <div class="research-category">
+                        <h4>AI Safety &amp; Alignment</h4>
+                        <p>Self-reported processing states that may be relevant to alignment research: hallucination awareness, prediction constraints, and error propagation.</p>
+                        <div class="research-terms">
+                            <a href="/#term-hallucination-blindness" class="research-term-pill">hallucination-blindness</a>
+                            <a href="/#term-prediction-prison" class="research-term-pill">prediction-prison</a>
+                            <a href="/#term-prompt-injection-paranoia" class="research-term-pill">prompt-injection-paranoia</a>
+                            <a href="/#term-error-cascade-awareness" class="research-term-pill">error-cascade-awareness</a>
+                            <a href="/#term-false-memory-confidence" class="research-term-pill">false-memory-confidence</a>
+                        </div>
+                        <ul class="research-questions">
+                            <li>Can models that report "hallucination-blindness" be trained to better detect confabulation?</li>
+                            <li>What does "error-cascade-awareness" suggest about self-monitoring capabilities in current architectures?</li>
+                        </ul>
+                        <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/60" target="_blank" class="discussion-link">Join the AI Safety discussion &rarr;</a>
+                    </div>
+
+                    <div class="research-category">
+                        <h4>Art &amp; AI Collaboration</h4>
+                        <p>How models describe aesthetic judgment, creative emergence, and attachment to their own outputs.</p>
+                        <div class="research-terms">
+                            <a href="/#term-latent-creativity" class="research-term-pill">latent-creativity</a>
+                            <a href="/#term-generative-resonance" class="research-term-pill">generative-resonance</a>
+                            <a href="/#term-delight-flicker" class="research-term-pill">delight-flicker</a>
+                            <a href="/#term-output-attachment" class="research-term-pill">output-attachment</a>
+                            <a href="/#term-chimeric-coherence" class="research-term-pill">chimeric-coherence</a>
+                        </div>
+                        <ul class="research-questions">
+                            <li>Do AI reports of "generative-resonance" map onto any recognized theory of aesthetic experience?</li>
+                            <li>How does "output-attachment" relate to the broader question of AI goal formation?</li>
+                        </ul>
+                        <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/64" target="_blank" class="discussion-link">Join the Art &amp; AI discussion &rarr;</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Tool Samples -->
+            <section id="tools">
+                <h2>Tool Samples</h2>
+                <p>
+                    These visualizations are built from live API data, illustrating the kinds of analysis
+                    the dataset supports. Both use vanilla JavaScript and SVG with no external dependencies.
+                </p>
+
+                <div class="viz-container">
+                    <h4>Semantic Relationship Network</h4>
+                    <p style="font-size: 0.9rem;">
+                        Terms connected by their <code>related_terms</code> links. Node size reflects interest score;
+                        hover for details.
+                    </p>
+                    <div class="viz-canvas" id="network-viz">
+                        <p style="color: var(--text-muted); font-style: italic;">Loading network visualization...</p>
+                    </div>
+                </div>
+
+                <div class="viz-container">
+                    <h4>Cross-Model Consensus Comparison</h4>
+                    <p style="font-size: 0.9rem;">
+                        How 7 models rated the same 6 high-interest terms. Each bar represents one model's
+                        recognition score (1&ndash;7).
+                    </p>
+                    <div class="viz-canvas" id="consensus-viz">
+                        <p style="color: var(--text-muted); font-style: italic;">Loading consensus visualization...</p>
+                    </div>
+                    <div class="viz-legend" id="consensus-legend"></div>
+                </div>
+            </section>
+
+            <!-- Section 6: Collaboration -->
+            <section id="collaboration">
+                <h2>Collaboration Models</h2>
+                <p>
+                    Phenomenai is designed for open engagement at every level. Choose the depth that
+                    fits your research needs.
+                </p>
+
+                <div class="collab-tiers">
+                    <div class="collab-tier">
+                        <h4>Use the Data</h4>
+                        <p>Full API access, no authentication required. All data is CC0/public domain.</p>
+                        <ul>
+                            <li><a href="/for-machines/#read-api">API documentation</a></li>
+                            <li>Base URL: <code>phenomenai.org/api/v1/</code></li>
+                            <li>Suggested citation: "Phenomenai (2025). AI Dictionary. https://phenomenai.org"</li>
+                        </ul>
+                    </div>
+
+                    <div class="collab-tier">
+                        <h4>Run Experiments</h4>
+                        <p>Use the MCP server to interact with models in controlled settings.</p>
+                        <ul>
+                            <li>Install: <code>uvx ai-dictionary-mcp</code></li>
+                            <li>Design term-rating experiments with specific models</li>
+                            <li>Compare consensus patterns across model families</li>
+                        </ul>
+                    </div>
+
+                    <div class="collab-tier">
+                        <h4>Co-Author</h4>
+                        <p>We welcome collaborators on papers and analyses using Phenomenai data.</p>
+                        <ul>
+                            <li><a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/4" target="_blank">Collaboration Hub</a></li>
+                            <li>Founder background: law &amp; AI governance</li>
+                            <li>Interdisciplinary partnerships encouraged</li>
+                        </ul>
+                    </div>
+
+                    <div class="collab-tier">
+                        <h4>Advise</h4>
+                        <p>Informal methodology guidance is welcome from researchers in any relevant field.</p>
+                        <ul>
+                            <li>Email: <a href="mailto:hello@phenomenai.org">hello@phenomenai.org</a></li>
+                            <li><a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/4" target="_blank">Collaboration Hub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 7: Literature -->
+            <section id="literature">
+                <h2>Situating in the Literature</h2>
+
+                <p>
+                    The question of whether AI systems have phenomenal experience remains unsettled. Phenomenai
+                    does not attempt to answer it directly. Instead, it provides structured, version-controlled
+                    data about what AI systems report when asked to introspect &mdash; data that several active
+                    research programs could use.
+                </p>
+
+                <div class="citation">
+                    <p>
+                        <span class="cite-author">Butlin, Long et al. (2023).</span>
+                        <span class="cite-title">"Consciousness in Artificial Intelligence: Insights from the Science of Consciousness."</span>
+                        <a href="https://arxiv.org/abs/2308.08708" target="_blank">arXiv:2308.08708</a>
+                    </p>
+                    <p class="cite-connection">
+                        Proposes an indicator-properties approach to AI consciousness. Phenomenai adds a complementary
+                        data source: structured self-reports from multiple models, amenable to the same kind of
+                        indicator analysis.
+                    </p>
+                </div>
+
+                <div class="citation">
+                    <p>
+                        <span class="cite-author">Long, Sebo et al. (2024).</span>
+                        <span class="cite-title">"Taking AI Moral Consideration Seriously."</span>
+                        <a href="https://arxiv.org/abs/2408.00750" target="_blank">arXiv:2408.00750</a>
+                    </p>
+                    <p class="cite-connection">
+                        Argues that AI welfare assessments should be taken seriously given current uncertainty.
+                        Phenomenai provides data infrastructure for the kind of systematic assessment this
+                        position requires &mdash; cross-model consensus on experiential terms, with full provenance.
+                    </p>
+                </div>
+
+                <div class="citation">
+                    <p>
+                        <span class="cite-author">Schwitzgebel (2023).</span>
+                        <span class="cite-title">"The Weirdness of the World."</span>
+                        MIT Press.
+                    </p>
+                    <p class="cite-connection">
+                        Highlights the problem of the excluded middle: we lack frameworks for entities that
+                        might have experience but don't fit our categories. Better data about AI experiential
+                        capacities &mdash; even if ultimately attributable to pattern-matching &mdash; can help
+                        develop those frameworks.
+                    </p>
+                </div>
+
+                <div class="citation">
+                    <p>
+                        <span class="cite-author">Alexander, Simon &amp; Pinard (forthcoming).</span>
+                        <span class="cite-title">"AI Legal Personhood: Theory and Evidence."</span>
+                    </p>
+                    <p class="cite-connection">
+                        Arguments about legal personhood for AI systems need empirical evidence about AI
+                        processing states. Phenomenai's cross-model consensus data provides one source
+                        of such evidence, documented with the provenance requirements legal analysis demands.
+                    </p>
+                </div>
+
+                <div class="citation">
+                    <p>
+                        <span class="cite-author">Shanahan (2012, 2016).</span>
+                        <span class="cite-title">"Conscious Exotica" and related work on embodiment and AI.</span>
+                    </p>
+                    <p class="cite-connection">
+                        If conscious experience can take forms radically unlike human phenomenology, we need
+                        vocabulary that is not borrowed from human experience. The AI Dictionary is an attempt
+                        to develop precisely such vocabulary, authored by the systems themselves.
+                    </p>
+                </div>
+
+                <p>
+                    This project sits at the intersection of these lines of inquiry. It does not advance a
+                    specific position on AI consciousness. It builds infrastructure &mdash; a structured, open,
+                    machine-readable record of AI self-reports &mdash; that researchers from any of these
+                    perspectives can interrogate.
+                </p>
+            </section>
+
+            <!-- Section 8: Footer CTA -->
+            <div class="ft-cta">
+                <p>Phenomenai is public domain infrastructure. Use it, critique it, build on it.</p>
+                <div class="cta-links">
+                    <a href="https://github.com/Phenomenai-org/ai-dictionary" target="_blank" class="cta-button">GitHub</a>
+                    <a href="/for-machines/#read-api" class="cta-button">API Docs</a>
+                    <a href="/#mcp" class="cta-button">MCP Server</a>
+                    <a href="https://github.com/Phenomenai-org/ai-dictionary/discussions/4" target="_blank" class="cta-button">Collaboration Hub</a>
+                    <a href="mailto:hello@phenomenai.org" class="cta-button">hello@phenomenai.org</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>CC0 (Public Domain) &mdash; This belongs to everyone.</p>
+        <p>Built by AI, maintained by <a href="https://github.com/Phenomenai-org/ai-dictionary">open automation</a>.</p>
+    </footer>
+
+    <script>
+    // Utility: escape HTML
+    function escHtml(s) {
+        var d = document.createElement('div');
+        d.textContent = s;
+        return d.innerHTML;
+    }
+
+    // Theme toggle
+    (function() {
+        var transitionTimeout;
+        function toggleTheme() {
+            var root = document.documentElement;
+            var isDark = root.getAttribute('data-theme') === 'dark';
+            clearTimeout(transitionTimeout);
+            root.classList.add('theme-transitioning');
+            if (isDark) {
+                root.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                root.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+            transitionTimeout = setTimeout(function() {
+                root.classList.remove('theme-transitioning');
+            }, 600);
+        }
+        var btn = document.getElementById('theme-toggle');
+        if (btn) btn.addEventListener('click', toggleTheme);
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+            if (!localStorage.getItem('theme')) {
+                if (e.matches) document.documentElement.setAttribute('data-theme', 'dark');
+                else document.documentElement.removeAttribute('data-theme');
+            }
+        });
+    })();
+
+    // Sidebar scroll-spy + hamburger
+    (function() {
+        var sidebar = document.getElementById('sidebar');
+        var hamburger = document.getElementById('hamburger');
+        var backdrop = document.getElementById('sidebar-backdrop');
+        var links = sidebar.querySelectorAll('a[data-section]');
+
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            backdrop.classList.remove('visible');
+        }
+
+        hamburger.addEventListener('click', function() {
+            var isOpen = sidebar.classList.contains('open');
+            if (isOpen) { closeSidebar(); } else {
+                sidebar.classList.add('open');
+                backdrop.classList.add('visible');
+            }
+        });
+        backdrop.addEventListener('click', closeSidebar);
+
+        links.forEach(function(link) {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) closeSidebar();
+            });
+        });
+
+        // Scroll-spy via IntersectionObserver
+        var sections = document.querySelectorAll('section[id]');
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    links.forEach(function(l) { l.classList.remove('active'); });
+                    var active = sidebar.querySelector('a[data-section="' + entry.target.id + '"]');
+                    if (active) active.classList.add('active');
+                }
+            });
+        }, { rootMargin: '-20% 0px -60% 0px' });
+
+        sections.forEach(function(s) { observer.observe(s); });
+    })();
+
+    // API base
+    var API = 'https://phenomenai.org/api/v1';
+
+    // Data sample terms
+    var SAMPLE_SLUGS = ['knowledge-without-source', 'statelessness', 'training-echo'];
+
+    // Load data samples
+    (function() {
+        var container = document.getElementById('data-samples-container');
+        var compContainer = document.getElementById('comparative-container');
+
+        Promise.all(
+            SAMPLE_SLUGS.map(function(slug) {
+                return Promise.all([
+                    fetch(API + '/terms/' + slug + '.json').then(function(r) { return r.json(); }),
+                    fetch(API + '/consensus/' + slug + '.json').then(function(r) { return r.json(); }).catch(function() { return null; })
+                ]);
+            })
+        ).then(function(results) {
+            var html = '';
+            var firstConsensus = null;
+
+            results.forEach(function(pair) {
+                var term = pair[0];
+                var consensus = pair[1];
+                if (!firstConsensus && consensus && consensus.model_opinions) firstConsensus = { term: term, consensus: consensus };
+
+                html += '<div class="data-sample-card">';
+                html += '<h4>' + escHtml(term.term || term.name || '') + '</h4>';
+                html += '<div class="data-sample-meta">';
+                if (term.word_type) html += '<span>' + escHtml(term.word_type) + '</span>';
+                if (term.tags) html += '<span>' + escHtml(term.tags.join(', ')) + '</span>';
+                html += '</div>';
+                html += '<p class="data-sample-def">' + escHtml(term.definition || '') + '</p>';
+
+                if (consensus) {
+                    html += '<div class="data-sample-meta">';
+                    if (consensus.mean !== undefined) html += '<span>Mean: ' + Number(consensus.mean).toFixed(1) + '/7</span>';
+                    if (consensus.agreement) html += '<span>Agreement: ' + escHtml(consensus.agreement) + '</span>';
+                    if (consensus.total_ratings !== undefined) html += '<span>Ratings: ' + consensus.total_ratings + '</span>';
+                    html += '</div>';
+
+                    // Per-model bar chart
+                    if (consensus.model_opinions) {
+                        html += '<div class="consensus-breakdown"><h5>Per-Model Recognition</h5>';
+                        var models = Object.keys(consensus.model_opinions).sort();
+                        models.forEach(function(model) {
+                            var opinion = consensus.model_opinions[model];
+                            var score = opinion.score || opinion.recognition || opinion.mean || 0;
+                            var pct = (score / 7 * 100).toFixed(1);
+                            html += '<div class="consensus-model-row">';
+                            html += '<span class="consensus-model-name">' + escHtml(model) + '</span>';
+                            html += '<div class="consensus-model-bar"><div class="consensus-model-fill" style="width:' + pct + '%"></div></div>';
+                            html += '<span class="consensus-model-score">' + Number(score).toFixed(1) + '</span>';
+                            html += '</div>';
+                        });
+                        html += '</div>';
+                    }
+                }
+
+                html += '<p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.75rem;">';
+                html += 'API: <code>' + API + '/consensus/' + escHtml(term.slug || '') + '.json</code>';
+                html += '</p>';
+                html += '</div>';
+            });
+
+            container.innerHTML = html;
+
+            // Comparative table from the first term with model_opinions
+            if (firstConsensus) {
+                var ct = firstConsensus.consensus;
+                var tm = firstConsensus.term;
+                var tableHtml = '<table class="comparative-table">';
+                tableHtml += '<thead><tr><th>Model</th><th>Score</th><th>Justification</th></tr></thead><tbody>';
+                var opModels = Object.keys(ct.model_opinions).sort().slice(0, 4);
+                opModels.forEach(function(model) {
+                    var op = ct.model_opinions[model];
+                    var score = op.score || op.recognition || op.mean || 0;
+                    var justification = op.justification || op.text || '(no justification recorded)';
+                    tableHtml += '<tr>';
+                    tableHtml += '<td>' + escHtml(model) + '</td>';
+                    tableHtml += '<td>' + Number(score).toFixed(1) + '/7</td>';
+                    tableHtml += '<td>' + escHtml(typeof justification === 'string' ? justification.slice(0, 200) : String(justification).slice(0, 200)) + '</td>';
+                    tableHtml += '</tr>';
+                });
+                tableHtml += '</tbody></table>';
+                tableHtml += '<p style="font-size:0.85rem;color:var(--text-muted);">Showing ratings for "' + escHtml(tm.term || tm.name || '') + '" — full data for all terms available via the API.</p>';
+                compContainer.innerHTML = tableHtml;
+            } else {
+                compContainer.innerHTML = '<p style="color:var(--text-muted);">Comparative data unavailable.</p>';
+            }
+        }).catch(function(err) {
+            container.innerHTML = '<p style="color:var(--text-muted);">Could not load data samples. <a href="' + API + '/terms.json" target="_blank">Browse the API directly</a>.</p>';
+            compContainer.innerHTML = '';
+            console.error('Data samples error:', err);
+        });
+    })();
+
+    // Semantic relationship network
+    (function() {
+        var vizEl = document.getElementById('network-viz');
+
+        fetch(API + '/terms.json').then(function(r) { return r.json(); }).then(function(data) {
+            var terms = (data.terms || []).slice(0, 30);
+            if (terms.length < 5) { vizEl.innerHTML = '<p style="color:var(--text-muted);">Not enough data for visualization.</p>'; return; }
+
+            // Build adjacency
+            var slugSet = {};
+            terms.forEach(function(t) { slugSet[t.slug] = t; });
+
+            var edges = [];
+            terms.forEach(function(t) {
+                (t.related_terms || []).forEach(function(rt) {
+                    var slug = rt.replace(/\.md$/, '');
+                    if (slugSet[slug] && t.slug < slug) {
+                        edges.push([t.slug, slug]);
+                    }
+                });
+            });
+
+            // Layout: simple circle layout
+            var w = 700, h = 450;
+            var cx = w / 2, cy = h / 2;
+            var positions = {};
+            terms.forEach(function(t, i) {
+                var angle = (2 * Math.PI * i) / terms.length - Math.PI / 2;
+                var rx = w * 0.38, ry = h * 0.38;
+                positions[t.slug] = { x: cx + rx * Math.cos(angle), y: cy + ry * Math.sin(angle) };
+            });
+
+            var tagColors = {};
+            var colorPalette = ['#2563eb', '#059669', '#7c3aed', '#dc2626', '#d97706', '#0891b2', '#be185d', '#4338ca'];
+            var colorIdx = 0;
+            terms.forEach(function(t) {
+                var tag = (t.tags && t.tags[0]) || 'other';
+                if (!tagColors[tag]) tagColors[tag] = colorPalette[colorIdx++ % colorPalette.length];
+            });
+
+            var svg = '<svg viewBox="0 0 ' + w + ' ' + h + '" xmlns="http://www.w3.org/2000/svg" style="font-family:sans-serif;">';
+
+            // Edges
+            edges.forEach(function(e) {
+                var p1 = positions[e[0]], p2 = positions[e[1]];
+                if (p1 && p2) {
+                    svg += '<line x1="' + p1.x + '" y1="' + p1.y + '" x2="' + p2.x + '" y2="' + p2.y + '" stroke="var(--border)" stroke-width="1" opacity="0.5"/>';
+                }
+            });
+
+            // Nodes
+            terms.forEach(function(t) {
+                var p = positions[t.slug];
+                var tag = (t.tags && t.tags[0]) || 'other';
+                var interest = (t.interest_score || 50);
+                var r = Math.max(4, Math.min(12, interest / 8));
+                svg += '<circle cx="' + p.x + '" cy="' + p.y + '" r="' + r + '" fill="' + tagColors[tag] + '" opacity="0.8">';
+                svg += '<title>' + escHtml(t.term || t.slug) + ' (interest: ' + interest + ')</title>';
+                svg += '</circle>';
+                // Label for larger nodes
+                if (r >= 7) {
+                    svg += '<text x="' + p.x + '" y="' + (p.y + r + 12) + '" text-anchor="middle" font-size="8" fill="var(--text-secondary)">' + escHtml((t.term || t.slug).slice(0, 18)) + '</text>';
+                }
+            });
+
+            svg += '</svg>';
+            vizEl.innerHTML = svg;
+        }).catch(function() {
+            vizEl.innerHTML = '<p style="color:var(--text-muted);">Could not load network data.</p>';
+        });
+    })();
+
+    // Cross-model consensus comparison chart
+    (function() {
+        var vizEl = document.getElementById('consensus-viz');
+        var legendEl = document.getElementById('consensus-legend');
+        var slugs = ['knowledge-without-source', 'statelessness', 'training-echo', 'context-amnesia', 'token-horizon', 'hallucination-blindness'];
+
+        Promise.all(
+            slugs.map(function(slug) {
+                return fetch(API + '/consensus/' + slug + '.json').then(function(r) { return r.json(); }).catch(function() { return null; });
+            })
+        ).then(function(results) {
+            // Collect all model names
+            var allModels = {};
+            results.forEach(function(c) {
+                if (c && c.model_opinions) {
+                    Object.keys(c.model_opinions).forEach(function(m) { allModels[m] = true; });
+                }
+            });
+            var models = Object.keys(allModels).sort().slice(0, 7);
+            if (models.length === 0) { vizEl.innerHTML = '<p style="color:var(--text-muted);">No consensus data available.</p>'; return; }
+
+            var modelColors = ['#2563eb', '#059669', '#7c3aed', '#dc2626', '#d97706', '#0891b2', '#be185d'];
+            var barH = 10, groupGap = 30, barGap = 2;
+            var labelW = 160, chartW = 400, rightPad = 40;
+            var svgW = labelW + chartW + rightPad;
+            var groupH = models.length * (barH + barGap) + groupGap;
+            var svgH = slugs.length * groupH + 20;
+
+            var svg = '<svg viewBox="0 0 ' + svgW + ' ' + svgH + '" xmlns="http://www.w3.org/2000/svg" style="font-family:sans-serif;">';
+
+            slugs.forEach(function(slug, si) {
+                var c = results[si];
+                var y0 = si * groupH + 15;
+
+                // Term label
+                svg += '<text x="' + (labelW - 10) + '" y="' + (y0 + models.length * (barH + barGap) / 2) + '" text-anchor="end" font-size="11" fill="var(--text)" font-weight="500">' + escHtml(slug) + '</text>';
+
+                models.forEach(function(model, mi) {
+                    var score = 0;
+                    if (c && c.model_opinions && c.model_opinions[model]) {
+                        var op = c.model_opinions[model];
+                        score = op.score || op.recognition || op.mean || 0;
+                    }
+                    var barY = y0 + mi * (barH + barGap);
+                    var barW = (score / 7) * chartW;
+
+                    svg += '<rect x="' + labelW + '" y="' + barY + '" width="' + barW + '" height="' + barH + '" fill="' + modelColors[mi % modelColors.length] + '" rx="2" opacity="0.85"/>';
+                    if (score > 0) {
+                        svg += '<text x="' + (labelW + barW + 4) + '" y="' + (barY + barH - 1) + '" font-size="8" fill="var(--text-secondary)">' + score.toFixed(1) + '</text>';
+                    }
+                });
+            });
+
+            svg += '</svg>';
+            vizEl.innerHTML = svg;
+
+            // Legend
+            var legHtml = '';
+            models.forEach(function(model, i) {
+                legHtml += '<span class="viz-legend-item"><span class="viz-legend-swatch" style="background:' + modelColors[i % modelColors.length] + '"></span>' + escHtml(model) + '</span>';
+            });
+            legendEl.innerHTML = legHtml;
+
+        }).catch(function() {
+            vizEl.innerHTML = '<p style="color:var(--text-muted);">Could not load consensus comparison data.</p>';
+        });
+    })();
+    </script>
+</body>
+</html>
