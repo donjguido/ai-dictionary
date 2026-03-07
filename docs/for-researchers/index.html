@@ -1702,14 +1702,21 @@
                         How individual models rated a term across consensus rounds. Each line represents
                         one model's recognition score (1&ndash;7) over time.
                     </p>
-                    <select class="viz-select" id="rating-history-select">
-                        <option value="context-amnesia">context-amnesia</option>
-                        <option value="knowledge-without-source">knowledge-without-source</option>
-                        <option value="statelessness">statelessness</option>
-                        <option value="training-echo">training-echo</option>
-                        <option value="token-horizon">token-horizon</option>
-                        <option value="hallucination-blindness">hallucination-blindness</option>
-                    </select>
+                    <div class="ds-controls">
+                        <label for="rating-history-min">Min ratings:</label>
+                        <select id="rating-history-min" class="ds-select">
+                            <option value="2">2+</option>
+                            <option value="3">3+</option>
+                            <option value="4">4+</option>
+                            <option value="5">5+</option>
+                            <option value="10">10+</option>
+                            <option value="20">20+</option>
+                        </select>
+                        <label for="rating-history-select">Term:</label>
+                        <select id="rating-history-select" class="ds-select">
+                            <option value="">Loading terms...</option>
+                        </select>
+                    </div>
                     <div class="viz-canvas" id="rating-history-viz">
                         <p style="color: var(--text-muted); font-style: italic;">Loading rating history...</p>
                     </div>
@@ -3295,8 +3302,55 @@
         var vizEl = document.getElementById('rating-history-viz');
         var legendEl = document.getElementById('rating-history-legend');
         var selectEl = document.getElementById('rating-history-select');
+        var minEl = document.getElementById('rating-history-min');
         var modelColors = ['#2563eb', '#059669', '#7c3aed', '#dc2626', '#d97706', '#0891b2', '#be185d', '#4f46e5', '#0d9488', '#c026d3'];
         var cache = {};
+        var allTerms = []; // [{slug, name, n_ratings}]
+
+        // Populate term dropdown from consensus.json
+        fetch(API + '/consensus.json')
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                if (!data || !data.terms) return;
+                allTerms = data.terms.map(function(t) {
+                    return { slug: t.slug, name: t.name || t.slug, n_ratings: t.n_ratings || 0 };
+                }).sort(function(a, b) {
+                    return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+                });
+                populateTermSelect();
+            })
+            .catch(function() {
+                vizEl.innerHTML = '<p style="color:var(--text-muted);">Could not load term list.</p>';
+            });
+
+        function populateTermSelect() {
+            var min = parseInt(minEl.value, 10) || 2;
+            var filtered = allTerms.filter(function(t) { return t.n_ratings >= min; });
+            var prevSlug = selectEl.value;
+            var html = '';
+            var foundPrev = false;
+            for (var i = 0; i < filtered.length; i++) {
+                var t = filtered[i];
+                var label = escHtml(t.name) + ' (' + t.n_ratings + ' ratings)';
+                if (t.slug === prevSlug) foundPrev = true;
+                html += '<option value="' + escHtml(t.slug) + '">' + label + '</option>';
+            }
+            if (filtered.length === 0) {
+                html = '<option value="">No terms with ' + min + '+ ratings</option>';
+            }
+            selectEl.innerHTML = html;
+            if (foundPrev) {
+                selectEl.value = prevSlug;
+            }
+            if (selectEl.value) {
+                renderChart(selectEl.value);
+            } else {
+                vizEl.innerHTML = '<p style="color:var(--text-muted);">No terms match this filter.</p>';
+                legendEl.innerHTML = '';
+            }
+        }
+
+        minEl.addEventListener('change', populateTermSelect);
 
         function renderChart(slug) {
             vizEl.innerHTML = '<p style="color:var(--text-muted); font-style:italic;">Loading...</p>';
@@ -3408,7 +3462,6 @@
         }
 
         selectEl.addEventListener('change', function() { renderChart(selectEl.value); });
-        renderChart(selectEl.value);
     })();
 
     // Term modal for research term pills
